@@ -1,0 +1,16 @@
+{
+  "evidence_source": "Observed tool outputs in this session; remote raw files were not downloaded before SSH became unreachable",
+  "date_local": "2026-10-08",
+  "timezone": "Asia/Hong_Kong",
+  "server_identity": {"hostname": "user", "ssh_host_key_sha256": "hRNlxitqGzUJog3+HuGNgzd37IF62CQQXq/swz4us7M"},
+  "environment_observed": {"gpus": 2, "gpu_name": "NVIDIA GeForce RTX 3090", "memory_mib_each": 24576, "driver": "570.133.07", "torch": "2.8.0+cu128", "transformers": "4.55.2", "bf16_compute_pass_each_gpu": true},
+  "primary_model": {"id": "Qwen/Qwen3-4B", "revision": "1cfa9a7208912126459214e8b04321603b3df60c", "remote_all_required_files_hash_matched": true},
+  "original_baseline_observation": {"protocol": "upstream BF16 greedy", "first_generate_tokens": 2562, "first_generate_ms": 147693.84, "last_observed_generate_calls": 5, "complete_24_question_budget_result_verified": false},
+  "bf16_initial_cache": {"max_abs_logits": [0.5, 0.4375, 0.375, 0.4375, 0.375], "all_five_controlled_16_token_generations_equal": true, "initial_absolute_tolerance_gate": false},
+  "fp32_diagnosis": {"same_route_max_abs": [0.0, 0.0, 0.0], "cross_route_max_abs": [0.000039577484130859375, 0.00003933906555175781, 0.00004673004150390625]},
+  "fp16_observation": {"cache_pass": true, "real_prefix_checks": 5, "representative_relative_l2": [0.0008471721963801554, 0.0010136615310013149, 0.0011111584057637211, 0.002095964096063181]},
+  "actual_cache_clone": {"tested_prefixes": 1, "parent_length": 257, "parent_keys_unchanged": true, "controlled_continuations_equal": true},
+  "format_repair_example": {"problem_id": "test/precalculus/441.json", "gold": "30 degrees", "original_thinking_tokens": 4096, "original_answer_tokens": 192, "original_final_answer_present": false, "original_grader_extracted_intermediate": "6", "same_prefix_with_boxed_cue_first_answer": "30", "same_prefix_repair_math_verify_correct": 1, "checkpoint_128_boxed_cue_answer_correct": 1, "scope": "one engineering question; not dataset accuracy, algorithm speedup or neural-mechanism evidence"},
+  "progress_at_last_read": {"protocol_ending_records_observed": 1, "24_question_protocol_admission_verified": false, "150_development_questions_executed": false, "grouped_cv_executed": false, "online_evaluation_executed": false, "second_model_download_started": true, "second_model_download_completion_verified": false},
+  "network_failure": {"tcp_timeout_record_utc": "2026-10-08T15:26:56.022893+00:00", "icmp_10_15_1_57_observed_ms": [5, 4], "tcp_2222_unreachable": true, "tcp_22_unreachable": true, "verified_alternative_route_10_15_0_47_22_unreachable": true, "github_443_reachable": true, "password_authentication_not_reached": true}
+}

@@ -8,7 +8,7 @@
 
 ## 数据与模型
 
-- 首轮 Qwen/Qwen3-4B，Thinking 开启；BF16，单卡；T=0.6、top_p=0.95、top_k=20。原版贪心基线独立保存。
+- 首轮 Qwen/Qwen3-4B，Thinking 开启；主实验经数值诊断后改为 FP16，单卡；T=0.6、top_p=0.95、top_k=20。原版 BF16 贪心基线独立保存。P0 思考上限 4096；主采集 8192 为当前预案，需根据完整 P0 的 censoring 和真实成本再确认。
 - MATH-500 revision=6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be，原始文件 SHA256=35dc41080a3680858b27fa7e0533d2d547825316fc5dafe5d316f4ccc5a06132。
 - 学科×难度尽量分层，150 题开发、50 题工程/阈值选择、300 题最终测试；24 题 smoke 属于工程集。
 - 第二模型优先 Qwen3-4B-Thinking-2507。缺失可从 ModelScope 下载并核对身份；不能合并两种模型结果。

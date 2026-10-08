@@ -7,7 +7,7 @@ import random
 
 
 def write_jsonl(path, rows):
-    path.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows), encoding="utf-8")
+    path.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows), encoding="utf-8",newline="\n")
 
 
 def allocate(groups, target, total):
@@ -45,7 +45,7 @@ def main():
         manifest["splits"][name] = {"n": len(group), "ids": [r["unique_id"] for r in group], "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
         if name == "engineering":
             write_jsonl(data / "math500_smoke.jsonl", normalized[:24])
-    (data / "split_manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    (data / "split_manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8",newline="\n")
     print({k: v["n"] for k, v in manifest["splits"].items()})
 
 

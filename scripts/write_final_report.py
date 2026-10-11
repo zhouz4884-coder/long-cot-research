@@ -66,6 +66,8 @@ MATH-500 revision `6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be`，原始数据 SHA2
 
 数值诊断区分同路线重复和不同 prefill 路线：FP32 跨路线误差约 4e-5；BF16 在真实前缀的相对 L2 超过预设 1% 门槛，因此主实验改为 FP16。五个实际前缀的 FP16 检查通过（相对 L2 <0.21%，受控 16-token 续写相同）。这不是任意长序列、任意硬件都位级一致的保证。缓存子分支通过父 KV 不变和同输入续写检查；EAT 探针采用 append 后 crop，三个真实前缀全层 K/V 和受控续写保持一致。
 
+本轮使用数学等价评分，允许未完全计算或化简的等价表达式，例如点积算式和最终数值被视为同一个答案。因此指标不证明模型已经执行每一步算术，也不单独认证“完全化简”等表述要求。该规则对所有方法一致；若未来增加规范答案形式或表达式复杂度指标，必须另报，不能事后只给某一方法更换评分标准。
+
 另外修复了字面转义花括号影响语义边界、列向量与坐标元组表示不等价，以及数字括号隐式乘法/缺失反斜杠 log 的判分问题。向量按坐标顺序验证，交换坐标仍错误。后两项表面修复在测试生成前完成，完整银行统一重评；四个分支评分改变，原始分数另存。只抽取到文本的结果记 fallback_only，不冒充数学解析成功。重复控制中的原始分数不覆盖，另生成 v3 派生判分。
 
 ## 3. 分支采集与数据标签
@@ -112,6 +114,8 @@ wall-clock 从实际 prompt prefill 到答案生成结束，包含决策和探�
 
 这些比较仅用同一批前 50 道测试题配对；不得直接用其 50 题总体准确率与上表 300 题总体准确率相减。所有参数在首次测试生成前冻结。如果同训练器正确率基线与主学习型早停恰好选中同一策略，该记录是同算法独立运行控制，不应算成另一个独立创新基线。Conformal Thinking 在 50 题校准和共同质量约束下选择不开启早退出；风险校正后的低容忍区间也不能认证早退出。不能把这种保守退化推广为原论文方法普遍无效。
 
+该 Conformal 适配实现仍逐点探测，尽管冻结参数已不可能触发停止；其额外探针开销可以被实现优化消除。针对它的耗时差不能全部归因于新的算法优势，主要效率判断应依赖 FULL、实际早停的 EAT 和学习型正确率基线。
+
 ## 8. 重复种子与第二模型
 
 保存 {repeat['state_n']} 个工程状态、每状态 4 个独立种子，共 {repeat['repeat_n']} 对 STOP/STEP。评分修复前后选点的并集全部保留，因此数量可能超过初始 8 状态；事件条件采样不能估计总体反转率。逐状态转移次数和输出保存在 `repeat_control_analysis.json`、`repeat_branches.jsonl`。稳定重复的例子支持现象存在，只有四次重复仍不足以证明确定性机制；随种子变化的事件应视为温度噪声和 readout 变化共同作用。
@@ -149,6 +153,8 @@ wall-clock 从实际 prompt prefill 到答案生成结束，包含决策和探�
 离线线性头融合等价误差约 8.3e-16、45.7 微秒 CPU 决策只是实现优化验证；七项 CPU 单元测试也不属于真实 GPU benchmark。最终 GPU 输出、题目配对 bootstrap、罕见有害上界和文件哈希各自提供不同层级证据，不相互替代。
 
 主要文件：`results/analysis/online_statistics.json`、`results/analysis/grouped_cv.json`、`results/analysis/policy_calibration.json`、`results/analysis/repeat_control_analysis.json`、`results/analysis/study_integrity.json`、`results/audit/EVENTS_ZH.md`、`results/online/*.jsonl`、`figures/*.png/pdf/svg`。本报告不包含认证凭据。
+
+全部在线修正与改错案例（含两方法最后的实际思考和控制器最后决策）见 `results/audit/ONLINE_CASES_ZH.md` 与 `online_reversals.json`，没有只选好看的成功例子。
 '''
 (ROOT/'docs/REPORT_ZH.md').write_text(text,encoding='utf-8')
 print('WROTE_FINAL_REPORT',len(text),'characters')

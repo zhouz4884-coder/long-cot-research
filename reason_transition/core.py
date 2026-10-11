@@ -25,11 +25,24 @@ def uniform(seed, phase, position):
     return (value + 0.5) / 2**64
 
 
+def escaped(text, index):
+    count=0
+    for previous in range(index-1,-1,-1):
+        if text[previous]!='\\':break
+        count+=1
+    return count%2==1
+
+
+def brace_balance(text):
+    return sum((1 if char=='{' else -1) for i,char in enumerate(text)
+               if char in '{}' and not escaped(text,i))
+
+
 def boundary(text):
     """Conservative observed paragraph boundary; no future tokens are inspected."""
     if not text.endswith("\n\n"):
         return False
-    return (text.count("{") == text.count("}")
+    return (brace_balance(text)==0
             and text.count(r"\[") == text.count(r"\]")
             and text.count("$$") % 2 == 0
             and len(re.findall(r"(?<![\\$])\$(?!\$)",text)) % 2 == 0
@@ -127,7 +140,7 @@ class Engine:
             piece=self.tok.decode([token],skip_special_tokens=False)
             text+=piece
             if until=="boxed":
-                answer_depth+=piece.count("{")-piece.count("}")
+                answer_depth=1+brace_balance(text)
             if stat is not None:
                 history.append(stat)
             cache,logits=self.forward([token],cache)
@@ -204,13 +217,16 @@ class Engine:
 
     def entropy_probe(self, cache, logits):
         self.torch.cuda.synchronize();start=time.perf_counter();before=self.model_ms
-        child=copy.deepcopy(cache)
-        _,after=self.forward(self.suffix,child)
-        lp=after.float().log_softmax(-1)
-        entropy=float(-(lp.exp()*lp).sum().item())
+        original_length=cache.get_seq_length()
+        try:
+            _,after=self.forward(self.suffix,cache)
+            lp=after.float().log_softmax(-1)
+            entropy=float(-(lp.exp()*lp).sum().item())
+        finally:
+            cache.crop(original_length)
         self.torch.cuda.synchronize()
         return {"entropy":entropy,"ms":1000*(time.perf_counter()-start),"model_ms":self.model_ms-before,
-                "probe_input_tokens":len(self.suffix)}
+                "probe_input_tokens":len(self.suffix),"cache_strategy":"append_then_crop"}
 
 
 def public(result):
@@ -222,8 +238,8 @@ def last_box(text):
     for match in re.finditer(r"\\boxed\s*\{",text):
         start=match.end();depth=1
         for i in range(start,len(text)):
-            if text[i]=="{":depth+=1
-            elif text[i]=="}":depth-=1
+            if text[i]=="{" and not escaped(text,i):depth+=1
+            elif text[i]=="}" and not escaped(text,i):depth-=1
             if depth==0:
                 boxes.append(text[start:i]);break
     return boxes[-1] if boxes else None
@@ -241,7 +257,22 @@ def grade(text, gold):
         candidate=parse(r"\boxed{"+boxed+"}" if boxed is not None else text,extraction_config=configs,parsing_timeout=5)
         status="ok" if candidate else "parse_failed"
         correct=int(bool(candidate) and bool(target) and verify(target,candidate,timeout_seconds=5))
-        return {"correct":correct,"parse_status":status,"boxed":boxed,"format_ok":boxed is not None,"parsed":str(candidate),"gold_parsed":str(target)}
+        normalization=None
+        if not correct and candidate and target:
+            from sympy import MatrixBase,Tuple
+            gold_object=target[0];prediction=candidate[0]
+            if isinstance(gold_object,MatrixBase) and 1 in gold_object.shape and len(gold_object)>1:
+                if isinstance(prediction,MatrixBase) and 1 in prediction.shape:
+                    coordinates=list(prediction)
+                elif isinstance(prediction,(Tuple,tuple,list)):
+                    coordinates=list(prediction)
+                else:coordinates=None
+                if coordinates is not None and len(coordinates)==len(gold_object):
+                    correct=int(all(verify([expected],[actual],timeout_seconds=5)
+                                    for expected,actual in zip(list(gold_object),coordinates)))
+                    normalization='ordered_vector_coordinates'
+        return {"correct":correct,"parse_status":status,"boxed":boxed,"format_ok":boxed is not None,
+            "parsed":str(candidate),"gold_parsed":str(target),"normalization":normalization,"scorer_version":"math_verify_0.9_vector_v2"}
     except Exception as e:
         return {"correct":0,"parse_status":"grader_error","error":type(e).__name__+": "+str(e)}
 

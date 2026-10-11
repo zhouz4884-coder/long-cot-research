@@ -19,7 +19,7 @@ def state(stage,status,**extra):
 
 
 def read(path):
-    try:return json.loads(Path(path).read_text())
+    try:return json.loads(Path(path).read_text(encoding="utf-8"))
     except (FileNotFoundError,json.JSONDecodeError):return {}
 
 
@@ -44,7 +44,7 @@ while True:
     admitted=read('results/protocol/checks.json').get('admitted',False)
     clone_report=read('results/protocol/clone_check.json')
     clone=clone_report.get('passed',False) and clone_report.get('code_sha256')==hashlib.sha256(Path('reason_transition/core.py').read_bytes()).hexdigest()
-    original_done='--- VERDICT ---' in Path('logs/original.log').read_text(errors='replace')
+    original_done='--- VERDICT ---' in Path('logs/original.log').read_text(encoding='utf-8',errors='replace')
     if admitted and clone and original_done:break
     time.sleep(15)
 run('pilot_24',[(g,['scripts/collect_bank.py','--model',MODEL,'--split','engineering','--n','24','--shard',str(g),'--shards','2','--dense-stop']) for g in [0,1]])

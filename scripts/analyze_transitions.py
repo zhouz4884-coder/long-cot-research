@@ -9,14 +9,14 @@ import numpy as np
 from sklearn.metrics import average_precision_score,roc_auc_score,brier_score_loss
 from sklearn.model_selection import GroupKFold
 from scipy.stats import spearmanr
-from reason_transition.predictor import Predictor,FEATURES,targets
+from reason_transition.predictor import Predictor,TreePredictor,FEATURES,targets
 
 
 def load(split):
     rows=[]
     for f in sorted(Path('results/bank').glob(f'{split}_branches_*.jsonl')):
         if '_orphan_' in f.name:continue
-        rows.extend(json.loads(x) for x in f.read_text().splitlines() if x.strip())
+        rows.extend(json.loads(x) for x in f.read_text(encoding="utf-8").splitlines() if x.strip())
     ids=[r['checkpoint_id'] for r in rows]
     assert len(ids)==len(set(ids)),'Duplicate checkpoints across shards'
     return rows
@@ -39,6 +39,9 @@ def summary(rows):
             'censored':sum(r['length_censored'] for r in subset),'step_overflow':sum(r['step_overflow'] for r in subset),
             'stop_parse_failed':sum(r['stop_grade']['parse_status']!='ok' for r in subset),
             'step_parse_failed':sum(r['step_grade']['parse_status']!='ok' for r in subset)}
+        clean=[r for r in subset if not r['step_overflow'] and r['stop_grade']['parse_status']=='ok' and r['step_grade']['parse_status']=='ok']
+        result[group]['natural_step_clean_n']=len(clean)
+        result[group]['natural_step_clean_transitions']=dict(Counter(f"{r['stop_correct']}->{r['step_correct']}" for r in clean))
     return result
 
 
@@ -53,7 +56,7 @@ def main():
     groups=np.array([r['problem_id'] for r in rows]);y=targets(rows)
     fold=GroupKFold(n_splits=5,shuffle=True,random_state=20261008)
     sets={'all_cheap':FEATURES,'length_only':['length','log_length'],'confidence_only':['logprob'],
-          'entropy_only':['entropy'],'text_only':['length','reflection_count','repeat4','steps','reflective']}
+          'entropy_only':['entropy'],'text_only':['length','reflection_count','repeat4','steps','reflective'],'gbdt_cheap':FEATURES}
     report['models']={};oof={};fold_ids=[]
     splits=list(fold.split(rows,groups=groups))
     for train,test in splits:
@@ -62,7 +65,7 @@ def main():
     for name,features in sets.items():
         predictions={k:np.zeros(len(rows)) for k in y}
         for train,test in splits:
-            predictor=Predictor(features).fit([rows[i] for i in train])
+            predictor=(TreePredictor if name=='gbdt_cheap' else Predictor)(features).fit([rows[i] for i in train])
             preds=predictor.predict([rows[i] for i in test])
             for key in y:predictions[key][test]=preds[key]
         model_metrics={k:metrics(y[k],predictions[k]) for k in y}
@@ -74,6 +77,9 @@ def main():
         print(name,json.dumps(model_metrics),flush=True)
     predictor=Predictor().fit(rows)
     with (out/'predictor.pkl').open('wb') as f:pickle.dump(predictor,f)
+    with (out/'predictor_linear.pkl').open('wb') as f:pickle.dump(predictor,f)
+    tree=TreePredictor().fit(rows)
+    with (out/'predictor_tree.pkl').open('wb') as f:pickle.dump(tree,f)
     (out/'grouped_cv.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     (out/'oof_predictions.json').write_text(json.dumps({'checkpoint_ids':[r['checkpoint_id'] for r in rows],'folds':fold_ids,'predictions':oof}),encoding='utf-8')
 

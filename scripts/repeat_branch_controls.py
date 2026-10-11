@@ -8,9 +8,9 @@ from reason_transition.core import Engine,stable_seed,public,grade,append_jsonl
 bank=Path('results/bank');out=Path('results/controls');out.mkdir(exist_ok=True)
 branches=[];traces={}
 for f in bank.glob('engineering_branches_*.jsonl'):
-    if '_orphan_' not in f.name:branches.extend(json.loads(x) for x in f.read_text().splitlines())
+    if '_orphan_' not in f.name:branches.extend(json.loads(x) for x in f.read_text(encoding="utf-8").splitlines())
 for f in bank.glob('engineering_traces_*.jsonl'):
-    traces.update({r['problem_id']:r for r in (json.loads(x) for x in f.read_text().splitlines())})
+    traces.update({r['problem_id']:r for r in (json.loads(x) for x in f.read_text(encoding="utf-8").splitlines())})
 points=[];used=set()
 for r in sorted(branches,key=lambda r:(r['prefix_tokens'],r['problem_id'])):
     if r['problem_id'] not in used:
@@ -18,7 +18,7 @@ for r in sorted(branches,key=lambda r:(r['prefix_tokens'],r['problem_id'])):
     if len(points)==8:break
 e=Engine('/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B')
 path=out/'repeat_branches.jsonl'
-done={(r['checkpoint_id'],r['repeat']) for r in (json.loads(x) for x in path.read_text().splitlines())} if path.exists() else set()
+done={(r['checkpoint_id'],r['repeat']) for r in (json.loads(x) for x in path.read_text(encoding="utf-8").splitlines())} if path.exists() else set()
 for point in points:
     row=traces[point['problem_id']];prompt=row['prompt_ids'];prefix=point['prefix_ids']
     cache,logits=e.forward(prompt)

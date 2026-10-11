@@ -5,7 +5,7 @@ import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from reason_transition.core import Engine,stable_seed
 
-rows=[json.loads(x) for x in Path('data/math500_smoke.jsonl').read_text().splitlines()][:3]
+rows=[json.loads(x) for x in Path('data/math500_smoke.jsonl').read_text(encoding="utf-8").splitlines()][:3]
 report=[]
 for dtype in ['float16']:
     e=Engine('/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B',dtype=dtype)

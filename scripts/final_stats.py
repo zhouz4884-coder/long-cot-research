@@ -32,7 +32,7 @@ def main():
     out=Path('results/analysis');out.mkdir(parents=True,exist_ok=True)
     models=defaultdict(lambda:defaultdict(dict))
     for f in Path('results/online').glob('*.jsonl'):
-        for line in f.read_text().splitlines():
+        for line in f.read_text(encoding="utf-8").splitlines():
             row=json.loads(line);model=row['model_path'].split('/')[-1]
             assert row['quality_labels_available_during_decisions'] is False
             key=row['problem_id'];method=row['method']
@@ -52,7 +52,7 @@ def main():
         for method in methods:
             if method!='full' and 'full' in methods:item['comparisons'][method+'_vs_full']=cluster_comparison(methods['full'],methods[method])
         if 'transition' in methods:
-            for baseline in ['eat','conformal_thinking','fixed0','fixed1024','random']:
+            for baseline in ['learned_stop','eat','conformal_thinking','fixed0','fixed1024','random']:
                 if baseline in methods:item['comparisons']['transition_vs_'+baseline]=cluster_comparison(methods[baseline],methods['transition'])
         report['models'][model]=item
     (out/'online_statistics.json').write_text(json.dumps(report,indent=2),encoding='utf-8')

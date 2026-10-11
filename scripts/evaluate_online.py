@@ -13,14 +13,18 @@ from reason_transition.core import Engine,stable_seed,grade,public,append_jsonl
 def main():
     p=argparse.ArgumentParser();p.add_argument('--model',required=True);p.add_argument('--n',type=int,default=50);p.add_argument('--offset',type=int,default=0)
     p.add_argument('--shard',type=int,default=0);p.add_argument('--shards',type=int,default=1)
-    p.add_argument('--methods',default='full,transition,eat,conformal_thinking,fixed0,fixed1024,random')
+    p.add_argument('--methods',default='full,transition,learned_stop,eat,conformal_thinking,fixed0,fixed1024,random')
     p.add_argument('--out-name',default='qwen3_4b');args=p.parse_args()
     out=Path('results/online');out.mkdir(parents=True,exist_ok=True)
-    calibration=json.loads(Path('results/analysis/policy_calibration.json').read_text())
+    calibration=json.loads(Path('results/analysis/policy_calibration.json').read_text(encoding="utf-8"))
     with Path('results/analysis/predictor.pkl').open('rb') as f:predictor=pickle.load(f)
-    rows=[json.loads(x) for x in Path('data/test.jsonl').read_text().splitlines()][args.offset:args.offset+args.n]
+    predictor_type=calibration['selected_empirical']['transition'].get('predictor_type','linear')
+    with Path(f'results/analysis/predictor_{predictor_type}.pkl').open('rb') as f:predictor=pickle.load(f)
+    learned_type=calibration['selected_empirical']['learned_stop'].get('predictor_type','linear')
+    with Path(f'results/analysis/predictor_{learned_type}.pkl').open('rb') as f:learned_predictor=pickle.load(f)
+    rows=[json.loads(x) for x in Path('data/test.jsonl').read_text(encoding="utf-8").splitlines()][args.offset:args.offset+args.n]
     path=out/f'{args.out_name}_{args.shard}.jsonl'
-    done={(json.loads(x)['problem_id'],json.loads(x)['method']) for x in path.read_text().splitlines()} if path.exists() else set()
+    done={(json.loads(x)['problem_id'],json.loads(x)['method']) for x in path.read_text(encoding="utf-8").splitlines()} if path.exists() else set()
     e=Engine(args.model)
     methods=args.methods.split(',')
     for row_index,row in enumerate(rows):
@@ -33,18 +37,31 @@ def main():
             effective=spec.get('method',method)
             prompt=e.prompt(row['question']);seed=stable_seed(20261008,row['problem_id'],0)
             log=[];selected_action=None;committed_full=False;ema_mean=ema_var=0.0;detector_ms=0.0
-            seen=0
+            seen=0;next_detection=0
 
             def hook(point,prefix,cache,logits):
-                nonlocal selected_action,committed_full,ema_mean,ema_var,detector_ms,seen
+                nonlocal selected_action,committed_full,ema_mean,ema_var,detector_ms,seen,next_detection
                 if committed_full:return {'disable_capture':True}
                 seen+=1;start=time.perf_counter();stop=False;action=None;detail={}
                 if effective=='transition':
                     if point['kind']=='natural' and point['offset']<256:return False
+                    if point['offset']<next_detection:return False
                     action,detail=predictor.choose(point['features'],spec.get('cost_lambda',0.0001),spec.get('margin',0.0),mode=spec.get('prediction_mode','transition'))
-                    selected_action=action
-                    if action=='FULL':committed_full=True
-                    else:stop=True
+                    control=spec.get('control_mode','one_shot')
+                    if control=='one_shot':
+                        selected_action=action
+                        if action=='FULL':committed_full=True
+                        else:stop=True
+                    else:
+                        if action=='STOP':selected_action='STOP';stop=True
+                        else:
+                            selected_action=None
+                            next_detection=point['offset']+(512 if control=='sequential_adaptive' and action=='FULL' else 128)
+                elif effective=='learned_stop':
+                    if point['kind']=='natural' and point['offset']<256:return False
+                    pred,_=learned_predictor.fast_one(point['features']);detail=pred
+                    stop=pred['stop_correct']>=spec['correctness_threshold'];selected_action='STOP' if stop else None
+                    action='STOP' if stop else 'CONTINUE'
                 elif effective in ['eat','conformal_thinking']:
                     probe=e.entropy_probe(cache,logits);detail=probe;entropy=probe['entropy']
                     if effective=='eat':
@@ -77,7 +94,7 @@ def main():
                     'length_censored':False,'step_overflow':False,'policy_spec':{},'quality_labels_available_during_decisions':False}
                 append_jsonl(path,record);print(json.dumps({'online':row_index,'method':method,'id':row['problem_id'],'correct':scoring['correct'],'tokens':answer['tokens'],'ms':wall_ms}),flush=True)
                 del answer;continue
-            trace=e.decode(prompt,8192,seed,capture=effective=='transition',checkpoint_hook=hook if effective!='full' else None)
+            trace=e.decode(prompt,8192,seed,capture=effective in ['transition','learned_stop'],checkpoint_hook=hook if effective!='full' else None)
             total_think=trace['tokens'];state=(trace['cache'],trace['logits']);prefix=prompt+trace['ids'];step=None
             natural=trace['stop_reason']=='natural_end'
             if selected_action=='STEP':

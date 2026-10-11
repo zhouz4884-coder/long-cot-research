@@ -16,15 +16,15 @@ def main():
     p.add_argument('--model',required=True);p.add_argument('--shard',type=int,default=0);p.add_argument('--shards',type=int,default=1)
     p.add_argument('--n',type=int,default=0);p.add_argument('--max-think',type=int,default=8192)
     p.add_argument('--dense-stop',action='store_true');args=p.parse_args()
-    admission=json.loads(Path('results/protocol/checks.json').read_text())
+    admission=json.loads(Path('results/protocol/checks.json').read_text(encoding="utf-8"))
     assert admission.get('admitted'),'No training data collection before protocol admission'
     out=Path('results/bank');out.mkdir(parents=True,exist_ok=True)
     trace_path=out/f'{args.split}_traces_{args.shard}.jsonl';branch_path=out/f'{args.split}_branches_{args.shard}.jsonl'
     probe_path=out/f'{args.split}_probes_{args.shard}.jsonl'
-    done={json.loads(x)['problem_id'] for x in trace_path.read_text().splitlines()} if trace_path.exists() else set()
+    done={json.loads(x)['problem_id'] for x in trace_path.read_text(encoding="utf-8").splitlines()} if trace_path.exists() else set()
     for child_path in [branch_path,probe_path]:
         if not child_path.exists():continue
-        existing=[json.loads(x) for x in child_path.read_text().splitlines() if x.strip()]
+        existing=[json.loads(x) for x in child_path.read_text(encoding="utf-8").splitlines() if x.strip()]
         orphan=[r for r in existing if r['problem_id'] not in done]
         if orphan:
             archive=child_path.with_name(child_path.stem+f'_orphan_{int(time.time())}.jsonl')
@@ -32,7 +32,7 @@ def main():
             keep=[r for r in existing if r['problem_id'] in done]
             temporary=child_path.with_suffix('.pending')
             temporary.write_text(''.join(json.dumps(r)+'\n' for r in keep));temporary.replace(child_path)
-    rows=[json.loads(x) for x in Path(f'data/{args.split}.jsonl').read_text().splitlines()]
+    rows=[json.loads(x) for x in Path(f'data/{args.split}.jsonl').read_text(encoding="utf-8").splitlines()]
     if args.n:rows=rows[:args.n]
     code_hash=hashlib.sha256(Path('reason_transition/core.py').read_bytes()).hexdigest()
     e=Engine(args.model)
@@ -47,7 +47,7 @@ def main():
             nonlocal reflect_count
             n=point['offset'];selected=False
             if point['kind']=='natural':
-                for target in [256,1024]:
+                for target in [256,1024,2048,4096]:
                     if n>=target and target not in used:
                         used.add(target);selected=True;break
             elif reflect_count<2:

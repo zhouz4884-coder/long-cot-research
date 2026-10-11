@@ -11,12 +11,12 @@ def main():
     p.add_argument('--shard',type=int,default=0);p.add_argument('--shards',type=int,default=1)
     p.add_argument('--model',required=True);p.add_argument('--n',type=int,default=0)
     args=p.parse_args();out=Path('results/bank');out.mkdir(parents=True,exist_ok=True)
-    checks=json.loads(Path('results/protocol/checks.json').read_text())
+    checks=json.loads(Path('results/protocol/checks.json').read_text(encoding="utf-8"))
     assert checks.get('admitted'), 'Protocol admission must pass before collecting training labels'
-    rows=[json.loads(x) for x in Path(f'data/{args.split}.jsonl').read_text().splitlines()]
+    rows=[json.loads(x) for x in Path(f'data/{args.split}.jsonl').read_text(encoding="utf-8").splitlines()]
     if args.n:rows=rows[:args.n]
     path=out/f'{args.split}_traces_{args.shard}.jsonl'
-    finished={json.loads(x)['problem_id'] for x in path.read_text().splitlines()} if path.exists() else set()
+    finished={json.loads(x)['problem_id'] for x in path.read_text(encoding="utf-8").splitlines()} if path.exists() else set()
     e=Engine(args.model)
     for i,row in enumerate(rows):
         if i%args.shards!=args.shard or row['problem_id'] in finished:continue

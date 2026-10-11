@@ -13,12 +13,14 @@ from reason_transition.core import Engine, grade, public, digest_ids, stable_see
 def main():
     p=argparse.ArgumentParser();p.add_argument("--model",required=True);p.add_argument("--n",type=int,default=24)
     args=p.parse_args();out=Path("results/protocol");out.mkdir(parents=True,exist_ok=True)
-    rows=[json.loads(x) for x in Path("data/math500_smoke.jsonl").read_text().splitlines()][:args.n]
+    rows=[json.loads(x) for x in Path("data/math500_smoke.jsonl").read_text(encoding="utf-8").splitlines()][:args.n]
     e=Engine(args.model); torch=e.torch
     report={"scoring":[],"cache":[],"tokenizer":{},"model":args.model,"n":args.n}
     examples=[(r"\boxed{\frac{1}{2}}","0.5",1),(r"\boxed{3} then corrected: \boxed{4}","4",1),
         (r"\boxed{\sqrt{2}}",r"\sqrt{2}",1),(r"\boxed{3}","4",0),("no answer","4",0),
-        (r"\boxed{\frac{2}{3}}",r"\frac{4}{6}",1)]
+        (r"\boxed{\frac{2}{3}}",r"\frac{4}{6}",1),
+        (r"\boxed{(-2,-14,-7)}",r"\begin{pmatrix}-2\\-14\\-7\end{pmatrix}",1),
+        (r"\boxed{(-2,-6,-13)}",r"\begin{pmatrix}-2\\-14\\-7\end{pmatrix}",0)]
     for text,gold,expected in examples:
         result=grade(text,gold);result.update(text=text,gold=gold,expected=expected)
         report["scoring"].append(result)
@@ -57,7 +59,7 @@ def main():
     # A small, real natural-end/forced-end comparison; all detailed outputs survive.
     finished=set()
     if (out/"ending.jsonl").exists():
-        finished={json.loads(x)["problem_id"] for x in (out/"ending.jsonl").read_text().splitlines()}
+        finished={json.loads(x)["problem_id"] for x in (out/"ending.jsonl").read_text(encoding="utf-8").splitlines()}
     for i,row in enumerate(rows):
         if row["problem_id"] in finished:continue
         prompt=e.prompt(row["question"]);seed=stable_seed(20261008,row["problem_id"],0)
@@ -81,7 +83,7 @@ def main():
         append_jsonl(out/"ending.jsonl",record)
         print(json.dumps({"protocol":i+1,"problem_id":row["problem_id"],"thought_tokens":trace["tokens"],
             "natural":natural,"grade":scoring,"same_forced_answer":same_ids}),flush=True)
-    records=[json.loads(x) for x in (out/"ending.jsonl").read_text().splitlines()]
+    records=[json.loads(x) for x in (out/"ending.jsonl").read_text(encoding="utf-8").splitlines()]
     report["ending_n"]=len(records)
     report["parse_failures"]=sum(r["grade"]["parse_status"]!="ok" for r in records)
     report["format_failures"]=sum(not r["grade"].get("format_ok",False) for r in records)

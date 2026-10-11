@@ -19,7 +19,9 @@
   "checkpoint_spacing": 128,
   "pairing": "counter-based inverse-CDF common random numbers; phase-separated answer uniforms",
   "split": {"development": 150, "engineering": 50, "test": 300},
-  "checkpoint_budget_per_trace": {"natural": 2, "reflective": 2},
+  "checkpoint_budget_per_trace": {"natural": 4, "reflective": 2},
+  "natural_checkpoint_targets": [256,1024,2048,4096],
+  "controller_candidates": ["one_shot","sequential","sequential_adaptive"],
   "development_trajectories_initial": 1,
   "quality_tolerance_pp": 1.0,
   "bootstrap_unit": "problem_id"

@@ -9,6 +9,7 @@ class ProtocolTests(unittest.TestCase):
     def test_nested_and_revised_answer(self):
         self.assertEqual(last_box(r'\boxed{1} corrected \boxed{\frac{2}{3}}'),r'\frac{2}{3}')
         self.assertIsNone(last_box(r'\boxed{\frac{2}{3}'))
+        self.assertEqual(last_box(r'\boxed{\left\{x\mid x>0\right.}'),r'\left\{x\mid x>0\right.')
 
     def test_boundary_does_not_accept_incomplete_math(self):
         self.assertTrue(boundary('We obtain 3.\n\n'))
@@ -16,6 +17,7 @@ class ProtocolTests(unittest.TestCase):
         self.assertFalse(boundary('Wait'))
         self.assertFalse(boundary('Unclosed inline math $x + 1\n\n'))
         self.assertFalse(boundary('```python\nx = 1\n\n'))
+        self.assertTrue(boundary('The set is \\left\\{x\\mid x>0\\right.\n\n'))
 
     def test_counter_pairing_is_phase_separated(self):
         self.assertEqual(uniform(42,'answer',0),uniform(42,'answer',0))

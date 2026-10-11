@@ -56,6 +56,8 @@ run('engineering_50',[(g,['scripts/collect_bank.py','--model',MODEL,'--split','e
 run('grouped_prediction',[(0,['scripts/analyze_transitions.py'])])
 run('calibration',[(0,['scripts/calibrate_policies.py'])])
 run('repeat_controls',[(0,['scripts/repeat_branch_controls.py'])])
+state('test_freeze','waiting_for_complete_ablation_policy_freeze')
+while not read('provenance/ABLATION_POLICY_FREEZE_20261012.json').get('admitted'):time.sleep(15)
 run('online_50',[(g,['scripts/evaluate_online.py','--model',MODEL,'--n','50','--shard',str(g),'--shards','2']) for g in [0,1]])
 if not read('provenance/qwen3_thinking_verified.json').get('all_match'):
     state('second_model','blocked_by_unverified_model_files');raise SystemExit(2)

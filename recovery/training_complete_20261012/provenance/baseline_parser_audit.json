@@ -1,0 +1,24 @@
+{
+  "kind": "deterministic CPU parser audit; not task accuracy",
+  "upstream_commit": "21efe411bcaf34de884c1120ab7fb0573c193a62",
+  "cases": [
+    {
+      "text": "\\boxed{\\frac{1}{2}}",
+      "expected": "\\frac{1}{2}",
+      "upstream_extraction": "\\frac{1",
+      "correct_extraction": false
+    },
+    {
+      "text": "\\boxed{3} corrected final: \\boxed{4}",
+      "expected": "4",
+      "upstream_extraction": "3",
+      "correct_extraction": false
+    },
+    {
+      "text": "\\boxed{\\sqrt{2}}",
+      "expected": "\\sqrt{2}",
+      "upstream_extraction": "\\sqrt{2",
+      "correct_extraction": false
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "freeze_date_hkt": "2026-10-12",
+  "decision_basis": "The predeclared 300-problem held-out split and complete development/engineering results. No held-out outcomes consulted for this extension.",
+  "primary_model": "Qwen3-4B",
+  "primary_n": 300,
+  "primary_methods": ["full", "transition", "learned_stop", "eat"],
+  "additional_controls_n": 50,
+  "additional_controls": ["conformal_thinking", "fixed0", "fixed1024", "random", "value_outcome", "value_frequency", "value_cheap", "matched_stop"],
+  "second_model": "Qwen3-4B-Thinking-2507",
+  "second_model_n": 24,
+  "second_model_test_offset": 50,
+  "second_model_methods": ["full", "transition"],
+  "policy_rule": "Use the already completed engineering-set calibration without further tuning from any test outcomes.",
+  "expected_online_records": 1648,
+  "interpretation": "300-problem paired comparison is the primary endpoint. The 50-problem extra controls and 24-problem cross-model check are separately scoped diagnostics."
+}

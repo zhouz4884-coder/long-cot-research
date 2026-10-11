@@ -1,0 +1,37 @@
+{
+  "splits": {
+    "development": {
+      "trace_n": 150,
+      "checkpoint_n": 699,
+      "event_n": 28,
+      "states_without_checkpoint": [
+        "test/prealgebra/2066.json"
+      ],
+      "trace_correct": 133,
+      "trace_censored": 22,
+      "step_counts": {
+        "1->1": 388,
+        "0->0": 283,
+        "1->0": 11,
+        "0->1": 17
+      },
+      "all_prefixes_hash_and_parent_ids_match": true
+    },
+    "engineering": {
+      "trace_n": 50,
+      "checkpoint_n": 210,
+      "event_n": 10,
+      "states_without_checkpoint": [],
+      "trace_correct": 47,
+      "trace_censored": 5,
+      "step_counts": {
+        "0->0": 83,
+        "1->1": 117,
+        "0->1": 5,
+        "1->0": 5
+      },
+      "all_prefixes_hash_and_parent_ids_match": true
+    }
+  },
+  "scope": "read-only completed development/engineering audit"
+}

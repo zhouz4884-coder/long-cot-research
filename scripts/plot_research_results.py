@@ -10,9 +10,11 @@ plt.rcParams.update({'font.family':'DejaVu Sans','font.size':12,'axes.linewidth'
     'axes.spines.top':False,'axes.spines.right':False,'legend.frameon':False,'svg.fonttype':'none','pdf.fonttype':42})
 OUT=Path('figures');OUT.mkdir(exist_ok=True)
 COLORS={'full':'#767676','transition':'#0F4D92','learned_stop':'#42949E','eat':'#8BCF8B',
-    'conformal_thinking':'#9A4D8E','fixed0':'#CFCECE','fixed1024':'#B64342','random':'#E9A6A1'}
+    'conformal_thinking':'#9A4D8E','fixed0':'#CFCECE','fixed1024':'#B64342','random':'#E9A6A1',
+    'value_outcome':'#C3A353','value_frequency':'#5296C7','value_cheap':'#A67B52','matched_stop':'#325B55'}
 NAMES={'full':'FULL','transition':'Value controller','learned_stop':'Learned correctness','eat':'EAT',
-    'conformal_thinking':'Dual threshold','fixed0':'Zero thinking','fixed1024':'Fixed 1024','random':'Random'}
+    'conformal_thinking':'Dual threshold','fixed0':'Zero thinking','fixed1024':'Fixed 1024','random':'Random',
+    'value_outcome':'Marginal values','value_frequency':'Alternate frequency','value_cheap':'Cheap features','matched_stop':'Matched correctness'}
 
 
 def export(fig,name):

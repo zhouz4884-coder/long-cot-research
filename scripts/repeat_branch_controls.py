@@ -22,6 +22,7 @@ e=Engine('/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B')
 path=out/'repeat_branches.jsonl'
 done={(r['checkpoint_id'],r['repeat']) for r in (json.loads(x) for x in path.read_text(encoding="utf-8").splitlines())} if path.exists() else set()
 for point in points:
+    if all((point['checkpoint_id'],repeat) in done for repeat in range(4)):continue
     row=traces[point['problem_id']];prompt=row['prompt_ids'];prefix=point['prefix_ids']
     cache,logits=e.forward(prompt)
     for token in prefix[len(prompt):]:cache,logits=e.forward([token],cache)

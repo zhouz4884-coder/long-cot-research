@@ -2,10 +2,14 @@ import unittest
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from reason_transition.core import boundary,digest_ids,last_box,uniform
+from reason_transition.core import boundary,digest_ids,last_box,uniform,normalize_math_surface
 
 
 class ProtocolTests(unittest.TestCase):
+    def test_ambiguous_numeric_products_are_canonicalized(self):
+        self.assertEqual(normalize_math_surface('(-2)(3) + (0)(4)'),r'(-2)\cdot(3) + (0)\cdot(4)')
+        self.assertEqual(normalize_math_surface('log_2 8'),r'\log_2 8')
+        self.assertEqual(normalize_math_surface('(1,2)(3,4) catalogue'),'(1,2)(3,4) catalogue')
     def test_nested_and_revised_answer(self):
         self.assertEqual(last_box(r'\boxed{1} corrected \boxed{\frac{2}{3}}'),r'\frac{2}{3}')
         self.assertIsNone(last_box(r'\boxed{\frac{2}{3}'))

@@ -4,6 +4,11 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
 FEATURES=['length','log_length','entropy','margin','logprob','reflection_count','repeat4','steps','reflective']
+READOUT_FEATURES=FEATURES+['readout_entropy']
+
+
+def with_readout(rows):
+    return [{**r,'features':{**r['features'],'readout_entropy':r['stop']['eat_entropy']}} for r in rows]
 
 
 class Constant:

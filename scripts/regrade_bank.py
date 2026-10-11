@@ -43,5 +43,5 @@ for path in bank.glob('*_probes_*.jsonl'):
         row['end_correct']=traces[row['problem_id']]['grade']['correct']
     replace(path,rows)
 Path('results/analysis').mkdir(exist_ok=True)
-Path('results/analysis/vector_adjudication.json').write_text(json.dumps(changes,indent=2),encoding='utf-8')
+Path('results/analysis/surface_adjudication_v3.json').write_text(json.dumps(changes,indent=2),encoding='utf-8')
 print('Adjudicated changed scores',len(changes),'on completed traces',len(traces))

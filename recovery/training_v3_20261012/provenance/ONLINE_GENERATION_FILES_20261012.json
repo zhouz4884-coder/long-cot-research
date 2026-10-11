@@ -1,0 +1,40 @@
+{
+  "sha256": {
+    "reason_transition/core.py": "c554b91ac9392b33d3db498d0a0d2b012341ddc073593906176715c87753211c",
+    "reason_transition/predictor.py": "3916a75aa24c0e4fc310d1354ac19674f45796839be79a009ab368dfd3bb6090",
+    "scripts/evaluate_online.py": "bbbd61abc46b3cde743a2a08658fbecee1cfa50c57f1b8f89cffce6161b3a31a",
+    "scripts/collect_bank.py": "95fde1dab12a0c4ccad33c19e4ab23dcf789bfcfe78063a2404539acaea1654b",
+    "results/analysis/policy_calibration.json": "2d9cb56f0964976da8cc6f6a99a1d287f102c6e9922e41e982fbd2e5442b02c1",
+    "provenance/FINAL_EVALUATION_FREEZE_20261012.json": "db1e4cee1f7e1a0e26e4960809f001c6bb6114588388ba7bc7afec7a2bcc163d"
+  },
+  "recorded_at_stage": {
+    "stage": "online_50",
+    "status": "running",
+    "unix_time": 1791738176.058076,
+    "jobs": [
+      [
+        "scripts/evaluate_online.py",
+        "--model",
+        "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B",
+        "--n",
+        "50",
+        "--shard",
+        "0",
+        "--shards",
+        "2"
+      ],
+      [
+        "scripts/evaluate_online.py",
+        "--model",
+        "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B",
+        "--n",
+        "50",
+        "--shard",
+        "1",
+        "--shards",
+        "2"
+      ]
+    ]
+  },
+  "online_records_at_recording": 0
+}

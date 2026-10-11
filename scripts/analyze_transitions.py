@@ -9,7 +9,7 @@ import numpy as np
 from sklearn.metrics import average_precision_score,roc_auc_score,brier_score_loss
 from sklearn.model_selection import GroupKFold
 from scipy.stats import spearmanr
-from reason_transition.predictor import Predictor,TreePredictor,FEATURES,targets
+from reason_transition.predictor import Predictor,TreePredictor,FEATURES,READOUT_FEATURES,with_readout,targets
 
 
 def load(split):
@@ -56,17 +56,19 @@ def main():
     groups=np.array([r['problem_id'] for r in rows]);y=targets(rows)
     fold=GroupKFold(n_splits=5,shuffle=True,random_state=20261008)
     sets={'all_cheap':FEATURES,'length_only':['length','log_length'],'confidence_only':['logprob'],
-          'entropy_only':['entropy'],'text_only':['length','reflection_count','repeat4','steps','reflective'],'gbdt_cheap':FEATURES}
+          'entropy_only':['entropy'],'text_only':['length','reflection_count','repeat4','steps','reflective'],'gbdt_cheap':FEATURES,
+          'readout_linear':READOUT_FEATURES,'readout_tree':READOUT_FEATURES}
     report['models']={};oof={};fold_ids=[]
     splits=list(fold.split(rows,groups=groups))
     for train,test in splits:
         assert not set(groups[train])&set(groups[test])
         fold_ids.append({'train':sorted(set(groups[train])),'test':sorted(set(groups[test]))})
     for name,features in sets.items():
+        model_rows=with_readout(rows) if name.startswith('readout_') else rows
         predictions={k:np.zeros(len(rows)) for k in y}
         for train,test in splits:
-            predictor=(TreePredictor if name=='gbdt_cheap' else Predictor)(features).fit([rows[i] for i in train])
-            preds=predictor.predict([rows[i] for i in test])
+            predictor=(TreePredictor if name in ['gbdt_cheap','readout_tree'] else Predictor)(features).fit([model_rows[i] for i in train])
+            preds=predictor.predict([model_rows[i] for i in test])
             for key in y:predictions[key][test]=preds[key]
         model_metrics={k:metrics(y[k],predictions[k]) for k in y}
         net=predictions['step_fix']-predictions['step_harm']
@@ -80,6 +82,9 @@ def main():
     with (out/'predictor_linear.pkl').open('wb') as f:pickle.dump(predictor,f)
     tree=TreePredictor().fit(rows)
     with (out/'predictor_tree.pkl').open('wb') as f:pickle.dump(tree,f)
+    for name,cls in [('readout_linear',Predictor),('readout_tree',TreePredictor)]:
+        model=cls(READOUT_FEATURES).fit(with_readout(rows))
+        with (out/f'predictor_{name}.pkl').open('wb') as f:pickle.dump(model,f)
     (out/'grouped_cv.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     (out/'oof_predictions.json').write_text(json.dumps({'checkpoint_ids':[r['checkpoint_id'] for r in rows],'folds':fold_ids,'predictions':oof}),encoding='utf-8')
 

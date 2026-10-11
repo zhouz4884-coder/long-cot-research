@@ -39,6 +39,16 @@ def main():
             assert key not in models[model][method],'Duplicated online evaluation'
             models[model][method][key]=row
     report={'models':{},'inference_unit':'problem_id','bootstrap_draws':2000,'status':'complete' if models else 'no_online_results'}
+    freeze=json.loads(Path('provenance/FINAL_EVALUATION_FREEZE_20261012.json').read_text(encoding='utf-8'))
+    expected={freeze['primary_model']:{m:freeze['primary_n'] for m in freeze['primary_methods']},
+              freeze['second_model']:{m:freeze['second_model_n'] for m in freeze['second_model_methods']}}
+    expected[freeze['primary_model']].update({m:freeze['additional_controls_n'] for m in freeze['additional_controls']})
+    for model,methods in expected.items():
+        for method,n in methods.items():
+            actual=len(models.get(model,{}).get(method,{}))
+            if actual!=n:raise ValueError(f'Incomplete frozen evaluation: {model}/{method}: {actual}/{n}')
+    report['expected_counts_verified']=True
+    report['total_online_records']=sum(len(rows) for methods in models.values() for rows in methods.values())
     for model,methods in models.items():
         item={'methods':{},'comparisons':{}}
         for method,by_id in methods.items():
@@ -52,7 +62,7 @@ def main():
         for method in methods:
             if method!='full' and 'full' in methods:item['comparisons'][method+'_vs_full']=cluster_comparison(methods['full'],methods[method])
         if 'transition' in methods:
-            for baseline in ['learned_stop','eat','conformal_thinking','fixed0','fixed1024','random']:
+            for baseline in ['learned_stop','eat','conformal_thinking','fixed0','fixed1024','random','value_outcome','value_frequency','value_cheap','matched_stop']:
                 if baseline in methods:item['comparisons']['transition_vs_'+baseline]=cluster_comparison(methods[baseline],methods['transition'])
         report['models'][model]=item
     (out/'online_statistics.json').write_text(json.dumps(report,indent=2),encoding='utf-8')

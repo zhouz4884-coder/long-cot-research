@@ -13,15 +13,13 @@ from reason_transition.core import Engine,stable_seed,grade,public,append_jsonl
 def main():
     p=argparse.ArgumentParser();p.add_argument('--model',required=True);p.add_argument('--n',type=int,default=50);p.add_argument('--offset',type=int,default=0)
     p.add_argument('--shard',type=int,default=0);p.add_argument('--shards',type=int,default=1)
-    p.add_argument('--methods',default='full,transition,learned_stop,eat,conformal_thinking,fixed0,fixed1024,random')
+    p.add_argument('--methods',default='full,transition,learned_stop,eat,conformal_thinking,fixed0,fixed1024,random,value_outcome,value_frequency,value_cheap,matched_stop')
     p.add_argument('--out-name',default='qwen3_4b');args=p.parse_args()
     out=Path('results/online');out.mkdir(parents=True,exist_ok=True)
     calibration=json.loads(Path('results/analysis/policy_calibration.json').read_text(encoding="utf-8"))
-    with Path('results/analysis/predictor.pkl').open('rb') as f:predictor=pickle.load(f)
-    predictor_type=calibration['selected_empirical']['transition'].get('predictor_type','linear')
-    with Path(f'results/analysis/predictor_{predictor_type}.pkl').open('rb') as f:predictor=pickle.load(f)
-    learned_type=calibration['selected_empirical']['learned_stop'].get('predictor_type','linear')
-    with Path(f'results/analysis/predictor_{learned_type}.pkl').open('rb') as f:learned_predictor=pickle.load(f)
+    learners={}
+    for name in ['linear','tree','readout_linear','readout_tree']:
+        with Path(f'results/analysis/predictor_{name}.pkl').open('rb') as f:learners[name]=pickle.load(f)
     rows=[json.loads(x) for x in Path('data/test.jsonl').read_text(encoding="utf-8").splitlines()][args.offset:args.offset+args.n]
     path=out/f'{args.out_name}_{args.shard}.jsonl'
     done={(json.loads(x)['problem_id'],json.loads(x)['method']) for x in path.read_text(encoding="utf-8").splitlines()} if path.exists() else set()
@@ -35,6 +33,8 @@ def main():
             if (row['problem_id'],method) in done:continue
             spec=calibration['selected_empirical'].get(method,{})
             effective=spec.get('method',method)
+            predictor=learners[spec.get('predictor_type','linear')]
+            learned_predictor=predictor
             prompt=e.prompt(row['question']);seed=stable_seed(20261008,row['problem_id'],0)
             log=[];selected_action=None;committed_full=False;ema_mean=ema_var=0.0;detector_ms=0.0
             seen=0;next_detection=0
@@ -46,7 +46,11 @@ def main():
                 if effective=='transition':
                     if point['kind']=='natural' and point['offset']<256:return False
                     if point['offset']<next_detection:return False
-                    action,detail=predictor.choose(point['features'],spec.get('cost_lambda',0.0001),spec.get('margin',0.0),mode=spec.get('prediction_mode','transition'))
+                    features=point['features'];readout=None
+                    if 'readout_entropy' in predictor.features:
+                        readout=e.entropy_probe(cache,logits);features={**features,'readout_entropy':readout['entropy']}
+                    action,detail=predictor.choose(features,spec.get('cost_lambda',0.0001),spec.get('margin',0.0),mode=spec.get('prediction_mode','transition'))
+                    if readout:detail.update(probe_input_tokens=readout['probe_input_tokens'],readout_probe=readout)
                     control=spec.get('control_mode','one_shot')
                     if control=='one_shot':
                         selected_action=action
@@ -59,7 +63,11 @@ def main():
                             next_detection=point['offset']+(512 if control=='sequential_adaptive' and action=='FULL' else 128)
                 elif effective=='learned_stop':
                     if point['kind']=='natural' and point['offset']<256:return False
-                    pred,_=learned_predictor.fast_one(point['features']);detail=pred
+                    features=point['features'];readout=None
+                    if 'readout_entropy' in learned_predictor.features:
+                        readout=e.entropy_probe(cache,logits);features={**features,'readout_entropy':readout['entropy']}
+                    pred,_=learned_predictor.fast_one(features);detail=pred
+                    if readout:detail.update(probe_input_tokens=readout['probe_input_tokens'],readout_probe=readout)
                     stop=pred['stop_correct']>=spec['correctness_threshold'];selected_action='STOP' if stop else None
                     action='STOP' if stop else 'CONTINUE'
                 elif effective in ['eat','conformal_thinking']:

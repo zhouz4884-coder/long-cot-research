@@ -17,6 +17,9 @@ for kind,container in [('branches',branches),('probes',probes),('traces',traces)
 assert len({r['problem_id'] for r in traces})==50,'Use the full frozen engineering set'
 with (out/'predictor.pkl').open('rb') as f:predictor=pickle.load(f)
 with (out/'predictor_tree.pkl').open('rb') as f:tree_predictor=pickle.load(f)
+readout_predictors={}
+for name in ['readout_linear','readout_tree']:
+    with (out/f'predictor_{name}.pkl').open('rb') as f:readout_predictors[name]=pickle.load(f)
 decision_cache={}
 def cached_decision(model,features,cost,margin,mode):
     key=(id(model),tuple(float(features[k]) for k in model.features))
@@ -26,6 +29,8 @@ by_problem=defaultdict(list)
 for r in probes:by_problem[r['problem_id']].append(r)
 branch_by_id={r['checkpoint_id']:r for r in branches}
 for group in by_problem.values():group.sort(key=lambda r:r['offset'])
+for row in branches:row['features']={**row['features'],'readout_entropy':row['stop']['eat_entropy']}
+for row in probes:row['features']={**row['features'],'readout_entropy':row['eat_entropy']}
 baseline_accuracy=float(np.mean([r['grade']['correct'] for r in traces]))
 baseline_tokens=float(np.mean([r['trace']['tokens']+r['answer']['tokens'] for r in traces]))
 records=[]
@@ -44,7 +49,7 @@ def fallback(row):
         'full_correct':row['grade']['correct'],'fp':0.,'fn':0.}
 
 
-predictors={'linear':predictor,'tree':tree_predictor}
+predictors={'linear':predictor,'tree':tree_predictor,**readout_predictors}
 from itertools import product
 cost_grid=[0.0,0.00002,0.00005,0.0001,0.0002,0.0005]
 margin_grid=[-0.1,-0.05,0.0,0.02,0.05]
@@ -57,21 +62,24 @@ for predictor_type,mode,cost,margin in product(predictors,['transition','outcome
         point=min(candidates,key=lambda r:r['prefix_tokens'])
         action,_=cached_decision(learner,point['features'],cost,margin,mode)
         key={'STOP':'stop','STEP':'step','FULL':'end'}[action]
-        outcomes.append({'correct':point[key+'_correct'],'tokens':point['prefix_tokens']+point[key+'_tokens'],'full_correct':point['end_correct']})
+        outcomes.append({'correct':point[key+'_correct'],'tokens':point['prefix_tokens']+point[key+'_tokens'],'full_correct':point['end_correct'],
+            'probe_calls':int(predictor_type.startswith('readout_'))})
     finish({'method':'transition','cost_lambda':cost,'margin':margin,'prediction_mode':mode,'predictor_type':predictor_type},outcomes)
 
 # Receding-horizon variants re-evaluate only past-observable states.
 for predictor_type,control,mode,cost,margin in product(predictors,['sequential','sequential_adaptive'],['transition','outcome'],cost_grid,margin_grid):
     learner=predictors[predictor_type];outcomes=[]
     for row in traces:
-        chosen=None;next_check=0
+        chosen=None;next_check=0;calls=0
         for point in by_problem[row['problem_id']]:
             if point['offset']<next_check or (point['kind']=='natural' and point['offset']<256):continue
             action,_=cached_decision(learner,point['features'],cost,margin,mode)
+            calls+=int(predictor_type.startswith('readout_'))
             if action=='STOP':chosen=point;break
             next_check=point['offset']+(512 if control=='sequential_adaptive' and action=='FULL' else 128)
-        outcomes.append({'correct':chosen['correct'],'tokens':chosen['offset']+chosen['answer_tokens'],
-                         'full_correct':row['grade']['correct']} if chosen else fallback(row))
+        outcome={'correct':chosen['correct'],'tokens':chosen['offset']+chosen['answer_tokens'],
+                 'full_correct':row['grade']['correct']} if chosen else fallback(row)
+        outcome['probe_calls']=calls;outcomes.append(outcome)
     finish({'method':'transition','cost_lambda':cost,'margin':margin,'prediction_mode':mode,'control_mode':control,'predictor_type':predictor_type},outcomes)
 
 # Same-feature current-correctness baseline distinguishes transition value from
@@ -80,13 +88,15 @@ for predictor_type in predictors:
  for threshold in [0.5,0.65,0.75,0.85,0.9,0.95,0.98,1.001]:
   outcomes=[];learner=predictors[predictor_type]
   for row in traces:
-   chosen=None
+   chosen=None;calls=0
    for point in by_problem[row['problem_id']]:
     if point['kind']=='natural' and point['offset']<256:continue
+    calls+=int(predictor_type.startswith('readout_'))
     key=(id(learner),tuple(float(point['features'][k]) for k in learner.features))
     if key not in decision_cache:decision_cache[key]=learner.fast_one(point['features'])
     if decision_cache[key][0]['stop_correct']>=threshold:chosen=point;break
-   outcomes.append({'correct':chosen['correct'],'tokens':chosen['offset']+chosen['answer_tokens'],'full_correct':row['grade']['correct']} if chosen else fallback(row))
+   outcome={'correct':chosen['correct'],'tokens':chosen['offset']+chosen['answer_tokens'],'full_correct':row['grade']['correct']} if chosen else fallback(row)
+   outcome['probe_calls']=calls;outcomes.append(outcome)
   finish({'method':'learned_stop','correctness_threshold':threshold,'predictor_type':predictor_type},outcomes)
 
 # Paper-formula EAT reimplementation, with engineering-only threshold tuning.

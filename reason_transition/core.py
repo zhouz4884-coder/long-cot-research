@@ -245,19 +245,28 @@ def last_box(text):
     return boxes[-1] if boxes else None
 
 
+def normalize_math_surface(text):
+    """Unambiguous numeric products and common missing TeX log command only."""
+    numeric_group=r'\([+-]?\d+(?:\.\d+)?\)'
+    text=re.sub('('+numeric_group+r')\s*(?='+numeric_group+')',lambda m:m.group(1)+r'\cdot',text)
+    return re.sub(r'(?<![A-Za-z\\])log(?=\s*[_({])',lambda m:r'\log',text)
+
+
 def grade(text, gold):
     """Keep parse failure distinct; mathematical equality uses Math-Verify."""
     from math_verify import parse, verify, LatexExtractionConfig, ExprExtractionConfig
     configs=(LatexExtractionConfig(), ExprExtractionConfig())
     try:
-        target=parse(r"\boxed{"+str(gold)+"}",extraction_config=configs,parsing_timeout=5)
+        gold_surface=normalize_math_surface(str(gold))
+        target=parse(r"\boxed{"+gold_surface+"}",extraction_config=configs,parsing_timeout=5)
         boxed=last_box(text)
         if boxed is None and not re.search(r"(?:final answer|answer is)\s*[:=]?",text,re.I):
             return {"correct":0,"parse_status":"parse_failed","format_ok":False,"boxed":None,"reason":"missing_complete_final_answer"}
-        candidate=parse(r"\boxed{"+boxed+"}" if boxed is not None else text,extraction_config=configs,parsing_timeout=5)
-        status="ok" if candidate else "parse_failed"
+        surface=normalize_math_surface(boxed if boxed is not None else text)
+        candidate=parse(r"\boxed{"+surface+"}" if boxed is not None else surface,extraction_config=configs,parsing_timeout=5)
+        status="ok" if candidate and not isinstance(candidate[0],str) else "fallback_only" if candidate else "parse_failed"
         correct=int(bool(candidate) and bool(target) and verify(target,candidate,timeout_seconds=5))
-        normalization=None
+        normalization='unambiguous_math_surface' if surface!=(boxed if boxed is not None else text) or gold_surface!=str(gold) else None
         if not correct and candidate and target:
             from sympy import MatrixBase,Tuple
             gold_object=target[0];prediction=candidate[0]
@@ -272,7 +281,7 @@ def grade(text, gold):
                                     for expected,actual in zip(list(gold_object),coordinates)))
                     normalization='ordered_vector_coordinates'
         return {"correct":correct,"parse_status":status,"boxed":boxed,"format_ok":boxed is not None,
-            "parsed":str(candidate),"gold_parsed":str(target),"normalization":normalization,"scorer_version":"math_verify_0.9_vector_v2"}
+            "parsed":str(candidate),"gold_parsed":str(target),"normalization":normalization,"normalized_surface":surface,"scorer_version":"math_verify_0.9_surface_vector_v3"}
     except Exception as e:
         return {"correct":0,"parse_status":"grader_error","error":type(e).__name__+": "+str(e)}
 

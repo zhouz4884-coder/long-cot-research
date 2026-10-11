@@ -37,7 +37,10 @@ for key,label in [('length_only','仅长度'),('all_cheap','便宜特征/线性'
  r=cv['models'][key];model_rows.append(f"| {label} | {r['step_fix']['pr_auc']:.4f} | {r['step_harm']['pr_auc']:.4f} | {r['full_fix']['roc_auc']:.4f} | {r['stop_correct']['roc_auc']:.4f} | {r['net_spearman']:.4f} |")
 spec=cal['selected_empirical']['transition']
 point_ok=gain['accuracy_delta']>=-.01 and gain['token_saving']>=.15 and gain['wall_saving']>0
-verdict='取得有价值的经验性能信号，但论文结论需要继续诊断和独立扩展' if point_ok else '本轮未达到质量与计算收益共同要求，当前方案 NO-GO'
+learned=primary['comparisons']['transition_vs_learned_stop']
+strong_ok=all(r['accuracy_delta']>=-.01 and r['token_saving']>0 and r['wall_saving']>0 for r in [strong,learned])
+verdict=('取得有价值的经验性能信号，但论文结论需要继续诊断和独立扩展' if point_ok and strong_ok else
+         '强基线比较尚未通过，当前方案 NO-GO' if point_ok else '本轮未达到质量与计算收益共同要求，当前方案 NO-GO')
 text=f'''# 自然推理干预价值：完整实验总结
 
 生成时间（UTC）：{datetime.now(timezone.utc).isoformat(timespec='seconds')}。执行从 2026-10-08 开始，2026-10-11 恢复服务器连接后连续推进。[原始研究讨论](https://chatgpt.com/share/6ac7ac26-c6a8-83ec-be63-d018140ce23e)的可读取正文已完整阅读，共 39,047 字符。按照原定 14 天工作的依赖顺序执行，未把 14 天日历等待当作研究条件。

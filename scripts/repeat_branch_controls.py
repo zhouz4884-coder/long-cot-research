@@ -12,9 +12,11 @@ for f in bank.glob('engineering_branches_*.jsonl'):
 for f in bank.glob('engineering_traces_*.jsonl'):
     traces.update({r['problem_id']:r for r in (json.loads(x) for x in f.read_text(encoding="utf-8").splitlines())})
 points=[];used=set()
-for r in sorted(branches,key=lambda r:(r['prefix_tokens'],r['problem_id'])):
-    if r['problem_id'] not in used:
-        used.add(r['problem_id']);points.append(r)
+events=[r for r in branches if r['stop_correct']!=r['step_correct']]
+neutrals=[r for r in branches if r['stop_correct']==r['step_correct']]
+for r in sorted(events,key=lambda r:(r['problem_id'],r['prefix_tokens']))+sorted(neutrals,key=lambda r:(r['prefix_tokens'],r['problem_id'])):
+    if r['checkpoint_id'] not in used:
+        used.add(r['checkpoint_id']);points.append(r)
     if len(points)==8:break
 e=Engine('/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B')
 path=out/'repeat_branches.jsonl'

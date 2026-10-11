@@ -35,5 +35,5 @@ for split,expected in [('development',150),('engineering',50)]:
   question=next(json.loads(line)['question'] for line in Path(f'data/{split}.jsonl').read_text(encoding='utf-8').splitlines() if json.loads(line)['problem_id']==r['problem_id'])
   markdown.extend([f"## {split}: {r['checkpoint_id']}",'',f"题目：{question}",'',f"标准答案：`{t['gold']}`",'',f"STOP ({r['stop_correct']}): `{r['stop']['text']}`",'',f"STEP ({r['step_correct']}): `{r['step_answer']['text']}`",'',f"一步续写：{r['step']['text']}",''])
 (out/'bank_lineage.json').write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding='utf-8')
-(out/'EVENTS_ZH.md').write_text('\n'.join(markdown),encoding='utf-8')
+(out/'EVENTS_ZH.md').write_text('\n'.join(line.rstrip() for line in '\n'.join(markdown).splitlines())+'\n',encoding='utf-8')
 print(json.dumps(report,indent=2,ensure_ascii=False))

@@ -13,6 +13,8 @@ assert freeze['online_records_at_freeze']==0
 generation=json.loads(Path('provenance/ONLINE_GENERATION_FILES_20261012.json').read_text())['sha256']
 for name in ['reason_transition/core.py','reason_transition/predictor.py','scripts/evaluate_online.py']:
  assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==generation[name],name
+predictors=json.loads(Path('provenance/PREDICTOR_SNAPSHOT_IDENTITIES.json').read_text())['sha256']
+for name,expected_hash in predictors.items():assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==expected_hash,name
 cal=json.loads(cal_path.read_text());rows=[];counts=defaultdict(set)
 for p in Path('results/online').glob('*.jsonl'):
  for line in p.read_text(encoding='utf-8').splitlines():
@@ -36,5 +38,6 @@ for method in expected['second_model_methods']:assert counts[(expected['second_m
 payload={'passed':True,'online_records':len(rows),'problem_splits_disjoint':True,'all_expected_problem_ids_match':True,
  'policy_unchanged_from_zero_test_record_freeze':True,'all_costs_finite_and_nonnegative':True,'common_fp16_and_scorer':True,
  'generating_source_hashes_unchanged':True,
+ 'predictor_files_match_completed_training_snapshot':True,
  'claim_scope':'This is provenance/count audit. It is not proof of absence of MATH-500 pretraining contamination or external validity.'}
 Path('results/analysis/study_integrity.json').write_text(json.dumps(payload,indent=2));print(json.dumps(payload))

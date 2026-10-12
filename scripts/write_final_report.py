@@ -9,6 +9,7 @@ stats=read('results/analysis/online_statistics.json');integrity=read('results/an
 assert integrity['passed'] and stats['expected_counts_verified'] and stats['total_online_records']==1648
 cv=read('results/analysis/grouped_cv.json');repeat=read('results/analysis/repeat_control_analysis.json')
 cal=read('results/analysis/policy_calibration.json');lineage=read('results/audit/bank_lineage.json')
+trajectory=read('results/analysis/trajectory_consistency.json');assert trajectory['is_final']
 primary=stats['models']['Qwen3-4B'];second=stats['models']['Qwen3-4B-Thinking-2507']
 gain=primary['comparisons']['transition_vs_full'];strong=primary['comparisons']['transition_vs_eat']
 names={'full':'FULL（8192 上限）','transition':'净收益控制器','learned_stop':'学习型正确率早停','eat':'EAT 共同协议适配',
@@ -85,6 +86,8 @@ MATH-500 revision `6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be`，原始数据 SHA2
 开发集 {trace_dev['trace_n']} 条完整轨迹、699 个检查点，149 个题目有检查点；`test/prealgebra/2066.json` 在可用检查点前自然结束，仍计入完整数据。开发 FULL 正确 {trace_dev['trace_correct']}/150，触顶 {trace_dev['trace_censored']} 条。工程集完整 50 条轨迹、210 个检查点，FULL 正确 47/50。全部 909 个前缀 token ID/hash 与父轨迹吻合。
 
 开发集 STEP 转移为 {trans['step_transition']}，硬 STEP 超限 {trans['step_overflow']} 条；这些检查点共享题目，不能当成 699 个独立统计样本。修正与改错的标签是在指定采样耦合及短答案协议下的观测结果，包含推理内容、答案抽取和采样变化，不等同于确定性的内部决策变化。
+
+最终实际 token 序列另作共同前缀审计：所有观察到的思考前缀是否与配对 FULL 相同：{trajectory['all_observed_prefixes_match']}；相同完整答案上下文的受控输出是否相同：{trajectory['all_observed_same_context_answers_match']}；相同输出的判分是否一致：{trajectory['all_observed_identical_outputs_scored_consistently']}。逐方法检查数与任何异常题目 ID 完整保存于 `trajectory_consistency.json`。这直接检查保存的实际序列，而非只依赖三个前缀的缓存单元验收；异常仍需按代码、数值和模型机制分别分析。
 
 ## 4. 借鉴的方法与本轮实际尝试
 

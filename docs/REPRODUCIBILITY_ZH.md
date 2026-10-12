@@ -9,6 +9,7 @@
 ```bash
 python scripts/validate_study_artifacts.py
 python scripts/audit_bank.py
+python scripts/audit_online_trajectories.py
 python scripts/analyze_controls.py
 python scripts/final_stats.py
 python scripts/export_online_cases.py

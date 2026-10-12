@@ -28,6 +28,19 @@ def cluster_comparison(reference,candidate,draws=2000):
         'warning':'A zero-width bootstrap interval with zero observed errors does not certify absence of rare harms; exact harm bound is separate.'}
 
 
+def summarize(rows):
+    rows=list(rows)
+    assert rows,'No measured rows in a requested cohort'
+    return {'n':len(rows),'correct':sum(r['correct'] for r in rows),
+            'accuracy':float(np.mean([r['correct'] for r in rows])),
+            'mean_tokens':float(np.mean([r['total_tokens'] for r in rows])),
+            'mean_wall_ms':float(np.mean([r['wall_ms'] for r in rows])),
+            'p95_wall_ms':float(np.quantile([r['wall_ms'] for r in rows],0.95)),
+            'mean_detector_ms':float(np.mean([r['detector_ms'] for r in rows])),
+            'length_censored':sum(r['length_censored'] for r in rows),
+            'parse_failed':sum(r['grade']['parse_status']!='ok' for r in rows)}
+
+
 def main():
     out=Path('results/analysis');out.mkdir(parents=True,exist_ok=True)
     models=defaultdict(lambda:defaultdict(dict))
@@ -43,22 +56,34 @@ def main():
     expected={freeze['primary_model']:{m:freeze['primary_n'] for m in freeze['primary_methods']},
               freeze['second_model']:{m:freeze['second_model_n'] for m in freeze['second_model_methods']}}
     expected[freeze['primary_model']].update({m:freeze['additional_controls_n'] for m in freeze['additional_controls']})
+    assert set(models)==set(expected),'Unexpected model in the frozen evaluation'
     for model,methods in expected.items():
+        assert set(models[model])==set(methods),'Unexpected method in the frozen evaluation'
         for method,n in methods.items():
             actual=len(models.get(model,{}).get(method,{}))
             if actual!=n:raise ValueError(f'Incomplete frozen evaluation: {model}/{method}: {actual}/{n}')
     report['expected_counts_verified']=True
     report['total_online_records']=sum(len(rows) for methods in models.values() for rows in methods.values())
+    assert report['total_online_records']==freeze['expected_online_records']
+    test_ids=[json.loads(s)['problem_id'] for s in Path('data/test.jsonl').read_text(encoding='utf-8').splitlines()]
     for model,methods in models.items():
-        item={'methods':{},'comparisons':{}}
+        item={'methods':{},'comparisons':{},'cohorts':{}}
         for method,by_id in methods.items():
-            rows=list(by_id.values());item['methods'][method]={'n':len(rows),'correct':sum(r['correct'] for r in rows),
-                'accuracy':float(np.mean([r['correct'] for r in rows])),
-                'mean_tokens':float(np.mean([r['total_tokens'] for r in rows])),
-                'mean_wall_ms':float(np.mean([r['wall_ms'] for r in rows])),
-                'p95_wall_ms':float(np.quantile([r['wall_ms'] for r in rows],0.95)),
-                'mean_detector_ms':float(np.mean([r['detector_ms'] for r in rows])),
-                'length_censored':sum(r['length_censored'] for r in rows),'parse_failed':sum(r['grade']['parse_status']!='ok' for r in rows)}
+            item['methods'][method]=summarize(by_id.values())
+        if model==freeze['primary_model']:
+            main_methods=freeze['primary_methods'];main_ids=set(test_ids)
+            diagnostic_ids=set(test_ids[:freeze['additional_controls_n']])
+            assert all(set(methods[m])==main_ids for m in main_methods)
+            assert all(diagnostic_ids<=set(by_id) for by_id in methods.values())
+            item['cohorts']['main_300']={'n':len(main_ids),'problem_ids':sorted(main_ids),
+                'methods':{m:summarize(methods[m].values()) for m in main_methods}}
+            item['cohorts']['diagnostic_50']={'n':len(diagnostic_ids),'problem_ids':sorted(diagnostic_ids),
+                'methods':{m:summarize(by_id[k] for k in sorted(diagnostic_ids)) for m,by_id in methods.items()}}
+        else:
+            common=set.intersection(*(set(by_id) for by_id in methods.values()))
+            assert len(common)==freeze['second_model_n']
+            item['cohorts']['transfer_24']={'n':len(common),'problem_ids':sorted(common),
+                'methods':{m:summarize(by_id[k] for k in sorted(common)) for m,by_id in methods.items()}}
         for method in methods:
             if method!='full' and 'full' in methods:item['comparisons'][method+'_vs_full']=cluster_comparison(methods['full'],methods[method])
         if 'transition' in methods:

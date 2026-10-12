@@ -2,7 +2,7 @@
 
 本项目执行[分享聊天中的研究计划](https://chatgpt.com/share/6ac7ac26-c6a8-83ec-be63-d018140ce23e)。目标是测量继续一个自然推理步骤的净收益，随后检验其可预测性和真实在线价值。
 
-**当前执行状态请查看 `docs/REPORT_ZH.md`。代码存在、编译通过或 CPU 检查通过均不表示 GPU 实验完成。**
+**最终综合报告写入 `docs/REPORT_ZH.md`；执行过程记录见 `docs/WORKLOG_20261011.md` 和 `docs/WORKLOG_20261012.md`。代码存在、编译通过或 CPU 检查通过均不表示 GPU 实验完成。**
 
 ## 冻结输入
 
@@ -25,10 +25,16 @@ python scripts/validate_protocol.py --model /path/to/Qwen3-4B --n 24
 python scripts/validate_cache_clone.py
 # 正确性和原版 P0 完成后，按依赖执行；pilot review 由执行者实际检查 50 个答案。
 python scripts/run_pipeline.py
+# 以下是另外两个独立进程，按等待依赖运行；主管线不会自动启动它们。
+python scripts/run_holdout_remainder.py
+python scripts/finalize_execution.py
+# 对已完整保存的原始结果重新统计：
 python scripts/final_stats.py
 ```
 
 `run_pipeline.py` 规划的顺序是 24 题分支 pilot、150 题开发、补齐 50 题工程集、Grouped CV、工程集校准、重复采样控制、50 题独立在线测试及第二模型 24 题检查。它必须实际部署和运行才会推进；不能把这个入口文件当成已执行的研究。
+
+主模型四种方法的最终 300 题由 `run_holdout_remainder.py` 补齐；其余控制和消融各 50 题，第二模型两种方法各 24 题，共 1648 条在线记录。输入冻结、实际命令、人工核验和分析复现的详细依赖见 [复现说明](docs/REPRODUCIBILITY_ZH.md)。
 
 主采集器是 `scripts/collect_bank.py`：同一真实父 KV 深拷贝到 STOP/STEP，FULL 为未干预的父轨迹；离线分支开销单独记录。早期 `generate_traces.py` 和 `branch_at_checkpoint.py` 是独立重放辅助代码，不是主采集路径，不应和主数据混跑。
 

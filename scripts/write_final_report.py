@@ -116,7 +116,7 @@ wall-clock 从实际 prompt prefill 到答案生成结束，包含决策和探�
 
 ## 7. 额外 50 题控制与消融
 
-{table(primary,['conformal_thinking','fixed0','fixed1024','random','value_outcome','value_frequency','value_cheap','matched_stop'])}
+{table(primary['cohorts']['diagnostic_50'],['full','transition','learned_stop','eat','conformal_thinking','fixed0','fixed1024','random','value_outcome','value_frequency','value_cheap','matched_stop'])}
 
 {comparison(primary,['transition_vs_conformal_thinking','transition_vs_fixed0','transition_vs_fixed1024','transition_vs_random','transition_vs_value_outcome','transition_vs_value_frequency','transition_vs_value_cheap','transition_vs_matched_stop'])}
 
@@ -159,6 +159,8 @@ wall-clock 从实际 prompt prefill 到答案生成结束，包含决策和探�
 ## 11. 复现、失败记录和产物
 
 执行入口为 `run_pipeline.py` 与 `run_holdout_remainder.py`；前者完成 admission、pilot、开发/工程、预测/校准、重复控制、50 题在线和第二模型，后者补齐主四方法的另外 250 题。`finalize_execution.py` 仅在全部生成完成后运行完整统计、审计和科学图。
+
+分析复现和重新生成的依赖、模型路径、人工审核与冻结要求见 `docs/REPRODUCIBILITY_ZH.md`。主质量—成本图的四种方法共享完整 300 题，诊断图的全部方法共享前 50 题，迁移图的两种方法共享同一 24 题；不同题目集合的总体均值不混在同一条性能曲线上。
 
 版本记录见 `CODE_MANIFEST.json`、数据 split manifest、模型核验、策略 freeze 与 `ONLINE_GENERATION_FILES_20261012.json`。原始 P0、被修正的旧评分和日志均在 recovery/远程快照中留档。保留 SSH 中断、BF16 admission 不通过、评分问题、诊断脚本错误与对应修复；没有删除失败题或补造缺失成本。
 

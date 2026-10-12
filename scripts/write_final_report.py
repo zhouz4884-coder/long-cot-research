@@ -36,6 +36,11 @@ model_rows=['| 特征/训练器 | STEP 修正 AP | STEP 改错 AP | FULL 修正 
 for key,label in [('length_only','仅长度'),('all_cheap','便宜特征/线性'),('gbdt_cheap','便宜特征/GBDT'),('readout_linear','加入回答熵/线性'),('readout_tree','加入回答熵/GBDT')]:
  r=cv['models'][key];model_rows.append(f"| {label} | {r['step_fix']['pr_auc']:.4f} | {r['step_harm']['pr_auc']:.4f} | {r['full_fix']['roc_auc']:.4f} | {r['stop_correct']['roc_auc']:.4f} | {r['net_spearman']:.4f} |")
 spec=cal['selected_empirical']['transition']
+repeat_table=['| 工程状态（题目与 prefix token） | STOP 正确/4 | STEP 正确/4 | 修正/改错次数 | 观测净差 |',
+              '|---|---:|---:|---:|---:|']
+for r in repeat['states']:
+    parts=r['checkpoint_id'].split(':');counts=r['transition_counts']
+    repeat_table.append(f"| {parts[0]}；{parts[2]} | {r['stop_correct']}/4 | {r['step_correct']}/4 | {counts.get('0->1',0)}/{counts.get('1->0',0)} | {r['mean_step_minus_stop']:.2f} |")
 point_ok=gain['accuracy_delta']>=-.01 and gain['token_saving']>=.15 and gain['wall_saving']>0
 learned=primary['comparisons']['transition_vs_learned_stop']
 strong_ok=all(r['accuracy_delta']>=-.01 and r['token_saving']>0 and r['wall_saving']>0 for r in [strong,learned])
@@ -122,6 +127,10 @@ wall-clock 从实际 prompt prefill 到答案生成结束，包含决策和探�
 ## 8. 重复种子与第二模型
 
 保存 {repeat['state_n']} 个工程状态、每状态 4 个独立种子，共 {repeat['repeat_n']} 对 STOP/STEP。评分修复前后选点的并集全部保留，因此数量可能超过初始 8 状态；事件条件采样不能估计总体反转率。逐状态转移次数和输出保存在 `repeat_control_analysis.json`、`repeat_branches.jsonl`。稳定重复的例子支持现象存在，只有四次重复仍不足以证明确定性机制；随种子变化的事件应视为温度噪声和 readout 变化共同作用。
+
+{chr(10).join(repeat_table)}
+
+例如原始幂指数题 algebra/1265 出现一次改错，但四次重复包含一修正、一改错、两次都错误，观测净差为零；括号题 prealgebra/1733 的原始改错在四次重复中没有出现。两个计数题的 STEP 改错均出现四次。log 连乘题 intermediate_algebra/752 统一修复判分后四次都是 1→1，原始事件不能继续用来支持“多想一步纠错”。这些是固定工程前缀下的观测，不能据此给任意未见题目下的事件概率保证。
 
 {table(second,['full','transition'])}
 

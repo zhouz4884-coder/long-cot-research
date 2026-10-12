@@ -8,6 +8,7 @@ while not Path('results/heldout_300.complete.json').exists():
 for script in ['scripts/analyze_controls.py','scripts/audit_bank.py','scripts/validate_study_artifacts.py','scripts/final_stats.py','scripts/export_online_cases.py','scripts/plot_research_results.py','scripts/write_final_report.py']:
  subprocess.run([py,script],check=True)
 files=[p for folder in ['results','logs','provenance','figures','docs','scripts','reason_transition','configs','data','tests'] for p in Path(folder).rglob('*') if p.is_file() and p.suffix not in ['.pending','.pyc']]
+files.extend(Path(name) for name in ['README.md','requirements-experiment.txt','.gitattributes'] if Path(name).is_file())
 manifest={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files)}
 mp=Path('FINAL_REMOTE_FILES_MANIFEST.json');mp.write_text(json.dumps(manifest,indent=2))
 with tarfile.open('final_experiment_snapshot.tar.gz','w:gz') as tf:

@@ -1,0 +1,250 @@
+{
+  "question_n": 149,
+  "checkpoint_n": 699,
+  "bootstrap_unit": "problem_id",
+  "draws": 500,
+  "models": {
+    "all_cheap": {
+      "step": {
+        "question_mean_spearman": -0.019547685402749402,
+        "question_mean_p": 0.8129492842101563
+      },
+      "full": {
+        "question_mean_spearman": -0.08238101023194663,
+        "question_mean_p": 0.3178826509020882
+      }
+    },
+    "length_only": {
+      "step": {
+        "question_mean_spearman": 0.005272161386303979,
+        "question_mean_p": 0.9491188191095579
+      },
+      "full": {
+        "question_mean_spearman": -0.07770502216852973,
+        "question_mean_p": 0.3462194390025729
+      }
+    },
+    "confidence_only": {
+      "step": {
+        "question_mean_spearman": -0.005338532328769766,
+        "question_mean_p": 0.9484791551792999
+      },
+      "full": {
+        "question_mean_spearman": -0.07747253519184019,
+        "question_mean_p": 0.3476686696013048
+      }
+    },
+    "entropy_only": {
+      "step": {
+        "question_mean_spearman": 0.010440437819183251,
+        "question_mean_p": 0.8994375178418891
+      },
+      "full": {
+        "question_mean_spearman": -0.047567960367662386,
+        "question_mean_p": 0.5645630352647703
+      }
+    },
+    "text_only": {
+      "step": {
+        "question_mean_spearman": 0.0516192790794776,
+        "question_mean_p": 0.5318371294933727
+      },
+      "full": {
+        "question_mean_spearman": -0.19632400244447065,
+        "question_mean_p": 0.01641036581265299
+      }
+    },
+    "gbdt_cheap": {
+      "step": {
+        "question_mean_spearman": 0.1337922772384224,
+        "question_mean_p": 0.10379849417932506
+      },
+      "full": {
+        "question_mean_spearman": 0.004010400347894441,
+        "question_mean_p": 0.9612850153311139
+      }
+    },
+    "readout_linear": {
+      "step": {
+        "question_mean_spearman": 0.005881042641098801,
+        "question_mean_p": 0.9432518664919182
+      },
+      "full": {
+        "question_mean_spearman": 0.11214121814318014,
+        "question_mean_p": 0.17331506913335043
+      }
+    },
+    "readout_tree": {
+      "step": {
+        "question_mean_spearman": 0.19542202585763097,
+        "question_mean_p": 0.01692118746187595
+      },
+      "full": {
+        "question_mean_spearman": 0.3657057641225817,
+        "question_mean_p": 4.51173746949685e-06
+      }
+    }
+  },
+  "ap_differences": {
+    "step_fix_all_cheap_vs_length_only": {
+      "point": 0.00011203242224970544,
+      "cluster_95ci": [
+        -0.013711444619061961,
+        0.014339309077432192
+      ],
+      "valid_draws": 500
+    },
+    "step_fix_all_cheap_vs_confidence_only": {
+      "point": 0.0003302402882222333,
+      "cluster_95ci": [
+        -0.011189738829803418,
+        0.01091995892777704
+      ],
+      "valid_draws": 500
+    },
+    "step_fix_gbdt_cheap_vs_all_cheap": {
+      "point": 0.11168752861848316,
+      "cluster_95ci": [
+        -0.006491096173878314,
+        0.2728113358360427
+      ],
+      "valid_draws": 500
+    },
+    "step_fix_readout_linear_vs_all_cheap": {
+      "point": 0.005164200029881945,
+      "cluster_95ci": [
+        -0.005817646499034795,
+        0.02148807582915247
+      ],
+      "valid_draws": 500
+    },
+    "step_fix_readout_tree_vs_gbdt_cheap": {
+      "point": -0.07436938108347525,
+      "cluster_95ci": [
+        -0.16787644696817053,
+        0.01239296686961119
+      ],
+      "valid_draws": 500
+    },
+    "step_harm_all_cheap_vs_length_only": {
+      "point": 0.0003750083005581266,
+      "cluster_95ci": [
+        -0.013246254212664637,
+        0.01745457370788346
+      ],
+      "valid_draws": 500
+    },
+    "step_harm_all_cheap_vs_confidence_only": {
+      "point": 0.004197220038224172,
+      "cluster_95ci": [
+        -0.006997293717677212,
+        0.023631846554529032
+      ],
+      "valid_draws": 500
+    },
+    "step_harm_gbdt_cheap_vs_all_cheap": {
+      "point": 0.02732301022493572,
+      "cluster_95ci": [
+        -0.006739880577474052,
+        0.1502536306308693
+      ],
+      "valid_draws": 500
+    },
+    "step_harm_readout_linear_vs_all_cheap": {
+      "point": 0.03242895572734021,
+      "cluster_95ci": [
+        0.0030139542672485784,
+        0.14025403977590337
+      ],
+      "valid_draws": 500
+    },
+    "step_harm_readout_tree_vs_gbdt_cheap": {
+      "point": 0.014747227492629376,
+      "cluster_95ci": [
+        -0.05330859712687863,
+        0.1080786729305501
+      ],
+      "valid_draws": 500
+    },
+    "full_fix_all_cheap_vs_length_only": {
+      "point": 0.0034339202201580377,
+      "cluster_95ci": [
+        -0.03275198858033242,
+        0.03784188819730919
+      ],
+      "valid_draws": 500
+    },
+    "full_fix_all_cheap_vs_confidence_only": {
+      "point": 0.16140871760219105,
+      "cluster_95ci": [
+        0.09845958484467697,
+        0.2358668745476174
+      ],
+      "valid_draws": 500
+    },
+    "full_fix_gbdt_cheap_vs_all_cheap": {
+      "point": 0.008492175825245085,
+      "cluster_95ci": [
+        -0.0285337759353955,
+        0.04685014286953228
+      ],
+      "valid_draws": 500
+    },
+    "full_fix_readout_linear_vs_all_cheap": {
+      "point": 0.04851731018686728,
+      "cluster_95ci": [
+        -0.023484046209188928,
+        0.1252890438136813
+      ],
+      "valid_draws": 500
+    },
+    "full_fix_readout_tree_vs_gbdt_cheap": {
+      "point": 0.07302013588991446,
+      "cluster_95ci": [
+        0.014233568926183052,
+        0.13550542847646943
+      ],
+      "valid_draws": 500
+    },
+    "full_harm_all_cheap_vs_length_only": {
+      "point": 0.004360662164226668,
+      "cluster_95ci": [
+        -0.0226317525214384,
+        0.021341457181109098
+      ],
+      "valid_draws": 499
+    },
+    "full_harm_all_cheap_vs_confidence_only": {
+      "point": 0.010700077624365995,
+      "cluster_95ci": [
+        0.0011284455785777316,
+        0.03454100225517872
+      ],
+      "valid_draws": 499
+    },
+    "full_harm_gbdt_cheap_vs_all_cheap": {
+      "point": -0.0009768234448692126,
+      "cluster_95ci": [
+        -0.01866881245557572,
+        0.08112050555940607
+      ],
+      "valid_draws": 499
+    },
+    "full_harm_readout_linear_vs_all_cheap": {
+      "point": -0.0023891185702406108,
+      "cluster_95ci": [
+        -0.012014185929448473,
+        0.0033827178430919755
+      ],
+      "valid_draws": 499
+    },
+    "full_harm_readout_tree_vs_gbdt_cheap": {
+      "point": 0.01706448714704089,
+      "cluster_95ci": [
+        0.00016176168808435318,
+        0.09717088659737212
+      ],
+      "valid_draws": 499
+    }
+  }
+}

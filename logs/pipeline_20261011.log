@@ -1,0 +1,13 @@
+{"stage": "P0_admission", "status": "waiting_for_running_baseline_and_protocol", "unix_time": 1791712620.6464245}
+{"stage": "pilot_24", "status": "running", "unix_time": 1791712620.7227418, "jobs": [["scripts/collect_bank.py", "--model", "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B", "--split", "engineering", "--n", "24", "--shard", "0", "--shards", "2", "--dense-stop"], ["scripts/collect_bank.py", "--model", "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B", "--split", "engineering", "--n", "24", "--shard", "1", "--shards", "2", "--dense-stop"]]}
+{"stage": "pilot_24", "status": "complete", "unix_time": 1791715663.758832}
+{"stage": "pilot_analysis", "status": "running", "unix_time": 1791715663.8086967, "jobs": [["scripts/analyze_transitions.py", "--pilot"]]}
+{"stage": "pilot_analysis", "status": "complete", "unix_time": 1791715673.8313465}
+{"stage": "pilot_review", "status": "waiting_for_agent_audit_of_50_answers", "unix_time": 1791715673.8322487}
+{"stage": "development_150", "status": "running", "unix_time": 1791716124.2940903, "jobs": [["scripts/collect_bank.py", "--model", "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B", "--split", "development", "--shard", "0", "--shards", "2"], ["scripts/collect_bank.py", "--model", "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B", "--split", "development", "--shard", "1", "--shards", "2"]]}
+{"stage": "development_150", "status": "complete", "unix_time": 1791733701.6503088}
+{"stage": "engineering_50", "status": "running", "unix_time": 1791733701.6665113, "jobs": [["scripts/collect_bank.py", "--model", "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B", "--split", "engineering", "--n", "50", "--shard", "0", "--shards", "2", "--dense-stop"], ["scripts/collect_bank.py", "--model", "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B", "--split", "engineering", "--n", "50", "--shard", "1", "--shards", "2", "--dense-stop"]]}
+{"stage": "engineering_50", "status": "complete", "unix_time": 1791737435.3604486}
+{"stage": "calibration", "status": "running", "unix_time": 1791737435.3622956, "jobs": [["scripts/calibrate_policies.py"]]}
+{"stage": "calibration", "status": "complete", "unix_time": 1791737445.3749866}
+{"stage": "repeat_controls", "status": "running", "unix_time": 1791737445.375744, "jobs": [["scripts/repeat_branch_controls.py"]]}

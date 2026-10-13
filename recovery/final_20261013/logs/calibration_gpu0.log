@@ -1,0 +1,116 @@
+{
+  "engineering_n": 50,
+  "baseline_accuracy": 0.94,
+  "baseline_tokens": 3878.32,
+  "selected_empirical": {
+    "transition": {
+      "method": "transition",
+      "cost_lambda": 0.0,
+      "margin": 0.05,
+      "prediction_mode": "transition",
+      "control_mode": "sequential_adaptive",
+      "predictor_type": "readout_tree",
+      "accuracy": 0.94,
+      "mean_tokens": 2056.24,
+      "paired_harm_rate": 0.02,
+      "estimated_compute_units": 2085.04,
+      "delta_accuracy": 0.0,
+      "token_saving": 0.4698116710328184,
+      "n": 50
+    },
+    "learned_stop": {
+      "method": "learned_stop",
+      "correctness_threshold": 0.85,
+      "predictor_type": "readout_linear",
+      "accuracy": 0.94,
+      "mean_tokens": 2372.32,
+      "paired_harm_rate": 0.0,
+      "estimated_compute_units": 2470.88,
+      "delta_accuracy": 0.0,
+      "token_saving": 0.3883124651911136,
+      "n": 50
+    },
+    "eat": {
+      "method": "eat",
+      "minimum_steps": 20,
+      "variance_threshold": 0.5,
+      "accuracy": 0.94,
+      "mean_tokens": 2742.64,
+      "paired_harm_rate": 0.02,
+      "estimated_compute_units": 2860.56,
+      "delta_accuracy": 0.0,
+      "token_saving": 0.29282782235607174,
+      "n": 50
+    },
+    "conformal_thinking": {
+      "method": "conformal_thinking",
+      "upper": 1.001,
+      "lower_slope": 0.0,
+      "signal": "exp(-EAT)",
+      "accuracy": 0.94,
+      "mean_tokens": 3878.32,
+      "paired_harm_rate": 0.0,
+      "estimated_compute_units": 4046.16,
+      "delta_accuracy": 0.0,
+      "token_saving": 0.0,
+      "n": 50,
+      "fp_risk": 0.0,
+      "fn_risk": 0.0
+    }
+  },
+  "conformal_ucb": {
+    "0.01": {
+      "method": "full",
+      "reason": "finite-sample correction admits no early exit",
+      "bound": 0.2716203031481239
+    },
+    "0.05": {
+      "method": "full",
+      "reason": "finite-sample correction admits no early exit",
+      "bound": 0.2716203031481239
+    },
+    "0.1": {
+      "method": "full",
+      "reason": "finite-sample correction admits no early exit",
+      "bound": 0.2716203031481239
+    },
+    "0.2": {
+      "method": "full",
+      "reason": "finite-sample correction admits no early exit",
+      "bound": 0.2716203031481239
+    },
+    "0.3": {
+      "method": "conformal_thinking",
+      "upper": 1.001,
+      "lower_slope": 0.0,
+      "signal": "exp(-EAT)",
+      "accuracy": 0.94,
+      "mean_tokens": 3878.32,
+      "paired_harm_rate": 0.0,
+      "estimated_compute_units": 4046.16,
+      "delta_accuracy": 0.0,
+      "token_saving": 0.0,
+      "n": 50,
+      "fp_risk": 0.0,
+      "fn_risk": 0.0
+    },
+    "0.5": {
+      "method": "conformal_thinking",
+      "upper": 0.99,
+      "lower_slope": 0.0005,
+      "signal": "exp(-EAT)",
+      "accuracy": 0.68,
+      "mean_tokens": 1320.2,
+      "paired_harm_rate": 0.26,
+      "estimated_compute_units": 1375.24,
+      "delta_accuracy": -0.2599999999999999,
+      "token_saving": 0.6595948761319335,
+      "n": 50,
+      "fp_risk": 0.22,
+      "fn_risk": 0.06754632508394477
+    }
+  },
+  "finite_grid_bound": 0.2716203031481239,
+  "source": "https://arxiv.org/html/2602.03814v1",
+  "scope": "independent reimplementation on frozen paragraph decision grid; empirical selections have no risk guarantee"
+}

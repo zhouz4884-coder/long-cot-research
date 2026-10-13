@@ -5,7 +5,7 @@ root=Path(__file__).resolve().parents[1];os.chdir(root);py=str(root/'.venv/bin/p
 while not Path('results/heldout_300.complete.json').exists():
  if Path('results/holdout_state.json').exists() and json.loads(Path('results/holdout_state.json').read_text()).get('status')=='failed':raise RuntimeError('Held-out generation failed')
  time.sleep(20)
-for script in ['scripts/analyze_controls.py','scripts/audit_bank.py','scripts/validate_study_artifacts.py','scripts/audit_online_trajectories.py','scripts/final_stats.py','scripts/export_online_cases.py','scripts/plot_research_results.py','scripts/write_final_report.py']:
+for script in ['scripts/analyze_controls.py','scripts/audit_bank.py','scripts/validate_study_artifacts.py','scripts/audit_online_trajectories.py','scripts/final_stats.py','scripts/export_online_cases.py','scripts/representation_sensitivity.py','scripts/diagnose_online_failures.py','scripts/plot_research_results.py','scripts/write_final_report.py']:
  subprocess.run([py,script],check=True)
 files=[p for folder in ['results','logs','provenance','figures','docs','scripts','reason_transition','configs','data','tests'] for p in Path(folder).rglob('*') if p.is_file() and p.suffix not in ['.pending','.pyc']]
 files.extend(Path(name) for name in ['README.md','requirements-experiment.txt','.gitattributes'] if Path(name).is_file())

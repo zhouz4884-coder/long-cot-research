@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FixedLocator,NullLocator,FuncFormatter
 
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':12,'axes.linewidth':1.5,
     'axes.spines.top':False,'axes.spines.right':False,'legend.frameon':False,'svg.fonttype':'none','pdf.fonttype':42})
@@ -19,7 +20,10 @@ NAMES={'full':'FULL','transition':'Value controller','learned_stop':'Learned cor
 
 def export(fig,name):
     fig.tight_layout(pad=1.4)
-    for extension in ['png','pdf','svg']:fig.savefig(OUT/f'{name}.{extension}',dpi=300,facecolor='white',bbox_inches='tight')
+    for extension in ['png','pdf','svg']:
+        path=OUT/f'{name}.{extension}'
+        fig.savefig(path,dpi=300,facecolor='white',bbox_inches='tight')
+        if extension=='svg':path.write_text('\n'.join(line.rstrip() for line in path.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8',newline='\n')
     plt.close(fig)
 
 
@@ -47,22 +51,39 @@ for model,data in stats['models'].items():
                 markersize=12 if marker=='*' else 7,color=color,ecolor=color,capsize=3,elinewidth=1.2)
         handles.append((handle,NAMES.get(method,method)+f' (n={n})'))
     axes[0].set_xscale('log');axes[0].set_xlabel('Mean generated tokens (log scale)')
+    if cohort_name!='diagnostic_50':
+        minimum=min(r['mean_tokens'] for r in cohort['methods'].values());maximum=max(r['mean_tokens'] for r in cohort['methods'].values())
+        ticks=np.arange(np.floor(minimum/500)*500,np.ceil(maximum/500)*500+1,500)
+        axes[0].xaxis.set_major_locator(FixedLocator(ticks))
+        axes[0].xaxis.set_minor_locator(NullLocator())
+        axes[0].xaxis.set_major_formatter(FuncFormatter(lambda x,pos:f'{x/1000:g}k'))
     axes[1].set_xlabel('Mean wall-clock time (s)')
-    for axis in axes[:2]:axis.set_ylabel('Accuracy (%)');axis.set_ylim(0,103)
+    lows=[wilson(r['correct'],r['n'])[0] for r in cohort['methods'].values()]
+    bottom=0 if cohort_name=='diagnostic_50' else max(0,5*np.floor((min(lows)-5)/5))
+    for axis in axes[:2]:axis.set_ylabel('Accuracy (%)');axis.set_ylim(bottom,103)
     legend.legend([x[0] for x in handles],[x[1] for x in handles],loc='center',fontsize=10)
     fig.suptitle(model+' | '+cohort_name+' | same questions for every method',fontsize=13)
     fig.text(0.03,-0.03,'95% Wilson accuracy intervals. Time includes runtime decisions. Every point uses the same question cohort.',fontsize=9)
     export(fig,'online_quality_cost_'+model+'_'+cohort_name)
-  comparisons=data['comparisons'];keys=[k for k in comparisons if k.startswith('transition_vs_')]
-  if keys:
-        fig,axes=plt.subplots(1,3,figsize=(13.6,5.6))
-        for axis,metric,label,scale in zip(axes,['accuracy_delta','token_saving','wall_saving'],
-            ['Accuracy difference (pp)','Token saving (%)','Wall-clock saving (%)'],[100,100,100]):
+  comparisons=data['comparisons'];all_keys=[k for k in comparisons if k.startswith('transition_vs_')]
+  largest=max(comparisons[k]['n'] for k in all_keys)
+  groups={'main':[k for k in all_keys if comparisons[k]['n']==largest],
+          'diagnostic':[k for k in all_keys if comparisons[k]['n']!=largest]}
+  for group,keys in groups.items():
+    if keys:
+        diagnostic=group=='diagnostic'
+        fig,axes=plt.subplots(1,3,figsize=(13.6,5.6 if diagnostic else 3.8))
+        metrics=['accuracy_delta','token_delta','wall_delta_ms'] if diagnostic else ['accuracy_delta','token_saving','wall_saving']
+        labels=['Accuracy difference (pp)','Extra generated tokens','Extra wall-clock time (s)'] if diagnostic else ['Accuracy difference (pp)','Token saving (%)','Wall-clock saving (%)']
+        scales=[100,1,0.001] if diagnostic else [100,100,100]
+        for axis,metric,label,scale in zip(axes,metrics,labels,scales):
             for i,key in enumerate(keys):
                 row=comparisons[key];value=scale*row[metric];low,high=np.asarray(row['bootstrap_95ci'][metric])*scale
                 axis.errorbar(value,i,xerr=[[max(0,value-low)],[max(0,high-value)]],fmt='o',color='#0F4D92',capsize=3)
             axis.axvline(0,color='#767676',linewidth=1,linestyle='--');axis.set_xlabel(label)
             axis.set_yticks(range(len(keys)),[NAMES.get(k.removeprefix('transition_vs_'),k)+f" (n={comparisons[k]['n']})" for k in keys],fontsize=9)
-        fig.suptitle(model+' | question-paired bootstrap, 95% CI',fontsize=13)
-        export(fig,'paired_gain_'+model)
+        display_group='transfer' if model.endswith('Thinking-2507') else group
+        fig.suptitle(model+' | '+display_group+' | question-paired bootstrap, 95% CI',fontsize=13)
+        if diagnostic:fig.text(0.03,-0.03,'Extra cost is controller minus reference. Negative values mean less computation; absolute differences avoid tiny-denominator ratios.',fontsize=9)
+        export(fig,('paired_diagnostic_' if diagnostic else 'paired_gain_')+model)
 print('Exported actual online figures',len(list(OUT.glob('*.png'))))

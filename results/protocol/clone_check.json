@@ -1,0 +1,86 @@
+{
+  "parent_unchanged": true,
+  "same_continuation": true,
+  "child_length": 268,
+  "parent_length": 257,
+  "stop_answer": {
+    "ids": [
+      18,
+      15,
+      630
+    ],
+    "text": "\\boxed{30}\n\n",
+    "tokens": 3,
+    "ms": 227.36285394057631,
+    "offline_branching_ms": 0.0,
+    "model_ms": 224.1534637287259,
+    "prefill_model_ms": 64.50525298714638,
+    "feature_gpu_ms": 0.0,
+    "stop_reason": "answer_box_complete",
+    "length_censored": false,
+    "checkpoints": [],
+    "generated_text": "30}\n\n",
+    "cached_prefix": true,
+    "eat_entropy": 0.591900646686554,
+    "control_prefix_input_tokens": 8,
+    "answer_prefix_hash": "bf00c41d8c52579a404da4975577594d4bc258b4c6dbf4068d442dbf8d5633f3"
+  },
+  "stop_grade": {
+    "correct": 1,
+    "parse_status": "ok",
+    "boxed": "30",
+    "format_ok": true,
+    "parsed": "[30, '30']",
+    "gold_parsed": "[30, '30^\\\\circ']",
+    "normalization": null,
+    "normalized_surface": "30",
+    "scorer_version": "math_verify_0.9_surface_vector_v3"
+  },
+  "same_prefix_format_repair": {
+    "old": "To find the smallest possible angle between vectors $\\mathbf{a}$ and $\\mathbf{b}$, we use the relationship between the magnitude of their cross product and the sine of the angle between them:\n\n$$\n\\|\\mathbf{a} \\times \\mathbf{b}\\| = \\|\\mathbf{a}\\| \\cdot \\|\\mathbf{b}\\| \\cdot \\sin(\\theta)\n$$\n\n---\n\n### Step 1: Compute the magnitude of the cross product\n\nWe are given:\n\n$$\n\\mathbf{a} \\times \\mathbf{b} = \\begin{pmatrix} 3 \\\\ 2 \\\\ 6 \\end{pmatrix}\n$$\n\nSo, the magnitude of the cross product is:\n\n$$\n\\|\\mathbf{a} \\times \\mathbf{b}\\| = \\sqrt{3^2 + 2^2 + 6^2} =",
+    "old_grade": {
+      "correct": 0,
+      "parse_status": "ok",
+      "boxed": null,
+      "format_ok": false,
+      "parsed": "[6, '6']",
+      "gold_parsed": "[30, '30^\\\\circ']"
+    },
+    "new": {
+      "ids": [
+        18,
+        15,
+        630
+      ],
+      "text": "\\boxed{30}\n\n",
+      "tokens": 3,
+      "ms": 834.2200620099902,
+      "offline_branching_ms": 0.0,
+      "model_ms": 830.7861555367708,
+      "prefill_model_ms": 670.4651629552245,
+      "feature_gpu_ms": 0.0,
+      "stop_reason": "answer_box_complete",
+      "length_censored": false,
+      "checkpoints": [],
+      "generated_text": "30}\n\n",
+      "cached_prefix": false,
+      "eat_entropy": 1.5718231338723854e-07,
+      "control_prefix_input_tokens": 8,
+      "answer_prefix_hash": "bd0dea317fbddfd3d4a21c5e7be178bb89043cc57a2619194dfc5640293a9535"
+    },
+    "new_grade": {
+      "correct": 1,
+      "parse_status": "ok",
+      "boxed": "30",
+      "format_ok": true,
+      "parsed": "[30, '30']",
+      "gold_parsed": "[30, '30^\\\\circ']",
+      "normalization": null,
+      "normalized_surface": "30",
+      "scorer_version": "math_verify_0.9_surface_vector_v3"
+    }
+  },
+  "code_sha256": "c554b91ac9392b33d3db498d0a0d2b012341ddc073593906176715c87753211c",
+  "short_answer_stops_on_complete_box": true,
+  "passed": true
+}

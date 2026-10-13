@@ -1,0 +1,91 @@
+{
+  "admitted": true,
+  "frozen_unix": 1791738090.0572925,
+  "prior_policy_sha256": "b65d97534362ddcfb5bd32a03da5b76ae4ca51532da42dac327b0599414f3f8a",
+  "policy_sha256": "2d9cb56f0964976da8cc6f6a99a1d287f102c6e9922e41e982fbd2e5442b02c1",
+  "online_records_at_freeze": 0,
+  "ablation_queries": {
+    "value_outcome": {
+      "method": "transition",
+      "predictor_type": "readout_linear",
+      "prediction_mode": "outcome",
+      "control_mode": "sequential"
+    },
+    "value_frequency": {
+      "method": "transition",
+      "predictor_type": "readout_linear",
+      "prediction_mode": "transition",
+      "control_mode": "sequential_adaptive"
+    },
+    "value_cheap": {
+      "method": "transition",
+      "predictor_type": "linear",
+      "prediction_mode": "transition",
+      "control_mode": "sequential"
+    },
+    "matched_stop": {
+      "method": "learned_stop",
+      "predictor_type": "readout_linear"
+    }
+  },
+  "primary_specs_unchanged": true,
+  "selected_ablation_specs": {
+    "value_outcome": {
+      "method": "transition",
+      "cost_lambda": 5e-05,
+      "margin": 0.02,
+      "prediction_mode": "outcome",
+      "control_mode": "sequential",
+      "predictor_type": "readout_linear",
+      "accuracy": 0.94,
+      "mean_tokens": 2212.46,
+      "paired_harm_rate": 0.02,
+      "estimated_compute_units": 2301.1,
+      "delta_accuracy": 0.0,
+      "token_saving": 0.4295313434683059,
+      "n": 50
+    },
+    "value_frequency": {
+      "method": "transition",
+      "cost_lambda": 2e-05,
+      "margin": 0.05,
+      "prediction_mode": "transition",
+      "control_mode": "sequential_adaptive",
+      "predictor_type": "readout_linear",
+      "accuracy": 0.94,
+      "mean_tokens": 2247.24,
+      "paired_harm_rate": 0.02,
+      "estimated_compute_units": 2277.48,
+      "delta_accuracy": 0.0,
+      "token_saving": 0.42056354297737175,
+      "n": 50
+    },
+    "value_cheap": {
+      "method": "transition",
+      "cost_lambda": 2e-05,
+      "margin": 0.02,
+      "prediction_mode": "transition",
+      "control_mode": "sequential",
+      "predictor_type": "linear",
+      "accuracy": 0.94,
+      "mean_tokens": 2553.52,
+      "paired_harm_rate": 0.02,
+      "estimated_compute_units": 2553.52,
+      "delta_accuracy": 0.0,
+      "token_saving": 0.34159120443903546,
+      "n": 50
+    },
+    "matched_stop": {
+      "method": "learned_stop",
+      "correctness_threshold": 0.9,
+      "predictor_type": "readout_linear",
+      "accuracy": 0.94,
+      "mean_tokens": 3180.58,
+      "paired_harm_rate": 0.0,
+      "estimated_compute_units": 3310.5,
+      "delta_accuracy": 0.0,
+      "token_saving": 0.17990779512778732,
+      "n": 50
+    }
+  }
+}

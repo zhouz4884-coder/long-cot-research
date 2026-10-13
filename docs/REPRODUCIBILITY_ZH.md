@@ -13,11 +13,15 @@ python scripts/audit_online_trajectories.py
 python scripts/analyze_controls.py
 python scripts/final_stats.py
 python scripts/export_online_cases.py
+python scripts/representation_sensitivity.py
+python scripts/diagnose_online_failures.py
 python scripts/plot_research_results.py
 python scripts/write_final_report.py
 ```
 
 这是对保存的实际输出进行判分、统计和绘图的复现，不是重新执行 GPU 生成，也不能据此证明另一台服务器的延迟相同。统计以题目配对，主四方法为共同 300 题；额外控制与消融使用共同的前 50 题；第二模型为共同的 24 题。图不能把不同题目集合的总体均值当成同一条质量—成本曲线。
+
+`representation_sensitivity.py` 另存事后表示敏感性评分，不覆盖冻结主评分；`diagnose_online_failures.py` 只分析保存的实际决策。最终六张图分别提供 PNG、PDF 和 SVG；图像级字体/版面检查使用 `audit_figure_exports.py`（另需 PyMuPDF、Pillow），并仍需查看 PNG 进行人工视觉核验。复现统计成功不等于新机器的 GPU 时延或论文贡献已被认证。
 
 ## 在两张 GPU 上重新生成
 

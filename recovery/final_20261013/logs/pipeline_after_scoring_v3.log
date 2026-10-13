@@ -1,0 +1,10 @@
+{"stage": "P0_admission", "status": "waiting_for_running_baseline_and_protocol", "unix_time": 1791738125.9305491}
+{"stage": "pilot_review", "status": "waiting_for_agent_audit_of_50_answers", "unix_time": 1791738125.9879003}
+{"stage": "repeat_controls", "status": "running", "unix_time": 1791738126.0039773, "jobs": [["scripts/repeat_branch_controls.py"]]}
+{"stage": "repeat_controls", "status": "complete", "unix_time": 1791738176.0553029}
+{"stage": "test_freeze", "status": "waiting_for_complete_ablation_policy_freeze", "unix_time": 1791738176.056201}
+{"stage": "online_50", "status": "running", "unix_time": 1791738176.058076, "jobs": [["scripts/evaluate_online.py", "--model", "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B", "--n", "50", "--shard", "0", "--shards", "2"], ["scripts/evaluate_online.py", "--model", "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B", "--n", "50", "--shard", "1", "--shards", "2"]]}
+{"stage": "online_50", "status": "complete", "unix_time": 1791777104.5147054}
+{"stage": "second_model_24", "status": "running", "unix_time": 1791777104.5355654, "jobs": [["scripts/evaluate_online.py", "--model", "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B-Thinking-2507", "--n", "24", "--offset", "50", "--shard", "0", "--shards", "2", "--methods", "full,transition", "--out-name", "qwen3_thinking_2507"], ["scripts/evaluate_online.py", "--model", "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B-Thinking-2507", "--n", "24", "--offset", "50", "--shard", "1", "--shards", "2", "--methods", "full,transition", "--out-name", "qwen3_thinking_2507"]]}
+{"stage": "second_model_24", "status": "complete", "unix_time": 1791781859.240256}
+{"stage": "experiment_execution", "status": "complete_pending_statistical_analysis_and_agent_report", "unix_time": 1791781859.2557662}

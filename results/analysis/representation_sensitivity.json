@@ -1,0 +1,218 @@
+{
+  "is_primary_analysis": false,
+  "scope": "Uniform post-hoc surface rules applied to all 1648 outputs; frozen primary scores and policy unchanged. Every changed answer requires case review.",
+  "rules": [
+    "standalone cot function gains TeX command",
+    "whole-answer ordinal suffix canonicalized to its numeral"
+  ],
+  "changes": [
+    {
+      "model": "Qwen3-4B",
+      "method": "full",
+      "problem_id": "test/precalculus/24313.json",
+      "before": 0,
+      "after": 1,
+      "original_boxed": "cot x",
+      "normalized_boxed": "\\cot x",
+      "rules": [
+        "standalone_cot_function_command"
+      ],
+      "question": "Simplify\n\\[\\frac{\\sec x}{\\sin x} - \\frac{\\sin x}{\\cos x}.\\]",
+      "gold": "\\cot x",
+      "new_grade": {
+        "correct": 1,
+        "parse_status": "ok",
+        "boxed": "\\cot x",
+        "format_ok": true,
+        "parsed": "[cot(x), '\\\\cot x']",
+        "gold_parsed": "[cot(x), '\\\\cot x']",
+        "normalization": null,
+        "normalized_surface": "\\cot x",
+        "scorer_version": "math_verify_0.9_surface_vector_v3"
+      }
+    },
+    {
+      "model": "Qwen3-4B",
+      "method": "learned_stop",
+      "problem_id": "test/precalculus/24313.json",
+      "before": 0,
+      "after": 1,
+      "original_boxed": "cot x",
+      "normalized_boxed": "\\cot x",
+      "rules": [
+        "standalone_cot_function_command"
+      ],
+      "question": "Simplify\n\\[\\frac{\\sec x}{\\sin x} - \\frac{\\sin x}{\\cos x}.\\]",
+      "gold": "\\cot x",
+      "new_grade": {
+        "correct": 1,
+        "parse_status": "ok",
+        "boxed": "\\cot x",
+        "format_ok": true,
+        "parsed": "[cot(x), '\\\\cot x']",
+        "gold_parsed": "[cot(x), '\\\\cot x']",
+        "normalization": null,
+        "normalized_surface": "\\cot x",
+        "scorer_version": "math_verify_0.9_surface_vector_v3"
+      }
+    },
+    {
+      "model": "Qwen3-4B",
+      "method": "transition",
+      "problem_id": "test/prealgebra/1865.json",
+      "before": 0,
+      "after": 1,
+      "original_boxed": "12^{\\mathrm{th}}",
+      "normalized_boxed": "12",
+      "rules": [
+        "whole_answer_ordinal_surface"
+      ],
+      "question": "The data in the table below shows the percent of bus riders in a survey of Central H.S. students; 300 males and 300 females in each grade were surveyed. For which grade is the number of its male bus riders closest to $135\\%$ of the number of its female bus riders? \\begin{tabular}{|l|c|c|}\\hline\nGrade & Males & Females \\\\ \\hline\n$9^{\\mathrm{th}}$ grade & $41.1\\%$ & $39.4\\%$ \\\\ \\hline\n$10^{\\mathrm{th}}$ grade & $34.4\\%$ & $33.1\\%$ \\\\ \\hline\n$11^{\\mathrm{th}}$ grade & $20.6\\%$ & $13.8\\%$ \\\\ \\hline\n$12^{\\mathrm{th}}$ grade & $11.6\\%$ & $8.6\\%$ \\\\ \\hline\n\\end{tabular}",
+      "gold": "12",
+      "new_grade": {
+        "correct": 1,
+        "parse_status": "ok",
+        "boxed": "12",
+        "format_ok": true,
+        "parsed": "[12, '12']",
+        "gold_parsed": "[12, '12']",
+        "normalization": null,
+        "normalized_surface": "12",
+        "scorer_version": "math_verify_0.9_surface_vector_v3"
+      }
+    },
+    {
+      "model": "Qwen3-4B",
+      "method": "learned_stop",
+      "problem_id": "test/prealgebra/1865.json",
+      "before": 0,
+      "after": 1,
+      "original_boxed": "12^{\\mathrm{th}}",
+      "normalized_boxed": "12",
+      "rules": [
+        "whole_answer_ordinal_surface"
+      ],
+      "question": "The data in the table below shows the percent of bus riders in a survey of Central H.S. students; 300 males and 300 females in each grade were surveyed. For which grade is the number of its male bus riders closest to $135\\%$ of the number of its female bus riders? \\begin{tabular}{|l|c|c|}\\hline\nGrade & Males & Females \\\\ \\hline\n$9^{\\mathrm{th}}$ grade & $41.1\\%$ & $39.4\\%$ \\\\ \\hline\n$10^{\\mathrm{th}}$ grade & $34.4\\%$ & $33.1\\%$ \\\\ \\hline\n$11^{\\mathrm{th}}$ grade & $20.6\\%$ & $13.8\\%$ \\\\ \\hline\n$12^{\\mathrm{th}}$ grade & $11.6\\%$ & $8.6\\%$ \\\\ \\hline\n\\end{tabular}",
+      "gold": "12",
+      "new_grade": {
+        "correct": 1,
+        "parse_status": "ok",
+        "boxed": "12",
+        "format_ok": true,
+        "parsed": "[12, '12']",
+        "gold_parsed": "[12, '12']",
+        "normalization": null,
+        "normalized_surface": "12",
+        "scorer_version": "math_verify_0.9_surface_vector_v3"
+      }
+    }
+  ],
+  "models": {
+    "Qwen3-4B-Thinking-2507": {
+      "methods": {
+        "transition": {
+          "n": 24,
+          "primary_correct": 19,
+          "sensitivity_correct": 19
+        },
+        "full": {
+          "n": 24,
+          "primary_correct": 21,
+          "sensitivity_correct": 21
+        }
+      },
+      "controller_vs_full": {
+        "primary": {
+          "n": 24,
+          "accuracy_delta": -0.08333333333333333,
+          "harms": 2,
+          "fixes": 0
+        },
+        "sensitivity": {
+          "n": 24,
+          "accuracy_delta": -0.08333333333333333,
+          "harms": 2,
+          "fixes": 0
+        }
+      }
+    },
+    "Qwen3-4B": {
+      "methods": {
+        "transition": {
+          "n": 300,
+          "primary_correct": 248,
+          "sensitivity_correct": 249
+        },
+        "learned_stop": {
+          "n": 300,
+          "primary_correct": 261,
+          "sensitivity_correct": 263
+        },
+        "eat": {
+          "n": 300,
+          "primary_correct": 255,
+          "sensitivity_correct": 255
+        },
+        "conformal_thinking": {
+          "n": 50,
+          "primary_correct": 46,
+          "sensitivity_correct": 46
+        },
+        "fixed0": {
+          "n": 50,
+          "primary_correct": 6,
+          "sensitivity_correct": 6
+        },
+        "fixed1024": {
+          "n": 50,
+          "primary_correct": 27,
+          "sensitivity_correct": 27
+        },
+        "random": {
+          "n": 50,
+          "primary_correct": 22,
+          "sensitivity_correct": 22
+        },
+        "value_outcome": {
+          "n": 50,
+          "primary_correct": 40,
+          "sensitivity_correct": 40
+        },
+        "value_frequency": {
+          "n": 50,
+          "primary_correct": 40,
+          "sensitivity_correct": 40
+        },
+        "value_cheap": {
+          "n": 50,
+          "primary_correct": 42,
+          "sensitivity_correct": 42
+        },
+        "matched_stop": {
+          "n": 50,
+          "primary_correct": 44,
+          "sensitivity_correct": 44
+        },
+        "full": {
+          "n": 300,
+          "primary_correct": 269,
+          "sensitivity_correct": 270
+        }
+      },
+      "controller_vs_full": {
+        "primary": {
+          "n": 300,
+          "accuracy_delta": -0.07,
+          "harms": 25,
+          "fixes": 4
+        },
+        "sensitivity": {
+          "n": 300,
+          "accuracy_delta": -0.07,
+          "harms": 24,
+          "fixes": 3
+        }
+      }
+    }
+  }
+}

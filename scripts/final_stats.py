@@ -16,13 +16,15 @@ def cluster_comparison(reference,candidate,draws=2000):
     rng=np.random.default_rng(20261008);bootstrap=[]
     for _ in range(draws):
         index=rng.integers(0,n,n);aa=a[index];bb=b[index]
-        bootstrap.append([np.mean(bb[:,0]-aa[:,0]),1-bb[:,1].sum()/aa[:,1].sum(),1-bb[:,2].sum()/aa[:,2].sum()])
+        bootstrap.append([np.mean(bb[:,0]-aa[:,0]),1-bb[:,1].sum()/aa[:,1].sum(),1-bb[:,2].sum()/aa[:,2].sum(),
+                          np.mean(bb[:,1]-aa[:,1]),np.mean(bb[:,2]-aa[:,2])])
     ci=np.quantile(np.array(bootstrap),[0.025,0.975],axis=0)
     harms=int(np.sum((a[:,0]==1)&(b[:,0]==0)));fixes=int(np.sum((a[:,0]==0)&(b[:,0]==1)))
     harm_upper=float(beta.ppf(0.95,harms+1,n-harms)) if harms<n else 1.0
     return {'n':n,'problem_ids':ids,'accuracy_delta':float(np.mean(b[:,0]-a[:,0])),
         'token_saving':float(1-b[:,1].sum()/a[:,1].sum()),'wall_saving':float(1-b[:,2].sum()/a[:,2].sum()),
-        'bootstrap_95ci':{key:[float(ci[0,j]),float(ci[1,j])] for j,key in enumerate(['accuracy_delta','token_saving','wall_saving'])},
+        'token_delta':float(np.mean(b[:,1]-a[:,1])),'wall_delta_ms':float(np.mean(b[:,2]-a[:,2])),
+        'bootstrap_95ci':{key:[float(ci[0,j]),float(ci[1,j])] for j,key in enumerate(['accuracy_delta','token_saving','wall_saving','token_delta','wall_delta_ms'])},
         'harmful_pairs':harms,'beneficial_pairs':fixes,'one_sided_95_harm_upper':harm_upper,
         'conservative_one_pp_noninferiority_certified':harm_upper<=0.01,
         'warning':'A zero-width bootstrap interval with zero observed errors does not certify absence of rare harms; exact harm bound is separate.'}

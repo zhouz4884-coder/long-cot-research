@@ -10,6 +10,8 @@ assert integrity['passed'] and stats['expected_counts_verified'] and stats['tota
 cv=read('results/analysis/grouped_cv.json');repeat=read('results/analysis/repeat_control_analysis.json')
 cal=read('results/analysis/policy_calibration.json');lineage=read('results/audit/bank_lineage.json')
 trajectory=read('results/analysis/trajectory_consistency.json');assert trajectory['is_final']
+failure=read('results/analysis/online_failure_diagnostics.json')['models']['Qwen3-4B']
+sensitivity=read('results/analysis/representation_sensitivity.json')
 primary=stats['models']['Qwen3-4B'];second=stats['models']['Qwen3-4B-Thinking-2507']
 gain=primary['comparisons']['transition_vs_full'];strong=primary['comparisons']['transition_vs_eat']
 names={'full':'FULL（8192 上限）','transition':'净收益控制器','learned_stop':'学习型正确率早停','eat':'EAT 共同协议适配',
@@ -117,6 +119,8 @@ wall-clock 从实际 prompt prefill 到答案生成结束，包含决策和探�
 
 控制器相对 FULL 观察到 {gain['harmful_pairs']} 个有害对、{gain['beneficial_pairs']} 个有益对。有害对比例的精确单侧 95% 上界为 {100*gain['one_sided_95_harm_upper']:.2f}%。保守的 1pp 非劣保证是否成立：**{gain['conservative_one_pp_noninferiority_certified']}**。bootstrap 没观察到错误并不等于证明没有错误；300 题也不必然足够证明严格风险要求。
 
+当前质量损失的区间完全小于零，属于已观察到的明显退化；这里不能仅用“统计功效不足”解释失败。学习型正确率早停和 EAT 共同协议适配也分别损失 2.67 pp 和 4.67 pp，均未达到本轮的 1pp 经验质量约束。它们是本轮重新校准的适配实现，不能据此否定作者论文中的完整原设置。
+
 ## 7. 额外 50 题控制与消融
 
 {table(primary['cohorts']['diagnostic_50'],['full','transition','learned_stop','eat','conformal_thinking','fixed0','fixed1024','random','value_outcome','value_frequency','value_cheap','matched_stop'])}
@@ -151,9 +155,21 @@ wall-clock 从实际 prompt prefill 到答案生成结束，包含决策和探�
 
 **性能指标的解释原则：** token 少而准确率明显下降是预算截断，不是有效优化；wall-clock 没有同步改善时要检查探针频率和 Python/GPU 开销；超过 FULL 的正确率可能包括修复触顶或答案噪声，不能宣称模型知识新增。对 EAT 和同特征正确率基线的配对结果才决定是否有额外收益。
 
+**实际在线失败定位：** 冻结主评分的 {failure['harm_n']} 个有害对中，{failure['stop_action_among_harms']} 个最后动作都是 STOP，只有 {failure['parse_non_success_among_harms']} 个为解析非成功；{failure['full_censored_among_harms']} 个配对 FULL 虽触及 8192 上限，仍输出正确答案。因此大量损失不能归结为解析失败，也不能因轨迹很长就断言继续无望。相同种子下的思考前缀全部一致，检查没有发现探针改写父轨迹或相同完整上下文的判分不一致。
+
+主策略使用 `STOP=0.05` 的固定奖励、`增益−2e-5×预计额外 token` 的继续奖励，不包含每次 STOP 前的独立正确率风险门槛。有害停止中的预计当前正确率中位数为 {failure['median_estimated_stop_correct_among_harms']:.3f}；{failure['estimated_stop_correct_below_0_9_among_harms']} 个低于 0.9。按保存的预测值作局部决策代数检查，{failure['cost_penalty_changed_stop_choice_among_harms']} 个有害停止在只移除成本项、保持相同预测与 STOP margin 时会选继续。这解释了决策如何形成；它不是重新运行无成本策略的性能实验，不能声称去掉成本项就必定修复这些题。
+
+具体例子 algebra/2176 在 2475 token 处停止，预计 STOP 正确率仅 0.454；预计 FULL 净增益 0.091、预计额外代价约 2364 token，扣成本后奖励 0.044 低于 STOP 的 0.05，因此停止并输出 2；配对 FULL 最终输出正确值 3。algebra/2626 则把应四舍五入为 32348 的利息结果读成 32347。这些实际案例支持“质量门槛缺位、增益/成本误估、未完成数值校验”作为改进对象；未通过重复干预验证的深层机制仍是猜测。
+
+**额外表示敏感性审计（不覆盖主结果）：** 对全部 1648 条保存输出统一应用独立的 `cot` 运算符与完整序数写法规范化，共改变四个分数、涉及两道题。precalculus/24313 的 FULL `cot x` 与标准 `\\cot x` 表示相同函数；prealgebra/1865 问的是哪个年级，控制器的 `12^{{\\mathrm{{th}}}}` 表示十二年级，不能当成神经推理改错。另两个变化来自学习型正确率基线在这两题的相同表示。主表仍保留冻结 v3 评分；敏感性下 FULL=270/300、控制器=249/300、学习型正确率=263/300、EAT=255/300，控制器相对 FULL 仍为 −7.00 pp，修正/改错由 4/25 变成 3/24，NO-GO 判断不变。第二模型分数未改变。完整规则、全部变化及原始评分见 `representation_sensitivity.json`，它是事后表示审计，不是新模型性能提升。
+
+工程集 50 题上从 {len(cal['candidates'])} 个候选设置选 operating point 后出现泛化退化，有限校准规模与选择偏差是合理解释，但本轮没有独立实验将其与特征不足、概率误校准逐一分离。当前证据不能证明这些猜测中的任何一个单独解释全部损失。
+
 ## 10. 面向高水平论文的判断与下一轮改进
 
 本轮研究执行完成，论文成熟度仍需按证据判断。当前最合适的定位是实际测量与受控自适应计算研究，原始“一步净收益可可靠预测”的强叙事应收缩。是否继续当前控制器，取决于上面的质量区间、EAT/正确率对照和迁移结果，不能只凭工程集 48% 节省。
+
+当前冻结控制器应停止作为“无损高性能优化”方案推进；其 45% token 节省伴随明确的 7 pp 质量损失。下一轮应保留测量框架，把候选方法转为带校准风险上界的质量优先停止：正确率/有害风险不确定时选择继续或延迟判断，再在满足质量约束的候选中优化成本。更低 STOP margin、减弱成本惩罚、多种子边际价值估计和 2/4 步价值信号均需用新的开发/校准材料验证，不能在已见 300 题上改参数后重新称为盲测。第二模型的两个错误停止预计当前正确率都超过 0.9，单纯加一个未校准的 0.9 阈值也不足以形成保证。
 
 下一轮优先：① 在全新开发/校准题上为同一前缀多次读出、多个 STEP 种子，估计动作边际收益而非一次成败；② 引入 2/4 个步骤或任务语义单元，对可预测的中尺度价值建模；③ 将读出噪声和推理状态变化分解，联合不确定性、预计剩余成本与显式风险约束；④ 增加不同模型家族和更困难、更新的推理数据，排除只适应 MATH-500；⑤ 独立复现作者完整强基线与相同质量下整条 Pareto 曲线。所有改进使用新开发材料，已见的 300 题不能重新当作新测试集。
 
@@ -165,7 +181,7 @@ wall-clock 从实际 prompt prefill 到答案生成结束，包含决策和探�
 
 分析复现和重新生成的依赖、模型路径、人工审核与冻结要求见 `docs/REPRODUCIBILITY_ZH.md`。主质量—成本图的四种方法共享完整 300 题，诊断图的全部方法共享前 50 题，迁移图的两种方法共享同一 24 题；不同题目集合的总体均值不混在同一条性能曲线上。
 
-版本记录见 `CODE_MANIFEST.json`、数据 split manifest、模型核验、策略 freeze 与 `ONLINE_GENERATION_FILES_20261012.json`。原始 P0、被修正的旧评分和日志均在 recovery/远程快照中留档。保留 SSH 中断、BF16 admission 不通过、评分问题、诊断脚本错误与对应修复；没有删除失败题或补造缺失成本。
+版本记录见 `provenance/CODE_MANIFEST.json`、数据 split manifest、模型核验、策略 freeze 与 `ONLINE_GENERATION_FILES_20261012.json`。原始 P0、被修正的旧评分和日志均在 recovery/远程快照中留档。保留 SSH 中断、BF16 admission 不通过、评分问题、诊断脚本错误与对应修复；没有删除失败题或补造缺失成本。
 
 离线线性头融合等价误差约 8.3e-16、45.7 微秒 CPU 决策只是实现优化验证；七项 CPU 单元测试也不属于真实 GPU benchmark。最终 GPU 输出、题目配对 bootstrap、罕见有害上界和文件哈希各自提供不同层级证据，不相互替代。
 

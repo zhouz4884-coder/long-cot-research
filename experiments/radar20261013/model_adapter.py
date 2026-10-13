@@ -4,6 +4,7 @@ import time
 
 from reason_transition.core import Engine, boundary, cheap_features, digest_ids, REFLECTION
 from radar_engine import candidate
+from reason_transition.text_decoder import RollingTextDecoder
 
 
 class MathModelAdapter(Engine):
@@ -35,11 +36,11 @@ class MathModelAdapter(Engine):
         model_before=self.model_ms;feature_before=self.feature_gpu_ms
         cache,logits=self.forward(prefix) if initial is None else initial
         prefill_ms=self.model_ms-model_before
-        ids=[];text='';points=[];history=deque(maxlen=10);last_checkpoint=-128;reason='limit'
+        ids=[];text='';decoder=RollingTextDecoder(self.tok);points=[];history=deque(maxlen=10);last_checkpoint=-128;reason='limit'
         paused_ms=paused_model_ms=paused_feature_ms=0.
         for i in range(max_tokens):
             token,stats=self.sample(logits,seed,phase,offset+i,stats=capture)
-            ids.append(token);text+=self.tok.decode([token],skip_special_tokens=False)
+            ids.append(token);text=decoder.append(token)
             if stats is not None:history.append(stats)
             cache,logits=self.forward([token],cache)
             if token in self.eos:reason='eos';break

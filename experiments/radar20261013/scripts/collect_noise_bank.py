@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from reason_transition.core import Engine, stable_seed, public, grade, append_jsonl
 from radar_engine import candidate, decode_steps, candidate_features
+from stem_quality import stem_issues,numeric_gold_issues
 
 
 def main():
@@ -34,6 +35,10 @@ def main():
     statuses=[]
     for q_index,q in enumerate(questions):
         if q_index%args.shards!=args.shard:continue
+        issues=stem_issues(q['question'],q['subject'])+numeric_gold_issues(q['gold'])
+        if issues:
+            statuses.append({'problem_id':q['problem_id'],'status':'input_not_eligible_for_exact_scalar_protocol','issues':issues})
+            continue
         trace=raw[q['problem_id']]['trace']
         used=set()
         for target in protocol['checkpoint_minimum_offsets']:

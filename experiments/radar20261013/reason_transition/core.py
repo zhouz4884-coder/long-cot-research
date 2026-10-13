@@ -8,6 +8,7 @@ import math
 from pathlib import Path
 import re
 import time
+from .text_decoder import RollingTextDecoder
 
 REFLECTION = re.compile(r"\b(wait|alternatively|reconsider|re-evaluat\w*|let me (?:check|verify)|double.check|however|but wait)\b", re.I)
 
@@ -131,14 +132,13 @@ class Engine:
         else:
             cache,logits=initial
         prefill_ms=self.model_ms-model_before
-        tokens=[];text="";history=deque(maxlen=10);points=[];past_text=""
+        tokens=[];text="";decoder=RollingTextDecoder(self.tok);history=deque(maxlen=10);points=[];past_text=""
         paused_ms=0.0;paused_model_ms=0.0;paused_feature_ms=0.0
         last_checkpoint=-128;stop_reason="limit"; last_kind="natural";answer_depth=1
         for i in range(max_tokens):
             token,stat=self.sample(logits,seed,phase,offset+i,stats=capture)
             tokens.append(token)
-            piece=self.tok.decode([token],skip_special_tokens=False)
-            text+=piece
+            text=decoder.append(token)
             if until=="boxed":
                 answer_depth=1+brace_balance(text)
             if stat is not None:

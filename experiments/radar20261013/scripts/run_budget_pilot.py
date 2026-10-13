@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from reason_transition.core import Engine,stable_seed,public,grade,append_jsonl
+from stem_quality import stem_issues,numeric_gold_issues
 
 
 def main():
@@ -14,6 +15,9 @@ def main():
     assert (ROOT/'results/pilot.complete.json').exists()
     spec=json.loads((ROOT/'provenance/budget_pilot_protocol.json').read_text())
     rows=[json.loads(s) for s in (ROOT/'data/pilot.jsonl').read_text(encoding='utf-8').splitlines()][:spec['n']]
+    invalid=[{'problem_id':q['problem_id'],'issues':stem_issues(q['question'],q['subject'])+numeric_gold_issues(q['gold'])} for q in rows if stem_issues(q['question'],q['subject']) or numeric_gold_issues(q['gold'])]
+    rows=[q for q in rows if not stem_issues(q['question'],q['subject']) and not numeric_gold_issues(q['gold'])]
+    (ROOT/'provenance/budget_pilot_input_exclusions.json').write_text(json.dumps(invalid,indent=2)+'\n')
     out=ROOT/f'results/budget_pilot_{args.shard}.jsonl'
     done={(r['problem_id'],r['budget']) for r in (json.loads(s) for s in out.read_text(encoding='utf-8').splitlines())} if out.exists() else set()
     e=Engine(args.model)

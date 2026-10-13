@@ -9,7 +9,7 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from reason_transition.core import Engine, stable_seed, grade, public, append_jsonl
+from reason_transition.core_pilot_v1 import Engine, stable_seed, grade, public, append_jsonl
 
 
 def main():

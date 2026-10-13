@@ -10,6 +10,7 @@ import math
 import time
 
 from reason_transition.core import boundary, brace_balance, public, digest_ids
+from reason_transition.text_decoder import RollingTextDecoder
 
 
 def candidate(e, prefix, cache, logits, seed, natural_closed=False, cue_override=None, observe_hidden=None):
@@ -42,6 +43,7 @@ def _candidate(e, prefix, cache, logits, seed, natural_closed, cue_override, obs
     first_lp = next_logits.float().log_softmax(-1)
     first_entropy = float(-(first_lp.exp() * first_lp).sum().item())
     ids, text, logps, maxima, entropies = [], "", [], [], []
+    decoder=RollingTextDecoder(e.tok)
     reason = "limit"
     for i in range(192):
         lp = next_logits.float().log_softmax(-1)
@@ -51,7 +53,7 @@ def _candidate(e, prefix, cache, logits, seed, natural_closed, cue_override, obs
         maxima.append(float(probs.max().item()))
         entropies.append(float(-(probs * lp).sum().item()))
         ids.append(token)
-        text += e.tok.decode([token], skip_special_tokens=False)
+        text=decoder.append(token)
         child, next_logits = e.forward([token], child)
         if 1 + brace_balance(text) <= 0:
             reason = "answer_box_complete"
@@ -89,12 +91,13 @@ def decode_steps(e, prefix, cache, logits, seed, offset, steps, max_tokens):
     start = time.perf_counter()
     model_before = e.model_ms
     ids, text, complete = [], "", 0
+    decoder=RollingTextDecoder(e.tok)
     reason = "limit"
     last_boundary = -1
     for i in range(max_tokens):
         token, _ = e.sample(logits, seed, "think", offset + i, stats=False)
         ids.append(token)
-        text += e.tok.decode([token], skip_special_tokens=False)
+        text=decoder.append(token)
         cache, logits = e.forward([token], cache)
         if token in e.eos:
             reason = "eos"

@@ -1,0 +1,298 @@
+{
+  "source_sha256": "5414d1b4d00c7f158316b6e01dffdc27264e8cbc7feb8663eb7c058af899d43d",
+  "n": 211,
+  "bins": {
+    "p_stop": [
+      {
+        "lo": 0,
+        "hi": 0.5,
+        "n": 8,
+        "event_n": 2,
+        "prediction_mean": 0.2773344741932842,
+        "observed_rate": 0.25,
+        "wilson95": [
+          0.071479212752109,
+          0.5907245696898311
+        ]
+      },
+      {
+        "lo": 0.5,
+        "hi": 0.9,
+        "n": 134,
+        "event_n": 99,
+        "prediction_mean": 0.8158150633082984,
+        "observed_rate": 0.7388059701492538,
+        "wilson95": [
+          0.6585154628366853,
+          0.8057860655101091
+        ]
+      },
+      {
+        "lo": 0.9,
+        "hi": 0.95,
+        "n": 67,
+        "event_n": 62,
+        "prediction_mean": 0.91919401768111,
+        "observed_rate": 0.9253731343283582,
+        "wilson95": [
+          0.83690963207223,
+          0.9677039508336773
+        ]
+      },
+      {
+        "lo": 0.95,
+        "hi": 1,
+        "n": 2,
+        "event_n": 2,
+        "prediction_mean": 0.9570221875785487,
+        "observed_rate": 1.0,
+        "wilson95": [
+          0.34238022750665303,
+          1.0
+        ]
+      }
+    ],
+    "p_full_fix": [
+      {
+        "lo": 0,
+        "hi": 0.05,
+        "n": 4,
+        "event_n": 0,
+        "prediction_mean": 0.03893711982217009,
+        "observed_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.4898908364545973
+        ]
+      },
+      {
+        "lo": 0.05,
+        "hi": 0.1,
+        "n": 159,
+        "event_n": 13,
+        "prediction_mean": 0.07846545489627721,
+        "observed_rate": 0.08176100628930817,
+        "wilson95": [
+          0.048402298802567155,
+          0.13485237747463794
+        ]
+      },
+      {
+        "lo": 0.1,
+        "hi": 0.15,
+        "n": 40,
+        "event_n": 11,
+        "prediction_mean": 0.11802055299662913,
+        "observed_rate": 0.275,
+        "wilson95": [
+          0.16108016247667337,
+          0.42834955806210573
+        ]
+      },
+      {
+        "lo": 0.15,
+        "hi": 0.2,
+        "n": 4,
+        "event_n": 0,
+        "prediction_mean": 0.1685916638860242,
+        "observed_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.4898908364545973
+        ]
+      },
+      {
+        "lo": 0.2,
+        "hi": 1,
+        "n": 4,
+        "event_n": 1,
+        "prediction_mean": 0.34262764711738686,
+        "observed_rate": 0.25,
+        "wilson95": [
+          0.04558726080970055,
+          0.6993581574175981
+        ]
+      }
+    ]
+  },
+  "strata": [
+    {
+      "group": "checkpoint_tokens",
+      "stratum": "512-2047",
+      "n": 105,
+      "harms": 7,
+      "benefits": 1,
+      "harm_rate": 0.06666666666666667,
+      "harm_wilson_lo": 0.03266588465602071,
+      "harm_wilson_hi": 0.1312556486825412,
+      "mean_predicted_harm": 0.0839695231737288
+    },
+    {
+      "group": "checkpoint_tokens",
+      "stratum": ">=2048",
+      "n": 106,
+      "harms": 18,
+      "benefits": 3,
+      "harm_rate": 0.16981132075471697,
+      "harm_wilson_lo": 0.11019962137211899,
+      "harm_wilson_hi": 0.25251823806319285,
+      "mean_predicted_harm": 0.09981750224937776
+    },
+    {
+      "group": "difficulty",
+      "stratum": "1-3",
+      "n": 77,
+      "harms": 3,
+      "benefits": 3,
+      "harm_rate": 0.03896103896103896,
+      "harm_wilson_lo": 0.013337950040590962,
+      "harm_wilson_hi": 0.10839981872632877,
+      "mean_predicted_harm": 0.08118846726473399
+    },
+    {
+      "group": "difficulty",
+      "stratum": "4-5",
+      "n": 134,
+      "harms": 22,
+      "benefits": 1,
+      "harm_rate": 0.16417910447761194,
+      "harm_wilson_lo": 0.11099321312845334,
+      "harm_wilson_hi": 0.23608276263386713,
+      "mean_predicted_harm": 0.09810405367381382
+    },
+    {
+      "group": "remaining_reference_tokens",
+      "stratum": "512-2047",
+      "n": 68,
+      "harms": 1,
+      "benefits": 2,
+      "harm_rate": 0.014705882352941176,
+      "harm_wilson_lo": 0.0026006835761068076,
+      "harm_wilson_hi": 0.07870973128160871,
+      "mean_predicted_harm": 0.08626931195744111
+    },
+    {
+      "group": "remaining_reference_tokens",
+      "stratum": "<512",
+      "n": 39,
+      "harms": 0,
+      "benefits": 1,
+      "harm_rate": 0.0,
+      "harm_wilson_lo": -6.938893903907228e-18,
+      "harm_wilson_hi": 0.08966685370757144,
+      "mean_predicted_harm": 0.07836171908754873
+    },
+    {
+      "group": "remaining_reference_tokens",
+      "stratum": ">=2048",
+      "n": 104,
+      "harms": 24,
+      "benefits": 1,
+      "harm_rate": 0.23076923076923078,
+      "harm_wilson_lo": 0.16026407469596943,
+      "harm_wilson_hi": 0.32045511611996624,
+      "mean_predicted_harm": 0.10072148955918434
+    },
+    {
+      "group": "reference_censoring",
+      "stratum": "censored",
+      "n": 41,
+      "harms": 13,
+      "benefits": 0,
+      "harm_rate": 0.3170731707317073,
+      "harm_wilson_lo": 0.19564613898988575,
+      "harm_wilson_hi": 0.4698419964434429,
+      "mean_predicted_harm": 0.11891832802696324
+    },
+    {
+      "group": "reference_censoring",
+      "stratum": "natural_end",
+      "n": 170,
+      "harms": 12,
+      "benefits": 4,
+      "harm_rate": 0.07058823529411765,
+      "harm_wilson_lo": 0.040837418953078485,
+      "harm_wilson_hi": 0.11931689066653148,
+      "mean_predicted_harm": 0.0854223748386475
+    },
+    {
+      "group": "subject",
+      "stratum": "Algebra",
+      "n": 44,
+      "harms": 2,
+      "benefits": 0,
+      "harm_rate": 0.045454545454545456,
+      "harm_wilson_lo": 0.012555109949594967,
+      "harm_wilson_hi": 0.15134998437629657,
+      "mean_predicted_harm": 0.08435370668349321
+    },
+    {
+      "group": "subject",
+      "stratum": "Counting & Probability",
+      "n": 20,
+      "harms": 4,
+      "benefits": 0,
+      "harm_rate": 0.2,
+      "harm_wilson_lo": 0.08065766257979806,
+      "harm_wilson_hi": 0.41601743225189364,
+      "mean_predicted_harm": 0.07925827798728757
+    },
+    {
+      "group": "subject",
+      "stratum": "Geometry",
+      "n": 20,
+      "harms": 2,
+      "benefits": 0,
+      "harm_rate": 0.1,
+      "harm_wilson_lo": 0.027866481213768224,
+      "harm_wilson_hi": 0.3010336452284873,
+      "mean_predicted_harm": 0.08129704883568845
+    },
+    {
+      "group": "subject",
+      "stratum": "Intermediate Algebra",
+      "n": 47,
+      "harms": 9,
+      "benefits": 2,
+      "harm_rate": 0.19148936170212766,
+      "harm_wilson_lo": 0.10415932698542259,
+      "harm_wilson_hi": 0.32544004579661767,
+      "mean_predicted_harm": 0.10859067265379596
+    },
+    {
+      "group": "subject",
+      "stratum": "Number Theory",
+      "n": 30,
+      "harms": 1,
+      "benefits": 0,
+      "harm_rate": 0.03333333333333333,
+      "harm_wilson_lo": 0.005908590381612455,
+      "harm_wilson_hi": 0.16670390991409173,
+      "mean_predicted_harm": 0.08718413004028096
+    },
+    {
+      "group": "subject",
+      "stratum": "Prealgebra",
+      "n": 24,
+      "harms": 1,
+      "benefits": 1,
+      "harm_rate": 0.041666666666666664,
+      "harm_wilson_lo": 0.0073934561655057685,
+      "harm_wilson_hi": 0.20241806478655938,
+      "mean_predicted_harm": 0.08663221206832412
+    },
+    {
+      "group": "subject",
+      "stratum": "Precalculus",
+      "n": 26,
+      "harms": 6,
+      "benefits": 1,
+      "harm_rate": 0.23076923076923078,
+      "harm_wilson_lo": 0.11033849405783291,
+      "harm_wilson_hi": 0.42051554078943687,
+      "mean_predicted_harm": 0.10293565136791262
+    }
+  ],
+  "scope": "Already observed selected terminal STOPs only; descriptive intervals do not certify a newly selected policy.",
+  "figure_conclusion": "Current correctness confidence and relative harmful STOP risk are distinct; sparse bins have wide uncertainty."
+}

@@ -1,0 +1,218 @@
+{
+  "admitted": true,
+  "admission_scope": "Only subsequent diagnostic budget and crossed-noise experiments; no formal-policy or blind-test admission.",
+  "reviewer": "Codex agent inspection, not independent human adjudication",
+  "inspected_question_gold_answer_grade_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+  ],
+  "scope_limits": [
+    "All 100 stems/gold/output/parsed grades inspected; not a proof of every mathematical gold.",
+    "Exact CPU controls and counterexamples cover the explicitly recorded cases only.",
+    "No formal development/selection/calibration/test model outputs inspected or generated at review time.",
+    "Filtered cases include both invalid task interfaces and conservative false positives; v4 split remains frozen.",
+    "Pilot diagnostic accuracy is not formal method quality; no adaptive controller evaluated here."
+  ],
+  "raw": {
+    "n": 100,
+    "correct": 55,
+    "censored": 59
+  },
+  "v4_subset": {
+    "n": 88,
+    "correct": 51,
+    "censored": 49
+  },
+  "notes": [
+    {
+      "pilot_index": 13,
+      "problem_id": "omni/5d9dd6ba0a793fb38cf6",
+      "note": "Underdetermined point S; exact counterexample recorded.",
+      "excluded_by_v4": true
+    },
+    {
+      "pilot_index": 20,
+      "problem_id": "omni/37be4f249b828c324a10",
+      "note": "Family of all solutions; partial extraction of 1 can produce false correctness.",
+      "excluded_by_v4": true
+    },
+    {
+      "pilot_index": 24,
+      "problem_id": "omni/e1ad46a796841fee9c18",
+      "note": "Prose characterization; number 10 extracted from base notation is not the answer.",
+      "excluded_by_v4": true
+    },
+    {
+      "pilot_index": 46,
+      "problem_id": "omni/0512804d800474444a47",
+      "note": "Estimation/partial-credit task; exact binary metric differs from original scoring.",
+      "excluded_by_v4": true
+    },
+    {
+      "pilot_index": 55,
+      "problem_id": "omni/c202a922c12b77b301c9",
+      "note": "Bounds with partial credit; not a single exact numeric answer.",
+      "excluded_by_v4": true
+    },
+    {
+      "pilot_index": 60,
+      "problem_id": "omni/db12469d2345754167d1",
+      "note": "Equivalent alternatives 5^2013 and 125^671: valid mathematical answer, conservatively outside strict surface subset.",
+      "excluded_by_v4": true
+    },
+    {
+      "pilot_index": 68,
+      "problem_id": "omni/6d9873613b0d9d2fbf63",
+      "note": "ABCD trapezoid introduces C,D. Conservative geometry filter false positive; not an underdetermined-stem claim.",
+      "excluded_by_v4": true
+    },
+    {
+      "pilot_index": 77,
+      "problem_id": "omni/0af7e225c28bd370ce1b",
+      "note": "All coprime integer pairs; answer is a family, not the extracted number 1.",
+      "excluded_by_v4": true
+    },
+    {
+      "pilot_index": 79,
+      "problem_id": "omni/b3b753e153fd0f6b4d84",
+      "note": "Yes/no existence question; number 2017 extracted from prose is not its answer.",
+      "excluded_by_v4": true
+    },
+    {
+      "pilot_index": 80,
+      "problem_id": "omni/7d98de476eb417c7515b",
+      "note": "Undefined specialized consistent-of-order-1 terminology in supplied stem; reference assumes perfect matchings. Retained v4, mark pilot sensitivity.",
+      "excluded_by_v4": false
+    },
+    {
+      "pilot_index": 86,
+      "problem_id": "omni/7dccfc190347f0fb15f8",
+      "note": "Exact sum verified independently, but original task uses partial-credit metric. Retained v4 since rule matches estimation/bounds, disclose.",
+      "excluded_by_v4": false
+    },
+    {
+      "pilot_index": 87,
+      "problem_id": "omni/445610081d19ef05c7d4",
+      "note": "Angle with degree unit: mathematically numeric, excluded by strict command whitelist.",
+      "excluded_by_v4": true
+    },
+    {
+      "pilot_index": 89,
+      "problem_id": "omni/68b1c7173a7940818184",
+      "note": "Numeric area with cm unit: excluded by strict command whitelist, not proof of bad answer.",
+      "excluded_by_v4": true
+    },
+    {
+      "pilot_index": 94,
+      "problem_id": "omni/400b209e7ad9d0964888",
+      "note": "Explicit probability estimation task.",
+      "excluded_by_v4": true
+    }
+  ],
+  "original_outputs_unchanged": true,
+  "source_sha256": {
+    "results\\pilot_full_0.jsonl": "d3640f970b8daab5f36dfd3b735fd5c3dfa1b03cf928a89d43710e9ab6f09062",
+    "results\\pilot_full_1.jsonl": "6429f93ae3cbe561f108e0c3253a78e2417f77d4528e3d18f0cdb0b5bf24cdd9",
+    "provenance\\data_freeze.json": "1e4715e77dcd04bba72ded3250aae8808664ba452a61cc031c3e452d26adc329",
+    "provenance\\pilot_bounded_oracles.json": "9d07b3097684704f053c870872374d984f29835f1cc166b6b6ff933e57b41247"
+  },
+  "next_decision": "Measure actual 1024/2048/4096/16384 budget sensitivity and 3x3 crossed randomness; freeze formal cap based on these diagnostics."
+}

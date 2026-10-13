@@ -30,3 +30,9 @@
 DEER、Conformal Thinking 和 SEVRA 分别冻结为 commit `c9dd19fbffa27f841cfe47502d015b63811b4d1b`、`6551e3000dcda3d76491f30cc687d64618807c5b`、`77d1951b7a93eec53579225a91ff6099cf9f7ed0`。Conformal 的 preliminary lower utility 在最小接口调用中实际报 `NameError: name 'thresholds' is not defined`；这是该快照的接口缺陷，不是论文方法失败。DEER README 将分支并行列为 Coming Soon，所取 Python 快照未找到 PRo/MAD 名称，需要人工方法核对或明确标记受控适配。源码不覆盖修改；任何修复另存并记录差异。
 
 跨家族计划采用 DeepSeek-R1-Distill-Llama-8B，官方 HF revision `6a6f4aa4197940add57724a7707d069478df56b1` 已固定；取得 ModelScope 文件后仍须对照 HF 独立校验。服务器 Docker 28.1.1 可用，后续代码任务使用隔离、禁网络和资源限制的执行协议；尚无跨模型或代码任务性能结果。
+
+该 8B 模型现已完成 ModelScope 下载及全部必要文件身份验证。首次 HF 小配置文件在线复核遇到 connection reset，失败日志保留；改为对照下载前冻结 HF 元数据中的 Git blob SHA1 核对小文件，权重仍对照 LFS SHA256。Tokenizer 实际采用单 token `</think>`（ID128014），EOS128001，模板已经包含思考开头；这是接口核查，不是 GPU 数值/显存/质量验收。
+
+新增待验证代码：严格固定预算 pilot（32题、1024/2048/4096/16384）、候选身份与 GPU 读出一致性检查、密集真实候选银行（明确区分仪器轨迹计时代理与在线请求）、可选当前候选隐藏状态投影。隐藏状态探针是已有思想，仅作特征消融；跨架构投影不能直接假定同一特征语义，不把带模型专属头的结果称为冻结权重零样本迁移。
+
+交叉种子方差分解已修正为双向随机效应方法；三个有限样本方法检查通过。这些 CPU 检查及语法编译不证明任何新 GPU 性能。

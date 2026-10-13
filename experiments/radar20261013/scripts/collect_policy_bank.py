@@ -1,0 +1,93 @@
+"""Dense observed-answer bank for development/selection/independent calibration.
+
+This collects real GPU actions; timing reconstructed from an instrumented
+trajectory is marked as a proxy. Test must use actual frozen online policies.
+"""
+import argparse
+import json
+from pathlib import Path
+import sys
+import time
+import hashlib
+
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
+from reason_transition.core import Engine, stable_seed, public, grade, append_jsonl
+from radar_engine import candidate, candidate_features
+from candidate_schema import scalar_schema
+from probe_engine import ProbeEngine
+
+
+def main():
+    p=argparse.ArgumentParser()
+    p.add_argument('--model',required=True)
+    p.add_argument('--split',required=True,choices=['development','selection','calibration'])
+    p.add_argument('--shard',required=True,type=int)
+    p.add_argument('--shards',default=2,type=int)
+    args=p.parse_args()
+    assert (ROOT/'provenance/formal_protocol.json').exists(), 'Formal reference budget not frozen yet'
+    formal=json.loads((ROOT/'provenance/formal_protocol.json').read_text())
+    data=ROOT/f'data/{args.split}.jsonl'
+    freeze=json.loads((ROOT/'provenance/data_freeze.json').read_text())
+    assert hashlib.sha256(data.read_bytes()).hexdigest()==freeze['splits'][args.split]['sha256']
+    rows=[json.loads(s) for s in data.read_text(encoding='utf-8').splitlines()]
+    out=ROOT/f'results/bank_{args.split}_{args.shard}.jsonl'
+    done={json.loads(s)['problem_id'] for s in out.read_text(encoding='utf-8').splitlines()} if out.exists() else set()
+    e=ProbeEngine(args.model) if formal.get('capture_candidate_hidden',False) else Engine(args.model)
+    for index,row in enumerate(rows):
+        if index%args.shards!=args.shard or row['problem_id'] in done:continue
+        seed=stable_seed(formal['seed'],row['problem_id'],0)
+        answer_seeds=[seed]+[stable_seed(formal['seed'],row['problem_id'],'readout',i) for i in [1,2]]
+        points=[];seen_extra=set()
+        prompt=e.prompt(row['question'])
+        e.torch.cuda.synchronize();start=time.perf_counter()
+
+        def hook(point,prefix,cache,logits):
+            # Generate all potential terminal answers without choosing by labels.
+            probe=e.entropy_probe(cache,logits)
+            reads=[candidate(e,prefix,cache,logits,answer_seeds[0])]
+            for read in reads:
+                read['schema']=scalar_schema(read['text'])
+            # Extra measurement is sparse and identified; no hidden imputation.
+            crossed_extra=[t for t in formal['extra_readout_offsets'] if t<=point['offset'] and t not in seen_extra]
+            selected_extra=bool(crossed_extra)
+            seen_extra.update(crossed_extra)
+            if selected_extra:
+                reads += [candidate(e,prefix,cache,logits,s) for s in answer_seeds[1:]]
+                for read in reads[1:]:read['schema']=scalar_schema(read['text'])
+            points.append({**point,'probe':probe,'readouts':reads,
+                           'candidate_features':candidate_features(reads[0]),
+                           'schema_valid':reads[0]['schema']['valid'],
+                           'extra_readout_observed':selected_extra,
+                           'extra_readout_targets_crossed':crossed_extra,
+                           'gold_used_for_collection':False})
+            return {'offline_branching':True}
+
+        trace=e.decode(prompt,formal['max_think_tokens'],seed,capture=True,checkpoint_hook=hook)
+        final=e.answer(prompt+trace['ids'],answer_seeds[0],natural_closed=trace['stop_reason']=='natural_end',
+                       initial=(trace['cache'],trace['logits']))
+        e.torch.cuda.synchronize();collection_ms=1000*(time.perf_counter()-start)
+        final['grade']=grade(final['text'],row['gold']);final['correct']=final['grade']['correct']
+        for point in points:
+            for read in point['readouts']:
+                read['grade']=grade(read['text'],row['gold']);read['correct']=read['grade']['correct']
+        record={'problem_id':row['problem_id'],'split':args.split,'model_path':args.model,'seed':seed,
+                'formal_protocol_sha256':hashlib.sha256((ROOT/'provenance/formal_protocol.json').read_bytes()).hexdigest(),
+                'full':{'trace':public(trace),'answer':public(final),'correct':final['correct'],
+                        'instrumented_reference_ms':trace['ms']+final['ms'],
+                        'reference_timing_is_uninstrumented_online_benchmark':False},
+                'points':points,'collection_ms':collection_ms,
+                'compute_generated_tokens':trace['tokens']+final['tokens']+sum(r['tokens'] for c in points for r in c['readouts']),
+                'scorer_version':final['grade'].get('scorer_version'),
+                'all_correctness_labels_computed_after_generation':True}
+        append_jsonl(out,record)
+        print(json.dumps({'bank':args.split,'index':index,'id':row['problem_id'],'full_correct':final['correct'],
+                          'points':len(points),'wall_s':collection_ms/1000}),flush=True)
+        del trace,final,points
+    expected=sum(i%args.shards==args.shard for i in range(len(rows)))
+    assert len(out.read_text(encoding='utf-8').splitlines())==expected
+    (ROOT/f'results/bank_{args.split}_{args.shard}.complete.json').write_text(json.dumps({'n':expected,'unix':time.time()}))
+    print('POLICY_BANK_SHARD_COMPLETE',args.split,args.shard,expected,flush=True)
+
+
+if __name__=='__main__':main()

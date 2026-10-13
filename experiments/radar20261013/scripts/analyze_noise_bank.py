@@ -1,10 +1,13 @@
 """Problem-cluster analysis of crossed readout/continuation interventions."""
 import json
+import sys
 from collections import defaultdict
 from pathlib import Path
 import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
+from crossed_variance import crossed_components
 protocol=json.loads((ROOT/'provenance/noise_protocol.json').read_text())
 files=sorted((ROOT/'results').glob('noise_bank_*.jsonl'))
 assert len(files)==2,'No partial noise-bank analysis presented as final'
@@ -30,13 +33,21 @@ for s in states:
         branches=sorted([b for b in s['branches'] if b['action']==action],key=lambda b:b['reasoning_index'])
         y=np.array([[r['correct'] for r in b['readouts']] for b in branches],dtype=float)
         assert y.shape==(protocol['reasoning_repeats'],protocol['answer_repeats'])
-        within=float(np.var(y,axis=1,ddof=1).mean())
-        observed_between=float(np.var(y.mean(axis=1),ddof=1))
-        adjusted_between=observed_between-within/y.shape[1]
+        components=crossed_components(y)
+        within=components['within_readout']
+        ms_interaction=components['interaction']
+        observed_between=components['observed_reasoning_means']
+        # The same answer seeds cross all reasoning seeds. Ordinary nested
+        # correction (subtract within/m) is biased under this common randomness.
+        # Two-way random-effect ANOVA subtracts interaction/m instead.
+        adjusted_between=components['reasoning_unclipped']
+        answer_seed_component=components['answer_seed_unclipped']
         # Keep negative estimates visible: only constrained descriptive display clips.
         item['actions'][action]={
             'accuracy':float(y.mean()),'accuracy_delta_vs_stop':float(y.mean()-stop.mean()),
             'within_readout_variance':within,'observed_variance_of_reasoning_means':observed_between,
+            'crossed_seed_interaction_variance':ms_interaction,
+            'answer_seed_main_variance_unclipped':answer_seed_component,
             'bias_corrected_between_reasoning_variance_unclipped':adjusted_between,
             'constrained_between_reasoning_variance':max(0.,adjusted_between),
             'paired_harm_rate':float(((stop[None,:]==1)&(y==0)).mean()),
@@ -55,6 +66,7 @@ report={'scope':'Pilot-only operational interventions; not blind-test performanc
         'problem_ids':ids,'eligibility_status_counts':{k:sum(s['status']==k for s in statuses)
                                                      for k in sorted({s['status'] for s in statuses})},
         'actions':{},'states':details,'bootstrap_unit':'problem_id',
+        'variance_estimator':'Crossed R x E two-way random-effects ANOVA. Reasoning variance = var(row means) - MS_interaction/E; within readout variance = answer-seed main effect + interaction in expectation.',
         'variance_warning':'Only three reasoning and three readout repeats; estimates are noisy. Negative corrected components retained. Bernoulli variance alone does not show semantic progress.'}
 rng=np.random.default_rng(20261013)
 for action in ['DEFER_1','DEFER_4','FULL']:

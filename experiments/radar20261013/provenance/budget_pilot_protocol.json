@@ -1,0 +1,11 @@
+{
+  "seed": 20261013,
+  "source_split": "pilot_first_32_frozen_order",
+  "n": 32,
+  "budgets": [1024, 2048, 4096, 16384],
+  "existing_reference_budget": 8192,
+  "activation_rule": "After full pilot scoring audit, execute when 8192 censoring >=20 percent; long-budget adequacy takes priority over complexity.",
+  "cost_scope": "Each configured budget is an actual independent request, with model load excluded. No bank timing proxy substitutes for wall-clock.",
+  "reference_selection": "Choose formal reference before development/selection/calibration/test outputs; retain all pilot protocols and any changed version.",
+  "blind_test_tuning_allowed": false
+}

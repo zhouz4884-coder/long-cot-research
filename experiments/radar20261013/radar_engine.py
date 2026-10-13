@@ -12,14 +12,33 @@ import time
 from reason_transition.core import boundary, brace_balance, public, digest_ids
 
 
-def candidate(e, prefix, cache, logits, seed, natural_closed=False):
+def candidate(e, prefix, cache, logits, seed, natural_closed=False, cue_override=None, observe_hidden=None):
+    observe=getattr(e,'observe_candidates',False) if observe_hidden is None else observe_hidden
+    previous=getattr(e,'capture_hidden',False)
+    if observe:
+        assert hasattr(e,'capture_hidden'),'Use the admitted observation engine explicitly'
+        e.capture_hidden=True
+    try:
+        return _candidate(e,prefix,cache,logits,seed,natural_closed,cue_override,observe)
+    finally:
+        if hasattr(e,'capture_hidden'):e.capture_hidden=previous
+
+
+def _candidate(e, prefix, cache, logits, seed, natural_closed, cue_override, observe):
     e.torch.cuda.synchronize()
     start = time.perf_counter()
     model_before = e.model_ms
     original_len = cache.get_seq_length()
+    clone_start=time.perf_counter()
     child = copy.deepcopy(cache)
-    suffix = e.tok.encode("\n\n" + e.answer_cue, add_special_tokens=False) if natural_closed else e.suffix
+    e.torch.cuda.synchronize()
+    clone_ms=1000*(time.perf_counter()-clone_start)
+    cue=cue_override if cue_override is not None else e.answer_cue
+    suffix=e.tok.encode(("\n\n" if natural_closed else "</think>\n\n")+cue,add_special_tokens=False)
+    prefill_before=e.model_ms
     child, next_logits = e.forward(suffix, child)
+    prefill_model_ms=e.model_ms-prefill_before
+    cue_projection=list(e.last_projection) if observe else None
     first_lp = next_logits.float().log_softmax(-1)
     first_entropy = float(-(first_lp.exp() * first_lp).sum().item())
     ids, text, logps, maxima, entropies = [], "", [], [], []
@@ -51,7 +70,14 @@ def candidate(e, prefix, cache, logits, seed, natural_closed=False):
               "answer_prefix_hash": digest_ids(prefix + suffix),
               "candidate_sha256": hashlib.sha256(json.dumps(ids, separators=(",", ":")).encode()).hexdigest(),
               "sample_seed": seed, "parent_cache_unchanged_in_length": True,
+              "control_prefix_input_tokens": len(suffix), "prefill_model_ms":prefill_model_ms,
+              "copy_cache_ms":clone_ms,"cached_prefix":True,"cue":cue,
               "cache_strategy": "copy_before_readout"}
+    result['cue_projection']=cue_projection
+    result['answer_projection']=list(e.last_projection) if observe else None
+    result['hidden_observation_is_correctness_guarantee']=False
+    result['candidate_text_sha256']=hashlib.sha256(result['text'].encode('utf-8')).hexdigest()
+    result['candidate_identity_sha256']=hashlib.sha256((result['answer_prefix_hash']+':'+result['candidate_sha256']+':'+result['candidate_text_sha256']).encode()).hexdigest()
     del child, next_logits
     return result
 
@@ -73,7 +99,7 @@ def decode_steps(e, prefix, cache, logits, seed, offset, steps, max_tokens):
         if token in e.eos:
             reason = "eos"
             break
-        if token == e.endthink:
+        if token == e.endthink or (hasattr(e, 'closer_ids') and ids[-len(e.closer_ids):] == e.closer_ids):
             reason = "natural_end"
             break
         # Consecutive extra newlines at one boundary count once.

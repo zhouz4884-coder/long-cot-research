@@ -22,6 +22,8 @@ class JointModel:
     def fit(self,x,current,after,weights=None):
         x=np.asarray(x,dtype=float)
         assert np.isfinite(x).all()
+        assert len(x)==len(current)==len(after)
+        assert set(np.asarray(current).tolist())<={0,1} and set(np.asarray(after).tolist())<={0,1}, 'Marginal means are not binary event labels'
         labels=2*np.asarray(current,dtype=int)+np.asarray(after,dtype=int)
         self.classes=np.unique(labels)
         if len(self.classes)==1:

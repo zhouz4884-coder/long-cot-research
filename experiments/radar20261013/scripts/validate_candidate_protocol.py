@@ -1,5 +1,5 @@
 """Fresh GPU invariants for the actual candidate that may later be delivered."""
-import copy,hashlib,json,sys
+import argparse,copy,hashlib,json,sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
@@ -9,7 +9,11 @@ from candidate_schema import scalar_schema
 from probe_engine import ProbeEngine
 
 assert (ROOT/'results/pilot.complete.json').exists(), 'Do not contend with measured pilot workers'
-model='/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B'
+parser=argparse.ArgumentParser()
+parser.add_argument('--model',default='/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B')
+parser.add_argument('--output',default='candidate_protocol_admission.json')
+args=parser.parse_args();model=args.model
+assert Path(args.output).name==args.output,'Use a plain admission filename'
 e=ProbeEngine(model)
 questions=[json.loads(s) for s in (ROOT/'data/pilot.jsonl').read_text(encoding='utf-8').splitlines()][:3]
 checks=[]
@@ -30,7 +34,7 @@ for q,length in zip(questions,[128,512,2048]):
     assert check['entropy_error']<1e-8
     checks.append(check);print(json.dumps(check),flush=True)
     del trace,parent,read,original
-payload={'passed':True,'checks':checks,'scope':'Finite readout/copy/equality invariants, not proof of answer correctness or performance.',
+payload={'passed':True,'model_path':model,'checks':checks,'scope':'Finite readout/copy/equality invariants, not proof of answer correctness or performance.',
          'source_sha256':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in ['radar_engine.py','candidate_schema.py','probe_engine.py','reason_transition/core.py']}}
-(ROOT/'provenance/candidate_protocol_admission.json').write_text(json.dumps(payload,indent=2)+'\n')
+(ROOT/'provenance'/args.output).write_text(json.dumps(payload,indent=2)+'\n')
 print('CANDIDATE_PROTOCOL_ADMITTED',flush=True)

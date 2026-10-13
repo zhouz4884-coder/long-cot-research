@@ -16,6 +16,7 @@ from reason_transition.core import Engine, stable_seed, public, grade, append_js
 from radar_engine import candidate, candidate_features
 from candidate_schema import scalar_schema
 from probe_engine import ProbeEngine
+from protocol_guard import validate_formal,validate_resume
 
 
 def main():
@@ -26,16 +27,21 @@ def main():
     p.add_argument('--shards',default=2,type=int)
     args=p.parse_args()
     assert (ROOT/'provenance/formal_protocol.json').exists(), 'Formal reference budget not frozen yet'
-    formal=json.loads((ROOT/'provenance/formal_protocol.json').read_text())
+    formal,formal_hash=validate_formal(ROOT,args.model)
+    if args.split=='calibration':
+        assert (ROOT/'provenance/calibration_candidates.json').exists(),'Freeze candidates before any calibration request'
     data=ROOT/f'data/{args.split}.jsonl'
     freeze=json.loads((ROOT/'provenance/data_freeze.json').read_text())
     assert hashlib.sha256(data.read_bytes()).hexdigest()==freeze['splits'][args.split]['sha256']
     rows=[json.loads(s) for s in data.read_text(encoding='utf-8').splitlines()]
     out=ROOT/f'results/bank_{args.split}_{args.shard}.jsonl'
-    done={json.loads(s)['problem_id'] for s in out.read_text(encoding='utf-8').splitlines()} if out.exists() else set()
+    previous=[json.loads(s) for s in out.read_text(encoding='utf-8').splitlines()] if out.exists() else []
+    expected_ids={r['problem_id'] for i,r in enumerate(rows) if i%args.shards==args.shard}
+    done=validate_resume(previous,formal_hash,args.model,expected_ids)
     e=ProbeEngine(args.model) if formal.get('capture_candidate_hidden',False) else Engine(args.model)
     for index,row in enumerate(rows):
         if index%args.shards!=args.shard or row['problem_id'] in done:continue
+        assert validate_formal(ROOT,args.model)[1]==formal_hash,'Formal protocol changed during collection'
         seed=stable_seed(formal['seed'],row['problem_id'],0)
         answer_seeds=[seed]+[stable_seed(formal['seed'],row['problem_id'],'readout',i) for i in [1,2]]
         points=[];seen_extra=set()
@@ -72,7 +78,7 @@ def main():
             for read in point['readouts']:
                 read['grade']=grade(read['text'],row['gold']);read['correct']=read['grade']['correct']
         record={'problem_id':row['problem_id'],'split':args.split,'model_path':args.model,'seed':seed,
-                'formal_protocol_sha256':hashlib.sha256((ROOT/'provenance/formal_protocol.json').read_bytes()).hexdigest(),
+                'formal_protocol_sha256':formal_hash,
                 'full':{'trace':public(trace),'answer':public(final),'correct':final['correct'],
                         'instrumented_reference_ms':trace['ms']+final['ms'],
                         'reference_timing_is_uninstrumented_online_benchmark':False},

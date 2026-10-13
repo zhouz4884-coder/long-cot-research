@@ -1,11 +1,16 @@
 test_family_and_yes_no_reject_partial_number (test_candidate_schema.CandidateSchema) ... ok
 test_numeric_values_have_consistent_structural_keys (test_candidate_schema.CandidateSchema) ... ok
+test_false_certification_probability_is_bounded (test_design_risk.FiniteDesignRisk) ... ok
+test_unsampled_stratum_can_hide_harm (test_design_risk.FiniteDesignRisk) ... ok
+test_upper_tail_bound_covers_every_small_population_allocation (test_design_risk.FiniteDesignRisk) ... ok
 test_non_scalar_family_and_prose_rejected (test_input_eligibility.InputEligibility) ... ok
 test_undefined_point_is_not_a_sufficient_numeric_problem (test_input_eligibility.InputEligibility) ... ok
 test_valid_constant_formulas_preserved (test_input_eligibility.InputEligibility) ... ok
 test_data_only_compressed_cases (test_lcb_cases.LCBCaseProtocol) ... ok
 test_global_pickle_is_rejected_without_execution (test_lcb_cases.LCBCaseProtocol) ... ok
 test_no_large_integer_float_tolerance (test_lcb_cases.LCBCaseProtocol) ... ok
+test_resume_rejects_wrong_protocol_model_and_duplicates (test_protocol_guard.FormalRecordGuard) ... ok
+test_runtime_mutation_cannot_reuse_a_source_freeze (test_protocol_guard.FormalRecordGuard) ... ok
 test_actual_legacy_harm_is_not_cost_admissible (test_quality_invariants.QualityAdmission) ... skipped 'Legacy raw decision not present on this host'
 test_invalid_and_unsupported_states_do_not_commit (test_quality_invariants.QualityAdmission) ... ok
 test_finite_sample_negative_components_remain_visible (test_variance_design.SeedDesign) ... ok
@@ -13,6 +18,6 @@ test_readout_only_does_not_create_reasoning_variance (test_variance_design.SeedD
 test_reasoning_only_is_preserved (test_variance_design.SeedDesign) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 0.493s
+Ran 18 tests in 0.576s
 
 OK (skipped=1)

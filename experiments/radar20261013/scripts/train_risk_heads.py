@@ -8,6 +8,7 @@ from sklearn.metrics import roc_auc_score,average_precision_score,brier_score_lo
 
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from joint_predictor import JointModel,PREFIX_FEATURES,ANSWER_FEATURES
+from protocol_guard import validate_formal,sha256
 
 
 def metric(y,p,w):
@@ -17,6 +18,7 @@ def metric(y,p,w):
 
 
 def main():
+    formal,formal_hash=validate_formal(ROOT)
     files=[ROOT/f'results/bank_development_{g}.jsonl' for g in [0,1]]
     freeze=json.loads((ROOT/'provenance/data_freeze.json').read_text())
     expected=set(freeze['splits']['development']['ids'])
@@ -26,6 +28,8 @@ def main():
         questions+=[json.loads(s) for s in file.read_text(encoding='utf-8').splitlines()]
     assert {r['problem_id'] for r in questions}==expected
     assert len(questions)==len(expected)
+    assert all(r['formal_protocol_sha256']==formal_hash for r in questions)
+    model_paths={r['model_path'] for r in questions};assert len(model_paths)==1
     entries=[]
     for q in questions:
         count=len(q['points'])
@@ -67,6 +71,8 @@ def main():
     for name,model in models.items():
         with (out/f'{name}.pkl').open('wb') as f:pickle.dump(model,f)
     report={'fit_split':'development_only','unique_problems_with_states':len(set(groups)),
+            'formal_protocol_sha256':formal_hash,'model_path':next(iter(model_paths)),
+            'input_bank_sha256':{str(f.relative_to(ROOT)):sha256(f) for f in files},
             'development_question_count_including_no_state':len(questions),'checkpoint_rows':len(entries),
             'event_counts':dict(Counter(f"{e['current']}->{e['after']}" for e in entries)),
             'variants':reports,'folds':fold_rows,

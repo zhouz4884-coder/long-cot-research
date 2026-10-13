@@ -8,6 +8,7 @@ from radar_engine import candidate
 from candidate_schema import scalar_schema
 from probe_engine import ProbeEngine
 from risk_policy import quality_decision,features_at,eat_update,deer_pro_confidence
+from protocol_guard import validate_formal
 
 
 def main():
@@ -18,11 +19,12 @@ def main():
     p.add_argument('--out-tag',required=True)
     args=p.parse_args()
     formal_path=ROOT/'provenance/formal_protocol.json'
-    formal_hash=hashlib.sha256(formal_path.read_bytes()).hexdigest()
-    formal=json.loads(formal_path.read_text(encoding='utf-8'))
+    formal,formal_hash=validate_formal(ROOT,args.model)
     policy_path=Path(args.policy_file)
     policy=json.loads(policy_path.read_text(encoding='utf-8'))
     policy_hash=hashlib.sha256(policy_path.read_bytes()).hexdigest()
+    if args.split=='calibration':
+        assert (ROOT/'provenance/calibration_candidates.json').exists(),'Freeze candidates before any calibration request'
     if args.split=='test':
         freeze=json.loads((ROOT/'provenance/final_test_freeze.json').read_text(encoding='utf-8'))
         assert freeze['policy_sha256']==policy_hash
@@ -49,6 +51,7 @@ def main():
     methods=list(policy['methods'])
     for index,q in enumerate(rows):
         if index%args.shards!=args.shard:continue
+        assert validate_formal(ROOT,args.model)[1]==formal_hash,'Formal runtime changed during requests'
         assert hashlib.sha256(policy_path.read_bytes()).hexdigest()==policy_hash
         assert hashlib.sha256(formal_path.read_bytes()).hexdigest()==formal_hash
         order=methods[index%len(methods):]+methods[:index%len(methods)]
@@ -57,14 +60,29 @@ def main():
             spec=policy['methods'][method];kind=spec['kind'];seed=stable_seed(formal['seed'],q['problem_id'],0)
             log=[];reads=[];committed=None;fallback=False;probe_ms=0.;probe_tokens=0;detector_ms=0.
             ema_mean=ema_variance=0.;observations=0
+            next_legacy_detection=0
             prompt=e.prompt(q['question'])
 
             def hook(point,prefix,cache,logits):
-                nonlocal committed,fallback,probe_ms,probe_tokens,detector_ms,ema_mean,ema_variance,observations
+                nonlocal committed,fallback,probe_ms,probe_tokens,detector_ms,ema_mean,ema_variance,observations,next_legacy_detection
                 if fallback:return {'disable_capture':True}
                 started=time.perf_counter();detail={};action='DEFER';read=None
                 if point['offset']<spec.get('minimum_offset',256):return False
-                if kind=='eat':
+                if kind=='legacy_transfer':
+                    assert spec['control_mode']=='sequential','Preserve the selected original control mode'
+                    if point['kind']=='natural' and point['offset']<256:return False
+                    if point['offset']<next_legacy_detection:return False
+                    learner=models[spec['predictor']];features=point['features']
+                    if 'readout_entropy' in learner.features:
+                        probe=e.entropy_probe(cache,logits);probe_ms+=probe['ms'];probe_tokens+=probe['probe_input_tokens']
+                        features={**features,'readout_entropy':probe['entropy']}
+                    old_action,detail=learner.choose(features,spec['cost_lambda'],spec['margin'],mode=spec['prediction_mode'])
+                    detector_ms+=1000*(time.perf_counter()-started)
+                    log.append({'offset':point['offset'],'kind':point['kind'],'action':old_action,'detail':detail})
+                    if old_action=='STOP':return {'stop':True}
+                    next_legacy_detection=point['offset']+128
+                    return False
+                elif kind=='eat':
                     probe=e.entropy_probe(cache,logits);probe_ms+=probe['ms'];probe_tokens+=probe['probe_input_tokens']
                     observations+=1
                     ema_mean,ema_variance,adjusted=eat_update(ema_mean,ema_variance,probe['entropy'],observations)
@@ -99,7 +117,7 @@ def main():
             max_think=spec.get('budget',formal['max_think_tokens'])
             adaptive=kind not in ['full','fixed_budget']
             e.torch.cuda.reset_peak_memory_stats();e.torch.cuda.synchronize();start=time.perf_counter()
-            trace=e.decode(prompt,max_think,seed,capture=kind in ['risk_gate','current_correctness'],
+            trace=e.decode(prompt,max_think,seed,capture=kind in ['risk_gate','current_correctness','legacy_transfer'],
                            checkpoint_hook=hook if adaptive else None)
             if committed is not None:
                 answer=committed;new_final_tokens=0

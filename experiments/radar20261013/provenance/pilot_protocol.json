@@ -1,0 +1,23 @@
+{
+  "study": "radar20261013",
+  "stage": "fresh_numeric_scalar_pilot",
+  "seed": 20261013,
+  "model_id": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "dtype": "float16",
+  "attention": "sdpa",
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "top_k": 20,
+  "max_think_tokens": 8192,
+  "max_answer_tokens": 192,
+  "answer_protocol": "shared forced boxed cue after natural or bounded thought",
+  "scorer": "math_verify_0.9_surface_vector_v3",
+  "scorer_scope": "finite constant scalar subset only; gold self-parsing is eligibility, not proof of grader accuracy",
+  "pilot_n": 100,
+  "pilot_used_for": "protocol validation, difficulty/censoring/runtimes; excluded from later blind evaluation",
+  "main_test_inspection_authorized": false,
+  "old_math500_is_new_test": false,
+  "policy_optimization_allowed_on_pilot": true,
+  "new_performance_claim": "none until actual protocol audit and fresh online experiments"
+}

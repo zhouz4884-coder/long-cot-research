@@ -1,0 +1,19 @@
+{
+  "study": "radar20261013",
+  "seed": 20261013,
+  "problem_count": 24,
+  "source_split": "pilot_only_first_24_frozen_order_not_selected_by_outcome",
+  "checkpoint_minimum_offsets": [512, 2048],
+  "checkpoint_selection": "first saved eligible paragraph boundary at or after each target, before terminal; unavailable and duplicate states explicitly recorded",
+  "state_distribution_warning": "offline state selection uses realized trajectory eligibility; not an online selection rule or a population prevalence estimate",
+  "reasoning_repeats": 3,
+  "answer_repeats": 3,
+  "max_think_tokens": 8192,
+  "defer_1_cap": 1024,
+  "defer_4_cap": 4096,
+  "answer_tokens": 192,
+  "actions": ["STOP_READOUT", "DEFER_1", "DEFER_4", "BOUNDED_FULL"],
+  "seed_coupling": "same answer seeds across actions; separate thought seeds; DEFER branches share prefix of FULL for each thought seed",
+  "cost_scope": "offline action timing only; not measured end-to-end cost of a learned deployment policy",
+  "missing_state_policy": "retain and report eligibility failures; do not silently replace with easier questions"
+}

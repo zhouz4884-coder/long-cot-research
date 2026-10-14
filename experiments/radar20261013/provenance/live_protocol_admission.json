@@ -55,26 +55,53 @@
   "cache_checks": [
     {
       "problem_id": "omni/13bd1b66302cc02ba173",
-      "prefix_length": 128,
+      "requested_max_tokens": 128,
+      "actual_prefix_tokens": 128,
+      "actual_total_prefix_tokens": 269,
+      "prefix_generation_stop_reason": "limit",
+      "continuation_randomness_offset": 128,
       "same_kv": true,
       "entropy_error": 0.0,
       "same_16_token_continuation": true
     },
     {
       "problem_id": "omni/6e95edb242326b1f98b0",
-      "prefix_length": 512,
+      "requested_max_tokens": 512,
+      "actual_prefix_tokens": 512,
+      "actual_total_prefix_tokens": 550,
+      "prefix_generation_stop_reason": "limit",
+      "continuation_randomness_offset": 512,
       "same_kv": true,
       "entropy_error": 0.0,
       "same_16_token_continuation": true
     },
     {
       "problem_id": "omni/54df3d59ca31803f13eb",
-      "prefix_length": 2048,
+      "requested_max_tokens": 2048,
+      "actual_prefix_tokens": 2048,
+      "actual_total_prefix_tokens": 2179,
+      "prefix_generation_stop_reason": "limit",
+      "continuation_randomness_offset": 2048,
       "same_kv": true,
       "entropy_error": 0.0,
       "same_16_token_continuation": true
     }
   ],
-  "core_sha256": "c554b91ac9392b33d3db498d0a0d2b012341ddc073593906176715c87753211c",
+  "core_sha256": "116f291c31b9fb1ccb1951318ee96c4dcaadeac978d7e1de609ccecd8752944b",
+  "package_versions": {
+    "python": "3.10.20",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.2",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "math-verify": "0.9.0"
+  },
+  "source_sha256": {
+    "scripts/validate_new_protocol.py": "f69bed3a05828bd5eec29013d057c107da01beff4cf105b4ba87735a3da33ece",
+    "reason_transition/core.py": "116f291c31b9fb1ccb1951318ee96c4dcaadeac978d7e1de609ccecd8752944b",
+    "reason_transition/text_decoder.py": "7644faf3fea9d61ac5c072cde82d00038e2477953e1671b3be1b6a9586324237",
+    "protocol_guard.py": "39a5d7c1cf4ea95174e7fe0403783373ca39a04641d83f13925da421f42278c1"
+  },
   "scope": "Three finite prefixes, this model and runtime only; not a universal numeric invariance theorem."
 }

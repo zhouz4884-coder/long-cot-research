@@ -82,3 +82,7 @@ REFRAIN准备：默认词表经原PDF样式复核，固定MiniLM模型11文件�
 REFRAIN纠正复测：传输成功结束后真实远端CPU编码器passed，报告已取回；native绑定五个源码SHA均不变，两原worker继续运行，最新45/58。不把单次CPU117.7ms叫方法开销，更不称GPU/完整benchmark完成。
 
 ASAG准备：最后四层真实QK-window接口在冻结环境随机tiny Qwen3 CPU前向三例通过（eager最大误差2.09e-7，SDPA logits/KV不变）；9个CPU四动作/方程/tape控制通过。lazy-cache越界及修复保留。新增四动作decoder、long-prefix GPU admission、实际paired FULL online与独立freeze入口，未执行4B模型任务。实际native worker仍存活、54/58落盘，未从部分正确率选择参照。D14记录实施歧义、零entropy修正和失败猜想。
+
+正式放行已实际完成：native58/58，完整重评分及whole-prefix扩展控制通过；native8k/16k为13/18正确，boxed17/22。机制/统计限制及正式16k选择见D16和 `NATIVE_PILOT_REVIEW_20261014_ZH.md`。五组fresh GPU有限接口真实通过，DTSR/REFRAIN/ASAG独立协议冻结；只证明有限接口，不是baseline模型质量成绩。科学review/全部源码/证据SHA核查后main formal放行开发，当前两原worker1874879/1874880存活、36/530 development完成。后续selection/train/M1/独立校准/盲测/迁移/条件Serving/完整归档保持原范围。主协议与绑定证据已经冻结，不能覆盖。
+
+只读开发snapshot实际审计通过：36完成题/1800 checkpoint，ID与GPU路由/seed/真实prompt+Full tokens的prefix hash一致、labels-after-generation及proxy标识正确；不是530全完成或部分质量估计。原worker继续运行，审计与完整阶段科学判断分开。证据 `results/development_bank_snapshot_20261014_01.json`；恢复入口已更新为当前bank阶段，避免重复运行旧native/放行命令。

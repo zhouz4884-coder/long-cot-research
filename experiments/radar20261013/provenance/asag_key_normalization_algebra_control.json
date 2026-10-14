@@ -1,0 +1,43 @@
+{
+  "kind": "synthetic_finite_QK_causal_window_control",
+  "rows": [
+    {
+      "key_tokens": 256,
+      "query_rows": 32,
+      "active_past_keys": 4,
+      "finite_raw_attention_scores": [
+        11.313708498984761,
+        -11.313708498984761
+      ],
+      "each_active_key_probability": 0.25,
+      "maximum_inactive_allowed_key_probability": 3.723726882398637e-11,
+      "normalized_entropy_sum": 1024.000244140625,
+      "unnormalized_entropy_sum": 5678.263056950159
+    },
+    {
+      "key_tokens": 512,
+      "query_rows": 32,
+      "active_past_keys": 4,
+      "finite_raw_attention_scores": [
+        11.313708498984761,
+        -11.313708498984761
+      ],
+      "each_active_key_probability": 0.25,
+      "maximum_inactive_allowed_key_probability": 3.723726882398637e-11,
+      "normalized_entropy_sum": 910.2224731445312,
+      "unnormalized_entropy_sum": 5678.263268481891
+    }
+  ],
+  "relative_normalized_entropy_delta": -0.11111107799742746,
+  "relative_unnormalized_entropy_delta": 3.725289404503059e-08,
+  "default_threshold": -0.1,
+  "unchanged_synthetic_confidence": 0.8,
+  "state_action": "INJECT",
+  "learned_model_data": false,
+  "source_sha256": {
+    "scripts/audit_asag_key_normalization.py": "ce87d5b17f48f1185916cbd1f9089fe6a15e5c86707549b022516b82e21491a1",
+    "asag_attention.py": "64497ff62aa1289791783cefff362d3b93ee4b3e59e4f137fb26b54eb68ba9fb",
+    "asag_policy.py": "8660cb6dc62b9c6688003f64418cebb0b49e1033378921834bf4c19e91d01fda"
+  },
+  "claim": "Finite causal QK windows with nearly unchanged unnormalized attention entropy cross the relative normalized threshold solely to dominant precision through changing log(key_count). This establishes a possible mechanism, not its occurrence or error rate on learned-model tasks."
+}

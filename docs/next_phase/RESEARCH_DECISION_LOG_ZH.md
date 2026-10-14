@@ -170,3 +170,33 @@ REFRAIN作者repo已冻结为ba5c8b402431b9b18bfa55027361355fec85b7c5，实际�
 准备GPU空闲窗口时复核发现 `validate_new_protocol.py` 的prefix_length写入请求length，续写随机数offset也用此上限；如果生成提前EOS，报告与实际状态就不一致。两侧采用同一个错误offset仍可能通过一致性，不能由通过标志推出正确的counter continuation。这是接口报告/控制定义的问题，未确认旧三前缀实际发生过提前EOS。
 
 已保留旧源码/旧本地验收JSON于interface_archive，改为实际state.tokens作为续写offset，分别写requested_max_tokens、actual_prefix_tokens、total prefix、实际stop reason；同时记录源码与冻结包版本。native绑定文件不变，不重启采集。正式冻结前必须用修正后的live脚本重新实际运行，CPU编译通过不算GPU通过；当前没有新增验收结果或模型质量结论。
+
+## D16：相同“增加5题”包含不同的机制，正式参照采用boxed16k
+
+实际完整数据：native58请求全部生成后才审查，8k/16k为13/18正确，matched boxed17/22，每组29。native每预算4个损失、0收益，精确p=.125；native16k相对8k+5、p=.0625。不要只用Bootstrap排除0写总体显著结论，也不以EOS完成子集100%正确代表总体。
+
+实际尝试/效果：58重评分一致；29题两native预算完整生成prefix一致。2例8k在thinking8084/7669闭合后仅剩300/715 final tokens，均截断；16k沿相同prefix延至9962/8847后正确完成。原失败不重写。另以符号脚点/交点关系核对ratio1，24个除数的13824有序组合枚举与stars-bars均得800，支持这两例Gold而非只信原评分。
+
+我的判断：native增加预算的5个改善，仅clock一题与boxed预算改善重合；另4个在boxed8k已正确。boxed16k新救回的另外4个仍在native16k未闭合。原D12“读出/预算分配可能重要”的猜想得到这两类具体证据，但仍不能把整体差当cue-only作用，或从partial thought推断潜在认知状态。2例可确认是实际完整final遭预算截断，模型其余未完成原因仍需后续证据。
+
+决策/限制：选有界boxed FULL16384并冻结共同protocol。依据为5个paired repairs/0 reverse harms及精确控制；29题/p=.0625/11题触顶不支持无限FULL或总体性能保证。选择12288没有实测依据。先正式训练并实测COMMIT/FULL质量—风险门禁，M1无收益就按原路线查fixed/EAT前沿，不开发复杂网络包装效果。
+
+## D17：五组fresh GPU验收真实通过后释放开发；不把接口通过写成基线成绩
+
+实际验收：修正后的live三前缀及实际counter offset通过。candidate实际128/8192/16384均与共同reader IDs/text一致、entropy差0、parent KV不变；投影维64/64，16k peak allocated15,709,297,664 bytes（14.63GiB）。DTSR2/3 rating解析，128处“80+解释”按严格规则拒绝；全部KV/16-token控制通过。REFRAIN三前缀实际decoder共享prefix及reader身份通过。
+
+ASAG实际128/8192/16384两次scratch probe的IDs/身份、entropy/置信度均一致，parent全KV未变，16k peak18,289,283,072 bytes（17.03GiB）。512-token集成没有ATP，因此不声称学到模型四动作均被覆盖；CPU9分支控制和GPUhelper控制各自限定范围，完整selection模型结果仍待执行。
+
+问题/恢复：串行finite队列启动SSH观察发生30秒timeout，但按同一实际PID/state复核，监督器1868362与子进程继续并按顺序全部exit0；未因观察超时重复启动。Windows本地初次计数误用GBK，改显式UTF-8后核对58个原始JSONL及全部冻结证据SHA一致，不当数据损坏。
+
+真实放行：科学review绑定六份完整证据及fresh GPU报告，正式SHA `423f8b632d628443d9a4517bb8bb280714940776e1a4ddf2fbe166593ce323f2`，16k/192 reader/capture hidden；三个独立baseline protocol亦冻结。开发worker1874879/1874880真实存活，最新36/530完成，尚无训练/M1/风险证书/盲测结论。已生成后不改被绑定的源码、数据、协议、科学review和证据；增加只读审查与工作日志。
+
+额外待检验机制：finite QK/causal CPU控制在始终关注相同4个past keys、置信度固定.8时，key数256→512使归一化H下降11.1111%，未归一化H相对只变3.73e-8，触发INJECT。该控制比仅用零概率simplex极限更接近有限QK。它证明log(key_count)可能贡献阈值 crossing，不证明真实任务发生率、ASAG错误率或作者结果失败；后续有害事件审查应同时看key数、query行数及反归一化H。冻结策略不因此改阈值。
+
+## D18：正式银行的部分记录先做身份/前缀审计，不用部分分数选策略
+
+实际进展：开发两个原worker1874879/1874880均确认存活，正式冻结源码SHA与当前工作树一致。重新核验完整58 native raw、科学review及全部绑定证据SHA，均匹配。早先原同步shell session已过期，不把观察handle失效当采集失败；本地原始文件通过实际哈希与58行核对证明同步已完成。
+
+实际尝试/结果：新增只读snapshot审计，只计newline-complete行、保留未写完尾部并不覆盖旧snapshot。36/530题、两分片18/18，1800个已完成checkpoint按真实tokenizer重建prompt+Full trace逐个核对prefix hash全部通过；ID唯一、开发成员、固定GPU0/1、per-problem seed、labels-after-generation、proxy计时标识一致。没有输出或采用部分准确率，也不宣称全银行完成。
+
+判断/下一依赖：当前继续已有530开发/265选择/训练/M1队列，主源码/数据/协议和review证据冻结不变。若后续身份或prefix不一致，先保留异常并定位代码/数值/数据路径，不能用继续训练掩盖失配；若完整M1没有质量—成本收益，再依据fixed/EAT前沿和风险门禁诊断。记录完整阶段结果后才进行科学GO/NO-GO，当前不预判。

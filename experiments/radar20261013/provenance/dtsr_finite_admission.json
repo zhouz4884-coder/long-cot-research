@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "valid_rating_responses": 2,
+  "model_path": "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "live_model_file_sha256": {
+    "config.json": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+    "generation_config.json": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "model-00001-of-00003.safetensors": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+    "model-00002-of-00003.safetensors": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+    "model-00003-of-00003.safetensors": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1",
+    "model.safetensors.index.json": "6dc0981b8829fead746441f68f38f24c5ca4a3a66351f652c26c6df0efc43ab2",
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "package_versions": {
+    "python": "3.10.20",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.2",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "math-verify": "0.9.0"
+  },
+  "checks": [
+    {
+      "problem_id": "omni/13bd1b66302cc02ba173",
+      "actual_prefix_tokens": 128,
+      "rating": null,
+      "rating_text": "Confidence: 80\n\nThe reasoning provided is incomplete and does not yet support a final solution to the problem. The question requires computing the ratio $ \\frac{HQ}{HR} $, and the current reasoning only describes the setup and introduces points P and Q with certain perpendicularity conditions. No actual computation or",
+      "rating_input_tokens": 305,
+      "rating_generated_tokens": 64,
+      "auxiliary_wall_ms": 3630.024249665439,
+      "all_parent_kv_unchanged": true,
+      "same16_token_continuation": true
+    },
+    {
+      "problem_id": "omni/6e95edb242326b1f98b0",
+      "actual_prefix_tokens": 512,
+      "rating": 100.0,
+      "rating_text": "Confidence: 100",
+      "rating_input_tokens": 586,
+      "rating_generated_tokens": 8,
+      "auxiliary_wall_ms": 532.9397320747375,
+      "all_parent_kv_unchanged": true,
+      "same16_token_continuation": true
+    },
+    {
+      "problem_id": "omni/54df3d59ca31803f13eb",
+      "actual_prefix_tokens": 2048,
+      "rating": 80.0,
+      "rating_text": "Confidence: 80",
+      "rating_input_tokens": 2215,
+      "rating_generated_tokens": 7,
+      "auxiliary_wall_ms": 771.4470978826284,
+      "all_parent_kv_unchanged": true,
+      "same16_token_continuation": true
+    }
+  ],
+  "source_sha256": {
+    "dtsr_adapter.py": "fd1b1873c852d55fbeab65bcda8f683e57033ffbe217c9b666f395ce0f4281cb",
+    "scripts/validate_dtsr_gpu.py": "a2202ea838c3b72025d85ee0e15fb6fd283034c066285cf80fc9cf925d244aed",
+    "reason_transition/core.py": "116f291c31b9fb1ccb1951318ee96c4dcaadeac978d7e1de609ccecd8752944b",
+    "reason_transition/text_decoder.py": "7644faf3fea9d61ac5c072cde82d00038e2477953e1671b3be1b6a9586324237"
+  },
+  "scope": "Three finite rating/cache/continuation controls only. No task accuracy, calibration, timing benefit or author reproduction proven."
+}

@@ -4,11 +4,17 @@
 
 用户新增要求：每轮读并更新 `RESEARCH_DECISION_LOG_ZH.md`，记录独立判断、决策依据、遇到的问题、实际尝试与结果；效果不好写出未证实猜想、支持/反对证据及可证伪的下一检查。最终统一汇总，不把猜想写成已确认原因。
 
-最新进展：39状态/351分支/1170读出已完整并全量审计。短等待暂未显示准确率正收益，FULL8k有+13.89pp操作性平均收益但72/117分支触顶；先看 `NOISE_PILOT_REVIEW_20261014_ZH.md` 及D08–D09。合法阶乘答案的候选schema误拒绝已修复，原分数不变；正式GPU验收必须用修复后的candidate_schema。native两worker已启动并实时校验10个模型文件，不重启；等58个预期请求完整后再冻结正式参照。
+最新进展：完整58个native已审查/重评分，五组fresh GPU有限接口均通过，正式16k boxed协议已冻结，SHA `423f8b632d628443d9a4517bb8bb280714940776e1a4ddf2fbe166593ce323f2`。DTSR/REFRAIN/ASAG独立协议也已冻结。当前进入530题development bank，两原worker PID1874879/1874880确认存活，最近36/530落盘；不是530题完成或算法收益。主监督器PID1780322继续执行后续selection/train/M1。每次醒来重新查实际PID，不重启活着的worker。
+
+native8k/16k为13/18正确，matched boxed为17/22（每组29），两组各4个native损失/0收益，精确paired p=.125。native增加预算的5个改善中4个在boxed8k已正确；2例已闭合thinking却截断final，延长同一轨迹后完成。正式参考为有界boxed FULL16384，仍有11/29触顶，不称自然无限FULL。详见D16–D17与 `NATIVE_PILOT_REVIEW_20261014_ZH.md`。
 
 远端目录：`/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013`。使用被gitignore的 `.tools/remote.py` 的 `connect()`；凭据不展示或在命令行传递。两张3090独立执行。旧研究目录、1648条输出、旧发布ZIP不覆盖。
 
 ## 当前实际任务
+
+当前只核查development/selection的既有实际进程、错误、newline-complete记录和协议身份；bank时间标proxy。**正式生成已开始，不再上传或改变formal/baseline绑定源码、数据、模型/协议文件、科学review及其证据。** 新的只读分析脚本和日志可独立增加。已完成的native/有限GPU验收不用重跑；下方保留当时放行步骤作审计历史。
+
+只读完成记录审计：`CUDA_VISIBLE_DEVICES= .venv/bin/python scripts/audit_running_bank.py --split development --output results/<新的snapshot文件>.json`。它核对实际prompt+trace的checkpoint hash、ID/shard/seed、labels-after-generation及proxy标识，排除尚未写完的尾行；不统计部分正确率或声称全银行完成。原snapshot不覆盖。
 
 旧 `post_pilot_queue.py` 负责交叉噪声采集。预期39状态（分片19/20），每状态3个STOP读出，DEFER1/DEFER4/FULL各3推导种子×3读出种子；缺失、重复、无资格、未完成段落和触顶保留。
 
@@ -16,7 +22,7 @@
 
 每小时本聊天heartbeat已启用，automation ID18，其目标是继续实施与审查完整研究，不只是监视。无变化时安静，仅重大结论、失败、用户需处理或完整交付时通知。不在每次唤醒创建新的自动任务，不给其他聊天发消息。
 
-## 下一次唤醒实际执行
+## 已完成的pilot放行步骤（审计历史，不重复执行）
 
 1. 核查远端主机/GPU、两个队列的进程/状态/错误、完整记录数。CPU分析可并行；GPU验收/生成只能在当前测量结束后执行。
 2. 同步最新结果/日志/证据。`.tools/sync_radar.py` 会取远端证据；本地新增派生报告先部署或另存，避免被较旧同名远端文件覆盖。正式冻结运行后不要上传改变源码/数据。

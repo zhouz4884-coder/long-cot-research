@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "model_path": "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B",
+  "checks": [
+    {
+      "problem_id": "omni/02545ce568924ace2f79",
+      "prefix_tokens": 128,
+      "requested_max_tokens": 128,
+      "same_ids_as_frozen_reader": true,
+      "same_text_as_frozen_reader": true,
+      "all_parent_kv_unchanged": true,
+      "identity_hash_present": true,
+      "projection_dimensions": [
+        64,
+        64
+      ],
+      "entropy_error": 0.0,
+      "prefix_source": "saved_pilot",
+      "peak_allocated_bytes": 8207807488,
+      "schema": {
+        "valid": true,
+        "key": "Integer(120)",
+        "reason": null,
+        "schema_ms": 328.47783667966723
+      }
+    },
+    {
+      "problem_id": "omni/13d1e8d14ff7cfc12d52",
+      "prefix_tokens": 8192,
+      "requested_max_tokens": 8192,
+      "same_ids_as_frozen_reader": true,
+      "same_text_as_frozen_reader": true,
+      "all_parent_kv_unchanged": true,
+      "identity_hash_present": true,
+      "projection_dimensions": [
+        64,
+        64
+      ],
+      "entropy_error": 0.0,
+      "prefix_source": "saved_pilot",
+      "peak_allocated_bytes": 11931559936,
+      "schema": {
+        "valid": true,
+        "key": "Integer(1224)",
+        "reason": null,
+        "schema_ms": 1.9922140054404736
+      }
+    },
+    {
+      "problem_id": "omni/3cc69583a8f05243f94d",
+      "prefix_tokens": 16384,
+      "requested_max_tokens": 16384,
+      "same_ids_as_frozen_reader": true,
+      "same_text_as_frozen_reader": true,
+      "all_parent_kv_unchanged": true,
+      "identity_hash_present": true,
+      "projection_dimensions": [
+        64,
+        64
+      ],
+      "entropy_error": 0.0,
+      "prefix_source": "saved_pilot",
+      "peak_allocated_bytes": 15709297664,
+      "schema": {
+        "valid": true,
+        "key": "Integer(0)",
+        "reason": null,
+        "schema_ms": 2.453210297971964
+      }
+    }
+  ],
+  "scope": "Finite readout/copy/equality invariants, not proof of answer correctness or performance.",
+  "prefix_reconstruction_scope": "Saved pilot mode selects by length only and restores a real cache via full prefill; it is not the historical incremental KV state. Generated mode records actual termination length.",
+  "package_versions": {
+    "python": "3.10.20",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.2",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "math-verify": "0.9.0"
+  },
+  "source_sha256": {
+    "radar_engine.py": "95f478f9c2e1150941574e2947b9fb47f9864f48020ccd6ef7937ca617c9293b",
+    "candidate_schema.py": "f16362da678233a51cdf0d748a37d823728e161e292a4ac54f8eb6e20ea93bee",
+    "probe_engine.py": "ce72692a1044fe0c629ecee4bd7d2c19139bebc01d29982f638ec6aba69718fb",
+    "reason_transition/core.py": "116f291c31b9fb1ccb1951318ee96c4dcaadeac978d7e1de609ccecd8752944b",
+    "reason_transition/text_decoder.py": "7644faf3fea9d61ac5c072cde82d00038e2477953e1671b3be1b6a9586324237",
+    "stem_quality.py": "9b7b6bb589ff307940e9132aade21cda41bc9af68ec064cf9e6fad3b35a5e6c8",
+    "scripts/validate_candidate_protocol.py": "71ec722571cf2a7e38cc2b4c00f50942d659b7d47908f9d9966a2ad1b3314078"
+  }
+}

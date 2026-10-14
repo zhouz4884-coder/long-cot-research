@@ -1,0 +1,34 @@
+{
+  "method_scope": "ASAG_controlled_four_action_HF",
+  "confidence_threshold": 0.95,
+  "entropy_change_threshold": -0.1,
+  "maximum_jumps": 1,
+  "formal_protocol_sha256": "423f8b632d628443d9a4517bb8bb280714940776e1a4ddf2fbe166593ce323f2",
+  "data_freeze_sha256": "1e4715e77dcd04bba72ded3250aae8808664ba452a61cc031c3e452d26adc329",
+  "source_sha256": {
+    "asag_attention.py": "64497ff62aa1289791783cefff362d3b93ee4b3e59e4f137fb26b54eb68ba9fb",
+    "asag_policy.py": "8660cb6dc62b9c6688003f64418cebb0b49e1033378921834bf4c19e91d01fda",
+    "asag_adapter.py": "5fc642a9ee25227fb51e3b5a83f37ddc9964a33ca3947dc51fe96e8a57f297a2",
+    "scripts/evaluate_asag_online.py": "dd46831ccde073a576316e16ff63988eb451f2fb34749f4abe04129ae7957558",
+    "reason_transition/core.py": "116f291c31b9fb1ccb1951318ee96c4dcaadeac978d7e1de609ccecd8752944b",
+    "reason_transition/text_decoder.py": "7644faf3fea9d61ac5c072cde82d00038e2477953e1671b3be1b6a9586324237",
+    "risk_policy.py": "8a614ce8bbfff6dbbd3ce0b6688a2e8c7427421b7282a1e429340a28d6277903",
+    "scripts/run_native_pilot.py": "a2f8c7fc8612d39d79cb98f07238734a4280602992f0cf01fd03a49366bbe266"
+  },
+  "admission_file": "provenance/asag_finite_gpu_admission.json",
+  "admission_sha256": "cbe66dc7fa94385f4b395de204bd293c6b8c82d8a35378fe17089aa3a717e95c",
+  "paper_reference": "https://proceedings.mlr.press/v306/li26ev.html",
+  "latency_reference": "New matched FULL per problem, predeclared ID-hash pair order, same worker and GPU",
+  "declared_differences": [
+    "Common FP16 SDPA stochastic sampler and boxed reader, not author BF16/greedy",
+    "Observed Wait included in parent prefix; temporary cloned-cache tail replay",
+    "FP32 eager-style QK probabilities; no claim of internal SDPA matrix equality",
+    "Mean full-vocabulary probe-step vector injected between ATPs",
+    "At most one jump per textual limit; appendix <= off-by-one not followed",
+    "Paraphrased jump instruction; logical thought cap includes forced jump tokens",
+    "A STOP reuses the actual paid probe candidate; all rejected probe work counted",
+    "Zero first entropy permits first confidence-only stop; undefined later ratio continues"
+  ],
+  "risk_guarantee_claimed": false,
+  "actual_asag_records_at_freeze": 0
+}

@@ -1,0 +1,26 @@
+{
+  "method_scope": "DTSR_controlled_token_level_serial_HF",
+  "threshold": 100.0,
+  "minimum_interval": 64,
+  "rating_max_tokens": 64,
+  "formal_protocol_sha256": "423f8b632d628443d9a4517bb8bb280714940776e1a4ddf2fbe166593ce323f2",
+  "data_freeze_sha256": "1e4715e77dcd04bba72ded3250aae8808664ba452a61cc031c3e452d26adc329",
+  "source_sha256": {
+    "dtsr_adapter.py": "fd1b1873c852d55fbeab65bcda8f683e57033ffbe217c9b666f395ce0f4281cb",
+    "scripts/evaluate_dtsr_online.py": "2c4ce2922f4d5db53171f6433bcb77dc5c746a55f7ec4501302f65a2670b2b4f",
+    "reason_transition/core.py": "116f291c31b9fb1ccb1951318ee96c4dcaadeac978d7e1de609ccecd8752944b",
+    "reason_transition/text_decoder.py": "7644faf3fea9d61ac5c072cde82d00038e2477953e1671b3be1b6a9586324237",
+    "risk_policy.py": "8a614ce8bbfff6dbbd3ce0b6688a2e8c7427421b7282a1e429340a28d6277903"
+  },
+  "admission_file": "provenance/dtsr_finite_admission.json",
+  "admission_sha256": "5a4995e4eb06b700bc253754181c9c7f745b769b91f5879b1a488b51d3163aa3",
+  "paper_reference": "https://aclanthology.org/2026.acl-long.1080/",
+  "declared_differences": [
+    "Qwen3-4B/common FP16 SDPA bounded solver, not paper8/14/32B vLLM",
+    "Paraphrased third-person rating prompt with thinking disabled",
+    "64-token bounded auxiliary rating; malformed responses continue",
+    "Common boxed final readout and fixed per-problem sampling seeds"
+  ],
+  "risk_guarantee_claimed": false,
+  "actual_dtsr_records_at_freeze": 0
+}

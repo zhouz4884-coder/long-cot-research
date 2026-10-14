@@ -1,0 +1,54 @@
+{
+  "seed": 20261013,
+  "max_think_tokens": 16384,
+  "max_answer_tokens": 192,
+  "gpu_shards": 2,
+  "gpu_assignment": "problem_id_sha256_independent_of_split_membership",
+  "reference_protocol": "Bounded FULL with shared boxed reader; native uninterrupted protocol reported separately.",
+  "dtype": "float16",
+  "attention": "sdpa",
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "top_k": 20,
+  "extra_readout_offsets": [
+    512,
+    2048
+  ],
+  "capture_candidate_hidden": true,
+  "source_sha256": {
+    "protocol_guard.py": "39a5d7c1cf4ea95174e7fe0403783373ca39a04641d83f13925da421f42278c1",
+    "reason_transition/core.py": "116f291c31b9fb1ccb1951318ee96c4dcaadeac978d7e1de609ccecd8752944b",
+    "reason_transition/text_decoder.py": "7644faf3fea9d61ac5c072cde82d00038e2477953e1671b3be1b6a9586324237",
+    "reason_transition/predictor.py": "3916a75aa24c0e4fc310d1354ac19674f45796839be79a009ab368dfd3bb6090",
+    "radar_engine.py": "95f478f9c2e1150941574e2947b9fb47f9864f48020ccd6ef7937ca617c9293b",
+    "candidate_schema.py": "f16362da678233a51cdf0d748a37d823728e161e292a4ac54f8eb6e20ea93bee",
+    "stem_quality.py": "9b7b6bb589ff307940e9132aade21cda41bc9af68ec064cf9e6fad3b35a5e6c8",
+    "probe_engine.py": "ce72692a1044fe0c629ecee4bd7d2c19139bebc01d29982f638ec6aba69718fb",
+    "model_adapter.py": "8cc78944cc9d316679a9b5b9baa1c785041b25a5060696506a28967364c7d011",
+    "joint_predictor.py": "d79d2c4a35e6eed154a77a6ff54101c1497f2f3722f1e3f4c3ee9ee6774de686",
+    "risk_policy.py": "8a614ce8bbfff6dbbd3ce0b6688a2e8c7427421b7282a1e429340a28d6277903",
+    "design_risk.py": "2443b04193c130ab0022cc7abecb7b278d63276580d98b7ea5a662a2af831917",
+    "scripts/collect_policy_bank.py": "1f6ae97382a6c69e8f6e34f7f0dcbe334ec9946a1a7e97aa33374895280694e1",
+    "scripts/evaluate_frozen_online.py": "38dca2bf21000d6615e9196368c3a1499aac5a64e7c5bff1ea023fbb78f4783b",
+    "scripts/train_risk_heads.py": "4d80c6aceba67e5b2718cc4f71e58645085bb52f2369256104f08b16b0e03d07",
+    "scripts/select_calibrate_policies.py": "ab80c23bddf79ba2d2e27753802f3806814ea1e4d2b6767d8eae41d421968507"
+  },
+  "package_versions": {
+    "python": "3.10.20",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.2",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "math-verify": "0.9.0"
+  },
+  "data_freeze_sha256": "1e4715e77dcd04bba72ded3250aae8808664ba452a61cc031c3e452d26adc329",
+  "admitted_model_paths": [
+    "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B"
+  ],
+  "candidate_admission_files": {
+    "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B": "provenance/candidate_formal_admission.json"
+  },
+  "review_source_sha256": "bd21a4ce5b8d218b366f002fb91fca2ad2d6b2276113dbe22a58bee0269edf52",
+  "quality_claim_scope": "No new policy efficacy or risk certification at formal freeze. Test1062 remains ungenerated."
+}

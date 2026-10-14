@@ -1,7 +1,27 @@
 """Gold-free strict scalar eligibility and conservative canonical grouping."""
+import re
 import time
 from reason_transition.core import last_box, normalize_math_surface
 from stem_quality import numeric_gold_issues
+
+
+def candidate_surface_issues(surface):
+    """Candidate-only postfix factorial support; frozen data eligibility stays.
+
+    The earlier whitelist rejected the observed valid1/7! answer. Permit only
+    a single postfix factorial in numeric syntax, then require Math-Verify to
+    produce a finite constant. Prose, relations and partial families still fail.
+    """
+    runs=list(re.finditer(r'(?<!\\)!+',surface))
+    for match in runs:
+        left=surface[:match.start()].rstrip();right=surface[match.end():].lstrip()
+        if len(match.group())!=1 or not left or left[-1] not in '0123456789)}]':
+            return ['candidate_invalid_factorial_syntax']
+        if right and right[0] not in '+-*/^)}]':
+            if not re.match(r'\\(?:cdot|times|div|right)(?![A-Za-z])',right):
+                return ['candidate_invalid_factorial_syntax']
+    sanitized=re.sub(r'(?<!\\)!','',surface)
+    return numeric_gold_issues(sanitized)
 
 
 def scalar_schema(text):
@@ -15,7 +35,7 @@ def scalar_schema(text):
         surface=normalize_math_surface(value)
         # A numeric parse can be only a fragment of a prose/family answer.
         # The same syntax restriction is applied here to candidate text alone.
-        issues=numeric_gold_issues(surface)
+        issues=candidate_surface_issues(surface)
         if len(surface)>256 or issues:
             return {'valid':False,'key':None,'reason':'candidate_not_pure_numeric_surface',
                     'schema_ms':1000*(time.perf_counter()-start)}

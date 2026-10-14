@@ -74,3 +74,5 @@ DEER、Conformal Thinking 和 SEVRA 分别冻结为 commit `c9dd19fbffa27f841cfe
 新增用户要求的 `RESEARCH_DECISION_LOG_ZH.md`，记录判断依据、实际尝试/效果、问题及未证实猜想，后续每轮与最终汇总更新。五篇正式OA主PDF身份与113页可读性核验通过；REFRAIN作者commit当前只有README/许可证。
 
 Conformal preliminary的N/K误用和upper fallback损失差异已在实际接口复现；新增双阈值独立适配及逐题N×K敏感性接口，不继承作者风险保证。M1现在12方法×265题=3180请求，仍是待实际执行的计划。正式GPU固定按ID分配，计时包含tokenization，未改当前采集分片。native启动新增实时模型身份核验，输出尚未产生时部署。详见 `WORKLOG_20261014_BASELINES_AND_DECISIONS_ZH.md`。
+
+交叉种子现在实际完成：22题39状态、351分支1170读出，全部前缀/候选/续写控制与冻结重评分通过。DEFER1/4平均变化−1.01/−1.26pp，FULL8k+13.89pp；仅pilot操作性证据，117个FULL有72触顶。发现并修复14个正确阶乘候选误拒绝，评分不变，不称14个算法成功。两卡native进程1804357/1804358确认存活、各10个模型文件实时hash通过；58请求尚未完整。决策、负结果猜想与验证计划记录到D08–D09。

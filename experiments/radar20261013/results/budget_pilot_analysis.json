@@ -1,0 +1,404 @@
+{
+  "scope": "Pilot diagnostic; not blind test, final policy performance or independent certification.",
+  "eligible_problem_ids": [
+    "omni/02545ce568924ace2f79",
+    "omni/0e8074dc9a2a88a72181",
+    "omni/13bd1b66302cc02ba173",
+    "omni/13d1e8d14ff7cfc12d52",
+    "omni/1e7920ec0213eb1c2f1d",
+    "omni/29b4be307c14f53458b3",
+    "omni/29b4e47a5dcd6c19d46c",
+    "omni/327f48113ec97dd8e59e",
+    "omni/39287ab5e69ab3d92eb9",
+    "omni/3cc69583a8f05243f94d",
+    "omni/427b1e11e11dc0a36723",
+    "omni/45fa5942646087b55386",
+    "omni/4610275d66c2e87ba4d1",
+    "omni/4c97a94af6db184a91ba",
+    "omni/54df3d59ca31803f13eb",
+    "omni/60fd448698109c83360a",
+    "omni/6e95edb242326b1f98b0",
+    "omni/724e18c75b02d421bfe7",
+    "omni/7446d8ffecb48de811d8",
+    "omni/834d97433fbb79850b48",
+    "omni/96ecd31e0e5ceb677542",
+    "omni/b07fcb7ccd3df731affe",
+    "omni/b49a4d3205c613342a0c",
+    "omni/b8197137d3c433518e43",
+    "omni/b8561fe9b6549c3bd703",
+    "omni/bffc3b9ea9a7f895ce10",
+    "omni/c15d20c19ac863deb0bd",
+    "omni/d0adc4d143b1e663d23c",
+    "omni/d14e58471b68ad9ff11e"
+  ],
+  "statistics": {
+    "8192": {
+      "n": 29,
+      "correct": 17,
+      "accuracy": 0.5862068965517241,
+      "accuracy_delta_vs8192": 0.0,
+      "problem_bootstrap_95ci": [
+        0.0,
+        0.0
+      ],
+      "mean_tokens": 6083.482758620689,
+      "mean_wall_s": 342.0109426457403,
+      "censored": 14,
+      "parse_non_success": 0,
+      "harmful_vs8192": 0,
+      "beneficial_vs8192": 0,
+      "conditional_exact_mcnemar_two_sided_p": 1.0,
+      "wall_s_quantiles": {
+        "p50": 435.38244430627674,
+        "p95": 502.85285298628725,
+        "p99": 520.783460882809
+      },
+      "8192_timing_has_pilot_feature_capture": true
+    },
+    "1024": {
+      "n": 29,
+      "correct": 10,
+      "accuracy": 0.3448275862068966,
+      "accuracy_delta_vs8192": -0.2413793103448276,
+      "problem_bootstrap_95ci": [
+        -0.4482758620689655,
+        -0.034482758620689655
+      ],
+      "mean_tokens": 1019.448275862069,
+      "mean_wall_s": 54.217379456096936,
+      "censored": 27,
+      "parse_non_success": 0,
+      "harmful_vs8192": 9,
+      "beneficial_vs8192": 2,
+      "conditional_exact_mcnemar_two_sided_p": 0.0654296875,
+      "wall_s_quantiles": {
+        "p50": 54.52859295299277,
+        "p95": 55.76222826382145,
+        "p99": 59.72626771954819
+      },
+      "8192_timing_has_pilot_feature_capture": false
+    },
+    "2048": {
+      "n": 29,
+      "correct": 11,
+      "accuracy": 0.3793103448275862,
+      "accuracy_delta_vs8192": -0.20689655172413793,
+      "problem_bootstrap_95ci": [
+        -0.41379310344827586,
+        0.0
+      ],
+      "mean_tokens": 1921.3103448275863,
+      "mean_wall_s": 101.88446902722956,
+      "censored": 24,
+      "parse_non_success": 0,
+      "harmful_vs8192": 8,
+      "beneficial_vs8192": 2,
+      "conditional_exact_mcnemar_two_sided_p": 0.109375,
+      "wall_s_quantiles": {
+        "p50": 107.37708482192829,
+        "p95": 110.11108845490962,
+        "p99": 111.1940913715586
+      },
+      "8192_timing_has_pilot_feature_capture": false
+    },
+    "4096": {
+      "n": 29,
+      "correct": 13,
+      "accuracy": 0.4482758620689655,
+      "accuracy_delta_vs8192": -0.13793103448275862,
+      "problem_bootstrap_95ci": [
+        -0.27586206896551724,
+        -0.034482758620689655
+      ],
+      "mean_tokens": 3562.448275862069,
+      "mean_wall_s": 189.6355096678378,
+      "censored": 22,
+      "parse_non_success": 0,
+      "harmful_vs8192": 4,
+      "beneficial_vs8192": 0,
+      "conditional_exact_mcnemar_two_sided_p": 0.125,
+      "wall_s_quantiles": {
+        "p50": 214.43321497924626,
+        "p95": 227.51452760826797,
+        "p99": 227.66096440330148
+      },
+      "8192_timing_has_pilot_feature_capture": false
+    },
+    "16384": {
+      "n": 29,
+      "correct": 22,
+      "accuracy": 0.7586206896551724,
+      "accuracy_delta_vs8192": 0.1724137931034483,
+      "problem_bootstrap_95ci": [
+        0.034482758620689655,
+        0.3103448275862069
+      ],
+      "mean_tokens": 9625.896551724138,
+      "mean_wall_s": 513.4833406944566,
+      "censored": 11,
+      "parse_non_success": 0,
+      "harmful_vs8192": 0,
+      "beneficial_vs8192": 5,
+      "conditional_exact_mcnemar_two_sided_p": 0.0625,
+      "wall_s_quantiles": {
+        "p50": 434.78439665492624,
+        "p95": 892.3616859022527,
+        "p99": 905.6633199664577
+      },
+      "8192_timing_has_pilot_feature_capture": false
+    }
+  },
+  "thinking_prefix_control_failures": [],
+  "timing_warning": "8192 uses the previously measured feature-capture pilot; other budgets are actual independent uninstrumented requests. Formal comparison must use matched runtime settings.",
+  "reference_selection_frozen": false,
+  "small_sample_inference_warning": "Only29 matched pilot questions. Percentile bootstrap can exclude0 when all observed discordances have one sign. The conditional exact paired sign/McNemar test is also reported; neither is independent policy certification or a generalization guarantee for this selected pilot.",
+  "raw_source_sha256": {
+    "results/budget_pilot_0.jsonl": "dff99864afe822ba24fd0beee8578878ee353f79a0de66131a1a085bdf0490c9",
+    "results/budget_pilot_1.jsonl": "7aaa3b214e8ea566d9a1c5aaaa080be25cfdd5574ddc1dc759b3616457430c4f",
+    "results/pilot_full_0.jsonl": "d3640f970b8daab5f36dfd3b735fd5c3dfa1b03cf928a89d43710e9ab6f09062",
+    "results/pilot_full_1.jsonl": "6429f93ae3cbe561f108e0c3253a78e2417f77d4528e3d18f0cdb0b5bf24cdd9"
+  },
+  "integrity_controls_passed": true,
+  "reversal_cases_vs8192": [
+    {
+      "problem_id": "omni/02545ce568924ace2f79",
+      "budget": 1024,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/0e8074dc9a2a88a72181",
+      "budget": 1024,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/29b4e47a5dcd6c19d46c",
+      "budget": 1024,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": true,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/327f48113ec97dd8e59e",
+      "budget": 1024,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/39287ab5e69ab3d92eb9",
+      "budget": 1024,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/54df3d59ca31803f13eb",
+      "budget": 1024,
+      "reference_correct": 0,
+      "budget_correct": 1,
+      "reference_censored": true,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/724e18c75b02d421bfe7",
+      "budget": 1024,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": true,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/7446d8ffecb48de811d8",
+      "budget": 1024,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/b49a4d3205c613342a0c",
+      "budget": 1024,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/d0adc4d143b1e663d23c",
+      "budget": 1024,
+      "reference_correct": 0,
+      "budget_correct": 1,
+      "reference_censored": true,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/d14e58471b68ad9ff11e",
+      "budget": 1024,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/02545ce568924ace2f79",
+      "budget": 2048,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/0e8074dc9a2a88a72181",
+      "budget": 2048,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/29b4e47a5dcd6c19d46c",
+      "budget": 2048,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": true,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/327f48113ec97dd8e59e",
+      "budget": 2048,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/39287ab5e69ab3d92eb9",
+      "budget": 2048,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/724e18c75b02d421bfe7",
+      "budget": 2048,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": true,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/7446d8ffecb48de811d8",
+      "budget": 2048,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/b07fcb7ccd3df731affe",
+      "budget": 2048,
+      "reference_correct": 0,
+      "budget_correct": 1,
+      "reference_censored": true,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/b49a4d3205c613342a0c",
+      "budget": 2048,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/d0adc4d143b1e663d23c",
+      "budget": 2048,
+      "reference_correct": 0,
+      "budget_correct": 1,
+      "reference_censored": true,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/1e7920ec0213eb1c2f1d",
+      "budget": 4096,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/29b4e47a5dcd6c19d46c",
+      "budget": 4096,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": true,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/39287ab5e69ab3d92eb9",
+      "budget": 4096,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/7446d8ffecb48de811d8",
+      "budget": 4096,
+      "reference_correct": 1,
+      "budget_correct": 0,
+      "reference_censored": false,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/13d1e8d14ff7cfc12d52",
+      "budget": 16384,
+      "reference_correct": 0,
+      "budget_correct": 1,
+      "reference_censored": true,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/54df3d59ca31803f13eb",
+      "budget": 16384,
+      "reference_correct": 0,
+      "budget_correct": 1,
+      "reference_censored": true,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/b8197137d3c433518e43",
+      "budget": 16384,
+      "reference_correct": 0,
+      "budget_correct": 1,
+      "reference_censored": true,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/b8561fe9b6549c3bd703",
+      "budget": 16384,
+      "reference_correct": 0,
+      "budget_correct": 1,
+      "reference_censored": true,
+      "budget_censored": true
+    },
+    {
+      "problem_id": "omni/d0adc4d143b1e663d23c",
+      "budget": 16384,
+      "reference_correct": 0,
+      "budget_correct": 1,
+      "reference_censored": true,
+      "budget_censored": false
+    }
+  ]
+}

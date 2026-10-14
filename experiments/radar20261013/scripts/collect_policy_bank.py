@@ -26,10 +26,14 @@ def main():
     p.add_argument('--shard',required=True,type=int)
     p.add_argument('--shards',default=2,type=int)
     args=p.parse_args()
+    assert 0<=args.shard<args.shards
     assert (ROOT/'provenance/formal_protocol.json').exists(), 'Formal reference budget not frozen yet'
     formal,formal_hash=validate_formal(ROOT,args.model)
+    family_hash=None
     if args.split=='calibration':
-        assert (ROOT/'provenance/calibration_candidates.json').exists(),'Freeze candidates before any calibration request'
+        family_path=ROOT/'provenance/calibration_candidates.json'
+        assert family_path.exists(),'Freeze candidates before any calibration request'
+        family_hash=hashlib.sha256(family_path.read_bytes()).hexdigest()
     data=ROOT/f'data/{args.split}.jsonl'
     freeze=json.loads((ROOT/'provenance/data_freeze.json').read_text())
     assert hashlib.sha256(data.read_bytes()).hexdigest()==freeze['splits'][args.split]['sha256']
@@ -38,10 +42,14 @@ def main():
     previous=[json.loads(s) for s in out.read_text(encoding='utf-8').splitlines()] if out.exists() else []
     expected_ids={r['problem_id'] for i,r in enumerate(rows) if i%args.shards==args.shard}
     done=validate_resume(previous,formal_hash,args.model,expected_ids)
+    if family_hash is not None:
+        assert all(r['candidate_family_sha256']==family_hash for r in previous),'Calibration rows belong to another frozen candidate family'
     e=ProbeEngine(args.model) if formal.get('capture_candidate_hidden',False) else Engine(args.model)
     for index,row in enumerate(rows):
         if index%args.shards!=args.shard or row['problem_id'] in done:continue
         assert validate_formal(ROOT,args.model)[1]==formal_hash,'Formal protocol changed during collection'
+        if family_hash is not None:
+            assert hashlib.sha256(family_path.read_bytes()).hexdigest()==family_hash,'Candidate family changed during calibration'
         seed=stable_seed(formal['seed'],row['problem_id'],0)
         answer_seeds=[seed]+[stable_seed(formal['seed'],row['problem_id'],'readout',i) for i in [1,2]]
         points=[];seen_extra=set()
@@ -79,6 +87,7 @@ def main():
                 read['grade']=grade(read['text'],row['gold']);read['correct']=read['grade']['correct']
         record={'problem_id':row['problem_id'],'split':args.split,'model_path':args.model,'seed':seed,
                 'formal_protocol_sha256':formal_hash,
+                'candidate_family_sha256':family_hash,
                 'full':{'trace':public(trace),'answer':public(final),'correct':final['correct'],
                         'instrumented_reference_ms':trace['ms']+final['ms'],
                         'reference_timing_is_uninstrumented_online_benchmark':False},

@@ -18,6 +18,7 @@ def main():
     p.add_argument('--shards',type=int,default=2);p.add_argument('--n',type=int,default=None)
     p.add_argument('--out-tag',required=True)
     args=p.parse_args()
+    assert 0<=args.shard<args.shards and (args.n is None or args.n>0)
     formal_path=ROOT/'provenance/formal_protocol.json'
     formal,formal_hash=validate_formal(ROOT,args.model)
     policy_path=Path(args.policy_file)
@@ -49,6 +50,8 @@ def main():
     assert all(r['policy_file_sha256']==policy_hash and r['formal_protocol_sha256']==formal_hash and r['model_path']==args.model for r in previous),'Do not append incompatible run versions'
     done={(r['problem_id'],r['method']) for r in previous}
     methods=list(policy['methods'])
+    expected={(q['problem_id'],m) for i,q in enumerate(rows) if i%args.shards==args.shard for m in methods}
+    assert len(done)==len(previous) and done<=expected,'Duplicate, stale, or foreign online records'
     for index,q in enumerate(rows):
         if index%args.shards!=args.shard:continue
         assert validate_formal(ROOT,args.model)[1]==formal_hash,'Formal runtime changed during requests'
@@ -149,7 +152,6 @@ def main():
             print(json.dumps({'online':index,'method':method,'id':q['problem_id'],'correct':score['correct'],
                               'compute_tokens':record['compute_generated_tokens'],'wall_s':wall_ms/1000}),flush=True)
             del trace,answer,reads
-    expected={(q['problem_id'],m) for i,q in enumerate(rows) if i%args.shards==args.shard for m in methods}
     records=[json.loads(s) for s in out.read_text(encoding='utf-8').splitlines()]
     assert {(r['problem_id'],r['method']) for r in records}==expected and len(records)==len(expected)
     (ROOT/f'results/online_{args.out_tag}_{args.shard}.complete.json').write_text(json.dumps({'n':len(records),'unix':time.time()}))

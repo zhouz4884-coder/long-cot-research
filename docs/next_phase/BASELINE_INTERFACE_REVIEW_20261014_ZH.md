@@ -1,0 +1,11 @@
+# 冻结外部源码的接口复核
+
+本轮实际读取固定快照的Conformal完整utility/signal源码、DEER README及试答/继续状态机、SEVRA验证提示/控制接口。不宣称完整精读所有论文或完成GPU方法复现。
+
+Conformal snapshot `6551e3000dcda3d76491f30cc687d64618807c5b` 的lower utility不只有原先记录的 `NameError`：函数参数叫parameters，却引用未定义thresholds并要求1D；计算出的lower_thresholds没有传给exit_time_fn；配套lower exit函数要求(M,T)二维阈值；传入correctness_loss_fn也被忽略，固定调用v2。上游代码保持原样。这意味着只改一个变量名不能完成方法修复。后续需在单独受控适配中明确参数网格、时间维度、损失对象、终端FULL哨兵和离散逐轨迹oracle，再做真实模型对照。接口检查不是作者算法失败证据。
+
+DEER snapshot `c9dd19fbffa27f841cfe47502d015b63811b4d1b` 的HF试答采用greedy最大概率，试答上限与花括号/思考停止的token集合不同于共同192-token reader；vLLM状态机在未退出时注入Wait/Alternatively。Qwen README还描述试答后生成思考结束标记的条件；该条件需对实际版本代码进一步核对。当前我们在共同reader中的采样试答最大概率几何均值不是作者整套方法，因此M1方法改名 `deer_confidence_proxy`，只作DEER启发的受控置信度对照。原版DEER/PRo仍为W10–12必须完成或明确记录无法复现范围的强基线，不能用proxy成绩取代。
+
+SEVRA snapshot `77d1951b7a93eec53579225a91ff6099cf9f7ed0` 的动作是已有attempt之后的accept/active_verify，验证提示要求对该候选执行至少两种检查并保留或修正答案。不能把它包装成同一轨迹检查点STOP方法；独立部署对照应包括初始尝试预算和验证真实时间，并优化固定初始预算。
+
+此轮没有新增外部方法GPU成绩；记录用于避免未来比较和新颖性叙述越界。

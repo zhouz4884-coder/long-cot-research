@@ -26,6 +26,9 @@ def load_bank(split,model_path):
     assert len(rows)==len(expected) and {r['problem_id'] for r in rows}==expected
     assert all(r['formal_protocol_sha256']==formal_hash for r in rows)
     assert {r['model_path'] for r in rows}=={model_path}
+    if split=='calibration':
+        family_hash=hashlib.sha256((ROOT/'provenance/calibration_candidates.json').read_bytes()).hexdigest()
+        assert all(r['candidate_family_sha256']==family_hash for r in rows),'Calibration does not match the frozen candidate family'
     return sorted(rows,key=lambda r:r['problem_id'])
 
 
@@ -56,6 +59,17 @@ def stats(rows,alpha=.05):
             'harms':h,'benefits':b,'harm_upper':float(beta.ppf(1-alpha,h+1,n-h)) if h<n else 1.,
             'replay_cost_saving_proxy':1-sum(r['cost_ms_proxy'] for r in rows)/sum(r['reference_ms_proxy'] for r in rows),
             'online_performance_proven':False}
+
+
+def candidate_spec_hash(spec):
+    return hashlib.sha256(json.dumps(spec,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+
+
+def candidate_consistency_admitted(consistency,spec,formal_hash,model_path):
+    return (consistency.get('passed') is True
+            and consistency.get('formal_protocol_sha256')==formal_hash
+            and consistency.get('model_path')==model_path
+            and candidate_spec_hash(spec) in consistency.get('verified_candidate_spec_sha256',[]))
 
 
 def main():
@@ -126,6 +140,8 @@ def main():
         rows=load_bank('calibration',metadata['model_path']);k=frozen['candidate_count'];report=[]
         strata=strata_from_frozen_data(ROOT)
         alphas=frozen['candidate_alphas'];assert len(alphas)==k and sum(alphas)<=frozen['familywise_alpha']+1e-12
+        audit=ROOT/'provenance/selection_online_equivalence.json'
+        consistency=json.loads(audit.read_text()) if audit.exists() else {}
         for index,spec in enumerate(frozen['candidates']):
             selected=[replay(r,spec,models[spec['predictor']]) for r in rows]
             summary=stats(selected,alpha=alphas[index])
@@ -133,19 +149,18 @@ def main():
             secondary=finite_test_risk_audit(strata,summary['harms'],.02,alphas[index])
             report.append({'spec':spec,'statistics':summary,
                            'is_prespecified_primary':index==frozen['primary_candidate_index'],'allocated_alpha':alphas[index],
+                           'online_action_consistency_admitted':candidate_consistency_admitted(consistency,spec,formal_hash,metadata['model_path']),
                            'iid_binomial_bound_passed_conditional_on_iid':summary['harm_upper']<=frozen['target_harm_risk'],
                            'iid_assumption_established_by_current_split_design':False,
                            'finite_test_design_audit':finite,'finite_test_2pp_design_audit':secondary,
                            'risk_bound_passed':finite['risk_bound_passed'],
                            'terminal_replays':selected})
-        audit=ROOT/'provenance/selection_online_equivalence.json'
-        consistency=json.loads(audit.read_text()) if audit.exists() else {}
         payload={'scope':'Independent calibration of the fixed candidate family under the logged action bank protocol.',
                  'candidate_family_count':k,'familywise_alpha':frozen['familywise_alpha'],
                  'candidate_alphas':alphas,'primary_candidate_index':frozen['primary_candidate_index'],
                  'risk_target':frozen['target_harm_risk'],'candidates':report,
                  'online_action_consistency_admitted':consistency.get('passed') is True,
-                 'finite_test_pool_certification_admitted_under_stated_assumptions':consistency.get('passed') is True and any(r['risk_bound_passed'] for r in report),
+                 'finite_test_pool_certification_admitted_under_stated_assumptions':any(r['online_action_consistency_admitted'] and r['risk_bound_passed'] for r in report),
                  'deployment_certification_admitted':False,
                  'warning':'The frozen split is stratified without replacement. Binomial bounds are conditional IID sensitivity, not an unconditional guarantee. Design-aware bounds concern the fixed finite test pool under fixed potential outcomes and the logged action protocol; they do not certify another backend, seed protocol or deployment distribution.'}
         (out/'independent_calibration.json').write_text(json.dumps(payload,indent=2)+'\n')

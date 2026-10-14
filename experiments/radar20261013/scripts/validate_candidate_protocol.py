@@ -7,24 +7,27 @@ from reason_transition.core import Engine,stable_seed
 from radar_engine import candidate
 from candidate_schema import scalar_schema
 from probe_engine import ProbeEngine
+from protocol_guard import package_snapshot
 
 assert (ROOT/'results/pilot.complete.json').exists(), 'Do not contend with measured pilot workers'
 parser=argparse.ArgumentParser()
 parser.add_argument('--model',default='/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B')
 parser.add_argument('--output',default='candidate_protocol_admission.json')
+parser.add_argument('--lengths',nargs=3,type=int,default=[128,512,2048])
 args=parser.parse_args();model=args.model
 assert Path(args.output).name==args.output,'Use a plain admission filename'
+assert all(n>0 for n in args.lengths)
 e=ProbeEngine(model)
 questions=[json.loads(s) for s in (ROOT/'data/pilot.jsonl').read_text(encoding='utf-8').splitlines()][:3]
 checks=[]
-for q,length in zip(questions,[128,512,2048]):
+for q,length in zip(questions,args.lengths):
     prompt=e.prompt(q['question']);seed=stable_seed('candidate_admission',q['problem_id'])
     trace=e.decode(prompt,length,seed,until='eos')
     prefix=prompt+trace['ids'];parent=copy.deepcopy(trace['cache'])
     read=candidate(e,prefix,trace['cache'],trace['logits'],seed)
     original=e.answer(prefix,seed,initial=(copy.deepcopy(parent),trace['logits']))
     same_kv=all(e.torch.equal(a.keys,b.keys) and e.torch.equal(a.values,b.values) for a,b in zip(parent.layers,trace['cache'].layers))
-    check={'problem_id':q['problem_id'],'prefix_tokens':length,'same_ids_as_frozen_reader':read['ids']==original['ids'],
+    check={'problem_id':q['problem_id'],'prefix_tokens':len(trace['ids']),'requested_max_tokens':length,'same_ids_as_frozen_reader':read['ids']==original['ids'],
            'same_text_as_frozen_reader':read['text']==original['text'],'all_parent_kv_unchanged':same_kv,
            'identity_hash_present':bool(read['candidate_identity_sha256']),
            'projection_dimensions':[len(read['cue_projection']),len(read['answer_projection'])],
@@ -35,6 +38,7 @@ for q,length in zip(questions,[128,512,2048]):
     checks.append(check);print(json.dumps(check),flush=True)
     del trace,parent,read,original
 payload={'passed':True,'model_path':model,'checks':checks,'scope':'Finite readout/copy/equality invariants, not proof of answer correctness or performance.',
-         'source_sha256':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in ['radar_engine.py','candidate_schema.py','probe_engine.py','reason_transition/core.py']}}
+         'package_versions':package_snapshot(),
+         'source_sha256':{p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in ['radar_engine.py','candidate_schema.py','probe_engine.py','reason_transition/core.py','reason_transition/text_decoder.py','stem_quality.py','scripts/validate_candidate_protocol.py']}}
 (ROOT/'provenance'/args.output).write_text(json.dumps(payload,indent=2)+'\n')
 print('CANDIDATE_PROTOCOL_ADMITTED',flush=True)

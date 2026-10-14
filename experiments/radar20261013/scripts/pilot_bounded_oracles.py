@@ -18,7 +18,21 @@ times=[t for t in range(720) if digit_sum(t-19)==digit_sum(t)-2]
 future_sums=sorted({digit_sum(t+19) for t in times})
 assert times==[69] and future_sums==[11]
 
-vertices=[(-6,Fraction(45,4)),(0,0),(9,0),(15,8),(9,Fraction(77,4)),(0,Fraction(77,4))]
+vertices=[(-Fraction(27,5),Fraction(36,5)),(0,0),(10,0),
+          (Fraction(77,5),Fraction(231,20)),(10,Fraction(75,4)),(0,Fraction(75,4))]
+triangle=vertices[:3]
+squared_sides=[(triangle[i][0]-triangle[j][0])**2+(triangle[i][1]-triangle[j][1])**2
+               for i,j in [(0,1),(1,2),(2,0)]]
+assert squared_sides==[81,100,289], 'Oracle coordinates must satisfy AB9/BC10/CA17'
+center=(5,Fraction(75,8));radius_squared=Fraction(85,8)**2
+assert all((x-center[0])**2+(y-center[1])**2==radius_squared for x,y in vertices)
+assert all(vertices[i][0]+vertices[i+3][0]==2*center[0] and
+           vertices[i][1]+vertices[i+3][1]==2*center[1] for i in range(3))
+turns=[]
+for i in range(6):
+    a,b,c=vertices[i],vertices[(i+1)%6],vertices[(i+2)%6]
+    turns.append((b[0]-a[0])*(c[1]-b[1])-(b[1]-a[1])*(c[0]-b[0]))
+assert all(t>0 for t in turns),'Use the actual convex hull vertex order'
 area=abs(sum(vertices[i][0]*vertices[(i+1)%6][1]-vertices[(i+1)%6][0]*vertices[i][1] for i in range(6)))/2
 assert area==Fraction(1155,4)
 
@@ -57,9 +71,15 @@ partial_credit_exact=sum(k**(26-k) for k in range(1,26))
 assert partial_credit_exact==66071772829247409
 
 report={'scope':'Exact CPU task/data oracles; not neural-model experiments or algorithm performance.',
+        'oracle_version':2,
+        'geometry_correction':'Version1 used a different triangle whose hull area happened to match. Version2 verifies the original side lengths, circumcircle, antipodes and convex hull before calculating area. Version1 code/output are preserved in provenance/oracle_archive.',
         'coin_problem':{'pilot_index':7,'enumerated_count_assignments':720,'distinct_valid_sums_under2018':coin_answer},
         'clock_problem':{'pilot_index':9,'all_720_times_enumerated':True,'satisfying_minutes':[69],'unique_future_digit_sum':11},
         'hexagon_problem':{'pilot_index':12,'exact_coordinate_hull_area':str(area),'reference_final_answer_supported':True,
+                           'original_squared_sides':[str(v) for v in squared_sides],
+                           'circumcenter':[str(v) for v in center],'circumradius_squared':str(radius_squared),
+                           'all_vertices_on_circle':True,'diametrically_opposite_pairs_verified':True,
+                           'convex_order_verified':True,
                            'reference_intermediate_cosine_line_has_arithmetic_or_label_error':True},
         'undefined_point_problem':{'pilot_index':13,'alternative_S':str((sx,sy)),'SQ_squared':121,'SR_squared':169,
                                   'alternative_perimeter':str(24+12*sqrt(2)),'given_text_does_not_uniquely_imply44':True},

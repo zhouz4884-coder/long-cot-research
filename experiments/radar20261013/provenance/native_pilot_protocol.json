@@ -1,0 +1,33 @@
+{
+  "seed": 20261013,
+  "source_split": "pilot_first_32_frozen_order_eligible_v4_no_replacement",
+  "n": 32,
+  "model_name": "Qwen3-4B",
+  "nominal_thought_budgets": [
+    8192,
+    16384
+  ],
+  "extra_total_budget_tokens": 192,
+  "prompt": "Same user prompt and chat template as shared boxed protocol",
+  "generation": "One uninterrupted native sequence until model EOS or total budget; no forced thinking close or answer cue",
+  "sampling": "FP16 SDPA, T=.6 top_p=.95 top_k=20, hash uniforms in think phase for whole native sequence",
+  "scoring": "Apply frozen v3 scorer only to text after first native thinking close. Unclosed thinking receives no final-answer credit. Censored complete answers and EOS-complete outputs reported separately.",
+  "comparison_scope": "Readout protocol sensitivity only. Total token cap equals nominal thought cap plus192; native answer allocation is not separately capped. Do not pool with forced-reader performance.",
+  "execution_dependency": "After real budget and crossed-noise jobs finish; no GPU contention with measured requests",
+  "source_sha256": {
+    "scripts/run_native_pilot.py": "eb9ff86be0965ec19a60a16b790f34fca2347e59520e7fdd636955c1a50c8d54",
+    "reason_transition/core.py": "116f291c31b9fb1ccb1951318ee96c4dcaadeac978d7e1de609ccecd8752944b",
+    "reason_transition/text_decoder.py": "7644faf3fea9d61ac5c072cde82d00038e2477953e1671b3be1b6a9586324237",
+    "stem_quality.py": "9b7b6bb589ff307940e9132aade21cda41bc9af68ec064cf9e6fad3b35a5e6c8",
+    "protocol_guard.py": "39a5d7c1cf4ea95174e7fe0403783373ca39a04641d83f13925da421f42278c1"
+  },
+  "package_versions": {
+    "python": "3.10.20",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.2",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "math-verify": "0.9.0"
+  }
+}

@@ -1,5 +1,7 @@
 {
   "scope": "Exact CPU task/data oracles; not neural-model experiments or algorithm performance.",
+  "oracle_version": 2,
+  "geometry_correction": "Version1 used a different triangle whose hull area happened to match. Version2 verifies the original side lengths, circumcircle, antipodes and convex hull before calculating area. Version1 code/output are preserved in provenance/oracle_archive.",
   "coin_problem": {
     "pilot_index": 7,
     "enumerated_count_assignments": 720,
@@ -17,6 +19,19 @@
     "pilot_index": 12,
     "exact_coordinate_hull_area": "1155/4",
     "reference_final_answer_supported": true,
+    "original_squared_sides": [
+      "81",
+      "100",
+      "289"
+    ],
+    "circumcenter": [
+      "5",
+      "75/8"
+    ],
+    "circumradius_squared": "7225/64",
+    "all_vertices_on_circle": true,
+    "diametrically_opposite_pairs_verified": true,
+    "convex_order_verified": true,
     "reference_intermediate_cosine_line_has_arithmetic_or_label_error": true
   },
   "undefined_point_problem": {

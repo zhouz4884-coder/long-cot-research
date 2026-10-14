@@ -40,6 +40,8 @@ M1包括12方法×265题=3180请求：FULL、固定1024/2048/4096/8192、预声�
 
 ## 后续必须完成
 
+DTSR已实现独立64-token触发decoder与online入口，避免错误复用128-token段落hook；当前只有4个CPU协议控制，未有GPU/模型成绩。native测量结束且GPU空闲后执行 `CUDA_VISIBLE_DEVICES=0 .venv/bin/python scripts/validate_dtsr_gpu.py --model <已冻结Qwen3-4B路径>`，三前缀rating/父KV/续写实际通过后，再用 `freeze_dtsr_protocol.py` 绑定主formal哈希及独立source集合。选择集调用 `evaluate_dtsr_online.py --split selection --protocol-file provenance/dtsr_protocol.json --out-tag dtsr_selection --shard <0或1> --model <路径>`，两卡按固定ID分片。最终测试须另有dtsr_final_test_freeze且覆盖完整ID，不能在所有策略冻结前生成。见决策D10。它不改变已计划M1的12种方法，也不替代完整强基线阶段。
+
 - W7–9：M1有实测收益才扩展DEFER1/2/4、毫秒成本、稀疏检测及消融；新动作/协议另验收冻结，不混写银行。
 - W10–12：作者可执行强基线和明确标记的独立适配；独立795题校准。候选全集/主策略/alpha在校准前冻结，采集与分析绑定家族SHA。有限分层池界按 `CALIBRATION_SAMPLING_CONTRACT_ZH.md`；IID界只作条件敏感性。不得看校准后换主策略或把1pp失败改称2pp主目标。
 - W13–15：全部策略/源码/模型/预算/数据冻结前，不生成或人工查看1062题测试。冻结时实际测试记录为0，之后覆盖完整ID。Thinking-2507和DeepSeek8B各自数值/显存/terminator/readout验收后实测；至少一个非数学任务。LCB容器接口通过不等于模型pass@1，仍需实际生成、执行与失败留档。

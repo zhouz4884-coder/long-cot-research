@@ -47,10 +47,21 @@ def main():
     native=[r for g in [0,1] for r in read(ROOT/f'results/native_pilot_{g}.jsonl')]
     assert len(native)==len(eligible)*2
     assert {(r['problem_id'],r['nominal_budget']) for r in native}=={(pid,b) for pid in eligible for b in [8192,16384]}
+    native_spec=json.loads((ROOT/'provenance/native_pilot_protocol.json').read_text())
+    native_hash=hashlib.sha256((ROOT/'provenance/native_pilot_protocol.json').read_bytes()).hexdigest()
+    manifest_path=ROOT/native_spec['model_identity_file']
+    assert hashlib.sha256(manifest_path.read_bytes()).hexdigest()==native_spec['model_identity_manifest_sha256']
+    model_files={item['name']:item['sha256'] for item in json.loads(manifest_path.read_text())['files']}
+    for row in native:
+        assert row['protocol_sha256']==native_hash and row['model_revision']==native_spec['model_revision']
+        assert row['model_identity_manifest_sha256']==native_spec['model_identity_manifest_sha256']
+        assert row['live_model_file_sha256']==model_files
     assert all(r['same_thinking_prefix_control'] for r in native)
     assert all(r['quality_labels_available_during_generation'] is False for r in native)
     analysis=json.loads((ROOT/'results/budget_pilot_analysis.json').read_text())
     assert analysis['integrity_controls_passed']
+    native_analysis=json.loads((ROOT/'results/native_pilot_analysis.json').read_text())
+    assert native_analysis['matched_thinking_prefix_controls_passed']
     sources=[ROOT/f'results/{name}_{g}.jsonl' for name in ['pilot_full','budget_pilot','noise_bank','native_pilot'] for g in [0,1]]
     result={'passed':True,'pilot_problems':len(raw),'budget_problems':len(eligible),'budget_requests':len(budget),
             'noise_states':len(states),'noise_problems':len({s['problem_id'] for s in states}),

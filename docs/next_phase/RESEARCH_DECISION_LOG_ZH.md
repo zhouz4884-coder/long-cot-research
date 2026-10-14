@@ -120,3 +120,13 @@ REFRAIN作者repo已冻结为ba5c8b402431b9b18bfa55027361355fec85b7c5，实际�
 我的决策：正式准入必须实测到选定上限附近，而不是把请求8192误称实测8192。新增长度独立的saved_pilot验收模式，从已完成同模型pilot按长度选真实token IDs，不读正确率；请求128/8192/16384时必须有对应长度且未闭合thinking的前缀。通过完整prefill恢复实际cache，测读出与reader一致性、父KV不变及peak allocation。
 
 限制/下一检查：保存前缀恢复的cache不是历史incremental KV，只验证当前恢复路径下的有限状态。生成模式继续保留实际终止长度。长前缀GPU检查尚未运行，等native结束再执行；所有准入仍须注明模型/源代码/实际长度，不能把内存公式当模型/数值验收。
+
+## D12：native自身准确率不足以定位协议问题
+
+问题：原分析只有native两预算自身统计，未与共同29题的forced-boxed参考逐题比较；容易把提示、采样耦合和总预算分配同时改变的结果解释为单一cue效应。
+
+我的决策/实际尝试：完整58请求后才分析。新增两预算native-vs-forced配对正确率差、harmful/beneficial、问题Bootstrap和精确McNemar；native16k-vs-8k另列。逐题校验与同预算forced的实际思考前缀，不只相信旧same_prefix标志；绑定protocol、live model-file哈希和revision。分别列无thinking-close、closed但无成功final、parsed wrong及native thinking超过名义上限的情形。差异案例原因初始unknown，后续人工核查，不先指定为格式/推理问题。
+
+效果/验证：新配对统计函数在已经完成的真实预算对照上复现22/29对17/29、0有害/5有益、+5/29和精确双侧p=.0625；这是统计程序验证，不是native结果。源码已部署，当前native绑定文件和原始生成未变。首次编译发现else后缺空格，已修正并重新编译。
+
+待检验猜想：若native闭合思考却未在总预算内给完整答案，可能主要是答案分配/输出协议问题；若闭合且成功解析仍错，则仅加cue未必解释改善；若两协议前缀不一致，先查数值/采样/实际终止，再解释收益。8k forced带旧feature capture，native后闭合采样仍在think随机数域，故质量/时间差不归为cue-only因果效应，也不合并不同协议成绩。

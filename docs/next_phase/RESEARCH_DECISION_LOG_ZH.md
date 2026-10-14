@@ -110,3 +110,13 @@ REFRAIN作者repo已冻结为ba5c8b402431b9b18bfa55027361355fec85b7c5，实际�
 实际尝试/效果：实现独立decoder、真实online入口、source/协议freeze入口和待运行GPU缓存验收。四个CPU方法控制通过，验证64处可触发、低/未知rating保留完整受控token轨迹、没有从解释或多个数字中抽出高分。第一个测试把Wait直接连在x字符后，实际上不是词边界；修正测试输入后通过，不降低触发条件。
 
 限制/下一检查：没有执行DTSR GPU或benchmark。先等native结束，再运行 `validate_dtsr_gpu.py` 检查三前缀rating可解析、父KV全层不变与16-token续写相同；然后冻结独立协议，在选择集实际执行并逐题配对FULL。若rating频繁100但相对FULL有害，猜想是自评过度自信或提示分布偏差；若质量不差而wall-clock更慢，检验全prefix重新prefill/辅助生成成本。任何猜想都须由实际响应与计时支持。
+
+## D11：显存可行性和长前缀验收要依据实际状态
+
+问题：native运行时nvidia-smi显示约21GiB占用，但已落盘16576-token请求的peak allocated只有9.8846GiB。把allocator保留量当作活跃张量峰值，会错误判定16k候选克隆不可行；反过来，allocated低也不能保证克隆/工作空间峰值不OOM。
+
+实际核查：读取三模型真实config。FP16 KV按2(K/V)×2字节×layers×kv_heads×head_dim计算，Qwen两模型16k单cache2.25GiB，DeepSeek8B为2GiB；不含prompt、临时buffer、reserve和碎片，不是新模型GPU成绩。当前部分native遥测只用于资源核查，不用于选质量 operating point。
+
+我的决策：正式准入必须实测到选定上限附近，而不是把请求8192误称实测8192。新增长度独立的saved_pilot验收模式，从已完成同模型pilot按长度选真实token IDs，不读正确率；请求128/8192/16384时必须有对应长度且未闭合thinking的前缀。通过完整prefill恢复实际cache，测读出与reader一致性、父KV不变及peak allocation。
+
+限制/下一检查：保存前缀恢复的cache不是历史incremental KV，只验证当前恢复路径下的有限状态。生成模式继续保留实际终止长度。长前缀GPU检查尚未运行，等native结束再执行；所有准入仍须注明模型/源代码/实际长度，不能把内存公式当模型/数值验收。

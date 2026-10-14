@@ -1,0 +1,86 @@
+{
+  "unix": 1791946759.1655946,
+  "models": [
+    {
+      "model": "Qwen3-4B",
+      "layers": 36,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "fp16_kv_bytes_per_token": 147456,
+      "one_cache_gib_at8192": 1.125,
+      "one_cache_gib_at16384": 2.25,
+      "context_limit": 40960
+    },
+    {
+      "model": "Qwen3-4B-Thinking-2507",
+      "layers": 36,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "fp16_kv_bytes_per_token": 147456,
+      "one_cache_gib_at8192": 1.125,
+      "one_cache_gib_at16384": 2.25,
+      "context_limit": 262144
+    },
+    {
+      "model": "DeepSeek-R1-Distill-Llama-8B",
+      "layers": 32,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "fp16_kv_bytes_per_token": 131072,
+      "one_cache_gib_at8192": 1.0,
+      "one_cache_gib_at16384": 2.0,
+      "context_limit": 131072
+    }
+  ],
+  "saved_native_memory_observations": [
+    {
+      "id": "omni/13bd1b66302cc02ba173",
+      "cap": 8192,
+      "tokens": 8384,
+      "peak_allocated_gib": 8.740539073944092
+    },
+    {
+      "id": "omni/13bd1b66302cc02ba173",
+      "cap": 16384,
+      "tokens": 9962,
+      "peak_allocated_gib": 8.979331493377686
+    },
+    {
+      "id": "omni/54df3d59ca31803f13eb",
+      "cap": 8192,
+      "tokens": 8384,
+      "peak_allocated_gib": 8.739146709442139
+    },
+    {
+      "id": "omni/54df3d59ca31803f13eb",
+      "cap": 16384,
+      "tokens": 16576,
+      "peak_allocated_gib": 9.879771709442139
+    },
+    {
+      "id": "omni/6e95edb242326b1f98b0",
+      "cap": 16384,
+      "tokens": 1206,
+      "peak_allocated_gib": 7.731725215911865
+    },
+    {
+      "id": "omni/6e95edb242326b1f98b0",
+      "cap": 8192,
+      "tokens": 1206,
+      "peak_allocated_gib": 7.731723308563232
+    },
+    {
+      "id": "omni/3cc69583a8f05243f94d",
+      "cap": 16384,
+      "tokens": 16576,
+      "peak_allocated_gib": 9.884644985198975
+    },
+    {
+      "id": "omni/3cc69583a8f05243f94d",
+      "cap": 8192,
+      "tokens": 8384,
+      "peak_allocated_gib": 8.748719692230225
+    }
+  ],
+  "scope": "KV arithmetic and partial saved memory telemetry only, no task-performance inference or cache-clone/multi-model GPU admission. Estimates omit prompt length, transient buffers, allocator reserve and fragmentation."
+}

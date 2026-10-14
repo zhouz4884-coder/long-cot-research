@@ -23,7 +23,7 @@
 3. 若噪声/native未完整，继续源码、原文实现、评分审查等独立工作，不用部分统计选择最终机制，不报告完整成绩。
 4. 完整后运行并实际审阅 `analyze_budget_pilot.py`、`analyze_noise_bank.py`、`analyze_native_pilot.py`、`audit_pilot_evidence.py`、`budget_repair_audit.json`。查所有不一致。噪声FULL上限8192，不能当16384参考的机制标签。
 5. 写 `provenance/formal_scientific_review.json`，包含 `pilot_interpretation`、`reference_choice_reason`、`noise_interpretation`、`native_readout_interpretation`、`proceed_to_development`、`reviewed_evidence_sha256`。SHA键至少含上述4个完整结果JSON和 `results/budget_repair_audit.json`，取实际远端文件哈希。不是从marker推断科学审查通过。
-6. GPU空闲时重跑 `validate_new_protocol.py` 核对权重/缓存，再跑 `validate_candidate_protocol.py --lengths 128 2048 8192 --output candidate_formal_admission.json`。检查实际长度；请求上限不等于实测前缀长度。必要时补更长前缀/显存检查，失败保留。审查文件写 `fresh_live_admission_sha256`。
+6. GPU空闲时重跑 `validate_new_protocol.py` 核对权重/缓存，再跑 `validate_candidate_protocol.py --lengths 128 8192 16384 --prefix-source saved_pilot --output candidate_formal_admission.json` 覆盖当前主模型潜在16k上限。它按长度从已完成同模型pilot选token IDs，不看正确性，通过完整prefill恢复cache，不称历史incremental KV。生成模式仍可另测实际生成前缀；请求上限不等于实际长度。跨模型不能借主模型token IDs验收；失败原样保留。审查文件写 `fresh_live_admission_sha256`。
 7. 按完整pilot选正式有界FULL，执行 `freeze_formal_protocol.py --review-file provenance/formal_scientific_review.json --max-think-tokens <8192或12288或16384> --candidate-admission candidate_formal_admission.json --capture-hidden`。16384目前比8192多答对5题，但仍11/29触顶，不能称完全自然FULL。native/boxed独立，不合并成绩；读出或输入不可靠先修复复测。
 
 ## 正式开发与M1

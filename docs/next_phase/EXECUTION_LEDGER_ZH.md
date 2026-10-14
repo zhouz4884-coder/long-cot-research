@@ -80,3 +80,5 @@ Conformal preliminary的N/K误用和upper fallback损失差异已在实际接口
 REFRAIN准备：默认词表经原PDF样式复核，固定MiniLM模型11文件逐个源校验，真实本地CPU编码器检查通过，5个协议控制本地/远端通过。全局有序bandit与独立online/GPU验收/freeze入口已准备，尚未运行方法GPU结果。首次远端CPU验收在SFTP未完成时误启动，被SHA拒绝；保留失败并等待原传输handle结束再复验。最近实际核查native两worker存活，已落盘43/58；进度用于接续，不从部分准确率选择正式参照。细节、未证实猜想与后续实际检查见D13。
 
 REFRAIN纠正复测：传输成功结束后真实远端CPU编码器passed，报告已取回；native绑定五个源码SHA均不变，两原worker继续运行，最新45/58。不把单次CPU117.7ms叫方法开销，更不称GPU/完整benchmark完成。
+
+ASAG准备：最后四层真实QK-window接口在冻结环境随机tiny Qwen3 CPU前向三例通过（eager最大误差2.09e-7，SDPA logits/KV不变）；9个CPU四动作/方程/tape控制通过。lazy-cache越界及修复保留。新增四动作decoder、long-prefix GPU admission、实际paired FULL online与独立freeze入口，未执行4B模型任务。实际native worker仍存活、54/58落盘，未从部分正确率选择参照。D14记录实施歧义、零entropy修正和失败猜想。

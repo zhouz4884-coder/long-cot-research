@@ -150,3 +150,17 @@ REFRAIN作者repo已冻结为ba5c8b402431b9b18bfa55027361355fec85b7c5，实际�
 进一步决策：全局串行REFRAIN与M1双worker的资源调度不同，不能把两者wall差归为算法节省。新runner每题另实际执行同驻留/同GPU/同seed的serial FULL，按独立ID哈希预先安排两方法顺序，释放cache再执行配对方法，全部思考prefix必须一致；两个Gold都延后到REFRAIN更新之后才评分。基线时延结论用这组配对请求；绝不从M1旧FULL搬运时间，增加的真实FULL请求也计入实验工作量。尚未运行，不预报效果。
 
 下一检查/未证实猜想：远端CPU编码器验收后，native空闲时执行三前缀父KV与共同reader实际token身份检查，再冻结独立协议、跑完整选择集。若近似相同推导重复却仍有害，猜想是相似度≠逻辑蕴含且错误临时答案被高置信强化；对照有害停止的具体步骤、完整答案修复过程和相似度，不把cos高当事实重复。若质量保持但wall更慢，检查每段CPU编码/答案logprob/检查次数与实际停止节省。上述不是当前实验结论。
+
+## D14：ASAG需要真实窗口注意力与四动作，不能只加一个熵阈值
+
+原文复核/判断：方法窗口包含试答提示和等长recent thought，首ATP初始化H1，此后相对首值比较。entropy求和query/head/最后四层，trap则按action的每token平均权重；两种聚合不能混用。算法同时含STOP、概率分布注入、jump、continue。没有可靠作者可执行源码入口，不用“作者复现”命名。
+
+我的实施决策：不把主SDPA改成eager。辅助probe上复制/crop缓存、重算小窗口，临时只读hook复算RoPE/GQA QK，提供eager式概率。所有副本、重算、probability extraction、读出和输入干预计入真实wall。它是新的scratch数值状态，不是历史query，也不宣称还原SDPA内部矩阵的每bit。实际probe candidate在STOP时原样交付，拒绝读出同样计费；首次干预之前与新配对FULL核验共享prefix，干预之后不要求轨迹相同。
+
+明确的未唯一规定部分：Eq7 answer vector采用所有probe步全词表概率均值并在ATP之间使用；混合后转log-probability送入共同sampler，不能把概率直接加到raw logits。共同FP16/随机/boxed与作者BF16/greedy不同；Wait已观察token纳入prefix，J改写，正文最多一次jump优先于附录≤s的off-by-one；强制J计入logical thought cap，probe另外计费。这些都要在独立protocol内冻结，不能调整成利于本方法的隐含设置。
+
+遇到的问题/实际尝试：随机模型零prefix的DynamicCache按层懒初始化，第一次pre-hook直接索引当前层而越界。修复仅把尚不存在的层按expected past=0处理，非零缺层仍拒绝。三组真实tiny Qwen3 CPU前向通过，eager矩阵最大误差2.09e-7、row sum误差≤1.79e-7、SDPA logits/全部结果KV/parent KV不变且hook移除。另9个CPU控制覆盖四动作、严格边界、概率混合、query求和/每tokentrap、STOP身份、实际采样输入注入、J不再触发、quota/cap和所有probe成本，远端冻结环境通过。源码已部署，当前没有4B GPU/模型质量成绩。
+
+独立复核还发现零entropy不应禁止第一次confidence-only停止；修正这一实现条件。后续H1=0不能除零，明确继续并标reason，不制造无穷大判据。准备了长前缀GPU验收、完整online及freeze入口，但它们未运行，CPU通过不代替真实模型任务。
+
+待验证猜想：若后续H变化看似有效却不能保持质量，可能是首个ATP的query行数、key支持数/归一化、或scratch重算的数值变化影响了标量，而非已得到正确结论；须检查这些实际字段，并比较相同prefix/不同数值路径。若探测成本超过提前停止节省，检查每次复制/窗口前向/192-token probe与检测频率。若jump/exhausted_STOP有害，可能强行终止仍未修好的路径；保留该事件与FULL结果，不能把“已跳转”当“已修复”。目前仅条件猜想。

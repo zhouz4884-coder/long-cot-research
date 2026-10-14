@@ -25,7 +25,7 @@
 
 native完整分析已补两预算对forced逐题对照、精确配对检验/Bootstrap、实际思考prefix、模型身份/采样/预算分配分类和待审阅差异案例。先看完整对照及D12，不能把两协议所有差异当cue-only；旧forced8k额外捕获features，native允许thinking占用名义+192总cap且闭合后随机数耦合不同。
 5. 写 `provenance/formal_scientific_review.json`，包含 `pilot_interpretation`、`reference_choice_reason`、`noise_interpretation`、`native_readout_interpretation`、`proceed_to_development`、`reviewed_evidence_sha256`。SHA键至少含上述4个完整结果JSON和 `results/budget_repair_audit.json`，取实际远端文件哈希。不是从marker推断科学审查通过。
-6. GPU空闲时重跑 `validate_new_protocol.py` 核对权重/缓存，再跑 `validate_candidate_protocol.py --lengths 128 8192 16384 --prefix-source saved_pilot --output candidate_formal_admission.json` 覆盖当前主模型潜在16k上限。它按长度从已完成同模型pilot选token IDs，不看正确性，通过完整prefill恢复cache，不称历史incremental KV。生成模式仍可另测实际生成前缀；请求上限不等于实际长度。跨模型不能借主模型token IDs验收；失败原样保留。审查文件写 `fresh_live_admission_sha256`。已准备的DTSR/REFRAIN有限GPU验收也应在这一空闲窗口依次执行（命令见下），随后才释放formal_review；正式freeze会立即唤醒监督器生成开发银行，不能让额外验收与正式测量争用GPU。它们的CPU protocol freeze可在main formal之后执行。
+6. GPU空闲时重跑 `validate_new_protocol.py` 核对权重/缓存，再跑 `validate_candidate_protocol.py --lengths 128 8192 16384 --prefix-source saved_pilot --output candidate_formal_admission.json` 覆盖当前主模型潜在16k上限。它按长度从已完成同模型pilot选token IDs，不看正确性，通过完整prefill恢复cache，不称历史incremental KV。生成模式仍可另测实际生成前缀；请求上限不等于实际长度。跨模型不能借主模型token IDs验收；失败原样保留。审查文件写 `fresh_live_admission_sha256`。已准备的DTSR/REFRAIN/ASAG有限GPU验收也应在这一空闲窗口依次执行（命令见下），随后才释放formal_review；正式freeze会立即唤醒监督器生成开发银行，不能让额外验收与正式测量争用GPU。它们的CPU protocol freeze可在main formal之后执行。
 7. 按完整pilot选正式有界FULL，执行 `freeze_formal_protocol.py --review-file provenance/formal_scientific_review.json --max-think-tokens <8192或12288或16384> --candidate-admission candidate_formal_admission.json --capture-hidden`。16384目前比8192多答对5题，但仍11/29触顶，不能称完全自然FULL。native/boxed独立，不合并成绩；读出或输入不可靠先修复复测。
 
 ## 正式开发与M1
@@ -41,6 +41,10 @@ M1包括12方法×265题=3180请求：FULL、固定1024/2048/4096/8192、预声�
 队列在 `m1_review` 等代理判读，不等用户再次确认。主目标仍为准确率下降≤1pp、wall-clock下降≥15%，并比较最佳同质量固定/EAT前沿。无收益先查风险门禁、测量/评分、固定预算与共同错题，再按原W6规则决定，不直接开发复杂网络或包装零效率。
 
 ## 后续必须完成
+
+ASAG独立适配已准备真实QK-window observer和四动作decoder。3组真实随机权重tiny Qwen3 CPU controls与9个CPU方程/tape controls通过；不是4B模型结果。第一次lazy-cache越界已修复/留档。细节、明确的实现歧义、待检验猜想见D14和 `ASAG_IMPLEMENTATION_CONTRACT_ZH.md`。
+
+native之后空闲GPU依次执行 `CUDA_VISIBLE_DEVICES=0 .venv/bin/python scripts/validate_asag_gpu.py --model <主模型路径>`，按长度恢复实际128/8192/16384并重复scratch probes、核验父KV，另有512-token真实集成。成功后main formal再运行 `freeze_asag_protocol.py --model <路径>`，选择集入口 `evaluate_asag_online.py --split selection --model <路径> --protocol-file provenance/asag_protocol.json --out-tag asag_selection --shard <0或1>`（各CUDA_VISIBLE_DEVICES固定物理卡）。每题另实际执行matched FULL；所有副本/probe/注入/J成本计入。仍是声明差异的独立适配，不称作者完整BF16/greedy复现。所有测试未生成前另建ASAG final freeze。
 
 REFRAIN准备已补入D13及 `WORKLOG_20261014_REFRAIN_PREPARATION_ZH.md`：真实MiniLM默认编码器CPU检查、五个协议控制与一个全局有序bandit流。默认trigger从PDF表5排除扩展消融；不要把空行检查改为128-token hook。模型在远端 `/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/all-MiniLM-L6-v2`，manifest在provenance。首次远端编码检查因为SFTP未结束而被SHA拒绝，先确认原传输结束及文件哈希再复测，不能推断模型损坏。未有GPU方法成绩。
 

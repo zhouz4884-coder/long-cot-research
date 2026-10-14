@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "past_tokens": 0,
+      "query_window_tokens": 7,
+      "eager_attention_max_abs_error": 0.0,
+      "probability_row_sum_max_abs_error": 1.1920928955078125e-07,
+      "identical_SDPA_logits_with_and_without_monitor": true,
+      "all_result_KV_identical": true,
+      "all_parent_KV_unchanged": true,
+      "all_temporary_hooks_removed": true,
+      "window_summary": {
+        "entropy_sum": 59.93946933746338,
+        "entropy_by_layer": [
+          13.651897430419922,
+          14.81186580657959,
+          15.774188995361328,
+          15.701517105102539
+        ],
+        "query_rows": 7,
+        "key_tokens": 7,
+        "heads_per_layer": 4,
+        "previous_action_mean_token_attention": null,
+        "current_action_mean_token_attention": 0.1428571492433548,
+        "trap": false,
+        "scope": "Eager-style measured QK window; entropy is summed across query rows, not averaged."
+      }
+    },
+    {
+      "past_tokens": 5,
+      "query_window_tokens": 7,
+      "eager_attention_max_abs_error": 2.086162567138672e-07,
+      "probability_row_sum_max_abs_error": 1.7881393432617188e-07,
+      "identical_SDPA_logits_with_and_without_monitor": true,
+      "all_result_KV_identical": true,
+      "all_parent_KV_unchanged": true,
+      "all_temporary_hooks_removed": true,
+      "window_summary": {
+        "entropy_sum": 85.26166725158691,
+        "entropy_by_layer": [
+          20.323406219482422,
+          21.166501998901367,
+          21.72907066345215,
+          22.042688369750977
+        ],
+        "query_rows": 7,
+        "key_tokens": 12,
+        "heads_per_layer": 4,
+        "previous_action_mean_token_attention": 0.12802836298942566,
+        "current_action_mean_token_attention": 0.058317430317401886,
+        "trap": true,
+        "scope": "Eager-style measured QK window; entropy is summed across query rows, not averaged."
+      }
+    },
+    {
+      "past_tokens": 20,
+      "query_window_tokens": 1,
+      "eager_attention_max_abs_error": 0.0,
+      "probability_row_sum_max_abs_error": 1.1920928955078125e-07,
+      "identical_SDPA_logits_with_and_without_monitor": true,
+      "all_result_KV_identical": true,
+      "all_parent_KV_unchanged": true,
+      "all_temporary_hooks_removed": true,
+      "window_summary": {
+        "entropy_sum": 14.170494794845581,
+        "entropy_by_layer": [
+          3.5507285594940186,
+          3.4870009422302246,
+          3.6769859790802,
+          3.4557793140411377
+        ],
+        "query_rows": 1,
+        "key_tokens": 21,
+        "heads_per_layer": 4,
+        "previous_action_mean_token_attention": 0.06097250431776047,
+        "current_action_mean_token_attention": 0.0531432069838047,
+        "trap": true,
+        "scope": "Eager-style measured QK window; entropy is summed across query rows, not averaged."
+      }
+    }
+  ],
+  "package_versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.2"
+  },
+  "source_sha256": {
+    "asag_attention.py": "64497ff62aa1289791783cefff362d3b93ee4b3e59e4f137fb26b54eb68ba9fb",
+    "scripts/validate_asag_attention_cpu.py": "4526a845d306aa20c56ae6bd566a3060e786d18463ba1eccfc85a7b65e283dd2"
+  },
+  "model_scope": "Random-weight four-layer tiny Qwen3, CPU FP32; not the downloaded Qwen3-4B",
+  "scope": "Finite scratch-window GQA/RoPE/causal-mask/read-only-hook controls only. No learned-model ASAG policy, efficacy or GPU admission."
+}

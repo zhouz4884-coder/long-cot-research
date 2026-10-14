@@ -9,3 +9,5 @@ DEER snapshot `c9dd19fbffa27f841cfe47502d015b63811b4d1b` 的HF试答采用greedy
 SEVRA snapshot `77d1951b7a93eec53579225a91ff6099cf9f7ed0` 的动作是已有attempt之后的accept/active_verify，验证提示要求对该候选执行至少两种检查并保留或修正答案。不能把它包装成同一轨迹检查点STOP方法；独立部署对照应包括初始尝试预算和验证真实时间，并优化固定初始预算。
 
 此轮没有新增外部方法GPU成绩；记录用于避免未来比较和新颖性叙述越界。
+
+REFRAIN补充：作者固定仓库无可执行实现。原文按blank lines而不是128-token间隔检查；表5的默认四类词与下划线扩展/加粗新增类分开。采用论文MiniLM而非TF-IDF，保留前序答案cue与全历史最大cosine，默认SW-UCB参数.60:.05:.80/W100/C1/lambda.2。新增独立适配以一个固定顺序的bandit流执行，两张物理GPU只负责保留同ID路由，不各自更新阈值。boxed生成token的raw likelihood用于无监督reward，Gold在更新后才进入grader。当前只有真实CPU编码器与5个协议控制，无GPU方法成绩；源码和恢复路径见D13及runbook。CPU部署、cue规范化、共同4B/预算/reader/采样、previous mean长度归一化及边界重叠token计分均是声明差异。这个跨问题方法不能借当前固定潜在结果的M1有限池风险证书。

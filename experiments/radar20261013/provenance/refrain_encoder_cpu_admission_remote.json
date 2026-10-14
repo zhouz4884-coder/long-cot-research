@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "encoder_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "encoder_loading_info": {
+    "missing_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": [],
+    "unexpected_keys": [],
+    "unexpected_positions_buffer_verified": false
+  },
+  "manifest_sha256": "d33d7adffba9f76ea5cf0483191114d83180fbf376b1a12b8e7fa91363016614",
+  "package_versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.2",
+    "numpy": "2.2.6"
+  },
+  "source_sha256": {
+    "refrain_adapter.py": "6b0aee5f8853af16298acb933507ed919039241eb2c17c8ce9ac3c5e23bff7c3",
+    "scripts/validate_refrain_encoder.py": "c386335d5c4ec0f4f4382ab171dcedc03033560f3e9e06768e3f5eea23f151a0"
+  },
+  "checks": {
+    "shape_384": true,
+    "finite": true,
+    "normalized": true,
+    "identical_similarity": 1.0,
+    "reflective_similarity": 0.9613478183746338,
+    "unrelated_similarity": 0.06469395011663437,
+    "batch_padding_max_abs_error": 6.146728992462158e-08,
+    "actual_long_input_tokens": 256,
+    "current_cue_does_not_stop": true,
+    "prior_cue_and_redundancy_stop": true,
+    "cpu_device": "cpu",
+    "model_dtype": "torch.float32"
+  },
+  "four_sentence_batch_wall_ms": 53.06487716734409,
+  "scope": "Finite CPU FP32 encoder/protocol checks. No model-task accuracy, GPU cache safety or online latency gain."
+}

@@ -76,3 +76,7 @@ DEER、Conformal Thinking 和 SEVRA 分别冻结为 commit `c9dd19fbffa27f841cfe
 Conformal preliminary的N/K误用和upper fallback损失差异已在实际接口复现；新增双阈值独立适配及逐题N×K敏感性接口，不继承作者风险保证。M1现在12方法×265题=3180请求，仍是待实际执行的计划。正式GPU固定按ID分配，计时包含tokenization，未改当前采集分片。native启动新增实时模型身份核验，输出尚未产生时部署。详见 `WORKLOG_20261014_BASELINES_AND_DECISIONS_ZH.md`。
 
 交叉种子现在实际完成：22题39状态、351分支1170读出，全部前缀/候选/续写控制与冻结重评分通过。DEFER1/4平均变化−1.01/−1.26pp，FULL8k+13.89pp；仅pilot操作性证据，117个FULL有72触顶。发现并修复14个正确阶乘候选误拒绝，评分不变，不称14个算法成功。两卡native进程1804357/1804358确认存活、各10个模型文件实时hash通过；58请求尚未完整。决策、负结果猜想与验证计划记录到D08–D09。
+
+REFRAIN准备：默认词表经原PDF样式复核，固定MiniLM模型11文件逐个源校验，真实本地CPU编码器检查通过，5个协议控制本地/远端通过。全局有序bandit与独立online/GPU验收/freeze入口已准备，尚未运行方法GPU结果。首次远端CPU验收在SFTP未完成时误启动，被SHA拒绝；保留失败并等待原传输handle结束再复验。最近实际核查native两worker存活，已落盘43/58；进度用于接续，不从部分准确率选择正式参照。细节、未证实猜想与后续实际检查见D13。
+
+REFRAIN纠正复测：传输成功结束后真实远端CPU编码器passed，报告已取回；native绑定五个源码SHA均不变，两原worker继续运行，最新45/58。不把单次CPU117.7ms叫方法开销，更不称GPU/完整benchmark完成。

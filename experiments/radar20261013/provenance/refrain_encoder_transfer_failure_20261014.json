@@ -1,0 +1,20 @@
+{
+  "stage": "remote_CPU_encoder_admission_before_SFTP_completion",
+  "validation_session_id": 89914,
+  "observed_remote_exit_code": 1,
+  "observed_error": "AssertionError: Encoder checksum mismatch: model.safetensors",
+  "transfer_session_id": 87590,
+  "transfer_was_still_live_when_validation_returned": true,
+  "protocol_unit_controls": "5 of 5 passed remotely before encoder loading",
+  "cause_assessment": "Validation was mistakenly started before the dependent transfer completed. Confirm final transfer and recheck all source hashes before attributing the error to model content.",
+  "planned_correction": "Wait on the existing transfer handle, then rerun CPU validation. Do not restart native workers or change frozen packages.",
+  "scope": "Preserved preparation failure. No GPU policy result or model-quality conclusion.",
+  "resolution": {
+    "original_transfer_exit_code": 0,
+    "actual_completed_transfer_bytes": 91578415,
+    "remote_cpu_encoder_revalidation_passed": true,
+    "remote_admission_file": "provenance/refrain_encoder_cpu_admission_remote.json",
+    "first_remote_admission_sha256": "94d8f01b07c1fd0e94f7e22ff1183c180d2553ffff9496cb2af499d4a13c6521",
+    "latest_remote_admission_sha256": "f8c1ed12eeee90f09c2a287ada6cfe37d056e9737b8cc16420534eb9c1dc5720"
+  }
+}

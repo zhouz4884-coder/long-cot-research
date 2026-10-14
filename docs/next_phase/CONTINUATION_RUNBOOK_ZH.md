@@ -25,7 +25,7 @@
 
 native完整分析已补两预算对forced逐题对照、精确配对检验/Bootstrap、实际思考prefix、模型身份/采样/预算分配分类和待审阅差异案例。先看完整对照及D12，不能把两协议所有差异当cue-only；旧forced8k额外捕获features，native允许thinking占用名义+192总cap且闭合后随机数耦合不同。
 5. 写 `provenance/formal_scientific_review.json`，包含 `pilot_interpretation`、`reference_choice_reason`、`noise_interpretation`、`native_readout_interpretation`、`proceed_to_development`、`reviewed_evidence_sha256`。SHA键至少含上述4个完整结果JSON和 `results/budget_repair_audit.json`，取实际远端文件哈希。不是从marker推断科学审查通过。
-6. GPU空闲时重跑 `validate_new_protocol.py` 核对权重/缓存，再跑 `validate_candidate_protocol.py --lengths 128 8192 16384 --prefix-source saved_pilot --output candidate_formal_admission.json` 覆盖当前主模型潜在16k上限。它按长度从已完成同模型pilot选token IDs，不看正确性，通过完整prefill恢复cache，不称历史incremental KV。生成模式仍可另测实际生成前缀；请求上限不等于实际长度。跨模型不能借主模型token IDs验收；失败原样保留。审查文件写 `fresh_live_admission_sha256`。
+6. GPU空闲时重跑 `validate_new_protocol.py` 核对权重/缓存，再跑 `validate_candidate_protocol.py --lengths 128 8192 16384 --prefix-source saved_pilot --output candidate_formal_admission.json` 覆盖当前主模型潜在16k上限。它按长度从已完成同模型pilot选token IDs，不看正确性，通过完整prefill恢复cache，不称历史incremental KV。生成模式仍可另测实际生成前缀；请求上限不等于实际长度。跨模型不能借主模型token IDs验收；失败原样保留。审查文件写 `fresh_live_admission_sha256`。已准备的DTSR/REFRAIN有限GPU验收也应在这一空闲窗口依次执行（命令见下），随后才释放formal_review；正式freeze会立即唤醒监督器生成开发银行，不能让额外验收与正式测量争用GPU。它们的CPU protocol freeze可在main formal之后执行。
 7. 按完整pilot选正式有界FULL，执行 `freeze_formal_protocol.py --review-file provenance/formal_scientific_review.json --max-think-tokens <8192或12288或16384> --candidate-admission candidate_formal_admission.json --capture-hidden`。16384目前比8192多答对5题，但仍11/29触顶，不能称完全自然FULL。native/boxed独立，不合并成绩；读出或输入不可靠先修复复测。
 
 ## 正式开发与M1
@@ -41,6 +41,12 @@ M1包括12方法×265题=3180请求：FULL、固定1024/2048/4096/8192、预声�
 队列在 `m1_review` 等代理判读，不等用户再次确认。主目标仍为准确率下降≤1pp、wall-clock下降≥15%，并比较最佳同质量固定/EAT前沿。无收益先查风险门禁、测量/评分、固定预算与共同错题，再按原W6规则决定，不直接开发复杂网络或包装零效率。
 
 ## 后续必须完成
+
+REFRAIN准备已补入D13及 `WORKLOG_20261014_REFRAIN_PREPARATION_ZH.md`：真实MiniLM默认编码器CPU检查、五个协议控制与一个全局有序bandit流。默认trigger从PDF表5排除扩展消融；不要把空行检查改为128-token hook。模型在远端 `/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/all-MiniLM-L6-v2`，manifest在provenance。首次远端编码检查因为SFTP未结束而被SHA拒绝，先确认原传输结束及文件哈希再复测，不能推断模型损坏。未有GPU方法成绩。
+
+此传输失败已纠正：原handle完成，远端冻结环境CPU编码器报告passed已同步，本地/远端5个协议控制也通过。下一依赖是空闲GPU实际缓存/prefix/reader身份验收，不需再下载模型或升级环境。
+
+native空闲后执行 `CUDA_VISIBLE_DEVICES=0 .venv/bin/python scripts/validate_refrain_gpu.py --model <主模型路径> --encoder <MiniLM路径> --encoder-manifest provenance/refrain_encoder_manifest.json`。三实际前缀父KV和共同reader token身份通过、main formal已冻结后再 `freeze_refrain_protocol.py --model <路径>`。选择集运行需 `CUDA_VISIBLE_DEVICES=0,1 .venv/bin/python scripts/evaluate_refrain_online.py --split selection --model <路径> --encoder <MiniLM路径> --protocol-file provenance/refrain_protocol.json --out-tag refrain_selection`，它按ID路由两卡但串行、单一全局有序bandit，不拆成两个worker。test另要求REFRAIN独立final freeze和实际零已生成测试记录；不要借M1风险证书给这个跨题自适应基线。
 
 DTSR已实现独立64-token触发decoder与online入口，避免错误复用128-token段落hook；当前只有4个CPU协议控制，未有GPU/模型成绩。native测量结束且GPU空闲后执行 `CUDA_VISIBLE_DEVICES=0 .venv/bin/python scripts/validate_dtsr_gpu.py --model <已冻结Qwen3-4B路径>`，三前缀rating/父KV/续写实际通过后，再用 `freeze_dtsr_protocol.py` 绑定主formal哈希及独立source集合。选择集调用 `evaluate_dtsr_online.py --split selection --protocol-file provenance/dtsr_protocol.json --out-tag dtsr_selection --shard <0或1> --model <路径>`，两卡按固定ID分片。最终测试须另有dtsr_final_test_freeze且覆盖完整ID，不能在所有策略冻结前生成。见决策D10。它不改变已计划M1的12种方法，也不替代完整强基线阶段。
 

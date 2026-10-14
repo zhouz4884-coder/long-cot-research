@@ -1,5 +1,7 @@
 # 自然推理步骤的干预价值测量
 
+2026-10-14研究目标已修订为**候选质量准入与长短尺度推理分配**，见 [18周研究目标V2](docs/next_phase/RESEARCH_GOAL_V2_20261014_ZH.md)。新版连续研究目标已在应用中建立为active，每小时定时任务已按用户要求删除。先完成冻结M1，再根据真实质量—耗时结果选择廉价重读或长程机会机制；原结果和下面的旧实验说明保留为历史证据。
+
 本项目执行[分享聊天中的研究计划](https://chatgpt.com/share/6ac7ac26-c6a8-83ec-be63-d018140ce23e)。目标是测量继续一个自然推理步骤的净收益，随后检验其可预测性和真实在线价值。
 
 **最终综合报告写入 `docs/REPORT_ZH.md`；执行过程记录见 `docs/WORKLOG_20261011.md` 和 `docs/WORKLOG_20261012.md`。代码存在、编译通过或 CPU 检查通过均不表示 GPU 实验完成。**
@@ -10,7 +12,7 @@
 
 用户18周路线在独立目录 `experiments/radar20261013` 继续。旧结果复核完成；新100题pilot与116个固定预算请求完整，39状态交叉随机性正在实际采集。共同29题在1024/2048/4096/8192/16384预算下分别答对10/11/13/17/22；16384救回5题、无反向改错，但11题仍触顶。这是参考预算诊断，不是新算法盲测收益。
 
-恢复及后续阶段：[连续执行入口](docs/next_phase/CONTINUATION_RUNBOOK_ZH.md)；当前方法、结果与错误修正：[本轮工作记录](docs/next_phase/WORKLOG_20261014_CONTINUATION_ZH.md)；完整状态：[18周台账](docs/next_phase/EXECUTION_LEDGER_ZH.md)。远端接续队列和每小时本聊天heartbeat已启用，正式训练、独立校准、1062题新盲测、跨模型/非数学模型成绩及有条件Serving仍须实际完成。
+恢复及后续阶段：[连续执行入口](docs/next_phase/CONTINUATION_RUNBOOK_ZH.md)；当前方法、结果与错误修正：[本轮工作记录](docs/next_phase/WORKLOG_20261014_CONTINUATION_ZH.md)；完整状态：[18周台账](docs/next_phase/EXECUTION_LEDGER_ZH.md)。每小时定时任务已于2026-10-14按用户要求删除，新目标独立保留；既有远端采集未因删除定时任务而被停止。正式训练、独立校准、1062题新盲测、跨模型/非数学模型成绩及有条件Serving仍须实际完成。
 
 ## 冻结输入
 

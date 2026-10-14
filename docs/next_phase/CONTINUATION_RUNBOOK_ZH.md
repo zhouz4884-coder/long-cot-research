@@ -1,6 +1,8 @@
 # 18周研究连续执行与恢复入口
 
-此工作始终对应用户已授权的18周完整路线。按科学依赖推进，不等待日历周，不将后台启动、源码、哈希或CPU检查记作模型实验完成。此文件是恢复说明，不是完整研究交付。
+2026-10-14用户要求阅读新版计划和上传评议后重新修改目标。后续科学优先级以 [研究目标V2](RESEARCH_GOAL_V2_20261014_ZH.md) 为准，输入、分歧决策及三道门槛均已记录；原路线保留为历史。
+
+接续前先读取应用内目标状态。用户最新“重新制定目标并删除每小时任务”指令后，旧目标已不在应用中，新版连续研究目标已成功建立，status=active。按V2科学依赖完成全部适用阶段，不等待日历周，不将后台启动、源码、哈希或CPU检查记作模型实验完成。没有停止或重启现有后台采集。此文件是恢复说明，不是完整研究交付；若用户之后暂停，遵守新的暂停状态。
 
 用户新增要求：每轮读并更新 `RESEARCH_DECISION_LOG_ZH.md`，记录独立判断、决策依据、遇到的问题、实际尝试与结果；效果不好写出未证实猜想、支持/反对证据及可证伪的下一检查。最终统一汇总，不把猜想写成已确认原因。
 
@@ -22,7 +24,7 @@ native8k/16k为13/18正确，matched boxed为17/22（每组29），两组各4个
 
 新 `continue_study.py` 用Linux flock独占调度，等旧队列进入 `formal_reference`，核验完整预算/噪声后执行29题×2预算的native敏感性（58请求）。它会等现有GPU进程退出，不与测量请求争用GPU。状态：`results/continuation_state.json`；日志：`logs/continuation_supervisor.log`。不要重复启动活着的监督器/采集器。监督器中断时保留已有推理进程；恢复先核查进程和文件，再按逐题断点续跑。
 
-每小时本聊天heartbeat已启用，automation ID18，其目标是继续实施与审查完整研究，不只是监视。无变化时安静，仅重大结论、失败、用户需处理或完整交付时通知。不在每次唤醒创建新的自动任务，不给其他聊天发消息。
+2026-10-14用户明确要求删除每小时定时任务，automation ID18已由应用工具确认删除。新版研究目标作为独立目标保留，不建立替代定时任务；原文中的heartbeat设置仅为历史。此删除不终止或重启既有GPU采集，未来执行按用户授权和应用目标状态推进。
 
 ## 已完成的pilot放行步骤（审计历史，不重复执行）
 
@@ -64,10 +66,10 @@ native空闲后执行 `CUDA_VISIBLE_DEVICES=0 .venv/bin/python scripts/validate_
 
 DTSR已实现独立64-token触发decoder与online入口，避免错误复用128-token段落hook；当前只有4个CPU协议控制，未有GPU/模型成绩。native测量结束且GPU空闲后执行 `CUDA_VISIBLE_DEVICES=0 .venv/bin/python scripts/validate_dtsr_gpu.py --model <已冻结Qwen3-4B路径>`，三前缀rating/父KV/续写实际通过后，再用 `freeze_dtsr_protocol.py` 绑定主formal哈希及独立source集合。选择集调用 `evaluate_dtsr_online.py --split selection --protocol-file provenance/dtsr_protocol.json --out-tag dtsr_selection --shard <0或1> --model <路径>`，两卡按固定ID分片。最终测试须另有dtsr_final_test_freeze且覆盖完整ID，不能在所有策略冻结前生成。见决策D10。它不改变已计划M1的12种方法，也不替代完整强基线阶段。
 
-- W7–9：M1有实测收益才扩展DEFER1/2/4、毫秒成本、稀疏检测及消融；新动作/协议另验收冻结，不混写银行。
+- W7–9（V2）：完整M1后依据错误与成本分解，在廉价候选重读和长程纠错机会识别中选择一个核心机制。短DEFER1/4不再默认作为纠错动作；完成性、按需前瞻、复用及稀疏检测须有增量信息和净成本依据后再扩展。M1不达标则完成有界机制检验或有证据的转向，不无限加阈值；新动作/协议另验收冻结，不混写银行。见目标V2的M2和G2。
 - W10–12：作者可执行强基线和明确标记的独立适配；独立795题校准。候选全集/主策略/alpha在校准前冻结，采集与分析绑定家族SHA。有限分层池界按 `CALIBRATION_SAMPLING_CONTRACT_ZH.md`；IID界只作条件敏感性。不得看校准后换主策略或把1pp失败改称2pp主目标。
 - W13–15：全部策略/源码/模型/预算/数据冻结前，不生成或人工查看1062题测试。冻结时实际测试记录为0，之后覆盖完整ID。Thinking-2507和DeepSeek8B各自数值/显存/terminator/readout验收后实测；至少一个非数学任务。LCB容器接口通过不等于模型pass@1，仍需实际生成、执行与失败留档。
-- W16–18：算法门槛成立才做真实batch/并发Serving/goodput；单请求节省不能当吞吐。阶段NO-GO须有真实证据并明确后续不适用项。无论GO/NO-GO，完成消融、失败审计、复现包、论文材料、工作记录和交付核查后统一报告，停止heartbeat。不要在pilot/训练/校准/盲测子任务结束时停止研究。
+- W16–18：算法门槛成立才做真实batch/并发Serving/goodput；单请求节省不能当吞吐。阶段NO-GO须有真实证据并明确后续不适用项。无论GO/NO-GO，完成消融、失败审计、复现包、论文材料、工作记录和交付核查后统一报告。不要在pilot/训练/校准/盲测子任务结束时停止研究。每小时定时任务已按用户要求删除，不再作为执行入口。
 
 仓库目前没有Git remote，本地提交不叫GitHub上传；归档阶段核对授权目的地/身份，优先现有Git Credential Manager，不打印凭据。
 

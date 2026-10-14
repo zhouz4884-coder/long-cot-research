@@ -5,11 +5,14 @@ import pickle
 from pathlib import Path
 import sys
 import numpy as np
+from scipy.stats import binomtest
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT));sys.path.insert(0,str(ROOT/'scripts'))
 from protocol_guard import validate_formal,sha256
 from select_calibrate_policies import replay,load_bank
+from build_m1_online_plan import baseline_replay
+from risk_policy import problem_shard
 
 
 def spec_hash(spec):
@@ -28,6 +31,8 @@ def main():
             row=json.loads(line)
             assert row['split']=='selection' and row['policy_file_sha256']==policy_hash
             assert row['formal_protocol_sha256']==formal_hash and row['method'] in methods
+            assert row['assigned_shard']==problem_shard(row['problem_id'],formal['gpu_shards'])
+            assert row['visible_gpu']==str(row['assigned_shard'])
             assert row['problem_id'] in ids and row['problem_id'] not in methods[row['method']]
             assert row['wall_ms']>0 and np.isfinite(row['wall_ms'])
             methods[row['method']][row['problem_id']]=row
@@ -46,13 +51,17 @@ def main():
         original=bank_by_id[pid]['full']
         if reference['trace']['ids']!=original['trace']['ids'] or reference['answer']['text']!=original['answer']['text'] or reference['correct']!=original['correct']:
             controls.append({'method':'full','problem_id':pid,'reason':'bank_online_reference_diverged'})
-    for name in ['risk_primary','current_correctness']:
-        spec=policy['methods'][name];metadata=policy['models'][spec['predictor']]
-        model_file=ROOT/metadata['path'];assert sha256(model_file)==metadata['sha256']
-        with model_file.open('rb') as handle:learner=pickle.load(handle)
+    verified_methods=['risk_primary','current_correctness','eat_adaptation','deer_confidence_proxy','conformal_dual_adaptation']
+    for name in verified_methods:
+        spec=policy['methods'][name];learner=None
+        if 'predictor' in spec:
+            metadata=policy['models'][spec['predictor']]
+            model_file=ROOT/metadata['path'];assert sha256(model_file)==metadata['sha256']
+            with model_file.open('rb') as handle:learner=pickle.load(handle)
         failed=[]
         for original in bank:
-            expected=replay(original,spec,learner);actual=methods[name][original['problem_id']]
+            expected=replay(original,spec,learner) if learner is not None else baseline_replay(original,spec)
+            actual=methods[name][original['problem_id']]
             same=(expected['answer_text']==actual['answer']['text'] and expected['correct']==actual['correct'])
             offset=len(actual['trace']['ids']) if actual['committed_checked_candidate'] else None
             same=same and offset==expected['stop_offset']
@@ -73,9 +82,11 @@ def main():
     for name,rows in methods.items():
         y=np.array([rows[i]['correct'] for i in ids]);t=np.array([rows[i]['wall_ms'] for i in ids]);delta=y-ref_y
         saving=1-t.sum()/ref_t.sum();draw_saving=1-t[indices].sum(axis=1)/ref_t[indices].sum(axis=1)
+        harms=int(((ref_y==1)&(y==0)).sum());benefits=int(((ref_y==0)&(y==1)).sum());discordant=harms+benefits
         statistics[name]={'n':len(ids),'correct':int(y.sum()),'accuracy':float(y.mean()),
                           'accuracy_delta':float(delta.mean()),'accuracy_delta_95ci':np.quantile(delta[indices].mean(axis=1),[.025,.975]).tolist(),
-                          'harmful':int(((ref_y==1)&(y==0)).sum()),'beneficial':int(((ref_y==0)&(y==1)).sum()),
+                          'harmful':harms,'beneficial':benefits,
+                          'conditional_exact_mcnemar_two_sided_p':float(binomtest(benefits,discordant,.5).pvalue) if discordant else 1.,
                           'mean_wall_s':float(t.mean()/1000),'wall_saving':float(saving),
                           'wall_saving_95ci':np.quantile(draw_saving,[.025,.975]).tolist(),
                           'wall_s_quantiles':dict(zip(['p50','p95','p99'],np.quantile(t/1000,[.5,.95,.99]).tolist())),

@@ -9,6 +9,7 @@ from sklearn.metrics import roc_auc_score,average_precision_score,brier_score_lo
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from joint_predictor import JointModel,PREFIX_FEATURES,ANSWER_FEATURES
 from protocol_guard import validate_formal,sha256
+from risk_policy import problem_shard
 
 
 def metric(y,p,w):
@@ -29,6 +30,8 @@ def main():
     assert {r['problem_id'] for r in questions}==expected
     assert len(questions)==len(expected)
     assert all(r['formal_protocol_sha256']==formal_hash for r in questions)
+    assert all(r['assigned_shard']==problem_shard(r['problem_id'],formal['gpu_shards'])
+               and r['visible_gpu']==str(r['assigned_shard']) for r in questions)
     model_paths={r['model_path'] for r in questions};assert len(model_paths)==1
     entries=[]
     for q in questions:

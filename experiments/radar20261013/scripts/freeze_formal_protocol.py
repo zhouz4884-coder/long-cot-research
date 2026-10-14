@@ -44,6 +44,7 @@ def main():
     assert live['passed'] and live['core_sha256']==sha256(ROOT/'reason_transition/core.py')
     assert review['fresh_live_admission_sha256']==sha256(ROOT/'provenance/live_protocol_admission.json')
     payload={'seed':20261013,'max_think_tokens':args.max_think_tokens,'max_answer_tokens':192,
+             'gpu_shards':2,'gpu_assignment':'problem_id_sha256_independent_of_split_membership',
              'reference_protocol':'Bounded FULL with shared boxed reader; native uninterrupted protocol reported separately.',
              'dtype':'float16','attention':'sdpa','temperature':.6,'top_p':.95,'top_k':20,
              'extra_readout_offsets':[512,2048],'capture_candidate_hidden':args.capture_hidden,

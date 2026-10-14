@@ -1,0 +1,29 @@
+{
+  "unix": 1791942379.3760483,
+  "processes": [
+    "1614660    11:24:42 /media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013/.venv/bin/python -u scripts/post_pilot_queue.py",
+    "1719118    04:54:19 /media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013/.venv/bin/python -u scripts/collect_noise_bank.py --model /media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B --shard 1",
+    "1780321       55:36 bash -c cd /media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013 && nohup .venv/bin/python -u scripts/continue_study.py > logs/continuation_supervisor.log 2>&1 < /dev/null &",
+    "1780322       55:36 .venv/bin/python -u scripts/continue_study.py"
+  ],
+  "post_pilot": {
+    "stage": "noise_bank",
+    "status": "running",
+    "unix": 1791924720.8754876,
+    "pids": {
+      "0": 1719117,
+      "1": 1719118
+    }
+  },
+  "continuation": {
+    "stage": "crossed_noise",
+    "status": "waiting_for_reviewed_dependency",
+    "unix": 1791939043.7446027,
+    "dependency": "results/post_pilot_state.json"
+  },
+  "noise_completed_rows": {
+    "noise_bank_1.jsonl": 18,
+    "noise_bank_0.jsonl": 19
+  },
+  "native_completed_rows": {}
+}

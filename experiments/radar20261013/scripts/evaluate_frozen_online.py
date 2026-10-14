@@ -7,7 +7,7 @@ from reason_transition.core import Engine,stable_seed,public,grade,append_jsonl,
 from radar_engine import candidate
 from candidate_schema import scalar_schema
 from probe_engine import ProbeEngine
-from risk_policy import quality_decision,features_at,eat_update,deer_pro_confidence
+from risk_policy import quality_decision,features_at,eat_update,deer_pro_confidence,conformal_dual_update,problem_shard
 from protocol_guard import validate_formal
 
 
@@ -19,8 +19,10 @@ def main():
     p.add_argument('--out-tag',required=True)
     args=p.parse_args()
     assert 0<=args.shard<args.shards and (args.n is None or args.n>0)
+    assert os.environ.get('CUDA_VISIBLE_DEVICES')==str(args.shard),'Use the frozen physical GPU assignment'
     formal_path=ROOT/'provenance/formal_protocol.json'
     formal,formal_hash=validate_formal(ROOT,args.model)
+    assert args.shards==formal['gpu_shards'] and formal['gpu_assignment']=='problem_id_sha256_independent_of_split_membership'
     policy_path=Path(args.policy_file)
     policy=json.loads(policy_path.read_text(encoding='utf-8'))
     policy_hash=hashlib.sha256(policy_path.read_bytes()).hexdigest()
@@ -50,10 +52,10 @@ def main():
     assert all(r['policy_file_sha256']==policy_hash and r['formal_protocol_sha256']==formal_hash and r['model_path']==args.model for r in previous),'Do not append incompatible run versions'
     done={(r['problem_id'],r['method']) for r in previous}
     methods=list(policy['methods'])
-    expected={(q['problem_id'],m) for i,q in enumerate(rows) if i%args.shards==args.shard for m in methods}
+    expected={(q['problem_id'],m) for q in rows if problem_shard(q['problem_id'],args.shards)==args.shard for m in methods}
     assert len(done)==len(previous) and done<=expected,'Duplicate, stale, or foreign online records'
     for index,q in enumerate(rows):
-        if index%args.shards!=args.shard:continue
+        if problem_shard(q['problem_id'],args.shards)!=args.shard:continue
         assert validate_formal(ROOT,args.model)[1]==formal_hash,'Formal runtime changed during requests'
         assert hashlib.sha256(policy_path.read_bytes()).hexdigest()==policy_hash
         assert hashlib.sha256(formal_path.read_bytes()).hexdigest()==formal_hash
@@ -63,11 +65,11 @@ def main():
             spec=policy['methods'][method];kind=spec['kind'];seed=stable_seed(formal['seed'],q['problem_id'],0)
             log=[];reads=[];committed=None;fallback=False;probe_ms=0.;probe_tokens=0;detector_ms=0.
             ema_mean=ema_variance=0.;observations=0
+            conformal_ema=None
             next_legacy_detection=0
-            prompt=e.prompt(q['question'])
 
             def hook(point,prefix,cache,logits):
-                nonlocal committed,fallback,probe_ms,probe_tokens,detector_ms,ema_mean,ema_variance,observations,next_legacy_detection
+                nonlocal committed,fallback,probe_ms,probe_tokens,detector_ms,ema_mean,ema_variance,observations,next_legacy_detection,conformal_ema
                 if fallback:return {'disable_capture':True}
                 started=time.perf_counter();detail={};action='DEFER';read=None
                 if point['offset']<spec.get('minimum_offset',256):return False
@@ -98,6 +100,14 @@ def main():
                     schema=scalar_schema(read['text']);read['schema']=schema
                     prediction=learner.predict_one(features_at(point,read));detail={'prediction':prediction,'schema':schema}
                     action=quality_decision(spec,prediction,schema['valid'])
+                elif kind=='conformal_dual_adaptation':
+                    assert spec['reference_budget']==formal['max_think_tokens']
+                    read=candidate(e,prefix,cache,logits,seed,observe_hidden=False);reads.append(read)
+                    schema=scalar_schema(read['text']);read['schema']=schema
+                    update=conformal_dual_update(conformal_ema,read['maxprob_geomean'],point['offset'],spec)
+                    conformal_ema=update['smoothed_confidence']
+                    detail={**update,'schema':schema,'risk_certification_performed_by_callback':False}
+                    if schema['valid'] and update['route'] in ['upper','lower']:action='COMMIT'
                 elif kind in ['deer','deer_pro']:
                     read=candidate(e,prefix,cache,logits,seed,observe_hidden=False);reads.append(read)
                     score=read['maxprob_geomean']
@@ -120,6 +130,8 @@ def main():
             max_think=spec.get('budget',formal['max_think_tokens'])
             adaptive=kind not in ['full','fixed_budget']
             e.torch.cuda.reset_peak_memory_stats();e.torch.cuda.synchronize();start=time.perf_counter()
+            prompt=e.prompt(q['question'])
+            prompt_tokenization_ms=1000*(time.perf_counter()-start)
             trace=e.decode(prompt,max_think,seed,capture=kind in ['risk_gate','current_correctness','legacy_transfer'],
                            checkpoint_hook=hook if adaptive else None)
             if committed is not None:
@@ -142,10 +154,16 @@ def main():
                     'delivered_tokens':trace['tokens']+answer['tokens'],'probe_input_tokens':probe_tokens,
                     'candidate_header_input_tokens':sum(r['control_prefix_input_tokens'] for r in reads),
                     'wall_ms':wall_ms,'detector_callback_ms':detector_ms,'entropy_probe_ms':probe_ms,
+                    'prompt_tokenization_ms':prompt_tokenization_ms,
+                    'wall_scope':'Input tokenization through generated-answer completion, with prefill, decisions and all rejected side readouts; scorer and weight loading excluded. Backend single-request compute, not network/queue/serving latency.',
                     'peak_allocated_bytes':e.torch.cuda.max_memory_allocated(),'peak_reserved_bytes':e.torch.cuda.max_memory_reserved(),
                     'length_censored':trace['length_censored'],'committed_checked_candidate':committed is not None,
+                    'committed_side_readout_without_resampling':committed is not None,
+                    'committed_candidate_schema_checked':committed is not None and 'schema' in committed,
+                    'candidate_reuse_flag_is_correctness_guarantee':False,
                     'policy_file_sha256':policy_hash,
                     'formal_protocol_sha256':formal_hash,
+                    'assigned_shard':problem_shard(q['problem_id'],args.shards),'gpu_assignment':formal['gpu_assignment'],
                     'visible_gpu':os.environ.get('CUDA_VISIBLE_DEVICES')}
             assert record['compute_generated_tokens']>=record['delivered_tokens']
             append_jsonl(out,record)

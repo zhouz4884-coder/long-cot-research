@@ -1,0 +1,45 @@
+{
+  "scope": "Frozen-source/notebook API defects and formula-interface differences. Synthetic CPU controls, not model performance or evidence against the paper method.",
+  "source_revision": "6551e3000dcda3d76491f30cc687d64618807c5b",
+  "source_sha256": {
+    "risk_control_utils.py": "3ea01a3db242be5da9378ec41bd89b36010502458ec06ebef7643afe29f0bd2e",
+    "signal_util.py": "c1e621752e35be83265964abcf755963d62b5112e49064cd5f9d95a3bbd898bd",
+    "end2end.ipynb": "4ceeb92aba068f855c712cc468627b1b0cdf9325f87e85c336d58721fe1daf85"
+  },
+  "ucb_sample_size_controls": [
+    {
+      "independent_problem_count": 2,
+      "candidate_grid_size": 5,
+      "selected_threshold_or_minus1": -1,
+      "radius_used_by_snapshot": 0.47985259121880813,
+      "radius_for_actual_problem_n_without_family_correction": 0.7587135646925732,
+      "example_is_synthetic_api_control": true
+    },
+    {
+      "independent_problem_count": 2,
+      "candidate_grid_size": 5000,
+      "selected_threshold_or_minus1": 0,
+      "radius_used_by_snapshot": 0.015174271293851465,
+      "radius_for_actual_problem_n_without_family_correction": 0.7587135646925732,
+      "example_is_synthetic_api_control": true
+    }
+  ],
+  "upper_no_cross_control": {
+    "signal": [
+      0.2,
+      0.4
+    ],
+    "threshold": 0.9,
+    "correctness": [
+      0,
+      0
+    ],
+    "snapshot_loss": [
+      1.0
+    ],
+    "threshold_crossed": false,
+    "paper_eq8_triggered_upper_error": 0
+  },
+  "interpretation": "Notebook passes an averaged length-K vector; utility uses K as sample size, so denser grids incorrectly shrink its finite-sample correction. Upper fallback error also differs from the threshold-triggered Eq8 loss. Keep author snapshot immutable and declare an independent adaptation with explicit per-problem loss matrices.",
+  "numpy_version": "2.1.3"
+}

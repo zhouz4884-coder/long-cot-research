@@ -5,6 +5,7 @@ trajectory is marked as a proxy. Test must use actual frozen online policies.
 """
 import argparse
 import json
+import os
 from pathlib import Path
 import sys
 import time
@@ -17,6 +18,7 @@ from radar_engine import candidate, candidate_features
 from candidate_schema import scalar_schema
 from probe_engine import ProbeEngine
 from protocol_guard import validate_formal,validate_resume
+from risk_policy import problem_shard
 
 
 def main():
@@ -27,8 +29,10 @@ def main():
     p.add_argument('--shards',default=2,type=int)
     args=p.parse_args()
     assert 0<=args.shard<args.shards
+    assert os.environ.get('CUDA_VISIBLE_DEVICES')==str(args.shard),'Use the frozen physical GPU assignment'
     assert (ROOT/'provenance/formal_protocol.json').exists(), 'Formal reference budget not frozen yet'
     formal,formal_hash=validate_formal(ROOT,args.model)
+    assert args.shards==formal['gpu_shards'] and formal['gpu_assignment']=='problem_id_sha256_independent_of_split_membership'
     family_hash=None
     if args.split=='calibration':
         family_path=ROOT/'provenance/calibration_candidates.json'
@@ -40,13 +44,13 @@ def main():
     rows=[json.loads(s) for s in data.read_text(encoding='utf-8').splitlines()]
     out=ROOT/f'results/bank_{args.split}_{args.shard}.jsonl'
     previous=[json.loads(s) for s in out.read_text(encoding='utf-8').splitlines()] if out.exists() else []
-    expected_ids={r['problem_id'] for i,r in enumerate(rows) if i%args.shards==args.shard}
+    expected_ids={r['problem_id'] for r in rows if problem_shard(r['problem_id'],args.shards)==args.shard}
     done=validate_resume(previous,formal_hash,args.model,expected_ids)
     if family_hash is not None:
         assert all(r['candidate_family_sha256']==family_hash for r in previous),'Calibration rows belong to another frozen candidate family'
     e=ProbeEngine(args.model) if formal.get('capture_candidate_hidden',False) else Engine(args.model)
     for index,row in enumerate(rows):
-        if index%args.shards!=args.shard or row['problem_id'] in done:continue
+        if problem_shard(row['problem_id'],args.shards)!=args.shard or row['problem_id'] in done:continue
         assert validate_formal(ROOT,args.model)[1]==formal_hash,'Formal protocol changed during collection'
         if family_hash is not None:
             assert hashlib.sha256(family_path.read_bytes()).hexdigest()==family_hash,'Candidate family changed during calibration'
@@ -87,6 +91,8 @@ def main():
                 read['grade']=grade(read['text'],row['gold']);read['correct']=read['grade']['correct']
         record={'problem_id':row['problem_id'],'split':args.split,'model_path':args.model,'seed':seed,
                 'formal_protocol_sha256':formal_hash,
+                'assigned_shard':problem_shard(row['problem_id'],args.shards),'gpu_assignment':formal['gpu_assignment'],
+                'visible_gpu':os.environ['CUDA_VISIBLE_DEVICES'],
                 'candidate_family_sha256':family_hash,
                 'full':{'trace':public(trace),'answer':public(final),'correct':final['correct'],
                         'instrumented_reference_ms':trace['ms']+final['ms'],
@@ -99,7 +105,7 @@ def main():
         print(json.dumps({'bank':args.split,'index':index,'id':row['problem_id'],'full_correct':final['correct'],
                           'points':len(points),'wall_s':collection_ms/1000}),flush=True)
         del trace,final,points
-    expected=sum(i%args.shards==args.shard for i in range(len(rows)))
+    expected=len(expected_ids)
     assert len(out.read_text(encoding='utf-8').splitlines())==expected
     (ROOT/f'results/bank_{args.split}_{args.shard}.complete.json').write_text(json.dumps({'n':expected,'unix':time.time()}))
     print('POLICY_BANK_SHARD_COMPLETE',args.split,args.shard,expected,flush=True)

@@ -7,6 +7,23 @@ from stem_quality import stem_issues,numeric_gold_issues
 from protocol_guard import sha256,package_snapshot
 
 
+def verify_live_model(model_path,spec):
+    identity_path=ROOT/spec['model_identity_file']
+    assert sha256(identity_path)==spec['model_identity_manifest_sha256']
+    identity=json.loads(identity_path.read_text())
+    assert identity['path']==model_path and identity['revision']==spec['model_revision']
+    verified={}
+    for item in identity['files']:
+        assert Path(item['name']).name==item['name']
+        path=Path(model_path)/item['name'];hasher=hashlib.sha256()
+        with path.open('rb') as handle:
+            for block in iter(lambda:handle.read(8*1024*1024),b''):hasher.update(block)
+        assert path.stat().st_size==item['bytes'] and hasher.hexdigest()==item['sha256'],item['name']
+        verified[item['name']]=hasher.hexdigest()
+    print(json.dumps({'native_live_model_hashes_passed':len(verified),'revision':identity['revision']}),flush=True)
+    return verified
+
+
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--model',required=True)
     parser.add_argument('--shard',required=True,type=int);parser.add_argument('--shards',default=2,type=int)
@@ -17,6 +34,7 @@ def main():
     for name,digest in spec['source_sha256'].items():
         assert sha256(ROOT/name)==digest,'Native pilot runtime changed: '+name
     assert Path(args.model).name==spec['model_name']
+    model_files=verify_live_model(args.model,spec)
     data=ROOT/'data/pilot.jsonl';data_hash=hashlib.sha256(data.read_bytes()).hexdigest()
     rows=[json.loads(s) for s in data.read_text(encoding='utf-8').splitlines()][:spec['n']]
     rows=[q for q in rows if not stem_issues(q['question'],q['subject']) and not numeric_gold_issues(q['gold'])]
@@ -59,6 +77,8 @@ def main():
                  'grade':score,'wall_ms':wall_ms,'total_tokens':trace['tokens'],'length_censored':trace['length_censored'],
                  'eos_completed':trace['stop_reason']=='eos','same_thinking_prefix_control':control,
                  'protocol_sha256':protocol_hash,'data_sha256':data_hash,'quality_labels_available_during_generation':False,
+                 'model_revision':spec['model_revision'],'model_identity_manifest_sha256':spec['model_identity_manifest_sha256'],
+                 'live_model_file_sha256':model_files,
                  'peak_allocated_bytes':e.torch.cuda.max_memory_allocated(),'visible_gpu':os.environ.get('CUDA_VISIBLE_DEVICES')}
             append_jsonl(out,row)
             print(json.dumps({'native_pilot':index,'budget':budget,'correct':score['correct'],'closed':close is not None,

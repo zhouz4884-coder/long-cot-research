@@ -10,13 +10,13 @@ import numpy as np
 from scipy.stats import beta
 
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
-from risk_policy import quality_decision,features_at
+from risk_policy import quality_decision,features_at,problem_shard
 from protocol_guard import validate_formal
 from design_risk import strata_from_frozen_data,finite_test_risk_audit
 
 
 def load_bank(split,model_path):
-    _,formal_hash=validate_formal(ROOT,model_path)
+    formal,formal_hash=validate_formal(ROOT,model_path)
     df=json.loads((ROOT/'provenance/data_freeze.json').read_text())
     rows=[]
     for g in [0,1]:
@@ -26,6 +26,8 @@ def load_bank(split,model_path):
     assert len(rows)==len(expected) and {r['problem_id'] for r in rows}==expected
     assert all(r['formal_protocol_sha256']==formal_hash for r in rows)
     assert {r['model_path'] for r in rows}=={model_path}
+    assert all(r['assigned_shard']==problem_shard(r['problem_id'],formal['gpu_shards'])
+               and r['visible_gpu']==str(r['assigned_shard']) for r in rows),'Bank GPU assignment changed with the split/order'
     if split=='calibration':
         family_hash=hashlib.sha256((ROOT/'provenance/calibration_candidates.json').read_bytes()).hexdigest()
         assert all(r['candidate_family_sha256']==family_hash for r in rows),'Calibration does not match the frozen candidate family'

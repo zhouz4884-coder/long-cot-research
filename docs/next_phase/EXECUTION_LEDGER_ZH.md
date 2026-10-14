@@ -68,3 +68,9 @@ DEER、Conformal Thinking 和 SEVRA 分别冻结为 commit `c9dd19fbffa27f841cfe
 ## 本轮完整预算结果与接续
 
 共同29题的1024/2048/4096/8192/16384预算分别答对10/11/13/17/22。16384救回5题、反向改错0，11题仍触顶；5道改善均有精确答案控制。旧几何oracle不满足题设的问题已保留原版并纠正，GPU原始分数未改。正式参考预算待完整噪声/native审查；开发/校准/盲测仍未完成。全部方法、数据结论与恢复步骤见 `WORKLOG_20261014_CONTINUATION_ZH.md` 和 `CONTINUATION_RUNBOOK_ZH.md`。
+
+## 本轮基线与独立判断
+
+新增用户要求的 `RESEARCH_DECISION_LOG_ZH.md`，记录判断依据、实际尝试/效果、问题及未证实猜想，后续每轮与最终汇总更新。五篇正式OA主PDF身份与113页可读性核验通过；REFRAIN作者commit当前只有README/许可证。
+
+Conformal preliminary的N/K误用和upper fallback损失差异已在实际接口复现；新增双阈值独立适配及逐题N×K敏感性接口，不继承作者风险保证。M1现在12方法×265题=3180请求，仍是待实际执行的计划。正式GPU固定按ID分配，计时包含tokenization，未改当前采集分片。native启动新增实时模型身份核验，输出尚未产生时部署。详见 `WORKLOG_20261014_BASELINES_AND_DECISIONS_ZH.md`。

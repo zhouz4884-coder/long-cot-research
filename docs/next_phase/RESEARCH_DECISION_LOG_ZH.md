@@ -200,3 +200,17 @@ ASAG实际128/8192/16384两次scratch probe的IDs/身份、entropy/置信度均�
 实际尝试/结果：新增只读snapshot审计，只计newline-complete行、保留未写完尾部并不覆盖旧snapshot。36/530题、两分片18/18，1800个已完成checkpoint按真实tokenizer重建prompt+Full trace逐个核对prefix hash全部通过；ID唯一、开发成员、固定GPU0/1、per-problem seed、labels-after-generation、proxy计时标识一致。没有输出或采用部分准确率，也不宣称全银行完成。
 
 判断/下一依赖：当前继续已有530开发/265选择/训练/M1队列，主源码/数据/协议和review证据冻结不变。若后续身份或prefix不一致，先保留异常并定位代码/数值/数据路径，不能用继续训练掩盖失配；若完整M1没有质量—成本收益，再依据fixed/EAT前沿和风险门禁诊断。记录完整阶段结果后才进行科学GO/NO-GO，当前不预判。
+
+## D19：强基线审查按实际计时对照和依赖结构分别处理
+
+当前判断：REFRAIN和ASAG内嵌重新执行的paired FULL，DTSR当前格式没有内嵌FULL，必须绑定另一次实际M1 FULL及其policy SHA，明确它不是交错配对。REFRAIN跨题更新bandit，普通逐题IID Bootstrap/McNemar和主有限池证书的前提不成立，审查只给固定有序流的描述量，不借用这些区间/p值。
+
+实际实现：新增独立只读完整scope审查，必须有complete markers及全部冻结ID，检查protocol/model/seed/GPU、共享思考prefix，完整输出之后才重评分Gold。ASAG首次干预之前匹配prefix，STOP核对同一paid candidate，计算token不把复用候选再计一次；提供query/key归一化与每query Shannon变化的代数分解，只作诊断不作因果归因。所有总时延按实际sum比率，并单列FULL正确子集，不过滤失败后声称整体收益。
+
+问题/验证：初版假定FULL spec属性为type，读取真实builder后确认是kind并修正；同时绑定实际FULL budget和policy SHA。四项CPU控制本地/冻结远端通过，验证缺题/重复/错版本拒绝、有序流不继承IID统计、候选身份与复用费用检查、解析分解的数学量。用完整真实native29对复现18/13、0损失5收益、delta5/29、p=.0625；native更大预算的真实wall增加56.79%，这里只是统计helper控制，不是新的baseline结果。
+
+缺结果负控制实际执行：ASAG selection还没有完整输出，审查程序在读取Gold/写结果前以“Incomplete actual run”拒绝。这不是ASAG模型失败或分数。另一次远端确认是否有历史同名输出的检查遇到两条已验证SSH路线timeout，未获得该检查证据；不把观察失败视为worker终止。最后实际确认两开发worker存活、40/530，当前网络下不再断言最新数量。新工具不改任何冻结生成源码/参数，后续完整实测后再用。
+
+随后恢复：只检测配置中的公开endpoint/TCP/banner和异常类型，没有输出凭据；主route TCP/banner可达后，复用既有授权连接成功，同一worker PID1874879/1874880实际仍在运行。重新确认ASAG历史输出不存在，负控制证据补齐；没有重启任务或改变冻结源代码。两次观察timeout与模型实验状态区分留档。
+
+恢复后实际完成记录为47/530（GPU0=25、GPU1=22）。这是采集进度，不是部分质量或完整阶段验收。完整开发、选择、M1、独立校准、盲测及后续适用路线继续保持原目标。

@@ -1,0 +1,32 @@
+{
+  "checks": [
+    {
+      "configured_route_host": "10.15.0.47",
+      "configured_route_port": 22,
+      "status": "tcp_unavailable",
+      "elapsed_s": 5.01608060000035,
+      "error": {
+        "type": "TimeoutError",
+        "errno": null,
+        "winerror": null
+      }
+    },
+    {
+      "configured_route_host": "10.15.1.57",
+      "configured_route_port": 2222,
+      "status": "tcp_connected",
+      "elapsed_s": 0.07116369999948802,
+      "error": null
+    }
+  ],
+  "scope": "TCP reachability of previously configured endpoints only. No credentials read into output; no worker terminal state inferred.",
+  "recovery": {
+    "SSH_authenticated_with_existing_route": true,
+    "same_worker_pids_verified": [
+      1874879,
+      1874880
+    ],
+    "restart_performed": false,
+    "completed_bank_rows": 47
+  }
+}

@@ -6,6 +6,8 @@
 
 最新进展：完整58个native已审查/重评分，五组fresh GPU有限接口均通过，正式16k boxed协议已冻结，SHA `423f8b632d628443d9a4517bb8bb280714940776e1a4ddf2fbe166593ce323f2`。DTSR/REFRAIN/ASAG独立协议也已冻结。当前进入530题development bank，两原worker PID1874879/1874880确认存活，最近36/530落盘；不是530题完成或算法收益。主监督器PID1780322继续执行后续selection/train/M1。每次醒来重新查实际PID，不重启活着的worker。
 
+后续当前实际核查：SSH观察两次timeout后恢复，同一两worker继续存活、47/530落盘。只读snapshot的36题/1800 prefix审计保持历史证据；更新进度不扩大其审计范围。新strong-baseline分析工具见D19；缺结果guard与统计helper已验证，无新的baseline任务分数。
+
 native8k/16k为13/18正确，matched boxed为17/22（每组29），两组各4个native损失/0收益，精确paired p=.125。native增加预算的5个改善中4个在boxed8k已正确；2例已闭合thinking却截断final，延长同一轨迹后完成。正式参考为有界boxed FULL16384，仍有11/29触顶，不称自然无限FULL。详见D16–D17与 `NATIVE_PILOT_REVIEW_20261014_ZH.md`。
 
 远端目录：`/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013`。使用被gitignore的 `.tools/remote.py` 的 `connect()`；凭据不展示或在命令行传递。两张3090独立执行。旧研究目录、1648条输出、旧发布ZIP不覆盖。
@@ -47,6 +49,8 @@ M1包括12方法×265题=3180请求：FULL、固定1024/2048/4096/8192、预声�
 队列在 `m1_review` 等代理判读，不等用户再次确认。主目标仍为准确率下降≤1pp、wall-clock下降≥15%，并比较最佳同质量固定/EAT前沿。无收益先查风险门禁、测量/评分、固定预算与共同错题，再按原W6规则决定，不直接开发复杂网络或包装零效率。
 
 ## 后续必须完成
+
+独立完整strong-baseline分析入口已准备 `scripts/analyze_controlled_baseline.py`，使用与边界见 `CONTROLLED_BASELINE_ANALYSIS_CONTRACT_ZH.md` 及D19。它要求完整ID/markers并重新评分；ASAG/REFRAIN用内嵌新FULL，DTSR另绑定真实M1 FULL及policy plan。REFRAIN有序自适应不套普通IID统计或M1风险证书。当前只验证分析程序，不要运行缺结果分析并把拒绝当模型失败；不改冻结生成源码。
 
 ASAG独立适配已准备真实QK-window observer和四动作decoder。3组真实随机权重tiny Qwen3 CPU controls与9个CPU方程/tape controls通过；不是4B模型结果。第一次lazy-cache越界已修复/留档。细节、明确的实现歧义、待检验猜想见D14和 `ASAG_IMPLEMENTATION_CONTRACT_ZH.md`。
 

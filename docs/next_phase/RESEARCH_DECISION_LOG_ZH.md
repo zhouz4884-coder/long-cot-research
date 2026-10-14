@@ -164,3 +164,9 @@ REFRAIN作者repo已冻结为ba5c8b402431b9b18bfa55027361355fec85b7c5，实际�
 独立复核还发现零entropy不应禁止第一次confidence-only停止；修正这一实现条件。后续H1=0不能除零，明确继续并标reason，不制造无穷大判据。准备了长前缀GPU验收、完整online及freeze入口，但它们未运行，CPU通过不代替真实模型任务。
 
 待验证猜想：若后续H变化看似有效却不能保持质量，可能是首个ATP的query行数、key支持数/归一化、或scratch重算的数值变化影响了标量，而非已得到正确结论；须检查这些实际字段，并比较相同prefix/不同数值路径。若探测成本超过提前停止节省，检查每次复制/窗口前向/192-token probe与检测频率。若jump/exhausted_STOP有害，可能强行终止仍未修好的路径；保留该事件与FULL结果，不能把“已跳转”当“已修复”。目前仅条件猜想。
+
+## D15：fresh live验收也应记录实际前缀，而非请求长度
+
+准备GPU空闲窗口时复核发现 `validate_new_protocol.py` 的prefix_length写入请求length，续写随机数offset也用此上限；如果生成提前EOS，报告与实际状态就不一致。两侧采用同一个错误offset仍可能通过一致性，不能由通过标志推出正确的counter continuation。这是接口报告/控制定义的问题，未确认旧三前缀实际发生过提前EOS。
+
+已保留旧源码/旧本地验收JSON于interface_archive，改为实际state.tokens作为续写offset，分别写requested_max_tokens、actual_prefix_tokens、total prefix、实际stop reason；同时记录源码与冻结包版本。native绑定文件不变，不重启采集。正式冻结前必须用修正后的live脚本重新实际运行，CPU编译通过不算GPU通过；当前没有新增验收结果或模型质量结论。

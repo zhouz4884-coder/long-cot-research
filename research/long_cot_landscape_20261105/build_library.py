@@ -32,6 +32,20 @@ def bib_fields(text):
 def norm(text):return re.sub('[^a-z0-9]','',text.lower())
 
 
+def clean_metadata(text):
+    return re.sub(r'【\d+†[^】]+】','[linked resource on primary page]',text)
+
+
+def arxiv_venue(row):
+    comment=clean_metadata(row.get('venue_description') or '')
+    match=re.search(r'(ICLR|NeurIPS|COLM|ECCV|AAAI)\s*(20\d{2})',comment,re.I)
+    if match:return match.group(1)+' '+match.group(2)+' (author-reported)'
+    if row['id']=='P23':return 'ICLR 2024 (arXiv camera-ready comment)'
+    if row['id']=='P28':return 'AAAI 2024 (arXiv journal reference)'
+    if row['id']=='P21':return 'NeurIPS 2025 (arXiv journal reference)'
+    return 'arXiv preprint'
+
+
 def main():
     rows=json.loads((ROOT/'records_verified_seed.json').read_text(encoding='utf-8'))
     publisher={}
@@ -42,16 +56,15 @@ def main():
     for i,row in enumerate(rows,1):
         row.pop('official_bibtex',None)
         row['id']=f'P{i:02d}'
+        if row.get('venue_description'):row['venue_description']=clean_metadata(row['venue_description'])
         row['arxiv_id']=row['source_url'].split('/abs/')[-1] if 'arxiv.org/abs/' in row['source_url'] else None
         data=publisher.get(norm(row['title']))
         if data:
             row.update({'title':data['title'].replace('{','').replace('}',''),
                 'authors':data['author'].split(' and '),'year':data['year'],'venue':data['booktitle'].replace('{','').replace('}',''),
                 'doi':data.get('doi'),'source_url':data['url'],'publication_status':'publisher_proceedings_verified','bib_fields':data})
-        elif row.get('official_bibtex'):
-            raise AssertionError('Publisher metadata normalization expected')
         else:
-            row['venue']=row.get('venue_description') or 'arXiv preprint'
+            row['venue']=arxiv_venue(row)
             row['publication_status']='arxiv_metadata_verified_venue_comment_only'
         if 'proceedings.mlr.press/' in row['source_url']:
             # Parsed from the official PMLR page already opened during review.

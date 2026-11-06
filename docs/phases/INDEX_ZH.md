@@ -22,6 +22,6 @@
 
 只读查看了 ContractKV 的 README 与少量 docs 标题/结构，借鉴的是：入口摘要链接阶段总报告；PhaseN总览与子实验报告分层；计划、实际结果、决策及下一阶段问题分开；每阶段显式列 Status/Boundaries/Exit Criteria/Reproducibility。没有复制该项目的方法、数据、实验数值、环境凭据或执行命令。
 
-结构参考：[环境阶段的退出门槛](<D:/VLA_QWEN/contract kv/docs/phase0_environment_report.md>)、[阶段收尾的结果/边界/复现结构](<D:/VLA_QWEN/contract kv/docs/phase2_characterization_closeout_report.md>)、[计划的分门槛组织](<D:/VLA_QWEN/contract kv/docs/tsc_revision_phase2_plan.md>)。ACL的科学内容与状态全部来自下列五页各自引用的ACL证据。
+本机结构参考（不属于本仓库）：`D:\VLA_QWEN\contract kv\docs\phase0_environment_report.md`、`phase2_characterization_closeout_report.md`、`tsc_revision_phase2_plan.md`。ACL的科学内容与状态全部来自五个Phase页各自引用的ACL证据。
 
 Phase文档初稿生成时仅新增本目录六份文档。随后主任务统一更新根README和仓库入口，并完成独立发布审查；原冻结协议和原始run不改。整理及上传范围见 [发布说明](../repository/PUBLISH_SCOPE_ZH.md)。

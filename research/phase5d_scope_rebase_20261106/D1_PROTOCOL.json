@@ -1,0 +1,57 @@
+{
+  "id": "Phase5D_D1_native8_interface_v1",
+  "status": "FROZEN_BEFORE_NATIVE_MODEL_OUTPUTS",
+  "date": "2026-11-06",
+  "cases": 8,
+  "dataset": "officialGSM8Ktestcommit3101c7d5072418e28b9008a6636bde82a006892c",
+  "selection": "fixedhashonly,old300literaloverlap0",
+  "quality_scope": "nativeunmodifiedContinue baseline only;notalgorithmgain",
+  "model": "Qwen3-4B",
+  "model_manifest": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+  "dtype": "FP16",
+  "backend": "SDPA",
+  "torch": "2.8.0+cu128",
+  "transformers": "4.55.2",
+  "batch": 1,
+  "thinking": true,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0
+  },
+  "seeds": "20261106+case_index0",
+  "scientific_token_budget": null,
+  "normal_stop": "configuredEOS",
+  "technical_context_limit": "actualmodel.config.max_position_embeddings",
+  "short_GPU_time_cutoff": null,
+  "checkpoint": "firstobservedblankparagraphafter64generatedtokens whileopen_think;neverfuture/Gold",
+  "diagnostic_requested_tokens": 32,
+  "diagnostic_actual_tokens": "min(32,context_capacity-prefix_length),notqualitycap",
+  "reference": "streamhotclone vs coldprefill sameoriginaltokenIDs + repeatcold;restorelocalRNG,notnewUser",
+  "numeric_criteria": {
+    "maxabs_hot_cold": 0.05,
+    "KL_hot_cold": 0.0001,
+    "repeatcoldmax": 1e-05,
+    "original_cache_unchanged": true,
+    "hot_matches_unintervened_future": true
+  },
+  "strict_criteria_additional": [
+    "same_top1",
+    "same_sampled_diagnostic_tokens"
+  ],
+  "if_strict_failure": "report firstdivergence/margins,disablehotshortcut;no seedreplacement or posthoc thresholdwidening",
+  "no_new_actions": [
+    "repair",
+    "crop optimization",
+    "suffixKVgraft",
+    "unverified bridge",
+    "onlineGold",
+    "D2largeexperiment"
+  ],
+  "primary_final_answer": "LastBox on final response AFTER generated thinkclose only;not unfinishedthinking candidate",
+  "CPU_native_checks": 58,
+  "CPU_support_checks": "30unit+600independent agenda cases",
+  "source_engine_sha256": "064f31fc1af93bd2d10a17244de30cd062a9bbd6ec8e188e7ee195c0440fd5c2",
+  "source_worker_sha256": "3f5b9644b86b49d429b33f0c89006ebc10eddae8c7b6235eb49853a66df23b82"
+}

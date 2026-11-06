@@ -106,6 +106,14 @@ def main():
         'research/phase5c_goal_contract_20261106/results/resume_worker_1/32__ProjectedContractEvidence.json',
     ]
     representative.extend(path for path in phase5c_samples if path in local)
+    phase5d_samples = [
+        'docs/phases/Phase5D_方法重构与原生接口准入_ZH.md',
+        'research/phase5d_scope_rebase_20261106/STAGE1_CLOSEOUT_ZH.md',
+        'research/phase5d_scope_rebase_20261106/D1_NATIVE_INTERFACE_PASS.json',
+        'research/phase5d_scope_rebase_20261106/native_results/worker_0/D1_01/checkpoint_logits.npz',
+        'research/phase5d_scope_rebase_20261106/d0_scoring/D0_RESULTS.json',
+    ]
+    representative.extend(path for path in phase5d_samples if path in local)
     samples = []
     for path in representative:
         blob = api(prefix + '/git/blobs/' + local[path])

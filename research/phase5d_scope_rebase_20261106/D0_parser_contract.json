@@ -1,0 +1,23 @@
+{
+  "schema_version": "phase5d_D0_frozen_contract_v1",
+  "frozen_at_utc": "2026-11-06T11:47:26.854818+00:00",
+  "status": "FROZEN_BEFORE_NEW_SELECTIONS_AND_SCORES",
+  "extractor_sha256": "e64ef21c1b9e90ad8ecb41b0ce5058307248d33668b91fbfa3ece4e98b69d37d",
+  "semantic_grader_sha256": "b6cd1b9f15d015204e54c445ab0f4f1d1bdc93775515ee4bfc8fdb41e5823980",
+  "generic_test_source_sha256": "54ef1ffa8efb9afedac211acdfbbc78ae99492789cdf3ba5e236db4b19882d96",
+  "generic_backend_test_sha256": "bc37f4d63a725d50510d2e542c086e5ea9fd1e52eb878c472c08fcd749ea10a9",
+  "policies": [
+    "LastBox",
+    "LastFinalAnswer",
+    "FirstCompleteAnswer",
+    "ConservativeFinal"
+  ],
+  "selection_inputs": "Text and fixed policy only; never Gold, correctness, level or quality labels.",
+  "fixed_last_policy": "Last complete object of the declared kind; later incomplete object abstains. No arbitrary last number.",
+  "surface_disagreement": "Flagged only; conservative policy abstains. Not a proof of logical contradiction.",
+  "LastBox_not_oracle_upper_bound": true,
+  "candidate_hit_oracle_computed": false,
+  "old_score_policy": "Phase5-C main scores/bytes unchanged. D0 results are separate retrospective diagnostics.",
+  "offline_only": "All old text is available here. Never use future final markers to trigger an earlier online checkpoint.",
+  "scope": "32 thinking texts plus224 generated answer_text records, four fixed policies each; correlated observations, not1024 independent problems."
+}

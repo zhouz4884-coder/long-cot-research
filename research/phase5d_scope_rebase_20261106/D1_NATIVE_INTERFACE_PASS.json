@@ -1,0 +1,28 @@
+{
+  "status": "PASS_NATIVE_CONTINUE_AND_SCHEDULE_MATCHED_REFERENCE_ONLY",
+  "n": 8,
+  "original_bulk_prefill_numeric_gate_passed": 6,
+  "original_results_unchanged": true,
+  "native_EOS": 8,
+  "context_cap": 0,
+  "original_top1_and32_tokens_match": 8,
+  "schedule_matched_all_KV_and_logits_exact_and32_match": 8,
+  "allowed": [
+    "nativeContinue",
+    "sameoriginaltokenIDs+sameprefillschedule coldreference"
+  ],
+  "not_admitted": [
+    "bulk-prefill bit-exact shortcut",
+    "KVcrop performancepath",
+    "old suffixKV graft",
+    "naturalrepair/G integration"
+  ],
+  "baseline_correctness": "8/8descriptive,single seed perproblem,noalgorithmrepair",
+  "generation_tokens": 15035,
+  "minmax_generation_tokens": [
+    1077,
+    3498
+  ],
+  "GPU_minutes_native": 16.672747457027434,
+  "GPU_minutes_schedulecontrol": 2.224413883686066
+}

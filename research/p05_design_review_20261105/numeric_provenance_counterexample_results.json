@@ -1,0 +1,262 @@
+[
+  {
+    "id": "positive_explicit_use",
+    "expected_support_edges_hand_authored": [
+      [
+        0,
+        1
+      ]
+    ],
+    "heuristic_pairs": [
+      [
+        0,
+        1
+      ]
+    ],
+    "checks": {
+      "must_find": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "Positive control: an explicit same-quantity use."
+  },
+  {
+    "id": "same_value_collision",
+    "expected_support_edges_hand_authored": [],
+    "heuristic_pairs": [
+      [
+        0,
+        1
+      ]
+    ],
+    "checks": {
+      "must_spuriously_find": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "Equal value does not establish a reference or derivation."
+  },
+  {
+    "id": "negated_old_claim",
+    "expected_support_edges_hand_authored": [],
+    "heuristic_pairs": [
+      [
+        0,
+        1
+      ]
+    ],
+    "checks": {
+      "must_spuriously_find": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "A rejection is a mention/contrast edge, not active numeric support."
+  },
+  {
+    "id": "units_collide",
+    "expected_support_edges_hand_authored": [],
+    "heuristic_pairs": [
+      [
+        0,
+        1
+      ]
+    ],
+    "checks": {
+      "must_spuriously_find": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "Dimensioned quantities with the same number differ."
+  },
+  {
+    "id": "branch_scope_collision",
+    "expected_support_edges_hand_authored": [],
+    "heuristic_pairs": [
+      [
+        0,
+        1
+      ]
+    ],
+    "checks": {
+      "must_spuriously_find": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "Different conditional scopes are not one binding."
+  },
+  {
+    "id": "first_occurrence_not_actual_source",
+    "expected_support_edges_hand_authored": [
+      [
+        1,
+        2
+      ]
+    ],
+    "heuristic_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "checks": {
+      "must_spuriously_find": true,
+      "must_miss": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "The actual referent is a later independent occurrence, not the first global number."
+  },
+  {
+    "id": "question_number_used_as_new_quantity",
+    "expected_support_edges_hand_authored": [
+      [
+        0,
+        1
+      ]
+    ],
+    "heuristic_pairs": [],
+    "checks": {
+      "must_miss": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "Being in the question as a different quantity must not suppress a derived binding."
+  },
+  {
+    "id": "implicit_pronoun",
+    "expected_support_edges_hand_authored": [
+      [
+        0,
+        1
+      ]
+    ],
+    "heuristic_pairs": [],
+    "checks": {
+      "must_miss": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "Coreference need not repeat the numeric literal."
+  },
+  {
+    "id": "equivalent_expression",
+    "expected_support_edges_hand_authored": [
+      [
+        0,
+        1
+      ]
+    ],
+    "heuristic_pairs": [],
+    "checks": {
+      "must_miss": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "Atomic numeric tokens do not evaluate symbolic equivalence."
+  },
+  {
+    "id": "number_word",
+    "expected_support_edges_hand_authored": [
+      [
+        0,
+        1
+      ]
+    ],
+    "heuristic_pairs": [],
+    "checks": {
+      "must_miss": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "Number words and aliases can carry the dependency."
+  },
+  {
+    "id": "unit_conversion",
+    "expected_support_edges_hand_authored": [
+      [
+        0,
+        1
+      ]
+    ],
+    "heuristic_pairs": [],
+    "checks": {
+      "must_miss": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "Semantic equality may require unit conversion, not equal raw magnitudes."
+  },
+  {
+    "id": "approximation_not_identity",
+    "expected_support_edges_hand_authored": [],
+    "heuristic_pairs": [
+      [
+        0,
+        1
+      ]
+    ],
+    "checks": {
+      "must_spuriously_find": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "Rounded coincidence is not a unique provenance key."
+  },
+  {
+    "id": "conditional_question_value",
+    "expected_support_edges_hand_authored": [
+      [
+        0,
+        1
+      ]
+    ],
+    "heuristic_pairs": [],
+    "checks": {
+      "must_miss": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "A question value needs its condition; resolving that condition is an intermediate step."
+  },
+  {
+    "id": "dynamic_initial_question_fact",
+    "expected_support_edges_hand_authored": [
+      [
+        0,
+        1
+      ]
+    ],
+    "heuristic_pairs": [],
+    "checks": {
+      "must_miss": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "Initial stock=10 remains a historical fact, not current stock=10 at every later time."
+  },
+  {
+    "id": "list_marker_collision",
+    "expected_support_edges_hand_authored": [],
+    "heuristic_pairs": [
+      [
+        0,
+        1
+      ]
+    ],
+    "checks": {
+      "must_spuriously_find": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "Enumeration numerals are not derived quantities."
+  },
+  {
+    "id": "rational_normalization_positive",
+    "expected_support_edges_hand_authored": [
+      [
+        0,
+        1
+      ]
+    ],
+    "heuristic_pairs": [
+      [
+        0,
+        1
+      ]
+    ],
+    "checks": {
+      "must_find": true
+    },
+    "status": "CONSTRUCTED_CONTROL_NOT_NATURAL_LABEL",
+    "reason": "Exact rational normalization handles this limited notation change only."
+  }
+]

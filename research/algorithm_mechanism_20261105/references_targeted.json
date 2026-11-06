@@ -1,0 +1,263 @@
+{
+  "scope": "13 targeted inspiration references; additional existing neighbors remain in prior62 library; no exhaustive novelty claim",
+  "records": [
+    {
+      "id": "M01",
+      "title": "How do Language Models Bind Entities in Context?",
+      "authors": [
+        "Jiahai Feng",
+        "Jacob Steinhardt"
+      ],
+      "publication_year": 2024,
+      "venue": "International Conference on Learning Representations (ICLR 2024)",
+      "arxiv_id": "2310.17191",
+      "doi": null,
+      "official_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/9d1b7fc578c0d2d6431fc26d736ecaf3-Abstract-Conference.html",
+      "official_pdf": "https://proceedings.iclr.cc/paper_files/paper/2024/file/9d1b7fc578c0d2d6431fc26d736ecaf3-Paper-Conference.pdf",
+      "methods_read": [
+        "Sections 2-4: causal mediation/interchange, factorizability, mean interventions and binding ID geometry",
+        "Section 5: generality and limitations"
+      ],
+      "verification": "official_proceedings_and_primary_fulltext_verified",
+      "boundary": "Entity-attribute binding is not computation-stage tracking; original model families/task scope do not establish the mechanism in Qwen3."
+    },
+    {
+      "id": "M02",
+      "title": "Mixing Mechanisms: How Language Models Retrieve Bound Entities In-Context",
+      "authors": [
+        "Yoav Gur-Arieh",
+        "Mor Geva",
+        "Atticus Geiger"
+      ],
+      "publication_year": 2026,
+      "venue": "International Conference on Learning Representations (ICLR 2026)",
+      "arxiv_id": "2510.06182v2",
+      "doi": null,
+      "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/2eeff35664016c7f0f8aa704f0d9a83e-Abstract-Conference.html",
+      "official_pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/2eeff35664016c7f0f8aa704f0d9a83e-Paper-Conference.pdf",
+      "methods_read": [
+        "Sections 3.1-3.4: positional/lexical/reflexive causal hypotheses and distinguishing counterfactual interchange",
+        "Appendix D.2: choosing layers before retrieved-answer copying"
+      ],
+      "verification": "official_proceedings_and_primary_fulltext_verified",
+      "boundary": "Nine models from Gemma, Qwen2.5 and Llama3.1, entity-retrieval tasks; not a demonstrated Qwen3 stage-revision mechanism."
+    },
+    {
+      "id": "M03",
+      "title": "Iteration Head: A Mechanistic Study of Chain-of-Thought",
+      "authors": [
+        "Vivien Cabannes",
+        "Charles Arnal",
+        "Wassim Bouaziz",
+        "Alice Yang",
+        "Francois Charton",
+        "Julia Kempe"
+      ],
+      "publication_year": 2024,
+      "venue": "Advances in Neural Information Processing Systems 37 (NeurIPS 2024)",
+      "arxiv_id": "2406.02128v2",
+      "doi": "10.52202/079017-3463",
+      "official_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/c50f8180ef34060ec59b75d6e1220f7a-Abstract-Conference.html",
+      "official_pdf": "https://proceedings.neurips.cc/paper_files/paper/2024/file/c50f8180ef34060ec59b75d6e1220f7a-Paper-Conference.pdf",
+      "fulltext_used": "https://arxiv.org/html/2406.02128v2",
+      "methods_read": [
+        "Sections 2-3: iterative tasks and two-layer iteration-head construction",
+        "Section 4: controlled training/transfer and alternative circuits"
+      ],
+      "verification": "official_proceedings_verified_author_fulltext_read",
+      "tool_limitation": "Official PDF exceeds web-tool size limit; author arXiv HTML used for method reading.",
+      "boundary": "Small controlled transformers with learned absolute positional embeddings; not evidence of a unique stage pointer in pretrained Qwen3."
+    },
+    {
+      "id": "M04",
+      "title": "Measuring and Narrowing the Compositionality Gap in Language Models",
+      "authors": [
+        "Ofir Press",
+        "Muru Zhang",
+        "Sewon Min",
+        "Ludwig Schmidt",
+        "Noah A. Smith",
+        "Mike Lewis"
+      ],
+      "publication_year": 2023,
+      "venue": "Findings of the Association for Computational Linguistics: EMNLP 2023",
+      "pages": "5687-5711",
+      "arxiv_id": "2210.03350",
+      "doi": "10.18653/v1/2023.findings-emnlp.378",
+      "official_url": "https://aclanthology.org/2023.findings-emnlp.378/",
+      "official_pdf": "https://aclanthology.org/2023.findings-emnlp.378.pdf",
+      "methods_read": [
+        "Introduction and task definition: compositionality gap conditional on single-hop success",
+        "Elicitive prompting/self-ask decomposition"
+      ],
+      "verification": "official_proceedings_and_primary_fulltext_verified",
+      "boundary": "Behavioral multi-hop QA and prompting, not latent stage localization; improved explicit decomposition does not identify the internal cause."
+    },
+    {
+      "id": "M05",
+      "title": "Towards Best Practices of Activation Patching in Language Models: Metrics and Methods",
+      "authors": [
+        "Fred Zhang",
+        "Neel Nanda"
+      ],
+      "publication_year": 2024,
+      "venue": "International Conference on Learning Representations (ICLR 2024)",
+      "arxiv_id": "2309.16042v2",
+      "doi": null,
+      "official_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/06a52a54c8ee03cd86771136bc91eb1f-Abstract-Conference.html",
+      "official_pdf": "https://proceedings.iclr.cc/paper_files/paper/2024/file/06a52a54c8ee03cd86771136bc91eb1f-Paper-Conference.pdf",
+      "methods_read": [
+        "Sections 3-5: Gaussian noise versus symmetric replacement, metrics, patching windows",
+        "Appendices: arithmetic and task-specific controls"
+      ],
+      "verification": "official_proceedings_and_primary_fulltext_verified",
+      "boundary": "Patching results depend on corruption, metric and intervention unit; local effect or probe decodability is not a semantic identification guarantee."
+    },
+    {
+      "id": "M06",
+      "title": "Belief Revision: The Adaptability of Large Language Models Reasoning",
+      "authors": [
+        "Bryan Wilie",
+        "Samuel Cahyawijaya",
+        "Etsuko Ishii",
+        "Junxian He",
+        "Pascale Fung"
+      ],
+      "publication_year": 2024,
+      "venue": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+      "pages": "10480-10496",
+      "arxiv_id": null,
+      "doi": "10.18653/v1/2024.emnlp-main.586",
+      "official_url": "https://aclanthology.org/2024.emnlp-main.586/",
+      "official_pdf": "https://aclanthology.org/2024.emnlp-main.586.pdf",
+      "official_code": "https://github.com/HLTCHKUST/belief-revision",
+      "methods_read": [
+        "Section 3.1: premises, conclusions and context-relative belief",
+        "Section 3.2: two-time-step delta reasoning",
+        "Update-versus-maintenance evaluation conditions"
+      ],
+      "verification": "official_proceedings_and_primary_fulltext_verified",
+      "boundary": "Behavioral revision under evolving and sometimes defeasible premises; no localization of an internal belief store or stage pointer."
+    },
+    {
+      "id": "M07",
+      "title": "PAL: Program-aided Language Models",
+      "authors": [
+        "Luyu Gao",
+        "Aman Madaan",
+        "Shuyan Zhou",
+        "Uri Alon",
+        "Pengfei Liu",
+        "Yiming Yang",
+        "Jamie Callan",
+        "Graham Neubig"
+      ],
+      "publication_year": 2023,
+      "venue": "Proceedings of the 40th International Conference on Machine Learning",
+      "pages": "10764--10799",
+      "volume": "202",
+      "official_url": "https://proceedings.mlr.press/v202/gao23f.html",
+      "arxiv_id": "2211.10435",
+      "verification": "primary_PMLR_metadata_verified"
+    },
+    {
+      "id": "M08",
+      "title": "Causal Abstractions of Neural Networks",
+      "authors": [
+        "Atticus Geiger",
+        "Hanson Lu",
+        "Thomas Icard",
+        "Christopher Potts"
+      ],
+      "publication_year": 2021,
+      "venue": "Advances in Neural Information Processing Systems 34",
+      "official_url": "https://papers.neurips.cc/paper_files/paper/2021/hash/4f5c422f4d49a5a807eda27434231040-Abstract.html",
+      "arxiv_id": "2106.02997",
+      "verification": "primary_proceedings_framework_verified"
+    },
+    {
+      "id": "M09",
+      "title": "Let's Verify Step by Step",
+      "authors": [
+        "Hunter Lightman",
+        "Vineet Kosaraju",
+        "Yura Burda",
+        "Harri Edwards",
+        "Bowen Baker",
+        "Teddy Lee",
+        "Jan Leike",
+        "John Schulman",
+        "Ilya Sutskever",
+        "Karl Cobbe"
+      ],
+      "publication_year": 2023,
+      "venue": "arXiv preprint",
+      "official_url": "https://arxiv.org/abs/2305.20050",
+      "arxiv_id": "2305.20050",
+      "verification": "primary_author_preprint_verified; no new formal_venue_assertion"
+    },
+    {
+      "id": "M10",
+      "title": "VCORE: Variance-Controlled Optimization-based Reweighting for Chain-of-Thought Supervision",
+      "authors": [
+        "Xuan Gong",
+        "Senmiao Wang",
+        "Hanbo Huang",
+        "Ruoyu Sun",
+        "Shiyu Liang"
+      ],
+      "publication_year": 2026,
+      "venue": "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      "pages": "28161--28180",
+      "doi": "10.18653/v1/2026.acl-long.1298",
+      "official_url": "https://aclanthology.org/2026.acl-long.1298/",
+      "verification": "official_metadata_rechecked; formulas/code_reviewed_in_linked_reports"
+    },
+    {
+      "id": "M11",
+      "title": "GRAIL: Gradient-Reweighted Advantages for Reinforcement Learning with Verifiable Rewards",
+      "authors": [
+        "Tej Deep Pala",
+        "Vernon Toh",
+        "Soujanya Poria"
+      ],
+      "publication_year": 2026,
+      "venue": "arXiv preprint",
+      "arxiv_id": "2606.04889",
+      "official_url": "https://arxiv.org/abs/2606.04889",
+      "verification": "primary_author_preprint_rechecked"
+    },
+    {
+      "id": "M12",
+      "title": "LESS: Selecting Influential Data for Targeted Instruction Tuning",
+      "authors": [
+        "Mengzhou Xia",
+        "Sadhika Malladi",
+        "Suchin Gururangan",
+        "Sanjeev Arora",
+        "Danqi Chen"
+      ],
+      "publication_year": 2024,
+      "venue": "Proceedings of the 41st International Conference on Machine Learning",
+      "pages": "54104--54132",
+      "volume": "235",
+      "official_url": "https://proceedings.mlr.press/v235/xia24c.html",
+      "verification": "primary_PMLR_metadata_rechecked"
+    },
+    {
+      "id": "M13",
+      "title": "A truth maintenance system",
+      "authors": [
+        "Jon Doyle"
+      ],
+      "publication_year": 1979,
+      "venue": "Artificial Intelligence",
+      "volume": "12",
+      "number": "3",
+      "pages": "231--272",
+      "doi": "10.1016/0004-3702(79)90008-0",
+      "official_url": "https://www.sciencedirect.com/science/article/abs/pii/0004370279900080",
+      "verification": "primary_metadata_and_abstract; not_fulltext_read_this_turn"
+    }
+  ]
+}

@@ -1,0 +1,2047 @@
+=== PAGE 1 ===
+Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (V olume 1: Long Papers), pages 28161–28180
+July 2-7, 2026 ©2026 Association for Computational Linguistics
+VCORE: Variance-Controlled Optimization-based Reweighting for
+Chain-of-Thought Supervision
+Xuan Gong1, Senmiao Wang2, Hanbo Huang 1, Ruoyu Sun 2, Shiyu Liang 1*
+1 Shanghai Jiao Tong University,2 Chinese University of Hong Kong (Shenzhen)
+{gongxuan0610, hhuang417, lsy18602808513}@sjtu.edu.cn,
+senmiaowang1@link.cuhk.edu.cn,ruoyus@illinois.edu
+Abstract
+Supervised fine-tuning (SFT) on long chain-
+of-thought (CoT) trajectories has emerged as
+a crucial technique for enhancing the reason-
+ing abilities of large language models (LLMs).
+However, the standard cross-entropy loss treats
+all tokens equally, ignoring their heterogeneous
+contributions across a reasoning trajectory.
+This uniform treatment leads to misallocated
+supervision and weak generalization, especially
+in complex, long-form reasoning tasks. To ad-
+dress this, we introduceVariance-Controlled
+Optimization-basedREweighting (VCORE),
+a principled framework that reformulates CoT
+supervision as a constrained optimization prob-
+lem. By adopting an optimization-theoretic
+perspective, VCORE enables a principled and
+adaptive allocation of supervision across to-
+kens, thereby aligning the training objective
+more closely with the goal of robust reasoning
+generalization. Empirical evaluations demon-
+strate that VCORE achieves the strongest over-
+all average performance, with especially clear
+gains on lower-capacity models. Across both
+in-domain and out-of-domain settings, VCORE
+achieves substantial performance gains on
+mathematical and coding benchmarks, using
+models from the Qwen3 series (4B, 8B, 32B)
+and LLaMA-3.1-8B-Instruct. Moreover, we
+show that VCORE serves as a more effec-
+tive initialization for subsequent reinforcement
+learning, establishing a stronger foundation for
+advancing the reasoning capabilities of LLMs.1
+1 Introduction
+Recent advances in LLMs have highlighted the
+impressive benefit of long chain-of-thought (CoT)
+for enhancing the reasoning capabilities. Recent
+LLMs, such as OpenAI-o1 (Jaech et al., 2024),
+DeepSeek-R1 (Guo et al., 2025a), Kimi k1.5 (Team
+et al., 2025a), and Qwen3 series (Yang et al., 2025),
+*Corresponding author
+1The code will be released at https://github.com/
+coder-gx/VCORE.
+Uniform Token Weighting VCORE Token Weighting
+Figure 1:Overview of VCORE.Compared to the standard
+cross-entropy loss, VCORE approaches long-CoT SFT from
+an optimization perspective and adjusts token weights accord-
+ing to their gradient utility, thereby enabling more effective
+use of supervision signals and improving generalization.
+pursue this direction by scaling CoT lengths and
+show strong reasoning performance on tasks such
+as challenging math problem solving and code gen-
+eration benchmarks.
+Beyond reinforcement learning (RL) and test-
+time methods, long CoT supervised fine-tuning
+(SFT) has been increasingly adopted by AI labs
+and companies (Team, 2025; Muennighoff et al.,
+2025; Xu et al., 2025; Labs, 2025; Ye et al., 2025).
+Compared with these two paradigms, long-CoT
+SFT typically distills reasoning traces from teacher
+models or curated datasets, offering a more straight-
+forward yet effective route to improving reason-
+ing. Nevertheless, most existing long-CoT SFT
+works emphasize engineering implementations and
+data recipes, leaving substantial blanks on the
+optimization-algorithm progress.
+Unfortunately, long-CoT SFT is particularly sus-
+ceptible to supervision noise, which can lead to
+misallocated supervision and degraded generaliza-
+tion (Luo et al., 2025; Lobo et al., 2025). To a
+large extent, this susceptibility can be attributed to
+the convention of uniform token weighting in the
+cross-entropy loss across lengthy reasoning traces
+(e.g. exceeding 1k tokens). A growing body of ev-
+idence shows that: (1) not all intermediate tokens
+28161
+=== PAGE 2 ===
+are equally worth learning from (Choi et al., 2025;
+Li et al., 2025); (2) spurious or unfaithful tokens
+may corrupt learning signals (Chen et al., 2025b;
+Turpin et al., 2023; Zhou et al., 2024). These find-
+ings motivatebreaking the limitation of uniform
+token weightingin long-CoT supervision.
+The above discussion leads to a central question:
+Can we design a long CoT supervision algorithm
+that reweights tokens more effectively through an
+optimization-based approach?
+In this paper, we answer this question by propos-
+ingVCORE(Figure 1): a variance-controlled,
+optimization-based reweighting framework for
+CoT supervision. VCORE departs from prior
+heuristics and formulates token reweighting as a
+constrained optimization problem: for each trajec-
+tory, compute the distribution over token positions
+that maximizes expected loss descent under a single
+SGD step, subject to a KL constraint for stability.
+This yields a closed-formGibbs distributionover
+token-wise gradient utilities, directly grounded in
+first-order descent dynamics. To efficiently esti-
+mate utilities, VCORE introduces a lightweight
+one-backward probing trickthat requires only one
+backward pass and forward-mode perturbations per
+batch. To ensure stable updates, it further rescales
+the weights using a principled variance control co-
+efficientα, which matches the update variance to
+that of uniform weighting. This end-to-end for-
+mulation identifies high-impact tokens from the
+training signal itself,without relying on teacher
+guidance, confidence thresholds or entropy filters.
+Our contributions are summarized as follows:
+• We cast CoT supervision as a constrained opti-
+mization problem over token weights, grounded
+in the dynamics of SGD. This formulation yields
+a closed-form Gibbs distribution that allocates
+weight based on token-level gradient utility.
+• We proposeVCORE, a unified framework that
+combines optimization-derived token reweight-
+ing with variance-controlled scaling in a single
+efficient pipeline.
+• VCORE outperforms baselines on math and
+code benchmarks, with particularly strong gains
+on lower-capacity models, improving both in-
+domain and out-of-domain performance.
+• VCORE further strengthens RL fine-tuning by
+providing a more effective initialization, yielding
+higher post-RL performance.
+2 Related Work
+Due to space constraints, we present a concise
+overview here; the complete related work is pro-
+vided in Appendix B.
+SFT for Reasoning.Beyond chain-of-thought
+(CoT) prompting (Wei et al., 2022), supervised
+fine-tuning (SFT) onlongCoT traces has emerged
+as a simple and effective way to imbue LLMs with
+slow, multi-step reasoning, often via distillation
+from stronger teachers or curated rationales (Team,
+2025; Muennighoff et al., 2025; Xu et al., 2025;
+Labs, 2025). Compared to alternatives that require
+on-policy rollouts, long-CoT SFT is operationally
+lightweight, attains strong generalization, and fre-
+quently serves as an initialization for subsequent
+RL-based improvement (Yeo et al., 2025).
+Token Reweighting in SFT.Some recent studies
+modify SFT by adopting token-level loss reweight-
+ing. Wu et al. (2025) reinterprets standard SFT
+as a policy-gradient-style update with an implicit
+1/πθimportance factor that over-weights low-
+probability tokens; it therefore introduces Dynamic
+Fine-Tuning (DFT), which rectifies the update by
+multiplying per-token loss by the model’s proba-
+bility for the target token. Qin and Springenberg
+(2025) shows that SFT on curated/filtered data op-
+timizes a lower bound to an RL objective; accord-
+ingly, it proposes Importance-weighted SFT (iw-
+SFT) which tightens that bound by importance-
+weighting the SFT log-likelihood relative to a ref-
+erence or current policy.
+Our method (VCORE) is also an SFT-stage
+token-level reweighting, yet it isconceptually dis-
+tinctfrom DFT and iw-SFT. Whereas DFT and
+iw-SFT areRL-motivated, VCORE isoptimization-
+driven: we formulate the choice of token weights
+as maximizing the first-order loss decrease of a
+single SGD step subject to a KL constraint. This
+yields a closed-form Gibbs weighting over tokens.
+We further introduce an explicit variance-control
+mechanism that matches the update variance of
+the reweighted supervision to that under uniform
+weighting, stabilizing training on long CoT se-
+quences. Empirically, VCORE delivers stronger
+reasoning generalization over DFT and iw-SFT
+within the same SFT protocol.
+3 Preliminaries
+Notations.Let V be a finite vocabulary, and letV∗
+denote the set of all finite-length sequences overV.
+28162
+=== PAGE 3 ===
+Each training instance (x,y) consists of an input
+promptx and a target sequencey= (y 1,y 2,...)∈
+V∗of length|y|, typically encoding a reasoning
+trajectory distilled from a teacher model via CoT
+supervision. The goal is to train a student model
+pθ, parameterized by θ, to imitate these trajecto-
+ries through next-token prediction. The language
+model pθdefines a conditional distribution over
+tokens, with the sequence likelihood factorized au-
+toregressively as pθ(y|x) =∏|y|
+t=1pθ(yt|x,y<t),
+wherey<t = (y1,...,yt−1) denotes the prefix up
+to position t−1. Each term is computed by ap-
+plying a softmax to the output logits, yielding a
+next-token probability distribution.
+Naive CoT Supervision.We train the model
+pθby minimizing the expected per-token log-loss
+under the true data distribution P, defined as
+L(θ) =E(x,y)∼P
+[
+−logpθ(y|x)
+|y|
+]
+. In practice, we
+optimize this objective over a finite training dataset
+D by iteratively sampling mini-batches B ⊂ D
+and applying gradient-based updates of the form
+θ+ ←θ−T(∇θˆLB(θ)), where T denotes a
+generic update operator (e.g., SGD or Adam) that
+acts on the loss gradient and, when applicable, his-
+torical statistics. The mini-batch gradient takes the
+following form:
+∇θˆLB(θ) =
+∑
+(x,y)∈B
+[
+−1
+|y|∇θlogpθ(y|x)
+]
+≜
+∑
+(x,y)∈B
+[∑
+t≥1
+(1/|y|)  
+uniform
+·∇θℓt(θ;x,y)
+]
+.
+Here,ℓt(θ;x,y) =−logpθ(yt|x,y<t) denotes
+the token-level prediction loss at position t. The
+resulting gradient update corresponds to a uniform
+average over all next-token prediction tasks, implic-
+itly treating each token as equally informative and
+equally reliable. This choice is not arbitrary: under
+the autoregressive factorization, uniform weighting
+yields an unbiased estimator of the population loss
+gradient∇θL(θ), making it a natural default.
+Limitations of Uniform Weighting.(1)Not all
+tokens are equally worth learning from.Uniform
+weighting spreads supervision evenly across posi-
+tions, regardless of how much signal each token
+provides. Many next-token predictions are either
+trivially easy or hopelessly ambiguous-both yield
+gradients with little learning value. This misallo-
+cation wastes updates and slows convergence. (2)
+Spurious tokens corrupt learning signals.Auto-
+distilled CoTs often contain hallucinated or mis-
+aligned tokens. Uniform weighting treats these
+as equally important, allowing noise to dominate
+gradients and impair generalization.
+Toward Adaptive Token Weighting.A natu-
+ral remedy to these limitations is to adapt token-
+wise supervision to the input and model state.
+Letqt(x,y,θ)denote a distribution over positions
+t= 1,...,|y|, conditioned on the input promptx,
+target sequence y and current model parameters
+θ. Unlike the uniform weighting, adaptive q con-
+centrates learning on salient or uncertain positions
+while suppressing redundant or noisy ones. The
+reweighted gradient over a mini-batchB becomes:
+∇θˆLB(θ;q) =
+∑
+(x,y)∈B
+[∑
+t≥1
+qt(x,y)  
+adaptive
+∇θℓt(θ;x,y)
+]
+with the update θ+(q)←θ−T
+(
+∇θˆLB(θ;q)
+)
+,
+whereTdenotes a generic update operator.
+Problem: How Should We Choose q ?If only a
+subset of tokens meaningfully contributes to learn-
+ing, then uniform supervision fails to account for
+their differing impact. This raises a fundamental
+question of credit assignment: where should gra-
+dients go? The goal of adaptive weighting is to
+allocate supervision to the most impactful positions
+under the current model. This requires selecting
+q(t|x,y,θ)based on local gradient utility, rather
+than adhering to a fixed prior. To avoid instability
+from overly sharp focus, we constrainq to remain
+close to uniform:
+minqL(θ+(q))s.t.KL(q(·|x,y,θ)∥u)≤δ,
+(1)
+whereu(t) = 1/|y|andδbounds deviation. This
+formulation balances targeted supervision with sta-
+bility, enabling fine-grained, model- and input-
+aware token selection.
+4 Method
+4.1 Optimal Reweighting under SGD
+In this subsection, we derive the optimal reweight-
+ing distributionq∗(t|x,y,θ)that maximizes the
+loss decrease after a single-step SGD update. By
+applying a first-order Taylor approximation to the
+SFT objective, we fortunately derive a closed-form
+solution for the optimal token-wise weights, en-
+hancing interpretability and enabling efficient algo-
+rithmic implementation.
+28163
+=== PAGE 4 ===
+Step 1: First-order Taylor Expansion.Con-
+sider an SGD step with learning rate η, using the
+reweighted gradient:θ+ =θ−η∇θˆLB(θ;q).For
+smallη, the population loss at the updated parame-
+ters admits a first-order approximation:
+L(θ+)−L(θ) =−η⟨∇L(θ),∇ˆLB(θ;q)⟩+O(η2)
+=−η
+∑
+(x,y)∈B
+∑
+t≥1
+[
+qt(x,y)·st(x,y,θ)
+]
++O(η2)
+where we define the per-token gradient utility
+st(x,y,θ)≜⟨∇θL(θ),∇θℓt(θ;x,y)⟩.(2)
+This quantity captures the alignment between the
+global descent direction and the gradient induced
+by supervising token yt. Tokens with higher st
+contribute more to reducing the population loss
+and should be prioritized.
+Step 2: Optimal Adaptive Weighting.Max-
+imizing the descent in the first-order expansion
+reduces to a constrained optimization over the prob-
+ability simplex∆at each training instance(x,y):
+max
+q∈∆
+∑
+t≥1
+q(t)·st(x,y)s.t.KL(q∥u)≤δ
+=⇒q ∗(t|x,y,θ) =exp(τst(x,y,θ))∑
+j≥1exp(τsj(x,y,θ)),
+whereτ >0is a temperature set by the constraint.
+This standard exponential tilting problem admits a
+uniqueclosed-form solution: a Gibbs distribution
+over token-level gradient utilities. As τ→0,q∗
+recovers the uniform prior; asτ→∞, it concen-
+trates on the highest-utility tokens.
+Step 3: A One-Backward Trick for Estimat-
+ing st.Estimating the token utility st(x,y,θ)in
+Equation (2) naively requires one backward pass
+per token, computationally infeasible for long se-
+quences. We introduce a non-trivial and highly
+efficient solution: aone-backward forward-mode
+probing trickthat recovers all st values using just
+a single backward step and one forward step for
+|y|token evaluations. Specifically, we draw an
+independent mini-batchB′∼P, compute the de-
+scent direction∇θLB′(θ;u)under uniform token
+weights, and measure the change in the token-wise
+loss after a small perturbation in that direction. This
+yields an unbiased estimator:
+lim
+ϵ→0
+EB′[ℓt(θ;x,y)−ℓt(θ−ϵ∇θLB′(θ;u);x,y)]
+ϵ
+=⟨∇θL(θ),∇θℓt(θ;x,y)⟩=st(x,y,θ).
+This construction reduces the cost of estimating
+allst values from|y|backward passes to just one
+backward (to compute the descent direction from
+B′) and one forward pass (to evaluate perturbed
+token losses). It requires no second-order gradi-
+ents, no backward hooks and no additional model
+queries. By leveraging the directional derivative
+structure ofst, this probing trick makes adaptive
+token weighting both scalable and plug-and-play
+in standard training pipelines.
+Beyond Heuristics: Token Weighting as Opti-
+mization, Not Guesswork.Some prior works rank
+tokens by confidence (Wu et al., 2025), importance
+(Qin and Springenberg, 2025) or by their estimated
+influence on outcome correctness (Lin et al., 2024),
+typically without leveraging training-time gradient
+information. In contrast, we take an optimization
+perspective and derive a closed-form optimal token-
+weighting distribution, moving beyond heuristic
+rules. Crucially, our method identifies the most
+impactful tokens directly from the training signal
+without relying on teacher guidance or manually
+tuned thresholds. A detailed theoretical analysis
+demonstrating its advantages over uniform weight-
+ing is provided in Appendix A.
+4.2 VCORE: V ariance-Controlled
+Optimization-based REweighting
+We introduceVCORE, aVariance-Controlled
+Optimization-basedREweighting framework for
+CoT supervision, which is shown in Algorithm 1.
+Building on Section 4.1, which presented the
+Gibbs-form reweightingq∗(t|x,y,θ)∝exp(τst)
+and a one-backward token-utility estimation trick,
+we now add a variance-normalization mechanism
+to control the update variance at each training step.
+Concretely, we rescale the parameter update by an
+adaptive coefficient αin order to align the vari-
+ance of the reweighted supervision with that of the
+uniform supervision. This trick helps stabilize the
+training dynamics while allowing the learning sig-
+nal to concentrate on informative tokens. Moreover,
+it introduces no extra architectural changes.
+Variance-Controlled Descent Scaling.The
+Gibbs reweighting q∗(t|x,y,θ)∝exp(τst) fo-
+cuses learning on informative tokens, but it also
+changes the variability of the update. To make this
+explicit, we define the variance of the (per-batch)
+update under reweighted supervisionbeforeany
+scaling,Vq ≜Var[∑
+tqtst], and the variance un-
+der uniform supervision by,Vu ≜Var[∑
+tst/|y|].
+We then introduce an adaptive coefficientαto con-
+28164
+=== PAGE 5 ===
+Algorithm 1VCORE Algorithm
+Require: DatasetD={(x,y)}, model parame-
+tersθ, learning rateη, temperatureτ, probing
+scaleϵ
+Ensure:Updated parametersθ+
+1:foreach batchBinDdo
+2:Draw a random batchB ′fromD
+3:Compute descent direction∇ θLB′(θ;u)
+under uniform token weights
+4:Estimate tokentscores t(x,y,θ)by
+limϵ→0
+EB′[ℓt(θ;x,y)−ℓt(θ−ϵ∇θLB′(θ;u);x,y)]
+ϵ
+5:Get weights distributionq ∗(t|x,y,θ)by
+exp(τst(x,y,θ))∑
+j exp(τsj(x,y,θ))
+6:Computeαvia a uniform/reweighted loss
+ratio
+7:θ←θ−ηE(x,y),t∼q∗[∇θ(αℓt(θ;x,y))]
+8:end for
+9: Get the final trained model parametersθ+ =θ
+trol the update magnitude, choosingαto match the
+variance of reweighted updates with that of uniform
+weighting:
+α2Vq = Var
+[
+α
+∑
+t
+qtst
+]
+≈Var
+[∑
+t
+st
+|y|
+]
+=V u.
+This yields a choice:α=
+√
+Vu/Vq. If the scaling
+coefficientαis too small, gradient steps shrink and
+training slows down; if αis too large, especially
+under sharply peaked weights, stochastic gradients
+become highly variable and convergence degrades.
+Intuition.If token utilities st are uncorrelated
+with constant varianceσ2, thenVu≈σ2/|y|. Un-
+der a highly peaked Gibbs weighting (e.g.,qt con-
+centrates on one token), V(0)
+q ≈σ2, leading to
+α= 1/
+√
+|y|. Thus, whenq is sharp or sequences
+are long, aggressive reweighting would amplify
+variance and αmust shrink to stabilize training;
+whenq is balanced,α≈1and the full descent step
+is recovered without loss of stability.
+Summary: A New Perspective on CoT Super-
+vision.(1) Optimization-Derived Weighting.In-
+stead of heuristic reweighting, our framework de-
+rivesq∗(t) as the unique solution to an optimization
+problem that maximizes population loss reduction
+under a single SGD step with a KL constraint. This
+yields a closed-form Gibbs distribution over token-
+level gradient utilities, grounding token supervi-
+sion in first-order descent rather than heuristics.(2)
+Variance-Controlled Stabilization.Although q∗is
+theoretically optimal for maximizing descent, its
+practical effectiveness depends on the stability of
+the updates it induces. Heavy-tailed utilities can
+cause the resulting weights to become sharply con-
+centrated, amplifying gradient variance and destabi-
+lizing training. Our VCORE framework addresses
+this by introducing a principled variance-controlled
+scaling coefficientαthat matches the variance of
+reweighted updates to that of uniform supervision.
+This preserves the adaptivity of Gibbs weighting
+while ensuring stable and efficient learning without
+heuristic clipping or ad-hoc thresholds.
+5 Experiments
+In this section, we investigate and answer the fol-
+lowing research questions:
+RQ1:Can VCORE achieve better generalization
+than uniform and heuristic reweighting methods?
+RQ2:Which parts of VCORE are essential for
+improving reasoning and stability?
+RQ3:What are the practical implications and
+limitations of VCORE in CoT training?
+5.1 Experimental Setups
+Models and Supervised Tasks.We study
+long CoT supervision on two domains (math
+and coding), using Qwen3 models (4B, 8B,
+32B) (Yang et al., 2025) and LLaMA3.1-8B-
+Instruct (AI@Meta, 2024). Domain-specific train-
+ing data are curated from recent high-quality
+sources: OpenMathReasoning (Moshkov et al.,
+2025) and the C++ subset of OpenCodeReason-
+ing (NVIDIA, 2025). We retain only CoT instances
+generated by DeepSeek-R1 (Guo et al., 2025a),
+applying automatic filtering to ensure trajectory
+correctness. For Qwen3 models, we sample 3.2k
+examples per domain and the average CoT length
+is 3155.01 (math) and 2861.25 (code) ; for LLaMA,
+we use 32k examples per domain and the average
+CoT length is 3007.79 (math) and 2805.43 (code).
+Both datasets ensure that all methods reach con-
+vergence. Further preprocessing details and CoT
+length statistics are provided in Appendix C.1.
+Evaluation Benchmarks.We evaluate each
+model under bothin-domainandout-of-domain
+generalization settings.In-domainbenchmarks
+include the union of AIME 2024 and AIME
+2025 (AIME) (Art of Problem Solving Com-
+munity, 2025) and math subset of Olympiad-
+Bench (Olympiad) (He et al., 2024) for math,
+28165
+=== PAGE 6 ===
+Model Method Math Code A vg.
+AIME Olympiad RBench SGPQA-1k LCB OJBench RBench SGPQA-1k ID OOD
+LLaMA3.1
+8B
+Instruct
+Original 3.33 17.80 21.76 18.60 9.67 1.29 21.76 18.60 8.02 20.18
+SFT 3.33 23.59 4.02 12.10 9.29 0.86 5.21 9.50 9.27 7.71
+DFT 3.33 18.84 6.22 13.90 0.00 0.00 3.47 5.10 5.54 7.17
+iw-SFT 5.00 22.55 2.83 11.60 9.00 0.86 3.38 6.60 9.35 6.10
+Random 1.67 22.55 7.95 15.10 6.16 3.02 4.75 8.50 8.35 9.07
+VCORE 6.67 25.96 3.56 12.80 10.33 2.58 6.22 15.80 11.38 9.59
+Qwen3
+4B
+Original 38.33 60.09 23.13 29.10 22.56 3.02 23.13 29.10 31.00 26.12
+SFT 46.67 61.72 30.71 30.50 24.74 2.16 28.34 31.80 33.82 30.34
+DFT 35.00 62.91 34.00 32.40 26.45 5.60 30.16 33.40 32.49 32.49
+iw-SFT 40.00 62.31 28.79 31.00 24.83 2.59 29.34 32.60 32.43 30.43
+Random 38.33 60.98 31.35 30.50 25.69 0.86 29.34 31.30 31.46 30.62
+VCORE 48.33 66.17 34.64 34.30 25.97 3.88 30.25 32.30 36.09 32.87
+Qwen3
+8B
+Original 43.33 60.09 24.86 34.30 25.21 4.31 24.86 34.30 33.24 29.58
+SFT 48.33 63.80 35.47 34.00 26.07 4.74 34.92 37.90 35.74 35.07
+DFT 41.67 65.13 38.67 37.90 29.38 6.03 35.10 37.50 35.55 37.29
+iw-SFT 45.00 61.72 35.37 34.60 27.20 5.60 35.47 35.90 34.88 35.34
+Random 43.33 61.57 35.47 36.20 25.59 4.31 33.46 35.90 33.70 35.26
+VCORE 45.00 64.84 35.01 36.80 28.63 4.74 33.82 35.40 35.80 35.26
+Qwen3
+32B
+Original 43.33 64.99 41.13 43.90 27.30 5.60 41.13 43.90 35.30 42.52
+SFT 38.33 63.80 46.16 39.80 31.94 9.91 48.54 40.60 35.99 43.78
+DFT 43.33 67.66 54.48 46.50 37.82 10.34 49.91 47.40 39.79 49.57
+iw-SFT 40.00 63.65 43.33 39.40 31.94 6.90 45.43 42.40 35.62 42.64
+Random 40.00 62.31 45.80 40.30 35.55 9.91 47.71 45.50 36.94 44.83
+VCORE 51.67 68.55 49.91 45.00 35.45 9.48 45.70 43.10 41.29 45.93
+Table 1:Main Results.Accuracy (%) of different methods onin-domain(AIME, Olympiad, LCB, OJBench) andout-of-domain
+(RBench, SGPQA-1k) benchmarks across Math and Code. Best and second-best are shown inboldand underline, respectively.
+OJBench (OJBench) (Wang et al., 2025) and
+LiveCodeBench(v6) (LCB) (Jain et al., 2025) for
+coding. Forout-of-domainevaluation, we use
+R-Bench-T (RBench) (Guo et al., 2025b) and a
+1k-sample subset of SuperGPQA (SGPQA-1k)
+(Team et al., 2025b). We run inference using vLLM
+v1 (Kwon et al., 2023) with a maximum generation
+length of 8192 tokens. For all the benchmarks, we
+use greedy decoding and report Pass@1 as the met-
+ric. See Appendix C.3 for more detailed settings.
+Baselines.We compare against two recent
+reweighting-based methods:DFT(Wu et al., 2025)
+andiw-SFT(Qin and Springenberg, 2025) We
+also include theOriginalmodel (without any fine-
+tuning) and standardSFT, which uses the full CoT
+supervision signal. In theRandombaseline, 80%
+of CoT tokens are randomly dropped during train-
+ing to simulate partial supervision.
+Implementation Details.All the training exper-
+iments are conducted on four RTX PRO 6000
+Blackwell GPUs using the LLaMA-Factory frame-
+work (Zheng et al., 2024), with a batch size of
+32. We apply one epoch of LoRA fine-tuning us-
+ing the AdamW optimizer with a cosine learning
+rate schedule. The learning rate is set to 2e−5
+for Qwen3 models and 2e−4for LLaMA3.1-8B-
+Instruct. The LoRA rank is set to 8 for Qwen3 and
+64 for LLaMA, with the LoRA alpha fixed at twice
+the rank in both cases. In the algorithmic setting of
+VCORE, for each parameter update we randomly
+select a batchB′(|B′|= 32) from the training set.
+The hyperparametersϵandτare tuned specifically
+for each model. Complete training configurations
+are provided in Appendix C.2.
+5.2 Main Results (RQ1)
+Obs 1: VCORE achieves the highest average
+score2 (31.03).It outperforms SFT (28.97), DFT
+(29.99), iw-SFT (28.35) and Random (28.78) (see
+Table 1). VCORE achieves strong supervised rea-
+soning while also preserving cross-domain gener-
+alization, mitigating the degradation often caused
+by long CoT supervision. Moreover, scaling from
+Qwen-8B to Qwen-32B amplifies gains over the
+baseline, increasing from +4.12 to +4.70, highlight-
+ing improved effectiveness with larger models.
+2The average of the ID and OOD “Avg.” columns across
+the four models in Table 1.
+28166
+=== PAGE 7 ===
+(a) Supervised Set Size
+Size Olympiad SGPQA-1k
+Original 60.09 29.10
+4k 65.13 | 62.17 32.70 | 32.70
+8k 63.35 | 62.17 32.80 | 29.90
+16k 62.46 | 61.28 30.80 | 30.30
+32k 62.02 | 62.02 30.60 | 28.80
+(b) Hyperparameter Sensitivity
+2 3 4 5 6 7
+lg
+57.5
+60.0
+62.5
+65.0
+67.5Accuracy (%)
+(a) Olympiad
+=1e-3
+=5e-4
+=1e-4
+=5e-5
+=1e-5
+=5e-6
+2 3 4 5 6 7
+lg
+25.0
+27.5
+30.0
+32.5
+35.0Accuracy (%)
+(b) SGPQA-1k
+=1e-3
+=5e-4
+=1e-4
+=5e-5
+=1e-5
+=5e-6
+Figure 2:Component Analysis and Ablation.(a) Impact of supervised set size on in-domain (Olympiad) and out-of-domain
+(SGPQA-1k) accuracy forVCORE | DFT; (b) Hyperparameters: reweighting temperature τand probing scaleϵ. All results use
+Qwen3-4B. Metrics are accuracy (%) on Olympiad (in-domain) and SGPQA-1k (out-of-domain).
+Obs 2: VCORE consistently improves perfor-
+mance on lower-capacity models.VCORE does
+not always outperform the baselines and this may
+stem from the strength of the underlying SFT objec-
+tive: VCORE reweights tokens by population loss,
+yielding limited gains when models already exhibit
+strong CoT reasoning or when CoT supervision
+is misaligned with the target task. Consequently,
+VCORE achieves larger gains on weaker models or
+more challenging datasets, where it better approx-
+imates DeepSeek-style supervision. As shown in
+Table 1, for LLaMA-Instruct, the scores increase
+from 5.54/7.17 (DFT) to 11.38/9.59 (VCORE),
+while for Qwen-4B, they rise from 32.49/32.49
+to 36.09/32.87. Table 2 shows results for addi-
+tional weaker models, with Qwen3-1.7B using the
+Qwen3-4B training setup and Mistral-7B-Instruct-
+v0.3 using the Llama-3.1-8B-Instruct setup from
+the main experiments.
+Method Qwen3-1.7B Mistral-7B-Instruct
+Olympiad SGPQA-1k Olympiad SGPQA-1k
+Original 53.41 21.10 3.41 5.10
+SFT 51.34 17.50 9.50 7.80
+DFT 51.7821.804.45 3.90
+VCORE55.6421.009.94 8.70
+Table 2: Performance on Weaker Models
+5.3 Component Analysis and Ablations (RQ2)
+Obs 3: VCORE outperforms DFT across train-
+ing set scales (Figure 2(a)).As the supervised set
+grows from 4k to 32k, VCORE consistently out-
+performs DFT on both Olympiad and SGPQA-1k,
+demonstrating robust generalization under increas-
+ing training set size. At larger scales, overall per-
+formance slightly declines as additional reasoning
+traces with diverse quality, styles, and implicit as-
+sumptions are aggregated, amplifying distribution
+mismatch and weakening the effective supervision
+signal. Despite this shift, VCORE maintains a clear
+advantage and consistently improves over the base
+model across all dataset sizes.
+Obs 4: VCORE is robust to optimization-
+derived reweighting hyperparameters (Figure 2
+(b)).We analyze two key hyperparameters in
+VCORE: the reweighting temperature τ, which
+controls the shape of the supervision distribution,
+and the probing scaleϵ, which governs token utility
+estimation accuracy. Across both Olympiad and
+SGPQA-1k with Qwen3-4B, VCORE remains sta-
+ble over a wide range of τandϵ, exhibiting only
+mild performance variation. Performance peaks at
+moderate settings (e.g.,ϵ≈1e−4, lgτ≈4), while
+extreme values degrade accuracy due to overly uni-
+form or overly concentrated reweighting.
+0 25 50 75 100
+Step
+0
+10
+20
+30Loss
+Loss w/o Scaling
+0 25 50 75 100
+Step
+0.40
+0.45
+0.50
+0.55Loss
+Loss w/ Scaling
+Figure 3:Loss Scaling.Loss curves of Qwen3-4B on the math
+domain with and without loss scaling (ϵ= 1e−4,τ= 5e3).
+Obs 5: Variance control is essential for sta-
+ble optimization under sharp reweighting (Fig-
+ure 3).Under sharply peaked reweighting, the
+population loss frequently exhibits transient spikes
+during training before reconverging. This exposes
+a fundamental trade-off: while sharp reweighting
+improves supervision focus, it amplifies gradient
+variance and destabilizes optimization. VCORE
+addresses this issue by introducing an adaptive de-
+scent scaling factor that aligns update variance with
+uniform supervision, resulting in smooth, stable,
+28167
+=== PAGE 8 ===
+Method bs=16 bs=64 lr=1e-5 lr=1e-4
+SFT 40.28 40.99 39.98 39.08
+DFT 40.71 42.17 41.76 38.08
+VCORE42.48 42.67 42.84 41.87
+Table 3: Performance across batch sizes and learning rates.
+and reproducible convergence. This confirms that
+variance control is not optional but essential to
+safely realize the benefits of optimization-aligned
+supervision.
+Obs 6: VCORE is insensitive to learning rate
+and batch size (Table 3).We vary the learning rate
+and batch size on Qwen3-4B using math-domain
+data under the same training setup as the main
+experiments. Models are evaluated on the same
+four mathematics reasoning benchmarks, reporting
+average accuracy. As shown in Table 3, VCORE
+consistently achieves strong performance across
+hyperparameter settings.
+5.4 Discussions: Practical Implications and
+Limitations (RQ3)
+Method Olympiad SGPQA-1k
+Before RL After RL Before RL After RL
+DFT 62.91 65.13 32.40 28.30
+VCORE66.17 67.51 34.30 33.90
+(a) Results on Qwen3-4B.
+Method Olympiad SGPQA-1k
+Before RL After RL Before RL After RL
+DFT65.1367.9537.9038.00
+VCORE 64.8468.8436.8038.60
+(b) Results on Qwen3-8B.
+Table 4:RL Results.Performance before and after RL testing
+on Olympiad and SGPQA-1k using DFT and VCORE. We
+highlight the best performance inbold.
+Obs 7: VCORE offers a more capable foun-
+dation model to support reasoning tasks in re-
+inforcement learning.To assess the downstream
+reasoning capabilities of different post-SFT mod-
+els, we select the DFT and VCORE variants of
+Qwen-4B and Qwen-8B and fine-tune them using
+GRPO (Shao et al., 2024) for 200 steps on a subset
+of the BigMath (Albalak et al., 2025) dataset. Eval-
+uation is performed on Olympiad and SGPQA-1k,
+following the same setup as in Section 5.1. Further
+details of the RL setup are presented in Appendix D.
+As shown in Table 4, VCORE achieves clear per-
+formance gains over DFT after RL training, de-
+spite starting from a slightly lower baseline. This
+suggests that VCORE initialization may provide
+a higher RL performance ceiling. One possible
+explanation is that DFT tends to reduce generation
+entropy, which can constrain policy exploration
+during RL and limit the discovery of improved
+reasoning trajectories, indicating an additional ad-
+vantage of VCORE for reasoning generalization.
+Method GSM8K MA TH500
+Original 95.15 90.4
+SFT 93.63 (-1.52) 92.2 (+1.8)
+DFT 94.69 (-0.46) 92.6 (+2.2)
+iw-SFT 93.18 (-1.97) 90.8 (+0.4)
+Random 93.56 (-1.59) 92.4 (+2.0)
+VCORE 94.16 (-0.99) 92.8 (+2.4)
+Table 5: Performance comparison of Qwen3-8B with different
+SFT strategies on GSM8K and MATH500. Numbers in paren-
+theses indicate the performance change relative toOriginal.
+Obs 8: Long CoT SFT methods such as
+VCORE may exhibit performance degradation
+when the task is relatively simple.To assess rea-
+soning ability under different difficulty levels, we
+employ two mathematical reasoning benchmarks:
+GSM8K (Cobbe et al., 2021) and MATH500 (Light-
+man et al., 2023). GSM8K consists of grade-school
+arithmetic problems requiring only short reasoning
+chains, whereas MATH500 contains competition-
+level problems demanding deeper multi-step rea-
+soning. Using the finetuned Qwen-8B model under
+the same evaluation settings as Section 5.1, we
+observe from Table 5 that long CoT SFT slightly
+degrades performance on GSM8K but consistently
+improves results on MATH500. This indicates that
+long CoT supervision primarily benefits reasoning-
+intensive tasks. These trends align with prior find-
+ings (Stechly et al., 2025; Gema et al., 2025): (1)
+CoT reasoning is sensitive to prompt structure and
+may overcomplicate simple problems; (2) longer
+reasoning chains accumulate errors and increase
+susceptibility to minor arithmetic mistakes.
+6 Conclusion
+In this paper, we present an in-depth investigation
+into improving the reasoning capabilities of LLMs
+through long CoT supervised fine-tuning. We intro-
+duce VCORE, a variance-controlled, optimization-
+based reweighting framework. Going beyond
+heuristic token-weighting methods, we formulate
+VCORE as an optimization problem that identi-
+fies the optimal token importance distribution by
+maximizing expected loss descent under SGD. Ex-
+periments on mathematical and coding benchmarks
+demonstrate that VCORE significantly enhances
+28168
+=== PAGE 9 ===
+reasoning performance, particularly on complex
+tasks. These results bridge the gap between heuris-
+tic SFT practices and optimization-theoretic prin-
+ciples, offering a principled path toward building
+more generalizable reasoning models.
+Limitations
+Our study is subject to computational and time
+constraints, which restricted the training corpus to
+the OpenMathReasoning and OpenCodeReasoning
+datasets, both derived from long CoT annotations
+generated by DeepSeek. We have not yet explored
+more diverse datasets or long CoT data produced
+by other state-of-the-art reasoning models, which
+could potentially reveal different generalization be-
+haviors. We consider this an important avenue for
+future research.
+There is also a potential failure mode where
+reweighting overemphasizes spurious patterns that
+leak information about the final answer. While rare,
+this mode can amplify dataset artifacts or annota-
+tion bias. Addressing this may require integrating
+additional regularization (e.g., dropout masking,
+answer prefix control) into the utility computation.
+Acknowledgments
+This work was supported by the National Key
+R&D Program of China (2025YFF0516900 &
+2025YFF0516904), NSFC U25B2039 and Na-
+tional Natural Science Foundation of China
+(No. 62306179); NSFC (No. 12326608), the Hetao
+Shenzhen–Hong Kong Science and Technology In-
+novation Cooperation Zone Project (No. HZQSWS-
+KCCYB-2024016).
+References
+AI@Meta. 2024. Llama 3 model card.
+Alon Albalak, Duy Phung, Nathan Lile, Rafael Rafailov,
+Kanishk Gandhi, Louis Castricato, Anikait Singh,
+Chase Blagden, Violet Xiang, Dakota Mahan, and
+Nick Haber. 2025. Big-math: A large-scale, high-
+quality math dataset for reinforcement learning in
+language models.Preprint, arXiv:2502.17387.
+Art of Problem Solving Community. 2025.
+Aime problems and solutions. https:
+//artofproblemsolving.com/wiki/index.
+php/AIME_Problems_and_Solutions.
+Mohammad Gheshlaghi Azar, Zhaohan Daniel Guo, Bi-
+lal Piot, Remi Munos, Mark Rowland, Michal Valko,
+and Daniele Calandriello. 2024. A general theoret-
+ical paradigm to understand learning from human
+preferences. InInternational Conference on Arti-
+ficial Intelligence and Statistics, pages 4447–4455.
+PMLR.
+Qiguang Chen, Libo Qin, Jinhao Liu, Dengyun Peng,
+Jiannan Guan, Peng Wang, Mengkang Hu, Yuhang
+Zhou, Te Gao, and Wanxiang Che. 2025a. Towards
+reasoning era: A survey of long chain-of-thought
+for reasoning large language models.arXiv preprint
+arXiv:2503.09567.
+Yanda Chen, Joe Benton, Ansh Radhakrishnan,
+Jonathan Uesato, Carson Denison, John Schulman,
+Arushi Somani, Peter Hase, Misha Wagner, Fabien
+Roger, and 1 others. 2025b. Reasoning models
+don’t always say what they think.arXiv preprint
+arXiv:2505.05410.
+Daewon Choi, Jimin Lee, Jihoon Tack, Woomin Song,
+Saket Dingliwal, Sai Muralidhar Jayanthi, Bhavana
+Ganesh, Jinwoo Shin, Aram Galstyan, and Sra-
+van Babu Bodapati. 2025. Think clearly: Improv-
+ing reasoning via redundant token pruning.arXiv
+preprint arXiv:2507.08806.
+Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian,
+Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias
+Plappert, Jerry Tworek, Jacob Hilton, Reiichiro
+Nakano, Christopher Hesse, and John Schulman.
+2021. Training verifiers to solve math word prob-
+lems.Preprint, arXiv:2110.14168.
+Kawin Ethayarajh, Winnie Xu, Niklas Muennighoff,
+Dan Jurafsky, and Douwe Kiela. 2024. Kto: Model
+alignment as prospect theoretic optimization.arXiv
+preprint arXiv:2402.01306.
+Aryo Pradipta Gema, Alexander Hägele, Runjin Chen,
+Andy Arditi, Jacob Goldman-Wetzler, Kit Fraser-
+Taliente, Henry Sleight, Linda Petrini, Julian Michael,
+Beatrice Alex, Pasquale Minervini, Yanda Chen, Joe
+Benton, and Ethan Perez. 2025. Inverse scaling in
+test-time compute.Preprint, arXiv:2507.14417.
+Daya Guo, Dejian Yang, Haowei Zhang, Junxiao Song,
+Ruoyu Zhang, Runxin Xu, Qihao Zhu, Shirong
+Ma, Peiyi Wang, Xiao Bi, and 1 others. 2025a.
+Deepseek-r1: Incentivizing reasoning capability in
+llms via reinforcement learning.arXiv preprint
+arXiv:2501.12948.
+Meng-Hao Guo, Jiajun Xu, Yi Zhang, Jiaxi Song,
+Haoyang Peng, Yi-Xuan Deng, Xinzhi Dong, Kiy-
+ohiro Nakayama, Zhengyang Geng, Chen Wang, and
+1 others. 2025b. R-bench: Graduate-level multi-
+disciplinary benchmarks for llm & mllm complex rea-
+soning evaluation.arXiv preprint arXiv:2505.02018.
+Chaoqun He, Renjie Luo, Yuzhuo Bai, Shengding Hu,
+Zhen Leng Thai, Junhao Shen, Jinyi Hu, Xu Han, Yu-
+jie Huang, Yuxiang Zhang, Jie Liu, Lei Qi, Zhiyuan
+Liu, and Maosong Sun. 2024. Olympiadbench:
+A challenging benchmark for promoting agi with
+olympiad-level bilingual multimodal scientific prob-
+lems.Preprint, arXiv:2402.14008.
+28169
+=== PAGE 10 ===
+Peter Henderson, Riashat Islam, Philip Bachman, Joelle
+Pineau, Doina Precup, and David Meger. 2018. Deep
+reinforcement learning that matters. InProceedings
+of the AAAI conference on artificial intelligence, vol-
+ume 32.
+Zhenyu Hou, Xin Lv, Rui Lu, Jiajie Zhang, Yujiang
+Li, Zijun Yao, Juanzi Li, Jie Tang, and Yuxiao Dong.
+2025. Advancing language model reasoning through
+reinforcement learning and inference scaling.arXiv
+preprint arXiv:2501.11651.
+Aaron Jaech, Adam Kalai, Adam Lerer, Adam Richard-
+son, Ahmed El-Kishky, Aiden Low, Alec Helyar,
+Aleksander Madry, Alex Beutel, Alex Carney, and 1
+others. 2024. Openai o1 system card.arXiv preprint
+arXiv:2412.16720.
+Naman Jain, King Han, Alex Gu, Wen-Ding Li, Fanjia
+Yan, Tianjun Zhang, Sida Wang, Armando Solar-
+Lezama, Koushik Sen, and Ion Stoica. 2025. Live-
+codebench: Holistic and contamination free evalua-
+tion of large language models for code. InThe Thir-
+teenth International Conference on Learning Repre-
+sentations.
+Kaixuan Ji, Jiafan He, and Quanquan Gu. 2024. Rein-
+forcement learning from human feedback with active
+queries.arXiv preprint arXiv:2402.09401.
+Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying
+Sheng, Lianmin Zheng, Cody Hao Yu, Joseph E.
+Gonzalez, Hao Zhang, and Ion Stoica. 2023. Effi-
+cient memory management for large language model
+serving with pagedattention. InProceedings of the
+ACM SIGOPS 29th Symposium on Operating Systems
+Principles.
+Bespoke Labs. 2025. Bespoke-stratos: The un-
+reasonable effectiveness of reasoning distilla-
+tion. www.bespokelabs.ai/blog/bespoke-stratos-
+the-unreasonable-effectiveness-of-reasoning-
+distillation. Accessed: 2025-01-22.
+Nathan Lambert, Jacob Morrison, Valentina Pyatkin,
+Shengyi Huang, Hamish Ivison, Faeze Brahman,
+Lester James V Miranda, Alisa Liu, Nouha Dziri,
+Shane Lyu, and 1 others. 2024. Tulu 3: Pushing fron-
+tiers in open language model post-training.arXiv
+preprint arXiv:2411.15124.
+Zeju Li, Jianyuan Zhong, Ziyang Zheng, Xiangyu Wen,
+Zhijian Xu, Yingying Cheng, Fan Zhang, and Qiang
+Xu. 2025. Compressing chain-of-thought in llms via
+step entropy.arXiv preprint arXiv:2508.03346.
+Ziniu Li, Tian Xu, Yushun Zhang, Zhihang Lin, Yang
+Yu, Ruoyu Sun, and Zhi-Quan Luo. 2023. Remax: A
+simple, effective, and efficient reinforcement learning
+method for aligning large language models.arXiv
+preprint arXiv:2310.10505.
+Hunter Lightman, Vineet Kosaraju, Yuri Burda, Harri-
+son Edwards, Bowen Baker, Teddy Lee, Jan Leike,
+John Schulman, Ilya Sutskever, and Karl Cobbe.
+2023. Let’s verify step by step. InThe Twelfth Inter-
+national Conference on Learning Representations.
+Zicheng Lin, Tian Liang, Jiahao Xu, Qiuzhi Lin, Xing
+Wang, Ruilin Luo, Chufan Shi, Siheng Li, Yujiu
+Yang, and Zhaopeng Tu. 2024. Critical tokens matter:
+Token-level contrastive estimation enhances llm’s rea-
+soning capability.arXiv preprint arXiv:2411.19943.
+Elita Lobo, Chirag Agarwal, and Himabindu Lakkaraju.
+2025. On the impact of fine-tuning on chain-of-
+thought reasoning. InProceedings of the 2025 Con-
+ference of the Nations of the Americas Chapter of the
+Association for Computational Linguistics: Human
+Language Technologies (Volume 1: Long Papers),
+pages 11679–11698, Albuquerque, New Mexico. As-
+sociation for Computational Linguistics.
+Renjie Luo, Jiaxi Li, Chen Huang, and Wei Lu.
+2025. Through the valley: Path to effective long
+cot training for small language models.Preprint,
+arXiv:2506.07712.
+Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler
+Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon,
+Nouha Dziri, Shrimai Prabhumoye, Yiming Yang,
+and 1 others. 2023. Self-refine: Iterative refinement
+with self-feedback.Advances in Neural Information
+Processing Systems, 36:46534–46594.
+Ivan Moshkov, Darragh Hanley, Ivan Sorokin, Shubham
+Toshniwal, Christof Henkel, Benedikt Schifferer, Wei
+Du, and Igor Gitman. 2025. Aimo-2 winning solu-
+tion: Building state-of-the-art mathematical reason-
+ing models with openmathreasoning dataset.arXiv
+preprint arXiv:2504.16891.
+Niklas Muennighoff, Zitong Yang, Weijia Shi, Xi-
+ang Lisa Li, Li Fei-Fei, Hannaneh Hajishirzi, Luke
+Zettlemoyer, Percy Liang, Emmanuel Candès, and
+Tatsunori Hashimoto. 2025. s1: Simple test-time
+scaling.arXiv preprint arXiv:2501.19393.
+NVIDIA. 2025. Opencodereasoning-2.
+https://huggingface.co/datasets/nvidia/
+OpenCodeReasoning-2. Accessed: 2025-08-03.
+Long Ouyang, Jeffrey Wu, Xu Jiang, Diogo Almeida,
+Carroll Wainwright, Pamela Mishkin, Chong Zhang,
+Sandhini Agarwal, Katarina Slama, Alex Ray, and 1
+others. 2022. Training language models to follow in-
+structions with human feedback.Advances in neural
+information processing systems, 35:27730–27744.
+Chongli Qin and Jost Tobias Springenberg. 2025. Su-
+pervised fine tuning on curated data is reinforce-
+ment learning (and can be improved).arXiv preprint
+arXiv:2507.12856.
+Rafael Rafailov, Archit Sharma, Eric Mitchell, Christo-
+pher D Manning, Stefano Ermon, and Chelsea Finn.
+2023. Direct preference optimization: Your language
+model is secretly a reward model.Advances in neural
+information processing systems, 36:53728–53741.
+John Schulman, Filip Wolski, Prafulla Dhariwal,
+Alec Radford, and Oleg Klimov. 2017. Proxi-
+mal policy optimization algorithms.arXiv preprint
+arXiv:1707.06347.
+28170
+=== PAGE 11 ===
+Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu,
+Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan
+Zhang, YK Li, Yang Wu, and 1 others. 2024.
+Deepseekmath: Pushing the limits of mathematical
+reasoning in open language models.arXiv preprint
+arXiv:2402.03300.
+Charlie Snell, Jaehoon Lee, Kelvin Xu, and Aviral Ku-
+mar. 2024. Scaling llm test-time compute optimally
+can be more effective than scaling model parameters.
+arXiv preprint arXiv:2408.03314.
+Kaya Stechly, Karthik Valmeekam, and Subbarao Kamb-
+hampati. 2025. Chain of thoughtlessness? an analy-
+sis of cot in planning.Preprint, arXiv:2405.04776.
+Kimi Team, Angang Du, Bofei Gao, Bowei Xing,
+Changjiu Jiang, Cheng Chen, Cheng Li, Chenjun
+Xiao, Chenzhuang Du, Chonghua Liao, and 1 others.
+2025a. Kimi k1. 5: Scaling reinforcement learning
+with llms.arXiv preprint arXiv:2501.12599.
+M-A-P Team, Xinrun Du, Yifan Yao, Kaijing Ma, Bingli
+Wang, Tianyu Zheng, Kang Zhu, Minghao Liu, Yim-
+ing Liang, Xiaolong Jin, Zhenlin Wei, Chujie Zheng,
+Kaixing Deng, Shuyue Guo, Shian Jia, Sichao Jiang,
+Yiyan Liao, Rui Li, Qinrui Li, and 76 others. 2025b.
+Supergpqa: Scaling llm evaluation across 285 gradu-
+ate disciplines.Preprint, arXiv:2502.14739.
+NovaSky Team. 2025. Sky-t1: Train your own o1
+preview model within $450. https://novasky-ai.
+github.io/posts/sky-t1. Accessed: 2025-01-09.
+Miles Turpin, Julian Michael, Ethan Perez, and
+Samuel R. Bowman. 2023. Language models don’t
+always say what they think: Unfaithful explanations
+in chain-of-thought prompting. InThirty-seventh
+Conference on Neural Information Processing Sys-
+tems.
+Peiyi Wang, Lei Li, Zhihong Shao, RX Xu, Damai
+Dai, Yifei Li, Deli Chen, Yu Wu, and Zhifang Sui.
+2023. Math-shepherd: Verify and reinforce llms step-
+by-step without human annotations.arXiv preprint
+arXiv:2312.08935.
+Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le,
+Ed Chi, Sharan Narang, Aakanksha Chowdhery, and
+Denny Zhou. 2022. Self-consistency improves chain
+of thought reasoning in language models.arXiv
+preprint arXiv:2203.11171.
+Zhexu Wang, Yiping Liu, Yejie Wang, Wenyang He,
+Bofei Gao, Muxi Diao, Yanxu Chen, Kelin Fu, Flood
+Sung, Zhilin Yang, Tianyu Liu, and Weiran Xu. 2025.
+Ojbench: A competition level code benchmark for
+large language models.Preprint, arXiv:2506.16395.
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten
+Bosma, Fei Xia, Ed Chi, Quoc V Le, Denny Zhou,
+and 1 others. 2022. Chain-of-thought prompting elic-
+its reasoning in large language models.Advances
+in neural information processing systems, 35:24824–
+24837.
+Sean Welleck, Amanda Bertsch, Matthew Finlayson,
+Hailey Schoelkopf, Alex Xie, Graham Neubig, Ilia
+Kulikov, and Zaid Harchaoui. 2024. From de-
+coding to meta-generation: Inference-time algo-
+rithms for large language models.arXiv preprint
+arXiv:2406.16838.
+Xumeng Wen, Zihan Liu, Shun Zheng, Zhijian Xu,
+Shengyu Ye, Zhirong Wu, Xiao Liang, Yang Wang,
+Junjie Li, Ziming Miao, and 1 others. 2025. Rein-
+forcement learning with verifiable rewards implicitly
+incentivizes correct reasoning in base llms.arXiv
+preprint arXiv:2506.14245.
+Ronald J Williams. 1992. Simple statistical gradient-
+following algorithms for connectionist reinforcement
+learning.Machine learning, 8(3):229–256.
+Yongliang Wu, Yizhou Zhou, Zhou Ziheng, Yingzhe
+Peng, Xinyu Ye, Xinting Hu, Wenbo Zhu, Lu Qi,
+Ming-Hsuan Yang, and Xu Yang. 2025. On the
+generalization of sft: A reinforcement learning per-
+spective with reward rectification.arXiv preprint
+arXiv:2508.05629.
+Haoran Xu, Amr Sharaf, Yunmo Chen, Weiting Tan,
+Lingfeng Shen, Benjamin Van Durme, Kenton Mur-
+ray, and Young Jin Kim. 2024. Contrastive prefer-
+ence optimization: Pushing the boundaries of llm
+performance in machine translation.arXiv preprint
+arXiv:2401.08417.
+Haotian Xu, Xing Wu, Weinong Wang, Zhongzhi
+Li, Da Zheng, Boyuan Chen, Yi Hu, Shijia Kang,
+Jiaming Ji, Yingying Zhang, and 1 others. 2025.
+Redstar: Does scaling long-cot data unlock bet-
+ter slow-reasoning systems?arXiv preprint
+arXiv:2501.11284.
+An Yang, Anfeng Li, Baosong Yang, Beichen Zhang,
+Binyuan Hui, Bo Zheng, Bowen Yu, Chang Gao,
+Chengen Huang, Chenxu Lv, Chujie Zheng, Dayi-
+heng Liu, Fan Zhou, Fei Huang, Feng Hu, Hao Ge,
+Haoran Wei, Huan Lin, Jialong Tang, and 41 oth-
+ers. 2025. Qwen3 technical report.arXiv preprint
+arXiv:2505.09388.
+Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran,
+Tom Griffiths, Yuan Cao, and Karthik Narasimhan.
+2023a. Tree of thoughts: Deliberate problem solving
+with large language models.Advances in neural
+information processing systems, 36:11809–11822.
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak
+Shafran, Karthik Narasimhan, and Yuan Cao. 2023b.
+React: Synergizing reasoning and acting in language
+models. InInternational Conference on Learning
+Representations (ICLR).
+Yixin Ye, Zhen Huang, Yang Xiao, Ethan Chern, Shijie
+Xia, and Pengfei Liu. 2025. Limo: Less is more for
+reasoning.arXiv preprint arXiv:2502.03387.
+Edward Yeo, Yuxuan Tong, Morry Niu, Graham Neu-
+big, and Xiang Yue. 2025. Demystifying long
+chain-of-thought reasoning in llms.arXiv preprint
+arXiv:2502.03373.
+28171
+=== PAGE 12 ===
+Qiying Yu, Zheng Zhang, Ruofei Zhu, Yufeng Yuan,
+Xiaochen Zuo, Yu Yue, Weinan Dai, Tiantian Fan,
+Gaohong Liu, Lingjun Liu, and 1 others. 2025. Dapo:
+An open-source llm reinforcement learning system
+at scale.arXiv preprint arXiv:2503.14476.
+Qiyuan Zhang, Fuyuan Lyu, Zexu Sun, Lei Wang,
+Weixu Zhang, Wenyue Hua, Haolun Wu, Zhihan
+Guo, Yufei Wang, Niklas Muennighoff, and 1 oth-
+ers. 2025a. A survey on test-time scaling in large
+language models: What, how, where, and how well?
+arXiv preprint arXiv:2503.24235.
+Zhenru Zhang, Chujie Zheng, Yangzhen Wu, Beichen
+Zhang, Runji Lin, Bowen Yu, Dayiheng Liu, Jin-
+gren Zhou, and Junyang Lin. 2025b. The lessons of
+developing process reward models in mathematical
+reasoning.arXiv preprint arXiv:2501.07301.
+Rui Zheng, Shihan Dou, Songyang Gao, Yuan Hua, Wei
+Shen, Binghai Wang, Yan Liu, Senjie Jin, Qin Liu,
+Yuhao Zhou, and 1 others. 2023. Secrets of rlhf in
+large language models part i: Ppo.arXiv preprint
+arXiv:2307.04964.
+Yaowei Zheng, Richong Zhang, Junhao Zhang, Yanhan
+Ye, Zheyan Luo, Zhangchi Feng, and Yongqiang Ma.
+2024. Llamafactory: Unified efficient fine-tuning
+of 100+ language models. InProceedings of the
+62nd Annual Meeting of the Association for Compu-
+tational Linguistics (Volume 3: System Demonstra-
+tions), Bangkok, Thailand. Association for Computa-
+tional Linguistics.
+Denny Zhou, Nathanael Schärli, Le Hou, Jason Wei,
+Nathan Scales, Xuezhi Wang, Dale Schuurmans,
+Claire Cui, Olivier Bousquet, Quoc Le, and 1 oth-
+ers. 2022. Least-to-most prompting enables complex
+reasoning in large language models.arXiv preprint
+arXiv:2205.10625.
+Zhanke Zhou, Rong Tao, Jianing Zhu, Yiwen Luo, Zeng-
+mao Wang, and Bo Han. 2024. Can language models
+perform robust reasoning in chain-of-thought prompt-
+ing with noisy rationales?Advances in Neural Infor-
+mation Processing Systems, 37:123846–123910.
+A Theory
+The theorem below shows that the Gibbs-form dis-
+tributionq∗used in our method achieves a strictly
+larger first-order loss decrease than uniform weight-
+ing whenever token-level gradient utilities are not
+all identical. Uniform sampling is optimal only in
+the degenerate case where every token contributes
+exactly the same utility—an unrealistic setting for
+chain-of-thought supervision, where informative
+and uninformative steps naturally coexist. Thus,
+whenever utility varies across tokens (the norm in
+CoT data), adaptive weighting is strictly better.
+Theorem 1 (Strictly improves over uniform)
+Fix (x,y) and θ, and let u(t) = 1/|y|. For any
+δ >0, letq∗(·|x,y,θ)be the solution to
+max
+q∈∆
+∑
+t
+q(t)st(x,y,θ)s.t.KL(q∥u)≤δ,
+i.e., the Gibbs-form q∗(t)∝u(t) exp(τst) with
+τ >0chosen to satisfy the KL constraint. If{st}t
+are not all equal, then
+∑
+t
+q∗(t)st >
+∑
+t
+u(t)st.
+Consequently, in the first-order loss expansion,
+L(θ+)−L(θ)
+=−η
+∑
+(x,y)∈B
+∑
+t
+q(t)st(x,y,θ) +O(η2),
+the update withq∗yields a strictly larger decrease
+than the update withu for any mini-batch contain-
+ing at least one instance with non-constant {st}.
+Equality holds only ifδ= 0or allst are identical.
+Proof 1Forτ≥0define the tilted family
+qτ(t)≜ u(t)eτst
+Z(τ), Z(τ)≜
+∑
+j
+u(j)eτsj,
+so q0 =u and qτmatches the Gibbs form. Let
+ϕ(τ)≜logZ(τ). Standard calculations give
+ϕ′(τ) =
+∑
+t
+qτ(t)st =E qτ[st],
+ϕ′′(τ) = Varqτ(st)≥0,
+with strict inequality for all τwhenever{st}are
+not all equal. Hence ϕ′(τ)is strictly increasing on
+(0,∞)and
+28172
+=== PAGE 13 ===
+Eqτ[st]−Eu[st]
+=ϕ′(τ)−ϕ′(0)
+=
+∫ τ
+0
+ϕ′′(t)dt
+=
+∫ τ
+0
+Varqt(st)dt >0,forτ >0.(3)
+Next, define Ψ(τ)≜KL(q τ∥u). Using
+KL(qτ∥u) =τEqτ[st]−ϕ(τ)and ϕ′(τ) =
+Eqτ[st], we obtain
+Ψ′(τ) =τd
+dτEqτ[st] =τVarqτ(st)≥0,
+which is>0 forτ >0when{st}are not all equal.
+Thus Ψ is strictly increasing on (0,∞), implying
+that for everyδ >0there is a uniqueτ∗>0 with
+Ψ(τ∗) =δ, and the KL-constrained optimum is
+q∗=q τ∗.
+Combining uniqueness with (3) atτ=τ∗gives∑
+tq∗(t)st>∑
+tu(t)st whenever{st}are not all
+equal. Substituting into the first-order loss expan-
+sion yields the claimed strict improvement for any
+mini-batch containing at least one such instance.
+Ifδ= 0or all st are identical, then τ∗= 0 and
+q∗=u, hence equality.
+B Related Work
+The rise of test-time scaling and long CoT.Re-
+cent advances in LLMs have highlighted the im-
+portance oftest-time scaling(Snell et al., 2024;
+Welleck et al., 2024; Zhang et al., 2025a), i.e.,
+improving reasoning performance by allocating
+more inference-time compute rather than solely
+scaling model size or training resources. A prac-
+tical instance of this idea islong chain-of-thought
+(long CoT): LLMs allocate more compute to gen-
+erate longer reasoning chains at inference. Recent
+LLMs—OpenAI-o1 (Jaech et al., 2024), DeepSeek-
+R1 (Guo et al., 2025a), Kimi k1.5 (Team et al.,
+2025a)—pursue this direction by scaling CoT
+lengths and show strong reasoning performance
+on tasks such as challenging math problem solv-
+ing and code generation benchmarks. Compared
+with short CoT, long CoT enables deeper reasoning,
+more extensive exploration, and feasible reflection
+(Chen et al., 2025a), thereby supporting more com-
+plex reasoning tasks.
+Enhancing LLM reasoning ability.While CoT
+prompting (Wei et al., 2022) can improve reasoning
+by explicitly encouraging models to articulate inter-
+mediate steps in natural language, it still struggles
+on complex reasoning problems. Consequently, re-
+cent work has focused on strengthening models’
+intrinsic reasoning via post-training or test-time
+methods:
+• RL for reasoning.Reinforcement learning
+has emerged as an effective post-training stage
+for eliciting multi-step reasoning in LLMs
+(Ouyang et al., 2022; Lightman et al., 2023;
+Guo et al., 2025a; Wen et al., 2025; Hou et al.,
+2025). On the algorithmic side, most work
+adopts policy-gradient methods such as RE-
+INFORCE (Williams, 1992), PPO (Schulman
+et al., 2017) and LLM-tailored variants such
+as ReMax and (Li et al., 2023), GRPO (Shao
+et al., 2024), DAPO (Yu et al., 2025), etc. In
+parallel, some preference optimization (PO)
+methods (e.g., DPO (Rafailov et al., 2023),
+KTO (Ethayarajh et al., 2024), IPO (Azar
+et al., 2024), CPO (Xu et al., 2024)) opti-
+mize supervised objectives built from pair-
+wise comparisons or binary accept/reject sig-
+nals, avoiding on-policy rollouts. Orthogo-
+nal to the optimization algorithm, we catego-
+rize methods by reward source: (1)Outcome-
+rewardRL, which directly optimizes final
+answers; a prominent subfamily is RL with
+verifiable rewards (RLVR) for math/coding,
+where unit tests or checkers define the reward
+(Guo et al., 2025a; Lambert et al., 2024); and
+(2)Process-rewardRL, which performs step-
+level credit assignment via process reward
+models (PRMs) to shape the reasoning tra-
+jectory and improve reasoning faithfulness
+(Lightman et al., 2023; Wang et al., 2023;
+Zhang et al., 2025b).
+• SFT for reasoning:However, adopting RL
+may sometimes be cumbersome—sensitive
+to hyperparameters (Henderson et al., 2018;
+Zheng et al., 2023), resource-intensive (Schul-
+man et al., 2017), and costly in terms of train-
+ing data collection (Ji et al., 2024; Wang et al.,
+2023). In comparison, a more straightforward
+way for enhancing reasoning ability is to dis-
+till long reasoning traces into LLMs via SFT.
+Recent works show that training on curated
+long CoT data—either distilled from stronger
+teachers or manually constructed—can endow
+models with robust slow-thinking behaviors
+(Team, 2025; Muennighoff et al., 2025; Xu
+28173
+=== PAGE 14 ===
+et al., 2025; Labs, 2025; Ye et al., 2025). Com-
+pared to SFT on short CoT, SFT on long CoT
+offers some practical benefits: a higher per-
+formance ceiling, better generalization, and
+larger downstream gains when used to initial-
+ize RL (Yeo et al., 2025).
+• Test-time methods:A complementary line
+of work improves reasoningduring inference.
+Approaches roughly fall into categories, in-
+cluding but not limited to: (i) prompting-
+based strategies that encourage stepwise think-
+ing or decomposition—zero-/few-shot chain-
+of-thought (Wei et al., 2022), least-to-most
+prompting (Zhou et al., 2022), and ReAct-
+style reasoning–acting (Yao et al., 2023b); (ii)
+sampling-and-aggregation schemes that draw
+multiple rationales and then vote or rerank,
+e.g., self-consistency (Wang et al., 2022);
+(iii) search/planning over intermediate states,
+such as tree-structured exploration (Yao et al.,
+2023a); and (iv) self-reflection and debate that
+iteratively critique and revise candidate chains
+(Madaan et al., 2023). In practice, such test-
+time strategies are often combined and are
+complementary to SFT and RL for eliciting
+multi-step reasoning.
+We remark that our method falls into theSFT
+for reasoningcategory and our work focuses on
+modifying the SFT phase itself to endow models
+with stronger generalization ability on reasoning
+tasks.
+Token-Level Reweighting in SFTTo retain the
+simplicity of SFT yet benefit from RL-induced
+reasoning improvements, recent studies modify
+the SFT objective to narrow its gap with RL.
+Specifically, Dynamic Fine-Tuning (DFT) (Wu
+et al., 2025) and importance-weighted SFT (iw-
+SFT) (Qin and Springenberg, 2025) pursue this
+via token-level loss reweighting. DFT reinterprets
+standard SFT as a biased policy update that over-
+concentrates on low-probability tokens; accord-
+ingly, it neutralizes that bias by rescaling the token-
+level loss. iw-SFT shows that SFT on curated/-
+filtered data optimizes a lower bound to an RL
+objective; accordingly, it tightens that bound with
+explicit importance weights relative to a reference
+or current policy. Since our method can be re-
+garded as a hard/sparse version of token-level loss
+reweighting, we include DFT and iw-SFT as our
+baselines.
+C Experimental Details of Main Results
+C.1 Dataset Curation for supervised tasks
+For CoT supervised fine-tuning, we use two
+datasets: OpenMathReasoning 3 and Open-
+CodeReasoning4, which correspond to the
+mathematics and coding domains, respectively. We
+summarize the details of sampling and processing
+procedure as follows:
+OpenMathReasoning.From the 3.2M
+samples in the cot split, we extract a sub-
+set that satisfies the following conditions:
+problem_type = "has_answer_extracted" and
+generation_model = "DeepSeek-R1" . We then
+usemath_verify 5 to rigorously check whether
+the answers in the generated CoT content are
+equivalent to the expected answers. Based on
+this verified subset, we randomly sample 3,200
+examples for training the Qwen3 series and 32,000
+examples for training LLaMA3.1-8B-Instruct. To
+adapt the data for CoT training, we augment the
+original questions with new prompts designed for
+CoT reasoning. The specific format is as follows:
+Math CoT Training Data Template
+You are a helpful and accurate assistant for
+solving the following math problem:
+{ORIGINAL QUESTION}
+Please reason step by step, and put the
+correct answer within \boxed{} at last.
+OpenCodeReasoning.From the 942K samples
+in the cpp split, we extract the subset that satisfies
+the condition judgement = "right" . Based on
+this subset, we randomly sample 3,200 examples
+for training the Qwen3 series and 32,000 examples
+for training LLaMA3.1-8B-Instruct. For the train-
+ing data templates, we take inspiration from the
+prompt templates in open-r1/codeforces6 and
+design our own training templates as follows:
+3Hugging Face: OpenMathReasoning
+4Hugging Face: OpenCodeReasoning-2
+5https://github.com/huggingface/Math-Verify
+6https://huggingface.co/datasets/open-r1/codeforces
+28174
+=== PAGE 15 ===
+Hyperparameter Qwen3 LLaMA3.1-8B-Instruct
+batch size 32 32
+learning rate 2e-5 2e-4
+training steps 100 1000
+LoRA target all all
+LoRA rank / alpha 8 / 16 64 / 128
+LoRA dropout 0.10 0.05
+lr schedule cosine cosine
+warmup ratio 0.10 0.05
+optimizer AdamW AdamW
+seed 42 42
+data type bf16 bf16
+cutoff length 16384 16384
+Table 6: Hyperparameter settings for Qwen3 and LLaMA3.1-
+8B-Instruct.
+Code CoT Training Data Template
+You are an expert competitive programmer.
+You will be given a problem statement, test
+case constraints, and example test inputs and
+outputs.
+Please reason step by step about the solution
+(that must respect memory and time limits),
+then provide a complete implementation in
+c++17.
+Your solution must read input from standard
+input (cin) and write output to standard output
+(cout).
+Do not include any debug prints or additional
+output.
+Put your final solution within a single
+code block:
+```cpp
+<your code here>
+```
+# Problem
+{ORIGINAL QUESTION}
+Now solve the problem and return the
+code.
+C.2 Training Details
+All baselines and our method are implemented on
+top of the LLaMA-Factory7 framework. Most hy-
+perparameters are shared across these methods, as
+summarized in Table 6.
+7https://github.com/hiyouga/LLaMA-Factory
+Hyperparameters of VCOREAs shown in Fig-
+ure 2, we conduct a small-scale grid search over
+ϵ∈{1e−4,1e−5}andτ·ϵ∈{0.5,0.8}, resulting
+in four configurations. We train each model under
+these settings and report the best-performing one
+in Table 7.
+Model Math Code
+ϵ τ·ϵ ϵ τ·ϵ
+LLaMA3.1-8B Instruct1e-5 0.8 1e-5 0.8
+Qwen3-4B1e-4 0.5 1e-4 0.8
+Qwen3-8B1e-5 0.5 1e-5 0.5
+Qwen3-32B1e-4 0.8 1e-4 0.8
+Table 7: Selected hyperparameters (ϵ,τ·ϵ)for each model
+and domain.
+The implementation details of Method Ran-
+dom.In theRandombaseline method, we retain
+only 20% of the original supervision tokens in to-
+tal. The supervision on the final answer tokens
+(those inside\boxed{. . . }) is always preserved.
+Once these tokens are fixed, we randomly sample
+from the remaining supervision tokens such that the
+overall proportion of preserved tokens (answer plus
+non–answer) amounts to 20%. All other tokens are
+excluded from the loss.
+The purpose of designing this algorithm is to
+investigate the effect of sparse supervision on SFT.
+The method essentially performs a discrete binary
+weighting of supervision tokens, thereby allowing
+us to ablate and examine how reducing the amount
+of supervision signal influences the training dynam-
+ics and overall performance.
+C.3 Evaluation Details
+We select two groups of benchmarks, each consist-
+ing of two domain-specific and two comprehen-
+sive tasks, resulting in a total of six benchmarks
+to thoroughly evaluate the generalization ability of
+different methods. Detailed information for each
+benchmark is provided in Table 8.
+Specifically, for computational efficiency, we
+adopt a 1,000-sample i.i.d. subset from the SuperG-
+PQA, referred to as SGPQA-1k. We ensure that its
+distribution of different disciplines remains consis-
+tent with the original dataset. Figure 4 illustrates
+the distribution before and after downsampling.
+For OJBench, evaluation is performed using its
+original problem format. For other non-multiple-
+choice benchmarks, we adopt the same instruction
+templates as used in the corresponding training do-
+main during inference. For multiple-choice bench-
+28175
+=== PAGE 16 ===
+Benchmark Size Y ear Task Type Metric Subset Source
+AIME 60 2024
+2025 Open-ended QA Acc@1 Full AoPS 2024 I AoPS 2024 II
+AoPS 2025 I AoPS 2025 II
+Olympiad 674 2024 Open-ended QA Acc@1 OE_TO_maths_en_COMP HF (OlympiadBench)
+LCB (v6) 1055 2024 Code generation Pass@1 release_v6 HF (LiveCodeBench)
+OJBench 232 2025 Code generation Pass@1 Full HF (OJBench)
+RBench 1094 2025 Multiple-choice QA Acc@1 rbench-t_en HF (R-Bench)
+SGPQA-1k 1000 2025 Multiple-choice QA Acc@1 1k samples HF (SuperGPQA)
+Table 8: Benchmarks used for evaluation.
+Science
+Engineering
+Medicine
+Literature and Arts
+Economics
+History
+Law
+Management
+AgronomyEducationPhilosophy
+Military Science
+Sociology
+Discipline
+0
+5
+10
+15
+20
+25
+30
+35Percentage (%)
+Super-GPQA (Original)
+SGPQA-1k (Downsampled)
+Figure 4: Construction of GPQA-1k.
+marks, including the two comprehensive bench-
+marks, we use the template provided below. All
+evaluations are conducted on 8 ×NVIDIA RTX
+PRO 6000 Blackwell GPUs.
+We evaluate the models using theVLLM 8 frame-
+work. The detailed hyperparameter settings for
+inference are provided in Table 9.
+We extract the predicted answers from model
+outputs using regular expression matching on the
+\boxed{} format. For AIME and Olympiad, we
+further applymath_verifyto ensure answer equiva-
+lence. For OJBench9, LiveCodeBench10 , we adopt
+the official repositories for evaluation. For two
+comprehensive benchmarks, we directly verify an-
+swers using exact match.
+8https://github.com/vllm-project/vllm/releases/tag/v0.9.2
+9https://github.com/He-Ren/OJBench
+10https://github.com/LiveCodeBench/LiveCodeBench
+Multiple-Choice Benchmark Evaluation
+Template
+You are a helpful and accurate assistant for
+solving the following multiple-choice ques-
+tion:
+{ORIGINAL QUESTION}
+Options are:
+(A): {OPTION A}
+(B): {OPTION B}
+...
+Please reason step by step, and put the
+correct answer within \boxed{} at last.
+Hyperparameter Value
+temperature 0
+top_p 1.0
+top_k -1
+batch_size 512
+VLLM_USE_V1 True
+seed 42
+enable_thinking True
+max_new_tokens 8192
+Table 9: Inference hyperparameters used in evaluation.
+D Experimental Details of Reinforcement
+Learning
+We conduct the reinforcement learning experiments
+using theVERL 11 framework with the GRPO(Shao
+et al., 2024) algorithm. For training, we ran-
+domly sample 16,800 examples from the Big-
+Math12 dataset, which is the largest open-source
+dataset of high-quality mathematical problems, cu-
+rated specifically for RL training in LLMs. We per-
+11https://github.com/volcengine/verl
+12https://huggingface.co/datasets/SynthLabsAI/Big-Math-
+RL-Verified
+28176
+=== PAGE 17 ===
+form additional full-parameter RL training on the
+Qwen3-4B and Qwen3-8B models obtained from
+the main experiments. To ensure comparability, we
+use identical hyperparameter configurations across
+model sizes and initialization strategies (DFT and
+VCORE). The detailed hyperparameter settings are
+provided in Table 10.
+Hyperparameter Value
+algorithm GRPO
+train_batch_size 128
+max_prompt_length 4096
+max_response_length 8192
+total_epochs 2
+n_gpus_per_node 8
+learning rate 5e-6
+lr_warmup_steps_ratio 0.1
+warmup_style cosine
+ppo_mini_batch_size 32
+ppo_micro_batch_size_per_gpu 2
+entropy_coeff 0.001
+use_kl_loss True
+kl_loss_coef 0.02
+kl_loss_type low_var_kl
+use_kl_in_reward False
+rollout.n 4
+rollout.max_model_len 8192
+Table 10: Hyperparameters used in RL training.
+E Experimental Details of GSM8K and
+MA TH500 Evaluation
+We evaluate our models on the test split of
+GSM8K13 and MATH50014 . The evaluation is
+conducted using vLLM, and all other testing con-
+figurations remain identical to those described in
+Table 9.
+F Comparison with RL Approaches
+We compare our method against the two most
+widely recognized RL approaches in the commu-
+nity (Shao et al., 2024; Yu et al., 2025). We train
+Qwen3-4B on the same math datasets used in
+our main results. For GRPO, we strictly follow
+the RL hyperparameters in Section 5.4 reported
+in the paper. Since the dataset in this setting is
+relatively small, we disable the filtering mecha-
+nism for DAPO. We set clip_ratio_low=0.2 and
+clip_ratio_high=0.28, while keeping all other
+RL-related hyperparameters identical to those used
+in GRPO.
+13https://huggingface.co/datasets/openai/gsm8k
+14https://github.com/openai/prm800k
+As shown in the Table 11, our method consis-
+tently outperforms these baselines, demonstrating
+its effectiveness.
+Method AIME Olympiad RBench SGPQA-1k
+GRPO 40.00 63.80 25.05 32.10
+DAPO 43.33 65.88 28.61 34.10
+VCORE48.33 66.17 34.64 34.30
+Table 11: Comparing VCORE with RL methods (GRPO,
+DAPO).
+G Computational Overhead Analysis
+B forward
+𝜽𝒕
+B forwardB’ forward & backward
+𝜽𝒕+𝟏
+B backward
+In parallel
+B’ forward &
+backward
+B forward
+B forward (shared)
+𝜽𝒕+𝟏
+B backward𝜽𝒕
+Probing
+Main Branch
+Figure 5: Computational Overhead Analysis
+The primary computational overhead in VCORE
+stems from the additional forward and backward
+passes on the batchB′, which are required to esti-
+mate the population loss. As illustrated in Figure 5,
+the total computational cost of VCORE under par-
+allel settings (VCOREparallel) comprises operations
+on bothB′andB (i.e.,B′+B forward/backward
+passes), whereas SFT involves only B. Conse-
+quently, in the regime where|B′|≪|B|, the ad-
+ditional overhead incurred by VCORE becomes
+negligible, rendering its efficiency comparable to
+that of standard SFT.
+Table 12 presents the average wall-clock time
+per training step, along with the additional compu-
+tational cost incurred by theB′branch. We com-
+pare VCORE against vanilla SFT across different
+sizes ofB′. All experiments are conducted on 4
+NVIDIA RTX 5880 GPUs with the same setting of
+Qwen-4B on math domain in the main results.
+28177
+=== PAGE 18 ===
+Method|B ′|Per Step (s) Performance(A vg.)
+SFT – 18.30 42.40
+VCORE8 GPUs 4 26.36 (+44%) 46.35
+VCOREparallel 4 32.12 (+75%) 46.35
+VCOREparallel 8 35.32 (+93%) 45.07
+VCOREparallel 16 40.74 (+123%) 46.79
+VCOREparallel 32 52.91 (+189%) 45.86
+VCORE 32 57.54 (+215%) 45.86
+Table 12: Wall-clock time per training step and additional
+computational overhead. VCOREparallel computesℓt(θ;x,y)
+in a parallel branch process on the same 4 GPUs, while
+VCORE8 GPUs runs the branch process on another 4 GPUs,
+both of which eliminate one forward pass in the main training
+process and reduce the overall step time.
+H Optimizer Scope and Robustness
+H.1 From the SGD Derivation to AdamW
+Implementation
+We clarify that the derivation in Sec 4.1 is exact
+for a single-step SGD update and is presented in
+that form for clarity of exposition. The same rea-
+soning admits a local extension to a broad class
+of coordinate-wise first-order optimizer updates of
+the form
+θ+(q) =θ−ηdk
+(
+gB(q)
+)
+, g B(q)≜∇θˆLB(θ;q),
+where dk(·)is an update map at iteration k,
+parametrized by optimizer state (e.g., momentum
+and second-moment buffers) carried over from pre-
+vious iterations. SGD corresponds to dk(g) =g ,
+while Adam/AdamW corresponds to a precondi-
+tioned first-order direction. For AdamW, the decou-
+pled weight-decay term is additive and independent
+ofq. Sinceq is chosen to maximize the first-order
+decrease of the loss, suchq-independent terms do
+not affect the KL-constrained optimization. We
+therefore present the Adam/AdamW case as a local
+first-order extension of the SGD analysis, not as an
+exact optimizer-agnostic optimality result. The al-
+gorithmic pipeline itself remains unchanged across
+optimizers.
+Throughout this section, we assume that the up-
+date mapdk acts coordinate-wise on the gradient
+and isC1 in its gradient argument atgu, so that its
+Jacobian (defined below) is diagonal and therefore
+symmetric. We also assume bounded token gradi-
+ents, supt,x,y∥∇θℓt(θ;x,y)∥2≤G, as is standard
+in local first-order analyses.
+Step 1: First-order loss expansion.For small
+η, a first-order Taylor expansion of the population
+loss yields
+L(θ+(q))−L(θ)
+=−η
+⟨
+∇L(θ), dk(gB(q))
+⟩
++O(η2).
+Step 2: KL-constrained linear objective.Let u
+denote the uniform token weighting and define
+gu ≜gB(u),∆g(q)≜g B(q)−gu.
+Under the KL constraint KL(q∥u)≤δ,q remains
+close to uniform. Because
+∆g(q)
+=
+∑
+(x,y)∈B
+∑
+t
+(
+qt(x,y)−ut(x,y)
+)
+∇θℓt(θ;x,y),
+the bounded-gradient assumption together with
+Pinsker’s inequality implies
+∥∆g(q)∥2 =O(
+√
+δ),
+where the implicit constant absorbs the batch size
+and the gradient boundG. Under the smoothness
+assumption above, a first-order linearization ofdk
+aroundgu gives
+dk(gB(q)) =d k(gu)+Jk ∆g(q)+O
+(
+∥∆g(q)∥2
+2
+)
+,
+where the Jacobian is evaluated at the uniform-
+weight gradient,
+Jk ≜ ∂dk(g)
+∂g
+⏐⏐⏐⏐
+g=gu
+∈Rp×p.
+Substituting this into the loss expansion yields
+L(θ+(q))−L(θ)
+=C(θ)−η
+⟨
+∇L(θ),Jk∆g(q)
+⟩
++O(η2) +O(ηδ),
+where C(θ)is independent of q, and the O(ηδ)
+term arises from multiplying the step size ηwith
+the O(∥∆g(q)∥2
+2) =O(δ) Taylor remainder on
+dk. Dropping higher-order terms, theq-dependent
+first-order decrease remains linear inq. Therefore,
+the KL-constrained maximization retains the same
+form as in Sec. 4.1 and admits the same Gibbs-form
+solution, with the optimizer-aligned token utility
+˜st(x,y,θ) =
+⟨
+J⊤
+k∇L(θ),∇θℓt(θ;x,y)
+⟩
+.
+Concretely, the optimal reweighting is
+q∗(t|x,y,θ) =exp
+(
+τ˜st(x,y,θ)
+)
+∑
+j exp
+(
+τ˜sj(x,y,θ)
+).
+28178
+=== PAGE 19 ===
+Step 3: One-backward probing.To estimate
+˜st, we draw an independent probing batchB′, i.i.d.
+from the data distribution and independent of the
+main batchB, and compute its uniform-weight gra-
+dient
+gB′(u)≜∇θˆLB′(θ;u),EB′
+[
+gB′(u)
+]
+=∇L(θ).
+Define the probing direction
+vk ≜J kgB′(u).
+By the directional-derivative identity, for any
+smooth token loss and smallε,
+ℓt(θ−εvk;x,y)
+=ℓt(θ;x,y)−ε
+⟨
+vk,∇θℓt(θ;x,y)
+⟩
++O(ε2).
+Taking expectation overB′and invoking the sym-
+metryJ⊤
+k =J k from the coordinate-wise assump-
+tion, we obtain
+lim
+ε→0
+EB′
+[ℓt(θ;x,y)−ℓt(θ−εvk;x,y)
+ε
+]
+=
+⟨
+Jk∇L(θ),∇θℓt
+⟩
+=
+⟨
+J⊤
+k∇L(θ),∇θℓt
+⟩
+= ˜st(x,y,θ).
+Hence the one-backward probing scheme yields an
+unbiased estimator of ˜st(x,y,θ), where the expec-
+tation is taken over the probing batchB′withθ, the
+optimizer state, andBheld fixed.
+Explicit Jacobian for Adam.As an instance of
+the general first-order framework above, we present
+the JacobianJk for the Adam update map explic-
+itly. For a gradient inputg, the Adam direction at
+iterationkis defined element-wise as
+dk(g) = ˆmk(g)⊘
+(√
+ˆvk(g) +ϵadam
+)
+,
+where⊘denotes element-wise division,√·is taken
+element-wise, and ϵadam >0 is the standard sta-
+bilization constant. The first- and second-moment
+estimates are
+mk(g) =β1mk−1+ (1−β1)g,
+vk(g) =β2vk−1+ (1−β2)(g⊙g),
+where⊙denotes element-wise multiplication, and
+mk−1,vk−1are fixed buffers from the previous iter-
+ation (independent of the current gradientg). The
+bias-corrected moments are
+ˆmk(g) = mk(g)
+1−βk
+1
+,ˆv k(g) = vk(g)
+1−βk
+2
+.
+Since all operations are element-wise andϵadam>
+0, the map dk :R p→Rp is smooth in g, and its
+Jacobian is diagonal:
+Jk = diag(Jk,1,...,Jk,p),
+where, for each coordinatei, evaluated atg=g u,
+Jk,i = c1
+ri
+−c2gu,i ˆmk,i(gu)
+r 2
+i
+√
+ˆvk,i(gu) ,
+with
+c1 ≜ 1−β1
+1−βk
+1
+, c 2 ≜ 1−β2
+1−βk
+2
+,
+ri ≜
+√
+ˆvk,i(gu) +ϵadam.
+For AdamW, the decoupled weight decay con-
+tributes only an additive q-independent term to
+the update and therefore does not change the KL-
+constrained reweighting problem above.
+H.2 Empirical Comparison Between SGD and
+AdamW
+To assess optimizer sensitivity, we additionally
+compare AdamW with plain SGD under the same
+training configuration. We keep the batch size,
+number of training steps, LoRA settings, and
+learning-rate schedule identical across VCORE and
+the baseline methods. For SGD, we disable mo-
+mentum and weight decay. The comparison is per-
+formed on the same Qwen3-4B math setting as
+in the main experiments. The results are shown
+at Table 13. Although the absolute values differ
+due to optimizer dynamics, VCORE consistently
+outperforms SFT and DFT under both optimizers.
+The relative ordering remains stable across all four
+benchmarks and the overall average. These results
+indicate that the empirical advantage of VCORE is
+preserved across the two optimizers in this setting.
+I Case Study
+We conducted several case studies to analyze the
+CoT behaviors generated by different methods. In
+the table 14, we illustrate the qualitative differences
+in reasoning behaviors across methods, and we ob-
+serve a clear shift in how VCORE organizes its
+chains. SFT produces structured, template-driven
+reasoning, while DFT often yields verbose nar-
+rative traces. In contrast, VCORE generates ex-
+ploratory and self-corrective chains with frequent
+28179
+=== PAGE 20 ===
+Optimizer Method AIME Olympiad RBench SGPQA-1k Avg.
+AdamW SFT 46.67 61.72 30.71 30.50 42.40
+DFT 35.00 62.91 34.00 32.40 41.08
+VCORE48.33 66.17 34.64 34.30 45.86
+SGD SFT 40.00 60.98 23.40 30.40 38.69
+DFT 40.00 60.83 24.04 27.70 38.14
+VCORE43.33 61.72 24.77 30.60 40.11
+Table 13: Comparison between AdamW and plain SGD under the same training configuration on the Qwen3-4B math setting.
+Avg. denotes the average over the four reported benchmarks.
+Method Example CoT Behaviors Characteristics
+SFT “Let me think about small cases first.”, “Now let’s move to the
+n= 2case.”, “Let’s verify this pattern.”, “Now generalize...”
+Template-like reasoning; struc-
+tured and explanatory
+DFT “Wait, but that’s not possible...Actually maybe I should mark the
+diagonal...But the diagonal doesn’t work...let me re-evaluate
+the4×4case...”
+Narrative filler; continuously
+adding details
+VCORE “Wait, that might be wrong.”, “But that contradicts what I said
+earlier.”, “Maybek= 2n?”, “No, that seems too large.”
+Highly exploratory; trial-and-
+error with frequent self-correction
+Table 14: Qualitative comparison of example chain-of-thought (CoT) behaviors produced by different training methods.
+hypothesis checks. This behavior is also consis-
+tent with the design of VCORE, which empha-
+sizes token-level utility weighting and naturally
+promotes more flexible and self-corrective reason-
+ing patterns. This indicates that VCORE not only
+improves accuracy but also promotes more flexible
+and adaptive reasoning dynamics
+28180

@@ -1,0 +1,14 @@
+[
+  {
+    "command": "nvidia-smi --query-gpu=index,name,memory.used,utilization.gpu --format=csv,noheader",
+    "out": "0, NVIDIA GeForce RTX 3090, 24 MiB, 0 %\n1, NVIDIA GeForce RTX 3090, 24 MiB, 0 %\n",
+    "err": "",
+    "exit": 0
+  },
+  {
+    "command": "nvidia-smi --query-compute-apps=gpu_uuid,pid,used_gpu_memory --format=csv,noheader",
+    "out": "",
+    "err": "",
+    "exit": 0
+  }
+]

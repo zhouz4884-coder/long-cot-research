@@ -1,0 +1,213 @@
+{
+  "status": "CPU_INTERFACE_ONLY_COMPLETE",
+  "completed_cases": 3,
+  "planned_cases": 16,
+  "elapsed_seconds": 5.550521400000434,
+  "hard_limit_seconds": 120,
+  "model_manifest_sha256": "f064e175c2db42caf20e30751ba1fb512ac2bb08cf0688103bd6f19111c03f03",
+  "interface_only": true,
+  "limitations": [
+    "Handwritten teacher-forced injected states; not natural errors, detection or self-correction.",
+    "Revisions are shared visible injections, including wrong revisions; no independent verifier message.",
+    "All cache tensors keep their original shapes; masking establishes no memory saving.",
+    "Target is a whole provided branch; random is a token subset of B union U, with overlap recorded.",
+    "Random scattered B-union-U masking matches only count: not age/contiguous span or Random Attention; beating it does not establish semantic specificity.",
+    "No causal correctness, general accuracy, long-CoT efficiency, novelty or deployment claim.",
+    "Only one fixed seed/mode; no selection of cases or continuations by observed performance."
+  ],
+  "arms": {
+    "full": {
+      "n": 3,
+      "strict_correct": 0,
+      "strict_integer_parseable": 0,
+      "by_group": {
+        "falsified_old_correct_revision": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        },
+        "correct_old_no_error_control": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        },
+        "wait_wrong_revision_control": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        }
+      }
+    },
+    "target_late": {
+      "n": 3,
+      "strict_correct": 0,
+      "strict_integer_parseable": 0,
+      "by_group": {
+        "falsified_old_correct_revision": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        },
+        "correct_old_no_error_control": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        },
+        "wait_wrong_revision_control": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        }
+      }
+    },
+    "target_early_reprefill": {
+      "n": 3,
+      "strict_correct": 0,
+      "strict_integer_parseable": 0,
+      "by_group": {
+        "falsified_old_correct_revision": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        },
+        "correct_old_no_error_control": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        },
+        "wait_wrong_revision_control": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        }
+      }
+    },
+    "random_late": {
+      "n": 3,
+      "strict_correct": 0,
+      "strict_integer_parseable": 0,
+      "by_group": {
+        "falsified_old_correct_revision": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        },
+        "correct_old_no_error_control": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        },
+        "wait_wrong_revision_control": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        }
+      }
+    },
+    "random_early_reprefill": {
+      "n": 3,
+      "strict_correct": 0,
+      "strict_integer_parseable": 0,
+      "by_group": {
+        "falsified_old_correct_revision": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        },
+        "correct_old_no_error_control": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        },
+        "wait_wrong_revision_control": {
+          "n": 1,
+          "correct": 0,
+          "old_branch_value": 0,
+          "revision_implied_value": 0
+        }
+      }
+    }
+  },
+  "per_case_pairs": [
+    {
+      "case_id": "E01",
+      "comparisons": {
+        "target_late_vs_early": {
+          "logit_max_abs": 0.00388161838054657,
+          "logit_relative_l2": 0.013235280121122708,
+          "TV": 0.0006178650139643876,
+          "JS_nats": 2.9800066314014914e-07,
+          "argmax_equal": true,
+          "exact_equal": false
+        },
+        "random_late_vs_early": {
+          "logit_max_abs": 0.0014660060405731201,
+          "logit_relative_l2": 0.004663015910678521,
+          "TV": 0.00021766132034055233,
+          "JS_nats": 3.8118967760653995e-08,
+          "argmax_equal": false,
+          "exact_equal": false
+        }
+      },
+      "controls_passed": true
+    },
+    {
+      "case_id": "C01",
+      "comparisons": {
+        "target_late_vs_early": {
+          "logit_max_abs": 0.003442615270614624,
+          "logit_relative_l2": 0.010597310502308064,
+          "TV": 0.0004962590676124146,
+          "JS_nats": 1.934166666687357e-07,
+          "argmax_equal": true,
+          "exact_equal": false
+        },
+        "random_late_vs_early": {
+          "logit_max_abs": 0.0016880631446838379,
+          "logit_relative_l2": 0.004428301636562319,
+          "TV": 0.00019981345042644708,
+          "JS_nats": 3.308756802213716e-08,
+          "argmax_equal": true,
+          "exact_equal": false
+        }
+      },
+      "controls_passed": true
+    },
+    {
+      "case_id": "W01",
+      "comparisons": {
+        "target_late_vs_early": {
+          "logit_max_abs": 0.00299932062625885,
+          "logit_relative_l2": 0.008980570065423346,
+          "TV": 0.00041515347712918916,
+          "JS_nats": 1.3766585102301587e-07,
+          "argmax_equal": true,
+          "exact_equal": false
+        },
+        "random_late_vs_early": {
+          "logit_max_abs": 0.002272076904773712,
+          "logit_relative_l2": 0.006479041817212415,
+          "TV": 0.00028469947974927245,
+          "JS_nats": 7.120371971768582e-08,
+          "argmax_equal": true,
+          "exact_equal": false
+        }
+      },
+      "controls_passed": true
+    }
+  ]
+}

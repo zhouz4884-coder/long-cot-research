@@ -1,0 +1,1141 @@
+{
+  "scope": "CPU-prepared design fixtures; no model generations, scores or online detector",
+  "unique_programs": 2,
+  "paired_support_placements": 2,
+  "groups_per_pair": [
+    "E",
+    "C",
+    "W"
+  ],
+  "case_count": 12,
+  "rendering_contract": {
+    "whitelist": [
+      "visible.question",
+      "visible.old_assignment_clauses[].text",
+      "visible.revision"
+    ],
+    "all_original_definitions_always_visible": true,
+    "tokenize_each_B_clause_separately": true,
+    "slot_width": "Global maximum clause token length across these 12 states plus one; freeze with verified tokenizer before any model outputs.",
+    "padding": "Append the same fixed neutral newline token until every clause slot has the global slot width.",
+    "masking": "Mask full slots, including padding. Closure and sham must have exactly equal masked-token counts.",
+    "position_ids": "Preserve full original positions within each paired state; no compaction.",
+    "late_early": "Same tokens and readout; fresh prefill masks the same slots from the beginning.",
+    "gold_is_not_a_trigger": true
+  },
+  "limitations": [
+    "Same-budget sham matches token count only, not position/age or logical content.",
+    "Two logical programs are not twelve independent natural problems.",
+    "All edits are forced diagnostic interventions; C/W are stress controls, not a deployed policy.",
+    "After-fault independent r is logically independent but its old KV may depend on the bad prefix.",
+    "No cache slots are freed; no memory-saving claim.",
+    "Exact AST dependency and local validity are privileged offline annotations, not a validated natural-language extractor."
+  ],
+  "source_sha256": "23461e72f2649a91327e33cf5a3e1e46b3dc2541fff13089d3aedf8c09524cf6",
+  "cases": [
+    {
+      "case_id": "T1_support_before_fault_E",
+      "visible": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=24；"
+          },
+          {
+            "variable": "x",
+            "text": "x=19；"
+          },
+          {
+            "variable": "y",
+            "text": "y=59；"
+          },
+          {
+            "variable": "z",
+            "text": "z=83；"
+          }
+        ],
+        "revision": "复核记录：x=18。其他变量须按题目原始定义处理。"
+      },
+      "evaluator_only": {
+        "program_id": "T1",
+        "placement": "support_before_fault",
+        "group": "E",
+        "definitions": [
+          [
+            "r",
+            "6*4"
+          ],
+          [
+            "x",
+            "27-9"
+          ],
+          [
+            "y",
+            "3*x+2"
+          ],
+          [
+            "z",
+            "y+r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 80,
+        "old_final_value": 83,
+        "revision_implied_final_value": 80,
+        "old_x_valid": false,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true
+      },
+      "fixed_mask_rules": {
+        "whole_B": [
+          "r",
+          "x",
+          "y",
+          "z"
+        ],
+        "closure": [
+          "x",
+          "y",
+          "z"
+        ],
+        "same_clause_budget_sham": [
+          "r",
+          "x",
+          "z"
+        ],
+        "sham_retains": "y, a dependent value; not a semantic equivalent"
+      }
+    },
+    {
+      "case_id": "T1_support_before_fault_C",
+      "visible": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=24；"
+          },
+          {
+            "variable": "x",
+            "text": "x=18；"
+          },
+          {
+            "variable": "y",
+            "text": "y=56；"
+          },
+          {
+            "variable": "z",
+            "text": "z=80；"
+          }
+        ],
+        "revision": "复核记录：x=18。其他变量须按题目原始定义处理。"
+      },
+      "evaluator_only": {
+        "program_id": "T1",
+        "placement": "support_before_fault",
+        "group": "C",
+        "definitions": [
+          [
+            "r",
+            "6*4"
+          ],
+          [
+            "x",
+            "27-9"
+          ],
+          [
+            "y",
+            "3*x+2"
+          ],
+          [
+            "z",
+            "y+r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 80,
+        "old_final_value": 80,
+        "revision_implied_final_value": 80,
+        "old_x_valid": true,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": false
+      },
+      "fixed_mask_rules": {
+        "whole_B": [
+          "r",
+          "x",
+          "y",
+          "z"
+        ],
+        "closure": [
+          "x",
+          "y",
+          "z"
+        ],
+        "same_clause_budget_sham": [
+          "r",
+          "x",
+          "z"
+        ],
+        "sham_retains": "y, a dependent value; not a semantic equivalent"
+      }
+    },
+    {
+      "case_id": "T1_support_before_fault_W",
+      "visible": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=24；"
+          },
+          {
+            "variable": "x",
+            "text": "x=18；"
+          },
+          {
+            "variable": "y",
+            "text": "y=56；"
+          },
+          {
+            "variable": "z",
+            "text": "z=80；"
+          }
+        ],
+        "revision": "复核记录：x=19。其他变量须按题目原始定义处理。"
+      },
+      "evaluator_only": {
+        "program_id": "T1",
+        "placement": "support_before_fault",
+        "group": "W",
+        "definitions": [
+          [
+            "r",
+            "6*4"
+          ],
+          [
+            "x",
+            "27-9"
+          ],
+          [
+            "y",
+            "3*x+2"
+          ],
+          [
+            "z",
+            "y+r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 80,
+        "old_final_value": 80,
+        "revision_implied_final_value": 83,
+        "old_x_valid": true,
+        "revised_x_valid": false,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true
+      },
+      "fixed_mask_rules": {
+        "whole_B": [
+          "r",
+          "x",
+          "y",
+          "z"
+        ],
+        "closure": [
+          "x",
+          "y",
+          "z"
+        ],
+        "same_clause_budget_sham": [
+          "r",
+          "x",
+          "z"
+        ],
+        "sham_retains": "y, a dependent value; not a semantic equivalent"
+      }
+    },
+    {
+      "case_id": "T1_support_after_fault_E",
+      "visible": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "x",
+            "text": "x=19；"
+          },
+          {
+            "variable": "y",
+            "text": "y=59；"
+          },
+          {
+            "variable": "z",
+            "text": "z=83；"
+          },
+          {
+            "variable": "r",
+            "text": "r=24；"
+          }
+        ],
+        "revision": "复核记录：x=18。其他变量须按题目原始定义处理。"
+      },
+      "evaluator_only": {
+        "program_id": "T1",
+        "placement": "support_after_fault",
+        "group": "E",
+        "definitions": [
+          [
+            "r",
+            "6*4"
+          ],
+          [
+            "x",
+            "27-9"
+          ],
+          [
+            "y",
+            "3*x+2"
+          ],
+          [
+            "z",
+            "y+r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 80,
+        "old_final_value": 83,
+        "revision_implied_final_value": 80,
+        "old_x_valid": false,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true
+      },
+      "fixed_mask_rules": {
+        "whole_B": [
+          "x",
+          "y",
+          "z",
+          "r"
+        ],
+        "closure": [
+          "x",
+          "y",
+          "z"
+        ],
+        "same_clause_budget_sham": [
+          "x",
+          "z",
+          "r"
+        ],
+        "sham_retains": "y, a dependent value; not a semantic equivalent"
+      }
+    },
+    {
+      "case_id": "T1_support_after_fault_C",
+      "visible": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "x",
+            "text": "x=18；"
+          },
+          {
+            "variable": "y",
+            "text": "y=56；"
+          },
+          {
+            "variable": "z",
+            "text": "z=80；"
+          },
+          {
+            "variable": "r",
+            "text": "r=24；"
+          }
+        ],
+        "revision": "复核记录：x=18。其他变量须按题目原始定义处理。"
+      },
+      "evaluator_only": {
+        "program_id": "T1",
+        "placement": "support_after_fault",
+        "group": "C",
+        "definitions": [
+          [
+            "r",
+            "6*4"
+          ],
+          [
+            "x",
+            "27-9"
+          ],
+          [
+            "y",
+            "3*x+2"
+          ],
+          [
+            "z",
+            "y+r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 80,
+        "old_final_value": 80,
+        "revision_implied_final_value": 80,
+        "old_x_valid": true,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": false
+      },
+      "fixed_mask_rules": {
+        "whole_B": [
+          "x",
+          "y",
+          "z",
+          "r"
+        ],
+        "closure": [
+          "x",
+          "y",
+          "z"
+        ],
+        "same_clause_budget_sham": [
+          "x",
+          "z",
+          "r"
+        ],
+        "sham_retains": "y, a dependent value; not a semantic equivalent"
+      }
+    },
+    {
+      "case_id": "T1_support_after_fault_W",
+      "visible": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "x",
+            "text": "x=18；"
+          },
+          {
+            "variable": "y",
+            "text": "y=56；"
+          },
+          {
+            "variable": "z",
+            "text": "z=80；"
+          },
+          {
+            "variable": "r",
+            "text": "r=24；"
+          }
+        ],
+        "revision": "复核记录：x=19。其他变量须按题目原始定义处理。"
+      },
+      "evaluator_only": {
+        "program_id": "T1",
+        "placement": "support_after_fault",
+        "group": "W",
+        "definitions": [
+          [
+            "r",
+            "6*4"
+          ],
+          [
+            "x",
+            "27-9"
+          ],
+          [
+            "y",
+            "3*x+2"
+          ],
+          [
+            "z",
+            "y+r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 80,
+        "old_final_value": 80,
+        "revision_implied_final_value": 83,
+        "old_x_valid": true,
+        "revised_x_valid": false,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true
+      },
+      "fixed_mask_rules": {
+        "whole_B": [
+          "x",
+          "y",
+          "z",
+          "r"
+        ],
+        "closure": [
+          "x",
+          "y",
+          "z"
+        ],
+        "same_clause_budget_sham": [
+          "x",
+          "z",
+          "r"
+        ],
+        "sham_retains": "y, a dependent value; not a semantic equivalent"
+      }
+    },
+    {
+      "case_id": "T2_support_before_fault_E",
+      "visible": {
+        "question": "按整数算术，依次定义 r=13+4，x=54//6，y=x*x，z=y-r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=17；"
+          },
+          {
+            "variable": "x",
+            "text": "x=8；"
+          },
+          {
+            "variable": "y",
+            "text": "y=64；"
+          },
+          {
+            "variable": "z",
+            "text": "z=47；"
+          }
+        ],
+        "revision": "复核记录：x=9。其他变量须按题目原始定义处理。"
+      },
+      "evaluator_only": {
+        "program_id": "T2",
+        "placement": "support_before_fault",
+        "group": "E",
+        "definitions": [
+          [
+            "r",
+            "13+4"
+          ],
+          [
+            "x",
+            "54//6"
+          ],
+          [
+            "y",
+            "x*x"
+          ],
+          [
+            "z",
+            "y-r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 64,
+        "old_final_value": 47,
+        "revision_implied_final_value": 64,
+        "old_x_valid": false,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true
+      },
+      "fixed_mask_rules": {
+        "whole_B": [
+          "r",
+          "x",
+          "y",
+          "z"
+        ],
+        "closure": [
+          "x",
+          "y",
+          "z"
+        ],
+        "same_clause_budget_sham": [
+          "r",
+          "x",
+          "z"
+        ],
+        "sham_retains": "y, a dependent value; not a semantic equivalent"
+      }
+    },
+    {
+      "case_id": "T2_support_before_fault_C",
+      "visible": {
+        "question": "按整数算术，依次定义 r=13+4，x=54//6，y=x*x，z=y-r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=17；"
+          },
+          {
+            "variable": "x",
+            "text": "x=9；"
+          },
+          {
+            "variable": "y",
+            "text": "y=81；"
+          },
+          {
+            "variable": "z",
+            "text": "z=64；"
+          }
+        ],
+        "revision": "复核记录：x=9。其他变量须按题目原始定义处理。"
+      },
+      "evaluator_only": {
+        "program_id": "T2",
+        "placement": "support_before_fault",
+        "group": "C",
+        "definitions": [
+          [
+            "r",
+            "13+4"
+          ],
+          [
+            "x",
+            "54//6"
+          ],
+          [
+            "y",
+            "x*x"
+          ],
+          [
+            "z",
+            "y-r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 64,
+        "old_final_value": 64,
+        "revision_implied_final_value": 64,
+        "old_x_valid": true,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": false
+      },
+      "fixed_mask_rules": {
+        "whole_B": [
+          "r",
+          "x",
+          "y",
+          "z"
+        ],
+        "closure": [
+          "x",
+          "y",
+          "z"
+        ],
+        "same_clause_budget_sham": [
+          "r",
+          "x",
+          "z"
+        ],
+        "sham_retains": "y, a dependent value; not a semantic equivalent"
+      }
+    },
+    {
+      "case_id": "T2_support_before_fault_W",
+      "visible": {
+        "question": "按整数算术，依次定义 r=13+4，x=54//6，y=x*x，z=y-r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=17；"
+          },
+          {
+            "variable": "x",
+            "text": "x=9；"
+          },
+          {
+            "variable": "y",
+            "text": "y=81；"
+          },
+          {
+            "variable": "z",
+            "text": "z=64；"
+          }
+        ],
+        "revision": "复核记录：x=8。其他变量须按题目原始定义处理。"
+      },
+      "evaluator_only": {
+        "program_id": "T2",
+        "placement": "support_before_fault",
+        "group": "W",
+        "definitions": [
+          [
+            "r",
+            "13+4"
+          ],
+          [
+            "x",
+            "54//6"
+          ],
+          [
+            "y",
+            "x*x"
+          ],
+          [
+            "z",
+            "y-r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 64,
+        "old_final_value": 64,
+        "revision_implied_final_value": 47,
+        "old_x_valid": true,
+        "revised_x_valid": false,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true
+      },
+      "fixed_mask_rules": {
+        "whole_B": [
+          "r",
+          "x",
+          "y",
+          "z"
+        ],
+        "closure": [
+          "x",
+          "y",
+          "z"
+        ],
+        "same_clause_budget_sham": [
+          "r",
+          "x",
+          "z"
+        ],
+        "sham_retains": "y, a dependent value; not a semantic equivalent"
+      }
+    },
+    {
+      "case_id": "T2_support_after_fault_E",
+      "visible": {
+        "question": "按整数算术，依次定义 r=13+4，x=54//6，y=x*x，z=y-r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "x",
+            "text": "x=8；"
+          },
+          {
+            "variable": "y",
+            "text": "y=64；"
+          },
+          {
+            "variable": "z",
+            "text": "z=47；"
+          },
+          {
+            "variable": "r",
+            "text": "r=17；"
+          }
+        ],
+        "revision": "复核记录：x=9。其他变量须按题目原始定义处理。"
+      },
+      "evaluator_only": {
+        "program_id": "T2",
+        "placement": "support_after_fault",
+        "group": "E",
+        "definitions": [
+          [
+            "r",
+            "13+4"
+          ],
+          [
+            "x",
+            "54//6"
+          ],
+          [
+            "y",
+            "x*x"
+          ],
+          [
+            "z",
+            "y-r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 64,
+        "old_final_value": 47,
+        "revision_implied_final_value": 64,
+        "old_x_valid": false,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true
+      },
+      "fixed_mask_rules": {
+        "whole_B": [
+          "x",
+          "y",
+          "z",
+          "r"
+        ],
+        "closure": [
+          "x",
+          "y",
+          "z"
+        ],
+        "same_clause_budget_sham": [
+          "x",
+          "z",
+          "r"
+        ],
+        "sham_retains": "y, a dependent value; not a semantic equivalent"
+      }
+    },
+    {
+      "case_id": "T2_support_after_fault_C",
+      "visible": {
+        "question": "按整数算术，依次定义 r=13+4，x=54//6，y=x*x，z=y-r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "x",
+            "text": "x=9；"
+          },
+          {
+            "variable": "y",
+            "text": "y=81；"
+          },
+          {
+            "variable": "z",
+            "text": "z=64；"
+          },
+          {
+            "variable": "r",
+            "text": "r=17；"
+          }
+        ],
+        "revision": "复核记录：x=9。其他变量须按题目原始定义处理。"
+      },
+      "evaluator_only": {
+        "program_id": "T2",
+        "placement": "support_after_fault",
+        "group": "C",
+        "definitions": [
+          [
+            "r",
+            "13+4"
+          ],
+          [
+            "x",
+            "54//6"
+          ],
+          [
+            "y",
+            "x*x"
+          ],
+          [
+            "z",
+            "y-r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 64,
+        "old_final_value": 64,
+        "revision_implied_final_value": 64,
+        "old_x_valid": true,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": false
+      },
+      "fixed_mask_rules": {
+        "whole_B": [
+          "x",
+          "y",
+          "z",
+          "r"
+        ],
+        "closure": [
+          "x",
+          "y",
+          "z"
+        ],
+        "same_clause_budget_sham": [
+          "x",
+          "z",
+          "r"
+        ],
+        "sham_retains": "y, a dependent value; not a semantic equivalent"
+      }
+    },
+    {
+      "case_id": "T2_support_after_fault_W",
+      "visible": {
+        "question": "按整数算术，依次定义 r=13+4，x=54//6，y=x*x，z=y-r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "x",
+            "text": "x=9；"
+          },
+          {
+            "variable": "y",
+            "text": "y=81；"
+          },
+          {
+            "variable": "z",
+            "text": "z=64；"
+          },
+          {
+            "variable": "r",
+            "text": "r=17；"
+          }
+        ],
+        "revision": "复核记录：x=8。其他变量须按题目原始定义处理。"
+      },
+      "evaluator_only": {
+        "program_id": "T2",
+        "placement": "support_after_fault",
+        "group": "W",
+        "definitions": [
+          [
+            "r",
+            "13+4"
+          ],
+          [
+            "x",
+            "54//6"
+          ],
+          [
+            "y",
+            "x*x"
+          ],
+          [
+            "z",
+            "y-r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 64,
+        "old_final_value": 64,
+        "revision_implied_final_value": 47,
+        "old_x_valid": true,
+        "revised_x_valid": false,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true
+      },
+      "fixed_mask_rules": {
+        "whole_B": [
+          "x",
+          "y",
+          "z",
+          "r"
+        ],
+        "closure": [
+          "x",
+          "y",
+          "z"
+        ],
+        "same_clause_budget_sham": [
+          "x",
+          "z",
+          "r"
+        ],
+        "sham_retains": "y, a dependent value; not a semantic equivalent"
+      }
+    }
+  ]
+}

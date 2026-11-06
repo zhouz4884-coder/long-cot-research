@@ -1,0 +1,89 @@
+{
+  "dirs": {
+    "/data/home/zhoubin/p0_cemrollout/envs": [
+      "nanowm-v100"
+    ],
+    "/data/home/zhoubin/p0_cemrollout/models": [
+      "stabilityai",
+      "torushy"
+    ],
+    "/data/home/zhoubin/p0_mavexec/models": [
+      "facebook"
+    ],
+    "/data/home/zhoubin/contractkv_v100/models": [
+      "mistral-small-24b-instruct-2501",
+      "qwen3-32b",
+      "llama-3.1-70b-instruct"
+    ],
+    "/data/home/zhoubin/revtrace_v100/models": [
+      "Qwen3-ASR-1.7B",
+      "Qwen3-ASR-0.6B"
+    ],
+    "/data/home/zhoubin/contractkv_v100/env": [
+      "contractkv-v100-condarc",
+      "contractkv-v100-cu121"
+    ]
+  },
+  "env_metadata": [
+    {
+      "python": "/data/home/zhoubin/contractkv_v100/env/contractkv-v100-cu121/bin/python",
+      "exit_code": 0,
+      "stdout": "{\"python\": \"3.10.6 | packaged by conda-forge | (main, Aug 22 2022, 20:36:39) [GCC 10.4.0]\", \"versions\": {\"torch\": \"2.4.1\", \"transformers\": \"4.55.2\", \"modelscope\": \"1.38.1\", \"safetensors\": \"0.8.0\", \"tokenizers\": \"0.21.4\", \"pip\": \"26.1.2\"}}\n",
+      "stderr": ""
+    },
+    {
+      "python": "/data/home/zhoubin/p0_cemrollout/envs/nanowm-v100/bin/python",
+      "exit_code": 0,
+      "stdout": "{\"python\": \"3.10.6 | packaged by conda-forge | (main, Aug 22 2022, 20:36:39) [GCC 10.4.0]\", \"versions\": {\"torch\": \"2.4.1\", \"transformers\": \"4.55.2\", \"modelscope\": \"1.38.1\", \"safetensors\": \"0.8.0\", \"tokenizers\": \"0.21.4\", \"pip\": \"26.1.2\"}}\n",
+      "stderr": ""
+    },
+    {
+      "python": "/data/home/zhoubin/revtrace_v100/env/revtrace-v100-cu121/bin/python",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"<string>\", line 1, in <dictcomp>\nAttributeError: 'NoneType' object has no attribute 'lower'\n"
+    }
+  ],
+  "pbs_headers": [
+    {
+      "file": "/data/home/zhoubin/p0_cemrollout/pbs/run_fullpath_rank.pbs",
+      "headers": [
+        "#PBS -N p0-cem-fullrank",
+        "#PBS -q GPUDefq",
+        "#PBS -l nodes=gpu2:ppn=6:gpus=1"
+      ]
+    },
+    {
+      "file": "/data/home/zhoubin/p0_cemrollout/pbs/run_census.pbs",
+      "headers": [
+        "#PBS -N p0-cem-census",
+        "#PBS -q GPUDefq",
+        "#PBS -l nodes=gpu2:ppn=6:gpus=1"
+      ]
+    },
+    {
+      "file": "/data/home/zhoubin/p0_cemrollout/pbs/run_gate0_smoke.pbs",
+      "headers": [
+        "#PBS -N p0-cem-g0",
+        "#PBS -q GPUDefq",
+        "#PBS -l nodes=gpu2:ppn=6:gpus=1"
+      ]
+    },
+    {
+      "file": "/data/home/zhoubin/contractkv_v100/pbs/submit_preflight.sh",
+      "headers": []
+    },
+    {
+      "file": "/data/home/zhoubin/contractkv_v100/pbs/run_with_job_cache.sh",
+      "headers": []
+    },
+    {
+      "file": "/data/home/zhoubin/contractkv_v100/pbs/00_preflight_gpu2.pbs",
+      "headers": [
+        "#PBS -N ckv-v100-preflight",
+        "#PBS -q GPUDefq",
+        "#PBS -l nodes=gpu2:ppn=36:gpus=8"
+      ]
+    }
+  ]
+}

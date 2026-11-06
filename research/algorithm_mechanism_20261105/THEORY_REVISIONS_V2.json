@@ -1,0 +1,66 @@
+{
+  "version": "theory_and_algorithm_revisions_v2_20261105",
+  "status": "Analysis+CPU evidence only; no new model generation/training",
+  "attachment_sha256": "7366c6c946986ec2dbab8075197bac14e73d67e25cf8692a8e3cdd3f47983e1f",
+  "main_algorithm_candidate": "Verified revision with version-consistent local frontier replay; ordinary text work-frame first; optional cache reconstruction only after incremental evidence",
+  "second_route": "Certified state-transition targets (propagate/reject/maintain), optional VCORE-style credit assignment after same-data plain-SFT baseline",
+  "hypothesis_status": {
+    "post_revision_binding_errors": "observed in artificial P0 outputs",
+    "stage_pointer_desynchronization": "not uniquely identified",
+    "natural_prevalence": "not yet semantically annotated",
+    "algorithm_benchmark_gain": "not measured"
+  },
+  "formal_scope": "Complete finite pure-function DAG, valid unchanged roots, sound new values, exact checked transitions, all needed ready nodes, version-consistent reads; LLM prompt alone does not satisfy these assumptions",
+  "important_revisions": [
+    "Local model likelihood ratio is a heuristic, not a proof of constraint truth.",
+    "A frontier is generally a set, not one direct child.",
+    "Rules and value versions differ; changed rules must invalidate their dependent values.",
+    "Rejecting R after prefill requires restoring/rebuilding the actual work state, not a flag.",
+    "Same token-weight KL fixes Shannon entropy, not ESS, gradient variance or output policy KL.",
+    "Same LoRA parameter norm does not fix effective weight/function change.",
+    "Gibbs optimality for linear fixed-eta utility is not inherited by normalized-step objective.",
+    "Prop-only positive supervision does not certify W/no-change behavior.",
+    "Three reference losses are different, not automatically orthogonal."
+  ],
+  "minimal_future_cache_disambiguation": {
+    "prior_protocol": "../next_design_20261105/RESEARCH_PROTOCOL_V1.json",
+    "prior_remains_unchanged": true,
+    "proposed_arms": [
+      "Full+Direct",
+      "Full+OneLine",
+      "WholeEarly+Direct",
+      "WholeEarly+OneLine",
+      "WholeLate+OneLine"
+    ],
+    "max_outputs_if_full16": 80,
+    "max_new_tokens": 64,
+    "budget": "retain a predeclared short hard cap and report partial complete pairs; not a two-minute promise",
+    "key_estimand": "Late-vs-Early under identical visible keys, positions, summaries and OneLine suffix; no claim of global KV indispensability"
+  },
+  "behavior_label_schema": "P1_LABEL_SCHEMA_V2.json",
+  "primary_evaluation_contract": "EVALUATION_CONTRACT_V1.json",
+  "actual_cpu_evidence": {
+    "exact_DAG_controls": {
+      "path": "vtfr_formal_controls.json",
+      "sha256": "65d58aba42ca2b036b067a545ac73f5d3b88902af36f52d6ddea0801538d54ac",
+      "cases": 675,
+      "neural_model": false
+    },
+    "algebra_controls": {
+      "path": "transition_anchor_algebra_controls.json",
+      "sha256": "3f101fe10610f44f86d719c7f2ebec15ec547050694ca42dd829ab7f24658564",
+      "predefined_assertions": 7,
+      "neural_model": false
+    },
+    "high_level_countermodels": {
+      "path": "observational_signature_control.json",
+      "sha256": "83a3db7419b73e2690c4c7ee61c8aa5479172b3c49e7a9905cddb61c15d41c22",
+      "inputs": 16,
+      "numeric_compatible_outputs": 19,
+      "neural_mechanisms_identified": false
+    }
+  },
+  "borrowed_modules_attributed": true,
+  "publication_acceptance_claim": false,
+  "new_gpu_minutes": 0
+}

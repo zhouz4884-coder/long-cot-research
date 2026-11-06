@@ -1,0 +1,70 @@
+{
+  "provenance/p0_launcher_01.json": {
+    "pid": 562794,
+    "started_unix": 1793874097.6267276,
+    "gpu_uuid": "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+    "requested_gpus": 1,
+    "scope": "16 injected short states, not natural long-CoT",
+    "input_sha256": "6ffe069718396dc2543f85aa9270780f356e293cc9764afdaf2f06a083c5cc27",
+    "source_sha256": "246219aee9774fae0966c7663c765daf3dba2f1df68bc054b539a4dd5d64331b",
+    "status": "RUNNING"
+  },
+  "results/p0_qwen3_4b_fp16_01/manifest.json": {
+    "versions": {
+      "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]",
+      "torch": "2.8.0+cu128",
+      "transformers": "4.55.2"
+    },
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 3090",
+      "total_memory_bytes": 25307578368,
+      "capability": [
+        8,
+        6
+      ]
+    },
+    "binding": {
+      "device": "cuda:0",
+      "allocation_mode": "explicit_authorized_standalone",
+      "physical_index": "0",
+      "physical_uuid": "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+      "requested_visible_identifier": "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+      "CUDA_VISIBLE_DEVICES": "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+      "compute_process_check": "empty before torch import",
+      "PBS_JOBID": null
+    },
+    "parameter_dtype": "torch.float16",
+    "load_and_hash_seconds": 66.32733393926173,
+    "executed_order": [
+      "E01",
+      "C01",
+      "W01",
+      "E02",
+      "E03",
+      "C02",
+      "W02",
+      "E04",
+      "E05",
+      "C03",
+      "W03",
+      "E06",
+      "E07",
+      "C04",
+      "W04",
+      "E08"
+    ]
+  },
+  "results/p0_qwen3_4b_fp16_01/summary.json": {
+    "exists": false
+  },
+  "results/p0_qwen3_4b_fp16_01/error.json": {
+    "exists": false
+  },
+  "log_tail": [
+    "Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]",
+    "Loading checkpoint shards:  33%|\u2588\u2588\u2588\u258e      | 1/3 [00:23<00:47, 23.92s/it]",
+    "Loading checkpoint shards:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 2/3 [00:50<00:25, 25.75s/it]",
+    "Loading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3/3 [00:51<00:00, 14.31s/it]",
+    "Loading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3/3 [00:51<00:00, 17.22s/it]"
+  ]
+}

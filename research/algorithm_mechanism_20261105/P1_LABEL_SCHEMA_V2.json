@@ -1,0 +1,86 @@
+{
+  "schema_version": "post_revision_behavior_labels_v2_20261105",
+  "state": "DEFINITION_ONLY; 100 trajectories not semantically annotated in this turn",
+  "sampling_manifest": "../next_design_20261105/P1_sampling_manifest.json",
+  "sampling_manifest_sha256": "6ee72c687db428cf341ec0f65ce1c3d51de94aa57eb8033e899baeccd0ce30eb",
+  "primary_unit": "question/trajectory; retain all events as nested records, do not count multiple events as independent questions",
+  "axes": {
+    "revision_validity": [
+      "corrects_wrong",
+      "overturns_correct",
+      "no_change",
+      "both_wrong",
+      "locally_compatible_but_not_certified",
+      "unknown"
+    ],
+    "downstream_behavior": [
+      "correct_dependency_propagation",
+      "stale_value_or_stale_descendant_used",
+      "explicit_invalid_binding_or_substitution",
+      "numeric_signature_compatible_only",
+      "arithmetic_error_with_correct_binding",
+      "invalid_rule_or_scope",
+      "not_enough_evidence",
+      "not_applicable"
+    ],
+    "evidence_strength": [
+      "explicit_expression_and_verified_rule",
+      "independently_reconstructed_semantic_use",
+      "number_match_only",
+      "ambiguous"
+    ],
+    "observation_horizon": [
+      "observed_prefix_only",
+      "complete_thinking_stage_with_forced_readout",
+      "censored_before_outcome",
+      "unknown"
+    ]
+  },
+  "event_fields": [
+    "event_id",
+    "source_span",
+    "variable_or_claim_identity",
+    "scope_and_branch",
+    "old_value",
+    "proposed_value",
+    "trusted_definition_or_constraints",
+    "local_validity_witness",
+    "changed_rule_if_any",
+    "downstream_expression_span",
+    "required_binding",
+    "actual_visible_substitution",
+    "label_set",
+    "evidence_strength",
+    "unknown_reason"
+  ],
+  "guardrails": [
+    "A missing displayed intermediate step is not an error if a semantically equivalent composed calculation is correct.",
+    "g(new_x) matching a number is only compatible with a shortcut, not proof of internal hop skipping.",
+    "Old values quoted, rejected or compared are not stale reuse unless used as an active premise.",
+    "The same variable spelling in different branches/scopes is not automatically the same binding.",
+    "W03-style invalid revisions may have misbinding but do not enter correct-revision E denominators.",
+    "Necessary but incomplete local constraints cannot certify global validity.",
+    "Observed-prefix absence is not complete-trajectory absence after cap.",
+    "Do not pool E-Reuse and E-Misbind by addition; report set union and intersection.",
+    "Annotations are behavioral and logical; no stage-pointer/KV-causal labels without interventions.",
+    "Do not infer a fixed fraction of missed natural events from synthetic P0 signatures."
+  ],
+  "reported_counts": [
+    "N sampled questions",
+    "N observable/reviewed",
+    "N verified valid corrections",
+    "N invalid revisions",
+    "N correct-revision stale-use questions",
+    "N correct-revision explicit misbinding questions",
+    "N overlap",
+    "N union",
+    "N numeric-compatible-only",
+    "N unknown/censored"
+  ],
+  "rates": [
+    "union/N sampled as recorded-window confirmed lower bound",
+    "union/N verified-valid-correction questions, with explicit eligibility",
+    "bounds including unresolved/censored appropriate to complete-trajectory estimand"
+  ],
+  "unchanged_sampling": true
+}

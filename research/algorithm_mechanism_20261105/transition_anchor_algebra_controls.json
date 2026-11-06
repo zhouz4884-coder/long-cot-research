@@ -1,0 +1,357 @@
+{
+  "scope": "CPU algebra controls only; no language model, GPU, training, seed sweep or empirical performance claim",
+  "fixed_random_seed": 20261105,
+  "analytic_collinear_anchors": {
+    "g_U": [
+      1,
+      0
+    ],
+    "g_A": [
+      1,
+      0
+    ],
+    "g_prop": [
+      1,
+      0
+    ],
+    "all_pairwise_cosines": 1
+  },
+  "random_shared_gradient_control": {
+    "token_gradients": [
+      [
+        1.0442736381319673,
+        1.0942123322119564,
+        1.1212989680895808
+      ],
+      [
+        1.5644628471543434,
+        1.1264309308742047,
+        0.799760806962032
+      ],
+      [
+        0.9713863380763635,
+        1.7627279205490614,
+        0.7075546547336967
+      ],
+      [
+        1.2936444360702999,
+        -0.015111114310389952,
+        -1.1035435320442488
+      ],
+      [
+        0.15673327184249533,
+        -0.6190076311535203,
+        0.7793429024799768
+      ],
+      [
+        0.13182862805653228,
+        1.9339698635086982,
+        -0.5972186645568013
+      ],
+      [
+        -0.3724133865133329,
+        0.0343373810467336,
+        -2.3000381625976853
+      ],
+      [
+        -0.9804842515983746,
+        -1.8800906070176986,
+        0.23876569925842678
+      ]
+    ],
+    "anchors": {
+      "U": [
+        0.47617894015253676,
+        0.42968363446363067,
+        -0.04425966595937778
+      ],
+      "A": [
+        -0.6764488190558537,
+        -0.9228766129854825,
+        -1.0306362316696294
+      ],
+      "prop": [
+        1.3043682426431553,
+        1.1103216315430804,
+        0.9605298875258064
+      ]
+    },
+    "Gram": {
+      "U": {
+        "U": 0.41333332680150386,
+        "A": -0.6730400436152094,
+        "prop": 1.0556869894495726
+      },
+      "A": {
+        "U": -0.6730400436152094,
+        "A": 2.371495289627789,
+        "prop": -2.8969851276785645
+      },
+      "prop": {
+        "U": 1.0556869894495726,
+        "A": -2.8969851276785645,
+        "prop": 3.85680830271882
+      }
+    },
+    "cosines": {
+      "U": {
+        "U": 0.9999999999999999,
+        "A": -0.679797493694129,
+        "prop": 0.8361244643638152
+      },
+      "A": {
+        "U": -0.679797493694129,
+        "A": 1.0,
+        "prop": -0.9579020568017085
+      },
+      "prop": {
+        "U": 0.8361244643638152,
+        "A": -0.9579020568017085,
+        "prop": 0.9999999999999999
+      }
+    }
+  },
+  "same_KL_different_ESS": {
+    "target_KL": 0.3,
+    "distribution_A": {
+      "q": [
+        0.7128531199307362,
+        0.1435734400346319,
+        0.1435734400346319
+      ],
+      "KL_q_uniform": 0.29999999999999993,
+      "Shannon_entropy": 0.7986122886681097,
+      "ESS": 1.820213056938762,
+      "max_weight": 0.7128531199307362
+    },
+    "distribution_B": {
+      "q": [
+        0.4864954845573116,
+        0.4864954845573116,
+        0.02700903088537676
+      ],
+      "KL_q_uniform": 0.30000000000000016,
+      "Shannon_entropy": 0.7986122886681095,
+      "ESS": 2.109325493480699,
+      "max_weight": 0.4864954845573116
+    },
+    "absolute_KL_difference": 2.220446049250313e-16
+  },
+  "same_KL_removes_positive_affine_score_scaling": {
+    "scores": [
+      1,
+      3,
+      -2,
+      0
+    ],
+    "scaled_scores": [
+      17,
+      37,
+      -13,
+      7
+    ],
+    "base": {
+      "status": "finite",
+      "beta": 0.4725238749883115,
+      "q": [
+        0.22529297724815756,
+        0.5796644642698487,
+        0.054588871937925054,
+        0.1404536865440686
+      ]
+    },
+    "scaled": {
+      "status": "finite",
+      "beta": 0.04725238749883115,
+      "q": [
+        0.22529297724815756,
+        0.5796644642698487,
+        0.054588871937925054,
+        0.1404536865440686
+      ]
+    },
+    "max_abs_q_difference": 0.0
+  },
+  "unreachable_softmax_KL_cases": {
+    "constant_scores_delta_point3": {
+      "status": "no_finite_positive_beta",
+      "KL_limit_beta_to_infinity": 0.0
+    },
+    "two_maxima_delta_point5": {
+      "status": "no_finite_positive_beta",
+      "KL_limit_beta_to_infinity": 0.4054651081081644
+    },
+    "two_maxima_global_simplex_max_KL": 1.0986122886681098
+  },
+  "nonuniform_q_zero_aggregate_gradient": {
+    "token_gradients": [
+      [
+        -1.4046393681372655,
+        -6
+      ],
+      [
+        -0.3060270794691563,
+        0
+      ],
+      [
+        0.3871201010907891,
+        1
+      ]
+    ],
+    "reference_gradient": [
+      1,
+      0
+    ],
+    "scores": [
+      -1.4046393681372655,
+      -0.3060270794691563,
+      0.3871201010907891
+    ],
+    "q": [
+      0.10000000000000003,
+      0.29999999999999993,
+      0.6
+    ],
+    "KL": 0.20066656381132983,
+    "aggregate_gradient": [
+      -1.3877787807814457e-17,
+      -2.220446049250313e-16
+    ],
+    "aggregate_norm": 2.2247786310271853e-16,
+    "normalization_threshold": 1e-12,
+    "norm_matched_action": "SKIP_UNDEFINED_ZERO_DIRECTION"
+  },
+  "same_parameter_norm_opposite_validation_changes": {
+    "c": 0.1,
+    "initial_validation_loss": 0.5,
+    "step_plus": {
+      "step_norm": 0.1,
+      "actual_delta": -0.09499999999999997,
+      "first_order_delta": -0.1,
+      "remainder": 0.005000000000000001
+    },
+    "step_minus": {
+      "step_norm": 0.1,
+      "actual_delta": 0.1050000000000001,
+      "first_order_delta": 0.1,
+      "remainder": 0.005000000000000001
+    }
+  },
+  "linear_utility_optimum_not_normalized_step_optimum": {
+    "q_A": [
+      0.8,
+      0.2
+    ],
+    "q_B": [
+      0.2,
+      0.8
+    ],
+    "KL_A": 0.19274475702175753,
+    "KL_B": 0.19274475702175753,
+    "token_gradients": [
+      [
+        133.0,
+        133.33333333333334
+      ],
+      [
+        -32.0,
+        -33.333333333333336
+      ]
+    ],
+    "anchor_gradient": [
+      1,
+      0
+    ],
+    "G_A": [
+      100.0,
+      100.00000000000001
+    ],
+    "G_B": [
+      1.0,
+      0.0
+    ],
+    "raw_alignment_A": 100.0,
+    "raw_alignment_B": 1.0,
+    "unit_alignment_A": 0.7071067811865475,
+    "unit_alignment_B": 1.0,
+    "beta_for_linear_utility_maximizer_q_A": 0.008401784006787216
+  },
+  "same_LoRA_parameter_norm_different_effective_changes": {
+    "A": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        10
+      ]
+    ],
+    "B": [
+      [
+        0,
+        0
+      ]
+    ],
+    "alpha_over_r": 1,
+    "step_B_1": {
+      "delta_B": [
+        0.1,
+        0
+      ],
+      "parameter_step_norm": 0.1,
+      "effective_delta_W": [
+        0.1,
+        0
+      ],
+      "effective_norm": 0.1
+    },
+    "step_B_2": {
+      "delta_B": [
+        0,
+        0.1
+      ],
+      "parameter_step_norm": 0.1,
+      "effective_delta_W": [
+        0,
+        1.0
+      ],
+      "effective_norm": 1.0
+    }
+  },
+  "correct_prop_anchor_does_not_protect_W": {
+    "theta0": 0.0,
+    "delta_theta": 0.1,
+    "correct_prop_loss_before": 0.6931471805599453,
+    "correct_prop_loss_after": 0.6443966600735709,
+    "reject_wrong_revision_loss_before": 0.6931471805599453,
+    "reject_wrong_revision_loss_after": 0.7443966600735709
+  },
+  "quadratic_finite_difference_control": [
+    {
+      "epsilon": 0.01,
+      "max_abs_error": 0.019284041513626615,
+      "analytic_common_error": 0.0192840415135941
+    },
+    {
+      "epsilon": 0.0001,
+      "max_abs_error": 0.0001928404173603404,
+      "analytic_common_error": 0.000192840415135941
+    },
+    {
+      "epsilon": 1e-06,
+      "max_abs_error": 1.928928534677965e-06,
+      "analytic_common_error": 1.92840415135941e-06
+    }
+  ],
+  "algebra_checks": {
+    "same_KL": true,
+    "different_ESS": true,
+    "score_scale_calibration_invariant": true,
+    "zero_update_norm_guard": true,
+    "opposite_loss_changes": true,
+    "linear_vs_normalized_ranking_reverses": true,
+    "prop_improves_but_W_worsens": true
+  },
+  "source_sha256": "c993df2fadbb0a34a4fb7b20439968e17f02cfdc23467a2e6bcca549be31c5f3"
+}

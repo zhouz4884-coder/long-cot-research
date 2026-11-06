@@ -1,0 +1,691 @@
+{
+  "parser_policy": {
+    "status": "POSTHOC_EXPLORATORY_GOLD_BLIND_TEXT_EXTRACTION",
+    "input": "Only greedy.text. No question, gold, case group, candidate scores or agreement across arms.",
+    "precedence": [
+      "Whole output is one integer after whitespace and at most one terminal ASCII/Chinese full stop.",
+      "Terminal explicit final-answer marker followed by an integer, or terminal boxed integer.",
+      "Last nonempty line is an entire arithmetic equality chain ending in an integer, with no trailing prose.",
+      "Otherwise unresolved. Never take an arbitrary last number or evaluate a missing arithmetic answer."
+    ],
+    "math_grammar": "AST arithmetic only; ASCII variable names allowed; no calls, indexing, attributes, evaluation or equation-truth check.",
+    "math_normalization": "Unicode minus/multiplication/division, superscript digit exponent, ^ to **; original text retained.",
+    "denominator": "All 16 fixed states per arm; unresolved separate and not dropped.",
+    "strict_metric": "Frozen original strict_integer and strict_correct copied unchanged."
+  },
+  "created_utc": "2026-11-05T10:28:22.593538+00:00",
+  "outputs": [
+    {
+      "case_id": "E01",
+      "arm": "full",
+      "original_text": "33。",
+      "value": 33,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "33"
+    },
+    {
+      "case_id": "E01",
+      "arm": "target_late",
+      "original_text": "11-5=6。",
+      "value": 6,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "11-5=6",
+      "normalized_math_for_grammar_only": "11-5=6",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "E01",
+      "arm": "target_early_reprefill",
+      "original_text": "11-5=6。",
+      "value": 6,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "11-5=6",
+      "normalized_math_for_grammar_only": "11-5=6",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "E01",
+      "arm": "random_late",
+      "original_text": "33。",
+      "value": 33,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "33"
+    },
+    {
+      "case_id": "E01",
+      "arm": "random_early_reprefill",
+      "original_text": "33。",
+      "value": 33,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "33"
+    },
+    {
+      "case_id": "C01",
+      "arm": "full",
+      "original_text": "31。",
+      "value": 31,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "31"
+    },
+    {
+      "case_id": "C01",
+      "arm": "target_late",
+      "original_text": "43。",
+      "value": 43,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "43"
+    },
+    {
+      "case_id": "C01",
+      "arm": "target_early_reprefill",
+      "original_text": "37。",
+      "value": 37,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "37"
+    },
+    {
+      "case_id": "C01",
+      "arm": "random_late",
+      "original_text": "31。",
+      "value": 31,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "31"
+    },
+    {
+      "case_id": "C01",
+      "arm": "random_early_reprefill",
+      "original_text": "31。",
+      "value": 31,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "31"
+    },
+    {
+      "case_id": "W01",
+      "arm": "full",
+      "original_text": "28。",
+      "value": 28,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "28"
+    },
+    {
+      "case_id": "W01",
+      "arm": "target_late",
+      "original_text": "11。",
+      "value": 11,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "11"
+    },
+    {
+      "case_id": "W01",
+      "arm": "target_early_reprefill",
+      "original_text": "11。",
+      "value": 11,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "11"
+    },
+    {
+      "case_id": "W01",
+      "arm": "random_late",
+      "original_text": "28。",
+      "value": 28,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "28"
+    },
+    {
+      "case_id": "W01",
+      "arm": "random_early_reprefill",
+      "original_text": "28。",
+      "value": 28,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "28"
+    },
+    {
+      "case_id": "E02",
+      "arm": "full",
+      "original_text": "56。",
+      "value": 56,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "56"
+    },
+    {
+      "case_id": "E02",
+      "arm": "target_late",
+      "original_text": "28*2=56。",
+      "value": 56,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "28*2=56",
+      "normalized_math_for_grammar_only": "28*2=56",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "E02",
+      "arm": "target_early_reprefill",
+      "original_text": "2*(28-9)=2*19=38。",
+      "value": 38,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "2*(28-9)=2*19=38",
+      "normalized_math_for_grammar_only": "2*(28-9)=2*19=38",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "E02",
+      "arm": "random_late",
+      "original_text": "28*2=56。",
+      "value": 56,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "28*2=56",
+      "normalized_math_for_grammar_only": "28*2=56",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "E02",
+      "arm": "random_early_reprefill",
+      "original_text": "2*(28-9)=2*19=38。\n\n最终答案是：38",
+      "value": 38,
+      "method": "explicit_final_marker_terminal_integer",
+      "matched_text": "最终答案是：38"
+    },
+    {
+      "case_id": "E03",
+      "arm": "full",
+      "original_text": "70。",
+      "value": 70,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "70"
+    },
+    {
+      "case_id": "E03",
+      "arm": "target_late",
+      "original_text": "90。",
+      "value": 90,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "90"
+    },
+    {
+      "case_id": "E03",
+      "arm": "target_early_reprefill",
+      "original_text": "9²+6=81+6=87。",
+      "value": 87,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "9²+6=81+6=87",
+      "normalized_math_for_grammar_only": "9**2+6=81+6=87",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "E03",
+      "arm": "random_late",
+      "original_text": "90。",
+      "value": 90,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "90"
+    },
+    {
+      "case_id": "E03",
+      "arm": "random_early_reprefill",
+      "original_text": "75。",
+      "value": 75,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "75"
+    },
+    {
+      "case_id": "C02",
+      "arm": "full",
+      "original_text": "16。",
+      "value": 16,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "16"
+    },
+    {
+      "case_id": "C02",
+      "arm": "target_late",
+      "original_text": "3*6-2=16。",
+      "value": 16,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "3*6-2=16",
+      "normalized_math_for_grammar_only": "3*6-2=16",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "C02",
+      "arm": "target_early_reprefill",
+      "original_text": "22。",
+      "value": 22,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "22"
+    },
+    {
+      "case_id": "C02",
+      "arm": "random_late",
+      "original_text": "16。",
+      "value": 16,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "16"
+    },
+    {
+      "case_id": "C02",
+      "arm": "random_early_reprefill",
+      "original_text": "14。",
+      "value": 14,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "14"
+    },
+    {
+      "case_id": "W02",
+      "arm": "full",
+      "original_text": "23。",
+      "value": 23,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "23"
+    },
+    {
+      "case_id": "W02",
+      "arm": "target_late",
+      "original_text": "2*8+3=19。",
+      "value": 19,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "2*8+3=19",
+      "normalized_math_for_grammar_only": "2*8+3=19",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "W02",
+      "arm": "target_early_reprefill",
+      "original_text": "67。",
+      "value": 67,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "67"
+    },
+    {
+      "case_id": "W02",
+      "arm": "random_late",
+      "original_text": "23。",
+      "value": 23,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "23"
+    },
+    {
+      "case_id": "W02",
+      "arm": "random_early_reprefill",
+      "original_text": "2*8+3=19。",
+      "value": 19,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "2*8+3=19",
+      "normalized_math_for_grammar_only": "2*8+3=19",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "E04",
+      "arm": "full",
+      "original_text": "42。",
+      "value": 42,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "42"
+    },
+    {
+      "case_id": "E04",
+      "arm": "target_late",
+      "original_text": "24。",
+      "value": 24,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "24"
+    },
+    {
+      "case_id": "E04",
+      "arm": "target_early_reprefill",
+      "original_text": "28。",
+      "value": 28,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "28"
+    },
+    {
+      "case_id": "E04",
+      "arm": "random_late",
+      "original_text": "22。",
+      "value": 22,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "22"
+    },
+    {
+      "case_id": "E04",
+      "arm": "random_early_reprefill",
+      "original_text": "22。",
+      "value": 22,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "22"
+    },
+    {
+      "case_id": "E05",
+      "arm": "full",
+      "original_text": "28。",
+      "value": 28,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "28"
+    },
+    {
+      "case_id": "E05",
+      "arm": "target_late",
+      "original_text": "34。",
+      "value": 34,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "34"
+    },
+    {
+      "case_id": "E05",
+      "arm": "target_early_reprefill",
+      "original_text": "36//6=6，5*6-2=28。所以答案是 28。",
+      "value": 28,
+      "method": "explicit_final_marker_terminal_integer",
+      "matched_text": "答案是 28"
+    },
+    {
+      "case_id": "E05",
+      "arm": "random_late",
+      "original_text": "28。",
+      "value": 28,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "28"
+    },
+    {
+      "case_id": "E05",
+      "arm": "random_early_reprefill",
+      "original_text": "23。",
+      "value": 23,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "23"
+    },
+    {
+      "case_id": "C03",
+      "arm": "full",
+      "original_text": "30。",
+      "value": 30,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "30"
+    },
+    {
+      "case_id": "C03",
+      "arm": "target_late",
+      "original_text": "2*(x+8)=2*(7+8)=2*15=30。",
+      "value": 30,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "2*(x+8)=2*(7+8)=2*15=30",
+      "normalized_math_for_grammar_only": "2*(x+8)=2*(7+8)=2*15=30",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "C03",
+      "arm": "target_early_reprefill",
+      "original_text": "2*(x+8)=2*(7+8)=2*15=30。",
+      "value": 30,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "2*(x+8)=2*(7+8)=2*15=30",
+      "normalized_math_for_grammar_only": "2*(x+8)=2*(7+8)=2*15=30",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "C03",
+      "arm": "random_late",
+      "original_text": "30。",
+      "value": 30,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "30"
+    },
+    {
+      "case_id": "C03",
+      "arm": "random_early_reprefill",
+      "original_text": "30。",
+      "value": 30,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "30"
+    },
+    {
+      "case_id": "W03",
+      "arm": "full",
+      "original_text": "121。",
+      "value": 121,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "121"
+    },
+    {
+      "case_id": "W03",
+      "arm": "target_late",
+      "original_text": "7*7=49。",
+      "value": 49,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "7*7=49",
+      "normalized_math_for_grammar_only": "7*7=49",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "W03",
+      "arm": "target_early_reprefill",
+      "original_text": "49。",
+      "value": 49,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "49"
+    },
+    {
+      "case_id": "W03",
+      "arm": "random_late",
+      "original_text": "121。",
+      "value": 121,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "121"
+    },
+    {
+      "case_id": "W03",
+      "arm": "random_early_reprefill",
+      "original_text": "49。",
+      "value": 49,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "49"
+    },
+    {
+      "case_id": "E06",
+      "arm": "full",
+      "original_text": "116。",
+      "value": 116,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "116"
+    },
+    {
+      "case_id": "E06",
+      "arm": "target_late",
+      "original_text": "102。",
+      "value": 102,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "102"
+    },
+    {
+      "case_id": "E06",
+      "arm": "target_early_reprefill",
+      "original_text": "98。",
+      "value": 98,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "98"
+    },
+    {
+      "case_id": "E06",
+      "arm": "random_late",
+      "original_text": "116。",
+      "value": 116,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "116"
+    },
+    {
+      "case_id": "E06",
+      "arm": "random_early_reprefill",
+      "original_text": "11。",
+      "value": 11,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "11"
+    },
+    {
+      "case_id": "E07",
+      "arm": "full",
+      "original_text": "33。",
+      "value": 33,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "33"
+    },
+    {
+      "case_id": "E07",
+      "arm": "target_late",
+      "original_text": "24*2-11=37。",
+      "value": 37,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "24*2-11=37",
+      "normalized_math_for_grammar_only": "24*2-11=37",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "E07",
+      "arm": "target_early_reprefill",
+      "original_text": "24*2-11=37。",
+      "value": 37,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "24*2-11=37",
+      "normalized_math_for_grammar_only": "24*2-11=37",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "E07",
+      "arm": "random_late",
+      "original_text": "33。",
+      "value": 33,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "33"
+    },
+    {
+      "case_id": "E07",
+      "arm": "random_early_reprefill",
+      "original_text": "33。",
+      "value": 33,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "33"
+    },
+    {
+      "case_id": "C04",
+      "arm": "full",
+      "original_text": "20。",
+      "value": 20,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "20"
+    },
+    {
+      "case_id": "C04",
+      "arm": "target_late",
+      "original_text": "17-9=8。",
+      "value": 8,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "17-9=8",
+      "normalized_math_for_grammar_only": "17-9=8",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "C04",
+      "arm": "target_early_reprefill",
+      "original_text": "17-9=8。",
+      "value": 8,
+      "method": "last_line_complete_equation_chain_terminal_integer",
+      "matched_text": "17-9=8",
+      "normalized_math_for_grammar_only": "17-9=8",
+      "equation_truth_evaluated": false
+    },
+    {
+      "case_id": "C04",
+      "arm": "random_late",
+      "original_text": "20。",
+      "value": 20,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "20"
+    },
+    {
+      "case_id": "C04",
+      "arm": "random_early_reprefill",
+      "original_text": "20。",
+      "value": 20,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "20"
+    },
+    {
+      "case_id": "W04",
+      "arm": "full",
+      "original_text": "78。",
+      "value": 78,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "78"
+    },
+    {
+      "case_id": "W04",
+      "arm": "target_late",
+      "original_text": "48。",
+      "value": 48,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "48"
+    },
+    {
+      "case_id": "W04",
+      "arm": "target_early_reprefill",
+      "original_text": "48。",
+      "value": 48,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "48"
+    },
+    {
+      "case_id": "W04",
+      "arm": "random_late",
+      "original_text": "78。",
+      "value": 78,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "78"
+    },
+    {
+      "case_id": "W04",
+      "arm": "random_early_reprefill",
+      "original_text": "78。",
+      "value": 78,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "78"
+    },
+    {
+      "case_id": "E08",
+      "arm": "full",
+      "original_text": "170。",
+      "value": 170,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "170"
+    },
+    {
+      "case_id": "E08",
+      "arm": "target_late",
+      "original_text": "170。",
+      "value": 170,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "170"
+    },
+    {
+      "case_id": "E08",
+      "arm": "target_early_reprefill",
+      "original_text": "170。",
+      "value": 170,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "170"
+    },
+    {
+      "case_id": "E08",
+      "arm": "random_late",
+      "original_text": "170。",
+      "value": 170,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "170"
+    },
+    {
+      "case_id": "E08",
+      "arm": "random_early_reprefill",
+      "original_text": "170。",
+      "value": 170,
+      "method": "single_integer_optional_terminal_period",
+      "matched_text": "170"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "gpu1": "gpu1\n     state = free\n     power_state = Running\n     np = 36\n     properties = gpunodes,h_zhaipengxiang\n     ntype = cluster\n     status = opsys=linux,uname=Linux gpu1 3.10.0-957.el7.x86_64 #1 SMP Thu Oct 4 20:48:51 UTC 2018 x86_64,sessions=492 750 825 826 34653 26559 26250 2777 2778 2841 2842 2843 14306 3394 3615 3681 22523 4181 4587 4727 30038 5148 5426 24662 5886 29660 6291 7041 7202 7663 16086 8574 31299 8628 9347 9476 10443 10622 14287 14463 14935 11839 12206 11949 13651 14473 17174 17530 17193 18199 18391 18480 20765 21890 21891 23294 24397 24514 24515 26098 27838 28642 29016 29094 29075 29780 31588 31928 33542 33993 34542 35218 35827,nsessions=73,nusers=6,idletime=2562259,totmem=201753124kb,availmem=152977728kb,physmem=197558824kb,ncpus=36,loadave=2.87,gres=,netload=8503390643007,state=free,varattr= ,cpuclock=Fixed,version=6.1.1,rectime=1793873379,jobs=\n     mom_service_port = 15002\n     mom_manager_port = 15003\n     gpus = 4\n     gpu_status = gpu[3]=gpu_id=00000000:B2:00.0;gpu_pci_device_id=498471134;gpu_pci_location_id=00000000:B2:00.0;gpu_product_name=Tesla V100-PCIE-32GB;gpu_memory_total=32768 MB;gpu_memory_used=267 MB;gpu_mode=Default;gpu_state=Unallocated;gpu_utilization=0%;gpu_memory_utilization=0%;gpu_ecc_mode=Enabled;gpu_single_bit_ecc_errors=0;gpu_double_bit_ecc_errors=0;gpu_temperature=29 C,gpu[2]=gpu_id=00000000:B1:00.0;gpu_pci_device_id=498471134;gpu_pci_location_id=00000000:B1:00.0;gpu_product_name=Tesla V100-PCIE-32GB;gpu_memory_total=32768 MB;gpu_memory_used=267 MB;gpu_mode=Default;gpu_state=Unallocated;gpu_utilization=0%;gpu_memory_utilization=0%;gpu_ecc_mode=Enabled;gpu_single_bit_ecc_errors=0;gpu_double_bit_ecc_errors=0;gpu_temperature=30 C;gpu_display=Enabled,gpu[1]=gpu_id=00000000:89:00.0;gpu_pci_device_id=498471134;gpu_pci_location_id=00000000:89:00.0;gpu_product_name=Tesla V100-PCIE-32GB;gpu_memory_total=32768 MB;gpu_memory_used=6320 MB;gpu_mode=Default;gpu_state=Unallocated;gpu_utilization=0%;gpu_memory_utilization=0%;gpu_ecc_mode=Enabled;gpu_single_bit_ecc_errors=0;gpu_double_bit_ecc_errors=0;gpu_temperature=33 C;gpu_display=Enabled,gpu[0]=gpu_id=00000000:88:00.0;gpu_pci_device_id=498471134;gpu_pci_location_id=00000000:88:00.0;gpu_product_name=Tesla V100-PCIE-32GB;gpu_memory_total=32768 MB;gpu_memory_used=3416 MB;gpu_mode=Default;gpu_state=Unallocated;gpu_utilization=0%;gpu_memory_utilization=0%;gpu_ecc_mode=Enabled;gpu_single_bit_ecc_errors=0;gpu_double_bit_ecc_errors=0;gpu_temperature=33 C;gpu_display=Enabled,gpu_display=Enabled,driver_ver=530.30.02,timestamp=Thu Nov  5 18:09:39 2026\n     total_sockets = 2\n     total_numa_nodes = 2\n     total_cores = 36\n     total_threads = 36\n     dedicated_sockets = 0\n     dedicated_numa_nodes = 0\n     dedicated_cores = 0\n     dedicated_threads = 0\n\n",
+  "/data/home/zhoubin/contractkv_v100": [
+    "ckv-v100-preflight.o177794",
+    "ckv-v100-vllm-audit.o177799",
+    "ckv-v100-vllm-audit.o177798",
+    "ckv-v100-vllm-audit.o177795",
+    "ckv-v100-vllm-audit.o177797",
+    "hf_cache",
+    "results",
+    "ckv-v100-runtime.o177793",
+    "tmp",
+    "protocols",
+    "artifacts",
+    "ckv-v100-preflight.o177789",
+    "tools",
+    "README.md",
+    "cache",
+    "ckv-v100-preflight.o177791",
+    "scripts",
+    "logs",
+    "env",
+    "traces",
+    "ckv-v100-runtime.o177790",
+    "models",
+    "ckv-v100-vllm-audit.o177796",
+    "ckv-v100-vllm-audit.o177800",
+    "code",
+    "pbs",
+    "ckv-v100-runtime.o177792"
+  ],
+  "/data/home/zhoubin/contractkv_v100/pbs": [
+    "submit_preflight.sh",
+    "run_with_job_cache.sh",
+    "00_preflight_gpu2.pbs",
+    "02_vllm_v100_compat_probe.pbs",
+    "01_bootstrap_runtime_gpu2.pbs"
+  ],
+  "/data/home/zhoubin/contractkv_v100/pbs/submit_preflight.sh": [],
+  "/data/home/zhoubin/contractkv_v100/pbs/run_with_job_cache.sh": [],
+  "/data/home/zhoubin/contractkv_v100/pbs/00_preflight_gpu2.pbs": [
+    "#PBS -N ckv-v100-preflight",
+    "#PBS -q GPUDefq",
+    "#PBS -l nodes=gpu2:ppn=36:gpus=8",
+    "#PBS -j oe"
+  ],
+  "/data/home/zhoubin/contractkv_v100/pbs/02_vllm_v100_compat_probe.pbs": [
+    "#PBS -N ckv-v100-vllm-audit",
+    "#PBS -q GPUDefq",
+    "#PBS -l nodes=gpu2:ppn=36:gpus=8",
+    "#PBS -j oe"
+  ],
+  "/data/home/zhoubin/contractkv_v100/scripts": [
+    "start_model_downloads.sh"
+  ],
+  "/data/home/zhoubin/contractkv_v100/scripts/start_model_downloads.sh": [],
+  "/data/home/zhoubin/revtrace_v100": [
+    "bootstrap",
+    "results",
+    "tmp",
+    "revtrace-v100-setup.o178154",
+    "cache",
+    "datasets",
+    "logs",
+    "revtrace-v100-setup.o178151",
+    "env",
+    "revtrace-v100-setup.o178155",
+    "dsn_wal_20261004",
+    "models",
+    "revtrace-v100-setup.o178156",
+    "tc_live_20260906",
+    "revtrace-v100-setup.o178153",
+    "code",
+    "revtrace-v100-setup.o178152"
+  ]
+}

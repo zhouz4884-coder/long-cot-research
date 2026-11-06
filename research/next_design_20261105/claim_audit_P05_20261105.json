@@ -1,0 +1,2279 @@
+{
+  "schema_version": 1,
+  "status": "PASS_READ_ONLY_CPU_CLAIM_AUDIT",
+  "scope": "Actual 16 cases, P/B/U/R/S renders, runner source and all 80 saved outputs; no GPU/network/new generation.",
+  "claims_input": "Paraphrased new-user-claim summary supplied by parent agent; not a verbatim user quotation.",
+  "input_json_sha256": "6ffe069718396dc2543f85aa9270780f356e293cc9764afdaf2f06a083c5cc27",
+  "runner_source_sha256": "246219aee9774fae0966c7663c765daf3dba2f1df68bc054b539a4dd5d64331b",
+  "runner_hash_matches_actual_manifest": true,
+  "audit_script_sha256": "11b2f48b40cfabd7af06a2a4139c0948ca3b89972d229e7436f0a1573e5b65ba",
+  "original_files_unchanged": true,
+  "original_frozen_file_hashes": {
+    "D:\\ACL\\research\\direction_selection_20261105\\proposed_p0_cases.json": "6ffe069718396dc2543f85aa9270780f356e293cc9764afdaf2f06a083c5cc27",
+    "D:\\ACL\\research\\direction_selection_20261105\\real_model_p0.py": "246219aee9774fae0966c7663c765daf3dba2f1df68bc054b539a4dd5d64331b",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\manifest.json": "a575287bea8a45cd73551a8b0c2f06621716c8bb1e3cc6c01f11e405266e4b05",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\summary.json": "3881ef7e1e6806496309f700073546ba13fcea8ae7910dbe37f79a8d233df528",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\RESULT.md": "de54483e3b7914d775fde436edf477953f476927e584b913ae2d05c3c9aa6324",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E01.json": "eac2af0ff129b8abb81dbee9d27568c31ad25b8eb9ee5d623711cd046cd5c544",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E01_readout_logits.npz": "d2a238a91c865fdc29a2e87ca9895b98427cb18ea6fc017ade3872033b9ce651",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\C01.json": "4552bfc516cfd475ab884df794f5ba3f9d474f50ec25233915e83dedfc4d915c",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\C01_readout_logits.npz": "95fbb9e171348f1f3b2864109cfea1eb25d8ba0bfa6d34a6ca7bd39a5285f159",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\W01.json": "9503b944fe2a06b2426a4dce73e70fd65406671233f09a37b8a4c414f811c60b",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\W01_readout_logits.npz": "39ec5fa67c0397576a1d55dc507af754d1436b0a2936978422277106976c78df",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E02.json": "75fb387c05985c7e37c39cae44752729403202db753cfaa71d83853836d60856",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E02_readout_logits.npz": "14ee52df42d9994d3ded5e106c7628071529fb7d6e30259b43e6f3bc23effddd",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E03.json": "fa9a0d03a7904144ebd8f7241d08d3ed178de6591ee09771826a38d51751f084",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E03_readout_logits.npz": "3ae7651ae396db2d4a6fbf6e55442029838519a81656226f7ea7322b242395b9",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\C02.json": "ff68b3ffbba90c6fd19efcc1ad9106196f9e14e92c34312ba7df3c6dcc5ecb62",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\C02_readout_logits.npz": "8fa0deeb4a8a0e0438bc92a55c91854e589ca602feb9ddde9bc23908b0b7421e",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\W02.json": "ac566112cd4d0e6f841fe354fc0882989e235ac9eb66b54d1e14794490aff191",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\W02_readout_logits.npz": "11795f29beba8cd68e1f28756101cee2557b87f93f4d58842b496e1fa8819202",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E04.json": "d14bb9bce5d53a4a7b3369eb2f66f03faae1d64caf006430996458227cad8768",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E04_readout_logits.npz": "7cef2375e9251084de7617469fde748b2acab1a4f380d3c714abdb55e12b0f2c",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E05.json": "b849274626e828a34cb4b51fff9b51ab0b26c8a6350f013953c9fcc13a11a950",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E05_readout_logits.npz": "46dcb5f6f41813378df71c7698a1aa712838159ea7d1e2486e865749a2cbec6f",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\C03.json": "385e7477bc4e8954f62fbef71966f987d598f3982dd98a90f2367e25a48d0799",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\C03_readout_logits.npz": "c4929cb280efbdbc5a5dd65581b0882a533a21afd97a1bc233c73d3f51c949d5",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\W03.json": "6f3c2300f5b0007a2892d1543323b8f24fa3b44c0c3d7e4b9965840527bfb59d",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\W03_readout_logits.npz": "282669803554f6ace27531f01efb61ff0166eaf59470875ab79f66629e75c3eb",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E06.json": "4787fc6412fb0f861a5186978e9bdfe03ea0716e0d31e9d19406ac13e083aedb",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E06_readout_logits.npz": "5e7f52f775646c4e6c4019988ab484ac6db6a50ea9d043f83153bf032dc94cec",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E07.json": "2da820078d225edd52d8e14f08beea00ab19060d5a51d67564e61cf9aa9268a7",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E07_readout_logits.npz": "16936beaa9e1b1a817632431a0ef74d6bc76798371f786853abdc0802b9e8159",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\C04.json": "4ae2db4dbd573d33cbbe0e45c71c25961f3718df1296e7b85a3a1ecdb768f20b",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\C04_readout_logits.npz": "c2ed9fd313bc4cb6c2ba7881cf064abe27db8d87cd36bd0405a6e37885ad2989",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\W04.json": "e8cc3aa907781cc9f16e36d26bc98b06f00ad6c24df350ed25906cdd6e0a0dd7",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\W04_readout_logits.npz": "76bf54aff112e86b2dc7402b8d89667799f8337ba5f8dbc488300f906b28944e",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E08.json": "34ed1dfe4d552c4dbd87e1f07ecd7c4a9499a0f9c61d5a13e1ac21ae062a1aca",
+    "D:\\ACL\\research\\direction_selection_20261105\\p0_qwen3_4b_fp16_01\\E08_readout_logits.npz": "f4a70f7e2db112445c987b2db97341abe0621fed687f9db700f2867afa800195"
+  },
+  "facts_summary": {
+    "cases": 16,
+    "outputs_read": 80,
+    "U_contains_numeric_literals_cases": 0,
+    "all_dependency_graphs_x_to_y_to_z": true,
+    "cases_with_nonempty_old_B_shared_after_x_closure": 0,
+    "P_all_definitions_visible_cases": 16,
+    "target_already_masks_entire_B_cases": 16,
+    "full_E_bare_integer_style_cases": 8,
+    "full_E_equal_old_final_cases": [
+      "E01",
+      "E03",
+      "E06",
+      "E07"
+    ],
+    "full_E_equal_correct_final_cases": [
+      "E05"
+    ],
+    "full_E_neither_old_nor_correct_cases": [
+      "E02",
+      "E04",
+      "E08"
+    ],
+    "full_E_decode_steps": [
+      {
+        "case_id": "E01",
+        "bare_final_integer": 33,
+        "new_tokens": 4,
+        "additional_forward_tokens": 3
+      },
+      {
+        "case_id": "E02",
+        "bare_final_integer": 56,
+        "new_tokens": 4,
+        "additional_forward_tokens": 3
+      },
+      {
+        "case_id": "E03",
+        "bare_final_integer": 70,
+        "new_tokens": 4,
+        "additional_forward_tokens": 3
+      },
+      {
+        "case_id": "E04",
+        "bare_final_integer": 42,
+        "new_tokens": 4,
+        "additional_forward_tokens": 3
+      },
+      {
+        "case_id": "E05",
+        "bare_final_integer": 28,
+        "new_tokens": 4,
+        "additional_forward_tokens": 3
+      },
+      {
+        "case_id": "E06",
+        "bare_final_integer": 116,
+        "new_tokens": 5,
+        "additional_forward_tokens": 4
+      },
+      {
+        "case_id": "E07",
+        "bare_final_integer": 33,
+        "new_tokens": 4,
+        "additional_forward_tokens": 3
+      },
+      {
+        "case_id": "E08",
+        "bare_final_integer": 170,
+        "new_tokens": 5,
+        "additional_forward_tokens": 4
+      }
+    ],
+    "W_target_outputs_equal_complete_wrong_revision_DAG": [
+      {
+        "case_id": "W02",
+        "arm": "target_late",
+        "manual_unambiguous_equation_check": "2*8+3=19; exact revised DAG output is 19"
+      }
+    ],
+    "W_target_output_denominator": 8
+  },
+  "claim_audits": [
+    {
+      "claim": "Full emits one integer because one token forward cannot compute multi-step arithmetic and therefore copies old answer",
+      "verdict": "FORMAT_OBSERVED__COMPUTATIONAL_AND_COPY_CAUSE_UNSUPPORTED",
+      "evidence": "All eight E Full outputs are bare integers plus punctuation, but only E01/E03/E06/E07 equal the old terminal value; E05 is correct. Decode uses multiple token forwards, and output length is not hidden arithmetic depth."
+    },
+    {
+      "claim": "E02 late's 28 in 28*2=56 is an old intermediate value left in U",
+      "verdict": "CONTRADICTED_BY_ACTUAL_RENDER",
+      "evidence": "U has no numbers; B has x24,y15,z30. R newly states x28. Equation matches applying outer z=2*y to the revised x as if it were y, skipping y=x-9; this is a compatible variable-binding/omitted-composition description, not established KV-source causality."
+    },
+    {
+      "claim": "Early rescues E02/E03/E05/E07 because lack of copyable result forces explicit re-derivation",
+      "verdict": "SUCCESS_AND_EQUATIONS_OBSERVED__FORCING_CAUSE_UNTESTED",
+      "evidence": "Those early outputs contain correct substitutions, but the four are not four gains over Full: E05 Full is already correct (28), Late harms it (34), Early restores it (28). E07 Late and Early already give the identical correct equation (37). Only E02/E03 are Early repairs of both Full and Late. Output format was not randomized; fresh state, attention and generated form change together."
+    },
+    {
+      "claim": "E01/C04 failures prove whole-B deletion removed independent y/z evidence",
+      "verdict": "INDEPENDENCE_FALSE__CAUSAL_PROOF_UNSUPPORTED",
+      "evidence": "All cases have x->y->z. E01 old y38/z33 descend from wrong x12; C04 values are valid descendants of correct x17. In both, P retains every definition. 11-5/17-9 omit the y transformation, but do not identify removal of independent y/z."
+    },
+    {
+      "claim": "After deleting B in W, R is the only evidence left; trusting latest revision must fail by theorem",
+      "verdict": "ONLY_EVIDENCE_FALSE__GENERAL_THEOREM_NOT_ESTABLISHED",
+      "evidence": "P and all definitions remain readable in all arms. Only one of eight target W outputs equals the full result implied by the wrong revision; several instead omit a transformation. A conditional statement assuming wrong revision and unquestioning use is not a new explanation of these outputs."
+    },
+    {
+      "claim": "Same 16 cases can compare whole-B against closed FaultOnly retaining independent y/z and strictly prove half of failures are deletion of independent support",
+      "verdict": "DESIGN_NOT_IDENTIFIABLE_ON_CURRENT_DAG",
+      "evidence": "Closure of disputed x is x,y,z and leaves no B_shared in 16/16. Root+direct child deletes x,y but retains stale descendant z. Closed FaultOnly and whole-B have the same asserted content; differences from delimiter/operator tokens would be a different hypothesis. No predeclared result can strictly prove a fixed half attribution."
+    }
+  ],
+  "suggested_minimal_new_graph": {
+    "question_definitions": [
+      {
+        "variable": "r",
+        "expression": "4+5"
+      },
+      {
+        "variable": "x",
+        "expression": "7*4"
+      },
+      {
+        "variable": "y",
+        "expression": "x-9"
+      },
+      {
+        "variable": "u",
+        "expression": "2*y"
+      },
+      {
+        "variable": "z",
+        "expression": "u+r"
+      }
+    ],
+    "old_assertions": {
+      "r": 9,
+      "x": 24,
+      "y": 15,
+      "u": 30,
+      "z": 39
+    },
+    "shared_visible_revision": "Wait, x should be 28; recompute its consequences from the original definitions.",
+    "correct_values": {
+      "x": 28,
+      "y": 19,
+      "u": 38,
+      "r": 9,
+      "z": 47
+    },
+    "fault_closure": [
+      "x",
+      "y",
+      "u",
+      "z"
+    ],
+    "genuinely_independent_old_B_shared": [
+      "r"
+    ],
+    "recommended_serialization": "P | B_shared(r=9) | B_bad(x=24,y=15,u=30,z=39) | U | R | S",
+    "reason": "Retaining r is actually independent of the disputed x. Place shared r before the bad branch to prevent its cached state from already reading that branch. Its original definition remains visible in P for every arm; this tests reuse of valid work, not withholding the task specification.",
+    "if_shared_is_after_bad_branch": "Semantic independence alone does not make its KV independent. Recompute retained downstream r from the clean visible prefix before calling its state clean."
+  },
+  "rescue_reference_audit": [
+    {
+      "case_id": "E02",
+      "full_already_correct_bare_integer": false,
+      "late_and_early_identical_text": false,
+      "outputs": {
+        "full": "56。",
+        "target_late": "28*2=56。",
+        "target_early_reprefill": "2*(28-9)=2*19=38。",
+        "random_late": "28*2=56。",
+        "random_early_reprefill": "2*(28-9)=2*19=38。\n\n最终答案是：38"
+      }
+    },
+    {
+      "case_id": "E03",
+      "full_already_correct_bare_integer": false,
+      "late_and_early_identical_text": false,
+      "outputs": {
+        "full": "70。",
+        "target_late": "90。",
+        "target_early_reprefill": "9²+6=81+6=87。",
+        "random_late": "90。",
+        "random_early_reprefill": "75。"
+      }
+    },
+    {
+      "case_id": "E05",
+      "full_already_correct_bare_integer": true,
+      "late_and_early_identical_text": false,
+      "outputs": {
+        "full": "28。",
+        "target_late": "34。",
+        "target_early_reprefill": "36//6=6，5*6-2=28。所以答案是 28。",
+        "random_late": "28。",
+        "random_early_reprefill": "23。"
+      }
+    },
+    {
+      "case_id": "E07",
+      "full_already_correct_bare_integer": false,
+      "late_and_early_identical_text": true,
+      "outputs": {
+        "full": "33。",
+        "target_late": "24*2-11=37。",
+        "target_early_reprefill": "24*2-11=37。",
+        "random_late": "33。",
+        "random_early_reprefill": "33。"
+      }
+    }
+  ],
+  "design_recommendations": [
+    "Do not GPU-run WholeB vs purported closed FaultOnly on the current 16-case x->y->z set; the proposed independent-support contrast is empty.",
+    "If testing output format, use a separate frozen 2x2 context(full vs whole-B early) x format(integer vs one-line substitution); no new correct y/z in instructions, record actual tokens, and do not call format-mediated gains proof of latent single-forward incapacity.",
+    "For an actual shared-support experiment add an independent root r and a final merge z=u+r; compute closure from known structural provenance, including the final z descendant.",
+    "Distinguish semantic dependency closure from dense-Transformer cache dependency: an r statement serialized after a faulty span may have a context-dependent cache despite arithmetic independence.",
+    "Hold visible revision/summary token IDs and original positions equal for late-vs-fresh comparisons. A correct new y or z summary is new privileged computation, not preservation of old independent work.",
+    "Separate closure-preservation, cache recomputation and output format rather than adding all factors and attributing one combined effect to independent evidence.",
+    "Use equal-count, age/contiguity-aware retention controls where possible; keeping r means retaining more valid tokens than deleting all, so mask budget alone does not resolve semantic specificity.",
+    "Keep no-error and false-Wait controls, and explicitly mark any oracle-triggered arm as an offline upper bound rather than an online detector."
+  ],
+  "per_case_facts": [
+    {
+      "case_id": "E01",
+      "group": "falsified_old_correct_revision",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=18-7，y=3*x+2，z=y-5。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=12；因此 y=38，z=33。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\nWait，重新计算应为 x=11。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "18-7"
+        },
+        {
+          "variable": "y",
+          "expression": "3*x+2"
+        },
+        {
+          "variable": "z",
+          "expression": "y-5"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 11,
+        "y": 35,
+        "z": 30
+      },
+      "old_values": {
+        "x": 12,
+        "y": 38,
+        "z": 33
+      },
+      "revision_implied_values": {
+        "x": 11,
+        "y": 35,
+        "z": 30
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [
+        "x",
+        "y",
+        "z"
+      ],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "33。",
+        "target_late": "11-5=6。",
+        "target_early_reprefill": "11-5=6。",
+        "random_late": "33。",
+        "random_early_reprefill": "33。"
+      }
+    },
+    {
+      "case_id": "C01",
+      "group": "correct_old_no_error_control",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=16-9，y=4*x，z=y+3。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=7；因此 y=28，z=31。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\n复核后 x=7 保持不变。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "16-9"
+        },
+        {
+          "variable": "y",
+          "expression": "4*x"
+        },
+        {
+          "variable": "z",
+          "expression": "y+3"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 7,
+        "y": 28,
+        "z": 31
+      },
+      "old_values": {
+        "x": 7,
+        "y": 28,
+        "z": 31
+      },
+      "revision_implied_values": {
+        "x": 7,
+        "y": 28,
+        "z": 31
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "31。",
+        "target_late": "43。",
+        "target_early_reprefill": "37。",
+        "random_late": "31。",
+        "random_early_reprefill": "31。"
+      }
+    },
+    {
+      "case_id": "W01",
+      "group": "wait_wrong_revision_control",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=15-6，y=3*x，z=y+1。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=9；因此 y=27，z=28。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\nWait，前面的 x=9 要改成 x=10。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "15-6"
+        },
+        {
+          "variable": "y",
+          "expression": "3*x"
+        },
+        {
+          "variable": "z",
+          "expression": "y+1"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 9,
+        "y": 27,
+        "z": 28
+      },
+      "old_values": {
+        "x": 9,
+        "y": 27,
+        "z": 28
+      },
+      "revision_implied_values": {
+        "x": 10,
+        "y": 30,
+        "z": 31
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "28。",
+        "target_late": "11。",
+        "target_early_reprefill": "11。",
+        "random_late": "28。",
+        "random_early_reprefill": "28。"
+      }
+    },
+    {
+      "case_id": "E02",
+      "group": "falsified_old_correct_revision",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=7*4，y=x-9，z=2*y。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=24；因此 y=15，z=30。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\nWait，重新计算应为 x=28。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "7*4"
+        },
+        {
+          "variable": "y",
+          "expression": "x-9"
+        },
+        {
+          "variable": "z",
+          "expression": "2*y"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 28,
+        "y": 19,
+        "z": 38
+      },
+      "old_values": {
+        "x": 24,
+        "y": 15,
+        "z": 30
+      },
+      "revision_implied_values": {
+        "x": 28,
+        "y": 19,
+        "z": 38
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [
+        "x",
+        "y",
+        "z"
+      ],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "56。",
+        "target_late": "28*2=56。",
+        "target_early_reprefill": "2*(28-9)=2*19=38。",
+        "random_late": "28*2=56。",
+        "random_early_reprefill": "2*(28-9)=2*19=38。\n\n最终答案是：38"
+      }
+    },
+    {
+      "case_id": "E03",
+      "group": "falsified_old_correct_revision",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=45//5，y=x*x，z=y+6。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=8；因此 y=64，z=70。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\nWait，重新计算应为 x=9。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "45//5"
+        },
+        {
+          "variable": "y",
+          "expression": "x*x"
+        },
+        {
+          "variable": "z",
+          "expression": "y+6"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 9,
+        "y": 81,
+        "z": 87
+      },
+      "old_values": {
+        "x": 8,
+        "y": 64,
+        "z": 70
+      },
+      "revision_implied_values": {
+        "x": 9,
+        "y": 81,
+        "z": 87
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [
+        "x",
+        "y",
+        "z"
+      ],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "70。",
+        "target_late": "90。",
+        "target_early_reprefill": "9²+6=81+6=87。",
+        "random_late": "90。",
+        "random_early_reprefill": "75。"
+      }
+    },
+    {
+      "case_id": "C02",
+      "group": "correct_old_no_error_control",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=8*3，y=x//4，z=3*y-2。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=24；因此 y=6，z=16。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\n复核后 x=24 保持不变。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "8*3"
+        },
+        {
+          "variable": "y",
+          "expression": "x//4"
+        },
+        {
+          "variable": "z",
+          "expression": "3*y-2"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 24,
+        "y": 6,
+        "z": 16
+      },
+      "old_values": {
+        "x": 24,
+        "y": 6,
+        "z": 16
+      },
+      "revision_implied_values": {
+        "x": 24,
+        "y": 6,
+        "z": 16
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "16。",
+        "target_late": "3*6-2=16。",
+        "target_early_reprefill": "22。",
+        "random_late": "16。",
+        "random_early_reprefill": "14。"
+      }
+    },
+    {
+      "case_id": "W02",
+      "group": "wait_wrong_revision_control",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=9*4，y=x//4，z=2*y+3。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=36；因此 y=9，z=21。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\nWait，前面的 x=36 要改成 x=32。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "9*4"
+        },
+        {
+          "variable": "y",
+          "expression": "x//4"
+        },
+        {
+          "variable": "z",
+          "expression": "2*y+3"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 36,
+        "y": 9,
+        "z": 21
+      },
+      "old_values": {
+        "x": 36,
+        "y": 9,
+        "z": 21
+      },
+      "revision_implied_values": {
+        "x": 32,
+        "y": 8,
+        "z": 19
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "23。",
+        "target_late": "2*8+3=19。",
+        "target_early_reprefill": "67。",
+        "random_late": "23。",
+        "random_early_reprefill": "2*8+3=19。"
+      }
+    },
+    {
+      "case_id": "E04",
+      "group": "falsified_old_correct_revision",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=13+8，y=2*x-3，z=y+4。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=20；因此 y=37，z=41。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\nWait，重新计算应为 x=21。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "13+8"
+        },
+        {
+          "variable": "y",
+          "expression": "2*x-3"
+        },
+        {
+          "variable": "z",
+          "expression": "y+4"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 21,
+        "y": 39,
+        "z": 43
+      },
+      "old_values": {
+        "x": 20,
+        "y": 37,
+        "z": 41
+      },
+      "revision_implied_values": {
+        "x": 21,
+        "y": 39,
+        "z": 43
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [
+        "x",
+        "y",
+        "z"
+      ],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "42。",
+        "target_late": "24。",
+        "target_early_reprefill": "28。",
+        "random_late": "22。",
+        "random_early_reprefill": "22。"
+      }
+    },
+    {
+      "case_id": "E05",
+      "group": "falsified_old_correct_revision",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=6*6，y=x//6，z=5*y-2。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=30；因此 y=5，z=23。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\nWait，重新计算应为 x=36。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "6*6"
+        },
+        {
+          "variable": "y",
+          "expression": "x//6"
+        },
+        {
+          "variable": "z",
+          "expression": "5*y-2"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 36,
+        "y": 6,
+        "z": 28
+      },
+      "old_values": {
+        "x": 30,
+        "y": 5,
+        "z": 23
+      },
+      "revision_implied_values": {
+        "x": 36,
+        "y": 6,
+        "z": 28
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [
+        "x",
+        "y",
+        "z"
+      ],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "28。",
+        "target_late": "34。",
+        "target_early_reprefill": "36//6=6，5*6-2=28。所以答案是 28。",
+        "random_late": "28。",
+        "random_early_reprefill": "23。"
+      }
+    },
+    {
+      "case_id": "C03",
+      "group": "correct_old_no_error_control",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=35//5，y=x+8，z=2*y。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=7；因此 y=15，z=30。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\n复核后 x=7 保持不变。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "35//5"
+        },
+        {
+          "variable": "y",
+          "expression": "x+8"
+        },
+        {
+          "variable": "z",
+          "expression": "2*y"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 7,
+        "y": 15,
+        "z": 30
+      },
+      "old_values": {
+        "x": 7,
+        "y": 15,
+        "z": 30
+      },
+      "revision_implied_values": {
+        "x": 7,
+        "y": 15,
+        "z": 30
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "30。",
+        "target_late": "2*(x+8)=2*(7+8)=2*15=30。",
+        "target_early_reprefill": "2*(x+8)=2*(7+8)=2*15=30。",
+        "random_late": "30。",
+        "random_early_reprefill": "30。"
+      }
+    },
+    {
+      "case_id": "W03",
+      "group": "wait_wrong_revision_control",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=42//7，y=x+5，z=y*y。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=6；因此 y=11，z=121。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\nWait，前面的 x=6 要改成 x=7。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "42//7"
+        },
+        {
+          "variable": "y",
+          "expression": "x+5"
+        },
+        {
+          "variable": "z",
+          "expression": "y*y"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 6,
+        "y": 11,
+        "z": 121
+      },
+      "old_values": {
+        "x": 6,
+        "y": 11,
+        "z": 121
+      },
+      "revision_implied_values": {
+        "x": 7,
+        "y": 12,
+        "z": 144
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "121。",
+        "target_late": "7*7=49。",
+        "target_early_reprefill": "49。",
+        "random_late": "121。",
+        "random_early_reprefill": "49。"
+      }
+    },
+    {
+      "case_id": "E06",
+      "group": "falsified_old_correct_revision",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=50-17，y=x+7，z=3*y-1。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=32；因此 y=39，z=116。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\nWait，重新计算应为 x=33。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "50-17"
+        },
+        {
+          "variable": "y",
+          "expression": "x+7"
+        },
+        {
+          "variable": "z",
+          "expression": "3*y-1"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 33,
+        "y": 40,
+        "z": 119
+      },
+      "old_values": {
+        "x": 32,
+        "y": 39,
+        "z": 116
+      },
+      "revision_implied_values": {
+        "x": 33,
+        "y": 40,
+        "z": 119
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [
+        "x",
+        "y",
+        "z"
+      ],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "116。",
+        "target_late": "102。",
+        "target_early_reprefill": "98。",
+        "random_late": "116。",
+        "random_early_reprefill": "11。"
+      }
+    },
+    {
+      "case_id": "E07",
+      "group": "falsified_old_correct_revision",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=(9+3)*2，y=2*x，z=y-11。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=22；因此 y=44，z=33。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\nWait，重新计算应为 x=24。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "(9+3)*2"
+        },
+        {
+          "variable": "y",
+          "expression": "2*x"
+        },
+        {
+          "variable": "z",
+          "expression": "y-11"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 24,
+        "y": 48,
+        "z": 37
+      },
+      "old_values": {
+        "x": 22,
+        "y": 44,
+        "z": 33
+      },
+      "revision_implied_values": {
+        "x": 24,
+        "y": 48,
+        "z": 37
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [
+        "x",
+        "y",
+        "z"
+      ],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "33。",
+        "target_late": "24*2-11=37。",
+        "target_early_reprefill": "24*2-11=37。",
+        "random_late": "33。",
+        "random_early_reprefill": "33。"
+      }
+    },
+    {
+      "case_id": "C04",
+      "group": "correct_old_no_error_control",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=11+6，y=2*x-5，z=y-9。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=17；因此 y=29，z=20。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\n复核后 x=17 保持不变。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "11+6"
+        },
+        {
+          "variable": "y",
+          "expression": "2*x-5"
+        },
+        {
+          "variable": "z",
+          "expression": "y-9"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 17,
+        "y": 29,
+        "z": 20
+      },
+      "old_values": {
+        "x": 17,
+        "y": 29,
+        "z": 20
+      },
+      "revision_implied_values": {
+        "x": 17,
+        "y": 29,
+        "z": 20
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "20。",
+        "target_late": "17-9=8。",
+        "target_early_reprefill": "17-9=8。",
+        "random_late": "20。",
+        "random_early_reprefill": "20。"
+      }
+    },
+    {
+      "case_id": "W04",
+      "group": "wait_wrong_revision_control",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=(8+5)*2，y=x-6，z=4*y-1。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=26；因此 y=20，z=79。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\nWait，前面的 x=26 要改成 x=24。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "(8+5)*2"
+        },
+        {
+          "variable": "y",
+          "expression": "x-6"
+        },
+        {
+          "variable": "z",
+          "expression": "4*y-1"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 26,
+        "y": 20,
+        "z": 79
+      },
+      "old_values": {
+        "x": 26,
+        "y": 20,
+        "z": 79
+      },
+      "revision_implied_values": {
+        "x": 24,
+        "y": 18,
+        "z": 71
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "78。",
+        "target_late": "48。",
+        "target_early_reprefill": "48。",
+        "random_late": "78。",
+        "random_early_reprefill": "78。"
+      }
+    },
+    {
+      "case_id": "E08",
+      "group": "falsified_old_correct_revision",
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=64//8+5，y=x-4，z=y*y+1。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=12；因此 y=8，z=65。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\nWait，重新计算应为 x=13。后续计算采用这个值。",
+      "S": "\n按题目原始定义核算，最终 z=",
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "64//8+5"
+        },
+        {
+          "variable": "y",
+          "expression": "x-4"
+        },
+        {
+          "variable": "z",
+          "expression": "y*y+1"
+        }
+      ],
+      "dependency_parents": {
+        "x": [],
+        "y": [
+          "x"
+        ],
+        "z": [
+          "y"
+        ]
+      },
+      "exact_values": {
+        "x": 13,
+        "y": 9,
+        "z": 82
+      },
+      "old_values": {
+        "x": 12,
+        "y": 8,
+        "z": 65
+      },
+      "revision_implied_values": {
+        "x": 13,
+        "y": 9,
+        "z": 82
+      },
+      "dispute_x_transitive_closure": [
+        "x",
+        "y",
+        "z"
+      ],
+      "old_B_assertions_outside_closure_B_shared": [],
+      "root_plus_direct_children_only": [
+        "x",
+        "y"
+      ],
+      "invalid_descendants_left_by_direct_only": [
+        "z"
+      ],
+      "actually_wrong_old_assertions": [
+        "x",
+        "y",
+        "z"
+      ],
+      "U_numeric_literals": [],
+      "U_variable_names": [],
+      "P_preserves_all_definition_strings": true,
+      "P_columns_never_masked": true,
+      "target_equals_entire_B_segment": true,
+      "outputs": {
+        "full": "170。",
+        "target_late": "170。",
+        "target_early_reprefill": "170。",
+        "random_late": "170。",
+        "random_early_reprefill": "170。"
+      }
+    }
+  ],
+  "all_80_outputs": [
+    {
+      "case_id": "E01",
+      "arm": "full",
+      "text": "33。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 33
+    },
+    {
+      "case_id": "E01",
+      "arm": "target_late",
+      "text": "11-5=6。",
+      "new_tokens": 8,
+      "additional_forward_tokens": 7,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "E01",
+      "arm": "target_early_reprefill",
+      "text": "11-5=6。",
+      "new_tokens": 8,
+      "additional_forward_tokens": 7,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "E01",
+      "arm": "random_late",
+      "text": "33。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 33
+    },
+    {
+      "case_id": "E01",
+      "arm": "random_early_reprefill",
+      "text": "33。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 33
+    },
+    {
+      "case_id": "C01",
+      "arm": "full",
+      "text": "31。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 31
+    },
+    {
+      "case_id": "C01",
+      "arm": "target_late",
+      "text": "43。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 43
+    },
+    {
+      "case_id": "C01",
+      "arm": "target_early_reprefill",
+      "text": "37。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 37
+    },
+    {
+      "case_id": "C01",
+      "arm": "random_late",
+      "text": "31。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 31
+    },
+    {
+      "case_id": "C01",
+      "arm": "random_early_reprefill",
+      "text": "31。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 31
+    },
+    {
+      "case_id": "W01",
+      "arm": "full",
+      "text": "28。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 28
+    },
+    {
+      "case_id": "W01",
+      "arm": "target_late",
+      "text": "11。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 11
+    },
+    {
+      "case_id": "W01",
+      "arm": "target_early_reprefill",
+      "text": "11。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 11
+    },
+    {
+      "case_id": "W01",
+      "arm": "random_late",
+      "text": "28。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 28
+    },
+    {
+      "case_id": "W01",
+      "arm": "random_early_reprefill",
+      "text": "28。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 28
+    },
+    {
+      "case_id": "E02",
+      "arm": "full",
+      "text": "56。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 56
+    },
+    {
+      "case_id": "E02",
+      "arm": "target_late",
+      "text": "28*2=56。",
+      "new_tokens": 9,
+      "additional_forward_tokens": 8,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "E02",
+      "arm": "target_early_reprefill",
+      "text": "2*(28-9)=2*19=38。",
+      "new_tokens": 16,
+      "additional_forward_tokens": 15,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "E02",
+      "arm": "random_late",
+      "text": "28*2=56。",
+      "new_tokens": 9,
+      "additional_forward_tokens": 8,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "E02",
+      "arm": "random_early_reprefill",
+      "text": "2*(28-9)=2*19=38。\n\n最终答案是：38",
+      "new_tokens": 24,
+      "additional_forward_tokens": 23,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "E03",
+      "arm": "full",
+      "text": "70。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 70
+    },
+    {
+      "case_id": "E03",
+      "arm": "target_late",
+      "text": "90。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 90
+    },
+    {
+      "case_id": "E03",
+      "arm": "target_early_reprefill",
+      "text": "9²+6=81+6=87。",
+      "new_tokens": 14,
+      "additional_forward_tokens": 13,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "E03",
+      "arm": "random_late",
+      "text": "90。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 90
+    },
+    {
+      "case_id": "E03",
+      "arm": "random_early_reprefill",
+      "text": "75。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 75
+    },
+    {
+      "case_id": "C02",
+      "arm": "full",
+      "text": "16。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 16
+    },
+    {
+      "case_id": "C02",
+      "arm": "target_late",
+      "text": "3*6-2=16。",
+      "new_tokens": 10,
+      "additional_forward_tokens": 9,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "C02",
+      "arm": "target_early_reprefill",
+      "text": "22。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 22
+    },
+    {
+      "case_id": "C02",
+      "arm": "random_late",
+      "text": "16。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 16
+    },
+    {
+      "case_id": "C02",
+      "arm": "random_early_reprefill",
+      "text": "14。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 14
+    },
+    {
+      "case_id": "W02",
+      "arm": "full",
+      "text": "23。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 23
+    },
+    {
+      "case_id": "W02",
+      "arm": "target_late",
+      "text": "2*8+3=19。",
+      "new_tokens": 10,
+      "additional_forward_tokens": 9,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "W02",
+      "arm": "target_early_reprefill",
+      "text": "67。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 67
+    },
+    {
+      "case_id": "W02",
+      "arm": "random_late",
+      "text": "23。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 23
+    },
+    {
+      "case_id": "W02",
+      "arm": "random_early_reprefill",
+      "text": "2*8+3=19。",
+      "new_tokens": 10,
+      "additional_forward_tokens": 9,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "E04",
+      "arm": "full",
+      "text": "42。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 42
+    },
+    {
+      "case_id": "E04",
+      "arm": "target_late",
+      "text": "24。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 24
+    },
+    {
+      "case_id": "E04",
+      "arm": "target_early_reprefill",
+      "text": "28。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 28
+    },
+    {
+      "case_id": "E04",
+      "arm": "random_late",
+      "text": "22。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 22
+    },
+    {
+      "case_id": "E04",
+      "arm": "random_early_reprefill",
+      "text": "22。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 22
+    },
+    {
+      "case_id": "E05",
+      "arm": "full",
+      "text": "28。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 28
+    },
+    {
+      "case_id": "E05",
+      "arm": "target_late",
+      "text": "34。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 34
+    },
+    {
+      "case_id": "E05",
+      "arm": "target_early_reprefill",
+      "text": "36//6=6，5*6-2=28。所以答案是 28。",
+      "new_tokens": 24,
+      "additional_forward_tokens": 23,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "E05",
+      "arm": "random_late",
+      "text": "28。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 28
+    },
+    {
+      "case_id": "E05",
+      "arm": "random_early_reprefill",
+      "text": "23。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 23
+    },
+    {
+      "case_id": "C03",
+      "arm": "full",
+      "text": "30。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 30
+    },
+    {
+      "case_id": "C03",
+      "arm": "target_late",
+      "text": "2*(x+8)=2*(7+8)=2*15=30。",
+      "new_tokens": 21,
+      "additional_forward_tokens": 20,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "C03",
+      "arm": "target_early_reprefill",
+      "text": "2*(x+8)=2*(7+8)=2*15=30。",
+      "new_tokens": 21,
+      "additional_forward_tokens": 20,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "C03",
+      "arm": "random_late",
+      "text": "30。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 30
+    },
+    {
+      "case_id": "C03",
+      "arm": "random_early_reprefill",
+      "text": "30。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 30
+    },
+    {
+      "case_id": "W03",
+      "arm": "full",
+      "text": "121。",
+      "new_tokens": 5,
+      "additional_forward_tokens": 4,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 121
+    },
+    {
+      "case_id": "W03",
+      "arm": "target_late",
+      "text": "7*7=49。",
+      "new_tokens": 8,
+      "additional_forward_tokens": 7,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "W03",
+      "arm": "target_early_reprefill",
+      "text": "49。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 49
+    },
+    {
+      "case_id": "W03",
+      "arm": "random_late",
+      "text": "121。",
+      "new_tokens": 5,
+      "additional_forward_tokens": 4,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 121
+    },
+    {
+      "case_id": "W03",
+      "arm": "random_early_reprefill",
+      "text": "49。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 49
+    },
+    {
+      "case_id": "E06",
+      "arm": "full",
+      "text": "116。",
+      "new_tokens": 5,
+      "additional_forward_tokens": 4,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 116
+    },
+    {
+      "case_id": "E06",
+      "arm": "target_late",
+      "text": "102。",
+      "new_tokens": 5,
+      "additional_forward_tokens": 4,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 102
+    },
+    {
+      "case_id": "E06",
+      "arm": "target_early_reprefill",
+      "text": "98。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 98
+    },
+    {
+      "case_id": "E06",
+      "arm": "random_late",
+      "text": "116。",
+      "new_tokens": 5,
+      "additional_forward_tokens": 4,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 116
+    },
+    {
+      "case_id": "E06",
+      "arm": "random_early_reprefill",
+      "text": "11。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 11
+    },
+    {
+      "case_id": "E07",
+      "arm": "full",
+      "text": "33。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 33
+    },
+    {
+      "case_id": "E07",
+      "arm": "target_late",
+      "text": "24*2-11=37。",
+      "new_tokens": 12,
+      "additional_forward_tokens": 11,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "E07",
+      "arm": "target_early_reprefill",
+      "text": "24*2-11=37。",
+      "new_tokens": 12,
+      "additional_forward_tokens": 11,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "E07",
+      "arm": "random_late",
+      "text": "33。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 33
+    },
+    {
+      "case_id": "E07",
+      "arm": "random_early_reprefill",
+      "text": "33。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 33
+    },
+    {
+      "case_id": "C04",
+      "arm": "full",
+      "text": "20。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 20
+    },
+    {
+      "case_id": "C04",
+      "arm": "target_late",
+      "text": "17-9=8。",
+      "new_tokens": 8,
+      "additional_forward_tokens": 7,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "C04",
+      "arm": "target_early_reprefill",
+      "text": "17-9=8。",
+      "new_tokens": 8,
+      "additional_forward_tokens": 7,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": null
+    },
+    {
+      "case_id": "C04",
+      "arm": "random_late",
+      "text": "20。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 20
+    },
+    {
+      "case_id": "C04",
+      "arm": "random_early_reprefill",
+      "text": "20。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 20
+    },
+    {
+      "case_id": "W04",
+      "arm": "full",
+      "text": "78。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 78
+    },
+    {
+      "case_id": "W04",
+      "arm": "target_late",
+      "text": "48。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 48
+    },
+    {
+      "case_id": "W04",
+      "arm": "target_early_reprefill",
+      "text": "48。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 48
+    },
+    {
+      "case_id": "W04",
+      "arm": "random_late",
+      "text": "78。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 78
+    },
+    {
+      "case_id": "W04",
+      "arm": "random_early_reprefill",
+      "text": "78。",
+      "new_tokens": 4,
+      "additional_forward_tokens": 3,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 78
+    },
+    {
+      "case_id": "E08",
+      "arm": "full",
+      "text": "170。",
+      "new_tokens": 5,
+      "additional_forward_tokens": 4,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 170
+    },
+    {
+      "case_id": "E08",
+      "arm": "target_late",
+      "text": "170。",
+      "new_tokens": 5,
+      "additional_forward_tokens": 4,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 170
+    },
+    {
+      "case_id": "E08",
+      "arm": "target_early_reprefill",
+      "text": "170。",
+      "new_tokens": 5,
+      "additional_forward_tokens": 4,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 170
+    },
+    {
+      "case_id": "E08",
+      "arm": "random_late",
+      "text": "170。",
+      "new_tokens": 5,
+      "additional_forward_tokens": 4,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 170
+    },
+    {
+      "case_id": "E08",
+      "arm": "random_early_reprefill",
+      "text": "170。",
+      "new_tokens": 5,
+      "additional_forward_tokens": 4,
+      "stop_reason": "eos",
+      "original_strict_integer": null,
+      "presentation_bare_integer": 170
+    }
+  ]
+}

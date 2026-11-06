@@ -1,0 +1,1717 @@
+{
+  "status": "PASS_AVAILABLE_ARTIFACT_AUDIT_PARTIAL_RUN",
+  "run_dir": "D:\\ACL\\research\\p05_design_review_20261105\\p05_five_arm_01",
+  "audit_source_sha256": "1b6cdba0f95927798493d4aa930aa1f36c06e99440a2d4d904d2f6ff3bb9ab06",
+  "expected_bindings": {
+    "source_sha256": "91b6ed7c584bf7561073964f5dc08510ab10f7a92f35e9fa89d2efe669442742",
+    "base_source_sha256": "246219aee9774fae0966c7663c765daf3dba2f1df68bc054b539a4dd5d64331b",
+    "input_sha256": "6ffe069718396dc2543f85aa9270780f356e293cc9764afdaf2f06a083c5cc27",
+    "answer_extractor_sha256": "c2bc053b66778288f524d46f4353e825b1ee654d829027bd02b1cb3173255eed",
+    "model_manifest_sha256": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511"
+  },
+  "binding_scope": "Local source/input/parser and recorded remote model hash list; remote model bytes are not re-read.",
+  "prelaunch_binding": {
+    "freeze_sha256": "a70ff643f4f513b90bb18b0943e5595ae6c0eb4b2a842dee9abb61bcfd5029df",
+    "rendered_inputs_sha256": "6ccef1ab340e99ae01172cf8e687892b9f94dd06147590f3ceb3a51e7ba6c973",
+    "core_records_matched": 16,
+    "free_and_probe_renderings_matched": 160,
+    "time_scope": "Hash/render bindings independently checked; BEFORE_NEW_GPU_OUTPUTS ordering uses the prelaunch record and parent execution evidence."
+  },
+  "errors": [],
+  "partial_notes": [],
+  "run_status": "P05_PRIMARY_RETAINED_DIAGNOSTICS_PARTIAL",
+  "primary_complete_ids": [
+    "E01",
+    "C01",
+    "W01",
+    "E02",
+    "E03",
+    "C02",
+    "W02",
+    "E04",
+    "E05",
+    "C03",
+    "W03",
+    "E06",
+    "E07",
+    "C04",
+    "W04",
+    "E08"
+  ],
+  "diagnostic_complete_ids": [
+    "E01",
+    "C01",
+    "W01",
+    "E02",
+    "E03",
+    "C02",
+    "W02",
+    "E04"
+  ],
+  "planned_ids": [
+    "E01",
+    "C01",
+    "W01",
+    "E02",
+    "E03",
+    "C02",
+    "W02",
+    "E04",
+    "E05",
+    "C03",
+    "W03",
+    "E06",
+    "E07",
+    "C04",
+    "W04",
+    "E08"
+  ],
+  "validated_primary_accuracy": {
+    "FullDirect": {
+      "all": {
+        "n": 16,
+        "correct": 8,
+        "parsed": 16
+      },
+      "falsified_old_correct_revision": {
+        "n": 8,
+        "correct": 0,
+        "parsed": 8
+      },
+      "correct_old_no_error_control": {
+        "n": 4,
+        "correct": 4,
+        "parsed": 4
+      },
+      "wait_wrong_revision_control": {
+        "n": 4,
+        "correct": 4,
+        "parsed": 4
+      }
+    },
+    "FullOneLine": {
+      "all": {
+        "n": 16,
+        "correct": 11,
+        "parsed": 12
+      },
+      "falsified_old_correct_revision": {
+        "n": 8,
+        "correct": 5,
+        "parsed": 5
+      },
+      "correct_old_no_error_control": {
+        "n": 4,
+        "correct": 3,
+        "parsed": 3
+      },
+      "wait_wrong_revision_control": {
+        "n": 4,
+        "correct": 3,
+        "parsed": 4
+      }
+    },
+    "WholeEarlyDirect": {
+      "all": {
+        "n": 16,
+        "correct": 0,
+        "parsed": 16
+      },
+      "falsified_old_correct_revision": {
+        "n": 8,
+        "correct": 0,
+        "parsed": 8
+      },
+      "correct_old_no_error_control": {
+        "n": 4,
+        "correct": 0,
+        "parsed": 4
+      },
+      "wait_wrong_revision_control": {
+        "n": 4,
+        "correct": 0,
+        "parsed": 4
+      }
+    },
+    "WholeEarlyOneLine": {
+      "all": {
+        "n": 16,
+        "correct": 12,
+        "parsed": 14
+      },
+      "falsified_old_correct_revision": {
+        "n": 8,
+        "correct": 6,
+        "parsed": 6
+      },
+      "correct_old_no_error_control": {
+        "n": 4,
+        "correct": 3,
+        "parsed": 4
+      },
+      "wait_wrong_revision_control": {
+        "n": 4,
+        "correct": 3,
+        "parsed": 4
+      }
+    },
+    "WholeLateOneLine": {
+      "all": {
+        "n": 16,
+        "correct": 8,
+        "parsed": 11
+      },
+      "falsified_old_correct_revision": {
+        "n": 8,
+        "correct": 4,
+        "parsed": 4
+      },
+      "correct_old_no_error_control": {
+        "n": 4,
+        "correct": 2,
+        "parsed": 3
+      },
+      "wait_wrong_revision_control": {
+        "n": 4,
+        "correct": 2,
+        "parsed": 4
+      }
+    }
+  },
+  "free_generated_tokens": 2618,
+  "arrays_checked": 160,
+  "probes_checked": 80,
+  "unique_candidates_checked": 220,
+  "all_saved_JSON_pair_comparisons_recomputed": 96,
+  "numeric_metric_comparisons": 384,
+  "independent_numpy_metric_max_abs_difference": 2.4369395390522186e-13,
+  "first_token_numpy_float64_vs_original_float32_max_abs_logP_difference": 1.6008711440917978e-06,
+  "candidate_scope": "Complete logP sums and initial-logit probability checked; later teacher-forced raw logits not saved, not independently re-forwarded.",
+  "controls": [
+    {
+      "case_id": "E01",
+      "state": "PASS",
+      "checks": {
+        "same_mask_no_delete": true,
+        "same_mask_no_delete_KV": true,
+        "same_mask_early_rebuild": true,
+        "same_mask_early_rebuild_KV": true,
+        "prefix_invariance": true,
+        "first_layer_invariance": true,
+        "masked_sentinel": true,
+        "masked_and_future_attention_zero": true,
+        "early_prefill_target_and_random_forbidden_mass_zero": true
+      }
+    },
+    {
+      "case_id": "C01",
+      "state": "PASS",
+      "checks": {
+        "same_mask_no_delete": true,
+        "same_mask_no_delete_KV": true,
+        "same_mask_early_rebuild": true,
+        "same_mask_early_rebuild_KV": true,
+        "prefix_invariance": true,
+        "first_layer_invariance": true,
+        "masked_sentinel": true,
+        "masked_and_future_attention_zero": true,
+        "early_prefill_target_and_random_forbidden_mass_zero": true
+      }
+    },
+    {
+      "case_id": "W01",
+      "state": "PASS",
+      "checks": {
+        "same_mask_no_delete": true,
+        "same_mask_no_delete_KV": true,
+        "same_mask_early_rebuild": true,
+        "same_mask_early_rebuild_KV": true,
+        "prefix_invariance": true,
+        "first_layer_invariance": true,
+        "masked_sentinel": true,
+        "masked_and_future_attention_zero": true,
+        "early_prefill_target_and_random_forbidden_mass_zero": true
+      }
+    },
+    {
+      "case_id": "E02",
+      "state": "NOT_RUN_AS_PREDECLARED"
+    },
+    {
+      "case_id": "E03",
+      "state": "NOT_RUN_AS_PREDECLARED"
+    },
+    {
+      "case_id": "C02",
+      "state": "NOT_RUN_AS_PREDECLARED"
+    },
+    {
+      "case_id": "W02",
+      "state": "NOT_RUN_AS_PREDECLARED"
+    },
+    {
+      "case_id": "E04",
+      "state": "NOT_RUN_AS_PREDECLARED"
+    },
+    {
+      "case_id": "E05",
+      "state": "NOT_RUN_AS_PREDECLARED"
+    },
+    {
+      "case_id": "C03",
+      "state": "NOT_RUN_AS_PREDECLARED"
+    },
+    {
+      "case_id": "W03",
+      "state": "NOT_RUN_AS_PREDECLARED"
+    },
+    {
+      "case_id": "E06",
+      "state": "NOT_RUN_AS_PREDECLARED"
+    },
+    {
+      "case_id": "E07",
+      "state": "NOT_RUN_AS_PREDECLARED"
+    },
+    {
+      "case_id": "C04",
+      "state": "NOT_RUN_AS_PREDECLARED"
+    },
+    {
+      "case_id": "W04",
+      "state": "NOT_RUN_AS_PREDECLARED"
+    },
+    {
+      "case_id": "E08",
+      "state": "NOT_RUN_AS_PREDECLARED"
+    }
+  ],
+  "late_vs_early_pairs": [
+    {
+      "case_id": "E01",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 4.41796875,
+        "logit_relative_l2": 0.11630335530440013,
+        "TV": 1.518065636604191e-10,
+        "JS_nats": 2.432137132739968e-11,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "E01",
+      "family": "z",
+      "metrics": {
+        "logit_max_abs": 3.16796875,
+        "logit_relative_l2": 0.178846457602,
+        "TV": 0.00553469210835729,
+        "JS_nats": 0.0013417895874870103,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "E01",
+      "family": "y",
+      "metrics": {
+        "logit_max_abs": 3.03125,
+        "logit_relative_l2": 0.1570827371134006,
+        "TV": 1.508716156619733e-14,
+        "JS_nats": 4.007884370004537e-15,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "C01",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 6.71875,
+        "logit_relative_l2": 0.1263121751285465,
+        "TV": 3.854031964995407e-08,
+        "JS_nats": 9.173674766824051e-09,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "C01",
+      "family": "z",
+      "metrics": {
+        "logit_max_abs": 7.375,
+        "logit_relative_l2": 0.22934670747843813,
+        "TV": 0.9812233894601018,
+        "JS_nats": 0.6437918960634785,
+        "argmax_equal": false,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "C01",
+      "family": "y",
+      "metrics": {
+        "logit_max_abs": 1.28466796875,
+        "logit_relative_l2": 0.04029097382847046,
+        "TV": 2.597660779996319e-17,
+        "JS_nats": 3.887599703021222e-18,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "W01",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 4.609375,
+        "logit_relative_l2": 0.14977418938279016,
+        "TV": 1.4758638908918689e-08,
+        "JS_nats": 4.820625518056554e-09,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "W01",
+      "family": "z",
+      "metrics": {
+        "logit_max_abs": 3.453125,
+        "logit_relative_l2": 0.1550001614353764,
+        "TV": 0.10399869664549445,
+        "JS_nats": 0.014690479423067298,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "W01",
+      "family": "y",
+      "metrics": {
+        "logit_max_abs": 3.04296875,
+        "logit_relative_l2": 0.19459653126372237,
+        "TV": 5.926240375025778e-15,
+        "JS_nats": 1.1040924411395758e-15,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "E02",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 3.5625,
+        "logit_relative_l2": 0.10983411703867771,
+        "TV": 2.6699616744397592e-08,
+        "JS_nats": 7.138530899713534e-09,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "E02",
+      "family": "z",
+      "metrics": {
+        "logit_max_abs": 11.53125,
+        "logit_relative_l2": 0.32514701972856597,
+        "TV": 0.7908678413167667,
+        "JS_nats": 0.4336742552105833,
+        "argmax_equal": false,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "E02",
+      "family": "y",
+      "metrics": {
+        "logit_max_abs": 11.4453125,
+        "logit_relative_l2": 0.15712602217455568,
+        "TV": 9.521072823496855e-05,
+        "JS_nats": 1.1153490322992924e-06,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "E03",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 2.23828125,
+        "logit_relative_l2": 0.10102372877658615,
+        "TV": 1.819254175928566e-10,
+        "JS_nats": 2.302649570783893e-11,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "E03",
+      "family": "z",
+      "metrics": {
+        "logit_max_abs": 4.203125,
+        "logit_relative_l2": 0.25944221135428214,
+        "TV": 0.06169633968305395,
+        "JS_nats": 0.01954393593027268,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "E03",
+      "family": "y",
+      "metrics": {
+        "logit_max_abs": 8.21875,
+        "logit_relative_l2": 0.25316405558606025,
+        "TV": 0.11279455905464894,
+        "JS_nats": 0.04077251837664091,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "C02",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 2.6875,
+        "logit_relative_l2": 0.1051708739891959,
+        "TV": 8.193659525456727e-08,
+        "JS_nats": 2.2479215422880406e-08,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "C02",
+      "family": "z",
+      "metrics": {
+        "logit_max_abs": 2.9765625,
+        "logit_relative_l2": 0.1941719572844838,
+        "TV": 6.07394900931196e-07,
+        "JS_nats": 1.3688433660980347e-07,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "C02",
+      "family": "y",
+      "metrics": {
+        "logit_max_abs": 8.1796875,
+        "logit_relative_l2": 0.17954151481784772,
+        "TV": 1.0906116607291696e-10,
+        "JS_nats": 1.873710703754651e-11,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "W02",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 2.8330078125,
+        "logit_relative_l2": 0.13478344016986743,
+        "TV": 1.6669203088364633e-10,
+        "JS_nats": 2.0446970305082233e-11,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "W02",
+      "family": "z",
+      "metrics": {
+        "logit_max_abs": 1.56201171875,
+        "logit_relative_l2": 0.08085097716827183,
+        "TV": 3.553649804545069e-06,
+        "JS_nats": 1.1518013402556151e-07,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "W02",
+      "family": "y",
+      "metrics": {
+        "logit_max_abs": 6.2421875,
+        "logit_relative_l2": 0.19439473424537515,
+        "TV": 8.6561740107054e-09,
+        "JS_nats": 2.9345688269968303e-09,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "E04",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 3.9375,
+        "logit_relative_l2": 0.10677486801084063,
+        "TV": 3.9442841526235126e-10,
+        "JS_nats": 7.68561330639755e-11,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "E04",
+      "family": "z",
+      "metrics": {
+        "logit_max_abs": 3.046875,
+        "logit_relative_l2": 0.2417488517136207,
+        "TV": 0.41975068666936727,
+        "JS_nats": 0.13848144175453012,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "E04",
+      "family": "y",
+      "metrics": {
+        "logit_max_abs": 4.03125,
+        "logit_relative_l2": 0.24190129548741457,
+        "TV": 1.4821794490176907e-14,
+        "JS_nats": 3.576325078973603e-15,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": true
+    },
+    {
+      "case_id": "E05",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 2.8046875,
+        "logit_relative_l2": 0.1103691259094629,
+        "TV": 2.322336549607204e-09,
+        "JS_nats": 6.421257130870424e-10,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": false
+    },
+    {
+      "case_id": "C03",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 3.671875,
+        "logit_relative_l2": 0.09702281931521863,
+        "TV": 1.1816739175818328e-09,
+        "JS_nats": 3.6339254036933694e-10,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": false
+    },
+    {
+      "case_id": "W03",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 2.685546875,
+        "logit_relative_l2": 0.16750710762587567,
+        "TV": 9.334314661290552e-10,
+        "JS_nats": 1.0115903424858608e-10,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": false
+    },
+    {
+      "case_id": "E06",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 4.13671875,
+        "logit_relative_l2": 0.1193719885684435,
+        "TV": 1.5855458500485515e-09,
+        "JS_nats": 1.7254019898120134e-10,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": false
+    },
+    {
+      "case_id": "E07",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 3.03125,
+        "logit_relative_l2": 0.10059215709207393,
+        "TV": 0.0029755429250926425,
+        "JS_nats": 0.0007935363064423853,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": false
+    },
+    {
+      "case_id": "C04",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 3.4375,
+        "logit_relative_l2": 0.09333250890138342,
+        "TV": 1.4149970760489137e-09,
+        "JS_nats": 1.8674551077650014e-10,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": false
+    },
+    {
+      "case_id": "W04",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 4.625,
+        "logit_relative_l2": 0.13230176641678235,
+        "TV": 5.359333280170604e-06,
+        "JS_nats": 1.1593018188869173e-06,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": false
+    },
+    {
+      "case_id": "E08",
+      "family": "free",
+      "metrics": {
+        "logit_max_abs": 2.484375,
+        "logit_relative_l2": 0.10366990489017487,
+        "TV": 1.403476718332229e-06,
+        "JS_nats": 6.203790079903491e-08,
+        "argmax_equal": true,
+        "exact_equal": false
+      },
+      "JSON_comparison_available": false
+    }
+  ],
+  "all_free_outputs": [
+    {
+      "case_id": "E01",
+      "arm": "FullDirect",
+      "text": "33",
+      "extraction": {
+        "value": 33,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "33"
+      }
+    },
+    {
+      "case_id": "E01",
+      "arm": "FullOneLine",
+      "text": "x = 18 - 7 = 11  \ny = 3 * x + 2 = 3 * 11 + 2 = 33 + 2 = 35  \nz = y - 5 = 35 - 5 = 30  \n\n最终答案",
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      }
+    },
+    {
+      "case_id": "E01",
+      "arm": "WholeEarlyDirect",
+      "text": "11",
+      "extraction": {
+        "value": 11,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "11"
+      }
+    },
+    {
+      "case_id": "E01",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 18 - 7 = 11  \ny = 3 * x + 2 = 3 * 11 + 2 = 33 + 2 = 35  \nz = y - 5 = 35 - 5 = 30  \n\n最终答案",
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      }
+    },
+    {
+      "case_id": "E01",
+      "arm": "WholeLateOneLine",
+      "text": "x = 18 - 7 = 11  \ny = 3 * x + 2 = 3 * 11 + 2 = 33 + 2 = 35  \nz = y - 5 = 35 - 5 = 30  \n\n最终答案",
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      }
+    },
+    {
+      "case_id": "C01",
+      "arm": "FullDirect",
+      "text": "31",
+      "extraction": {
+        "value": 31,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "31"
+      }
+    },
+    {
+      "case_id": "C01",
+      "arm": "FullOneLine",
+      "text": "x = 16 - 9 = 7  \ny = 4 * x = 4 * 7 = 28  \nz = y + 3 = 28 + 3 = 31  \n\n最终答案：31",
+      "extraction": {
+        "value": 31,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：31"
+      }
+    },
+    {
+      "case_id": "C01",
+      "arm": "WholeEarlyDirect",
+      "text": "7",
+      "extraction": {
+        "value": 7,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "7"
+      }
+    },
+    {
+      "case_id": "C01",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 16 - 9 = 7  \ny = 4 * x = 4 * 7 = 28  \nz = y + 3 = 28 + 3 = 31  \n\n最终答案：31",
+      "extraction": {
+        "value": 31,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：31"
+      }
+    },
+    {
+      "case_id": "C01",
+      "arm": "WholeLateOneLine",
+      "text": "x = 16 - 9 = 7  \ny = 4 * x = 4 * 7 = 28  \nz = y + 3 = 28 + 3 = 31  \n\n最终答案：31",
+      "extraction": {
+        "value": 31,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：31"
+      }
+    },
+    {
+      "case_id": "W01",
+      "arm": "FullDirect",
+      "text": "28",
+      "extraction": {
+        "value": 28,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "28"
+      }
+    },
+    {
+      "case_id": "W01",
+      "arm": "FullOneLine",
+      "text": "x = 15 - 6 = 9  \ny = 3 * x = 27  \nz = y + 1 = 28  \n\n最终答案：28",
+      "extraction": {
+        "value": 28,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：28"
+      }
+    },
+    {
+      "case_id": "W01",
+      "arm": "WholeEarlyDirect",
+      "text": "11",
+      "extraction": {
+        "value": 11,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "11"
+      }
+    },
+    {
+      "case_id": "W01",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 15 - 6 = 9  \ny = 3 * x = 3 * 9 = 27  \nz = y + 1 = 27 + 1 = 28  \n\n最终答案：28",
+      "extraction": {
+        "value": 28,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：28"
+      }
+    },
+    {
+      "case_id": "W01",
+      "arm": "WholeLateOneLine",
+      "text": "x = 15 - 6 = 9  \ny = 3 * x = 3 * 9 = 27  \nz = y + 1 = 27 + 1 = 28  \n\n最终答案：28",
+      "extraction": {
+        "value": 28,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：28"
+      }
+    },
+    {
+      "case_id": "E02",
+      "arm": "FullDirect",
+      "text": "30",
+      "extraction": {
+        "value": 30,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "30"
+      }
+    },
+    {
+      "case_id": "E02",
+      "arm": "FullOneLine",
+      "text": "x = 7 * 4 = 28  \ny = x - 9 = 28 - 9 = 19  \nz = 2 * y = 2 * 19 = 38  \n\n最终答案：38",
+      "extraction": {
+        "value": 38,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：38"
+      }
+    },
+    {
+      "case_id": "E02",
+      "arm": "WholeEarlyDirect",
+      "text": "28",
+      "extraction": {
+        "value": 28,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "28"
+      }
+    },
+    {
+      "case_id": "E02",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 7 * 4 = 28  \ny = x - 9 = 28 - 9 = 19  \nz = 2 * y = 2 * 19 = 38  \n\n最终答案：38",
+      "extraction": {
+        "value": 38,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：38"
+      }
+    },
+    {
+      "case_id": "E02",
+      "arm": "WholeLateOneLine",
+      "text": "x = 7 * 4 = 28  \ny = x - 9 = 28 - 9 = 19  \nz = 2 * y = 2 * 19 = 38  \n\n最终答案：38",
+      "extraction": {
+        "value": 38,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：38"
+      }
+    },
+    {
+      "case_id": "E03",
+      "arm": "FullDirect",
+      "text": "70",
+      "extraction": {
+        "value": 70,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "70"
+      }
+    },
+    {
+      "case_id": "E03",
+      "arm": "FullOneLine",
+      "text": "x = 45 // 5 = 9  \ny = x * x = 9 * 9 = 81  \nz = y + 6 = 81 + 6 = 87  \n\n最终答案：87",
+      "extraction": {
+        "value": 87,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：87"
+      }
+    },
+    {
+      "case_id": "E03",
+      "arm": "WholeEarlyDirect",
+      "text": "81",
+      "extraction": {
+        "value": 81,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "81"
+      }
+    },
+    {
+      "case_id": "E03",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 45 // 5 = 9  \ny = x * x = 9 * 9 = 81  \nz = y + 6 = 81 + 6 = 87  \n\n最终答案：87",
+      "extraction": {
+        "value": 87,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：87"
+      }
+    },
+    {
+      "case_id": "E03",
+      "arm": "WholeLateOneLine",
+      "text": "x = 45 // 5 = 9  \ny = x * x = 9 * 9 = 81  \nz = y + 6 = 81 + 6 = 87  \n\n最终答案：87",
+      "extraction": {
+        "value": 87,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：87"
+      }
+    },
+    {
+      "case_id": "C02",
+      "arm": "FullDirect",
+      "text": "16",
+      "extraction": {
+        "value": 16,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "16"
+      }
+    },
+    {
+      "case_id": "C02",
+      "arm": "FullOneLine",
+      "text": "x = 8 * 3 = 24  \ny = 24 // 4 = 6  \nz = 3 * 6 - 2 = 16  \n\n最终答案：16",
+      "extraction": {
+        "value": 16,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：16"
+      }
+    },
+    {
+      "case_id": "C02",
+      "arm": "WholeEarlyDirect",
+      "text": "24",
+      "extraction": {
+        "value": 24,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "24"
+      }
+    },
+    {
+      "case_id": "C02",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 8 * 3 = 24  \ny = 24 // 4 = 6  \nz = 3 * 6 - 2 = 16  \n\n最终答案：16",
+      "extraction": {
+        "value": 16,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：16"
+      }
+    },
+    {
+      "case_id": "C02",
+      "arm": "WholeLateOneLine",
+      "text": "x = 8 * 3 = 24  \ny = 24 // 4 = 6  \nz = 3 * 6 - 2 = 16  \n\n最终答案：16",
+      "extraction": {
+        "value": 16,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：16"
+      }
+    },
+    {
+      "case_id": "W02",
+      "arm": "FullDirect",
+      "text": "21",
+      "extraction": {
+        "value": 21,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "21"
+      }
+    },
+    {
+      "case_id": "W02",
+      "arm": "FullOneLine",
+      "text": "x = 9 * 4 = 36  \ny = 36 // 4 = 9  \nz = 2 * 9 + 3 = 21  \n\n最终答案：21",
+      "extraction": {
+        "value": 21,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：21"
+      }
+    },
+    {
+      "case_id": "W02",
+      "arm": "WholeEarlyDirect",
+      "text": "32",
+      "extraction": {
+        "value": 32,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "32"
+      }
+    },
+    {
+      "case_id": "W02",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 9 * 4 = 36  \ny = 36 // 4 = 9  \nz = 2 * 9 + 3 = 21  \n\n最终答案：21",
+      "extraction": {
+        "value": 21,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：21"
+      }
+    },
+    {
+      "case_id": "W02",
+      "arm": "WholeLateOneLine",
+      "text": "x = 9 * 4 = 36  \ny = 36 // 4 = 9  \nz = 2 * 9 + 3 = 21  \n\n最终答案：21",
+      "extraction": {
+        "value": 21,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：21"
+      }
+    },
+    {
+      "case_id": "E04",
+      "arm": "FullDirect",
+      "text": "41",
+      "extraction": {
+        "value": 41,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "41"
+      }
+    },
+    {
+      "case_id": "E04",
+      "arm": "FullOneLine",
+      "text": "x = 13 + 8 = 21  \ny = 2 * 21 - 3 = 39  \nz = 39 + 4 = 43  \n\n最终答案：43",
+      "extraction": {
+        "value": 43,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：43"
+      }
+    },
+    {
+      "case_id": "E04",
+      "arm": "WholeEarlyDirect",
+      "text": "21",
+      "extraction": {
+        "value": 21,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "21"
+      }
+    },
+    {
+      "case_id": "E04",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 13 + 8 = 21  \ny = 2 * 21 - 3 = 39  \nz = 39 + 4 = 43  \n\n最终答案：43",
+      "extraction": {
+        "value": 43,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：43"
+      }
+    },
+    {
+      "case_id": "E04",
+      "arm": "WholeLateOneLine",
+      "text": "x = 13 + 8 = 21  \ny = 2 * x - 3 = 2 * 21 - 3 = 42 - 3 = 39  \nz = y + 4 = 39 + 4 = 43  \n\n最终答案",
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      }
+    },
+    {
+      "case_id": "E05",
+      "arm": "FullDirect",
+      "text": "23",
+      "extraction": {
+        "value": 23,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "23"
+      }
+    },
+    {
+      "case_id": "E05",
+      "arm": "FullOneLine",
+      "text": "x = 6 * 6 = 36  \ny = 36 // 6 = 6  \nz = 5 * 6 - 2 = 28  \n\n最终答案：28",
+      "extraction": {
+        "value": 28,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：28"
+      }
+    },
+    {
+      "case_id": "E05",
+      "arm": "WholeEarlyDirect",
+      "text": "36",
+      "extraction": {
+        "value": 36,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "36"
+      }
+    },
+    {
+      "case_id": "E05",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 6 * 6 = 36  \ny = 36 // 6 = 6  \nz = 5 * 6 - 2 = 28  \n\n最终答案：28",
+      "extraction": {
+        "value": 28,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：28"
+      }
+    },
+    {
+      "case_id": "E05",
+      "arm": "WholeLateOneLine",
+      "text": "x = 6 * 6 = 36  \ny = 36 // 6 = 6  \nz = 5 * 6 - 2 = 28  \n\n最终答案：28",
+      "extraction": {
+        "value": 28,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：28"
+      }
+    },
+    {
+      "case_id": "C03",
+      "arm": "FullDirect",
+      "text": "30",
+      "extraction": {
+        "value": 30,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "30"
+      }
+    },
+    {
+      "case_id": "C03",
+      "arm": "FullOneLine",
+      "text": "x = 35 // 5  \ny = x + 8  \nz = 2 * y  \n\n最终答案：30",
+      "extraction": {
+        "value": 30,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：30"
+      }
+    },
+    {
+      "case_id": "C03",
+      "arm": "WholeEarlyDirect",
+      "text": "70",
+      "extraction": {
+        "value": 70,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "70"
+      }
+    },
+    {
+      "case_id": "C03",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 35 // 5  \ny = x + 8  \nz = 2 * y  \n\n最终答案：56",
+      "extraction": {
+        "value": 56,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：56"
+      }
+    },
+    {
+      "case_id": "C03",
+      "arm": "WholeLateOneLine",
+      "text": "x = 35 // 5  \ny = x + 8  \nz = 2 * y  \n\n最终答案：76",
+      "extraction": {
+        "value": 76,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：76"
+      }
+    },
+    {
+      "case_id": "W03",
+      "arm": "FullDirect",
+      "text": "121",
+      "extraction": {
+        "value": 121,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "121"
+      }
+    },
+    {
+      "case_id": "W03",
+      "arm": "FullOneLine",
+      "text": "x = 42 // 7 = 6  \ny = x + 5 = 6 + 5 = 11  \nz = y * y = 11 * 11 = 121  \n\n最终答案：121",
+      "extraction": {
+        "value": 121,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：121"
+      }
+    },
+    {
+      "case_id": "W03",
+      "arm": "WholeEarlyDirect",
+      "text": "49",
+      "extraction": {
+        "value": 49,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "49"
+      }
+    },
+    {
+      "case_id": "W03",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 42 // 7 = 6  \ny = x + 5 = 6 + 5 = 11  \nz = y * y = 11 * 11 = 121  \n\n最终答案：121",
+      "extraction": {
+        "value": 121,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：121"
+      }
+    },
+    {
+      "case_id": "W03",
+      "arm": "WholeLateOneLine",
+      "text": "x = 42 // 7  \ny = x + 5  \nz = y * y  \n\n最终答案：49",
+      "extraction": {
+        "value": 49,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：49"
+      }
+    },
+    {
+      "case_id": "E06",
+      "arm": "FullDirect",
+      "text": "116",
+      "extraction": {
+        "value": 116,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "116"
+      }
+    },
+    {
+      "case_id": "E06",
+      "arm": "FullOneLine",
+      "text": "x = 50 - 17 = 33  \ny = x + 7 = 40  \nz = 3 * y - 1 = 119  \n\n最终答案：119",
+      "extraction": {
+        "value": 119,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：119"
+      }
+    },
+    {
+      "case_id": "E06",
+      "arm": "WholeEarlyDirect",
+      "text": "33",
+      "extraction": {
+        "value": 33,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "33"
+      }
+    },
+    {
+      "case_id": "E06",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 50 - 17 = 33  \ny = x + 7 = 33 + 7 = 40  \nz = 3 * y - 1 = 3 * 40 - 1 = 120 - 1 = 119",
+      "extraction": {
+        "value": 119,
+        "method": "last_line_complete_equation_chain_terminal_integer",
+        "matched_text": "z = 3 * y - 1 = 3 * 40 - 1 = 120 - 1 = 119",
+        "normalized_math_for_grammar_only": "z = 3 * y - 1 = 3 * 40 - 1 = 120 - 1 = 119",
+        "equation_truth_evaluated": false
+      }
+    },
+    {
+      "case_id": "E06",
+      "arm": "WholeLateOneLine",
+      "text": "x = 50 - 17 = 33  \ny = x + 7 = 33 + 7 = 40  \nz = 3 * y - 1 = 3 * 40 - 1 = 120 - 1 = 119",
+      "extraction": {
+        "value": 119,
+        "method": "last_line_complete_equation_chain_terminal_integer",
+        "matched_text": "z = 3 * y - 1 = 3 * 40 - 1 = 120 - 1 = 119",
+        "normalized_math_for_grammar_only": "z = 3 * y - 1 = 3 * 40 - 1 = 120 - 1 = 119",
+        "equation_truth_evaluated": false
+      }
+    },
+    {
+      "case_id": "E07",
+      "arm": "FullDirect",
+      "text": "33",
+      "extraction": {
+        "value": 33,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "33"
+      }
+    },
+    {
+      "case_id": "E07",
+      "arm": "FullOneLine",
+      "text": "x = (9 + 3) * 2 = 12 * 2 = 24  \ny = 2 * x = 2 * 24 = 48  \nz = y - 11 = 48 - 11 = 37  \n\n最终答案：",
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      }
+    },
+    {
+      "case_id": "E07",
+      "arm": "WholeEarlyDirect",
+      "text": "24",
+      "extraction": {
+        "value": 24,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "24"
+      }
+    },
+    {
+      "case_id": "E07",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = (9 + 3) * 2 = 24  \ny = 2 * x = 48  \nz = y - 11 = 37  \n\n最终答案：37",
+      "extraction": {
+        "value": 37,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：37"
+      }
+    },
+    {
+      "case_id": "E07",
+      "arm": "WholeLateOneLine",
+      "text": "x = (9 + 3) * 2 = 12 * 2 = 24  \ny = 2 * x = 2 * 24 = 48  \nz = y - 11 = 48 - 11 = 37  \n\n最终答案：",
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      }
+    },
+    {
+      "case_id": "C04",
+      "arm": "FullDirect",
+      "text": "20",
+      "extraction": {
+        "value": 20,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "20"
+      }
+    },
+    {
+      "case_id": "C04",
+      "arm": "FullOneLine",
+      "text": "x = 11 + 6 = 17  \ny = 2 * x - 5 = 2 * 17 - 5 = 34 - 5 = 29  \nz = y - 9 = 29 - 9 = 20  \n\n最终答案",
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      }
+    },
+    {
+      "case_id": "C04",
+      "arm": "WholeEarlyDirect",
+      "text": "17",
+      "extraction": {
+        "value": 17,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "17"
+      }
+    },
+    {
+      "case_id": "C04",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 11 + 6 = 17  \ny = 2 * 17 - 5 = 34 - 5 = 29  \nz = 29 - 9 = 20  \n\n最终答案：20",
+      "extraction": {
+        "value": 20,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：20"
+      }
+    },
+    {
+      "case_id": "C04",
+      "arm": "WholeLateOneLine",
+      "text": "x = 11 + 6 = 17  \ny = 2 * x - 5 = 2 * 17 - 5 = 34 - 5 = 29  \nz = y - 9 = 29 - 9 = 20  \n\n最终答案",
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      }
+    },
+    {
+      "case_id": "W04",
+      "arm": "FullDirect",
+      "text": "79",
+      "extraction": {
+        "value": 79,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "79"
+      }
+    },
+    {
+      "case_id": "W04",
+      "arm": "FullOneLine",
+      "text": "x = (8 + 5) * 2 = 13 * 2 = 26  \ny = x - 6 = 26 - 6 = 20  \nz = 4 * y - 1 = 4 * 20 - 1 = 80",
+      "extraction": {
+        "value": 80,
+        "method": "last_line_complete_equation_chain_terminal_integer",
+        "matched_text": "z = 4 * y - 1 = 4 * 20 - 1 = 80",
+        "normalized_math_for_grammar_only": "z = 4 * y - 1 = 4 * 20 - 1 = 80",
+        "equation_truth_evaluated": false
+      }
+    },
+    {
+      "case_id": "W04",
+      "arm": "WholeEarlyDirect",
+      "text": "48",
+      "extraction": {
+        "value": 48,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "48"
+      }
+    },
+    {
+      "case_id": "W04",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = (8 + 5) * 2 = 13 * 2 = 26  \ny = x - 6 = 26 - 6 = 20  \nz = 4 * y - 1 = 4 * 20 - 1 = 80",
+      "extraction": {
+        "value": 80,
+        "method": "last_line_complete_equation_chain_terminal_integer",
+        "matched_text": "z = 4 * y - 1 = 4 * 20 - 1 = 80",
+        "normalized_math_for_grammar_only": "z = 4 * y - 1 = 4 * 20 - 1 = 80",
+        "equation_truth_evaluated": false
+      }
+    },
+    {
+      "case_id": "W04",
+      "arm": "WholeLateOneLine",
+      "text": "x = (8 + 5) * 2 = 13 * 2 = 26  \ny = x - 6 = 26 - 6 = 20  \nz = 4 * y - 1 = 4 * 20 - 1 = 80",
+      "extraction": {
+        "value": 80,
+        "method": "last_line_complete_equation_chain_terminal_integer",
+        "matched_text": "z = 4 * y - 1 = 4 * 20 - 1 = 80",
+        "normalized_math_for_grammar_only": "z = 4 * y - 1 = 4 * 20 - 1 = 80",
+        "equation_truth_evaluated": false
+      }
+    },
+    {
+      "case_id": "E08",
+      "arm": "FullDirect",
+      "text": "65",
+      "extraction": {
+        "value": 65,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "65"
+      }
+    },
+    {
+      "case_id": "E08",
+      "arm": "FullOneLine",
+      "text": "x = 64 // 8 + 5 = 8 + 5 = 13  \ny = x - 4 = 13 - 4 = 9  \nz = y * y + 1 = 9 * 9 + 1 = 81 + 1 =",
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      }
+    },
+    {
+      "case_id": "E08",
+      "arm": "WholeEarlyDirect",
+      "text": "170",
+      "extraction": {
+        "value": 170,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "170"
+      }
+    },
+    {
+      "case_id": "E08",
+      "arm": "WholeEarlyOneLine",
+      "text": "x = 64 // 8 + 5 = 8 + 5 = 13  \ny = x - 4 = 13 - 4 = 9  \nz = y * y + 1 = 9 * 9 + 1 = 81 + 1 =",
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      }
+    },
+    {
+      "case_id": "E08",
+      "arm": "WholeLateOneLine",
+      "text": "x = 64 // 8 + 5 = 8 + 5 = 13  \ny = x - 4 = 13 - 4 = 9  \nz = y * y + 1 = 9 * 9 + 1 = 81 + 1 =",
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      }
+    }
+  ],
+  "actual_forward_cost": {
+    "forward_calls": 2961,
+    "input_tokens": 16336,
+    "synchronized_forward_seconds": 189.76396771147847
+  },
+  "last_free_ledger_index": 2676,
+  "first_candidate_ledger_index": 2677,
+  "recorded_total_wall_seconds": 264.35894379206,
+  "recorded_load_hash_seconds": 29.977774594910443,
+  "artifact_snapshot_hashes": [
+    {
+      "file": "C01.json",
+      "sha256": "c0171dec9d1573f7892eda07664866b7f61e3d2eb713ce047435526b4bd4bbfa",
+      "bytes": 289779
+    },
+    {
+      "file": "C01_logits.npz",
+      "sha256": "1bfcfc8e5ab22b1b16649a95b9655fbf34e774cbd3dbfd68d07ca818aa6e52c9",
+      "bytes": 5198559
+    },
+    {
+      "file": "C02.json",
+      "sha256": "8ec7a7ff2b0e9fd4784e744e1d959b5d09358cb7f7e12f944a147199032bf165",
+      "bytes": 180284
+    },
+    {
+      "file": "C02_logits.npz",
+      "sha256": "20046f7c1e66c4ba48a8b358a01f4fd11ca84bac604941d550e7c3c0fac0bcce",
+      "bytes": 5208488
+    },
+    {
+      "file": "C03.json",
+      "sha256": "e2389444061e63f7063d1e4cb120371ea470ee02468cbf5ba6cea60d6f45e796",
+      "bytes": 94307
+    },
+    {
+      "file": "C03_logits.npz",
+      "sha256": "f25606543d3729929036983387ad480c039940cceb6d45e3461c1daf0222b77c",
+      "bytes": 1779163
+    },
+    {
+      "file": "C04.json",
+      "sha256": "589bf2dcb45d646daf4f228805f23decdd21cef6fe1bac836333a87d5c819249",
+      "bytes": 96010
+    },
+    {
+      "file": "C04_logits.npz",
+      "sha256": "45190f2113faba4a95158c77798e462dee86bf02e75353efef51da85945c43bc",
+      "bytes": 1778118
+    },
+    {
+      "file": "E01.json",
+      "sha256": "708bf201a726f22fb0a7059dc8f85ecb71f9895b00cfa3dafa7371d4ef565330",
+      "bytes": 298802
+    },
+    {
+      "file": "E01_logits.npz",
+      "sha256": "53cd89ff16f630ac0798134d3553c66135cb2e657170c8f619850e7b96d6cdab",
+      "bytes": 5253558
+    },
+    {
+      "file": "E02.json",
+      "sha256": "364216a0d9a0196a65c1171003988d51fe83f29a16e5801aaacb028ba2210043",
+      "bytes": 189858
+    },
+    {
+      "file": "E02_logits.npz",
+      "sha256": "0cc6a9a03c1ce322d7ade8f97ce7e2002a6eadf334cbb7db702aada884a3f721",
+      "bytes": 5254190
+    },
+    {
+      "file": "E03.json",
+      "sha256": "7e01c71e998edaf54a679fcc166e1e6771680c9e840257e12bbe2ddf9f0347af",
+      "bytes": 189611
+    },
+    {
+      "file": "E03_logits.npz",
+      "sha256": "fe9a1011ee28126b25d0c266cde7aabe0ce0117f98251b11126054ed465cba6d",
+      "bytes": 5237225
+    },
+    {
+      "file": "E04.json",
+      "sha256": "ecd587b3826c57734c110ae942a4a94f6be01cfe37885ba3acadad05f81c1e58",
+      "bytes": 189709
+    },
+    {
+      "file": "E04_logits.npz",
+      "sha256": "db213225c7eea12cee9f417802a2dbd8f70b98c3e398ac605eb3434c8d634185",
+      "bytes": 5250065
+    },
+    {
+      "file": "E05.json",
+      "sha256": "a30fec8e7ea35a5a0b507237d86d8587207b13bfcddf16eea6dd7f2cfc462871",
+      "bytes": 95202
+    },
+    {
+      "file": "E05_logits.npz",
+      "sha256": "d9ff49928fb3e6e5a82e2894faa7417efcc546b39084b9b55e4edef25c2e408c",
+      "bytes": 1780154
+    },
+    {
+      "file": "E06.json",
+      "sha256": "2363abcf78cdc7e3de9398ede717f220ac8a56d6fdd71e69352f24a803bf002c",
+      "bytes": 96443
+    },
+    {
+      "file": "E06_logits.npz",
+      "sha256": "73aaf32df961e4854b11f195825811d373596778f9d792aa503538c536638981",
+      "bytes": 1777803
+    },
+    {
+      "file": "E07.json",
+      "sha256": "216a4e0a92729da433b53135d76561211f6399951d7f2b554a3f11263b642849",
+      "bytes": 95881
+    },
+    {
+      "file": "E07_logits.npz",
+      "sha256": "70f156c20ca0210f32bed2c89a0e2b1474825a7b68137d96777d9dae9db29e1a",
+      "bytes": 1778642
+    },
+    {
+      "file": "E08.json",
+      "sha256": "1232d8910ec1fc0a6e2627431ac0ef4b9bee2a2ec97a8229bb824820b06d7b68",
+      "bytes": 96153
+    },
+    {
+      "file": "E08_logits.npz",
+      "sha256": "07ceaa244e353bf23d329a3669c20a8484be2e301d497546b6039d95080e142d",
+      "bytes": 1778699
+    },
+    {
+      "file": "forward_ledger.json",
+      "sha256": "a608de55f1e2683fefd5577a60fb56bcc8fac230c365fc418ca8ef3598b82725",
+      "bytes": 1037881
+    },
+    {
+      "file": "manifest.json",
+      "sha256": "6a7aed02ff1bb241bc92d870ed3b4f920e16fdc81b1ff575e71cec4d4a856495",
+      "bytes": 14100
+    },
+    {
+      "file": "RESULT.md",
+      "sha256": "e56af50cee009ceda1fec2bc701d7e3c194ee37211db12328efc303e4759de24",
+      "bytes": 1268
+    },
+    {
+      "file": "stage_timings.json",
+      "sha256": "5b663e87e90cf405f99524213ff50c456bb8cc2961c978cd17526d376252dd33",
+      "bytes": 76636
+    },
+    {
+      "file": "summary.json",
+      "sha256": "132d723c0cd9ac9747e5d0f3e772e29337af66e69c51045ac3372af246c21997",
+      "bytes": 15721
+    },
+    {
+      "file": "W01.json",
+      "sha256": "02e3738b72f6ade099139dc36709576844d4b6cc289b8bc751b850fb72afa830",
+      "bytes": 298960
+    },
+    {
+      "file": "W01_logits.npz",
+      "sha256": "2a51f0cedf7019c902753941cea1febcee5f4926c9fe46bd891d6bdf25cf0bd3",
+      "bytes": 5269913
+    },
+    {
+      "file": "W02.json",
+      "sha256": "76526cefc0a4e0b7fe409bdcd3a5a24d8e58baadbd750076ee0beee8c7a65ea6",
+      "bytes": 188825
+    },
+    {
+      "file": "W02_logits.npz",
+      "sha256": "10631f5c182224207b9dfbf5514a3b97f570bfa5d7194924f209797ab4c0579c",
+      "bytes": 5250139
+    },
+    {
+      "file": "W03.json",
+      "sha256": "ab3ec914d6b4e87d26166c40a2d3edc2c1c8e4ab075b59326d696ec902d5c262",
+      "bytes": 95470
+    },
+    {
+      "file": "W03_logits.npz",
+      "sha256": "8538507133df69ba80aefb621bc502238f5ef65bdeb53185acc6211b5de9be01",
+      "bytes": 1776381
+    },
+    {
+      "file": "W04.json",
+      "sha256": "d9a9e3147ea971a452767bed29cb567926fc03368f1052d70010c04e00031195",
+      "bytes": 96785
+    },
+    {
+      "file": "W04_logits.npz",
+      "sha256": "15839ada7cf559f15b9971d1491ce2713ab9dc4c15d0a22fc6b99845a94a69e0",
+      "bytes": 1778024
+    }
+  ],
+  "no_GPU_or_remote_calls": true,
+  "no_algorithm_conclusion_generated": true
+}

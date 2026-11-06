@@ -1,0 +1,76 @@
+{
+  "pinned_repository": "iie-ycx/DEER",
+  "pinned_commit": "c9dd19fbffa27f841cfe47502d015b63811b4d1b",
+  "hf_cpu_fixtures": [
+    {
+      "fixture": "one_closing_token",
+      "generated_steps": 1,
+      "returned_score": 0.8999999761581421,
+      "nonfinite_returned": false
+    },
+    {
+      "fixture": "two_tokens_no_interior",
+      "generated_steps": 2,
+      "returned_score": null,
+      "nonfinite_returned": true
+    },
+    {
+      "fixture": "three_tokens_one_interior",
+      "generated_steps": 3,
+      "returned_score": 0.6999999284744263,
+      "nonfinite_returned": false
+    }
+  ],
+  "qwen_vllm_helper_cpu_fixtures": [
+    {
+      "fixture": "one_terminal_token",
+      "generated_steps": 1,
+      "returned_score": null,
+      "exception_type": "ZeroDivisionError"
+    },
+    {
+      "fixture": "three_tokens_including_terminal",
+      "generated_steps": 3,
+      "returned_score": 0.5656854123051831,
+      "exception_type": null
+    },
+    {
+      "fixture": "same_map_content_first",
+      "generated_steps": 2,
+      "returned_score": 0.02999999932944775,
+      "exception_type": null
+    },
+    {
+      "fixture": "same_map_terminal_first",
+      "generated_steps": 2,
+      "returned_score": 0.0,
+      "exception_type": null
+    }
+  ],
+  "qwen_trial_sampling_call_metadata": [
+    {
+      "line": 435,
+      "explicit_keyword_names": [
+        "max_tokens",
+        "stop",
+        "logprobs"
+      ],
+      "explicit_temperature": false,
+      "explicit_seed": false
+    }
+  ],
+  "package_versions": {
+    "torch": "2.11.0"
+  },
+  "source_sha256": {
+    "vendor/DEER/vanilla_deer.py": "8a20fdc45ae3511ca569191f0fa1c82680ed47bdde07f4279d8a0282c6ba0707",
+    "vendor/DEER/vllm-deer-qwen3.py": "96460df9d532e02ca82535f6b5a6757cffff40bcbb233a4d6a1bd074684cc095",
+    "scripts/audit_deer_source_interfaces.py": "cd32932428165d3d574fc92bb28fcda7338d0a1c59c99db7a8744d8d3b00d32d"
+  },
+  "scope": "Executed original isolated helper code on synthetic CPU fixtures; no weights/GPU, dataset quality, runtime gain, paper-theorem failure, or actual vLLM dictionary-reordering prevalence is demonstrated.",
+  "required_next_checks": [
+    "Inspect exact pinned available vLLM SamplingParams defaults before inferring trial sampling mode",
+    "Use emitted token IDs to resolve terminal and probability identity in a declared repair",
+    "Preserve original errors/omissions and compare author-setting/controlled-setting separately"
+  ]
+}

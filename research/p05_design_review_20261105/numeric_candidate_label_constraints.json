@@ -1,0 +1,50 @@
+{
+  "schema_version": "numeric_candidate_to_semantic_edge_review_v1_20261105",
+  "status": "REVIEW_CONSTRAINTS_ONLY; NO_NATURAL_GOLD_GRAPH_OR_EVENT_RATE",
+  "fixed_P1_manifest_sha256": "6ee72c687db428cf341ec0f65ce1c3d51de94aa57eb8033e899baeccd0ce30eb",
+  "compatible_prior_label_schema": "D:/ACL/research/algorithm_mechanism_20261105/P1_LABEL_SCHEMA_V2.json",
+  "explicit_variable_name_required": false,
+  "quantity_or_claim_identity_required": true,
+  "anonymous_identity_allowed": "Use source claim spans plus entity/role, dimension, time and branch scope; do not use the number itself as the identity",
+  "initial_candidate_label": "unknown_unreviewed_numeric_reappearance",
+  "edge_types_after_review": [
+    "active_computational_support",
+    "definitional_binding",
+    "reference_or_comparison_only",
+    "negates_or_rejects_claim",
+    "conditional_assumption",
+    "unrelated_equal_value",
+    "unresolved"
+  ],
+  "required_for_active_support": [
+    "Source and target original character spans and verified token alignment if later used for masking",
+    "Same quantity/claim identity or an explicitly justified transformation between quantities",
+    "Consistent dimension/unit, time, branch and logical condition",
+    "Target expression or independently reconstructed visible semantic use with a verifiable rule",
+    "Source occurrence chosen by referential evidence, not forced global-first numeric occurrence",
+    "Distinguish a direct parent from a transitive ancestor",
+    "Do not infer correctness of either node solely from the edge"
+  ],
+  "unknown_reasons": [
+    "multiple_plausible_source_claims",
+    "unit_or_dimension_unresolved",
+    "time_or_branch_scope_unresolved",
+    "negation_or_comparison_role_unresolved",
+    "implicit_coreference_or_ellipsis",
+    "expression_equivalence_or_approximation_unresolved",
+    "segmentation_does_not_isolate_a_claim",
+    "original_question_condition_not_resolved",
+    "censored_or_incomplete_target",
+    "insufficient_visible_evidence"
+  ],
+  "question_proposition_rule": "Preserve the entire original proposition with its entity/unit/time/conditional scope. Do not treat every number as a globally persistent current-state value.",
+  "candidate_absence_rule": "No lexical edge does not establish semantic independence or absence of an event.",
+  "review_flags_rule": "Surface risk flags are neither semantic labels nor sufficient abstention classifiers. A flag-free edge still requires evidence.",
+  "correctness_rule": "Edge identity/use, source validity, revision validity and downstream behavior are separate axes; inherit P1_LABEL_SCHEMA_V2 safeguards.",
+  "cap_rule": "Retain all 15 capped selected traces. Do not complete missing suffixes or label unobserved future dependencies as absent.",
+  "counterexample_scope": "Handwritten logical controls are not natural-trajectory gold annotations.",
+  "intervention_rule": "Candidate graphs must not automatically activate the independently prepared five-arm short experiment or define its closure masks.",
+  "closure_rule": "No closure deletion/preservation guarantee until edge recall, false support and scope handling are independently audited; unsupported is not proven independent.",
+  "rate_rule": "Report heuristic extraction counts only; no automatic natural correction, reuse, misbinding or causal rate.",
+  "sampling_unchanged": true
+}

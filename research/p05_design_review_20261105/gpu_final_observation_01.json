@@ -1,0 +1,14 @@
+[
+  {
+    "command": "nvidia-smi --query-gpu=index,uuid,memory.used,utilization.gpu --format=csv,noheader",
+    "out": "0, GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a, 24 MiB, 0 %\n1, GPU-a696ce9a-7137-cf6f-b4d3-deb992a72f28, 24 MiB, 0 %\n",
+    "err": "",
+    "exit": 0
+  },
+  {
+    "command": "nvidia-smi --query-compute-apps=gpu_uuid,pid,used_gpu_memory --format=csv,noheader",
+    "out": "",
+    "err": "",
+    "exit": 0
+  }
+]

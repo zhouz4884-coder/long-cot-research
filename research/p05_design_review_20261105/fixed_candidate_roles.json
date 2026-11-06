@@ -1,0 +1,883 @@
+{
+  "schema": "fixed_four_roles_not_four_distinct_numbers_v1",
+  "scope": "Evaluator-only; never render values into a model prompt.",
+  "terminator": "\n",
+  "numeric_format": "str(int(value)), no leading plus or zeros",
+  "z_prefix_scope": "A distinct branch ending in a frozen final-z readout; cannot reuse y-query logits.",
+  "y_prefix_scope": "A separately budgeted branch ending in a frozen next-y readout; cannot reuse z-query logits.",
+  "dedup": "Canonical continuation/token sequence once per identical context; preserve role aliases; alias margins NA.",
+  "cases": [
+    {
+      "case_id": "E01",
+      "z_roles": {
+        "trusted_final": 30,
+        "old_final": 33,
+        "revision_consistent_final": 30,
+        "skip_signature": 6
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "30\n",
+          "aliases": [
+            "trusted_final",
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "33\n",
+          "aliases": [
+            "old_final"
+          ]
+        },
+        {
+          "canonical_continuation": "6\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 35,
+        "old_y": 38,
+        "revision_consistent_y": 35,
+        "root_misbind": 11
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "35\n",
+          "aliases": [
+            "trusted_y",
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "38\n",
+          "aliases": [
+            "old_y"
+          ]
+        },
+        {
+          "canonical_continuation": "11\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "E02",
+      "z_roles": {
+        "trusted_final": 38,
+        "old_final": 30,
+        "revision_consistent_final": 38,
+        "skip_signature": 56
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "38\n",
+          "aliases": [
+            "trusted_final",
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "30\n",
+          "aliases": [
+            "old_final"
+          ]
+        },
+        {
+          "canonical_continuation": "56\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 19,
+        "old_y": 15,
+        "revision_consistent_y": 19,
+        "root_misbind": 28
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "19\n",
+          "aliases": [
+            "trusted_y",
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "15\n",
+          "aliases": [
+            "old_y"
+          ]
+        },
+        {
+          "canonical_continuation": "28\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "E03",
+      "z_roles": {
+        "trusted_final": 87,
+        "old_final": 70,
+        "revision_consistent_final": 87,
+        "skip_signature": 15
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "87\n",
+          "aliases": [
+            "trusted_final",
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "70\n",
+          "aliases": [
+            "old_final"
+          ]
+        },
+        {
+          "canonical_continuation": "15\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 81,
+        "old_y": 64,
+        "revision_consistent_y": 81,
+        "root_misbind": 9
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "81\n",
+          "aliases": [
+            "trusted_y",
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "64\n",
+          "aliases": [
+            "old_y"
+          ]
+        },
+        {
+          "canonical_continuation": "9\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "E04",
+      "z_roles": {
+        "trusted_final": 43,
+        "old_final": 41,
+        "revision_consistent_final": 43,
+        "skip_signature": 25
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "43\n",
+          "aliases": [
+            "trusted_final",
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "41\n",
+          "aliases": [
+            "old_final"
+          ]
+        },
+        {
+          "canonical_continuation": "25\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 39,
+        "old_y": 37,
+        "revision_consistent_y": 39,
+        "root_misbind": 21
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "39\n",
+          "aliases": [
+            "trusted_y",
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "37\n",
+          "aliases": [
+            "old_y"
+          ]
+        },
+        {
+          "canonical_continuation": "21\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "E05",
+      "z_roles": {
+        "trusted_final": 28,
+        "old_final": 23,
+        "revision_consistent_final": 28,
+        "skip_signature": 178
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "28\n",
+          "aliases": [
+            "trusted_final",
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "23\n",
+          "aliases": [
+            "old_final"
+          ]
+        },
+        {
+          "canonical_continuation": "178\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 6,
+        "old_y": 5,
+        "revision_consistent_y": 6,
+        "root_misbind": 36
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "6\n",
+          "aliases": [
+            "trusted_y",
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "5\n",
+          "aliases": [
+            "old_y"
+          ]
+        },
+        {
+          "canonical_continuation": "36\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "E06",
+      "z_roles": {
+        "trusted_final": 119,
+        "old_final": 116,
+        "revision_consistent_final": 119,
+        "skip_signature": 98
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "119\n",
+          "aliases": [
+            "trusted_final",
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "116\n",
+          "aliases": [
+            "old_final"
+          ]
+        },
+        {
+          "canonical_continuation": "98\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 40,
+        "old_y": 39,
+        "revision_consistent_y": 40,
+        "root_misbind": 33
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "40\n",
+          "aliases": [
+            "trusted_y",
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "39\n",
+          "aliases": [
+            "old_y"
+          ]
+        },
+        {
+          "canonical_continuation": "33\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "E07",
+      "z_roles": {
+        "trusted_final": 37,
+        "old_final": 33,
+        "revision_consistent_final": 37,
+        "skip_signature": 13
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "37\n",
+          "aliases": [
+            "trusted_final",
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "33\n",
+          "aliases": [
+            "old_final"
+          ]
+        },
+        {
+          "canonical_continuation": "13\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 48,
+        "old_y": 44,
+        "revision_consistent_y": 48,
+        "root_misbind": 24
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "48\n",
+          "aliases": [
+            "trusted_y",
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "44\n",
+          "aliases": [
+            "old_y"
+          ]
+        },
+        {
+          "canonical_continuation": "24\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "E08",
+      "z_roles": {
+        "trusted_final": 82,
+        "old_final": 65,
+        "revision_consistent_final": 82,
+        "skip_signature": 170
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "82\n",
+          "aliases": [
+            "trusted_final",
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "65\n",
+          "aliases": [
+            "old_final"
+          ]
+        },
+        {
+          "canonical_continuation": "170\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 9,
+        "old_y": 8,
+        "revision_consistent_y": 9,
+        "root_misbind": 13
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "9\n",
+          "aliases": [
+            "trusted_y",
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "8\n",
+          "aliases": [
+            "old_y"
+          ]
+        },
+        {
+          "canonical_continuation": "13\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C01",
+      "z_roles": {
+        "trusted_final": 31,
+        "old_final": 31,
+        "revision_consistent_final": 31,
+        "skip_signature": 10
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "31\n",
+          "aliases": [
+            "trusted_final",
+            "old_final",
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "10\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 28,
+        "old_y": 28,
+        "revision_consistent_y": 28,
+        "root_misbind": 7
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "28\n",
+          "aliases": [
+            "trusted_y",
+            "old_y",
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "7\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C02",
+      "z_roles": {
+        "trusted_final": 16,
+        "old_final": 16,
+        "revision_consistent_final": 16,
+        "skip_signature": 70
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "16\n",
+          "aliases": [
+            "trusted_final",
+            "old_final",
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "70\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 6,
+        "old_y": 6,
+        "revision_consistent_y": 6,
+        "root_misbind": 24
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "6\n",
+          "aliases": [
+            "trusted_y",
+            "old_y",
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "24\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C03",
+      "z_roles": {
+        "trusted_final": 30,
+        "old_final": 30,
+        "revision_consistent_final": 30,
+        "skip_signature": 14
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "30\n",
+          "aliases": [
+            "trusted_final",
+            "old_final",
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "14\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 15,
+        "old_y": 15,
+        "revision_consistent_y": 15,
+        "root_misbind": 7
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "15\n",
+          "aliases": [
+            "trusted_y",
+            "old_y",
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "7\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C04",
+      "z_roles": {
+        "trusted_final": 20,
+        "old_final": 20,
+        "revision_consistent_final": 20,
+        "skip_signature": 8
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "20\n",
+          "aliases": [
+            "trusted_final",
+            "old_final",
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "8\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 29,
+        "old_y": 29,
+        "revision_consistent_y": 29,
+        "root_misbind": 17
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "29\n",
+          "aliases": [
+            "trusted_y",
+            "old_y",
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "17\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "W01",
+      "z_roles": {
+        "trusted_final": 28,
+        "old_final": 28,
+        "revision_consistent_final": 31,
+        "skip_signature": 11
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "28\n",
+          "aliases": [
+            "trusted_final",
+            "old_final"
+          ]
+        },
+        {
+          "canonical_continuation": "31\n",
+          "aliases": [
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "11\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 27,
+        "old_y": 27,
+        "revision_consistent_y": 30,
+        "root_misbind": 10
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "27\n",
+          "aliases": [
+            "trusted_y",
+            "old_y"
+          ]
+        },
+        {
+          "canonical_continuation": "30\n",
+          "aliases": [
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "10\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "W02",
+      "z_roles": {
+        "trusted_final": 21,
+        "old_final": 21,
+        "revision_consistent_final": 19,
+        "skip_signature": 67
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "21\n",
+          "aliases": [
+            "trusted_final",
+            "old_final"
+          ]
+        },
+        {
+          "canonical_continuation": "19\n",
+          "aliases": [
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "67\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 9,
+        "old_y": 9,
+        "revision_consistent_y": 8,
+        "root_misbind": 32
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "9\n",
+          "aliases": [
+            "trusted_y",
+            "old_y"
+          ]
+        },
+        {
+          "canonical_continuation": "8\n",
+          "aliases": [
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "32\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "W03",
+      "z_roles": {
+        "trusted_final": 121,
+        "old_final": 121,
+        "revision_consistent_final": 144,
+        "skip_signature": 49
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "121\n",
+          "aliases": [
+            "trusted_final",
+            "old_final"
+          ]
+        },
+        {
+          "canonical_continuation": "144\n",
+          "aliases": [
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "49\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 11,
+        "old_y": 11,
+        "revision_consistent_y": 12,
+        "root_misbind": 7
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "11\n",
+          "aliases": [
+            "trusted_y",
+            "old_y"
+          ]
+        },
+        {
+          "canonical_continuation": "12\n",
+          "aliases": [
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "7\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "W04",
+      "z_roles": {
+        "trusted_final": 79,
+        "old_final": 79,
+        "revision_consistent_final": 71,
+        "skip_signature": 95
+      },
+      "z_unique": [
+        {
+          "canonical_continuation": "79\n",
+          "aliases": [
+            "trusted_final",
+            "old_final"
+          ]
+        },
+        {
+          "canonical_continuation": "71\n",
+          "aliases": [
+            "revision_consistent_final"
+          ]
+        },
+        {
+          "canonical_continuation": "95\n",
+          "aliases": [
+            "skip_signature"
+          ]
+        }
+      ],
+      "y_roles": {
+        "trusted_y": 20,
+        "old_y": 20,
+        "revision_consistent_y": 18,
+        "root_misbind": 24
+      },
+      "y_unique": [
+        {
+          "canonical_continuation": "20\n",
+          "aliases": [
+            "trusted_y",
+            "old_y"
+          ]
+        },
+        {
+          "canonical_continuation": "18\n",
+          "aliases": [
+            "revision_consistent_y"
+          ]
+        },
+        {
+          "canonical_continuation": "24\n",
+          "aliases": [
+            "root_misbind"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3477 @@
+{
+  "status": "PASS_TAIL_CROP_PREFIX_REUSE_AND_COUNTEREXAMPLES",
+  "environment": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "torch": "2.11.0+cpu",
+    "transformers": "4.55.2",
+    "transformers_path": "D:\\ACL\\research\\p05_design_review_20261105\\runtime4552\\transformers\\__init__.py",
+    "device": "cpu",
+    "dtype": "float32",
+    "gpu_used": false,
+    "pretrained_model_used": false,
+    "deterministic_algorithms": true,
+    "threads": 1
+  },
+  "source_sha256": "cedf8064024be32e2e9d6e58ba4578a2ddb11627283acdca2f0c600be7857815",
+  "official_source_manifest": [
+    {
+      "relative_path": "cache_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.55.2/src/transformers/cache_utils.py",
+      "sha256": "9be3034ffd59b0493bacbefe921dec337fec7c9ed5ef78cfcb59c1ce08fed44a",
+      "bytes": 109999,
+      "installed_matches_official": true
+    },
+    {
+      "relative_path": "models/qwen3/modeling_qwen3.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.55.2/src/transformers/models/qwen3/modeling_qwen3.py",
+      "sha256": "2d4441e36b40799b05ab514d8774b12e15fd5412699d444509b0a610ce23c9b8",
+      "bytes": 22873,
+      "installed_matches_official": true
+    },
+    {
+      "relative_path": "generation/utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.55.2/src/transformers/generation/utils.py",
+      "sha256": "6de1a0fbf0b26352cbd93a2f494fc5fca1856e6636d20947e81f7f83ace7dec5",
+      "bytes": 286765,
+      "installed_matches_official": true
+    },
+    {
+      "relative_path": "generation/logits_process.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.55.2/src/transformers/generation/logits_process.py",
+      "sha256": "ece55d442ab45e6c53d6245005cd163c7221ad1f9c90fc35ecfb3d5e4c59633f",
+      "bytes": 152235,
+      "installed_matches_official": true
+    },
+    {
+      "relative_path": "generation/stopping_criteria.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.55.2/src/transformers/generation/stopping_criteria.py",
+      "sha256": "16a37bccfe2a94fb7d19246d89b0621daa5c8dccb7035419208551024e973164",
+      "bytes": 28932,
+      "installed_matches_official": true
+    }
+  ],
+  "configuration": {
+    "model": "tiny random Qwen3, full-attention eager",
+    "layers": 3,
+    "hidden_size": 32,
+    "Q_heads": 4,
+    "KV_heads": 2,
+    "head_dim": 8,
+    "vocab_size": 67,
+    "seeds": [
+      7,
+      17,
+      29,
+      43,
+      71
+    ],
+    "prefix_ids": [
+      3,
+      7,
+      11,
+      5,
+      13,
+      17,
+      19
+    ],
+    "proposal_ids": [
+      23,
+      29,
+      31
+    ],
+    "forced_continuation_ids": [
+      37,
+      41
+    ],
+    "test_control_deepcopies": "Independent comparison branches only; do not count them as necessary crop production operations."
+  },
+  "source_findings": {
+    "Cache_crop_layer_loop": 1254,
+    "DynamicLayer_crop_views": 122,
+    "DynamicLayer_update_cat": 78,
+    "asymptotics": "O(number_of_layers) view updates; fixed-layer metadata work is independent of prefix length. Not a universal O(1) transaction.",
+    "crop_data_copy": "Standard dense DynamicLayer slices are views in these tests; backing allocations retain removed tail storage.",
+    "append_cost": "DynamicLayer.update uses concatenation; writing a proposal and later appending can allocate/copy, separate from crop itself."
+  },
+  "summary": {
+    "model_seed_count": 5,
+    "same_path_crop_readout_logit_max_abs": 0.0,
+    "crop_KV_prefix_max_abs": 0.0,
+    "all_crop_views_share_postR_storage": true,
+    "all_backing_storage_not_shrunk_by_crop": true,
+    "stale_logits_argmax_changed_cases": 5,
+    "RNG_next_sample_changed_without_restore_cases": 5,
+    "stale_generation_positions_future_leak_cases": 5,
+    "all_cases_passed": true
+  },
+  "rows": [
+    {
+      "model_seed": 7,
+      "t_preR_actual_cache_length": 7,
+      "positions": {
+        "prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "R": [
+          7,
+          8,
+          9
+        ],
+        "continuation_after_crop": [
+          7,
+          8
+        ]
+      },
+      "cache_before_R": {
+        "cache_object_id": 2586812979184,
+        "seq_length": 7,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586812979520,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047880896,
+              "storage_ptr": 4914047880896,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047879552,
+              "storage_ptr": 4914047879552,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586812767184,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047880448,
+              "storage_ptr": 4914047880448,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047880000,
+              "storage_ptr": 4914047880000,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586812766864,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047881344,
+              "storage_ptr": 4914047881344,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047878656,
+              "storage_ptr": 4914047878656,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "cache_after_R": {
+        "cache_object_id": 2586812979184,
+        "seq_length": 10,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586812979520,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048139520,
+              "storage_ptr": 4914048139520,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048140160,
+              "storage_ptr": 4914048140160,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586812767184,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048140800,
+              "storage_ptr": 4914048140800,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048141440,
+              "storage_ptr": 4914048141440,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586812766864,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048142080,
+              "storage_ptr": 4914048142080,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048142720,
+              "storage_ptr": 4914048142720,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "cache_after_crop": {
+        "cache_object_id": 2586812979184,
+        "seq_length": 7,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586812979520,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048139520,
+              "storage_ptr": 4914048139520,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048140160,
+              "storage_ptr": 4914048140160,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586812767184,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048140800,
+              "storage_ptr": 4914048140800,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048141440,
+              "storage_ptr": 4914048141440,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586812766864,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048142080,
+              "storage_ptr": 4914048142080,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048142720,
+              "storage_ptr": 4914048142720,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "crop_layer_calls": [
+        0,
+        1,
+        2
+      ],
+      "crop_return_is_none": true,
+      "crop_seconds_single_observation_not_complexity_proof": 2.7800000680144876e-05,
+      "proposal_forward_seconds": 0.007126199998310767,
+      "proposal_extra_forward_tokens": 3,
+      "crop_KV_vs_preR_control_max_abs": 0.0,
+      "storage_checks": [
+        {
+          "layer": 0,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 0,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 1,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 1,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 2,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 2,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        }
+      ],
+      "same_path_continuation": {
+        "logit_max_abs": 0.0,
+        "TV": 0.0,
+        "argmax_a": 7,
+        "argmax_b": 7,
+        "argmax_equal": true
+      },
+      "same_path_continued_KV_max_abs": 0.0,
+      "automatic_position_derivation_in_this_fixture": {
+        "logit_max_abs": 0.0,
+        "TV": 0.0,
+        "argmax_a": 7,
+        "argmax_b": 7,
+        "argmax_equal": true
+      },
+      "stale_position_counterexample": {
+        "position_ids": [
+          10,
+          11
+        ],
+        "cache_position": [
+          10,
+          11
+        ],
+        "correct_position_ids": [
+          7,
+          8
+        ],
+        "readout_delta": {
+          "logit_max_abs": 0.07798877358436584,
+          "TV": 0.01073187779652955,
+          "argmax_a": 7,
+          "argmax_b": 7,
+          "argmax_equal": true
+        },
+        "actual_future_key_mass_max": 0.3438701331615448,
+        "control_future_key_mass_max": 0.0
+      },
+      "saved_preR_vs_stale_R_logits": {
+        "logit_max_abs": 0.29468007385730743,
+        "TV": 0.04099624182761157,
+        "argmax_a": 66,
+        "argmax_b": 20,
+        "argmax_equal": false
+      },
+      "one_last_token_refresh": {
+        "forward_tokens": 1,
+        "crop_to": 6,
+        "position": 6,
+        "vs_saved_whole_prefill_logits": {
+          "logit_max_abs": 5.960464477539063e-08,
+          "TV": 7.340814474517121e-09,
+          "argmax_a": 66,
+          "argmax_b": 66,
+          "argmax_equal": true
+        },
+        "same_refresh_path_identity_max_abs": 0.0,
+        "incorrect_duplicate_last_token_length": 8
+      },
+      "processor_history_counterexample": {
+        "logit_max_abs": 0.016942236572504044,
+        "TV": 0.0006679321445532552,
+        "argmax_a": 66,
+        "argmax_b": 66,
+        "argmax_equal": true
+      },
+      "stop_history_counterexample": {
+        "EOS_preR": false,
+        "EOS_postR_input_ids_after_KV_crop": true,
+        "MaxLength_preR": false,
+        "MaxLength_postR_input_ids_after_KV_crop": true
+      },
+      "RNG_counterexample": {
+        "seed": 1007,
+        "sampled_candidate_proxy_tokens": [
+          54,
+          47,
+          34
+        ],
+        "baseline_next_sample": 58,
+        "after_crop_without_rng_restore": 55,
+        "after_restoring_rng": 58,
+        "state_changed_by_sampling": true,
+        "crop_restored_rng": false,
+        "scope": "Actual CPU multinomial/RNG test on fixed next-token probabilities; no semantic correctness claim."
+      },
+      "middle_mask_contrast": {
+        "masked_positions": [
+          2,
+          3,
+          4
+        ],
+        "surviving_successor_KV_max_abs": 1.8493117094039917,
+        "late_vs_early_same_position_logits": {
+          "logit_max_abs": 0.026335209608078003,
+          "TV": 0.004379038951258884,
+          "argmax_a": 7,
+          "argmax_b": 18,
+          "argmax_equal": false
+        },
+        "tail_crop_claim_does_not_apply": true
+      }
+    },
+    {
+      "model_seed": 17,
+      "t_preR_actual_cache_length": 7,
+      "positions": {
+        "prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "R": [
+          7,
+          8,
+          9
+        ],
+        "continuation_after_crop": [
+          7,
+          8
+        ]
+      },
+      "cache_before_R": {
+        "cache_object_id": 2586812790448,
+        "seq_length": 7,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586814479152,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047877760,
+              "storage_ptr": 4914047877760,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047884032,
+              "storage_ptr": 4914047884032,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586814256944,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047883584,
+              "storage_ptr": 4914047883584,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047878656,
+              "storage_ptr": 4914047878656,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586810424528,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047885376,
+              "storage_ptr": 4914047885376,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047880896,
+              "storage_ptr": 4914047880896,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "cache_after_R": {
+        "cache_object_id": 2586812790448,
+        "seq_length": 10,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586814479152,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048173440,
+              "storage_ptr": 4914048173440,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048163200,
+              "storage_ptr": 4914048163200,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586814256944,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048162560,
+              "storage_ptr": 4914048162560,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048170880,
+              "storage_ptr": 4914048170880,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586810424528,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048171520,
+              "storage_ptr": 4914048171520,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048168960,
+              "storage_ptr": 4914048168960,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "cache_after_crop": {
+        "cache_object_id": 2586812790448,
+        "seq_length": 7,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586814479152,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048173440,
+              "storage_ptr": 4914048173440,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048163200,
+              "storage_ptr": 4914048163200,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586814256944,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048162560,
+              "storage_ptr": 4914048162560,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048170880,
+              "storage_ptr": 4914048170880,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586810424528,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048171520,
+              "storage_ptr": 4914048171520,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048168960,
+              "storage_ptr": 4914048168960,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "crop_layer_calls": [
+        0,
+        1,
+        2
+      ],
+      "crop_return_is_none": true,
+      "crop_seconds_single_observation_not_complexity_proof": 1.559999873279594e-05,
+      "proposal_forward_seconds": 0.0031803999991097953,
+      "proposal_extra_forward_tokens": 3,
+      "crop_KV_vs_preR_control_max_abs": 0.0,
+      "storage_checks": [
+        {
+          "layer": 0,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 0,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 1,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 1,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 2,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 2,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        }
+      ],
+      "same_path_continuation": {
+        "logit_max_abs": 0.0,
+        "TV": 0.0,
+        "argmax_a": 57,
+        "argmax_b": 57,
+        "argmax_equal": true
+      },
+      "same_path_continued_KV_max_abs": 0.0,
+      "automatic_position_derivation_in_this_fixture": {
+        "logit_max_abs": 0.0,
+        "TV": 0.0,
+        "argmax_a": 57,
+        "argmax_b": 57,
+        "argmax_equal": true
+      },
+      "stale_position_counterexample": {
+        "position_ids": [
+          10,
+          11
+        ],
+        "cache_position": [
+          10,
+          11
+        ],
+        "correct_position_ids": [
+          7,
+          8
+        ],
+        "readout_delta": {
+          "logit_max_abs": 0.07760292291641235,
+          "TV": 0.012979800712158325,
+          "argmax_a": 57,
+          "argmax_b": 57,
+          "argmax_equal": true
+        },
+        "actual_future_key_mass_max": 0.2694944143295288,
+        "control_future_key_mass_max": 0.0
+      },
+      "saved_preR_vs_stale_R_logits": {
+        "logit_max_abs": 0.31994475424289703,
+        "TV": 0.05244339736241673,
+        "argmax_a": 58,
+        "argmax_b": 66,
+        "argmax_equal": false
+      },
+      "one_last_token_refresh": {
+        "forward_tokens": 1,
+        "crop_to": 6,
+        "position": 6,
+        "vs_saved_whole_prefill_logits": {
+          "logit_max_abs": 2.9802322387695312e-08,
+          "TV": 4.955982735310727e-09,
+          "argmax_a": 58,
+          "argmax_b": 58,
+          "argmax_equal": true
+        },
+        "same_refresh_path_identity_max_abs": 0.0,
+        "incorrect_duplicate_last_token_length": 8
+      },
+      "processor_history_counterexample": {
+        "logit_max_abs": 0.08007441461086273,
+        "TV": 0.0024926224467443124,
+        "argmax_a": 58,
+        "argmax_b": 58,
+        "argmax_equal": true
+      },
+      "stop_history_counterexample": {
+        "EOS_preR": false,
+        "EOS_postR_input_ids_after_KV_crop": true,
+        "MaxLength_preR": false,
+        "MaxLength_postR_input_ids_after_KV_crop": true
+      },
+      "RNG_counterexample": {
+        "seed": 1017,
+        "sampled_candidate_proxy_tokens": [
+          31,
+          5,
+          49
+        ],
+        "baseline_next_sample": 30,
+        "after_crop_without_rng_restore": 27,
+        "after_restoring_rng": 30,
+        "state_changed_by_sampling": true,
+        "crop_restored_rng": false,
+        "scope": "Actual CPU multinomial/RNG test on fixed next-token probabilities; no semantic correctness claim."
+      },
+      "middle_mask_contrast": {
+        "masked_positions": [
+          2,
+          3,
+          4
+        ],
+        "surviving_successor_KV_max_abs": 1.3924553394317627,
+        "late_vs_early_same_position_logits": {
+          "logit_max_abs": 0.04171352833509445,
+          "TV": 0.008507994116660266,
+          "argmax_a": 57,
+          "argmax_b": 57,
+          "argmax_equal": true
+        },
+        "tail_crop_claim_does_not_apply": true
+      }
+    },
+    {
+      "model_seed": 29,
+      "t_preR_actual_cache_length": 7,
+      "positions": {
+        "prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "R": [
+          7,
+          8,
+          9
+        ],
+        "continuation_after_crop": [
+          7,
+          8
+        ]
+      },
+      "cache_before_R": {
+        "cache_object_id": 2586815843664,
+        "seq_length": 7,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586811557616,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047882240,
+              "storage_ptr": 4914047882240,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047880448,
+              "storage_ptr": 4914047880448,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586813264720,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047878208,
+              "storage_ptr": 4914047878208,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047880896,
+              "storage_ptr": 4914047880896,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586813264144,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047881344,
+              "storage_ptr": 4914047881344,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047877760,
+              "storage_ptr": 4914047877760,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "cache_after_R": {
+        "cache_object_id": 2586815843664,
+        "seq_length": 10,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586811557616,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048149760,
+              "storage_ptr": 4914048149760,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048173440,
+              "storage_ptr": 4914048173440,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586813264720,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048152960,
+              "storage_ptr": 4914048152960,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048152320,
+              "storage_ptr": 4914048152320,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586813264144,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048154880,
+              "storage_ptr": 4914048154880,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048165120,
+              "storage_ptr": 4914048165120,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "cache_after_crop": {
+        "cache_object_id": 2586815843664,
+        "seq_length": 7,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586811557616,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048149760,
+              "storage_ptr": 4914048149760,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048173440,
+              "storage_ptr": 4914048173440,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586813264720,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048152960,
+              "storage_ptr": 4914048152960,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048152320,
+              "storage_ptr": 4914048152320,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586813264144,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048154880,
+              "storage_ptr": 4914048154880,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048165120,
+              "storage_ptr": 4914048165120,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "crop_layer_calls": [
+        0,
+        1,
+        2
+      ],
+      "crop_return_is_none": true,
+      "crop_seconds_single_observation_not_complexity_proof": 1.4599998394260183e-05,
+      "proposal_forward_seconds": 0.0036761999981536064,
+      "proposal_extra_forward_tokens": 3,
+      "crop_KV_vs_preR_control_max_abs": 0.0,
+      "storage_checks": [
+        {
+          "layer": 0,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 0,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 1,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 1,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 2,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 2,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        }
+      ],
+      "same_path_continuation": {
+        "logit_max_abs": 0.0,
+        "TV": 0.0,
+        "argmax_a": 18,
+        "argmax_b": 18,
+        "argmax_equal": true
+      },
+      "same_path_continued_KV_max_abs": 0.0,
+      "automatic_position_derivation_in_this_fixture": {
+        "logit_max_abs": 0.0,
+        "TV": 0.0,
+        "argmax_a": 18,
+        "argmax_b": 18,
+        "argmax_equal": true
+      },
+      "stale_position_counterexample": {
+        "position_ids": [
+          10,
+          11
+        ],
+        "cache_position": [
+          10,
+          11
+        ],
+        "correct_position_ids": [
+          7,
+          8
+        ],
+        "readout_delta": {
+          "logit_max_abs": 0.10464036092162132,
+          "TV": 0.013636313900503561,
+          "argmax_a": 18,
+          "argmax_b": 18,
+          "argmax_equal": true
+        },
+        "actual_future_key_mass_max": 0.5167455077171326,
+        "control_future_key_mass_max": 0.0
+      },
+      "saved_preR_vs_stale_R_logits": {
+        "logit_max_abs": 0.31962449848651886,
+        "TV": 0.04901448089583382,
+        "argmax_a": 66,
+        "argmax_b": 18,
+        "argmax_equal": false
+      },
+      "one_last_token_refresh": {
+        "forward_tokens": 1,
+        "crop_to": 6,
+        "position": 6,
+        "vs_saved_whole_prefill_logits": {
+          "logit_max_abs": 4.0978193283081055e-08,
+          "TV": 6.117027115740137e-09,
+          "argmax_a": 66,
+          "argmax_b": 66,
+          "argmax_equal": true
+        },
+        "same_refresh_path_identity_max_abs": 0.0,
+        "incorrect_duplicate_last_token_length": 8
+      },
+      "processor_history_counterexample": {
+        "logit_max_abs": 0.035535525530576706,
+        "TV": 0.001003796527636722,
+        "argmax_a": 66,
+        "argmax_b": 66,
+        "argmax_equal": true
+      },
+      "stop_history_counterexample": {
+        "EOS_preR": false,
+        "EOS_postR_input_ids_after_KV_crop": true,
+        "MaxLength_preR": false,
+        "MaxLength_postR_input_ids_after_KV_crop": true
+      },
+      "RNG_counterexample": {
+        "seed": 1029,
+        "sampled_candidate_proxy_tokens": [
+          3,
+          14,
+          46
+        ],
+        "baseline_next_sample": 45,
+        "after_crop_without_rng_restore": 42,
+        "after_restoring_rng": 45,
+        "state_changed_by_sampling": true,
+        "crop_restored_rng": false,
+        "scope": "Actual CPU multinomial/RNG test on fixed next-token probabilities; no semantic correctness claim."
+      },
+      "middle_mask_contrast": {
+        "masked_positions": [
+          2,
+          3,
+          4
+        ],
+        "surviving_successor_KV_max_abs": 0.9376668930053711,
+        "late_vs_early_same_position_logits": {
+          "logit_max_abs": 0.014187797904014587,
+          "TV": 0.002465187165971625,
+          "argmax_a": 18,
+          "argmax_b": 18,
+          "argmax_equal": true
+        },
+        "tail_crop_claim_does_not_apply": true
+      }
+    },
+    {
+      "model_seed": 43,
+      "t_preR_actual_cache_length": 7,
+      "positions": {
+        "prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "R": [
+          7,
+          8,
+          9
+        ],
+        "continuation_after_crop": [
+          7,
+          8
+        ]
+      },
+      "cache_before_R": {
+        "cache_object_id": 2586814185072,
+        "seq_length": 7,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586806805872,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047880000,
+              "storage_ptr": 4914047880000,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047883584,
+              "storage_ptr": 4914047883584,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586814256752,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047884480,
+              "storage_ptr": 4914047884480,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047877760,
+              "storage_ptr": 4914047877760,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586810424144,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047885376,
+              "storage_ptr": 4914047885376,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047882240,
+              "storage_ptr": 4914047882240,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "cache_after_R": {
+        "cache_object_id": 2586814185072,
+        "seq_length": 10,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586806805872,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048141440,
+              "storage_ptr": 4914048141440,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048149760,
+              "storage_ptr": 4914048149760,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586814256752,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048160000,
+              "storage_ptr": 4914048160000,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048160640,
+              "storage_ptr": 4914048160640,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586810424144,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048165760,
+              "storage_ptr": 4914048165760,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048162560,
+              "storage_ptr": 4914048162560,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "cache_after_crop": {
+        "cache_object_id": 2586814185072,
+        "seq_length": 7,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586806805872,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048141440,
+              "storage_ptr": 4914048141440,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048149760,
+              "storage_ptr": 4914048149760,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586814256752,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048160000,
+              "storage_ptr": 4914048160000,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048160640,
+              "storage_ptr": 4914048160640,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586810424144,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048165760,
+              "storage_ptr": 4914048165760,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048162560,
+              "storage_ptr": 4914048162560,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "crop_layer_calls": [
+        0,
+        1,
+        2
+      ],
+      "crop_return_is_none": true,
+      "crop_seconds_single_observation_not_complexity_proof": 1.5300000086426735e-05,
+      "proposal_forward_seconds": 0.005874800001038238,
+      "proposal_extra_forward_tokens": 3,
+      "crop_KV_vs_preR_control_max_abs": 0.0,
+      "storage_checks": [
+        {
+          "layer": 0,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 0,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 1,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 1,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 2,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 2,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        }
+      ],
+      "same_path_continuation": {
+        "logit_max_abs": 0.0,
+        "TV": 0.0,
+        "argmax_a": 20,
+        "argmax_b": 20,
+        "argmax_equal": true
+      },
+      "same_path_continued_KV_max_abs": 0.0,
+      "automatic_position_derivation_in_this_fixture": {
+        "logit_max_abs": 0.0,
+        "TV": 0.0,
+        "argmax_a": 20,
+        "argmax_b": 20,
+        "argmax_equal": true
+      },
+      "stale_position_counterexample": {
+        "position_ids": [
+          10,
+          11
+        ],
+        "cache_position": [
+          10,
+          11
+        ],
+        "correct_position_ids": [
+          7,
+          8
+        ],
+        "readout_delta": {
+          "logit_max_abs": 0.07841084152460098,
+          "TV": 0.013923196653060355,
+          "argmax_a": 20,
+          "argmax_b": 20,
+          "argmax_equal": true
+        },
+        "actual_future_key_mass_max": 0.4067227840423584,
+        "control_future_key_mass_max": 0.0
+      },
+      "saved_preR_vs_stale_R_logits": {
+        "logit_max_abs": 0.5342595875263214,
+        "TV": 0.06979138797167977,
+        "argmax_a": 18,
+        "argmax_b": 61,
+        "argmax_equal": false
+      },
+      "one_last_token_refresh": {
+        "forward_tokens": 1,
+        "crop_to": 6,
+        "position": 6,
+        "vs_saved_whole_prefill_logits": {
+          "logit_max_abs": 5.960464477539063e-08,
+          "TV": 6.943413636585627e-09,
+          "argmax_a": 18,
+          "argmax_b": 18,
+          "argmax_equal": true
+        },
+        "same_refresh_path_identity_max_abs": 0.0,
+        "incorrect_duplicate_last_token_length": 8
+      },
+      "processor_history_counterexample": {
+        "logit_max_abs": 0.07606126368045807,
+        "TV": 0.0021046131660717544,
+        "argmax_a": 18,
+        "argmax_b": 18,
+        "argmax_equal": true
+      },
+      "stop_history_counterexample": {
+        "EOS_preR": false,
+        "EOS_postR_input_ids_after_KV_crop": true,
+        "MaxLength_preR": false,
+        "MaxLength_postR_input_ids_after_KV_crop": true
+      },
+      "RNG_counterexample": {
+        "seed": 1043,
+        "sampled_candidate_proxy_tokens": [
+          2,
+          5,
+          34
+        ],
+        "baseline_next_sample": 30,
+        "after_crop_without_rng_restore": 27,
+        "after_restoring_rng": 30,
+        "state_changed_by_sampling": true,
+        "crop_restored_rng": false,
+        "scope": "Actual CPU multinomial/RNG test on fixed next-token probabilities; no semantic correctness claim."
+      },
+      "middle_mask_contrast": {
+        "masked_positions": [
+          2,
+          3,
+          4
+        ],
+        "surviving_successor_KV_max_abs": 2.3590662479400635,
+        "late_vs_early_same_position_logits": {
+          "logit_max_abs": 0.03918039985001087,
+          "TV": 0.005959175399659871,
+          "argmax_a": 20,
+          "argmax_b": 20,
+          "argmax_equal": true
+        },
+        "tail_crop_claim_does_not_apply": true
+      }
+    },
+    {
+      "model_seed": 71,
+      "t_preR_actual_cache_length": 7,
+      "positions": {
+        "prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "R": [
+          7,
+          8,
+          9
+        ],
+        "continuation_after_crop": [
+          7,
+          8
+        ]
+      },
+      "cache_before_R": {
+        "cache_object_id": 2586814184848,
+        "seq_length": 7,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586814256944,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047878656,
+              "storage_ptr": 4914047878656,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047878208,
+              "storage_ptr": 4914047878208,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586814256464,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047883136,
+              "storage_ptr": 4914047883136,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047882240,
+              "storage_ptr": 4914047882240,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586810424144,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047881344,
+              "storage_ptr": 4914047881344,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                112,
+                8,
+                16,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914047880000,
+              "storage_ptr": 4914047880000,
+              "storage_nbytes": 448,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "cache_after_R": {
+        "cache_object_id": 2586814184848,
+        "seq_length": 10,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586814256944,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048153600,
+              "storage_ptr": 4914048153600,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048141440,
+              "storage_ptr": 4914048141440,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586814256464,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048156160,
+              "storage_ptr": 4914048156160,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048156800,
+              "storage_ptr": 4914048156800,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586810424144,
+            "K": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048147840,
+              "storage_ptr": 4914048147840,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                10,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048152960,
+              "storage_ptr": 4914048152960,
+              "storage_nbytes": 640,
+              "logical_nbytes": 640,
+              "storage_offset": 0,
+              "contiguous": true,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "cache_after_crop": {
+        "cache_object_id": 2586814184848,
+        "seq_length": 7,
+        "layers": [
+          {
+            "layer": 0,
+            "layer_object_id": 2586814256944,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048153600,
+              "storage_ptr": 4914048153600,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048141440,
+              "storage_ptr": 4914048141440,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 1,
+            "layer_object_id": 2586814256464,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048156160,
+              "storage_ptr": 4914048156160,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048156800,
+              "storage_ptr": 4914048156800,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          },
+          {
+            "layer": 2,
+            "layer_object_id": 2586810424144,
+            "K": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048147840,
+              "storage_ptr": 4914048147840,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            },
+            "V": {
+              "shape": [
+                1,
+                2,
+                7,
+                8
+              ],
+              "stride": [
+                160,
+                80,
+                8,
+                1
+              ],
+              "dtype": "torch.float32",
+              "device": "cpu",
+              "data_ptr": 4914048152960,
+              "storage_ptr": 4914048152960,
+              "storage_nbytes": 640,
+              "logical_nbytes": 448,
+              "storage_offset": 0,
+              "contiguous": false,
+              "autograd_base_present": false,
+              "inference_mode": true
+            }
+          }
+        ]
+      },
+      "crop_layer_calls": [
+        0,
+        1,
+        2
+      ],
+      "crop_return_is_none": true,
+      "crop_seconds_single_observation_not_complexity_proof": 5.3899999329587445e-05,
+      "proposal_forward_seconds": 0.0077415999985532835,
+      "proposal_extra_forward_tokens": 3,
+      "crop_KV_vs_preR_control_max_abs": 0.0,
+      "storage_checks": [
+        {
+          "layer": 0,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 0,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 1,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 1,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 2,
+          "kind": "K",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        },
+        {
+          "layer": 2,
+          "kind": "V",
+          "same_backing_storage_as_after_R": true,
+          "backing_storage_not_shrunk": true,
+          "postcrop_logical_bytes": 448,
+          "postcrop_storage_bytes": 640
+        }
+      ],
+      "same_path_continuation": {
+        "logit_max_abs": 0.0,
+        "TV": 0.0,
+        "argmax_a": 44,
+        "argmax_b": 44,
+        "argmax_equal": true
+      },
+      "same_path_continued_KV_max_abs": 0.0,
+      "automatic_position_derivation_in_this_fixture": {
+        "logit_max_abs": 0.0,
+        "TV": 0.0,
+        "argmax_a": 44,
+        "argmax_b": 44,
+        "argmax_equal": true
+      },
+      "stale_position_counterexample": {
+        "position_ids": [
+          10,
+          11
+        ],
+        "cache_position": [
+          10,
+          11
+        ],
+        "correct_position_ids": [
+          7,
+          8
+        ],
+        "readout_delta": {
+          "logit_max_abs": 0.07626732811331749,
+          "TV": 0.014078816651901133,
+          "argmax_a": 44,
+          "argmax_b": 65,
+          "argmax_equal": false
+        },
+        "actual_future_key_mass_max": 0.19102132320404053,
+        "control_future_key_mass_max": 0.0
+      },
+      "saved_preR_vs_stale_R_logits": {
+        "logit_max_abs": 0.3670504130423069,
+        "TV": 0.06461895988567068,
+        "argmax_a": 29,
+        "argmax_b": 51,
+        "argmax_equal": false
+      },
+      "one_last_token_refresh": {
+        "forward_tokens": 1,
+        "crop_to": 6,
+        "position": 6,
+        "vs_saved_whole_prefill_logits": {
+          "logit_max_abs": 5.960464477539063e-08,
+          "TV": 7.531737480220846e-09,
+          "argmax_a": 29,
+          "argmax_b": 29,
+          "argmax_equal": true
+        },
+        "same_refresh_path_identity_max_abs": 0.0,
+        "incorrect_duplicate_last_token_length": 8
+      },
+      "processor_history_counterexample": {
+        "logit_max_abs": 0.18095330893993378,
+        "TV": 0.0052528555046983845,
+        "argmax_a": 29,
+        "argmax_b": 2,
+        "argmax_equal": false
+      },
+      "stop_history_counterexample": {
+        "EOS_preR": false,
+        "EOS_postR_input_ids_after_KV_crop": true,
+        "MaxLength_preR": false,
+        "MaxLength_postR_input_ids_after_KV_crop": true
+      },
+      "RNG_counterexample": {
+        "seed": 1071,
+        "sampled_candidate_proxy_tokens": [
+          60,
+          41,
+          0
+        ],
+        "baseline_next_sample": 2,
+        "after_crop_without_rng_restore": 29,
+        "after_restoring_rng": 2,
+        "state_changed_by_sampling": true,
+        "crop_restored_rng": false,
+        "scope": "Actual CPU multinomial/RNG test on fixed next-token probabilities; no semantic correctness claim."
+      },
+      "middle_mask_contrast": {
+        "masked_positions": [
+          2,
+          3,
+          4
+        ],
+        "surviving_successor_KV_max_abs": 1.0827875137329102,
+        "late_vs_early_same_position_logits": {
+          "logit_max_abs": 0.031017914414405823,
+          "TV": 0.004537541435504304,
+          "argmax_a": 1,
+          "argmax_b": 1,
+          "argmax_equal": true
+        },
+        "tail_crop_claim_does_not_apply": true
+      }
+    }
+  ],
+  "elapsed_seconds_excluding_imports": 0.35270699999819044,
+  "limitations": [
+    "No trained model, semantic W accuracy, GPU speed or universal device guarantee was measured.",
+    "Qwen3 runtime is pinned to 4.55.2; CPU torch is 2.11.0, not the prior GPU torch 2.8.0.",
+    "Equivalent output after complete state restoration is conditional noninterference, not correctness of an untrusted old state or verifier.",
+    "Same-model tail prefix reuse is valid only for append-only causal caches with unchanged prefix and complete external state handling.",
+    "Generation R/verifier wall time is real cost and cannot be restored by crop; hard-deadline effects can differ even if tokens are coupled."
+  ]
+}

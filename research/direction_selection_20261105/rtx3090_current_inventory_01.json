@@ -1,0 +1,20 @@
+[
+  {
+    "command": "hostname",
+    "out": "user\n",
+    "err": "",
+    "exit": 0
+  },
+  {
+    "command": "nvidia-smi --query-gpu=index,name,memory.total,memory.used,utilization.gpu --format=csv,noheader",
+    "out": "0, NVIDIA GeForce RTX 3090, 24576 MiB, 24 MiB, 0 %\n1, NVIDIA GeForce RTX 3090, 24576 MiB, 24 MiB, 0 %\n",
+    "err": "",
+    "exit": 0
+  },
+  {
+    "command": "nvidia-smi --query-compute-apps=gpu_uuid,pid,process_name,used_memory --format=csv,noheader",
+    "out": "",
+    "err": "",
+    "exit": 0
+  }
+]

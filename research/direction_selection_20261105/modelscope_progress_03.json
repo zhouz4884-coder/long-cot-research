@@ -1,0 +1,64 @@
+{
+  "provenance/modelscope_download_02.json": {
+    "model_id": "Qwen/Qwen3-1.7B",
+    "requested_revision": "master",
+    "started_unix": 1793873701.997947,
+    "weights_source": "ModelScope",
+    "gpu_used": false,
+    "status": "STARTED",
+    "sdk_import_seconds": 1.8471322059631348
+  },
+  "provenance/isolated_env_01.json": {
+    "started_unix": 1793873571.7239592,
+    "base_environment_mutated": false,
+    "venv": "/data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100",
+    "steps": [
+      {
+        "command": [
+          "/data/home/zhoubin/contractkv_v100/env/contractkv-v100-cu121/bin/python",
+          "-m",
+          "venv",
+          "--system-site-packages",
+          "/data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100"
+        ],
+        "exit": 0
+      },
+      {
+        "command": [
+          "/data/home/zhoubin/contractkv_v100/env/contractkv-v100-cu121/bin/python",
+          "-m",
+          "pip",
+          "--python",
+          "/data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100/bin/python",
+          "install",
+          "--ignore-installed",
+          "--no-deps",
+          "charset-normalizer==3.4.4",
+          "chardet==5.2.0"
+        ],
+        "exit": 0
+      },
+      {
+        "command": [
+          "/data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100/bin/python",
+          "-c",
+          "import requests,charset_normalizer,chardet,modelscope; print(requests.__version__,charset_normalizer.__version__,chardet.__version__,modelscope.__version__)"
+        ],
+        "exit": 0
+      }
+    ],
+    "passed": true,
+    "elapsed_seconds": 33.97635531425476
+  },
+  "download_files": [],
+  "log_tail": [
+    "Downloading:   0%|          | 0/13 [00:00<?, ?file/s]2026-11-05 18:16:06,232 | INFO    | modelscope_hub.download | Still waiting to acquire lock on /data/home/zhoubin/.cache/modelscope/.lock/model_Qwen___Qwen3-1.7B_LICENSE.lock",
+    "2026-11-05 18:16:06,232 | INFO    | modelscope_hub.download | Still waiting to acquire lock on /data/home/zhoubin/.cache/modelscope/.lock/model_Qwen___Qwen3-1.7B_config_json.lock",
+    "2026-11-05 18:16:06,232 | INFO    | modelscope_hub.download | Still waiting to acquire lock on /data/home/zhoubin/.cache/modelscope/.lock/model_Qwen___Qwen3-1.7B__gitattributes.lock",
+    "2026-11-05 18:16:06,232 | INFO    | modelscope_hub.download | Still waiting to acquire lock on /data/home/zhoubin/.cache/modelscope/.lock/model_Qwen___Qwen3-1.7B_README_md.lock",
+    "2026-11-05 18:17:06,278 | INFO    | modelscope_hub.download | Still waiting to acquire lock on /data/home/zhoubin/.cache/modelscope/.lock/model_Qwen___Qwen3-1.7B__gitattributes.lock",
+    "2026-11-05 18:17:06,278 | INFO    | modelscope_hub.download | Still waiting to acquire lock on /data/home/zhoubin/.cache/modelscope/.lock/model_Qwen___Qwen3-1.7B_README_md.lock",
+    "2026-11-05 18:17:06,278 | INFO    | modelscope_hub.download | Still waiting to acquire lock on /data/home/zhoubin/.cache/modelscope/.lock/model_Qwen___Qwen3-1.7B_LICENSE.lock",
+    "2026-11-05 18:17:06,278 | INFO    | modelscope_hub.download | Still waiting to acquire lock on /data/home/zhoubin/.cache/modelscope/.lock/model_Qwen___Qwen3-1.7B_config_json.lock"
+  ]
+}

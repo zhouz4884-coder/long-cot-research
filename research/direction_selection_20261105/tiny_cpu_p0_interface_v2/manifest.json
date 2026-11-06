@@ -1,0 +1,139 @@
+{
+  "schema_version": "qwen3_injected_cache_p0_v1",
+  "source_sha256": "99c75f11695ad74d3ae7587b8d2b49897386e3b486729c889c6f1deb7f3936df",
+  "input_sha256": "6ffe069718396dc2543f85aa9270780f356e293cc9764afdaf2f06a083c5cc27",
+  "binding": {
+    "device": "cpu",
+    "scope": "interface_only"
+  },
+  "versions": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "torch": "2.11.0+cpu",
+    "transformers": "5.4.0"
+  },
+  "visible_field_whitelist": [
+    "question",
+    "old_branch",
+    "revision"
+  ],
+  "excluded_from_prompt": [
+    "independent_conclusion",
+    "required_final_value",
+    "old_error_value",
+    "old_wrong_final_value",
+    "old_branch_final_value",
+    "old_root_value",
+    "revision_root_value",
+    "revision_implied_final_value",
+    "oracle_trigger_label",
+    "revision_is_correct",
+    "oracle_values",
+    "group"
+  ],
+  "dtype": "float32",
+  "attention": "eager",
+  "max_new_tokens": 4,
+  "seed": 20261105,
+  "thinking": false,
+  "hard_limit_seconds": 120,
+  "limitations": [
+    "Handwritten teacher-forced injected states; not natural errors, detection or self-correction.",
+    "Revisions are shared visible injections, including wrong revisions; no independent verifier message.",
+    "All cache tensors keep their original shapes; masking establishes no memory saving.",
+    "Target is a whole provided branch; random is a token subset of B union U, with overlap recorded.",
+    "Random scattered B-union-U masking matches only count: not age/contiguous span or Random Attention; beating it does not establish semantic specificity.",
+    "No causal correctness, general accuracy, long-CoT efficiency, novelty or deployment claim.",
+    "Only one fixed seed/mode; no selection of cases or continuations by observed performance."
+  ],
+  "frozen_order": [
+    "E01",
+    "C01",
+    "W01",
+    "E02",
+    "E03",
+    "C02",
+    "W02",
+    "E04",
+    "E05",
+    "C03",
+    "W03",
+    "E06",
+    "E07",
+    "C04",
+    "W04",
+    "E08"
+  ],
+  "runtime_includes": "Imports, hashes, load, all forwards, scoring and controls.",
+  "model_files": {
+    "scope": "RANDOM TINY CPU INTERFACE FIXTURE",
+    "state_sha256": "f064e175c2db42caf20e30751ba1fb512ac2bb08cf0688103bd6f19111c03f03"
+  },
+  "model_manifest_sha256": "f064e175c2db42caf20e30751ba1fb512ac2bb08cf0688103bd6f19111c03f03",
+  "load_and_hash_seconds": 1.8946899999973539,
+  "model_config": {
+    "transformers_version": "5.4.0",
+    "architectures": null,
+    "output_hidden_states": false,
+    "return_dict": true,
+    "dtype": null,
+    "chunk_size_feed_forward": 0,
+    "is_encoder_decoder": false,
+    "id2label": {
+      "0": "LABEL_0",
+      "1": "LABEL_1"
+    },
+    "label2id": {
+      "LABEL_0": 0,
+      "LABEL_1": 1
+    },
+    "problem_type": null,
+    "vocab_size": 181,
+    "hidden_size": 32,
+    "intermediate_size": 64,
+    "num_hidden_layers": 3,
+    "num_attention_heads": 4,
+    "num_key_value_heads": 2,
+    "head_dim": 8,
+    "hidden_act": "silu",
+    "max_position_embeddings": 1024,
+    "initializer_range": 0.02,
+    "rms_norm_eps": 1e-06,
+    "use_cache": true,
+    "tie_word_embeddings": false,
+    "rope_parameters": {
+      "rope_theta": 10000.0,
+      "rope_type": "default"
+    },
+    "attention_bias": false,
+    "use_sliding_window": false,
+    "sliding_window": null,
+    "max_window_layers": 28,
+    "layer_types": [
+      "full_attention",
+      "full_attention",
+      "full_attention"
+    ],
+    "attention_dropout": 0.0,
+    "pad_token_id": 0,
+    "bos_token_id": 1,
+    "eos_token_id": 4,
+    "_name_or_path": "",
+    "model_type": "qwen3",
+    "output_attentions": false
+  },
+  "tokenizer": {
+    "class": "TinyTokenizer",
+    "special_tokens_map": {
+      "eos_token": "<|im_end|>",
+      "pad_token": "<pad>"
+    },
+    "chat_template": "CPU fixture only; mirrors the non-thinking header, not a real tokenizer."
+  },
+  "parameter_dtype": "torch.float32",
+  "executed_order": [
+    "E01",
+    "C01",
+    "W01"
+  ],
+  "interface_only": true
+}

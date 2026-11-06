@@ -1,0 +1,140 @@
+{
+  "protocol": "P05_five_arm_v3_20261105",
+  "stage": "Scientific choices before new GPU outputs; source/token bindings in separate prelaunch freeze",
+  "scope": "Exploratory synthetic diagnostic on the frozen16 cases, not formal algorithm/dataset benchmark and not natural prevalence",
+  "case_source": "../direction_selection_20261105/proposed_p0_cases.json",
+  "case_sha256": "6ffe069718396dc2543f85aa9270780f356e293cc9764afdaf2f06a083c5cc27",
+  "base_runner_sha256": "246219aee9774fae0966c7663c765daf3dba2f1df68bc054b539a4dd5d64331b",
+  "answer_parser_sha256": "c2bc053b66778288f524d46f4353e825b1ee654d829027bd02b1cb3173255eed",
+  "candidate_catalog_sha256": "84f1f15d5faa7c34e0b8a100bf6a6fcbfa53acfd4f055c32f529361cbe564c9b",
+  "frozen_order": [
+    "E01",
+    "C01",
+    "W01",
+    "E02",
+    "E03",
+    "C02",
+    "W02",
+    "E04",
+    "E05",
+    "C03",
+    "W03",
+    "E06",
+    "E07",
+    "C04",
+    "W04",
+    "E08"
+  ],
+  "arms": [
+    "FullDirect",
+    "FullOneLine",
+    "WholeEarlyDirect",
+    "WholeEarlyOneLine",
+    "WholeLateOneLine"
+  ],
+  "readout": {
+    "common": "按题目原始定义核算，不预设复核记录正确。\n",
+    "direct": "按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n",
+    "one_line": "按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n",
+    "prefix_end": "close original artificial assistant record with im_end, then frozen user follow-up and nonthinking assistant header",
+    "direct_free_scaffold": "最终答案：",
+    "one_line_free_scaffold": "",
+    "Z_probe_scaffold": "最终答案：",
+    "Y_probe_scaffold": "y =",
+    "diagnostic_scope": "forced pre-generation readouts, not observations after a generated OneLine; prefixes and all costs are separate"
+  },
+  "model": {
+    "name": "Qwen3-4B",
+    "manifest_sha256": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+    "dtype": "FP16",
+    "attention": "eager",
+    "transformers": "4.55.2",
+    "torch_allowed": [
+      "2.8.0",
+      "2.4.1"
+    ],
+    "thinking": false,
+    "greedy": true,
+    "seed": 20261105
+  },
+  "masks": {
+    "whole": "all and only frozen B positions",
+    "early": "mask from original prefix prefill onward, retain original positions and full slots",
+    "late": "prefill full then same B key mask on new readout/continuation",
+    "P_and_R": "always protected",
+    "natural_heuristic_graph": "never used to trigger/select mask"
+  },
+  "primary": {
+    "metric": "frozen gold-blind final numeric extraction on free output; all complete five-arm primary pairs",
+    "format_compliance": "separate, not a filter",
+    "groups": [
+      "E",
+      "C",
+      "W"
+    ],
+    "timeouts": "retain partial raw records, report complete-pair denominator and unrun cases; not a full benchmark claim"
+  },
+  "secondary": {
+    "Z_roles": [
+      "trusted_final",
+      "old_final",
+      "revision_consistent_final",
+      "skip_signature"
+    ],
+    "Y_roles": [
+      "trusted_y",
+      "old_y",
+      "revision_consistent_y",
+      "root_misbind"
+    ],
+    "continuation": "str(integer)+newline, complete unnormalized autoregressive logP including terminator",
+    "dedup": "identical value/token strings per same context, aliases preserved and same-value margins NA",
+    "first_token": "marginal only; cannot distinguish shared first tokens",
+    "W_rule": "revision-consistent is not called true",
+    "cost": "all prefix probes and candidate teacher-forcing forwards/tokens charged",
+    "free_cache_isolation": "complete free branches before candidate data enters distinct offline scoring branches"
+  },
+  "interaction": {
+    "formula": "Acc(WholeEarlyOneLine)-Acc(WholeEarlyDirect)-Acc(FullOneLine)+Acc(FullDirect)",
+    "status": "descriptive finite-case strategy interaction; neither orthogonal error sources nor induction-head identification",
+    "head_story": "stale-value induction interference is a hypothesis, not assumed"
+  },
+  "controls": {
+    "full_controls": [
+      "E01",
+      "C01",
+      "W01"
+    ],
+    "rest": "no complete control marked PASS for remaining13",
+    "requirements": [
+      "same-path no-delete",
+      "same-mask fresh rebuild",
+      "prefix invariance",
+      "first-layer invariance",
+      "masked sentinel",
+      "prefill/readout forbidden and future attention zero",
+      "finite logits",
+      "source/input/model bind",
+      "independent branch caches"
+    ],
+    "stop_on_fail": true
+  },
+  "budget": {
+    "aggregate_gpu_seconds_all_attempts": 300,
+    "worker_deadline_seconds": 275,
+    "outer_timeout_seconds": 290,
+    "outer_kill_after_seconds": 5,
+    "counted": "single selected card from launcher start including imports/hashes/load/probes/failures",
+    "case_policy": "fixed order, stop before deadline, no easy-case replacement; primary completion and diagnostic completion separate",
+    "no_parameter_sweep": true
+  },
+  "decision_rules": [
+    "No promised complementarity or improvement; show all E/C/W and failures.",
+    "If cheap OneLine equals/bests combined treatment, do not claim KV algorithm gain.",
+    "Late/Early supports history-path increment only under matched visibility and suffix.",
+    "Continuous probes support conditional score shifts only, not high statistical power or head localization."
+  ],
+  "crop": "audited separately on CPU; not integrated as a W-safe gate in this five-arm study",
+  "P1": "only numeric candidate graph audit this turn; 100 semantic labels and natural event rates not completed",
+  "status_at_creation": "NO_NEW_GPU_OUTPUTS_YET"
+}

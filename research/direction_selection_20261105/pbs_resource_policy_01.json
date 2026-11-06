@@ -1,0 +1,20 @@
+[
+  {
+    "command": "command -v qmgr; qmgr -c \"list server\"",
+    "out": "/var/lib/torque/bin/qmgr\nServer manager\n\tserver_state = Active\n\tscheduling = True\n\ttotal_jobs = 87\n\tstate_count = Transit:0 Queued:32 Held:24 Waiting:0 Running:31 Exiting:0 Complete:0 \n\tacl_hosts = manager\n\tmanagers = hpcadmin@manager\n\toperators = hpcadmin@manager\n\tdefault_queue = batch\n\tlog_events = 2047\n\tmail_from = adm\n\tresources_assigned.nodect = 31\n\tresources_assigned.mem = 558345748480b\n\tnode_check_rate = 150\n\ttcp_timeout = 300\n\tjob_stat_rate = 300\n\tpoll_jobs = True\n\tdown_on_error = True\n\tmom_job_sync = True\n\tpbs_version = 6.1.1\n\tkeep_completed = 300\n\tauto_node_np = True\n\tnext_job_number = 190148\n\tnet_counter = 0 0 0\n\tmoab_array_compatible = True\n\tnppcu = 1\n\ttimeout_for_job_delete = 120\n\ttimeout_for_job_requeue = 120\n\tnote_append_on_error = True\n\tdefault_gpu_mode = default\n\n",
+    "err": "/data/home/zhoubin/.bashrc:\u884c12: /data/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin/mpivars.sh: \u6ca1\u6709\u90a3\u4e2a\u6587\u4ef6\u6216\u76ee\u5f55\n/data/home/zhoubin/.bashrc:\u884c13: /data/intel/parallel_studio_xe_2019.5.075/bin/psxevars.sh: \u6ca1\u6709\u90a3\u4e2a\u6587\u4ef6\u6216\u76ee\u5f55\n",
+    "exit": 0
+  },
+  {
+    "command": "qstat -Qf GPUDefq",
+    "out": "Queue: GPUDefq\n    queue_type = Execution\n    total_jobs = 7\n    state_count = Transit:0 Queued:2 Held:4 Waiting:0 Running:1 Exiting:0 Comp\n\tlete:0 \n    mtime = 1773639059\n    resources_assigned.nodect = 1\n    enabled = True\n    started = True\n\n",
+    "err": "/data/home/zhoubin/.bashrc:\u884c12: /data/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin/mpivars.sh: \u6ca1\u6709\u90a3\u4e2a\u6587\u4ef6\u6216\u76ee\u5f55\n/data/home/zhoubin/.bashrc:\u884c13: /data/intel/parallel_studio_xe_2019.5.075/bin/psxevars.sh: \u6ca1\u6709\u90a3\u4e2a\u6587\u4ef6\u6216\u76ee\u5f55\n",
+    "exit": 0
+  },
+  {
+    "command": "qsub --version; command -v timeout; cat /var/spool/torque/torque.cfg 2>/dev/null",
+    "out": "/usr/bin/timeout\n",
+    "err": "/data/home/zhoubin/.bashrc:\u884c12: /data/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin/mpivars.sh: \u6ca1\u6709\u90a3\u4e2a\u6587\u4ef6\u6216\u76ee\u5f55\n/data/home/zhoubin/.bashrc:\u884c13: /data/intel/parallel_studio_xe_2019.5.075/bin/psxevars.sh: \u6ca1\u6709\u90a3\u4e2a\u6587\u4ef6\u6216\u76ee\u5f55\nVersion: 6.1.1\nCommit: 4ccb0789f1691a1cb837e171464fa4e5e4883112\n",
+    "exit": 1
+  }
+]

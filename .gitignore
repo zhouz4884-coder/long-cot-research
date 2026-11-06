@@ -9,3 +9,17 @@ vendor/
 *.tar.gz
 outputs/*.zip
 experiments/radar20261013/data/lcb_v6_source.jsonl
+
+# Local dependency copies and duplicate delivery packages; research sources stay tracked.
+research/**/runtime*/
+research/**/renders/
+research/**/official_sources/*
+!research/**/official_sources/manifest.json
+*.zip
+
+# Unrelated scheduler rosters are local diagnostic material, not research evidence.
+research/direction_selection_20261105/v100_platform_inventory_02.json
+
+# Final post-push observations are local receipts (avoid a self-referential commit).
+research/repository_phase_plan_20261106/*_local.json
+outputs/github_publication_*/

@@ -1,0 +1,42 @@
+{
+  "started_unix": 1793873571.7239592,
+  "base_environment_mutated": false,
+  "venv": "/data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100",
+  "steps": [
+    {
+      "command": [
+        "/data/home/zhoubin/contractkv_v100/env/contractkv-v100-cu121/bin/python",
+        "-m",
+        "venv",
+        "--system-site-packages",
+        "/data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "/data/home/zhoubin/contractkv_v100/env/contractkv-v100-cu121/bin/python",
+        "-m",
+        "pip",
+        "--python",
+        "/data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100/bin/python",
+        "install",
+        "--ignore-installed",
+        "--no-deps",
+        "charset-normalizer==3.4.4",
+        "chardet==5.2.0"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "/data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100/bin/python",
+        "-c",
+        "import requests,charset_normalizer,chardet,modelscope; print(requests.__version__,charset_normalizer.__version__,chardet.__version__,modelscope.__version__)"
+      ],
+      "exit": 0
+    }
+  ],
+  "passed": true,
+  "elapsed_seconds": 33.97635531425476
+}

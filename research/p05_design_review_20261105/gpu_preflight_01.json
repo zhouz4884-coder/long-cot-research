@@ -1,0 +1,26 @@
+[
+  {
+    "command": "hostname",
+    "out": "user\n",
+    "err": "",
+    "exit": 0
+  },
+  {
+    "command": "nvidia-smi --query-gpu=index,uuid,name,memory.total,memory.used,utilization.gpu --format=csv,noheader",
+    "out": "0, GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a, NVIDIA GeForce RTX 3090, 24576 MiB, 24 MiB, 0 %\n1, GPU-a696ce9a-7137-cf6f-b4d3-deb992a72f28, NVIDIA GeForce RTX 3090, 24576 MiB, 24 MiB, 0 %\n",
+    "err": "",
+    "exit": 0
+  },
+  {
+    "command": "nvidia-smi --query-compute-apps=gpu_uuid,pid,used_gpu_memory --format=csv,noheader",
+    "out": "",
+    "err": "",
+    "exit": 0
+  },
+  {
+    "command": "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013/.venv/bin/python -B -c 'import sys,importlib.metadata as m;print(sys.version);print({x:m.version(x) for x in [\"torch\",\"transformers\",\"safetensors\"]})'",
+    "out": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]\n{'torch': '2.8.0+cu128', 'transformers': '4.55.2', 'safetensors': '0.8.0'}\n",
+    "err": "",
+    "exit": 0
+  }
+]

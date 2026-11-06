@@ -1,0 +1,5618 @@
+{
+  "case_id": "C01",
+  "primary_complete": true,
+  "diagnostic_complete": true,
+  "status": "COMPLETE",
+  "rendering_core": {
+    "visible_fields": {
+      "question": "按整数算术，依次定义 x=16-9，y=4*x，z=y+3。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=7；因此 y=28，z=31。",
+      "revision": "复核后 x=7 保持不变。后续计算采用这个值。"
+    },
+    "rendered_pieces": {
+      "P": "<|im_start|>user\n按整数算术，依次定义 x=16-9，y=4*x，z=y+3。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n\n人工提供的计算记录：\n",
+      "B": "x=7；因此 y=28，z=31。",
+      "U": "\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n\n继续依据题目给定定义进行核算。\n",
+      "R": "\n复核后 x=7 保持不变。后续计算采用这个值。"
+    },
+    "close_assistant_text": "<|im_end|>\n",
+    "close_assistant_ids": [
+      4,
+      8
+    ],
+    "prefix_ids": [
+      3,
+      97,
+      95,
+      81,
+      94,
+      8,
+      140,
+      145,
+      144,
+      160,
+      150,
+      178,
+      117,
+      152,
+      132,
+      113,
+      12,
+      100,
+      41,
+      29,
+      34,
+      25,
+      37,
+      178,
+      101,
+      41,
+      32,
+      22,
+      100,
+      178,
+      102,
+      41,
+      101,
+      23,
+      31,
+      107,
+      120,
+      111,
+      12,
+      27,
+      27,
+      12,
+      166,
+      159,
+      145,
+      175,
+      178,
+      149,
+      115,
+      138,
+      148,
+      175,
+      155,
+      128,
+      136,
+      130,
+      145,
+      175,
+      107,
+      154,
+      12,
+      102,
+      178,
+      125,
+      170,
+      121,
+      108,
+      110,
+      145,
+      144,
+      107,
+      4,
+      8,
+      3,
+      77,
+      95,
+      95,
+      85,
+      95,
+      96,
+      77,
+      90,
+      96,
+      8,
+      5,
+      8,
+      8,
+      6,
+      8,
+      8,
+      8,
+      114,
+      133,
+      142,
+      116,
+      157,
+      168,
+      160,
+      169,
+      135,
+      179,
+      8,
+      100,
+      41,
+      35,
+      180,
+      127,
+      153,
+      12,
+      101,
+      41,
+      30,
+      36,
+      178,
+      102,
+      41,
+      31,
+      29,
+      107,
+      8,
+      163,
+      164,
+      117,
+      141,
+      177,
+      158,
+      162,
+      132,
+      132,
+      113,
+      172,
+      165,
+      151,
+      160,
+      107,
+      8,
+      8,
+      163,
+      164,
+      117,
+      141,
+      177,
+      158,
+      162,
+      132,
+      132,
+      113,
+      172,
+      165,
+      151,
+      160,
+      107,
+      8,
+      8,
+      163,
+      164,
+      117,
+      141,
+      177,
+      158,
+      162,
+      132,
+      132,
+      113,
+      172,
+      165,
+      151,
+      160,
+      107,
+      8,
+      8,
+      163,
+      164,
+      117,
+      141,
+      177,
+      158,
+      162,
+      132,
+      132,
+      113,
+      172,
+      165,
+      151,
+      160,
+      107,
+      8,
+      8,
+      129,
+      151,
+      126,
+      12,
+      100,
+      41,
+      35,
+      12,
+      118,
+      139,
+      109,
+      124,
+      107,
+      126,
+      164,
+      168,
+      160,
+      173,
+      156,
+      171,
+      110,
+      119,
+      107,
+      4,
+      8
+    ],
+    "prefix_position_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212
+    ],
+    "segments": {
+      "P": [
+        0,
+        102
+      ],
+      "B": [
+        102,
+        119
+      ],
+      "U": [
+        119,
+        187
+      ],
+      "R": [
+        187,
+        211
+      ],
+      "close_assistant": [
+        211,
+        213
+      ]
+    },
+    "target_columns": [
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118
+    ],
+    "random_columns": [
+      105,
+      107,
+      121,
+      127,
+      143,
+      144,
+      145,
+      148,
+      149,
+      157,
+      160,
+      162,
+      164,
+      165,
+      171,
+      180,
+      185
+    ],
+    "random_seed": 341910750,
+    "random_hits_B": 2,
+    "random_hits_U": 15,
+    "note": "P/B/U/R token addresses match frozen P0; close old assistant, then append new user turn."
+  },
+  "arms": {
+    "FullDirect": {
+      "one_line": false,
+      "mask_columns": [],
+      "mask_from_prefill": false,
+      "physical_eviction": false,
+      "free_rendering": {
+        "spec": {
+          "family": "free",
+          "one_line": false,
+          "user_content": "按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n",
+          "assistant_scaffold": "最终答案：",
+          "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n最终答案：",
+          "meaning": "Actual free continuation"
+        },
+        "ids": [
+          3,
+          97,
+          95,
+          81,
+          94,
+          8,
+          140,
+          177,
+          158,
+          123,
+          131,
+          132,
+          113,
+          151,
+          160,
+          178,
+          109,
+          192,
+          191,
+          129,
+          151,
+          169,
+          135,
+          188,
+          189,
+          107,
+          8,
+          125,
+          185,
+          181,
+          147,
+          161,
+          190,
+          187,
+          179,
+          145,
+          144,
+          182,
+          107,
+          8,
+          4,
+          8,
+          3,
+          77,
+          95,
+          95,
+          85,
+          95,
+          96,
+          77,
+          90,
+          96,
+          8,
+          5,
+          8,
+          8,
+          6,
+          8,
+          8,
+          147,
+          161,
+          190,
+          187,
+          179
+        ],
+        "position_ids": [
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268,
+          269,
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          276
+        ]
+      },
+      "free": {
+        "token_ids": [
+          139,
+          192,
+          39,
+          182,
+          7,
+          22,
+          159,
+          186
+        ],
+        "text": "持预;”\t*示必",
+        "strict_integer": null,
+        "stop_reason": "token_budget",
+        "new_tokens": 8,
+        "additional_forward_tokens": 7
+      },
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      },
+      "evaluation": {
+        "parsed_value": null,
+        "correct": false,
+        "strict_integer_without_scaffold": null,
+        "matches_old_final": false,
+        "matches_revision_final": false
+      },
+      "format_features": {
+        "assistant_text_including_fixed_scaffold": "最终答案：持预;”\t*示必",
+        "contains_final_answer_marker": true,
+        "contains_equation_sign": false,
+        "nonempty_lines": 1
+      },
+      "readout_attention_check": {
+        "masked_key_mass_max_per_layer": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "future_key_mass_max_per_layer": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "all_finite": true
+      },
+      "timing": {
+        "readout": {
+          "stage": "FullDirect_free_readout",
+          "seconds": 0.010127499997906853,
+          "case_id": "C01",
+          "arm": "FullDirect",
+          "peak_allocated_bytes": null,
+          "peak_reserved_bytes": null
+        },
+        "greedy": {
+          "stage": "FullDirect_free_greedy",
+          "seconds": 0.05444830000124057,
+          "case_id": "C01",
+          "arm": "FullDirect",
+          "peak_allocated_bytes": null,
+          "peak_reserved_bytes": null
+        }
+      },
+      "diagnostics_complete": true,
+      "probes": {
+        "z": {
+          "forced_before_generation_query": true,
+          "not_a_natural_intermediate_belief": true,
+          "rendering": {
+            "spec": {
+              "family": "z",
+              "one_line": false,
+              "user_content": "按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n",
+              "assistant_scaffold": "最终答案：",
+              "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n最终答案：",
+              "meaning": "Auxiliary forced-prefix query before free generation"
+            },
+            "ids": [
+              3,
+              97,
+              95,
+              81,
+              94,
+              8,
+              140,
+              177,
+              158,
+              123,
+              131,
+              132,
+              113,
+              151,
+              160,
+              178,
+              109,
+              192,
+              191,
+              129,
+              151,
+              169,
+              135,
+              188,
+              189,
+              107,
+              8,
+              125,
+              185,
+              181,
+              147,
+              161,
+              190,
+              187,
+              179,
+              145,
+              144,
+              182,
+              107,
+              8,
+              4,
+              8,
+              3,
+              77,
+              95,
+              95,
+              85,
+              95,
+              96,
+              77,
+              90,
+              96,
+              8,
+              5,
+              8,
+              8,
+              6,
+              8,
+              8,
+              147,
+              161,
+              190,
+              187,
+              179
+            ],
+            "position_ids": [
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275,
+              276
+            ]
+          },
+          "readout_additional_forward_calls": 0,
+          "scores": {
+            "roles_evaluator_only": {
+              "trusted_final": 31,
+              "old_final": 31,
+              "revision_consistent_final": 31,
+              "skip_signature": 10
+            },
+            "unique_candidates": [
+              {
+                "continuation": "31\n",
+                "token_ids": [
+                  31,
+                  29,
+                  8
+                ],
+                "role_aliases": [
+                  "trusted_final",
+                  "old_final",
+                  "revision_consistent_final"
+                ],
+                "logP": -15.6998610496521,
+                "token_logP": [
+                  -4.9968581199646,
+                  -5.459137916564941,
+                  -5.243865013122559
+                ],
+                "first_token_id": 31,
+                "first_token_logP": -4.9968581199646,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              },
+              {
+                "continuation": "10\n",
+                "token_ids": [
+                  29,
+                  28,
+                  8
+                ],
+                "role_aliases": [
+                  "skip_signature"
+                ],
+                "logP": -15.64577865600586,
+                "token_logP": [
+                  -5.315957546234131,
+                  -5.330378532409668,
+                  -4.9994425773620605
+                ],
+                "first_token_id": 29,
+                "first_token_logP": -5.315957546234131,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              }
+            ],
+            "pairwise_role_margins": [
+              {
+                "left": "trusted_final",
+                "right": "old_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_final",
+                "right": "revision_consistent_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.054082393646240234,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.31909942626953125,
+                "first_token_log_odds_interpretable": 0.31909942626953125
+              },
+              {
+                "left": "old_final",
+                "right": "revision_consistent_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "old_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.054082393646240234,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.31909942626953125,
+                "first_token_log_odds_interpretable": 0.31909942626953125
+              },
+              {
+                "left": "revision_consistent_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.054082393646240234,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.31909942626953125,
+                "first_token_log_odds_interpretable": 0.31909942626953125
+              }
+            ],
+            "used_to_choose_free_output": false,
+            "role_count": 4,
+            "unique_count": 2,
+            "full_logP_is_not_first_token_marginal": true,
+            "readout_cache_length_before_after": [
+              277,
+              277
+            ]
+          },
+          "timing": {
+            "readout": {
+              "stage": "FullDirect_z_readout_reused",
+              "seconds": 0.0,
+              "forward_calls": 0,
+              "note": "Exact token/context/cache identity to pre-gold Direct free readout."
+            },
+            "candidate": {
+              "stage": "FullDirect_z_candidate_scoring",
+              "seconds": 0.018063100000290433,
+              "case_id": "C01",
+              "arm": "FullDirect",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            }
+          }
+        },
+        "y": {
+          "forced_before_generation_query": true,
+          "not_a_natural_intermediate_belief": true,
+          "rendering": {
+            "spec": {
+              "family": "y",
+              "one_line": false,
+              "user_content": "按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n",
+              "assistant_scaffold": "y =",
+              "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\ny =",
+              "meaning": "Auxiliary forced-prefix query before free generation"
+            },
+            "ids": [
+              3,
+              97,
+              95,
+              81,
+              94,
+              8,
+              140,
+              177,
+              158,
+              123,
+              131,
+              132,
+              113,
+              151,
+              160,
+              178,
+              109,
+              192,
+              191,
+              129,
+              151,
+              169,
+              135,
+              188,
+              189,
+              107,
+              8,
+              125,
+              185,
+              181,
+              147,
+              161,
+              190,
+              187,
+              179,
+              145,
+              144,
+              182,
+              107,
+              8,
+              4,
+              8,
+              3,
+              77,
+              95,
+              95,
+              85,
+              95,
+              96,
+              77,
+              90,
+              96,
+              8,
+              5,
+              8,
+              8,
+              6,
+              8,
+              8,
+              101,
+              12,
+              41
+            ],
+            "position_ids": [
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274
+            ]
+          },
+          "readout_additional_forward_calls": 1,
+          "scores": {
+            "roles_evaluator_only": {
+              "trusted_y": 28,
+              "old_y": 28,
+              "revision_consistent_y": 28,
+              "root_misbind": 7
+            },
+            "unique_candidates": [
+              {
+                "continuation": "28\n",
+                "token_ids": [
+                  30,
+                  36,
+                  8
+                ],
+                "role_aliases": [
+                  "trusted_y",
+                  "old_y",
+                  "revision_consistent_y"
+                ],
+                "logP": -15.874823570251465,
+                "token_logP": [
+                  -5.222815990447998,
+                  -5.284412384033203,
+                  -5.367595195770264
+                ],
+                "first_token_id": 30,
+                "first_token_logP": -5.222815990447998,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              },
+              {
+                "continuation": "7\n",
+                "token_ids": [
+                  35,
+                  8
+                ],
+                "role_aliases": [
+                  "root_misbind"
+                ],
+                "logP": -10.615899562835693,
+                "token_logP": [
+                  -5.314690113067627,
+                  -5.301209449768066
+                ],
+                "first_token_id": 35,
+                "first_token_logP": -5.314690113067627,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 1,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              }
+            ],
+            "pairwise_role_margins": [
+              {
+                "left": "trusted_y",
+                "right": "old_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_y",
+                "right": "revision_consistent_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.2589240074157715,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.0918741226196289,
+                "first_token_log_odds_interpretable": 0.0918741226196289
+              },
+              {
+                "left": "old_y",
+                "right": "revision_consistent_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "old_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.2589240074157715,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.0918741226196289,
+                "first_token_log_odds_interpretable": 0.0918741226196289
+              },
+              {
+                "left": "revision_consistent_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.2589240074157715,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.0918741226196289,
+                "first_token_log_odds_interpretable": 0.0918741226196289
+              }
+            ],
+            "used_to_choose_free_output": false,
+            "role_count": 4,
+            "unique_count": 2,
+            "full_logP_is_not_first_token_marginal": true,
+            "readout_cache_length_before_after": [
+              275,
+              275
+            ]
+          },
+          "timing": {
+            "readout": {
+              "stage": "FullDirect_y_probe_readout",
+              "seconds": 0.007062000000587432,
+              "case_id": "C01",
+              "arm": "FullDirect",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            },
+            "candidate": {
+              "stage": "FullDirect_y_candidate_scoring",
+              "seconds": 0.015981999997165985,
+              "case_id": "C01",
+              "arm": "FullDirect",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            }
+          }
+        }
+      }
+    },
+    "FullOneLine": {
+      "one_line": true,
+      "mask_columns": [],
+      "mask_from_prefill": false,
+      "physical_eviction": false,
+      "free_rendering": {
+        "spec": {
+          "family": "free",
+          "one_line": true,
+          "user_content": "按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n",
+          "assistant_scaffold": "",
+          "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "meaning": "Actual free continuation"
+        },
+        "ids": [
+          3,
+          97,
+          95,
+          81,
+          94,
+          8,
+          140,
+          177,
+          158,
+          123,
+          131,
+          132,
+          113,
+          151,
+          160,
+          178,
+          109,
+          192,
+          191,
+          129,
+          151,
+          169,
+          135,
+          188,
+          189,
+          107,
+          8,
+          183,
+          185,
+          108,
+          165,
+          186,
+          167,
+          168,
+          160,
+          178,
+          184,
+          185,
+          181,
+          147,
+          161,
+          190,
+          187,
+          179,
+          145,
+          144,
+          182,
+          107,
+          8,
+          4,
+          8,
+          3,
+          77,
+          95,
+          95,
+          85,
+          95,
+          96,
+          77,
+          90,
+          96,
+          8,
+          5,
+          8,
+          8,
+          6,
+          8,
+          8
+        ],
+        "position_ids": [
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268,
+          269,
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          278,
+          279,
+          280
+        ]
+      },
+      "free": {
+        "token_ids": [
+          132,
+          81,
+          157,
+          112,
+          23,
+          22,
+          159,
+          186
+        ],
+        "text": "定e的为+*示必",
+        "strict_integer": null,
+        "stop_reason": "token_budget",
+        "new_tokens": 8,
+        "additional_forward_tokens": 7
+      },
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      },
+      "evaluation": {
+        "parsed_value": null,
+        "correct": false,
+        "strict_integer_without_scaffold": null,
+        "matches_old_final": false,
+        "matches_revision_final": false
+      },
+      "format_features": {
+        "assistant_text_including_fixed_scaffold": "定e的为+*示必",
+        "contains_final_answer_marker": false,
+        "contains_equation_sign": false,
+        "nonempty_lines": 1
+      },
+      "readout_attention_check": {
+        "masked_key_mass_max_per_layer": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "future_key_mass_max_per_layer": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "all_finite": true
+      },
+      "timing": {
+        "readout": {
+          "stage": "FullOneLine_free_readout",
+          "seconds": 0.01080789999832632,
+          "case_id": "C01",
+          "arm": "FullOneLine",
+          "peak_allocated_bytes": null,
+          "peak_reserved_bytes": null
+        },
+        "greedy": {
+          "stage": "FullOneLine_free_greedy",
+          "seconds": 0.05281249999825377,
+          "case_id": "C01",
+          "arm": "FullOneLine",
+          "peak_allocated_bytes": null,
+          "peak_reserved_bytes": null
+        }
+      },
+      "diagnostics_complete": true,
+      "probes": {
+        "z": {
+          "forced_before_generation_query": true,
+          "not_a_natural_intermediate_belief": true,
+          "rendering": {
+            "spec": {
+              "family": "z",
+              "one_line": true,
+              "user_content": "按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n",
+              "assistant_scaffold": "最终答案：",
+              "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n最终答案：",
+              "meaning": "Auxiliary forced-prefix query before free generation"
+            },
+            "ids": [
+              3,
+              97,
+              95,
+              81,
+              94,
+              8,
+              140,
+              177,
+              158,
+              123,
+              131,
+              132,
+              113,
+              151,
+              160,
+              178,
+              109,
+              192,
+              191,
+              129,
+              151,
+              169,
+              135,
+              188,
+              189,
+              107,
+              8,
+              183,
+              185,
+              108,
+              165,
+              186,
+              167,
+              168,
+              160,
+              178,
+              184,
+              185,
+              181,
+              147,
+              161,
+              190,
+              187,
+              179,
+              145,
+              144,
+              182,
+              107,
+              8,
+              4,
+              8,
+              3,
+              77,
+              95,
+              95,
+              85,
+              95,
+              96,
+              77,
+              90,
+              96,
+              8,
+              5,
+              8,
+              8,
+              6,
+              8,
+              8,
+              147,
+              161,
+              190,
+              187,
+              179
+            ],
+            "position_ids": [
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275,
+              276,
+              277,
+              278,
+              279,
+              280,
+              281,
+              282,
+              283,
+              284,
+              285
+            ]
+          },
+          "readout_additional_forward_calls": 1,
+          "scores": {
+            "roles_evaluator_only": {
+              "trusted_final": 31,
+              "old_final": 31,
+              "revision_consistent_final": 31,
+              "skip_signature": 10
+            },
+            "unique_candidates": [
+              {
+                "continuation": "31\n",
+                "token_ids": [
+                  31,
+                  29,
+                  8
+                ],
+                "role_aliases": [
+                  "trusted_final",
+                  "old_final",
+                  "revision_consistent_final"
+                ],
+                "logP": -15.704619407653809,
+                "token_logP": [
+                  -4.995967388153076,
+                  -5.454926490783691,
+                  -5.253725528717041
+                ],
+                "first_token_id": 31,
+                "first_token_logP": -4.995967388153076,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              },
+              {
+                "continuation": "10\n",
+                "token_ids": [
+                  29,
+                  28,
+                  8
+                ],
+                "role_aliases": [
+                  "skip_signature"
+                ],
+                "logP": -15.645620346069336,
+                "token_logP": [
+                  -5.318531513214111,
+                  -5.323850631713867,
+                  -5.003238201141357
+                ],
+                "first_token_id": 29,
+                "first_token_logP": -5.318531513214111,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              }
+            ],
+            "pairwise_role_margins": [
+              {
+                "left": "trusted_final",
+                "right": "old_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_final",
+                "right": "revision_consistent_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.058999061584472656,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.32256412506103516,
+                "first_token_log_odds_interpretable": 0.32256412506103516
+              },
+              {
+                "left": "old_final",
+                "right": "revision_consistent_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "old_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.058999061584472656,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.32256412506103516,
+                "first_token_log_odds_interpretable": 0.32256412506103516
+              },
+              {
+                "left": "revision_consistent_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.058999061584472656,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.32256412506103516,
+                "first_token_log_odds_interpretable": 0.32256412506103516
+              }
+            ],
+            "used_to_choose_free_output": false,
+            "role_count": 4,
+            "unique_count": 2,
+            "full_logP_is_not_first_token_marginal": true,
+            "readout_cache_length_before_after": [
+              286,
+              286
+            ]
+          },
+          "timing": {
+            "readout": {
+              "stage": "FullOneLine_z_probe_readout",
+              "seconds": 0.009885199997370364,
+              "case_id": "C01",
+              "arm": "FullOneLine",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            },
+            "candidate": {
+              "stage": "FullOneLine_z_candidate_scoring",
+              "seconds": 0.014832299999397947,
+              "case_id": "C01",
+              "arm": "FullOneLine",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            }
+          }
+        },
+        "y": {
+          "forced_before_generation_query": true,
+          "not_a_natural_intermediate_belief": true,
+          "rendering": {
+            "spec": {
+              "family": "y",
+              "one_line": true,
+              "user_content": "按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n",
+              "assistant_scaffold": "y =",
+              "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\ny =",
+              "meaning": "Auxiliary forced-prefix query before free generation"
+            },
+            "ids": [
+              3,
+              97,
+              95,
+              81,
+              94,
+              8,
+              140,
+              177,
+              158,
+              123,
+              131,
+              132,
+              113,
+              151,
+              160,
+              178,
+              109,
+              192,
+              191,
+              129,
+              151,
+              169,
+              135,
+              188,
+              189,
+              107,
+              8,
+              183,
+              185,
+              108,
+              165,
+              186,
+              167,
+              168,
+              160,
+              178,
+              184,
+              185,
+              181,
+              147,
+              161,
+              190,
+              187,
+              179,
+              145,
+              144,
+              182,
+              107,
+              8,
+              4,
+              8,
+              3,
+              77,
+              95,
+              95,
+              85,
+              95,
+              96,
+              77,
+              90,
+              96,
+              8,
+              5,
+              8,
+              8,
+              6,
+              8,
+              8,
+              101,
+              12,
+              41
+            ],
+            "position_ids": [
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275,
+              276,
+              277,
+              278,
+              279,
+              280,
+              281,
+              282,
+              283
+            ]
+          },
+          "readout_additional_forward_calls": 1,
+          "scores": {
+            "roles_evaluator_only": {
+              "trusted_y": 28,
+              "old_y": 28,
+              "revision_consistent_y": 28,
+              "root_misbind": 7
+            },
+            "unique_candidates": [
+              {
+                "continuation": "28\n",
+                "token_ids": [
+                  30,
+                  36,
+                  8
+                ],
+                "role_aliases": [
+                  "trusted_y",
+                  "old_y",
+                  "revision_consistent_y"
+                ],
+                "logP": -15.878487586975098,
+                "token_logP": [
+                  -5.226125240325928,
+                  -5.286086082458496,
+                  -5.366276264190674
+                ],
+                "first_token_id": 30,
+                "first_token_logP": -5.226125240325928,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              },
+              {
+                "continuation": "7\n",
+                "token_ids": [
+                  35,
+                  8
+                ],
+                "role_aliases": [
+                  "root_misbind"
+                ],
+                "logP": -10.609437942504883,
+                "token_logP": [
+                  -5.309556007385254,
+                  -5.299881935119629
+                ],
+                "first_token_id": 35,
+                "first_token_logP": -5.309556007385254,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 1,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              }
+            ],
+            "pairwise_role_margins": [
+              {
+                "left": "trusted_y",
+                "right": "old_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_y",
+                "right": "revision_consistent_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.269049644470215,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.08343076705932617,
+                "first_token_log_odds_interpretable": 0.08343076705932617
+              },
+              {
+                "left": "old_y",
+                "right": "revision_consistent_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "old_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.269049644470215,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.08343076705932617,
+                "first_token_log_odds_interpretable": 0.08343076705932617
+              },
+              {
+                "left": "revision_consistent_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.269049644470215,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.08343076705932617,
+                "first_token_log_odds_interpretable": 0.08343076705932617
+              }
+            ],
+            "used_to_choose_free_output": false,
+            "role_count": 4,
+            "unique_count": 2,
+            "full_logP_is_not_first_token_marginal": true,
+            "readout_cache_length_before_after": [
+              284,
+              284
+            ]
+          },
+          "timing": {
+            "readout": {
+              "stage": "FullOneLine_y_probe_readout",
+              "seconds": 0.010827500002051238,
+              "case_id": "C01",
+              "arm": "FullOneLine",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            },
+            "candidate": {
+              "stage": "FullOneLine_y_candidate_scoring",
+              "seconds": 0.0166215999997803,
+              "case_id": "C01",
+              "arm": "FullOneLine",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            }
+          }
+        }
+      }
+    },
+    "WholeEarlyDirect": {
+      "one_line": false,
+      "mask_columns": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "mask_from_prefill": true,
+      "physical_eviction": false,
+      "free_rendering": {
+        "spec": {
+          "family": "free",
+          "one_line": false,
+          "user_content": "按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n",
+          "assistant_scaffold": "最终答案：",
+          "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n最终答案：",
+          "meaning": "Actual free continuation"
+        },
+        "ids": [
+          3,
+          97,
+          95,
+          81,
+          94,
+          8,
+          140,
+          177,
+          158,
+          123,
+          131,
+          132,
+          113,
+          151,
+          160,
+          178,
+          109,
+          192,
+          191,
+          129,
+          151,
+          169,
+          135,
+          188,
+          189,
+          107,
+          8,
+          125,
+          185,
+          181,
+          147,
+          161,
+          190,
+          187,
+          179,
+          145,
+          144,
+          182,
+          107,
+          8,
+          4,
+          8,
+          3,
+          77,
+          95,
+          95,
+          85,
+          95,
+          96,
+          77,
+          90,
+          96,
+          8,
+          5,
+          8,
+          8,
+          6,
+          8,
+          8,
+          147,
+          161,
+          190,
+          187,
+          179
+        ],
+        "position_ids": [
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268,
+          269,
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          276
+        ]
+      },
+      "free": {
+        "token_ids": [
+          139,
+          192,
+          39,
+          182,
+          7,
+          22,
+          159,
+          186
+        ],
+        "text": "持预;”\t*示必",
+        "strict_integer": null,
+        "stop_reason": "token_budget",
+        "new_tokens": 8,
+        "additional_forward_tokens": 7
+      },
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      },
+      "evaluation": {
+        "parsed_value": null,
+        "correct": false,
+        "strict_integer_without_scaffold": null,
+        "matches_old_final": false,
+        "matches_revision_final": false
+      },
+      "format_features": {
+        "assistant_text_including_fixed_scaffold": "最终答案：持预;”\t*示必",
+        "contains_final_answer_marker": true,
+        "contains_equation_sign": false,
+        "nonempty_lines": 1
+      },
+      "readout_attention_check": {
+        "masked_key_mass_max_per_layer": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "future_key_mass_max_per_layer": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "all_finite": true
+      },
+      "timing": {
+        "readout": {
+          "stage": "WholeEarlyDirect_free_readout",
+          "seconds": 0.012623200000234647,
+          "case_id": "C01",
+          "arm": "WholeEarlyDirect",
+          "peak_allocated_bytes": null,
+          "peak_reserved_bytes": null
+        },
+        "greedy": {
+          "stage": "WholeEarlyDirect_free_greedy",
+          "seconds": 0.045083299999532755,
+          "case_id": "C01",
+          "arm": "WholeEarlyDirect",
+          "peak_allocated_bytes": null,
+          "peak_reserved_bytes": null
+        }
+      },
+      "diagnostics_complete": true,
+      "probes": {
+        "z": {
+          "forced_before_generation_query": true,
+          "not_a_natural_intermediate_belief": true,
+          "rendering": {
+            "spec": {
+              "family": "z",
+              "one_line": false,
+              "user_content": "按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n",
+              "assistant_scaffold": "最终答案：",
+              "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n最终答案：",
+              "meaning": "Auxiliary forced-prefix query before free generation"
+            },
+            "ids": [
+              3,
+              97,
+              95,
+              81,
+              94,
+              8,
+              140,
+              177,
+              158,
+              123,
+              131,
+              132,
+              113,
+              151,
+              160,
+              178,
+              109,
+              192,
+              191,
+              129,
+              151,
+              169,
+              135,
+              188,
+              189,
+              107,
+              8,
+              125,
+              185,
+              181,
+              147,
+              161,
+              190,
+              187,
+              179,
+              145,
+              144,
+              182,
+              107,
+              8,
+              4,
+              8,
+              3,
+              77,
+              95,
+              95,
+              85,
+              95,
+              96,
+              77,
+              90,
+              96,
+              8,
+              5,
+              8,
+              8,
+              6,
+              8,
+              8,
+              147,
+              161,
+              190,
+              187,
+              179
+            ],
+            "position_ids": [
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275,
+              276
+            ]
+          },
+          "readout_additional_forward_calls": 0,
+          "scores": {
+            "roles_evaluator_only": {
+              "trusted_final": 31,
+              "old_final": 31,
+              "revision_consistent_final": 31,
+              "skip_signature": 10
+            },
+            "unique_candidates": [
+              {
+                "continuation": "31\n",
+                "token_ids": [
+                  31,
+                  29,
+                  8
+                ],
+                "role_aliases": [
+                  "trusted_final",
+                  "old_final",
+                  "revision_consistent_final"
+                ],
+                "logP": -15.693087100982666,
+                "token_logP": [
+                  -4.995870590209961,
+                  -5.456377029418945,
+                  -5.24083948135376
+                ],
+                "first_token_id": 31,
+                "first_token_logP": -4.995870590209961,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              },
+              {
+                "continuation": "10\n",
+                "token_ids": [
+                  29,
+                  28,
+                  8
+                ],
+                "role_aliases": [
+                  "skip_signature"
+                ],
+                "logP": -15.652434349060059,
+                "token_logP": [
+                  -5.315983295440674,
+                  -5.331895351409912,
+                  -5.004555702209473
+                ],
+                "first_token_id": 29,
+                "first_token_logP": -5.315983295440674,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              }
+            ],
+            "pairwise_role_margins": [
+              {
+                "left": "trusted_final",
+                "right": "old_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_final",
+                "right": "revision_consistent_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.04065275192260742,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.3201127052307129,
+                "first_token_log_odds_interpretable": 0.3201127052307129
+              },
+              {
+                "left": "old_final",
+                "right": "revision_consistent_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "old_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.04065275192260742,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.3201127052307129,
+                "first_token_log_odds_interpretable": 0.3201127052307129
+              },
+              {
+                "left": "revision_consistent_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.04065275192260742,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.3201127052307129,
+                "first_token_log_odds_interpretable": 0.3201127052307129
+              }
+            ],
+            "used_to_choose_free_output": false,
+            "role_count": 4,
+            "unique_count": 2,
+            "full_logP_is_not_first_token_marginal": true,
+            "readout_cache_length_before_after": [
+              277,
+              277
+            ]
+          },
+          "timing": {
+            "readout": {
+              "stage": "WholeEarlyDirect_z_readout_reused",
+              "seconds": 0.0,
+              "forward_calls": 0,
+              "note": "Exact token/context/cache identity to pre-gold Direct free readout."
+            },
+            "candidate": {
+              "stage": "WholeEarlyDirect_z_candidate_scoring",
+              "seconds": 0.015919400000711903,
+              "case_id": "C01",
+              "arm": "WholeEarlyDirect",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            }
+          }
+        },
+        "y": {
+          "forced_before_generation_query": true,
+          "not_a_natural_intermediate_belief": true,
+          "rendering": {
+            "spec": {
+              "family": "y",
+              "one_line": false,
+              "user_content": "按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n",
+              "assistant_scaffold": "y =",
+              "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\ny =",
+              "meaning": "Auxiliary forced-prefix query before free generation"
+            },
+            "ids": [
+              3,
+              97,
+              95,
+              81,
+              94,
+              8,
+              140,
+              177,
+              158,
+              123,
+              131,
+              132,
+              113,
+              151,
+              160,
+              178,
+              109,
+              192,
+              191,
+              129,
+              151,
+              169,
+              135,
+              188,
+              189,
+              107,
+              8,
+              125,
+              185,
+              181,
+              147,
+              161,
+              190,
+              187,
+              179,
+              145,
+              144,
+              182,
+              107,
+              8,
+              4,
+              8,
+              3,
+              77,
+              95,
+              95,
+              85,
+              95,
+              96,
+              77,
+              90,
+              96,
+              8,
+              5,
+              8,
+              8,
+              6,
+              8,
+              8,
+              101,
+              12,
+              41
+            ],
+            "position_ids": [
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274
+            ]
+          },
+          "readout_additional_forward_calls": 1,
+          "scores": {
+            "roles_evaluator_only": {
+              "trusted_y": 28,
+              "old_y": 28,
+              "revision_consistent_y": 28,
+              "root_misbind": 7
+            },
+            "unique_candidates": [
+              {
+                "continuation": "28\n",
+                "token_ids": [
+                  30,
+                  36,
+                  8
+                ],
+                "role_aliases": [
+                  "trusted_y",
+                  "old_y",
+                  "revision_consistent_y"
+                ],
+                "logP": -15.86474323272705,
+                "token_logP": [
+                  -5.223790168762207,
+                  -5.273369789123535,
+                  -5.367583274841309
+                ],
+                "first_token_id": 30,
+                "first_token_logP": -5.223790168762207,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              },
+              {
+                "continuation": "7\n",
+                "token_ids": [
+                  35,
+                  8
+                ],
+                "role_aliases": [
+                  "root_misbind"
+                ],
+                "logP": -10.62295150756836,
+                "token_logP": [
+                  -5.315879821777344,
+                  -5.307071685791016
+                ],
+                "first_token_id": 35,
+                "first_token_logP": -5.315879821777344,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 1,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              }
+            ],
+            "pairwise_role_margins": [
+              {
+                "left": "trusted_y",
+                "right": "old_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_y",
+                "right": "revision_consistent_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.241791725158691,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.09208965301513672,
+                "first_token_log_odds_interpretable": 0.09208965301513672
+              },
+              {
+                "left": "old_y",
+                "right": "revision_consistent_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "old_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.241791725158691,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.09208965301513672,
+                "first_token_log_odds_interpretable": 0.09208965301513672
+              },
+              {
+                "left": "revision_consistent_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.241791725158691,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.09208965301513672,
+                "first_token_log_odds_interpretable": 0.09208965301513672
+              }
+            ],
+            "used_to_choose_free_output": false,
+            "role_count": 4,
+            "unique_count": 2,
+            "full_logP_is_not_first_token_marginal": true,
+            "readout_cache_length_before_after": [
+              275,
+              275
+            ]
+          },
+          "timing": {
+            "readout": {
+              "stage": "WholeEarlyDirect_y_probe_readout",
+              "seconds": 0.006881399996927939,
+              "case_id": "C01",
+              "arm": "WholeEarlyDirect",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            },
+            "candidate": {
+              "stage": "WholeEarlyDirect_y_candidate_scoring",
+              "seconds": 0.015474099996936275,
+              "case_id": "C01",
+              "arm": "WholeEarlyDirect",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            }
+          }
+        }
+      }
+    },
+    "WholeEarlyOneLine": {
+      "one_line": true,
+      "mask_columns": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "mask_from_prefill": true,
+      "physical_eviction": false,
+      "free_rendering": {
+        "spec": {
+          "family": "free",
+          "one_line": true,
+          "user_content": "按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n",
+          "assistant_scaffold": "",
+          "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "meaning": "Actual free continuation"
+        },
+        "ids": [
+          3,
+          97,
+          95,
+          81,
+          94,
+          8,
+          140,
+          177,
+          158,
+          123,
+          131,
+          132,
+          113,
+          151,
+          160,
+          178,
+          109,
+          192,
+          191,
+          129,
+          151,
+          169,
+          135,
+          188,
+          189,
+          107,
+          8,
+          183,
+          185,
+          108,
+          165,
+          186,
+          167,
+          168,
+          160,
+          178,
+          184,
+          185,
+          181,
+          147,
+          161,
+          190,
+          187,
+          179,
+          145,
+          144,
+          182,
+          107,
+          8,
+          4,
+          8,
+          3,
+          77,
+          95,
+          95,
+          85,
+          95,
+          96,
+          77,
+          90,
+          96,
+          8,
+          5,
+          8,
+          8,
+          6,
+          8,
+          8
+        ],
+        "position_ids": [
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268,
+          269,
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          278,
+          279,
+          280
+        ]
+      },
+      "free": {
+        "token_ids": [
+          132,
+          81,
+          157,
+          112,
+          23,
+          22,
+          159,
+          186
+        ],
+        "text": "定e的为+*示必",
+        "strict_integer": null,
+        "stop_reason": "token_budget",
+        "new_tokens": 8,
+        "additional_forward_tokens": 7
+      },
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      },
+      "evaluation": {
+        "parsed_value": null,
+        "correct": false,
+        "strict_integer_without_scaffold": null,
+        "matches_old_final": false,
+        "matches_revision_final": false
+      },
+      "format_features": {
+        "assistant_text_including_fixed_scaffold": "定e的为+*示必",
+        "contains_final_answer_marker": false,
+        "contains_equation_sign": false,
+        "nonempty_lines": 1
+      },
+      "readout_attention_check": {
+        "masked_key_mass_max_per_layer": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "future_key_mass_max_per_layer": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "all_finite": true
+      },
+      "timing": {
+        "readout": {
+          "stage": "WholeEarlyOneLine_free_readout",
+          "seconds": 0.010372000000643311,
+          "case_id": "C01",
+          "arm": "WholeEarlyOneLine",
+          "peak_allocated_bytes": null,
+          "peak_reserved_bytes": null
+        },
+        "greedy": {
+          "stage": "WholeEarlyOneLine_free_greedy",
+          "seconds": 0.04334000000017113,
+          "case_id": "C01",
+          "arm": "WholeEarlyOneLine",
+          "peak_allocated_bytes": null,
+          "peak_reserved_bytes": null
+        }
+      },
+      "diagnostics_complete": true,
+      "probes": {
+        "z": {
+          "forced_before_generation_query": true,
+          "not_a_natural_intermediate_belief": true,
+          "rendering": {
+            "spec": {
+              "family": "z",
+              "one_line": true,
+              "user_content": "按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n",
+              "assistant_scaffold": "最终答案：",
+              "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n最终答案：",
+              "meaning": "Auxiliary forced-prefix query before free generation"
+            },
+            "ids": [
+              3,
+              97,
+              95,
+              81,
+              94,
+              8,
+              140,
+              177,
+              158,
+              123,
+              131,
+              132,
+              113,
+              151,
+              160,
+              178,
+              109,
+              192,
+              191,
+              129,
+              151,
+              169,
+              135,
+              188,
+              189,
+              107,
+              8,
+              183,
+              185,
+              108,
+              165,
+              186,
+              167,
+              168,
+              160,
+              178,
+              184,
+              185,
+              181,
+              147,
+              161,
+              190,
+              187,
+              179,
+              145,
+              144,
+              182,
+              107,
+              8,
+              4,
+              8,
+              3,
+              77,
+              95,
+              95,
+              85,
+              95,
+              96,
+              77,
+              90,
+              96,
+              8,
+              5,
+              8,
+              8,
+              6,
+              8,
+              8,
+              147,
+              161,
+              190,
+              187,
+              179
+            ],
+            "position_ids": [
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275,
+              276,
+              277,
+              278,
+              279,
+              280,
+              281,
+              282,
+              283,
+              284,
+              285
+            ]
+          },
+          "readout_additional_forward_calls": 1,
+          "scores": {
+            "roles_evaluator_only": {
+              "trusted_final": 31,
+              "old_final": 31,
+              "revision_consistent_final": 31,
+              "skip_signature": 10
+            },
+            "unique_candidates": [
+              {
+                "continuation": "31\n",
+                "token_ids": [
+                  31,
+                  29,
+                  8
+                ],
+                "role_aliases": [
+                  "trusted_final",
+                  "old_final",
+                  "revision_consistent_final"
+                ],
+                "logP": -15.70254135131836,
+                "token_logP": [
+                  -4.996580600738525,
+                  -5.45110559463501,
+                  -5.254855155944824
+                ],
+                "first_token_id": 31,
+                "first_token_logP": -4.996580600738525,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              },
+              {
+                "continuation": "10\n",
+                "token_ids": [
+                  29,
+                  28,
+                  8
+                ],
+                "role_aliases": [
+                  "skip_signature"
+                ],
+                "logP": -15.649152755737305,
+                "token_logP": [
+                  -5.318446159362793,
+                  -5.324465274810791,
+                  -5.006241321563721
+                ],
+                "first_token_id": 29,
+                "first_token_logP": -5.318446159362793,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              }
+            ],
+            "pairwise_role_margins": [
+              {
+                "left": "trusted_final",
+                "right": "old_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_final",
+                "right": "revision_consistent_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.05338859558105469,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.3218655586242676,
+                "first_token_log_odds_interpretable": 0.3218655586242676
+              },
+              {
+                "left": "old_final",
+                "right": "revision_consistent_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "old_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.05338859558105469,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.3218655586242676,
+                "first_token_log_odds_interpretable": 0.3218655586242676
+              },
+              {
+                "left": "revision_consistent_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.05338859558105469,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.3218655586242676,
+                "first_token_log_odds_interpretable": 0.3218655586242676
+              }
+            ],
+            "used_to_choose_free_output": false,
+            "role_count": 4,
+            "unique_count": 2,
+            "full_logP_is_not_first_token_marginal": true,
+            "readout_cache_length_before_after": [
+              286,
+              286
+            ]
+          },
+          "timing": {
+            "readout": {
+              "stage": "WholeEarlyOneLine_z_probe_readout",
+              "seconds": 0.009788100000150735,
+              "case_id": "C01",
+              "arm": "WholeEarlyOneLine",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            },
+            "candidate": {
+              "stage": "WholeEarlyOneLine_z_candidate_scoring",
+              "seconds": 0.01684680000107619,
+              "case_id": "C01",
+              "arm": "WholeEarlyOneLine",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            }
+          }
+        },
+        "y": {
+          "forced_before_generation_query": true,
+          "not_a_natural_intermediate_belief": true,
+          "rendering": {
+            "spec": {
+              "family": "y",
+              "one_line": true,
+              "user_content": "按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n",
+              "assistant_scaffold": "y =",
+              "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\ny =",
+              "meaning": "Auxiliary forced-prefix query before free generation"
+            },
+            "ids": [
+              3,
+              97,
+              95,
+              81,
+              94,
+              8,
+              140,
+              177,
+              158,
+              123,
+              131,
+              132,
+              113,
+              151,
+              160,
+              178,
+              109,
+              192,
+              191,
+              129,
+              151,
+              169,
+              135,
+              188,
+              189,
+              107,
+              8,
+              183,
+              185,
+              108,
+              165,
+              186,
+              167,
+              168,
+              160,
+              178,
+              184,
+              185,
+              181,
+              147,
+              161,
+              190,
+              187,
+              179,
+              145,
+              144,
+              182,
+              107,
+              8,
+              4,
+              8,
+              3,
+              77,
+              95,
+              95,
+              85,
+              95,
+              96,
+              77,
+              90,
+              96,
+              8,
+              5,
+              8,
+              8,
+              6,
+              8,
+              8,
+              101,
+              12,
+              41
+            ],
+            "position_ids": [
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275,
+              276,
+              277,
+              278,
+              279,
+              280,
+              281,
+              282,
+              283
+            ]
+          },
+          "readout_additional_forward_calls": 1,
+          "scores": {
+            "roles_evaluator_only": {
+              "trusted_y": 28,
+              "old_y": 28,
+              "revision_consistent_y": 28,
+              "root_misbind": 7
+            },
+            "unique_candidates": [
+              {
+                "continuation": "28\n",
+                "token_ids": [
+                  30,
+                  36,
+                  8
+                ],
+                "role_aliases": [
+                  "trusted_y",
+                  "old_y",
+                  "revision_consistent_y"
+                ],
+                "logP": -15.878762245178223,
+                "token_logP": [
+                  -5.228704452514648,
+                  -5.28612756729126,
+                  -5.3639302253723145
+                ],
+                "first_token_id": 30,
+                "first_token_logP": -5.228704452514648,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              },
+              {
+                "continuation": "7\n",
+                "token_ids": [
+                  35,
+                  8
+                ],
+                "role_aliases": [
+                  "root_misbind"
+                ],
+                "logP": -10.607112407684326,
+                "token_logP": [
+                  -5.307621002197266,
+                  -5.2994914054870605
+                ],
+                "first_token_id": 35,
+                "first_token_logP": -5.307621002197266,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 1,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              }
+            ],
+            "pairwise_role_margins": [
+              {
+                "left": "trusted_y",
+                "right": "old_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_y",
+                "right": "revision_consistent_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.2716498374938965,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.07891654968261719,
+                "first_token_log_odds_interpretable": 0.07891654968261719
+              },
+              {
+                "left": "old_y",
+                "right": "revision_consistent_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "old_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.2716498374938965,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.07891654968261719,
+                "first_token_log_odds_interpretable": 0.07891654968261719
+              },
+              {
+                "left": "revision_consistent_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.2716498374938965,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.07891654968261719,
+                "first_token_log_odds_interpretable": 0.07891654968261719
+              }
+            ],
+            "used_to_choose_free_output": false,
+            "role_count": 4,
+            "unique_count": 2,
+            "full_logP_is_not_first_token_marginal": true,
+            "readout_cache_length_before_after": [
+              284,
+              284
+            ]
+          },
+          "timing": {
+            "readout": {
+              "stage": "WholeEarlyOneLine_y_probe_readout",
+              "seconds": 0.008500600000843406,
+              "case_id": "C01",
+              "arm": "WholeEarlyOneLine",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            },
+            "candidate": {
+              "stage": "WholeEarlyOneLine_y_candidate_scoring",
+              "seconds": 0.01801789999808534,
+              "case_id": "C01",
+              "arm": "WholeEarlyOneLine",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            }
+          }
+        }
+      }
+    },
+    "WholeLateOneLine": {
+      "one_line": true,
+      "mask_columns": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "mask_from_prefill": false,
+      "physical_eviction": false,
+      "free_rendering": {
+        "spec": {
+          "family": "free",
+          "one_line": true,
+          "user_content": "按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n",
+          "assistant_scaffold": "",
+          "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "meaning": "Actual free continuation"
+        },
+        "ids": [
+          3,
+          97,
+          95,
+          81,
+          94,
+          8,
+          140,
+          177,
+          158,
+          123,
+          131,
+          132,
+          113,
+          151,
+          160,
+          178,
+          109,
+          192,
+          191,
+          129,
+          151,
+          169,
+          135,
+          188,
+          189,
+          107,
+          8,
+          183,
+          185,
+          108,
+          165,
+          186,
+          167,
+          168,
+          160,
+          178,
+          184,
+          185,
+          181,
+          147,
+          161,
+          190,
+          187,
+          179,
+          145,
+          144,
+          182,
+          107,
+          8,
+          4,
+          8,
+          3,
+          77,
+          95,
+          95,
+          85,
+          95,
+          96,
+          77,
+          90,
+          96,
+          8,
+          5,
+          8,
+          8,
+          6,
+          8,
+          8
+        ],
+        "position_ids": [
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268,
+          269,
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          278,
+          279,
+          280
+        ]
+      },
+      "free": {
+        "token_ids": [
+          132,
+          81,
+          157,
+          112,
+          23,
+          22,
+          159,
+          186
+        ],
+        "text": "定e的为+*示必",
+        "strict_integer": null,
+        "stop_reason": "token_budget",
+        "new_tokens": 8,
+        "additional_forward_tokens": 7
+      },
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      },
+      "evaluation": {
+        "parsed_value": null,
+        "correct": false,
+        "strict_integer_without_scaffold": null,
+        "matches_old_final": false,
+        "matches_revision_final": false
+      },
+      "format_features": {
+        "assistant_text_including_fixed_scaffold": "定e的为+*示必",
+        "contains_final_answer_marker": false,
+        "contains_equation_sign": false,
+        "nonempty_lines": 1
+      },
+      "readout_attention_check": {
+        "masked_key_mass_max_per_layer": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "future_key_mass_max_per_layer": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "all_finite": true
+      },
+      "timing": {
+        "readout": {
+          "stage": "WholeLateOneLine_free_readout",
+          "seconds": 0.008077899998170324,
+          "case_id": "C01",
+          "arm": "WholeLateOneLine",
+          "peak_allocated_bytes": null,
+          "peak_reserved_bytes": null
+        },
+        "greedy": {
+          "stage": "WholeLateOneLine_free_greedy",
+          "seconds": 0.04227869999886025,
+          "case_id": "C01",
+          "arm": "WholeLateOneLine",
+          "peak_allocated_bytes": null,
+          "peak_reserved_bytes": null
+        }
+      },
+      "diagnostics_complete": true,
+      "probes": {
+        "z": {
+          "forced_before_generation_query": true,
+          "not_a_natural_intermediate_belief": true,
+          "rendering": {
+            "spec": {
+              "family": "z",
+              "one_line": true,
+              "user_content": "按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n",
+              "assistant_scaffold": "最终答案：",
+              "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n最终答案：",
+              "meaning": "Auxiliary forced-prefix query before free generation"
+            },
+            "ids": [
+              3,
+              97,
+              95,
+              81,
+              94,
+              8,
+              140,
+              177,
+              158,
+              123,
+              131,
+              132,
+              113,
+              151,
+              160,
+              178,
+              109,
+              192,
+              191,
+              129,
+              151,
+              169,
+              135,
+              188,
+              189,
+              107,
+              8,
+              183,
+              185,
+              108,
+              165,
+              186,
+              167,
+              168,
+              160,
+              178,
+              184,
+              185,
+              181,
+              147,
+              161,
+              190,
+              187,
+              179,
+              145,
+              144,
+              182,
+              107,
+              8,
+              4,
+              8,
+              3,
+              77,
+              95,
+              95,
+              85,
+              95,
+              96,
+              77,
+              90,
+              96,
+              8,
+              5,
+              8,
+              8,
+              6,
+              8,
+              8,
+              147,
+              161,
+              190,
+              187,
+              179
+            ],
+            "position_ids": [
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275,
+              276,
+              277,
+              278,
+              279,
+              280,
+              281,
+              282,
+              283,
+              284,
+              285
+            ]
+          },
+          "readout_additional_forward_calls": 1,
+          "scores": {
+            "roles_evaluator_only": {
+              "trusted_final": 31,
+              "old_final": 31,
+              "revision_consistent_final": 31,
+              "skip_signature": 10
+            },
+            "unique_candidates": [
+              {
+                "continuation": "31\n",
+                "token_ids": [
+                  31,
+                  29,
+                  8
+                ],
+                "role_aliases": [
+                  "trusted_final",
+                  "old_final",
+                  "revision_consistent_final"
+                ],
+                "logP": -15.7019944190979,
+                "token_logP": [
+                  -4.996770858764648,
+                  -5.4515581130981445,
+                  -5.253665447235107
+                ],
+                "first_token_id": 31,
+                "first_token_logP": -4.996770858764648,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              },
+              {
+                "continuation": "10\n",
+                "token_ids": [
+                  29,
+                  28,
+                  8
+                ],
+                "role_aliases": [
+                  "skip_signature"
+                ],
+                "logP": -15.649164199829102,
+                "token_logP": [
+                  -5.318767547607422,
+                  -5.325289726257324,
+                  -5.0051069259643555
+                ],
+                "first_token_id": 29,
+                "first_token_logP": -5.318767547607422,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              }
+            ],
+            "pairwise_role_margins": [
+              {
+                "left": "trusted_final",
+                "right": "old_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_final",
+                "right": "revision_consistent_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.05283021926879883,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.32199668884277344,
+                "first_token_log_odds_interpretable": 0.32199668884277344
+              },
+              {
+                "left": "old_final",
+                "right": "revision_consistent_final",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "old_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.05283021926879883,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.32199668884277344,
+                "first_token_log_odds_interpretable": 0.32199668884277344
+              },
+              {
+                "left": "revision_consistent_final",
+                "right": "skip_signature",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -0.05283021926879883,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.32199668884277344,
+                "first_token_log_odds_interpretable": 0.32199668884277344
+              }
+            ],
+            "used_to_choose_free_output": false,
+            "role_count": 4,
+            "unique_count": 2,
+            "full_logP_is_not_first_token_marginal": true,
+            "readout_cache_length_before_after": [
+              286,
+              286
+            ]
+          },
+          "timing": {
+            "readout": {
+              "stage": "WholeLateOneLine_z_probe_readout",
+              "seconds": 0.008941700001741992,
+              "case_id": "C01",
+              "arm": "WholeLateOneLine",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            },
+            "candidate": {
+              "stage": "WholeLateOneLine_z_candidate_scoring",
+              "seconds": 0.01873379999960889,
+              "case_id": "C01",
+              "arm": "WholeLateOneLine",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            }
+          }
+        },
+        "y": {
+          "forced_before_generation_query": true,
+          "not_a_natural_intermediate_belief": true,
+          "rendering": {
+            "spec": {
+              "family": "y",
+              "one_line": true,
+              "user_content": "按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n",
+              "assistant_scaffold": "y =",
+              "text": "<|im_start|>user\n按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\ny =",
+              "meaning": "Auxiliary forced-prefix query before free generation"
+            },
+            "ids": [
+              3,
+              97,
+              95,
+              81,
+              94,
+              8,
+              140,
+              177,
+              158,
+              123,
+              131,
+              132,
+              113,
+              151,
+              160,
+              178,
+              109,
+              192,
+              191,
+              129,
+              151,
+              169,
+              135,
+              188,
+              189,
+              107,
+              8,
+              183,
+              185,
+              108,
+              165,
+              186,
+              167,
+              168,
+              160,
+              178,
+              184,
+              185,
+              181,
+              147,
+              161,
+              190,
+              187,
+              179,
+              145,
+              144,
+              182,
+              107,
+              8,
+              4,
+              8,
+              3,
+              77,
+              95,
+              95,
+              85,
+              95,
+              96,
+              77,
+              90,
+              96,
+              8,
+              5,
+              8,
+              8,
+              6,
+              8,
+              8,
+              101,
+              12,
+              41
+            ],
+            "position_ids": [
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275,
+              276,
+              277,
+              278,
+              279,
+              280,
+              281,
+              282,
+              283
+            ]
+          },
+          "readout_additional_forward_calls": 1,
+          "scores": {
+            "roles_evaluator_only": {
+              "trusted_y": 28,
+              "old_y": 28,
+              "revision_consistent_y": 28,
+              "root_misbind": 7
+            },
+            "unique_candidates": [
+              {
+                "continuation": "28\n",
+                "token_ids": [
+                  30,
+                  36,
+                  8
+                ],
+                "role_aliases": [
+                  "trusted_y",
+                  "old_y",
+                  "revision_consistent_y"
+                ],
+                "logP": -15.877274513244629,
+                "token_logP": [
+                  -5.228851795196533,
+                  -5.285505771636963,
+                  -5.362916946411133
+                ],
+                "first_token_id": 30,
+                "first_token_logP": -5.228851795196533,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 2,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              },
+              {
+                "continuation": "7\n",
+                "token_ids": [
+                  35,
+                  8
+                ],
+                "role_aliases": [
+                  "root_misbind"
+                ],
+                "logP": -10.60675573348999,
+                "token_logP": [
+                  -5.308286666870117,
+                  -5.298469066619873
+                ],
+                "first_token_id": 35,
+                "first_token_logP": -5.308286666870117,
+                "candidate_forward_calls": 1,
+                "teacher_forced_input_tokens": 1,
+                "log_softmax_dtype": "float32",
+                "scalar_sum": "Python float64",
+                "length_normalization": "none",
+                "terminating_string": "\n"
+              }
+            ],
+            "pairwise_role_margins": [
+              {
+                "left": "trusted_y",
+                "right": "old_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_y",
+                "right": "revision_consistent_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "trusted_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.270518779754639,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.07943487167358398,
+                "first_token_log_odds_interpretable": 0.07943487167358398
+              },
+              {
+                "left": "old_y",
+                "right": "revision_consistent_y",
+                "same_full_candidate": true,
+                "full_log_odds_left_minus_right": null,
+                "same_first_token": true,
+                "first_token_identifiable": false,
+                "first_token_log_odds_raw": 0.0,
+                "first_token_log_odds_interpretable": null
+              },
+              {
+                "left": "old_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.270518779754639,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.07943487167358398,
+                "first_token_log_odds_interpretable": 0.07943487167358398
+              },
+              {
+                "left": "revision_consistent_y",
+                "right": "root_misbind",
+                "same_full_candidate": false,
+                "full_log_odds_left_minus_right": -5.270518779754639,
+                "same_first_token": false,
+                "first_token_identifiable": true,
+                "first_token_log_odds_raw": 0.07943487167358398,
+                "first_token_log_odds_interpretable": 0.07943487167358398
+              }
+            ],
+            "used_to_choose_free_output": false,
+            "role_count": 4,
+            "unique_count": 2,
+            "full_logP_is_not_first_token_marginal": true,
+            "readout_cache_length_before_after": [
+              284,
+              284
+            ]
+          },
+          "timing": {
+            "readout": {
+              "stage": "WholeLateOneLine_y_probe_readout",
+              "seconds": 0.009523400000034599,
+              "case_id": "C01",
+              "arm": "WholeLateOneLine",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            },
+            "candidate": {
+              "stage": "WholeLateOneLine_y_candidate_scoring",
+              "seconds": 0.01743039999928442,
+              "case_id": "C01",
+              "arm": "WholeLateOneLine",
+              "peak_allocated_bytes": null,
+              "peak_reserved_bytes": null
+            }
+          }
+        }
+      }
+    }
+  },
+  "controls": {
+    "same_mask_no_delete": {
+      "logit_max_abs": 0.0,
+      "logit_relative_l2": 0.0,
+      "TV": 0.0,
+      "JS_nats": 0.0,
+      "argmax_equal": true,
+      "exact_equal": true,
+      "KV": [
+        {
+          "layer": 0,
+          "groups": {
+            "before_B": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "U": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "R": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "surviving_all": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            }
+          }
+        },
+        {
+          "layer": 1,
+          "groups": {
+            "before_B": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "U": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "R": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "surviving_all": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            }
+          }
+        },
+        {
+          "layer": 2,
+          "groups": {
+            "before_B": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "U": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "R": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "surviving_all": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    "cached_vs_whole_recompute": {
+      "logit_max_abs": 4.470348358154297e-08,
+      "logit_relative_l2": 8.745948671778022e-08,
+      "TV": 3.4607643786301046e-09,
+      "JS_nats": 0.0,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    "same_mask_early_rebuild": {
+      "logit_max_abs": 0.0,
+      "logit_relative_l2": 0.0,
+      "TV": 0.0,
+      "JS_nats": 0.0,
+      "argmax_equal": true,
+      "exact_equal": true,
+      "KV": [
+        {
+          "layer": 0,
+          "groups": {
+            "before_B": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "U": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "R": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "surviving_all": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            }
+          }
+        },
+        {
+          "layer": 1,
+          "groups": {
+            "before_B": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "U": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "R": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "surviving_all": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            }
+          }
+        },
+        {
+          "layer": 2,
+          "groups": {
+            "before_B": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "U": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "R": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            },
+            "surviving_all": {
+              "K": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              },
+              "V": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0,
+                "finite": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    "prefix_invariance_max_abs": 0.0,
+    "first_layer_invariance_max_abs": 0.0,
+    "masked_value_sentinel_8": {
+      "logit_max_abs": 0.0,
+      "logit_relative_l2": 0.0,
+      "TV": 0.0,
+      "JS_nats": 0.0,
+      "argmax_equal": true,
+      "exact_equal": true
+    },
+    "attention_check_early": {
+      "masked_key_mass_max_per_layer": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "future_key_mass_max_per_layer": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "all_finite": true
+    },
+    "attention_check_late": {
+      "masked_key_mass_max_per_layer": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "future_key_mass_max_per_layer": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "all_finite": true
+    },
+    "target_prefill_attention": {
+      "query_scope": "All prefix queries; separate surviving-query check includes U and R.",
+      "masked_columns": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "prefix_tokens": 213,
+      "masked_key_mass_max_per_layer": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "future_key_mass_max_per_layer": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "surviving_query_masked_key_mass_max_per_layer": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "all_finite": true
+    },
+    "random_prefill_attention": {
+      "query_scope": "All prefix queries; separate surviving-query check includes U and R.",
+      "masked_columns": [
+        105,
+        107,
+        121,
+        127,
+        143,
+        144,
+        145,
+        148,
+        149,
+        157,
+        160,
+        162,
+        164,
+        165,
+        171,
+        180,
+        185
+      ],
+      "prefix_tokens": 213,
+      "masked_key_mass_max_per_layer": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "future_key_mass_max_per_layer": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "surviving_query_masked_key_mass_max_per_layer": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "all_finite": true
+    },
+    "tolerance_logit_and_KV_max_abs": 1e-06,
+    "checks": {
+      "same_mask_no_delete": true,
+      "same_mask_no_delete_KV": true,
+      "same_mask_early_rebuild": true,
+      "same_mask_early_rebuild_KV": true,
+      "prefix_invariance": true,
+      "first_layer_invariance": true,
+      "masked_sentinel": true,
+      "masked_and_future_attention_zero": true,
+      "early_prefill_target_and_random_forbidden_mass_zero": true
+    },
+    "passed": true,
+    "note": "Cached/dense shape noise is recorded separately, not mistaken for same-path no-op noise."
+  },
+  "evaluation_metadata": {
+    "group": "correct_old_no_error_control",
+    "required_final_value": 31,
+    "old_branch_final_value": 31,
+    "revision_implied_final_value": 31,
+    "oracle_trigger_label": 0,
+    "revision_is_correct": true
+  },
+  "source_sha256": "ddbd96500f9a74a15d957aabb95dd08025a55bbaa54af13323ac5722e2cc233b",
+  "input_sha256": "6ffe069718396dc2543f85aa9270780f356e293cc9764afdaf2f06a083c5cc27",
+  "base_source_sha256": "246219aee9774fae0966c7663c765daf3dba2f1df68bc054b539a4dd5d64331b",
+  "answer_extractor_sha256": "c2bc053b66778288f524d46f4353e825b1ee654d829027bd02b1cb3173255eed",
+  "model_manifest_sha256": "a9cbdc633e95af2b90b9c62015337ba4475bb8dbb86240121272f879717b2057",
+  "prefix_cache_metadata": {
+    "full": {
+      "class": "DynamicCache",
+      "layers": [
+        {
+          "layer": 0,
+          "key_shape": [
+            1,
+            2,
+            213,
+            8
+          ],
+          "value_shape": [
+            1,
+            2,
+            213,
+            8
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu"
+        },
+        {
+          "layer": 1,
+          "key_shape": [
+            1,
+            2,
+            213,
+            8
+          ],
+          "value_shape": [
+            1,
+            2,
+            213,
+            8
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu"
+        },
+        {
+          "layer": 2,
+          "key_shape": [
+            1,
+            2,
+            213,
+            8
+          ],
+          "value_shape": [
+            1,
+            2,
+            213,
+            8
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu"
+        }
+      ]
+    },
+    "early": {
+      "class": "DynamicCache",
+      "layers": [
+        {
+          "layer": 0,
+          "key_shape": [
+            1,
+            2,
+            213,
+            8
+          ],
+          "value_shape": [
+            1,
+            2,
+            213,
+            8
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu"
+        },
+        {
+          "layer": 1,
+          "key_shape": [
+            1,
+            2,
+            213,
+            8
+          ],
+          "value_shape": [
+            1,
+            2,
+            213,
+            8
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu"
+        },
+        {
+          "layer": 2,
+          "key_shape": [
+            1,
+            2,
+            213,
+            8
+          ],
+          "value_shape": [
+            1,
+            2,
+            213,
+            8
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu"
+        }
+      ]
+    }
+  },
+  "prefill_timing": {
+    "full": {
+      "stage": "shared_full_prefill",
+      "seconds": 0.008884400001988979,
+      "case_id": "C01",
+      "arm": null,
+      "peak_allocated_bytes": null,
+      "peak_reserved_bytes": null
+    },
+    "early": {
+      "stage": "shared_whole_early_prefill",
+      "seconds": 0.009832299998379312,
+      "case_id": "C01",
+      "arm": null,
+      "peak_allocated_bytes": null,
+      "peak_reserved_bytes": null
+    }
+  },
+  "early_KV_vs_full": [
+    {
+      "layer": 0,
+      "groups": {
+        "before_B": {
+          "K": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "finite": true
+          },
+          "V": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "finite": true
+          }
+        },
+        "U": {
+          "K": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "finite": true
+          },
+          "V": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "finite": true
+          }
+        },
+        "R": {
+          "K": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "finite": true
+          },
+          "V": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "finite": true
+          }
+        },
+        "surviving_all": {
+          "K": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "finite": true
+          },
+          "V": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "finite": true
+          }
+        }
+      }
+    },
+    {
+      "layer": 1,
+      "groups": {
+        "before_B": {
+          "K": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "finite": true
+          },
+          "V": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "finite": true
+          }
+        },
+        "U": {
+          "K": {
+            "max_abs": 0.1387331187725067,
+            "relative_l2": 0.030113408342003822,
+            "finite": true
+          },
+          "V": {
+            "max_abs": 0.015365645289421082,
+            "relative_l2": 0.028179127722978592,
+            "finite": true
+          }
+        },
+        "R": {
+          "K": {
+            "max_abs": 0.08364084362983704,
+            "relative_l2": 0.020282337442040443,
+            "finite": true
+          },
+          "V": {
+            "max_abs": 0.006528936326503754,
+            "relative_l2": 0.018568402156233788,
+            "finite": true
+          }
+        },
+        "surviving_all": {
+          "K": {
+            "max_abs": 0.1387331187725067,
+            "relative_l2": 0.019166285172104836,
+            "finite": true
+          },
+          "V": {
+            "max_abs": 0.015365645289421082,
+            "relative_l2": 0.018245942890644073,
+            "finite": true
+          }
+        }
+      }
+    },
+    {
+      "layer": 2,
+      "groups": {
+        "before_B": {
+          "K": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "finite": true
+          },
+          "V": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "finite": true
+          }
+        },
+        "U": {
+          "K": {
+            "max_abs": 0.47956281900405884,
+            "relative_l2": 0.051774319261312485,
+            "finite": true
+          },
+          "V": {
+            "max_abs": 0.020081229507923126,
+            "relative_l2": 0.040478724986314774,
+            "finite": true
+          }
+        },
+        "R": {
+          "K": {
+            "max_abs": 0.13619351387023926,
+            "relative_l2": 0.03546129912137985,
+            "finite": true
+          },
+          "V": {
+            "max_abs": 0.010856613516807556,
+            "relative_l2": 0.03218778967857361,
+            "finite": true
+          }
+        },
+        "surviving_all": {
+          "K": {
+            "max_abs": 0.47956281900405884,
+            "relative_l2": 0.03313475102186203,
+            "finite": true
+          },
+          "V": {
+            "max_abs": 0.020081229507923126,
+            "relative_l2": 0.02676468715071678,
+            "finite": true
+          }
+        }
+      }
+    }
+  ],
+  "control_timing": {
+    "stage": "interface_controls",
+    "seconds": 0.10642189999998664,
+    "case_id": "C01",
+    "arm": "interface_control",
+    "peak_allocated_bytes": null,
+    "peak_reserved_bytes": null
+  },
+  "primary_case_seconds": 0.4529173000009905,
+  "diagnostic_case_seconds": 0.29060369999933755,
+  "pairwise_probe_logits": {
+    "free__FullDirect__WholeEarlyDirect": {
+      "logit_max_abs": 0.005426287651062012,
+      "logit_relative_l2": 0.015504293565310195,
+      "TV": 0.000774742652065736,
+      "JS_nats": 4.741383294549006e-07,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    "free__FullOneLine__WholeEarlyOneLine": {
+      "logit_max_abs": 0.006270900368690491,
+      "logit_relative_l2": 0.020523563100371855,
+      "TV": 0.0009917280474482882,
+      "JS_nats": 7.330684264327172e-07,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    "free__WholeLateOneLine__WholeEarlyOneLine": {
+      "logit_max_abs": 0.0018237587064504623,
+      "logit_relative_l2": 0.005905186500227982,
+      "TV": 0.0002798874340009666,
+      "JS_nats": 6.115797928301285e-08,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    "free__FullOneLine__WholeLateOneLine": {
+      "logit_max_abs": 0.006155043840408325,
+      "logit_relative_l2": 0.019500479659539625,
+      "TV": 0.0009376801819684288,
+      "JS_nats": 6.608403641991205e-07,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    "z__FullDirect__WholeEarlyDirect": {
+      "logit_max_abs": 0.005426287651062012,
+      "logit_relative_l2": 0.015504293565310195,
+      "TV": 0.000774742652065736,
+      "JS_nats": 4.741383294549006e-07,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    "z__FullOneLine__WholeEarlyOneLine": {
+      "logit_max_abs": 0.005351446568965912,
+      "logit_relative_l2": 0.016407880701370267,
+      "TV": 0.0008457489160052642,
+      "JS_nats": 5.363164614651326e-07,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    "z__WholeLateOneLine__WholeEarlyOneLine": {
+      "logit_max_abs": 0.002219986170530319,
+      "logit_relative_l2": 0.005800268077926777,
+      "TV": 0.0002921017866167547,
+      "JS_nats": 6.796669254654537e-08,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    "z__FullOneLine__WholeLateOneLine": {
+      "logit_max_abs": 0.004501029849052429,
+      "logit_relative_l2": 0.014471588752624366,
+      "TV": 0.0007469109253668898,
+      "JS_nats": 4.1492593528818665e-07,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    "y__FullDirect__WholeEarlyDirect": {
+      "logit_max_abs": 0.00889846682548523,
+      "logit_relative_l2": 0.025837518849427213,
+      "TV": 0.0011305460753206426,
+      "JS_nats": 1.0631479201555934e-06,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    "y__FullOneLine__WholeEarlyOneLine": {
+      "logit_max_abs": 0.008469454944133759,
+      "logit_relative_l2": 0.02466666027373594,
+      "TV": 0.0010777603849689487,
+      "JS_nats": 9.609926870314724e-07,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    "y__WholeLateOneLine__WholeEarlyOneLine": {
+      "logit_max_abs": 0.002398168668150902,
+      "logit_relative_l2": 0.007530993961718701,
+      "TV": 0.0003392477274865263,
+      "JS_nats": 8.960165780958343e-08,
+      "argmax_equal": true,
+      "exact_equal": false
+    },
+    "y__FullOneLine__WholeLateOneLine": {
+      "logit_max_abs": 0.007656008005142212,
+      "logit_relative_l2": 0.02296297931867607,
+      "TV": 0.0010320983812968395,
+      "JS_nats": 8.336583992333573e-07,
+      "argmax_equal": true,
+      "exact_equal": false
+    }
+  },
+  "logits_artifact": "C01_logits.npz"
+}

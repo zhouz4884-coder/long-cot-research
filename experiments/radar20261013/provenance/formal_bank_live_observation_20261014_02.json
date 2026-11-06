@@ -1,0 +1,43 @@
+{
+  "observed_at_utc": "2026-10-14T12:08:35Z",
+  "formal_protocol_sha256": "423f8b632d628443d9a4517bb8bb280714940776e1a4ddf2fbe166593ce323f2",
+  "frozen_runtime_sources_and_packages_validated": true,
+  "processes": "    PID STAT     ELAPSED     TIME COMMAND\n1780322 S       11:17:52 00:00:00 .venv/bin/python -u scripts/continue_study.py\n1874879 Rl      05:37:11 05:37:26 /media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013/.venv/bin/python -u scripts/collect_policy_bank.py --model /media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B --split development --shard 0\n1874880 Rl      05:37:11 05:37:21 /media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013/.venv/bin/python -u scripts/collect_policy_bank.py --model /media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B --split development --shard 1\n",
+  "splits": {
+    "development": {
+      "shards": [
+        {
+          "shard": 0,
+          "newline_complete_records": 35,
+          "partial_tail": false,
+          "complete_marker": false
+        },
+        {
+          "shard": 1,
+          "newline_complete_records": 32,
+          "partial_tail": false,
+          "complete_marker": false
+        }
+      ],
+      "total_complete_observed": 67
+    },
+    "selection": {
+      "shards": [
+        {
+          "shard": 0,
+          "newline_complete_records": 0,
+          "partial_tail": false,
+          "complete_marker": false
+        },
+        {
+          "shard": 1,
+          "newline_complete_records": 0,
+          "partial_tail": false,
+          "complete_marker": false
+        }
+      ],
+      "total_complete_observed": 0
+    }
+  },
+  "scope": "Actual live process/progress and frozen source/package checks only; no partial correctness or strategy tuning"
+}

@@ -1,0 +1,91 @@
+{
+  "scope": "Random causal RNN mathematical control; no learned LLM, semantic labels, training performance or VCORE reproduction",
+  "passed": true,
+  "device": "cpu",
+  "dtype": "float64",
+  "torch": "2.11.0+cpu",
+  "python": "3.13.5",
+  "seed": 20261105,
+  "main_probe_validation_are_disjoint_fixed_random_inputs": true,
+  "reference_forward_count": 1,
+  "separate_reference_gradient_queries": 2,
+  "exact_token_gradient_queries_for_toy_oracle": 8,
+  "perturbed_main_forward_count": 2,
+  "finite_difference_epsilon": 1e-06,
+  "finite_difference_max_abs_error": {
+    "uniform_reference": 2.426673553213021e-07,
+    "answer_like_anchor": 4.622808751908458e-07
+  },
+  "uniform_anchor_cosine": 0.16244934271529793,
+  "late_activation_gradient_zero": true,
+  "late_shared_parameter_utilities": [
+    -0.7228449154262939,
+    -0.38574783830886245,
+    -0.5937622867527252,
+    -0.23712619835400592
+  ],
+  "kl_target": 0.05,
+  "kl_observed": [
+    0.0500000000000001,
+    0.049999999999999996
+  ],
+  "norm_matched_one_step": {
+    "uniform_tokens": {
+      "weights": [
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125
+      ],
+      "update_l2_norm": 0.001,
+      "predicted_validation_nll_delta": 0.00012062078295426234,
+      "actual_validation_nll_delta": 0.00012075160517643901,
+      "weight_after_anchor_mass": 0.5
+    },
+    "full_loss_utility": {
+      "weights": [
+        0.11855570041213967,
+        0.16294707612112788,
+        0.11672083277585243,
+        0.09776902290928556,
+        0.1283777897918169,
+        0.21088291150089866,
+        0.08513522357926072,
+        0.07961144290961825
+      ],
+      "update_l2_norm": 0.001,
+      "predicted_validation_nll_delta": 0.00010463023546908673,
+      "actual_validation_nll_delta": 0.00010474247070102471,
+      "weight_after_anchor_mass": 0.5040073677815946
+    },
+    "anchor_utility": {
+      "weights": [
+        0.11671184581492598,
+        0.09644035875177484,
+        0.23564190122251427,
+        0.11796533833369742,
+        0.09903874642167455,
+        0.12607005729943113,
+        0.09624088025072364,
+        0.11189087190525805
+      ],
+      "update_l2_norm": 0.001,
+      "predicted_validation_nll_delta": 5.421157340069264e-05,
+      "actual_validation_nll_delta": 5.433502199192475e-05,
+      "weight_after_anchor_mass": 0.4332405558770874
+    }
+  },
+  "parameters_restored_exactly": true,
+  "limitations": [
+    "A local first-order utility is not a semantic causal contribution.",
+    "The one-step check uses exact temporary SGD displacements, not an Adam/LoRA implementation.",
+    "Post-anchor positions are temporal labels, not evidence that those tokens are redundant.",
+    "Two anchors need separate directional information; the shared forward is not one scalar backward for both."
+  ],
+  "source_sha256": "6351fdda404a91545c76924539fad6ceadf7df72a243bc7f8a6d6718694da52b",
+  "elapsed_seconds": 0.20657190000201808
+}

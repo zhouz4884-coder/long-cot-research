@@ -1,0 +1,62 @@
+{
+  "observed_at_utc": "2026-11-05T08:00:02Z",
+  "study_root": "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013",
+  "gpu_identity": "0, NVIDIA GeForce RTX 3090, GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a, 24 MiB\n1, NVIDIA GeForce RTX 3090, GPU-a696ce9a-7137-cf6f-b4d3-deb992a72f28, 24 MiB\n",
+  "study_processes": [],
+  "formal_sha256": "423f8b632d628443d9a4517bb8bb280714940776e1a4ddf2fbe166593ce323f2",
+  "results/continuation_state.json": {
+    "stage": "bank_development",
+    "status": "running",
+    "unix": 1791959484.5345395,
+    "pids": {
+      "0": 1874879,
+      "1": 1874880
+    }
+  },
+  "banks": {
+    "development": [
+      {
+        "shard": 0,
+        "complete_lines": 42,
+        "partial_tail": false,
+        "marker": null
+      },
+      {
+        "shard": 1,
+        "complete_lines": 40,
+        "partial_tail": false,
+        "marker": null
+      }
+    ],
+    "selection": [
+      {
+        "shard": 0,
+        "complete_lines": 0,
+        "partial_tail": false,
+        "marker": null
+      },
+      {
+        "shard": 1,
+        "complete_lines": 0,
+        "partial_tail": false,
+        "marker": null
+      }
+    ]
+  },
+  "m1_raw_files": [],
+  "test_generation_files": [],
+  "supervisor_tail": [
+    "{\"stage\": \"budget_analysis\", \"status\": \"processes_exited_pending_evidence_review\", \"unix\": 1791944319.0854886, \"exit_codes\": {\"None\": 0}}",
+    "{\"stage\": \"noise_analysis\", \"status\": \"running\", \"unix\": 1791944319.0893407, \"pids\": {\"None\": 1804255}}",
+    "{\"stage\": \"noise_analysis\", \"status\": \"processes_exited_pending_evidence_review\", \"unix\": 1791944324.1042407, \"exit_codes\": {\"None\": 0}}",
+    "{\"stage\": \"native_pilot\", \"status\": \"running\", \"unix\": 1791944324.1880665, \"pids\": {\"0\": 1804357, \"1\": 1804358}}",
+    "{\"stage\": \"native_pilot\", \"status\": \"processes_exited_pending_evidence_review\", \"unix\": 1791957882.7168787, \"exit_codes\": {\"0\": 0, \"1\": 0}}",
+    "{\"stage\": \"native_analysis\", \"status\": \"running\", \"unix\": 1791957882.7189445, \"pids\": {\"None\": 1866381}}",
+    "{\"stage\": \"native_analysis\", \"status\": \"processes_exited_pending_evidence_review\", \"unix\": 1791957887.7247393, \"exit_codes\": {\"None\": 0}}",
+    "{\"stage\": \"pilot_integrity\", \"status\": \"running\", \"unix\": 1791957887.7268975, \"pids\": {\"None\": 1866515}}",
+    "{\"stage\": \"pilot_integrity\", \"status\": \"processes_exited_pending_evidence_review\", \"unix\": 1791957892.7404506, \"exit_codes\": {\"None\": 0}}",
+    "{\"stage\": \"formal_review\", \"status\": \"waiting_for_agent_interpretation\", \"unix\": 1791957892.74144, \"evidence\": [\"results/budget_pilot_analysis.json\", \"results/noise_analysis.json\", \"results/native_pilot_analysis.json\", \"results/pilot_evidence_audit.json\"]}",
+    "{\"stage\": \"formal_review\", \"status\": \"waiting_for_reviewed_dependency\", \"unix\": 1791957892.7428782, \"dependency\": \"provenance/formal_review.json\"}",
+    "{\"stage\": \"bank_development\", \"status\": \"running\", \"unix\": 1791959484.5345395, \"pids\": {\"0\": 1874879, \"1\": 1874880}}"
+  ]
+}

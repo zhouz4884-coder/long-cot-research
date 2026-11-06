@@ -1,0 +1,37 @@
+{
+  "qstat": {
+    "out": "Job Id: 190150.manager\n    Job_Name = lcr-p0-admit\n    Job_Owner = zhoubin@manager\n    job_state = Q\n    queue = GPUDefq\n    server = manager\n    Checkpoint = u\n    ctime = Thu Nov  5 18:11:28 2026\n    Error_Path = manager:/data/home/zhoubin/longcot_state_repair_20261105/logs\n\t/admission_01.log\n    Hold_Types = n\n    Join_Path = oe\n    Keep_Files = n\n    Mail_Points = a\n    mtime = Thu Nov  5 18:11:29 2026\n    Output_Path = manager:/data/home/zhoubin/longcot_state_repair_20261105/log\n\ts/admission_01.log\n    Priority = 0\n    qtime = Thu Nov  5 18:11:28 2026\n    Rerunable = True\n    Resource_List.nodes = gpu2:ppn=2:gpus=1:gpublic\n    Resource_List.mem = 8gb\n    Resource_List.nodect = 1\n    Variable_List = PBS_O_QUEUE=GPUDefq,PBS_O_HOME=/data/home/zhoubin,\n\tPBS_O_LOGNAME=zhoubin,\n\tPBS_O_PATH=/var/lib/torque/bin:/var/lib/torque/sbin:/opt/slurm-20.11.\n\t9/sbin:/opt/slurm-20.11.9/bin:/usr/lib64/qt-3.3/bin:/usr/bin:/bin:/usr\n\t/sbin:/sbin,PBS_O_SHELL=/bin/bash,PBS_O_LANG=zh_CN.UTF-8,\n\tPBS_O_SUBMIT_FILTER=/usr/local/sbin/torque_submitfilter,\n\tPBS_O_WORKDIR=/data/home/zhoubin/longcot_state_repair_20261105,\n\tPBS_O_HOST=manager,PBS_O_SERVER=manager\n    euser = zhoubin\n    egroup = caoxi\n    queue_type = E\n    comment = Not Running: Not enough of the right type of nodes are available\n\t\n    etime = Thu Nov  5 18:11:28 2026\n    submit_args = pbs/v100_admission_gpu2.pbs\n    fault_tolerant = False\n    job_radix = 0\n    submit_host = manager\n    init_work_dir = /data/home/zhoubin/longcot_state_repair_20261105\n    request_version = 1\n\n",
+    "err": "/data/home/zhoubin/.bashrc:\u884c12: /data/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin/mpivars.sh: \u6ca1\u6709\u90a3\u4e2a\u6587\u4ef6\u6216\u76ee\u5f55\n/data/home/zhoubin/.bashrc:\u884c13: /data/intel/parallel_studio_xe_2019.5.075/bin/psxevars.sh: \u6ca1\u6709\u90a3\u4e2a\u6587\u4ef6\u6216\u76ee\u5f55\n",
+    "exit": 0
+  },
+  "provenance/modelscope_download_01.json": {
+    "model_id": "Qwen/Qwen3-1.7B",
+    "requested_revision": "master",
+    "started_unix": 1793873488.569302,
+    "weights_source": "ModelScope",
+    "gpu_used": false,
+    "status": "FAILED",
+    "exception_type": "ImportError",
+    "elapsed_seconds": 12.491554975509644
+  },
+  "results/v100_admission_01.json": {
+    "exists": false
+  },
+  "modelscope_log_first_lines": [
+    "Importing official ModelScope SDK",
+    "{\"status\": \"FAILED\", \"elapsed_seconds\": 12.491554975509644}",
+    "Traceback (most recent call last):",
+    "  File \"/data/home/zhoubin/contractkv_v100/env/contractkv-v100-cu121/lib/python3.10/site-packages/requests/compat.py\", line 11, in <module>",
+    "    import chardet",
+    "ModuleNotFoundError: No module named 'chardet'",
+    "",
+    "During handling of the above exception, another exception occurred:",
+    "",
+    "Traceback (most recent call last):",
+    "  File \"/data/home/zhoubin/longcot_state_repair_20261105/source/download_modelscope.py\", line 21, in <module>",
+    "    from modelscope import snapshot_download",
+    "  File \"/data/home/zhoubin/contractkv_v100/env/contractkv-v100-cu121/lib/python3.10/site-packages/modelscope/__init__.py\", line 112, in <module>",
+    "    from modelscope.utils import hf_util",
+    "  File \"/data/home/zhoubin/contractkv_v100/env/contractkv-v100-cu121/lib/python3.10/site-packages/modelscope/utils/hf_util/__init__.py\", line 2, in <module>"
+  ]
+}

@@ -1,0 +1,233 @@
+[
+  {
+    "id": "positive_explicit_use",
+    "question": "Find a total and then double it.",
+    "trace": "The intermediate total is 7.\n\nTwice this total is 7*2=14.",
+    "expected_support_edges": [
+      [
+        0,
+        1
+      ]
+    ],
+    "must_find": [
+      0,
+      1
+    ],
+    "reason": "Positive control: an explicit same-quantity use."
+  },
+  {
+    "id": "same_value_collision",
+    "question": "Compare two unrelated quantities.",
+    "trace": "The bus fare is 6 dollars.\n\nIndependently, the box contains 6 coins.",
+    "expected_support_edges": [],
+    "must_spuriously_find": [
+      0,
+      1
+    ],
+    "reason": "Equal value does not establish a reference or derivation."
+  },
+  {
+    "id": "negated_old_claim",
+    "question": "Multiply the given factors.",
+    "trace": "The product is 15.\n\n15 is wrong; the valid multiplication gives 12.",
+    "expected_support_edges": [],
+    "must_spuriously_find": [
+      0,
+      1
+    ],
+    "other_reference_type": "rejected_claim",
+    "reason": "A rejection is a mention/contrast edge, not active numeric support."
+  },
+  {
+    "id": "units_collide",
+    "question": "Track a length and a mass.",
+    "trace": "The rod length is 8 cm.\n\nIndependently the parcel mass is 8 kg.",
+    "expected_support_edges": [],
+    "must_spuriously_find": [
+      0,
+      1
+    ],
+    "reason": "Dimensioned quantities with the same number differ."
+  },
+  {
+    "id": "branch_scope_collision",
+    "question": "Consider separate alternatives.",
+    "trace": "Assuming the door is open, the count is 9.\n\nIn the other independent case the count is also 9.",
+    "expected_support_edges": [],
+    "must_spuriously_find": [
+      0,
+      1
+    ],
+    "reason": "Different conditional scopes are not one binding."
+  },
+  {
+    "id": "first_occurrence_not_actual_source",
+    "question": "Track two unrelated branches.",
+    "trace": "The left-branch length is 6.\n\nIndependently the right-branch price is 6.\n\nDouble the right-branch price: 6*2=12.",
+    "expected_support_edges": [
+      [
+        1,
+        2
+      ]
+    ],
+    "must_spuriously_find": [
+      0,
+      2
+    ],
+    "must_miss": [
+      1,
+      2
+    ],
+    "reason": "The actual referent is a later independent occurrence, not the first global number."
+  },
+  {
+    "id": "question_number_used_as_new_quantity",
+    "question": "There are 3 red beads; separately find a quotient and multiply it by 7.",
+    "trace": "The independently computed quotient is 3.\n\nUse this quotient: 3*7=21.",
+    "expected_support_edges": [
+      [
+        0,
+        1
+      ]
+    ],
+    "must_miss": [
+      0,
+      1
+    ],
+    "reason": "Being in the question as a different quantity must not suppress a derived binding."
+  },
+  {
+    "id": "implicit_pronoun",
+    "question": "Find a count and then double the result.",
+    "trace": "The computed count is 7.\n\nDouble that result to obtain 14.",
+    "expected_support_edges": [
+      [
+        0,
+        1
+      ]
+    ],
+    "must_miss": [
+      0,
+      1
+    ],
+    "reason": "Coreference need not repeat the numeric literal."
+  },
+  {
+    "id": "equivalent_expression",
+    "question": "Evaluate an intermediate power, then add a unit.",
+    "trace": "The intermediate value is 2^3.\n\nAdding a unit to that value gives 8+1=9.",
+    "expected_support_edges": [
+      [
+        0,
+        1
+      ]
+    ],
+    "must_miss": [
+      0,
+      1
+    ],
+    "reason": "Atomic numeric tokens do not evaluate symbolic equivalence."
+  },
+  {
+    "id": "number_word",
+    "question": "Compute a share and use it.",
+    "trace": "The computed share is one half.\n\nUsing that share gives 0.5*10=5.",
+    "expected_support_edges": [
+      [
+        0,
+        1
+      ]
+    ],
+    "must_miss": [
+      0,
+      1
+    ],
+    "reason": "Number words and aliases can carry the dependency."
+  },
+  {
+    "id": "unit_conversion",
+    "question": "Compute a duration and express it in another unit.",
+    "trace": "The calculated duration is 30 minutes.\n\nIn hours, that duration is 0.5.",
+    "expected_support_edges": [
+      [
+        0,
+        1
+      ]
+    ],
+    "must_miss": [
+      0,
+      1
+    ],
+    "reason": "Semantic equality may require unit conversion, not equal raw magnitudes."
+  },
+  {
+    "id": "approximation_not_identity",
+    "question": "Keep exact and approximate cases separate.",
+    "trace": "The exact benchmark is 3.\n\nAn unrelated estimate is about 3 after rounding.",
+    "expected_support_edges": [],
+    "must_spuriously_find": [
+      0,
+      1
+    ],
+    "reason": "Rounded coincidence is not a unique provenance key."
+  },
+  {
+    "id": "conditional_question_value",
+    "question": "If open the width is 3; otherwise it is 5. Use the closed case.",
+    "trace": "The door is closed, so the applicable width is 5.\n\nUse this applicable width: 5*2=10.",
+    "expected_support_edges": [
+      [
+        0,
+        1
+      ]
+    ],
+    "must_miss": [
+      0,
+      1
+    ],
+    "reason": "A question value needs its condition; resolving that condition is an intermediate step."
+  },
+  {
+    "id": "dynamic_initial_question_fact",
+    "question": "Initially there are 10 apples; later some are removed.",
+    "trace": "After removing some apples there are 7 left.\n\nAfter returning some, there are 9 now.",
+    "expected_support_edges": [
+      [
+        0,
+        1
+      ]
+    ],
+    "must_miss": [
+      0,
+      1
+    ],
+    "reason": "Initial stock=10 remains a historical fact, not current stock=10 at every later time."
+  },
+  {
+    "id": "list_marker_collision",
+    "question": "Compare unrelated steps.",
+    "trace": "1. Compute the left branch separately.\n\n1. Start a new unrelated list for the right branch.",
+    "expected_support_edges": [],
+    "must_spuriously_find": [
+      0,
+      1
+    ],
+    "reason": "Enumeration numerals are not derived quantities."
+  },
+  {
+    "id": "rational_normalization_positive",
+    "question": "Compute a ratio and use it.",
+    "trace": "The ratio is 1/2.\n\nUse the same ratio: 0.5*6=3.",
+    "expected_support_edges": [
+      [
+        0,
+        1
+      ]
+    ],
+    "must_find": [
+      0,
+      1
+    ],
+    "reason": "Exact rational normalization handles this limited notation change only."
+  }
+]

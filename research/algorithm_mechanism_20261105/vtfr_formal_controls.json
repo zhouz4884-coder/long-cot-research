@@ -1,0 +1,390 @@
+{
+  "status": "PASS_STANDARD_LIBRARY_FORMAL_CONTROLS",
+  "device": "CPU only",
+  "gpu_used": false,
+  "network_used": false,
+  "model_used": false,
+  "source_sha256": "7ed027967932f8a2d7ff224ed119310a823f6f451b20fe22c96101600a73d086",
+  "attachment_sha256": "7366c6c946986ec2dbab8075197bac14e73d67e25cf8692a8e3cdd3f47983e1f",
+  "likelihood_ratio_is_not_truth": {
+    "Px": "x=2+2",
+    "old": 4,
+    "new": 5,
+    "normalized_likelihood_table": {
+      "4": {
+        "Px": 0.1,
+        "Other": 0.9
+      },
+      "5": {
+        "Px": 0.9,
+        "Other": 0.1
+      }
+    },
+    "log_likelihood_ratio_new_over_old": 2.197224577336219,
+    "LR_accepts": true,
+    "exact_constraint_accepts": false,
+    "scope": "Logical counterexample; not a measured LLM probability."
+  },
+  "incomplete_local_constraint": {
+    "local_constraint": "x*x=1",
+    "global_additional_constraint": "x>0",
+    "candidate": -1,
+    "passes_exact_local": true,
+    "passes_full_constraints": false
+  },
+  "rejecting_bad_new_does_not_certify_old": {
+    "Px": "x=2+2",
+    "old": 3,
+    "new": 5,
+    "new_rejected": true,
+    "keeping_old_is_correct": false,
+    "required_action": "Do not certify old solely because new was rejected; verify old or rebuild/abstain."
+  },
+  "multiple_children_frontier": {
+    "rules": {
+      "a": "x+1",
+      "b": "3*x",
+      "z": "a+b"
+    },
+    "old_store": {
+      "x": {
+        "value": 1,
+        "version": 0,
+        "parents": {}
+      },
+      "a": {
+        "value": 2,
+        "version": 0,
+        "parents": {
+          "x": 0
+        }
+      },
+      "b": {
+        "value": 3,
+        "version": 0,
+        "parents": {
+          "x": 0
+        }
+      },
+      "z": {
+        "value": 5,
+        "version": 0,
+        "parents": {
+          "a": 0,
+          "b": 0
+        }
+      }
+    },
+    "accepted_update": {
+      "x": 2
+    },
+    "verified_trace": {
+      "invalidated_old_variables": [
+        "a",
+        "b",
+        "x",
+        "z"
+      ],
+      "ready_frontiers": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b"
+        ],
+        [
+          "z"
+        ]
+      ],
+      "execution_order": [
+        "a",
+        "b",
+        "z"
+      ],
+      "retained": []
+    },
+    "verified_store": {
+      "x": {
+        "value": 2,
+        "version": 1,
+        "parents": {}
+      },
+      "a": {
+        "value": 3,
+        "version": 1,
+        "parents": {
+          "x": 1
+        }
+      },
+      "b": {
+        "value": 6,
+        "version": 1,
+        "parents": {
+          "x": 1
+        }
+      },
+      "z": {
+        "value": 9,
+        "version": 1,
+        "parents": {
+          "a": 1,
+          "b": 1
+        }
+      }
+    },
+    "single_child_then_sink_mixed_store": {
+      "x": {
+        "value": 2,
+        "version": 1,
+        "parents": {}
+      },
+      "a": {
+        "value": 3,
+        "version": 1,
+        "parents": {
+          "x": 1
+        }
+      },
+      "b": {
+        "value": 3,
+        "version": 0,
+        "parents": {
+          "x": 0
+        }
+      },
+      "z": {
+        "value": 6,
+        "version": 1,
+        "parents": {
+          "a": 1,
+          "b": 0
+        }
+      }
+    },
+    "naive_z": 6,
+    "correct_z": 9,
+    "mixed_version_read_is_valid": false
+  },
+  "indirect_invariant": {
+    "rules": {
+      "a": "x-x",
+      "b": "a+7"
+    },
+    "old_store": {
+      "x": {
+        "value": 2,
+        "version": 0,
+        "parents": {}
+      },
+      "a": {
+        "value": 0,
+        "version": 0,
+        "parents": {
+          "x": 0
+        }
+      },
+      "b": {
+        "value": 7,
+        "version": 0,
+        "parents": {
+          "a": 0
+        }
+      }
+    },
+    "new_store": {
+      "x": {
+        "value": 5,
+        "version": 1,
+        "parents": {}
+      },
+      "a": {
+        "value": 0,
+        "version": 1,
+        "parents": {
+          "x": 1
+        }
+      },
+      "b": {
+        "value": 7,
+        "version": 1,
+        "parents": {
+          "a": 1
+        }
+      }
+    },
+    "trace": {
+      "invalidated_old_variables": [
+        "a",
+        "b",
+        "x"
+      ],
+      "ready_frontiers": [
+        [
+          "a"
+        ],
+        [
+          "b"
+        ]
+      ],
+      "execution_order": [
+        "a",
+        "b"
+      ],
+      "retained": []
+    },
+    "certificate": "For all integer x, x-x=0; hence b=7.",
+    "scope": "A semantic invariant can preserve numeric truth, but does not certify a context-dependent KV."
+  },
+  "cycle": {
+    "graph": {
+      "a": [
+        "b"
+      ],
+      "b": [
+        "a"
+      ],
+      "r": []
+    },
+    "status": "REJECTED_CYCLE",
+    "message": "Cycle: ['a', 'b']",
+    "required_extension": "An SCC/fixed-point solver with separate uniqueness/convergence conditions, or versioned unrolling."
+  },
+  "rules_and_versioned_values": {
+    "immutable_rules": {
+      "y": "x-9",
+      "z": "2*y"
+    },
+    "old_store": {
+      "x": {
+        "value": 24,
+        "version": 0,
+        "parents": {}
+      },
+      "y": {
+        "value": 15,
+        "version": 0,
+        "parents": {
+          "x": 0
+        }
+      },
+      "z": {
+        "value": 30,
+        "version": 0,
+        "parents": {
+          "y": 0
+        }
+      }
+    },
+    "new_store": {
+      "x": {
+        "value": 28,
+        "version": 1,
+        "parents": {}
+      },
+      "y": {
+        "value": 19,
+        "version": 1,
+        "parents": {
+          "x": 1
+        }
+      },
+      "z": {
+        "value": 38,
+        "version": 1,
+        "parents": {
+          "y": 1
+        }
+      }
+    },
+    "trace": {
+      "invalidated_old_variables": [
+        "x",
+        "y",
+        "z"
+      ],
+      "ready_frontiers": [
+        [
+          "y"
+        ],
+        [
+          "z"
+        ]
+      ],
+      "execution_order": [
+        "y",
+        "z"
+      ],
+      "retained": []
+    },
+    "claim": "Retire old x/y/z assertions, not y=x-9 or z=2*y; parent versions prevent stale reads."
+  },
+  "rejected_R_already_in_cache": {
+    "scope": "Abstract deterministic contextual-state counterexample, not a Transformer simulation.",
+    "transition": "h_next=3*h_prev+numeric_payload; current_x carries latest assignment",
+    "pre_R_snapshot": [
+      {
+        "label": "trusted x=4",
+        "hidden": 4,
+        "current_x": 4
+      }
+    ],
+    "main_after_R_and_successor": [
+      {
+        "label": "trusted x=4",
+        "hidden": 4,
+        "current_x": 4
+      },
+      {
+        "label": "proposal R: x=5",
+        "hidden": 17,
+        "current_x": 5
+      },
+      {
+        "label": "neutral successor",
+        "hidden": 51,
+        "current_x": 5
+      }
+    ],
+    "G_accepts_R": false,
+    "reject_flag_without_rollback_output": 5,
+    "delete_R_row_but_keep_successor_hidden": 51,
+    "restore_preR_and_rebuild_successor_hidden": 12,
+    "proper_rollback_output": 4
+  },
+  "nonunique_pointer_explanation": {
+    "observed_inputs": [
+      "B included",
+      "B suppressed from encoding"
+    ],
+    "pointer_model_outputs": [
+      56,
+      38
+    ],
+    "surface_binding_without_explicit_pointer_outputs": [
+      56,
+      38
+    ],
+    "scope": "Existence of alternative explanatory models; not either mechanism being measured in Qwen."
+  },
+  "bounded_exact_reference": {
+    "cases": 675,
+    "root_domain": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "program_count": 3,
+    "all_replays_match_fresh_exact_evaluation": true,
+    "all_parent_versions_valid": true,
+    "scope": "Bounded implementation control under exact symbolic assumptions; not a proof of LLM or deployment correctness."
+  },
+  "limitations": [
+    "No learned verifier calibration was measured.",
+    "No neural cache was generated; the abstract state counterexample establishes a missing protocol action only.",
+    "The mathematical soundness argument needs the stated pure-DAG/exact-checker assumptions; tests do not replace its proof.",
+    "The attachment's P1/GPU/training instructions were not executed."
+  ]
+}

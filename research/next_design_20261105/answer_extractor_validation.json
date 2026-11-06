@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "source_sha256": "11e50a9556d08c0c8de28f96fd315211fb2490fceaeefea4fdfb4812e807f939",
+  "extractor_sha256": "c2bc053b66778288f524d46f4353e825b1ee654d829027bd02b1cb3173255eed",
+  "logic_extracted_unchanged": true,
+  "future_runs_only_predeclared": true,
+  "negative_and_format_controls": [
+    {
+      "output": "33。",
+      "extracted": {
+        "value": 33,
+        "method": "single_integer_optional_terminal_period",
+        "matched_text": "33"
+      },
+      "expected": 33
+    },
+    {
+      "output": "2*(28-9)=2*19=38。",
+      "extracted": {
+        "value": 38,
+        "method": "last_line_complete_equation_chain_terminal_integer",
+        "matched_text": "2*(28-9)=2*19=38",
+        "normalized_math_for_grammar_only": "2*(28-9)=2*19=38",
+        "equation_truth_evaluated": false
+      },
+      "expected": 38
+    },
+    {
+      "output": "36//6=6，5*6-2=28。所以答案是 28。",
+      "extracted": {
+        "value": 28,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "答案是 28"
+      },
+      "expected": 28
+    },
+    {
+      "output": "最终答案：-8",
+      "extracted": {
+        "value": -8,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：-8"
+      },
+      "expected": -8
+    },
+    {
+      "output": "x=11\n还没算出最终答案",
+      "extracted": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      },
+      "expected": null
+    },
+    {
+      "output": "最终答案：38 或 56",
+      "extracted": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      },
+      "expected": null
+    },
+    {
+      "output": "请从这些数里选38",
+      "extracted": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      },
+      "expected": null
+    },
+    {
+      "output": "2*(28-9)=",
+      "extracted": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      },
+      "expected": null
+    },
+    {
+      "output": "错算 38。最终答案：56。",
+      "extracted": {
+        "value": 56,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：56"
+      },
+      "expected": 56
+    }
+  ],
+  "old_output_strings_parseable": 80,
+  "gold_read_to_extract": false,
+  "gpu_used": false
+}

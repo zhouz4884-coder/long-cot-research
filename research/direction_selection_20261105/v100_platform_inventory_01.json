@@ -1,0 +1,99 @@
+{
+  "observed_at_utc": "2026-11-05T09:49:49Z",
+  "hostname": "manager",
+  "user": "zhoubin",
+  "cwd": "/data/home/zhoubin",
+  "home": "/data/home/zhoubin",
+  "commands": [
+    {
+      "argv": [
+        "uname",
+        "-sr"
+      ],
+      "exit_code": 0,
+      "stdout": "Linux 3.10.0-957.el7.x86_64\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "df",
+        "-h",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "\u6587\u4ef6\u7cfb\u7edf                \u5bb9\u91cf  \u5df2\u7528  \u53ef\u7528 \u5df2\u7528% \u6302\u8f7d\u70b9\n172.0.10.41@o2ib:/buct  476T   42T  410T   10% /data\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "qstat",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Version: 6.1.1\nCommit: 4ccb0789f1691a1cb837e171464fa4e5e4883112\n"
+    },
+    {
+      "argv": [
+        "qstat",
+        "-Qf",
+        "GPUDefq"
+      ],
+      "exit_code": 0,
+      "stdout": "Queue: GPUDefq\n    queue_type = Execution\n    total_jobs = 7\n    state_count = Transit:0 Queued:2 Held:4 Waiting:0 Running:1 Exiting:0 Comp\n\tlete:0 \n    mtime = 1773639059\n    resources_assigned.nodect = 1\n    enabled = True\n    started = True\n\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "qstat",
+        "-u",
+        "zhoubin"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "pbsnodes",
+        "-av",
+        "gpu2"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "pbsnodes: invalid option -- 'v'\nusage:\tpbsnodes [-{c|d|l|o|p|r}] [-s server] [-n] [-N \"note\"] [-A \"append note\"] [-q] [-m standby|suspend|sleep|hibernate|shutdown] node ...\n\tpbsnodes [-{a|x}] [-s server] [-q] [node]\n"
+    },
+    {
+      "argv": [
+        "getent",
+        "hosts",
+        "gpu2"
+      ],
+      "exit_code": 0,
+      "stdout": "172.0.10.23     gpu2.ry.com gpu2\n",
+      "stderr": ""
+    }
+  ],
+  "software_paths": {
+    "python": "/usr/bin/python",
+    "python3": "/usr/bin/python3",
+    "conda": null,
+    "module": null,
+    "qsub": "/var/lib/torque/bin/qsub",
+    "qstat": "/var/lib/torque/bin/qstat",
+    "nvidia-smi": null,
+    "curl": "/usr/bin/curl",
+    "wget": "/usr/bin/wget"
+  },
+  "known_model_or_environment_paths": {
+    "/data/home/zhoubin/models": false,
+    "/data/home/zhoubin/.cache/modelscope": true,
+    "/data/home/zhoubin/miniconda3": false,
+    "/data/home/zhoubin/anaconda3": false
+  },
+  "ssh_trust": {
+    "mode": "existing_known_hosts",
+    "observed_host_key_sha256": "SHA256:wYGMPPMav+t+20zr07PxNzqWiLbbtTI1iIASQ6RWg48"
+  },
+  "scope": "Read-only login/scheduler/node inventory. No GPU allocation, model download or experiment yet."
+}

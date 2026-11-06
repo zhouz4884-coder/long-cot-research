@@ -1,0 +1,47 @@
+{
+  "started_unix": 1791979204.4472146,
+  "stage": "completed_cpu_preparation",
+  "remote_workbench": "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013/baseline_workbench/deer_author_20261014_v1",
+  "formal_bound_files_uploaded": false,
+  "gpu_devices_passed_to_container": false,
+  "source_sha256": {
+    "deer_author_bridge.py": "17b08c73fae3b12f4c7c07a7f529c54c7fb2484678aef3dd033197c112ec2f7b",
+    "deer_author_source.py": "bf9b611d81821d82d3e8ba9689e54b1d50a5863e3db4a812103b437e4e2bc17a",
+    "deer_trial_score.py": "c13fd048a2f39c694e2557d3220f226b2a1f65a9c9803431c4a02212107040e4",
+    "deer_pro.py": "c98c4942a804117ba5a694b404c74793b61d4f0c5aa9062df54ad6b80e2f22ca",
+    "scripts/run_deer_author_batch.py": "51f0e391ea7756263812438a402f464dfe4b23a3d8ff27056cf08e5240648066",
+    "scripts/audit_deer_source_interfaces.py": "cd32932428165d3d574fc92bb28fcda7338d0a1c59c99db7a8744d8d3b00d32d",
+    "tests/test_deer_author_bridge.py": "79986cc4b6bcaba3ab837d6951892287871dbe77682100508149de2bdbcb447f",
+    "tests/test_deer_author_state_machine.py": "e65dbbe55a3646c99963e09727d3a44f66cdd66cd410eecb9eb220baf682c667",
+    "tests/test_deer_author_guards.py": "1c84d80b87beae4068c55e35a2ee7a5ea992449587050ae2b5c83e60c7a71739",
+    "tests/test_deer_trial_score.py": "e033910cd8c112f059d775bbe798eb5d91f8711148ec0bbede1f525b16e442e5",
+    "tests/test_deer_pro.py": "212e0e4523fcb69c62c37656c45eda64c93bba561b516b44bda2cb3a52c393ca",
+    "vendor/DEER/vllm-deer-qwen3.py": "96460df9d532e02ca82535f6b5a6757cffff40bcbb233a4d6a1bd074684cc095",
+    "vendor/DEER/vanilla_deer.py": "8a20fdc45ae3511ca569191f0fa1c82680ed47bdde07f4279d8a0282c6ba0707",
+    "vendor/DEER/LICENSE": "b867a5fdc0f588eec05378953303437f72aad2e6984b63b2c60ca5b5247715a3",
+    "provenance/deer_runtime_wheels.json": "a6dc7b431e9d380cdb9415890830a97bfa721896707fec10f51a52f9f03e4cb8",
+    "vendor/runtime_wheels/nltk-3.9.1-py3-none-any.whl": "4fa26829c5b00715afe3061398a8989dc643b92ce7dd93fb4585a70930d168a1",
+    "vendor/runtime_wheels/joblib-1.4.2-py3-none-any.whl": "06d478d5674cbc267e7496a410ee875abd68e4340feff4490bcb7afb88060ae6"
+  },
+  "host_identity": {
+    "formal_sha256": "423f8b632d628443d9a4517bb8bb280714940776e1a4ddf2fbe166593ce323f2",
+    "gpu_uuids": [
+      "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+      "GPU-a696ce9a-7137-cf6f-b4d3-deb992a72f28"
+    ],
+    "uid": 1000,
+    "gid": 1000
+  },
+  "dependency_install": {
+    "exit_code": 0,
+    "stdout": "Processing /wheels/nltk-3.9.1-py3-none-any.whl\nProcessing /wheels/joblib-1.4.2-py3-none-any.whl\nInstalling collected packages: nltk, joblib\n\nSuccessfully installed joblib-1.4.2 nltk-3.9.1\n",
+    "stderr": ""
+  },
+  "cpu_controls": {
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"tests_run\": 23, \"cpu_only\": true, \"installed_wheel_payload_files_verified\": 555, \"versions\": {\"torch\": \"2.8.0+cu128\", \"transformers\": \"4.56.1\", \"vllm\": \"0.10.2\", \"numpy\": \"2.2.6\", \"nltk\": \"3.9.1\", \"joblib\": \"1.4.2\", \"regex\": \"2025.9.1\"}, \"test_output\": \"test_all_batch_tokens_and_errors_are_recorded (test_deer_author_bridge.BridgeControls.test_all_batch_tokens_and_errors_are_recorded) ... ok\\ntest_nonfinite_backend_probability_is_preserved_in_json (test_deer_author_bridge.BridgeControls.test_nonfinite_backend_probability_is_preserved_in_json) ... ok\\ntest_pro_expands_only_trials_and_charges_every_branch (test_deer_author_bridge.BridgeControls.test_pro_expands_only_trials_and_charges_every_branch) ... ok\\ntest_raw_defaults_preserved_and_repair_explicit (test_deer_author_bridge.BridgeControls.test_raw_defaults_preserved_and_repair_explicit) ... ok\\ntest_repair_requires_actual_identity_and_raw_calls_original (test_deer_author_bridge.BridgeControls.test_repair_requires_actual_identity_and_raw_calls_original) ... ok\\ntest_admission_refuses_while_m1_not_complete (test_deer_author_guards.AuthorGuards.test_admission_refuses_while_m1_not_complete) ... ok\\ntest_gpu_uuid_must_match_executing_index (test_deer_author_guards.AuthorGuards.test_gpu_uuid_must_match_executing_index) ... ok\\ntest_matching_uuid_with_live_process_refused (test_deer_author_guards.AuthorGuards.test_matching_uuid_with_live_process_refused) ... ok\\ntest_admission_forces_four_real_trial_calls_before_any_thinking (test_deer_author_state_machine.StateMachineControls.test_admission_forces_four_real_trial_calls_before_any_thinking) ... ok\\ntest_declared_short_trial_repair_continues_instead_of_silent_acceptance (test_deer_author_state_machine.StateMachineControls.test_declared_short_trial_repair_continues_instead_of_silent_acceptance) ... ok\\ntest_duplicate_text_and_source_reordering_keep_every_frozen_id (test_deer_author_state_machine.StateMachineControls.test_duplicate_text_and_source_reordering_keep_every_frozen_id) ... ok\\ntest_full_pro_state_machine_rejects_noisy_first_four_and_accepts_second_four (test_deer_author_state_machine.StateMachineControls.test_full_pro_state_machine_rejects_noisy_first_four_and_accepts_second_four) ... ok\\ntest_gold_field_rejected_before_author_main (test_deer_author_state_machine.StateMachineControls.test_gold_field_rejected_before_author_main) ... ok\\ntest_natural_end_think_skips_trial_and_preserves_source_final (test_deer_author_state_machine.StateMachineControls.test_natural_end_think_skips_trial_and_preserves_source_final) ... ok\\ntest_original_rejects_then_restores_wait_then_accepts_and_regenerates_final (test_deer_author_state_machine.StateMachineControls.test_original_rejects_then_restores_wait_then_accepts_and_regenerates_final) ... ok\\ntest_raw_one_token_trial_error_is_preserved (test_deer_author_state_machine.StateMachineControls.test_raw_one_token_trial_error_is_preserved) ... ok\\ntest_invalid_or_missing_trial_cannot_be_silently_omitted (test_deer_pro.ProControls.test_invalid_or_missing_trial_cannot_be_silently_omitted) ... ok\\ntest_only_source_cue_removed_and_all_paper_cues_preserved (test_deer_pro.ProControls.test_only_source_cue_removed_and_all_paper_cues_preserved) ... ok\\ntest_paper_score_not_a_probability_and_no_clipping (test_deer_pro.ProControls.test_paper_score_not_a_probability_and_no_clipping) ... ok\\ntest_emitted_identity_not_dictionary_order_or_alternative_stop (test_deer_trial_score.TrialScoreControls.test_emitted_identity_not_dictionary_order_or_alternative_stop) ... ok\\ntest_empty_single_and_unaligned_are_explicit_zero (test_deer_trial_score.TrialScoreControls.test_empty_single_and_unaligned_are_explicit_zero) ... ok\\ntest_missing_and_nonfinite_do_not_silently_skip (test_deer_trial_score.TrialScoreControls.test_missing_and_nonfinite_do_not_silently_skip) ... ok\\ntest_preserves_actual_source_first_skip_and_terminal_inclusion (test_deer_trial_score.TrialScoreControls.test_preserves_actual_source_first_skip_and_terminal_inclusion) ... ok\\n\\n----------------------------------------------------------------------\\nRan 23 tests in 0.143s\\n\\nOK\\n\"}\n",
+    "stderr": "/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.\n  import pynvml  # type: ignore[import]\n"
+  },
+  "completed_unix": 1791979270.6119509,
+  "scope": "New isolated baseline deployment and genuine CPU controls in pinned image; no GPU or task quality/wall results"
+}

@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -N lcr-p0-admit
+#PBS -q GPUDefq
+#PBS -l nodes=gpu2:ppn=2:gpus=1
+#PBS -l mem=8gb
+#PBS -j oe
+#PBS -o /data/home/zhoubin/longcot_state_repair_20261105/logs/admission_01.log
+set -euo pipefail
+cd /data/home/zhoubin/longcot_state_repair_20261105
+export OMP_NUM_THREADS=2
+export MKL_NUM_THREADS=2
+export PYTHONDONTWRITEBYTECODE=1
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+timeout --signal=TERM --kill-after=15s 240s /data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100/bin/python -B source/v100_admission.py --output results/v100_admission_02.json

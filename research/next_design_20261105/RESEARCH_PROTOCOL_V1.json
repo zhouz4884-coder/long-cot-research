@@ -1,0 +1,153 @@
+{
+  "protocol_id": "longcot_next_design_v1_20261105",
+  "status": "DESIGN_AND_CPU_CONTROLS_COMPLETE; NO_NEW_GPU_RUN",
+  "scope": "Exploratory method design, not a public preregistration, paper novelty claim or execution of every branch.",
+  "research_question": "Verified revisions, preservation of valid dependencies, and bounded re-derivation in long reasoning.",
+  "sequence": [
+    "P1 CPU annotation of frozen historical sample",
+    "Choose P05-format OR P05-topology if worth testing",
+    "G1 engineering/profile admission",
+    "G2 conditional independent one-step check"
+  ],
+  "new_gpu_minutes_consumed": 0,
+  "past_P0_immutable": {
+    "source_sha256": "246219aee9774fae0966c7663c765daf3dba2f1df68bc054b539a4dd5d64331b",
+    "cases_sha256": "6ffe069718396dc2543f85aa9270780f356e293cc9764afdaf2f06a083c5cc27"
+  },
+  "answer_scoring": {
+    "source": "frozen_answer_extractor.py",
+    "sha256": "c2bc053b66778288f524d46f4353e825b1ee654d829027bd02b1cb3173255eed",
+    "gold_blind": true,
+    "unresolved_retained_in_denominator": true,
+    "format_compliance_separate": true,
+    "past_P0_remains_posthoc": true
+  },
+  "readouts": {
+    "common": "按题目原始定义核算，不预设复核记录正确。\n",
+    "direct": "按题目原始定义核算，不预设复核记录正确。\n只写“最终答案：整数”。\n",
+    "one_line": "按题目原始定义核算，不预设复核记录正确。\n先写一行必要计算，再写“最终答案：整数”。\n",
+    "role": "same user follow-up boundary in all cells; rebuild Full within every readout condition; no gold or new computed y/z"
+  },
+  "P1": {
+    "sample": "P1_sampling_manifest.json",
+    "sample_sha256": "6ee72c687db428cf341ec0f65ce1c3d51de94aa57eb8033e899baeccd0ce30eb",
+    "N": 100,
+    "capped": 15,
+    "selection": "ID + fixed salt SHA; no correctness/Wait/length filtering",
+    "use": "historical development observation; FULL-policy with forced boxed readout, not uninterrupted-native",
+    "semantic_labels_completed": false,
+    "event_is_not_KV_causal_attribution": true,
+    "unknown_and_censor_retained": true,
+    "decision": "5% is an investment threshold, not automatic proof from a point estimate; no hard kill from unreviewed/capped negatives"
+  },
+  "P05_format": {
+    "input": "prior 16 cases, exploratory reuse",
+    "arms": [
+      "Full+Direct",
+      "Full+OneLine",
+      "WholeEarly+Direct",
+      "WholeEarly+OneLine"
+    ],
+    "max_outputs": 64,
+    "max_new_tokens_per_output": 64,
+    "hard_single_gpu_minutes": 5,
+    "same_case_paired": true,
+    "all_original_definitions_visible": true,
+    "no_Bshared_claim": true,
+    "purpose": "readout policy effect and mask interaction; not proof of computational impossibility or causal mediation"
+  },
+  "P05_topology": {
+    "input": "P05_topology_cases_v2.json",
+    "input_sha256": "93f39936cb5d1dbdbc1eb647d1c0f228be11cf49f23d14b7b2163b52d01902d1",
+    "builder_sha256": "b5d073f9bab7fd8e2dd70b79441427ad8d6cdf7c2ccceaa02de6bd2a212e0b78",
+    "unique_programs": 2,
+    "states": 12,
+    "arms": [
+      "Full",
+      "WholeB-Early",
+      "Closure-Early",
+      "Closure-Late",
+      "SameBudgetSham-Early"
+    ],
+    "readout": "one_line",
+    "max_outputs": 60,
+    "max_new_tokens_per_output": 64,
+    "hard_single_gpu_minutes": 8,
+    "forced_E_C_W": true,
+    "gold_trigger_not_available_online": true,
+    "tokenizer_mapping_status": "pending CPU mapping and no-model freeze before GPU launch",
+    "clause_padding": "ID-level global width; no retokenization after padding",
+    "same_masked_token_budget": "closure and sham must each mask exactly 3*slot_width",
+    "full_positions_preserved": true,
+    "mask_frees_no_memory": true,
+    "sham_limitation": "matches token count, not age/position/semantics",
+    "controls": [
+      "no-delete identity",
+      "same-path fresh recompute",
+      "prefill and readout forbidden/causal attention zero",
+      "finite sentinel on masked values",
+      "finite outputs",
+      "source/input/model hashes",
+      "runtime+peak+complete pairs"
+    ],
+    "partial_policy": "fixed E/C/W blocks; stop before deadline, report only complete pairs, no replacement by easier/shorter cases"
+  },
+  "gradient": {
+    "math_object": "VCORE-style SGD first-order utility, not causal importance or faithful author-stack reproduction",
+    "parameter_scope_candidate": "LoRA rank 8 q_proj/v_proj, all layers, dropout 0; must freeze exact trainable names/init/dtype before calls",
+    "splits": [
+      "B main reweighting",
+      "Bprime independent reference",
+      "H heldout, not used for q/tau/eta"
+    ],
+    "reference_objectives": [
+      "mean valid-token full-CoT NLL",
+      "conclusion/answer span NLL on same reference context"
+    ],
+    "cost_accounting": "shared reference forward, two directional gradient queries, baseline main forward, two perturbed main forwards; update/backward/validation separate",
+    "alpha": 1,
+    "q": "Gibbs with matched KL to uniform, delta=0.05; q detached; report raw and normalized direction scores",
+    "semantic_bins": "phase preECN/ECN/postECN x role ordinary/wrong/correction/necessary verification/confirmed redundant/unknown",
+    "not_redundant_by_position": true,
+    "G1": {
+      "hard_gpu_minutes": 5,
+      "max_engineering_sequences": 4,
+      "max_engineering_tokens": 512,
+      "short_admission_is_not_long_tail_evidence": true,
+      "precision": "FP32 short directional admission preferred; if lower precision used, explicit nonzero perturbation and epsilon stability required",
+      "checkpoint_not_persistently_updated": true
+    },
+    "G2": {
+      "hard_gpu_minutes": 10,
+      "conditional_on_G1": true,
+      "arms": [
+        "uniform token",
+        "full-reference utility",
+        "answer-reference utility"
+      ],
+      "initial_state_reset_each_arm": true,
+      "optimizer": "SGD no momentum/weight decay",
+      "control": "same L2 update norm; original-scale behavior separate",
+      "primary": "actual heldout pre-conclusion answer NLL delta versus first-order predicted delta",
+      "H_gradient_only_for_posthoc_audit_not_q_selection": true,
+      "Wait_probability_secondary_not_redundancy": true,
+      "restore_and_hash_after": true,
+      "single_step_is_weight_update": true
+    },
+    "stop": "nonfinite, restoration error, quantized-zero/unstable probe, no stable signal, heldout fails, or actual cost exceeds budget; do not scale to32 automatically"
+  },
+  "non_combination_rule": "Do not multiply the P05 readout and topology grids or launch all branches together.",
+  "prelaunch_requirements": [
+    "current resource/host/model identity",
+    "fresh output directory",
+    "frozen token mapping and parser",
+    "complete latency/memory ledger including failures",
+    "exact limits enforced by process/scheduler"
+  ],
+  "limitations": [
+    "This protocol is locally versioned design; no future model performance exists.",
+    "AST dependencies and known correct revisions are controlled experimental information.",
+    "Historical traces cannot be relabeled as a new independent blind test.",
+    "Single-step NLL is not generation accuracy, token saving or full training generalization."
+  ]
+}

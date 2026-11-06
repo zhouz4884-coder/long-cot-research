@@ -1,55 +1,76 @@
-# 自然推理步骤的干预价值测量
+# Long-CoT Research
 
-2026-11-05当前工作已按用户要求切换为**从零长思维链文献调研**，见 [研究地图、文献库与模块组合评估](research/long_cot_landscape_20261105/README.md)。旧实验/计划保留为历史，本轮不恢复旧GPU队列。当前调研不预设早停或旧性能目标。
+长思维链研究：以**最终回答正确率、同预算的算法增量和完整成本**为主线，探索局部修订后的有效计算复用与答案交付。
 
-2026-10-14研究目标已修订为**候选质量准入与长短尺度推理分配**，见 [18周研究目标V2](docs/next_phase/RESEARCH_GOAL_V2_20261014_ZH.md)。新版连续研究目标已在应用中建立为active，每小时定时任务已按用户要求删除。先完成冻结M1，再根据真实质量—耗时结果选择廉价重读或长程机会机制；原结果和下面的旧实验说明保留为历史证据。
+私有研究仓库：[zhouz4884-coder/long-cot-research](https://github.com/zhouz4884-coder/long-cot-research)。原工作目录为 `D:\ACL`。更新日期：2026-11-06。
 
-本项目执行[分享聊天中的研究计划](https://chatgpt.com/share/6ac7ac26-c6a8-83ec-be63-d018140ce23e)。目标是测量继续一个自然推理步骤的净收益，随后检验其可预测性和真实在线价值。
+## 从哪里开始
 
-**最终综合报告写入 `docs/REPORT_ZH.md`；执行过程记录见 `docs/WORKLOG_20261011.md` 和 `docs/WORKLOG_20261012.md`。代码存在、编译通过或 CPU 检查通过均不表示 GPU 实验完成。**
+- [Phase 1–5 总索引](docs/phases/INDEX_ZH.md)
+- [当前研究目标](docs/next_phase/CURRENT_RESEARCH_GOAL_20261105_ZH.md)
+- [最新建议审查与下一轮公平对照](research/repository_phase_plan_20261106/ADVISOR_REVIEW_20261106_ZH.md)
+- [最新实测：P0.5五臂短试](research/p05_design_review_20261105/RUN_STATUS_ZH.md)
+- [文件发布范围与来源](docs/repository/PUBLISH_SCOPE_ZH.md)
 
-2026-10-13 已完成并核验全部 1648 条实际在线记录。本轮结果为 **NO-GO**：主 300 题 FULL=269/300（89.67%），净收益控制器=248/300（82.67%）；token 节省 45.45%、实际耗时节省 44.89%，伴随 7 pp 准确率损失。详细置信区间、基线、失败定位、表示敏感性与下一轮改进见 [完整实验总结](docs/REPORT_ZH.md)。本轮完成的是研究执行与证据归档，不是论文录用。
+## Phase 导航
 
-## 风险约束新路线的连续执行
+| 阶段 | 内容 | 当前状态 |
+|---|---|---|
+| [Phase 1](docs/phases/Phase1_历史研究与早停_NO_GO_ZH.md) | 历史步骤干预/早停研究、负结果与冻结的后续路线 | 原研究归档；后续大队列冻结 |
+| [Phase 2](docs/phases/Phase2_从零文献与方向选择_ZH.md) | 从零长思维链文献地图、模块拆解与方向选择 | 62项资料；不是62篇全部复现 |
+| [Phase 3](docs/phases/Phase3_P0状态恢复机制与首轮证据_ZH.md) | CPU缓存机制与真实P0五臂 | 短试完成；原严格与后验评分分列 |
+| [Phase 4](docs/phases/Phase4_理论审查与P05五臂短试_ZH.md) | 模型/数学审查、P0.5、裁尾复用、候选溯源 | 16题primary完成，8题诊断完成 |
+| [Phase 5](docs/phases/Phase5_候选算法与公平基线_计划_ZH.md) | 版本一致的局部重推、预算内交付与强baseline | 计划/协议阶段，尚无新算法benchmark成绩 |
 
-用户18周路线在独立目录 `experiments/radar20261013` 继续。旧结果复核完成；新100题pilot与116个固定预算请求完整，39状态交叉随机性正在实际采集。共同29题在1024/2048/4096/8192/16384预算下分别答对10/11/13/17/22；16384救回5题、无反向改错，但11题仍触顶。这是参考预算诊断，不是新算法盲测收益。
+每个Phase统一记录：问题、输入与协议、实际动作、数据结论、失败与猜想、下一门槛、证据路径。后续工作继续新增Phase或阶段内子报告，不改写已冻结的结果。
 
-恢复及后续阶段：[连续执行入口](docs/next_phase/CONTINUATION_RUNBOOK_ZH.md)；当前方法、结果与错误修正：[本轮工作记录](docs/next_phase/WORKLOG_20261014_CONTINUATION_ZH.md)；完整状态：[18周台账](docs/next_phase/EXECUTION_LEDGER_ZH.md)。每小时定时任务已于2026-10-14按用户要求删除，新目标独立保留；既有远端采集未因删除定时任务而被停止。正式训练、独立校准、1062题新盲测、跨模型/非数学模型成绩及有条件Serving仍须实际完成。
+## 当前实际结果
 
-## 冻结输入
+| 研究 | 实际结果 | 结论边界 |
+|---|---|---|
+| 历史主300题 | FULL269/300，旧控制器248/300；耗时节省44.89%伴随7pp损失 | 旧控制器NO-GO，历史数据保留 |
+| P0人工16状态五臂 | 事后解析7/3/5/7/5；原严格各0/16 | 输出格式问题与数学结果分开；不作正式benchmark |
+| P0.5同轮五臂 | 8/11/0/12/8；4.4591单卡分钟 | 80自由输出全完成，辅助诊断8题；联合净+1涉及预算/交付差异 |
 
-- 上游 llm-think-stop：`21efe411bcaf34de884c1120ab7fb0573c193a62`，不修改源码。
-- EAT 参考实现：`93a46f7a8b3d401511389e8a10dc117aa7f9c287`。
-- Qwen3-4B revision：`1cfa9a7208912126459214e8b04321603b3df60c`。
-- MATH-500 revision：`6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be`。
-- 题目划分：150 development / 50 engineering / 300 test；见 `data/split_manifest.json`。
+P0与P0.5使用不同读出协议，不连成跨轮提升曲线。CPU随机模型、形式/代数控制、人工短状态、自然轨迹观察和正式benchmark各自标明，不互相替代。
 
-主实验计划使用 FP16、T=0.6、top_p=0.95、top_k=20。原版 BF16 greedy 复现独立记录。所有主方法共享短答案协议：强制结束思考后输出一个完整 boxed 答案。
+## 研究定位与候选算法
 
-## 执行入口
+定位可以随证据调整。目前不要求结果必须来自KV掩码，也不预设内部阶段指针已经存在。可研究的主线是：
 
-远程目录为 `/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/reason-transition-20261008`，隔离环境为该目录的 `.venv`。SSH 认证工具在本机被 gitignore 的 `.tools` 中，凭据不进入仓库。
-
-```bash
-python scripts/build_splits.py
-python -m unittest discover -s tests -v
-python scripts/validate_protocol.py --model /path/to/Qwen3-4B --n 24
-python scripts/validate_cache_clone.py
-# 正确性和原版 P0 完成后，按依赖执行；pilot review 由执行者实际检查 50 个答案。
-python scripts/run_pipeline.py
-# 以下是另外两个独立进程，按等待依赖运行；主管线不会自动启动它们。
-python scripts/run_holdout_remainder.py
-python scripts/finalize_execution.py
-# 对已完整保存的原始结果重新统计：
-python scripts/final_stats.py
+```text
+核验修订与旧状态依据
+    → 维护变量/规则版本和依赖
+    → 仅安排必要的待重推前沿
+    → 显式绑定当前父值并验收结果
+    → 在总预算内交付最终答案
 ```
 
-`run_pipeline.py` 规划的顺序是 24 题分支 pilot、150 题开发、补齐 50 题工程集、Grouped CV、工程集校准、重复采样控制、50 题独立在线测试及第二模型 24 题检查。它必须实际部署和运行才会推进；不能把这个入口文件当成已执行的研究。
+这是候选方法；核心增量尚待实测。Phase 5会比较共享同一核验/工具权限的简单路由、紧凑OneLine、Self-Ask/普通步进及版本工作帧；尾窗提交策略单列，并对所有比较方法公平使用。不会把顾问给出的90%正确率/省50%token预测写成结果。
 
-主模型四种方法的最终 300 题由 `run_holdout_remainder.py` 补齐；其余控制和消融各 50 题，第二模型两种方法各 24 题，共 1648 条在线记录。输入冻结、实际命令、人工核验和分析复现的详细依赖见 [复现说明](docs/REPRODUCIBILITY_ZH.md)。
+主要指标是逐数据集accuracy或声明采样协议的pass@1；pass@k另列。完整成本包括核验、解析、被拒候选、注入前缀、prefill、重构与最终输出。NLL、梯度、KV距离和机制标签仅用于诊断。
 
-主采集器是 `scripts/collect_bank.py`：同一真实父 KV 深拷贝到 STOP/STEP，FULL 为未干预的父轨迹；离线分支开销单独记录。早期 `generate_traces.py` 和 `branch_at_checkpoint.py` 是独立重放辅助代码，不是主采集路径，不应和主数据混跑。
+## 目录
 
-`evaluate_online.py` 在生成期间执行策略，评分仅在结束后进行。统计以题目配对，既报告 bootstrap，也报告精确有害反转风险上界。50 题经验改善不能直接变成 1pp 非劣性声明。
+```text
+docs/phases/                 Phase1、Phase2、Phase3……总报告与索引
+research/long_cot_landscape_20261105/  文献与模块地图
+research/direction_selection_20261105/ P0、平台与方向选择
+research/next_design_20261105/         下一轮协议、抽样与合流控制
+research/algorithm_mechanism_20261105/  算法/模型/数学分析
+research/p05_design_review_20261105/    冻结P0.5与独立审计
+research/repository_phase_plan_20261106/ 本次整理与建议审查
+scripts/ reason_transition/ tests/     原研究实现与检查
+experiments/radar20261013/             后续历史路线，当前冻结
+data/ results/ provenance/ recovery/   历史输入、输出和恢复证据
+```
 
-详细协议、基线审计、数值诊断、答案协议和候选创新均在 `docs/`。当前没有已经证实的论文级性能或新颖性结论。
+仓库保留可上传的研究代码、协议、资料索引、原始结果与审计。模型权重、认证材料、本地依赖环境和重复打包文件留在本地；具体范围及原始Git来源见[发布说明](docs/repository/PUBLISH_SCOPE_ZH.md)。冻结证据按字节保存，新增Phase文档使用可在GitHub浏览的相对链接。历史报告中原机器绝对路径作为来源记录保留，不代表云端可访问路径。
+
+## 历史入口
+
+- [整理前根README](README_LEGACY_20261106.md)
+- [历史综合报告](docs/REPORT_ZH.md)
+- [历史18周目标（不作当前执行指令）](docs/next_phase/RESEARCH_GOAL_V2_20261014_ZH.md)
+
+当前没有对外发布的正式新算法benchmark收益、录用结论或通用正确性保证。研究目标是通过新机制、强基线、消融和独立验证获得可复现的正增量；必要时保留负结果并调整方向。

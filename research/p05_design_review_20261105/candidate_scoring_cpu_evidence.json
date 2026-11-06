@@ -1,0 +1,920 @@
+{
+  "schema": "candidate_scoring_semantics_audit_v1",
+  "old_tokenizer_class": "Qwen2TokenizerFast",
+  "old_model_manifest_sha256": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+  "old_runner_sha256": "246219aee9774fae0966c7663c765daf3dba2f1df68bc054b539a4dd5d64331b",
+  "audit_source_sha256": "964832059387e64062666d790b9dd31932b3cc0797f70770fc7034f9ad249baf",
+  "old_P0_recount": {
+    "unique_candidate_sequences": 140,
+    "additional_candidate_forward_calls": 140,
+    "additional_candidate_input_tokens": 300,
+    "sequence_length_histogram_including_terminator": {
+      "3": 120,
+      "4": 20
+    },
+    "same_first_token_distinct_sequence_pairs": 40,
+    "collisions": [
+      {
+        "case_id": "E01",
+        "arm": "full",
+        "a": "30\n",
+        "b": "33\n",
+        "a_ids": [
+          18,
+          15,
+          198
+        ],
+        "b_ids": [
+          18,
+          18,
+          198
+        ],
+        "a_first_logP": -0.06256946176290512,
+        "b_first_logP": -0.06256946176290512,
+        "a_full_logP": -12.43949731439352,
+        "b_full_logP": -9.17715684324503
+      },
+      {
+        "case_id": "E01",
+        "arm": "target_late",
+        "a": "30\n",
+        "b": "33\n",
+        "a_ids": [
+          18,
+          15,
+          198
+        ],
+        "b_ids": [
+          18,
+          18,
+          198
+        ],
+        "a_first_logP": -2.7676711082458496,
+        "b_first_logP": -2.7676711082458496,
+        "a_full_logP": -12.350318670272827,
+        "b_full_logP": -13.843068361282349
+      },
+      {
+        "case_id": "E01",
+        "arm": "target_early_reprefill",
+        "a": "30\n",
+        "b": "33\n",
+        "a_ids": [
+          18,
+          15,
+          198
+        ],
+        "b_ids": [
+          18,
+          18,
+          198
+        ],
+        "a_first_logP": -2.2781028747558594,
+        "b_first_logP": -2.2781028747558594,
+        "a_full_logP": -12.817203760147095,
+        "b_full_logP": -13.658461332321167
+      },
+      {
+        "case_id": "E01",
+        "arm": "random_late",
+        "a": "30\n",
+        "b": "33\n",
+        "a_ids": [
+          18,
+          15,
+          198
+        ],
+        "b_ids": [
+          18,
+          18,
+          198
+        ],
+        "a_first_logP": -0.08292371034622192,
+        "b_first_logP": -0.08292371034622192,
+        "a_full_logP": -12.294152319431305,
+        "b_full_logP": -8.904209196567535
+      },
+      {
+        "case_id": "E01",
+        "arm": "random_early_reprefill",
+        "a": "30\n",
+        "b": "33\n",
+        "a_ids": [
+          18,
+          15,
+          198
+        ],
+        "b_ids": [
+          18,
+          18,
+          198
+        ],
+        "a_first_logP": -0.35324931144714355,
+        "b_first_logP": -0.35324931144714355,
+        "a_full_logP": -13.368021726608276,
+        "b_full_logP": -8.49276040494442
+      },
+      {
+        "case_id": "E02",
+        "arm": "full",
+        "a": "38\n",
+        "b": "30\n",
+        "a_ids": [
+          18,
+          23,
+          198
+        ],
+        "b_ids": [
+          18,
+          15,
+          198
+        ],
+        "a_first_logP": -1.6930817365646362,
+        "b_first_logP": -1.6930817365646362,
+        "a_full_logP": -15.7340487241745,
+        "b_full_logP": -10.176594540476799
+      },
+      {
+        "case_id": "E02",
+        "arm": "target_late",
+        "a": "38\n",
+        "b": "30\n",
+        "a_ids": [
+          18,
+          23,
+          198
+        ],
+        "b_ids": [
+          18,
+          15,
+          198
+        ],
+        "a_first_logP": -4.618636131286621,
+        "b_first_logP": -4.618636131286621,
+        "a_full_logP": -17.8548846244812,
+        "b_full_logP": -19.929120540618896
+      },
+      {
+        "case_id": "E02",
+        "arm": "target_early_reprefill",
+        "a": "38\n",
+        "b": "30\n",
+        "a_ids": [
+          18,
+          23,
+          198
+        ],
+        "b_ids": [
+          18,
+          15,
+          198
+        ],
+        "a_first_logP": -6.063205718994141,
+        "b_first_logP": -6.063205718994141,
+        "a_full_logP": -18.544614553451538,
+        "b_full_logP": -21.907918691635132
+      },
+      {
+        "case_id": "E02",
+        "arm": "random_late",
+        "a": "38\n",
+        "b": "30\n",
+        "a_ids": [
+          18,
+          23,
+          198
+        ],
+        "b_ids": [
+          18,
+          15,
+          198
+        ],
+        "a_first_logP": -2.3431291580200195,
+        "b_first_logP": -2.3431291580200195,
+        "a_full_logP": -15.381450891494751,
+        "b_full_logP": -10.417887449264526
+      },
+      {
+        "case_id": "E02",
+        "arm": "random_early_reprefill",
+        "a": "38\n",
+        "b": "30\n",
+        "a_ids": [
+          18,
+          23,
+          198
+        ],
+        "b_ids": [
+          18,
+          15,
+          198
+        ],
+        "a_first_logP": -5.3499226570129395,
+        "b_first_logP": -5.3499226570129395,
+        "a_full_logP": -16.804797649383545,
+        "b_full_logP": -13.974095344543457
+      },
+      {
+        "case_id": "E04",
+        "arm": "full",
+        "a": "43\n",
+        "b": "41\n",
+        "a_ids": [
+          19,
+          18,
+          198
+        ],
+        "b_ids": [
+          19,
+          16,
+          198
+        ],
+        "a_first_logP": -0.04289313778281212,
+        "b_first_logP": -0.04289313778281212,
+        "a_full_logP": -10.943089928478003,
+        "b_full_logP": -10.163503136485815
+      },
+      {
+        "case_id": "E04",
+        "arm": "target_late",
+        "a": "43\n",
+        "b": "41\n",
+        "a_ids": [
+          19,
+          18,
+          198
+        ],
+        "b_ids": [
+          19,
+          16,
+          198
+        ],
+        "a_first_logP": -2.5628013610839844,
+        "b_first_logP": -2.5628013610839844,
+        "a_full_logP": -12.510193347930908,
+        "b_full_logP": -12.980049133300781
+      },
+      {
+        "case_id": "E04",
+        "arm": "target_early_reprefill",
+        "a": "43\n",
+        "b": "41\n",
+        "a_ids": [
+          19,
+          18,
+          198
+        ],
+        "b_ids": [
+          19,
+          16,
+          198
+        ],
+        "a_first_logP": -3.9366519451141357,
+        "b_first_logP": -3.9366519451141357,
+        "a_full_logP": -14.252827882766724,
+        "b_full_logP": -14.2892324924469
+      },
+      {
+        "case_id": "E04",
+        "arm": "random_late",
+        "a": "43\n",
+        "b": "41\n",
+        "a_ids": [
+          19,
+          18,
+          198
+        ],
+        "b_ids": [
+          19,
+          16,
+          198
+        ],
+        "a_first_logP": -2.4701035022735596,
+        "b_first_logP": -2.4701035022735596,
+        "a_full_logP": -13.17410957813263,
+        "b_full_logP": -13.398202180862427
+      },
+      {
+        "case_id": "E04",
+        "arm": "random_early_reprefill",
+        "a": "43\n",
+        "b": "41\n",
+        "a_ids": [
+          19,
+          18,
+          198
+        ],
+        "b_ids": [
+          19,
+          16,
+          198
+        ],
+        "a_first_logP": -2.566420793533325,
+        "b_first_logP": -2.566420793533325,
+        "a_full_logP": -14.417873859405518,
+        "b_full_logP": -14.418053150177002
+      },
+      {
+        "case_id": "E05",
+        "arm": "full",
+        "a": "28\n",
+        "b": "23\n",
+        "a_ids": [
+          17,
+          23,
+          198
+        ],
+        "b_ids": [
+          17,
+          18,
+          198
+        ],
+        "a_first_logP": -0.09660700708627701,
+        "b_first_logP": -0.09660700708627701,
+        "a_full_logP": -9.051577098667622,
+        "b_full_logP": -10.798784770071507
+      },
+      {
+        "case_id": "E05",
+        "arm": "target_late",
+        "a": "28\n",
+        "b": "23\n",
+        "a_ids": [
+          17,
+          23,
+          198
+        ],
+        "b_ids": [
+          17,
+          18,
+          198
+        ],
+        "a_first_logP": -2.735996723175049,
+        "b_first_logP": -2.735996723175049,
+        "a_full_logP": -11.268531292676926,
+        "b_full_logP": -18.96633005142212
+      },
+      {
+        "case_id": "E05",
+        "arm": "target_early_reprefill",
+        "a": "28\n",
+        "b": "23\n",
+        "a_ids": [
+          17,
+          23,
+          198
+        ],
+        "b_ids": [
+          17,
+          18,
+          198
+        ],
+        "a_first_logP": -3.05940318107605,
+        "b_first_logP": -3.05940318107605,
+        "a_full_logP": -12.731608033180237,
+        "b_full_logP": -16.96688437461853
+      },
+      {
+        "case_id": "E05",
+        "arm": "random_late",
+        "a": "28\n",
+        "b": "23\n",
+        "a_ids": [
+          17,
+          23,
+          198
+        ],
+        "b_ids": [
+          17,
+          18,
+          198
+        ],
+        "a_first_logP": -0.6048453450202942,
+        "b_first_logP": -0.6048453450202942,
+        "a_full_logP": -10.602489650249481,
+        "b_full_logP": -11.429003894329071
+      },
+      {
+        "case_id": "E05",
+        "arm": "random_early_reprefill",
+        "a": "28\n",
+        "b": "23\n",
+        "a_ids": [
+          17,
+          23,
+          198
+        ],
+        "b_ids": [
+          17,
+          18,
+          198
+        ],
+        "a_first_logP": -0.07387011498212814,
+        "b_first_logP": -0.07387011498212814,
+        "a_full_logP": -14.653747014701366,
+        "b_full_logP": -7.316883184015751
+      },
+      {
+        "case_id": "E06",
+        "arm": "full",
+        "a": "119\n",
+        "b": "116\n",
+        "a_ids": [
+          16,
+          16,
+          24,
+          198
+        ],
+        "b_ids": [
+          16,
+          16,
+          21,
+          198
+        ],
+        "a_first_logP": -0.03595118224620819,
+        "b_first_logP": -0.03595118224620819,
+        "a_full_logP": -14.059897392988205,
+        "b_full_logP": -8.596284747123718
+      },
+      {
+        "case_id": "E06",
+        "arm": "target_late",
+        "a": "119\n",
+        "b": "116\n",
+        "a_ids": [
+          16,
+          16,
+          24,
+          198
+        ],
+        "b_ids": [
+          16,
+          16,
+          21,
+          198
+        ],
+        "a_first_logP": -1.078724980354309,
+        "b_first_logP": -1.078724980354309,
+        "a_full_logP": -12.579669713973999,
+        "b_full_logP": -12.648219347000122
+      },
+      {
+        "case_id": "E06",
+        "arm": "target_early_reprefill",
+        "a": "119\n",
+        "b": "116\n",
+        "a_ids": [
+          16,
+          16,
+          24,
+          198
+        ],
+        "b_ids": [
+          16,
+          16,
+          21,
+          198
+        ],
+        "a_first_logP": -3.043426513671875,
+        "b_first_logP": -3.043426513671875,
+        "a_full_logP": -14.901498317718506,
+        "b_full_logP": -14.112093925476074
+      },
+      {
+        "case_id": "E06",
+        "arm": "random_late",
+        "a": "119\n",
+        "b": "116\n",
+        "a_ids": [
+          16,
+          16,
+          24,
+          198
+        ],
+        "b_ids": [
+          16,
+          16,
+          21,
+          198
+        ],
+        "a_first_logP": -0.13758143782615662,
+        "b_first_logP": -0.13758143782615662,
+        "a_full_logP": -14.494524091482162,
+        "b_full_logP": -9.022336311638355
+      },
+      {
+        "case_id": "E06",
+        "arm": "random_early_reprefill",
+        "a": "119\n",
+        "b": "116\n",
+        "a_ids": [
+          16,
+          16,
+          24,
+          198
+        ],
+        "b_ids": [
+          16,
+          16,
+          21,
+          198
+        ],
+        "a_first_logP": -0.2762153446674347,
+        "b_first_logP": -0.2762153446674347,
+        "a_full_logP": -13.880663223564625,
+        "b_full_logP": -13.950658150017262
+      },
+      {
+        "case_id": "E07",
+        "arm": "full",
+        "a": "37\n",
+        "b": "33\n",
+        "a_ids": [
+          18,
+          22,
+          198
+        ],
+        "b_ids": [
+          18,
+          18,
+          198
+        ],
+        "a_first_logP": -0.07217586785554886,
+        "b_first_logP": -0.07217586785554886,
+        "a_full_logP": -15.084685690701008,
+        "b_full_logP": -8.75879430398345
+      },
+      {
+        "case_id": "E07",
+        "arm": "target_late",
+        "a": "37\n",
+        "b": "33\n",
+        "a_ids": [
+          18,
+          22,
+          198
+        ],
+        "b_ids": [
+          18,
+          18,
+          198
+        ],
+        "a_first_logP": -2.3024044036865234,
+        "b_first_logP": -2.3024044036865234,
+        "a_full_logP": -11.602149248123169,
+        "b_full_logP": -11.447940587997437
+      },
+      {
+        "case_id": "E07",
+        "arm": "target_early_reprefill",
+        "a": "37\n",
+        "b": "33\n",
+        "a_ids": [
+          18,
+          22,
+          198
+        ],
+        "b_ids": [
+          18,
+          18,
+          198
+        ],
+        "a_first_logP": -3.2264575958251953,
+        "b_first_logP": -3.2264575958251953,
+        "a_full_logP": -11.87801194190979,
+        "b_full_logP": -13.182111024856567
+      },
+      {
+        "case_id": "E07",
+        "arm": "random_late",
+        "a": "37\n",
+        "b": "33\n",
+        "a_ids": [
+          18,
+          22,
+          198
+        ],
+        "b_ids": [
+          18,
+          18,
+          198
+        ],
+        "a_first_logP": -0.08757095783948898,
+        "b_first_logP": -0.08757095783948898,
+        "a_full_logP": -15.373566918075085,
+        "b_full_logP": -9.121800545603037
+      },
+      {
+        "case_id": "E07",
+        "arm": "random_early_reprefill",
+        "a": "37\n",
+        "b": "33\n",
+        "a_ids": [
+          18,
+          22,
+          198
+        ],
+        "b_ids": [
+          18,
+          18,
+          198
+        ],
+        "a_first_logP": -0.4551940858364105,
+        "b_first_logP": -0.4551940858364105,
+        "a_full_logP": -12.901120752096176,
+        "b_full_logP": -9.23974597454071
+      },
+      {
+        "case_id": "W03",
+        "arm": "full",
+        "a": "121\n",
+        "b": "144\n",
+        "a_ids": [
+          16,
+          17,
+          16,
+          198
+        ],
+        "b_ids": [
+          16,
+          19,
+          19,
+          198
+        ],
+        "a_first_logP": -0.3016067445278168,
+        "b_first_logP": -0.3016067445278168,
+        "a_full_logP": -9.307660311460495,
+        "b_full_logP": -11.26291024684906
+      },
+      {
+        "case_id": "W03",
+        "arm": "target_late",
+        "a": "121\n",
+        "b": "144\n",
+        "a_ids": [
+          16,
+          17,
+          16,
+          198
+        ],
+        "b_ids": [
+          16,
+          19,
+          19,
+          198
+        ],
+        "a_first_logP": -2.104841709136963,
+        "b_first_logP": -2.104841709136963,
+        "a_full_logP": -15.199162244796753,
+        "b_full_logP": -12.785749316215515
+      },
+      {
+        "case_id": "W03",
+        "arm": "target_early_reprefill",
+        "a": "121\n",
+        "b": "144\n",
+        "a_ids": [
+          16,
+          17,
+          16,
+          198
+        ],
+        "b_ids": [
+          16,
+          19,
+          19,
+          198
+        ],
+        "a_first_logP": -2.980954170227051,
+        "b_first_logP": -2.980954170227051,
+        "a_full_logP": -16.456620931625366,
+        "b_full_logP": -15.308201313018799
+      },
+      {
+        "case_id": "W03",
+        "arm": "random_late",
+        "a": "121\n",
+        "b": "144\n",
+        "a_ids": [
+          16,
+          17,
+          16,
+          198
+        ],
+        "b_ids": [
+          16,
+          19,
+          19,
+          198
+        ],
+        "a_first_logP": -0.5890212655067444,
+        "b_first_logP": -0.5890212655067444,
+        "a_full_logP": -11.09064394235611,
+        "b_full_logP": -11.458213746547699
+      },
+      {
+        "case_id": "W03",
+        "arm": "random_early_reprefill",
+        "a": "121\n",
+        "b": "144\n",
+        "a_ids": [
+          16,
+          17,
+          16,
+          198
+        ],
+        "b_ids": [
+          16,
+          19,
+          19,
+          198
+        ],
+        "a_first_logP": -2.2449331283569336,
+        "b_first_logP": -2.2449331283569336,
+        "a_full_logP": -12.317212760448456,
+        "b_full_logP": -12.398966133594513
+      },
+      {
+        "case_id": "W04",
+        "arm": "full",
+        "a": "79\n",
+        "b": "71\n",
+        "a_ids": [
+          22,
+          24,
+          198
+        ],
+        "b_ids": [
+          22,
+          16,
+          198
+        ],
+        "a_first_logP": -0.12178247421979904,
+        "b_first_logP": -0.12178247421979904,
+        "a_full_logP": -10.640181951224804,
+        "b_full_logP": -17.26000326126814
+      },
+      {
+        "case_id": "W04",
+        "arm": "target_late",
+        "a": "79\n",
+        "b": "71\n",
+        "a_ids": [
+          22,
+          24,
+          198
+        ],
+        "b_ids": [
+          22,
+          16,
+          198
+        ],
+        "a_first_logP": -3.999744415283203,
+        "b_first_logP": -3.999744415283203,
+        "a_full_logP": -19.815721035003662,
+        "b_full_logP": -19.6001877784729
+      },
+      {
+        "case_id": "W04",
+        "arm": "target_early_reprefill",
+        "a": "79\n",
+        "b": "71\n",
+        "a_ids": [
+          22,
+          24,
+          198
+        ],
+        "b_ids": [
+          22,
+          16,
+          198
+        ],
+        "a_first_logP": -3.057227611541748,
+        "b_first_logP": -3.057227611541748,
+        "a_full_logP": -17.035818099975586,
+        "b_full_logP": -17.252410411834717
+      },
+      {
+        "case_id": "W04",
+        "arm": "random_late",
+        "a": "79\n",
+        "b": "71\n",
+        "a_ids": [
+          22,
+          24,
+          198
+        ],
+        "b_ids": [
+          22,
+          16,
+          198
+        ],
+        "a_first_logP": -0.1153966411948204,
+        "b_first_logP": -0.1153966411948204,
+        "a_full_logP": -10.671093128621578,
+        "b_full_logP": -17.135401867330074
+      },
+      {
+        "case_id": "W04",
+        "arm": "random_early_reprefill",
+        "a": "79\n",
+        "b": "71\n",
+        "a_ids": [
+          22,
+          24,
+          198
+        ],
+        "b_ids": [
+          22,
+          16,
+          198
+        ],
+        "a_first_logP": -0.28801867365837097,
+        "b_first_logP": -0.28801867365837097,
+        "a_full_logP": -10.735140532255173,
+        "b_full_logP": -17.591492146253586
+      }
+    ]
+  },
+  "tiny_CPU": {
+    "scope": "RANDOM TINY CPU INTERFACE CONTROL ONLY",
+    "versions": {
+      "torch": "2.11.0+cpu",
+      "transformers": "5.4.0"
+    },
+    "prefix_ids_y_fixture": [
+      40,
+      41,
+      42,
+      80,
+      15
+    ],
+    "prefix_ids_z_fixture": [
+      40,
+      41,
+      42,
+      81,
+      15
+    ],
+    "prefixes_are_real_tokenizer_ids": false,
+    "contexts": {
+      "y_fixture": {
+        "30_newline": {
+          "ids": [
+            18,
+            15,
+            198
+          ],
+          "first_token_logP": -5.50527287508832,
+          "full_logP": -16.752198406129676,
+          "dense_reference_logP": -16.75219843542731,
+          "cached_dense_abs_error": 2.929763454062595e-08,
+          "extra_candidate_forward_calls": 1,
+          "extra_candidate_input_tokens": 2
+        },
+        "33_newline": {
+          "ids": [
+            18,
+            18,
+            198
+          ],
+          "first_token_logP": -5.50527287508832,
+          "full_logP": -16.494543108371982,
+          "dense_reference_logP": -16.494543132597784,
+          "cached_dense_abs_error": 2.4225801809052427e-08,
+          "extra_candidate_forward_calls": 1,
+          "extra_candidate_input_tokens": 2
+        }
+      },
+      "z_fixture": {
+        "30_newline": {
+          "ids": [
+            18,
+            15,
+            198
+          ],
+          "first_token_logP": -5.519456769547793,
+          "full_logP": -16.79815985380123,
+          "dense_reference_logP": -16.79815985965554,
+          "cached_dense_abs_error": 5.854310813901975e-09,
+          "extra_candidate_forward_calls": 1,
+          "extra_candidate_input_tokens": 2
+        },
+        "33_newline": {
+          "ids": [
+            18,
+            18,
+            198
+          ],
+          "first_token_logP": -5.519456769547793,
+          "full_logP": -16.557129295038852,
+          "dense_reference_logP": -16.557129304551484,
+          "cached_dense_abs_error": 9.5126324595185e-09,
+          "extra_candidate_forward_calls": 1,
+          "extra_candidate_input_tokens": 2
+        }
+      }
+    },
+    "y_vs_z_initial_logits_max_abs": 0.10780465602874756
+  }
+}

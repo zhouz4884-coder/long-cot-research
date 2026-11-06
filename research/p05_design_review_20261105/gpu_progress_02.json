@@ -1,0 +1,724 @@
+{
+  "provenance/launcher_01.json": {
+    "pid": 593712,
+    "started_unix": 1793881434.101328,
+    "requested_gpus": 1,
+    "gpu_uuid": "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+    "status": "RUNNING",
+    "scope": "Exploratory sixteen-state diagnostic",
+    "prior_attempts_gpu_seconds": 0,
+    "aggregate_budget_seconds": 300,
+    "command": [
+      "timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "285s",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013/.venv/bin/python",
+      "-u",
+      "-B",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_state_repair_p05_20261105/source/p05_five_arm.py",
+      "--model",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B",
+      "--cases",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_state_repair_p05_20261105/data/cases.json",
+      "--base-path",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_state_repair_p05_20261105/source/p0_base_frozen.py",
+      "--extractor-path",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_state_repair_p05_20261105/source/frozen_answer_extractor.py",
+      "--standalone-gpu",
+      "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+      "--max-seconds",
+      "270",
+      "--output",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_state_repair_p05_20261105/results/p05_five_arm_01"
+    ],
+    "protocol_freeze_sha256": "a70ff643f4f513b90bb18b0943e5595ae6c0eb4b2a842dee9abb61bcfd5029df"
+  },
+  "results/p05_five_arm_01/summary.json": {
+    "status": "P05_PRIMARY_RUNNING",
+    "elapsed_seconds": 259.0058854846284,
+    "planned_cases": 16,
+    "started_cases": 16,
+    "primary_complete_cases": 16,
+    "diagnostic_complete_cases": 7,
+    "primary_complete_ids": [
+      "E01",
+      "C01",
+      "W01",
+      "E02",
+      "E03",
+      "C02",
+      "W02",
+      "E04",
+      "E05",
+      "C03",
+      "W03",
+      "E06",
+      "E07",
+      "C04",
+      "W04",
+      "E08"
+    ],
+    "diagnostic_complete_ids": [
+      "E01",
+      "C01",
+      "W01",
+      "E02",
+      "E03",
+      "C02",
+      "W02"
+    ],
+    "partial_case_ids": [
+      "E04",
+      "E05",
+      "C03",
+      "W03",
+      "E06",
+      "E07",
+      "C04",
+      "W04",
+      "E08"
+    ],
+    "primary_denominator": "Only cases with all five free generations complete; no score-based selection.",
+    "primary_accuracy": {
+      "FullDirect": {
+        "all": {
+          "n": 16,
+          "correct": 8,
+          "parsed": 16
+        },
+        "falsified_old_correct_revision": {
+          "n": 8,
+          "correct": 0,
+          "parsed": 8
+        },
+        "correct_old_no_error_control": {
+          "n": 4,
+          "correct": 4,
+          "parsed": 4
+        },
+        "wait_wrong_revision_control": {
+          "n": 4,
+          "correct": 4,
+          "parsed": 4
+        }
+      },
+      "FullOneLine": {
+        "all": {
+          "n": 16,
+          "correct": 11,
+          "parsed": 12
+        },
+        "falsified_old_correct_revision": {
+          "n": 8,
+          "correct": 5,
+          "parsed": 5
+        },
+        "correct_old_no_error_control": {
+          "n": 4,
+          "correct": 3,
+          "parsed": 3
+        },
+        "wait_wrong_revision_control": {
+          "n": 4,
+          "correct": 3,
+          "parsed": 4
+        }
+      },
+      "WholeEarlyDirect": {
+        "all": {
+          "n": 16,
+          "correct": 0,
+          "parsed": 16
+        },
+        "falsified_old_correct_revision": {
+          "n": 8,
+          "correct": 0,
+          "parsed": 8
+        },
+        "correct_old_no_error_control": {
+          "n": 4,
+          "correct": 0,
+          "parsed": 4
+        },
+        "wait_wrong_revision_control": {
+          "n": 4,
+          "correct": 0,
+          "parsed": 4
+        }
+      },
+      "WholeEarlyOneLine": {
+        "all": {
+          "n": 16,
+          "correct": 12,
+          "parsed": 14
+        },
+        "falsified_old_correct_revision": {
+          "n": 8,
+          "correct": 6,
+          "parsed": 6
+        },
+        "correct_old_no_error_control": {
+          "n": 4,
+          "correct": 3,
+          "parsed": 4
+        },
+        "wait_wrong_revision_control": {
+          "n": 4,
+          "correct": 3,
+          "parsed": 4
+        }
+      },
+      "WholeLateOneLine": {
+        "all": {
+          "n": 16,
+          "correct": 8,
+          "parsed": 11
+        },
+        "falsified_old_correct_revision": {
+          "n": 8,
+          "correct": 4,
+          "parsed": 4
+        },
+        "correct_old_no_error_control": {
+          "n": 4,
+          "correct": 2,
+          "parsed": 3
+        },
+        "wait_wrong_revision_control": {
+          "n": 4,
+          "correct": 2,
+          "parsed": 4
+        }
+      }
+    },
+    "individual_available_free_counts": {
+      "FullDirect": 16,
+      "FullOneLine": 16,
+      "WholeEarlyDirect": 16,
+      "WholeEarlyOneLine": 16,
+      "WholeLateOneLine": 16
+    },
+    "pairwise": {
+      "FullDirect__to__FullOneLine": {
+        "all": {
+          "n": 16,
+          "gain": [
+            "E02",
+            "E03",
+            "E04",
+            "E05",
+            "E06"
+          ],
+          "loss": [
+            "C04",
+            "W04"
+          ],
+          "net_right_minus_left": 3
+        },
+        "falsified_old_correct_revision": {
+          "n": 8,
+          "gain": [
+            "E02",
+            "E03",
+            "E04",
+            "E05",
+            "E06"
+          ],
+          "loss": [],
+          "net_right_minus_left": 5
+        },
+        "correct_old_no_error_control": {
+          "n": 4,
+          "gain": [],
+          "loss": [
+            "C04"
+          ],
+          "net_right_minus_left": -1
+        },
+        "wait_wrong_revision_control": {
+          "n": 4,
+          "gain": [],
+          "loss": [
+            "W04"
+          ],
+          "net_right_minus_left": -1
+        }
+      },
+      "WholeEarlyDirect__to__WholeEarlyOneLine": {
+        "all": {
+          "n": 16,
+          "gain": [
+            "C01",
+            "W01",
+            "E02",
+            "E03",
+            "C02",
+            "W02",
+            "E04",
+            "E05",
+            "W03",
+            "E06",
+            "E07",
+            "C04"
+          ],
+          "loss": [],
+          "net_right_minus_left": 12
+        },
+        "falsified_old_correct_revision": {
+          "n": 8,
+          "gain": [
+            "E02",
+            "E03",
+            "E04",
+            "E05",
+            "E06",
+            "E07"
+          ],
+          "loss": [],
+          "net_right_minus_left": 6
+        },
+        "correct_old_no_error_control": {
+          "n": 4,
+          "gain": [
+            "C01",
+            "C02",
+            "C04"
+          ],
+          "loss": [],
+          "net_right_minus_left": 3
+        },
+        "wait_wrong_revision_control": {
+          "n": 4,
+          "gain": [
+            "W01",
+            "W02",
+            "W03"
+          ],
+          "loss": [],
+          "net_right_minus_left": 3
+        }
+      },
+      "FullDirect__to__WholeEarlyDirect": {
+        "all": {
+          "n": 16,
+          "gain": [],
+          "loss": [
+            "C01",
+            "W01",
+            "C02",
+            "W02",
+            "C03",
+            "W03",
+            "C04",
+            "W04"
+          ],
+          "net_right_minus_left": -8
+        },
+        "falsified_old_correct_revision": {
+          "n": 8,
+          "gain": [],
+          "loss": [],
+          "net_right_minus_left": 0
+        },
+        "correct_old_no_error_control": {
+          "n": 4,
+          "gain": [],
+          "loss": [
+            "C01",
+            "C02",
+            "C03",
+            "C04"
+          ],
+          "net_right_minus_left": -4
+        },
+        "wait_wrong_revision_control": {
+          "n": 4,
+          "gain": [],
+          "loss": [
+            "W01",
+            "W02",
+            "W03",
+            "W04"
+          ],
+          "net_right_minus_left": -4
+        }
+      },
+      "FullOneLine__to__WholeEarlyOneLine": {
+        "all": {
+          "n": 16,
+          "gain": [
+            "E07",
+            "C04"
+          ],
+          "loss": [
+            "C03"
+          ],
+          "net_right_minus_left": 1
+        },
+        "falsified_old_correct_revision": {
+          "n": 8,
+          "gain": [
+            "E07"
+          ],
+          "loss": [],
+          "net_right_minus_left": 1
+        },
+        "correct_old_no_error_control": {
+          "n": 4,
+          "gain": [
+            "C04"
+          ],
+          "loss": [
+            "C03"
+          ],
+          "net_right_minus_left": 0
+        },
+        "wait_wrong_revision_control": {
+          "n": 4,
+          "gain": [],
+          "loss": [],
+          "net_right_minus_left": 0
+        }
+      },
+      "FullOneLine__to__WholeLateOneLine": {
+        "all": {
+          "n": 16,
+          "gain": [],
+          "loss": [
+            "E04",
+            "C03",
+            "W03"
+          ],
+          "net_right_minus_left": -3
+        },
+        "falsified_old_correct_revision": {
+          "n": 8,
+          "gain": [],
+          "loss": [
+            "E04"
+          ],
+          "net_right_minus_left": -1
+        },
+        "correct_old_no_error_control": {
+          "n": 4,
+          "gain": [],
+          "loss": [
+            "C03"
+          ],
+          "net_right_minus_left": -1
+        },
+        "wait_wrong_revision_control": {
+          "n": 4,
+          "gain": [],
+          "loss": [
+            "W03"
+          ],
+          "net_right_minus_left": -1
+        }
+      },
+      "WholeLateOneLine__to__WholeEarlyOneLine": {
+        "all": {
+          "n": 16,
+          "gain": [
+            "E04",
+            "W03",
+            "E07",
+            "C04"
+          ],
+          "loss": [],
+          "net_right_minus_left": 4
+        },
+        "falsified_old_correct_revision": {
+          "n": 8,
+          "gain": [
+            "E04",
+            "E07"
+          ],
+          "loss": [],
+          "net_right_minus_left": 2
+        },
+        "correct_old_no_error_control": {
+          "n": 4,
+          "gain": [
+            "C04"
+          ],
+          "loss": [],
+          "net_right_minus_left": 1
+        },
+        "wait_wrong_revision_control": {
+          "n": 4,
+          "gain": [
+            "W03"
+          ],
+          "loss": [],
+          "net_right_minus_left": 1
+        }
+      }
+    },
+    "limitations": [
+      "Sixteen teacher-forced short injected states, not natural long-CoT or model self-correction.",
+      "Ordinary OneLine instruction; free generation is not forcibly started at y=.",
+      "Auxiliary Y/Z are pre-generation forced-prefix queries, not observed intermediate beliefs.",
+      "Four roles are deduplicated to unique continuations; W revision-consistent is not necessarily true.",
+      "Complete sequence likelihood requires candidate forward work; first-token margins are separate.",
+      "Full-shaped key masks establish no memory savings; checkpoint retention is experimental overhead.",
+      "No statistical-power, induction-head, orthogonality, safety, causal-mechanism or novelty claim.",
+      "New user-turn/readout protocol differs from old P0; cross-run accuracy changes are not method gains.",
+      "Standalone UUID binding is not a scheduler exclusion lock or continuous process monitoring."
+    ],
+    "descriptive_interaction_per_case": [
+      {
+        "case_id": "E01",
+        "descriptive_interaction": 0
+      },
+      {
+        "case_id": "C01",
+        "descriptive_interaction": 1
+      },
+      {
+        "case_id": "W01",
+        "descriptive_interaction": 1
+      },
+      {
+        "case_id": "E02",
+        "descriptive_interaction": 0
+      },
+      {
+        "case_id": "E03",
+        "descriptive_interaction": 0
+      },
+      {
+        "case_id": "C02",
+        "descriptive_interaction": 1
+      },
+      {
+        "case_id": "W02",
+        "descriptive_interaction": 1
+      },
+      {
+        "case_id": "E04",
+        "descriptive_interaction": 0
+      },
+      {
+        "case_id": "E05",
+        "descriptive_interaction": 0
+      },
+      {
+        "case_id": "C03",
+        "descriptive_interaction": 0
+      },
+      {
+        "case_id": "W03",
+        "descriptive_interaction": 1
+      },
+      {
+        "case_id": "E06",
+        "descriptive_interaction": 0
+      },
+      {
+        "case_id": "E07",
+        "descriptive_interaction": 1
+      },
+      {
+        "case_id": "C04",
+        "descriptive_interaction": 2
+      },
+      {
+        "case_id": "W04",
+        "descriptive_interaction": 1
+      },
+      {
+        "case_id": "E08",
+        "descriptive_interaction": 0
+      }
+    ],
+    "interaction_note": "Descriptive factorial contrast; no independence, orthogonality, power or innovation guarantee.",
+    "actual_forward_cost": {
+      "forward_calls": 2923,
+      "input_tokens": 15933,
+      "synchronized_forward_seconds": 187.25659540574998,
+      "by_stage": {
+        "shared_full_prefill": {
+          "forward_calls": 16,
+          "input_tokens": 2300,
+          "seconds": 1.7225075662136078
+        },
+        "shared_whole_early_prefill": {
+          "forward_calls": 16,
+          "input_tokens": 2300,
+          "seconds": 1.0388378044590354
+        },
+        "FullDirect_free_readout": {
+          "forward_calls": 16,
+          "input_tokens": 624,
+          "seconds": 1.1129039889201522
+        },
+        "FullDirect_free_greedy": {
+          "forward_calls": 34,
+          "input_tokens": 34,
+          "seconds": 2.353641894645989
+        },
+        "FullOneLine_free_readout": {
+          "forward_calls": 16,
+          "input_tokens": 672,
+          "seconds": 1.094721951521933
+        },
+        "FullOneLine_free_greedy": {
+          "forward_calls": 817,
+          "input_tokens": 817,
+          "seconds": 51.654135095886886
+        },
+        "WholeEarlyDirect_free_readout": {
+          "forward_calls": 16,
+          "input_tokens": 624,
+          "seconds": 1.0640018051490188
+        },
+        "WholeEarlyDirect_free_greedy": {
+          "forward_calls": 32,
+          "input_tokens": 32,
+          "seconds": 2.0270126881077886
+        },
+        "WholeEarlyOneLine_free_readout": {
+          "forward_calls": 16,
+          "input_tokens": 672,
+          "seconds": 1.0868027964606881
+        },
+        "WholeEarlyOneLine_free_greedy": {
+          "forward_calls": 819,
+          "input_tokens": 819,
+          "seconds": 51.83951800689101
+        },
+        "WholeLateOneLine_free_readout": {
+          "forward_calls": 16,
+          "input_tokens": 672,
+          "seconds": 1.0860301358625293
+        },
+        "WholeLateOneLine_free_greedy": {
+          "forward_calls": 836,
+          "input_tokens": 836,
+          "seconds": 52.9757196912542
+        },
+        "control_no_delete_reprefill": {
+          "forward_calls": 6,
+          "input_tokens": 556,
+          "seconds": 0.40456431172788143
+        },
+        "control_cached_vs_whole_recompute": {
+          "forward_calls": 3,
+          "input_tokens": 556,
+          "seconds": 0.19556067418307066
+        },
+        "control_early_rebuild": {
+          "forward_calls": 12,
+          "input_tokens": 808,
+          "seconds": 0.8369316160678864
+        },
+        "control_target_early_prefill_attention": {
+          "forward_calls": 3,
+          "input_tokens": 430,
+          "seconds": 0.19862335361540318
+        },
+        "control_random_early_prefill_attention": {
+          "forward_calls": 3,
+          "input_tokens": 430,
+          "seconds": 0.19478910509496927
+        },
+        "FullDirect_z_candidate_scoring": {
+          "forward_calls": 19,
+          "input_tokens": 37,
+          "seconds": 1.2404697109013796
+        },
+        "FullDirect_y_probe_readout": {
+          "forward_calls": 7,
+          "input_tokens": 266,
+          "seconds": 0.47071114275604486
+        },
+        "FullDirect_y_candidate_scoring": {
+          "forward_calls": 19,
+          "input_tokens": 33,
+          "seconds": 1.232961991801858
+        },
+        "FullOneLine_z_probe_readout": {
+          "forward_calls": 7,
+          "input_tokens": 315,
+          "seconds": 0.47543937526643276
+        },
+        "FullOneLine_z_candidate_scoring": {
+          "forward_calls": 19,
+          "input_tokens": 37,
+          "seconds": 1.238881977275014
+        },
+        "FullOneLine_y_probe_readout": {
+          "forward_calls": 7,
+          "input_tokens": 308,
+          "seconds": 0.47425881680101156
+        },
+        "FullOneLine_y_candidate_scoring": {
+          "forward_calls": 19,
+          "input_tokens": 33,
+          "seconds": 1.231606318615377
+        },
+        "WholeEarlyDirect_z_candidate_scoring": {
+          "forward_calls": 19,
+          "input_tokens": 37,
+          "seconds": 1.4259040877223015
+        },
+        "WholeEarlyDirect_y_probe_readout": {
+          "forward_calls": 7,
+          "input_tokens": 266,
+          "seconds": 0.4702270356938243
+        },
+        "WholeEarlyDirect_y_candidate_scoring": {
+          "forward_calls": 19,
+          "input_tokens": 33,
+          "seconds": 1.236269911751151
+        },
+        "WholeEarlyOneLine_z_probe_readout": {
+          "forward_calls": 7,
+          "input_tokens": 315,
+          "seconds": 0.47463663946837187
+        },
+        "WholeEarlyOneLine_z_candidate_scoring": {
+          "forward_calls": 19,
+          "input_tokens": 37,
+          "seconds": 1.2389941792935133
+        },
+        "WholeEarlyOneLine_y_probe_readout": {
+          "forward_calls": 7,
+          "input_tokens": 308,
+          "seconds": 0.4935699859634042
+        },
+        "WholeEarlyOneLine_y_candidate_scoring": {
+          "forward_calls": 19,
+          "input_tokens": 33,
+          "seconds": 1.244632450863719
+        },
+        "WholeLateOneLine_z_probe_readout": {
+          "forward_calls": 7,
+          "input_tokens": 315,
+          "seconds": 0.4757704306393862
+        },
+        "WholeLateOneLine_z_candidate_scoring": {
+          "forward_calls": 19,
+          "input_tokens": 37,
+          "seconds": 1.2399345897138119
+        },
+        "WholeLateOneLine_y_probe_readout": {
+          "forward_calls": 7,
+          "input_tokens": 308,
+          "seconds": 0.4751706914976239
+        },
+        "WholeLateOneLine_y_candidate_scoring": {
+          "forward_calls": 19,
+          "input_tokens": 33,
+          "seconds": 1.230853583663702
+        }
+      }
+    },
+    "observed_postload_peak_allocated_bytes": 9738934272
+  },
+  "results/p05_five_arm_01/error.json": {
+    "exists": false
+  }
+}

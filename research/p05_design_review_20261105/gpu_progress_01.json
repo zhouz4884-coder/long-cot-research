@@ -1,0 +1,551 @@
+{
+  "provenance/launcher_01.json": {
+    "pid": 593712,
+    "started_unix": 1793881434.101328,
+    "requested_gpus": 1,
+    "gpu_uuid": "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+    "status": "RUNNING",
+    "scope": "Exploratory sixteen-state diagnostic",
+    "prior_attempts_gpu_seconds": 0,
+    "aggregate_budget_seconds": 300,
+    "command": [
+      "timeout",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "285s",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013/.venv/bin/python",
+      "-u",
+      "-B",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_state_repair_p05_20261105/source/p05_five_arm.py",
+      "--model",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B",
+      "--cases",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_state_repair_p05_20261105/data/cases.json",
+      "--base-path",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_state_repair_p05_20261105/source/p0_base_frozen.py",
+      "--extractor-path",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_state_repair_p05_20261105/source/frozen_answer_extractor.py",
+      "--standalone-gpu",
+      "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+      "--max-seconds",
+      "270",
+      "--output",
+      "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_state_repair_p05_20261105/results/p05_five_arm_01"
+    ],
+    "protocol_freeze_sha256": "a70ff643f4f513b90bb18b0943e5595ae6c0eb4b2a842dee9abb61bcfd5029df"
+  },
+  "results/p05_five_arm_01/summary.json": {
+    "status": "P05_PRIMARY_RUNNING",
+    "elapsed_seconds": 129.37276584934443,
+    "planned_cases": 16,
+    "started_cases": 8,
+    "primary_complete_cases": 8,
+    "diagnostic_complete_cases": 0,
+    "primary_complete_ids": [
+      "E01",
+      "C01",
+      "W01",
+      "E02",
+      "E03",
+      "C02",
+      "W02",
+      "E04"
+    ],
+    "diagnostic_complete_ids": [],
+    "partial_case_ids": [
+      "E01",
+      "C01",
+      "W01",
+      "E02",
+      "E03",
+      "C02",
+      "W02",
+      "E04"
+    ],
+    "primary_denominator": "Only cases with all five free generations complete; no score-based selection.",
+    "primary_accuracy": {
+      "FullDirect": {
+        "all": {
+          "n": 8,
+          "correct": 4,
+          "parsed": 8
+        },
+        "falsified_old_correct_revision": {
+          "n": 4,
+          "correct": 0,
+          "parsed": 4
+        },
+        "correct_old_no_error_control": {
+          "n": 2,
+          "correct": 2,
+          "parsed": 2
+        },
+        "wait_wrong_revision_control": {
+          "n": 2,
+          "correct": 2,
+          "parsed": 2
+        }
+      },
+      "FullOneLine": {
+        "all": {
+          "n": 8,
+          "correct": 7,
+          "parsed": 7
+        },
+        "falsified_old_correct_revision": {
+          "n": 4,
+          "correct": 3,
+          "parsed": 3
+        },
+        "correct_old_no_error_control": {
+          "n": 2,
+          "correct": 2,
+          "parsed": 2
+        },
+        "wait_wrong_revision_control": {
+          "n": 2,
+          "correct": 2,
+          "parsed": 2
+        }
+      },
+      "WholeEarlyDirect": {
+        "all": {
+          "n": 8,
+          "correct": 0,
+          "parsed": 8
+        },
+        "falsified_old_correct_revision": {
+          "n": 4,
+          "correct": 0,
+          "parsed": 4
+        },
+        "correct_old_no_error_control": {
+          "n": 2,
+          "correct": 0,
+          "parsed": 2
+        },
+        "wait_wrong_revision_control": {
+          "n": 2,
+          "correct": 0,
+          "parsed": 2
+        }
+      },
+      "WholeEarlyOneLine": {
+        "all": {
+          "n": 8,
+          "correct": 7,
+          "parsed": 7
+        },
+        "falsified_old_correct_revision": {
+          "n": 4,
+          "correct": 3,
+          "parsed": 3
+        },
+        "correct_old_no_error_control": {
+          "n": 2,
+          "correct": 2,
+          "parsed": 2
+        },
+        "wait_wrong_revision_control": {
+          "n": 2,
+          "correct": 2,
+          "parsed": 2
+        }
+      },
+      "WholeLateOneLine": {
+        "all": {
+          "n": 8,
+          "correct": 6,
+          "parsed": 6
+        },
+        "falsified_old_correct_revision": {
+          "n": 4,
+          "correct": 2,
+          "parsed": 2
+        },
+        "correct_old_no_error_control": {
+          "n": 2,
+          "correct": 2,
+          "parsed": 2
+        },
+        "wait_wrong_revision_control": {
+          "n": 2,
+          "correct": 2,
+          "parsed": 2
+        }
+      }
+    },
+    "individual_available_free_counts": {
+      "FullDirect": 8,
+      "FullOneLine": 8,
+      "WholeEarlyDirect": 8,
+      "WholeEarlyOneLine": 8,
+      "WholeLateOneLine": 8
+    },
+    "pairwise": {
+      "FullDirect__to__FullOneLine": {
+        "all": {
+          "n": 8,
+          "gain": [
+            "E02",
+            "E03",
+            "E04"
+          ],
+          "loss": [],
+          "net_right_minus_left": 3
+        },
+        "falsified_old_correct_revision": {
+          "n": 4,
+          "gain": [
+            "E02",
+            "E03",
+            "E04"
+          ],
+          "loss": [],
+          "net_right_minus_left": 3
+        },
+        "correct_old_no_error_control": {
+          "n": 2,
+          "gain": [],
+          "loss": [],
+          "net_right_minus_left": 0
+        },
+        "wait_wrong_revision_control": {
+          "n": 2,
+          "gain": [],
+          "loss": [],
+          "net_right_minus_left": 0
+        }
+      },
+      "WholeEarlyDirect__to__WholeEarlyOneLine": {
+        "all": {
+          "n": 8,
+          "gain": [
+            "C01",
+            "W01",
+            "E02",
+            "E03",
+            "C02",
+            "W02",
+            "E04"
+          ],
+          "loss": [],
+          "net_right_minus_left": 7
+        },
+        "falsified_old_correct_revision": {
+          "n": 4,
+          "gain": [
+            "E02",
+            "E03",
+            "E04"
+          ],
+          "loss": [],
+          "net_right_minus_left": 3
+        },
+        "correct_old_no_error_control": {
+          "n": 2,
+          "gain": [
+            "C01",
+            "C02"
+          ],
+          "loss": [],
+          "net_right_minus_left": 2
+        },
+        "wait_wrong_revision_control": {
+          "n": 2,
+          "gain": [
+            "W01",
+            "W02"
+          ],
+          "loss": [],
+          "net_right_minus_left": 2
+        }
+      },
+      "FullDirect__to__WholeEarlyDirect": {
+        "all": {
+          "n": 8,
+          "gain": [],
+          "loss": [
+            "C01",
+            "W01",
+            "C02",
+            "W02"
+          ],
+          "net_right_minus_left": -4
+        },
+        "falsified_old_correct_revision": {
+          "n": 4,
+          "gain": [],
+          "loss": [],
+          "net_right_minus_left": 0
+        },
+        "correct_old_no_error_control": {
+          "n": 2,
+          "gain": [],
+          "loss": [
+            "C01",
+            "C02"
+          ],
+          "net_right_minus_left": -2
+        },
+        "wait_wrong_revision_control": {
+          "n": 2,
+          "gain": [],
+          "loss": [
+            "W01",
+            "W02"
+          ],
+          "net_right_minus_left": -2
+        }
+      },
+      "FullOneLine__to__WholeEarlyOneLine": {
+        "all": {
+          "n": 8,
+          "gain": [],
+          "loss": [],
+          "net_right_minus_left": 0
+        },
+        "falsified_old_correct_revision": {
+          "n": 4,
+          "gain": [],
+          "loss": [],
+          "net_right_minus_left": 0
+        },
+        "correct_old_no_error_control": {
+          "n": 2,
+          "gain": [],
+          "loss": [],
+          "net_right_minus_left": 0
+        },
+        "wait_wrong_revision_control": {
+          "n": 2,
+          "gain": [],
+          "loss": [],
+          "net_right_minus_left": 0
+        }
+      },
+      "FullOneLine__to__WholeLateOneLine": {
+        "all": {
+          "n": 8,
+          "gain": [],
+          "loss": [
+            "E04"
+          ],
+          "net_right_minus_left": -1
+        },
+        "falsified_old_correct_revision": {
+          "n": 4,
+          "gain": [],
+          "loss": [
+            "E04"
+          ],
+          "net_right_minus_left": -1
+        },
+        "correct_old_no_error_control": {
+          "n": 2,
+          "gain": [],
+          "loss": [],
+          "net_right_minus_left": 0
+        },
+        "wait_wrong_revision_control": {
+          "n": 2,
+          "gain": [],
+          "loss": [],
+          "net_right_minus_left": 0
+        }
+      },
+      "WholeLateOneLine__to__WholeEarlyOneLine": {
+        "all": {
+          "n": 8,
+          "gain": [
+            "E04"
+          ],
+          "loss": [],
+          "net_right_minus_left": 1
+        },
+        "falsified_old_correct_revision": {
+          "n": 4,
+          "gain": [
+            "E04"
+          ],
+          "loss": [],
+          "net_right_minus_left": 1
+        },
+        "correct_old_no_error_control": {
+          "n": 2,
+          "gain": [],
+          "loss": [],
+          "net_right_minus_left": 0
+        },
+        "wait_wrong_revision_control": {
+          "n": 2,
+          "gain": [],
+          "loss": [],
+          "net_right_minus_left": 0
+        }
+      }
+    },
+    "limitations": [
+      "Sixteen teacher-forced short injected states, not natural long-CoT or model self-correction.",
+      "Ordinary OneLine instruction; free generation is not forcibly started at y=.",
+      "Auxiliary Y/Z are pre-generation forced-prefix queries, not observed intermediate beliefs.",
+      "Four roles are deduplicated to unique continuations; W revision-consistent is not necessarily true.",
+      "Complete sequence likelihood requires candidate forward work; first-token margins are separate.",
+      "Full-shaped key masks establish no memory savings; checkpoint retention is experimental overhead.",
+      "No statistical-power, induction-head, orthogonality, safety, causal-mechanism or novelty claim.",
+      "New user-turn/readout protocol differs from old P0; cross-run accuracy changes are not method gains.",
+      "Standalone UUID binding is not a scheduler exclusion lock or continuous process monitoring."
+    ],
+    "descriptive_interaction_per_case": [
+      {
+        "case_id": "E01",
+        "descriptive_interaction": 0
+      },
+      {
+        "case_id": "C01",
+        "descriptive_interaction": 1
+      },
+      {
+        "case_id": "W01",
+        "descriptive_interaction": 1
+      },
+      {
+        "case_id": "E02",
+        "descriptive_interaction": 0
+      },
+      {
+        "case_id": "E03",
+        "descriptive_interaction": 0
+      },
+      {
+        "case_id": "C02",
+        "descriptive_interaction": 1
+      },
+      {
+        "case_id": "W02",
+        "descriptive_interaction": 1
+      },
+      {
+        "case_id": "E04",
+        "descriptive_interaction": 0
+      }
+    ],
+    "interaction_note": "Descriptive factorial contrast; no independence, orthogonality, power or innovation guarantee.",
+    "actual_forward_cost": {
+      "forward_calls": 1335,
+      "input_tokens": 7952,
+      "synchronized_forward_seconds": 85.70703768916428,
+      "by_stage": {
+        "shared_full_prefill": {
+          "forward_calls": 8,
+          "input_tokens": 1144,
+          "seconds": 1.1949531435966492
+        },
+        "shared_whole_early_prefill": {
+          "forward_calls": 8,
+          "input_tokens": 1144,
+          "seconds": 0.5151876006275415
+        },
+        "FullDirect_free_readout": {
+          "forward_calls": 8,
+          "input_tokens": 312,
+          "seconds": 0.5566488793119788
+        },
+        "FullDirect_free_greedy": {
+          "forward_calls": 16,
+          "input_tokens": 16,
+          "seconds": 1.2116315327584743
+        },
+        "FullOneLine_free_readout": {
+          "forward_calls": 8,
+          "input_tokens": 336,
+          "seconds": 0.5496959052979946
+        },
+        "FullOneLine_free_greedy": {
+          "forward_calls": 393,
+          "input_tokens": 393,
+          "seconds": 24.820902439765632
+        },
+        "WholeEarlyDirect_free_readout": {
+          "forward_calls": 8,
+          "input_tokens": 312,
+          "seconds": 0.5328231584280729
+        },
+        "WholeEarlyDirect_free_greedy": {
+          "forward_calls": 15,
+          "input_tokens": 15,
+          "seconds": 0.950547818094492
+        },
+        "WholeEarlyOneLine_free_readout": {
+          "forward_calls": 8,
+          "input_tokens": 336,
+          "seconds": 0.5434889029711485
+        },
+        "WholeEarlyOneLine_free_greedy": {
+          "forward_calls": 406,
+          "input_tokens": 406,
+          "seconds": 25.688077692873776
+        },
+        "WholeLateOneLine_free_readout": {
+          "forward_calls": 8,
+          "input_tokens": 336,
+          "seconds": 0.543121200054884
+        },
+        "WholeLateOneLine_free_greedy": {
+          "forward_calls": 422,
+          "input_tokens": 422,
+          "seconds": 26.769490354694426
+        },
+        "control_no_delete_reprefill": {
+          "forward_calls": 6,
+          "input_tokens": 556,
+          "seconds": 0.40456431172788143
+        },
+        "control_cached_vs_whole_recompute": {
+          "forward_calls": 3,
+          "input_tokens": 556,
+          "seconds": 0.19556067418307066
+        },
+        "control_early_rebuild": {
+          "forward_calls": 12,
+          "input_tokens": 808,
+          "seconds": 0.8369316160678864
+        },
+        "control_target_early_prefill_attention": {
+          "forward_calls": 3,
+          "input_tokens": 430,
+          "seconds": 0.19862335361540318
+        },
+        "control_random_early_prefill_attention": {
+          "forward_calls": 3,
+          "input_tokens": 430,
+          "seconds": 0.19478910509496927
+        }
+      }
+    },
+    "observed_postload_peak_allocated_bytes": 8945620992
+  },
+  "results/p05_five_arm_01/error.json": {
+    "exists": false
+  },
+  "results/p05_five_arm_01/manifest.json": {
+    "versions": {
+      "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]",
+      "torch": "2.8.0+cu128",
+      "transformers": "4.55.2"
+    },
+    "parameter_dtype": "torch.float16",
+    "load_and_hash_seconds": 29.977774594910443,
+    "model_manifest_sha256": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+    "source_sha256": "91b6ed7c584bf7561073964f5dc08510ab10f7a92f35e9fa89d2efe669442742"
+  },
+  "log_tail": [
+    "{\"phase\": \"primary\", \"case_id\": \"C01\", \"primary_complete\": true, \"remaining_seconds\": 208.48723782692105, \"values\": {\"FullDirect\": 31, \"FullOneLine\": 31, \"WholeEarlyDirect\": 7, \"WholeEarlyOneLine\": 31, \"WholeLateOneLine\": 31}}",
+    "{\"phase\": \"primary\", \"case_id\": \"W01\", \"primary_complete\": true, \"remaining_seconds\": 196.23240747582167, \"values\": {\"FullDirect\": 28, \"FullOneLine\": 28, \"WholeEarlyDirect\": 11, \"WholeEarlyOneLine\": 28, \"WholeLateOneLine\": 28}}",
+    "{\"phase\": \"primary\", \"case_id\": \"E02\", \"primary_complete\": true, \"remaining_seconds\": 184.30253514833748, \"values\": {\"FullDirect\": 30, \"FullOneLine\": 38, \"WholeEarlyDirect\": 28, \"WholeEarlyOneLine\": 38, \"WholeLateOneLine\": 38}}",
+    "{\"phase\": \"primary\", \"case_id\": \"E03\", \"primary_complete\": true, \"remaining_seconds\": 172.76876439806074, \"values\": {\"FullDirect\": 70, \"FullOneLine\": 87, \"WholeEarlyDirect\": 81, \"WholeEarlyOneLine\": 87, \"WholeLateOneLine\": 87}}",
+    "{\"phase\": \"primary\", \"case_id\": \"C02\", \"primary_complete\": true, \"remaining_seconds\": 162.58546274900436, \"values\": {\"FullDirect\": 16, \"FullOneLine\": 16, \"WholeEarlyDirect\": 24, \"WholeEarlyOneLine\": 16, \"WholeLateOneLine\": 16}}",
+    "{\"phase\": \"primary\", \"case_id\": \"W02\", \"primary_complete\": true, \"remaining_seconds\": 152.4107402227819, \"values\": {\"FullDirect\": 21, \"FullOneLine\": 21, \"WholeEarlyDirect\": 32, \"WholeEarlyOneLine\": 21, \"WholeLateOneLine\": 21}}",
+    "{\"phase\": \"primary\", \"case_id\": \"E04\", \"primary_complete\": true, \"remaining_seconds\": 140.60669364966452, \"values\": {\"FullDirect\": 41, \"FullOneLine\": 43, \"WholeEarlyDirect\": 21, \"WholeEarlyOneLine\": 43, \"WholeLateOneLine\": null}}"
+  ]
+}

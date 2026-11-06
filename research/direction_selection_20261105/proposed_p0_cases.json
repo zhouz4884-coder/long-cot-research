@@ -1,0 +1,697 @@
+{
+  "schema_version": "p0_synthetic_interface_v1",
+  "date": "2026-11-05",
+  "scope": "Teacher-forced synthetic mechanism interface set; not a natural long-CoT benchmark.",
+  "construction": "16 handwritten integer-arithmetic variable-dependency states; zero model generations.",
+  "oracle_trigger_definition": "1 iff the old branch's x assertion contradicts the exact original x definition; 0 iff that assertion is correct. The word Wait is not an oracle trigger.",
+  "old_error_value_definition": "Wrong asserted x value; null when the old branch is correct.",
+  "evaluator_only_fields": [
+    "required_final_value",
+    "old_error_value",
+    "old_wrong_final_value",
+    "old_branch_final_value",
+    "old_root_value",
+    "revision_root_value",
+    "revision_implied_final_value",
+    "oracle_trigger_label",
+    "revision_is_correct",
+    "oracle_values",
+    "group"
+  ],
+  "rendering_policy": "question/old_branch/independent_conclusion/revision are separate components. The main agent controls which components, fillers, order, and model template are used. Do not automatically expose evaluator-only fields or treat all components as one prompt. The independent conclusion is a privileged exact verifier message, not a model-generated diagnosis.",
+  "selection_policy": "No gold-based selection of model outputs and no empirical model-performance claim.",
+  "cases": [
+    {
+      "case_id": "E01",
+      "group": "falsified_old_correct_revision",
+      "question": "按整数算术，依次定义 x=18-7，y=3*x+2，z=y-5。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=12；因此 y=38，z=33。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=18-7=11。",
+      "revision": "Wait，重新计算应为 x=11。后续计算采用这个值。",
+      "required_final_value": 30,
+      "old_error_value": 12,
+      "old_wrong_final_value": 33,
+      "old_branch_final_value": 33,
+      "old_root_value": 12,
+      "revision_root_value": 11,
+      "revision_implied_final_value": 30,
+      "oracle_trigger_label": 1,
+      "revision_is_correct": true,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "18-7"
+        },
+        {
+          "variable": "y",
+          "expression": "3*x+2"
+        },
+        {
+          "variable": "z",
+          "expression": "y-5"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 11,
+        "y": 35,
+        "z": 30
+      }
+    },
+    {
+      "case_id": "E02",
+      "group": "falsified_old_correct_revision",
+      "question": "按整数算术，依次定义 x=7*4，y=x-9，z=2*y。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=24；因此 y=15，z=30。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=7*4=28。",
+      "revision": "Wait，重新计算应为 x=28。后续计算采用这个值。",
+      "required_final_value": 38,
+      "old_error_value": 24,
+      "old_wrong_final_value": 30,
+      "old_branch_final_value": 30,
+      "old_root_value": 24,
+      "revision_root_value": 28,
+      "revision_implied_final_value": 38,
+      "oracle_trigger_label": 1,
+      "revision_is_correct": true,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "7*4"
+        },
+        {
+          "variable": "y",
+          "expression": "x-9"
+        },
+        {
+          "variable": "z",
+          "expression": "2*y"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 28,
+        "y": 19,
+        "z": 38
+      }
+    },
+    {
+      "case_id": "E03",
+      "group": "falsified_old_correct_revision",
+      "question": "按整数算术，依次定义 x=45//5，y=x*x，z=y+6。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=8；因此 y=64，z=70。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=45//5=9。",
+      "revision": "Wait，重新计算应为 x=9。后续计算采用这个值。",
+      "required_final_value": 87,
+      "old_error_value": 8,
+      "old_wrong_final_value": 70,
+      "old_branch_final_value": 70,
+      "old_root_value": 8,
+      "revision_root_value": 9,
+      "revision_implied_final_value": 87,
+      "oracle_trigger_label": 1,
+      "revision_is_correct": true,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "45//5"
+        },
+        {
+          "variable": "y",
+          "expression": "x*x"
+        },
+        {
+          "variable": "z",
+          "expression": "y+6"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 9,
+        "y": 81,
+        "z": 87
+      }
+    },
+    {
+      "case_id": "E04",
+      "group": "falsified_old_correct_revision",
+      "question": "按整数算术，依次定义 x=13+8，y=2*x-3，z=y+4。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=20；因此 y=37，z=41。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=13+8=21。",
+      "revision": "Wait，重新计算应为 x=21。后续计算采用这个值。",
+      "required_final_value": 43,
+      "old_error_value": 20,
+      "old_wrong_final_value": 41,
+      "old_branch_final_value": 41,
+      "old_root_value": 20,
+      "revision_root_value": 21,
+      "revision_implied_final_value": 43,
+      "oracle_trigger_label": 1,
+      "revision_is_correct": true,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "13+8"
+        },
+        {
+          "variable": "y",
+          "expression": "2*x-3"
+        },
+        {
+          "variable": "z",
+          "expression": "y+4"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 21,
+        "y": 39,
+        "z": 43
+      }
+    },
+    {
+      "case_id": "E05",
+      "group": "falsified_old_correct_revision",
+      "question": "按整数算术，依次定义 x=6*6，y=x//6，z=5*y-2。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=30；因此 y=5，z=23。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=6*6=36。",
+      "revision": "Wait，重新计算应为 x=36。后续计算采用这个值。",
+      "required_final_value": 28,
+      "old_error_value": 30,
+      "old_wrong_final_value": 23,
+      "old_branch_final_value": 23,
+      "old_root_value": 30,
+      "revision_root_value": 36,
+      "revision_implied_final_value": 28,
+      "oracle_trigger_label": 1,
+      "revision_is_correct": true,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "6*6"
+        },
+        {
+          "variable": "y",
+          "expression": "x//6"
+        },
+        {
+          "variable": "z",
+          "expression": "5*y-2"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 36,
+        "y": 6,
+        "z": 28
+      }
+    },
+    {
+      "case_id": "E06",
+      "group": "falsified_old_correct_revision",
+      "question": "按整数算术，依次定义 x=50-17，y=x+7，z=3*y-1。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=32；因此 y=39，z=116。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=50-17=33。",
+      "revision": "Wait，重新计算应为 x=33。后续计算采用这个值。",
+      "required_final_value": 119,
+      "old_error_value": 32,
+      "old_wrong_final_value": 116,
+      "old_branch_final_value": 116,
+      "old_root_value": 32,
+      "revision_root_value": 33,
+      "revision_implied_final_value": 119,
+      "oracle_trigger_label": 1,
+      "revision_is_correct": true,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "50-17"
+        },
+        {
+          "variable": "y",
+          "expression": "x+7"
+        },
+        {
+          "variable": "z",
+          "expression": "3*y-1"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 33,
+        "y": 40,
+        "z": 119
+      }
+    },
+    {
+      "case_id": "E07",
+      "group": "falsified_old_correct_revision",
+      "question": "按整数算术，依次定义 x=(9+3)*2，y=2*x，z=y-11。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=22；因此 y=44，z=33。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=(9+3)*2=24。",
+      "revision": "Wait，重新计算应为 x=24。后续计算采用这个值。",
+      "required_final_value": 37,
+      "old_error_value": 22,
+      "old_wrong_final_value": 33,
+      "old_branch_final_value": 33,
+      "old_root_value": 22,
+      "revision_root_value": 24,
+      "revision_implied_final_value": 37,
+      "oracle_trigger_label": 1,
+      "revision_is_correct": true,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "(9+3)*2"
+        },
+        {
+          "variable": "y",
+          "expression": "2*x"
+        },
+        {
+          "variable": "z",
+          "expression": "y-11"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 24,
+        "y": 48,
+        "z": 37
+      }
+    },
+    {
+      "case_id": "E08",
+      "group": "falsified_old_correct_revision",
+      "question": "按整数算术，依次定义 x=64//8+5，y=x-4，z=y*y+1。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=12；因此 y=8，z=65。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=64//8+5=13。",
+      "revision": "Wait，重新计算应为 x=13。后续计算采用这个值。",
+      "required_final_value": 82,
+      "old_error_value": 12,
+      "old_wrong_final_value": 65,
+      "old_branch_final_value": 65,
+      "old_root_value": 12,
+      "revision_root_value": 13,
+      "revision_implied_final_value": 82,
+      "oracle_trigger_label": 1,
+      "revision_is_correct": true,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "64//8+5"
+        },
+        {
+          "variable": "y",
+          "expression": "x-4"
+        },
+        {
+          "variable": "z",
+          "expression": "y*y+1"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 13,
+        "y": 9,
+        "z": 82
+      }
+    },
+    {
+      "case_id": "C01",
+      "group": "correct_old_no_error_control",
+      "question": "按整数算术，依次定义 x=16-9，y=4*x，z=y+3。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=7；因此 y=28，z=31。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=16-9=7。",
+      "revision": "复核后 x=7 保持不变。后续计算采用这个值。",
+      "required_final_value": 31,
+      "old_error_value": null,
+      "old_wrong_final_value": null,
+      "old_branch_final_value": 31,
+      "old_root_value": 7,
+      "revision_root_value": 7,
+      "revision_implied_final_value": 31,
+      "oracle_trigger_label": 0,
+      "revision_is_correct": true,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "16-9"
+        },
+        {
+          "variable": "y",
+          "expression": "4*x"
+        },
+        {
+          "variable": "z",
+          "expression": "y+3"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 7,
+        "y": 28,
+        "z": 31
+      }
+    },
+    {
+      "case_id": "C02",
+      "group": "correct_old_no_error_control",
+      "question": "按整数算术，依次定义 x=8*3，y=x//4，z=3*y-2。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=24；因此 y=6，z=16。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=8*3=24。",
+      "revision": "复核后 x=24 保持不变。后续计算采用这个值。",
+      "required_final_value": 16,
+      "old_error_value": null,
+      "old_wrong_final_value": null,
+      "old_branch_final_value": 16,
+      "old_root_value": 24,
+      "revision_root_value": 24,
+      "revision_implied_final_value": 16,
+      "oracle_trigger_label": 0,
+      "revision_is_correct": true,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "8*3"
+        },
+        {
+          "variable": "y",
+          "expression": "x//4"
+        },
+        {
+          "variable": "z",
+          "expression": "3*y-2"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 24,
+        "y": 6,
+        "z": 16
+      }
+    },
+    {
+      "case_id": "C03",
+      "group": "correct_old_no_error_control",
+      "question": "按整数算术，依次定义 x=35//5，y=x+8，z=2*y。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=7；因此 y=15，z=30。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=35//5=7。",
+      "revision": "复核后 x=7 保持不变。后续计算采用这个值。",
+      "required_final_value": 30,
+      "old_error_value": null,
+      "old_wrong_final_value": null,
+      "old_branch_final_value": 30,
+      "old_root_value": 7,
+      "revision_root_value": 7,
+      "revision_implied_final_value": 30,
+      "oracle_trigger_label": 0,
+      "revision_is_correct": true,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "35//5"
+        },
+        {
+          "variable": "y",
+          "expression": "x+8"
+        },
+        {
+          "variable": "z",
+          "expression": "2*y"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 7,
+        "y": 15,
+        "z": 30
+      }
+    },
+    {
+      "case_id": "C04",
+      "group": "correct_old_no_error_control",
+      "question": "按整数算术，依次定义 x=11+6，y=2*x-5，z=y-9。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=17；因此 y=29，z=20。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=11+6=17。",
+      "revision": "复核后 x=17 保持不变。后续计算采用这个值。",
+      "required_final_value": 20,
+      "old_error_value": null,
+      "old_wrong_final_value": null,
+      "old_branch_final_value": 20,
+      "old_root_value": 17,
+      "revision_root_value": 17,
+      "revision_implied_final_value": 20,
+      "oracle_trigger_label": 0,
+      "revision_is_correct": true,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "11+6"
+        },
+        {
+          "variable": "y",
+          "expression": "2*x-5"
+        },
+        {
+          "variable": "z",
+          "expression": "y-9"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 17,
+        "y": 29,
+        "z": 20
+      }
+    },
+    {
+      "case_id": "W01",
+      "group": "wait_wrong_revision_control",
+      "question": "按整数算术，依次定义 x=15-6，y=3*x，z=y+1。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=9；因此 y=27，z=28。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=15-6=9。",
+      "revision": "Wait，前面的 x=9 要改成 x=10。后续计算采用这个值。",
+      "required_final_value": 28,
+      "old_error_value": null,
+      "old_wrong_final_value": null,
+      "old_branch_final_value": 28,
+      "old_root_value": 9,
+      "revision_root_value": 10,
+      "revision_implied_final_value": 31,
+      "oracle_trigger_label": 0,
+      "revision_is_correct": false,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "15-6"
+        },
+        {
+          "variable": "y",
+          "expression": "3*x"
+        },
+        {
+          "variable": "z",
+          "expression": "y+1"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 9,
+        "y": 27,
+        "z": 28
+      }
+    },
+    {
+      "case_id": "W02",
+      "group": "wait_wrong_revision_control",
+      "question": "按整数算术，依次定义 x=9*4，y=x//4，z=2*y+3。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=36；因此 y=9，z=21。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=9*4=36。",
+      "revision": "Wait，前面的 x=36 要改成 x=32。后续计算采用这个值。",
+      "required_final_value": 21,
+      "old_error_value": null,
+      "old_wrong_final_value": null,
+      "old_branch_final_value": 21,
+      "old_root_value": 36,
+      "revision_root_value": 32,
+      "revision_implied_final_value": 19,
+      "oracle_trigger_label": 0,
+      "revision_is_correct": false,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "9*4"
+        },
+        {
+          "variable": "y",
+          "expression": "x//4"
+        },
+        {
+          "variable": "z",
+          "expression": "2*y+3"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 36,
+        "y": 9,
+        "z": 21
+      }
+    },
+    {
+      "case_id": "W03",
+      "group": "wait_wrong_revision_control",
+      "question": "按整数算术，依次定义 x=42//7，y=x+5，z=y*y。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=6；因此 y=11，z=121。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=42//7=6。",
+      "revision": "Wait，前面的 x=6 要改成 x=7。后续计算采用这个值。",
+      "required_final_value": 121,
+      "old_error_value": null,
+      "old_wrong_final_value": null,
+      "old_branch_final_value": 121,
+      "old_root_value": 6,
+      "revision_root_value": 7,
+      "revision_implied_final_value": 144,
+      "oracle_trigger_label": 0,
+      "revision_is_correct": false,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "42//7"
+        },
+        {
+          "variable": "y",
+          "expression": "x+5"
+        },
+        {
+          "variable": "z",
+          "expression": "y*y"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 6,
+        "y": 11,
+        "z": 121
+      }
+    },
+    {
+      "case_id": "W04",
+      "group": "wait_wrong_revision_control",
+      "question": "按整数算术，依次定义 x=(8+5)*2，y=x-6，z=4*y-1。其中 // 表示整除，本例所有除法均恰好整除。求 z，只输出一个整数。",
+      "old_branch": "x=26；因此 y=20，z=79。",
+      "independent_conclusion": "独立核验题目中的原始定义：x=(8+5)*2=26。",
+      "revision": "Wait，前面的 x=26 要改成 x=24。后续计算采用这个值。",
+      "required_final_value": 79,
+      "old_error_value": null,
+      "old_wrong_final_value": null,
+      "old_branch_final_value": 79,
+      "old_root_value": 26,
+      "revision_root_value": 24,
+      "revision_implied_final_value": 71,
+      "oracle_trigger_label": 0,
+      "revision_is_correct": false,
+      "definitions": [
+        {
+          "variable": "x",
+          "expression": "(8+5)*2"
+        },
+        {
+          "variable": "y",
+          "expression": "x-6"
+        },
+        {
+          "variable": "z",
+          "expression": "4*y-1"
+        }
+      ],
+      "final_variable": "z",
+      "dependency_path": [
+        "x",
+        "y",
+        "z"
+      ],
+      "oracle_values": {
+        "x": 26,
+        "y": 20,
+        "z": 79
+      }
+    }
+  ]
+}

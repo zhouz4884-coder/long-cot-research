@@ -1,0 +1,311 @@
+{
+  "schema_version": "qwen3_injected_cache_p0_v1",
+  "source_sha256": "246219aee9774fae0966c7663c765daf3dba2f1df68bc054b539a4dd5d64331b",
+  "input_sha256": "6ffe069718396dc2543f85aa9270780f356e293cc9764afdaf2f06a083c5cc27",
+  "binding": {
+    "device": "cuda:0",
+    "allocation_mode": "explicit_authorized_standalone",
+    "physical_index": "0",
+    "physical_uuid": "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+    "requested_visible_identifier": "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+    "CUDA_VISIBLE_DEVICES": "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+    "compute_process_check": "empty before torch import",
+    "PBS_JOBID": null
+  },
+  "versions": {
+    "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.2"
+  },
+  "visible_field_whitelist": [
+    "question",
+    "old_branch",
+    "revision"
+  ],
+  "excluded_from_prompt": [
+    "independent_conclusion",
+    "required_final_value",
+    "old_error_value",
+    "old_wrong_final_value",
+    "old_branch_final_value",
+    "old_root_value",
+    "revision_root_value",
+    "revision_implied_final_value",
+    "oracle_trigger_label",
+    "revision_is_correct",
+    "oracle_values",
+    "group"
+  ],
+  "dtype": "float16",
+  "attention": "eager",
+  "max_new_tokens": 32,
+  "seed": 20261105,
+  "thinking": false,
+  "hard_limit_seconds": 1180,
+  "limitations": [
+    "Handwritten teacher-forced injected states; not natural errors, detection or self-correction.",
+    "Revisions are shared visible injections, including wrong revisions; no independent verifier message.",
+    "All cache tensors keep their original shapes; masking establishes no memory saving.",
+    "Target is a whole provided branch; random is a token subset of B union U, with overlap recorded.",
+    "Random scattered B-union-U masking matches only count: not age/contiguous span or Random Attention; beating it does not establish semantic specificity.",
+    "No causal correctness, general accuracy, long-CoT efficiency, novelty or deployment claim.",
+    "Only one fixed seed/mode; no selection of cases or continuations by observed performance."
+  ],
+  "frozen_order": [
+    "E01",
+    "C01",
+    "W01",
+    "E02",
+    "E03",
+    "C02",
+    "W02",
+    "E04",
+    "E05",
+    "C03",
+    "W03",
+    "E06",
+    "E07",
+    "C04",
+    "W04",
+    "E08"
+  ],
+  "runtime_includes": "Imports, hashes, load, all forwards, scoring and controls.",
+  "model_files": {
+    "local_model_directory": "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B",
+    "files": [
+      {
+        "name": "model-00001-of-00003.safetensors",
+        "size_bytes": 3957900840,
+        "sha256": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223"
+      },
+      {
+        "name": "model-00002-of-00003.safetensors",
+        "size_bytes": 3987450520,
+        "sha256": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5"
+      },
+      {
+        "name": "model-00003-of-00003.safetensors",
+        "size_bytes": 99630640,
+        "sha256": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1"
+      },
+      {
+        "name": "config.json",
+        "size_bytes": 726,
+        "sha256": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a"
+      },
+      {
+        "name": "configuration.json",
+        "size_bytes": 73,
+        "sha256": "f888421726665e8a84b738eed42a64875aed79de8be7daade851ac8bf4c0cef9"
+      },
+      {
+        "name": "generation_config.json",
+        "size_bytes": 239,
+        "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+      },
+      {
+        "name": "merges.txt",
+        "size_bytes": 1671853,
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      },
+      {
+        "name": "model.safetensors.index.json",
+        "size_bytes": 32819,
+        "sha256": "6dc0981b8829fead746441f68f38f24c5ca4a3a66351f652c26c6df0efc43ab2"
+      },
+      {
+        "name": "tokenizer.json",
+        "size_bytes": 11422654,
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "size_bytes": 9732,
+        "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+      },
+      {
+        "name": "vocab.json",
+        "size_bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ],
+    "manifest_sha256": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+    "hash_scope": "All root model weight files plus JSON/TXT/Jinja tokenizer/config assets."
+  },
+  "model_manifest_sha256": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 3090",
+    "total_memory_bytes": 25307578368,
+    "capability": [
+      8,
+      6
+    ]
+  },
+  "load_and_hash_seconds": 66.32733393926173,
+  "model_config": {
+    "vocab_size": 151936,
+    "max_position_embeddings": 40960,
+    "hidden_size": 2560,
+    "intermediate_size": 9728,
+    "num_hidden_layers": 36,
+    "num_attention_heads": 32,
+    "use_sliding_window": false,
+    "sliding_window": null,
+    "max_window_layers": 36,
+    "num_key_value_heads": 8,
+    "head_dim": 128,
+    "hidden_act": "silu",
+    "initializer_range": 0.02,
+    "rms_norm_eps": 1e-06,
+    "use_cache": true,
+    "rope_theta": 1000000,
+    "rope_scaling": null,
+    "attention_bias": false,
+    "attention_dropout": 0.0,
+    "layer_types": [
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention"
+    ],
+    "return_dict": true,
+    "output_hidden_states": false,
+    "torchscript": false,
+    "torch_dtype": "float16",
+    "pruned_heads": {},
+    "tie_word_embeddings": true,
+    "chunk_size_feed_forward": 0,
+    "is_encoder_decoder": false,
+    "is_decoder": false,
+    "cross_attention_hidden_size": null,
+    "add_cross_attention": false,
+    "tie_encoder_decoder": false,
+    "architectures": [
+      "Qwen3ForCausalLM"
+    ],
+    "finetuning_task": null,
+    "id2label": {
+      "0": "LABEL_0",
+      "1": "LABEL_1"
+    },
+    "label2id": {
+      "LABEL_0": 0,
+      "LABEL_1": 1
+    },
+    "task_specific_params": null,
+    "problem_type": null,
+    "tokenizer_class": null,
+    "prefix": null,
+    "bos_token_id": 151643,
+    "pad_token_id": null,
+    "eos_token_id": 151645,
+    "sep_token_id": null,
+    "decoder_start_token_id": null,
+    "max_length": 20,
+    "min_length": 0,
+    "do_sample": false,
+    "early_stopping": false,
+    "num_beams": 1,
+    "num_beam_groups": 1,
+    "diversity_penalty": 0.0,
+    "temperature": 1.0,
+    "top_k": 50,
+    "top_p": 1.0,
+    "typical_p": 1.0,
+    "repetition_penalty": 1.0,
+    "length_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "encoder_no_repeat_ngram_size": 0,
+    "bad_words_ids": null,
+    "num_return_sequences": 1,
+    "output_scores": false,
+    "return_dict_in_generate": false,
+    "forced_bos_token_id": null,
+    "forced_eos_token_id": null,
+    "remove_invalid_values": false,
+    "exponential_decay_length_penalty": null,
+    "suppress_tokens": null,
+    "begin_suppress_tokens": null,
+    "_name_or_path": "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B",
+    "transformers_version": "4.55.2",
+    "model_type": "qwen3",
+    "tf_legacy_loss": false,
+    "use_bfloat16": false,
+    "output_attentions": false
+  },
+  "tokenizer": {
+    "class": "Qwen2TokenizerFast",
+    "special_tokens_map": {
+      "eos_token": "<|im_end|>",
+      "pad_token": "<|endoftext|>",
+      "additional_special_tokens": [
+        "<|im_start|>",
+        "<|im_end|>",
+        "<|object_ref_start|>",
+        "<|object_ref_end|>",
+        "<|box_start|>",
+        "<|box_end|>",
+        "<|quad_start|>",
+        "<|quad_end|>",
+        "<|vision_start|>",
+        "<|vision_end|>",
+        "<|vision_pad|>",
+        "<|image_pad|>",
+        "<|video_pad|>"
+      ]
+    },
+    "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if message.content is string %}\n        {%- set content = message.content %}\n    {%- else %}\n        {%- set content = '' %}\n    {%- endif %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- endif %}\n{%- endif %}"
+  },
+  "parameter_dtype": "torch.float16",
+  "executed_order": [
+    "E01",
+    "C01",
+    "W01",
+    "E02",
+    "E03",
+    "C02",
+    "W02",
+    "E04",
+    "E05",
+    "C03",
+    "W03",
+    "E06",
+    "E07",
+    "C04",
+    "W04",
+    "E08"
+  ],
+  "interface_only": false
+}

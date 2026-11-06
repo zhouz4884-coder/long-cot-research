@@ -1,0 +1,14 @@
+[
+  {
+    "command": "python3 -c \"import sys;print(sys.version);import torch,transformers;print(torch.__version__,transformers.__version__)\"",
+    "out": "3.8.10 (default, Mar 18 2025, 20:04:55) \n[GCC 9.4.0]\n",
+    "err": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'torch'\n",
+    "exit": 1
+  },
+  {
+    "command": "docker images --format \"{{.Repository}}:{{.Tag}} {{.ID}}\"",
+    "out": "docker.m.daocloud.io/ubuntu/squid:5.2-22.04_beta 79ca16e16779\nvllm/vllm-openai:v0.10.2 5791f8642d1b\nswr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/vllm/vllm-openai:v0.10.2 5791f8642d1b\ndocker.m.daocloud.io/snowdreamtech/frpc:0.61.1 3e5e45b6aa48\n",
+    "err": "",
+    "exit": 0
+  }
+]

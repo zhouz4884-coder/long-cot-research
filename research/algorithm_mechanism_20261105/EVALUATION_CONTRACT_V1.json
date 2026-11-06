@@ -1,0 +1,51 @@
+{
+  "version": "evaluation_contract_v1_20261105",
+  "status": "Definition only; no new benchmark executed",
+  "main_objective": "Final-answer correctness on each independent dataset under declared comparable resources",
+  "primary_metrics": {
+    "deterministic": "accuracy = correct/N for fixed greedy/sampling protocol",
+    "stochastic": "pass@1 = average per-question sample success fraction, all samples included",
+    "pass_at_k": "at least one success among k attempts; separate budget and not relabeled pass@1",
+    "per_dataset": true,
+    "macro_average": "optional, weights fixed before test, cannot replace per-dataset rows"
+  },
+  "comparison_controls": [
+    "checkpoint/tokenizer/template",
+    "sampling and fixed seed lists",
+    "same tool/verification access",
+    "same answer parser/semantic equivalence",
+    "same total token/model-call/tool-call or declared GPU budget",
+    "all rejected probes/prefills/rebuilds counted"
+  ],
+  "cost_metrics": [
+    "end-to-end time",
+    "generated tokens",
+    "prefill/recomputed tokens",
+    "model and tool calls",
+    "GPU-min across every allocated card",
+    "peak allocated/reserved and failures"
+  ],
+  "diagnostics_not_primary_accuracy": [
+    "NLL",
+    "gradient utility",
+    "q entropy/ESS",
+    "KV distance",
+    "stage probe accuracy",
+    "revision-type rates",
+    "C/W harms"
+  ],
+  "grading": {
+    "frozen_parser_required": true,
+    "test_Gold_only_after_output": true,
+    "oracle_gate_reported_separately": true,
+    "unparseable_timeout_OOM": "prespecified treatment with full denominator and failure row, never silently dropped"
+  },
+  "data_separation": {
+    "historical_300_and_selected100": "development/observation only",
+    "H_used_for_tuning": "validation, not final blind test",
+    "final_test": "problem identities not used to construct q, labels, thresholds or choose method"
+  },
+  "uncertainty": "paired per-question changes and question-cluster uncertainty across repeated samples; small datasets reported with sample size",
+  "formal_execution": "Complete declared benchmark scope required for a performance claim; partial pilot remains diagnostic",
+  "novelty": "Cite borrowed modules; establish new operation/objective and incremental benefit with same-data/tool/compute baselines; no acceptance guarantee"
+}

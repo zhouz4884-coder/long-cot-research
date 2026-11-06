@@ -1,0 +1,66 @@
+{
+  "qstat": {
+    "out": "Job Id: 190150.manager\n    Job_Name = lcr-p0-admit\n    Job_Owner = zhoubin@manager\n    job_state = Q\n    queue = GPUDefq\n    server = manager\n    Checkpoint = u\n    ctime = Thu Nov  5 18:11:28 2026\n    Error_Path = manager:/data/home/zhoubin/longcot_state_repair_20261105/logs\n\t/admission_01.log\n    Hold_Types = n\n    Join_Path = oe\n    Keep_Files = n\n    Mail_Points = a\n    mtime = Thu Nov  5 18:11:29 2026\n    Output_Path = manager:/data/home/zhoubin/longcot_state_repair_20261105/log\n\ts/admission_01.log\n    Priority = 0\n    qtime = Thu Nov  5 18:11:28 2026\n    Rerunable = True\n    Resource_List.nodes = gpu2:ppn=2:gpus=1:gpublic\n    Resource_List.mem = 8gb\n    Resource_List.nodect = 1\n    Variable_List = PBS_O_QUEUE=GPUDefq,PBS_O_HOME=/data/home/zhoubin,\n\tPBS_O_LOGNAME=zhoubin,\n\tPBS_O_PATH=/var/lib/torque/bin:/var/lib/torque/sbin:/opt/slurm-20.11.\n\t9/sbin:/opt/slurm-20.11.9/bin:/usr/lib64/qt-3.3/bin:/usr/bin:/bin:/usr\n\t/sbin:/sbin,PBS_O_SHELL=/bin/bash,PBS_O_LANG=zh_CN.UTF-8,\n\tPBS_O_SUBMIT_FILTER=/usr/local/sbin/torque_submitfilter,\n\tPBS_O_WORKDIR=/data/home/zhoubin/longcot_state_repair_20261105,\n\tPBS_O_HOST=manager,PBS_O_SERVER=manager\n    euser = zhoubin\n    egroup = caoxi\n    queue_type = E\n    comment = Not Running: Not enough of the right type of nodes are available\n\t\n    etime = Thu Nov  5 18:11:28 2026\n    submit_args = pbs/v100_admission_gpu2.pbs\n    fault_tolerant = False\n    job_radix = 0\n    submit_host = manager\n    init_work_dir = /data/home/zhoubin/longcot_state_repair_20261105\n    request_version = 1\n\n",
+    "exit": 0
+  },
+  "provenance/isolated_env_01.json": {
+    "started_unix": 1793873571.7239592,
+    "base_environment_mutated": false,
+    "venv": "/data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100",
+    "steps": [
+      {
+        "command": [
+          "/data/home/zhoubin/contractkv_v100/env/contractkv-v100-cu121/bin/python",
+          "-m",
+          "venv",
+          "--system-site-packages",
+          "/data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100"
+        ],
+        "exit": 0
+      },
+      {
+        "command": [
+          "/data/home/zhoubin/contractkv_v100/env/contractkv-v100-cu121/bin/python",
+          "-m",
+          "pip",
+          "--python",
+          "/data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100/bin/python",
+          "install",
+          "--ignore-installed",
+          "--no-deps",
+          "charset-normalizer==3.4.4",
+          "chardet==5.2.0"
+        ],
+        "exit": 0
+      },
+      {
+        "command": [
+          "/data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100/bin/python",
+          "-c",
+          "import requests,charset_normalizer,chardet,modelscope; print(requests.__version__,charset_normalizer.__version__,chardet.__version__,modelscope.__version__)"
+        ],
+        "exit": 0
+      }
+    ],
+    "passed": true,
+    "elapsed_seconds": 33.97635531425476
+  },
+  "results/v100_admission_01.json": {
+    "exists": false
+  },
+  "isolated_log_tail": [
+    "Collecting charset-normalizer==3.4.4",
+    "  Downloading charset_normalizer-3.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)",
+    "Collecting chardet==5.2.0",
+    "  Downloading chardet-5.2.0-py3-none-any.whl.metadata (3.4 kB)",
+    "Downloading charset_normalizer-3.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB)",
+    "Downloading chardet-5.2.0-py3-none-any.whl (199 kB)",
+    "Installing collected packages: charset-normalizer, chardet",
+    "",
+    "Successfully installed chardet-5.2.0 charset-normalizer-3.4.4",
+    "",
+    "[notice] A new release of pip is available: 22.2.1 -> 26.3",
+    "[notice] To update, run: /data/home/zhoubin/longcot_state_repair_20261105/env/longcot-v100/bin/python -m pip install --upgrade pip",
+    "2.28.1 3.4.4 5.2.0 1.38.1"
+  ]
+}

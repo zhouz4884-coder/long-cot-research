@@ -72,7 +72,8 @@ def main():
 
     frozen = []
     for folder, name in [('direction_selection_20261105', 'DELIVERY_MANIFEST.json'), ('next_design_20261105', 'DESIGN_DELIVERY_MANIFEST.json'),
-                         ('algorithm_mechanism_20261105', 'DELIVERY_MANIFEST.json'), ('p05_design_review_20261105', 'DELIVERY_MANIFEST.json')]:
+                         ('algorithm_mechanism_20261105', 'DELIVERY_MANIFEST.json'), ('p05_design_review_20261105', 'DELIVERY_MANIFEST.json'),
+                         ('phase5_prototype_20261106', 'DELIVERY_MANIFEST.json')]:
         base = ROOT / 'research' / folder
         manifest = json.loads((base / name).read_text(encoding='utf-8'))
         for item in manifest['files']:
@@ -100,10 +101,12 @@ def main():
             if relative not in indexed: missing_links.append({'source': path, 'target': target})
     report = {
         'status': 'PASS' if not (forbidden or mismatches or oversize or credentials or missing_links) else 'FAIL',
-        'scope': 'All staged blobs byte-compared; 224 prior frozen members; changed text credential rules; navigation links. Not universal secret-free proof.',
+        'scope': 'All staged blobs byte-compared; 224 prior frozen members plus Phase5 delivery manifest; changed text credential rules; navigation links. Not universal secret-free proof.',
         'source_head': git('rev-parse', 'HEAD').decode().strip(),
         'indexed_files': len(indexed), 'indexed_bytes': sum(blob_sha[e['oid']][1] for e in indexed.values()),
         'unique_blobs': len(blob_sha), 'frozen_members_verified': len(frozen),
+        'prior_frozen_members_verified': sum(not p.startswith('research/phase5_prototype_20261106/') for p in frozen),
+        'phase5_manifest_members_verified': sum(p.startswith('research/phase5_prototype_20261106/') for p in frozen),
         'forbidden_paths': forbidden, 'byte_mismatches': mismatches, 'oversize': oversize,
         'changed_files_scanned': len(changed), 'scan_states': scan_states, 'credential_candidates': credentials,
         'missing_navigation_links': missing_links,

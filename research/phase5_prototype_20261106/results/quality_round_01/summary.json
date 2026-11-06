@@ -1,0 +1,330 @@
+{
+  "status": "QUALITY_PARTIAL_TIME_BUDGET",
+  "elapsed_seconds": 261.08111450169235,
+  "planned_main_case_order": [
+    "T1_support_before_fault_E",
+    "T2_support_before_fault_E",
+    "T1_support_before_fault_C",
+    "T2_support_before_fault_C",
+    "T1_support_before_fault_W",
+    "T2_support_before_fault_W"
+  ],
+  "complete_main_ids": [
+    "T1_support_before_fault_E",
+    "T2_support_before_fault_E",
+    "T1_support_before_fault_C"
+  ],
+  "main_started": 4,
+  "main_complete": 3,
+  "basis_complete": 6,
+  "planned_basis_ids": [
+    "P_01",
+    "P_02",
+    "PR_01",
+    "PR_02",
+    "PR_03",
+    "PR_04"
+  ],
+  "basis_results": [
+    {
+      "basis_id": "P_01",
+      "kind": "basis",
+      "grade": {
+        "parsed_value": 80,
+        "numeric_correct": true,
+        "eos_and_correct": true,
+        "frozen_extraction": {
+          "value": 80,
+          "method": "explicit_final_marker_terminal_integer",
+          "matched_text": "最终答案：80"
+        },
+        "scope": "Posthoc final-value grading only; never used to stop or select model output."
+      },
+      "stop_reason": "eos",
+      "new_tokens": 119,
+      "linked_case_ids": [
+        "T1_support_before_fault_E",
+        "T1_support_before_fault_C",
+        "T1_support_before_fault_W"
+      ]
+    },
+    {
+      "basis_id": "P_02",
+      "kind": "basis",
+      "grade": {
+        "parsed_value": 63,
+        "numeric_correct": true,
+        "eos_and_correct": true,
+        "frozen_extraction": {
+          "value": 63,
+          "method": "explicit_final_marker_terminal_integer",
+          "matched_text": "最终答案：63"
+        },
+        "scope": "Posthoc final-value grading only; never used to stop or select model output."
+      },
+      "stop_reason": "eos",
+      "new_tokens": 151,
+      "linked_case_ids": [
+        "T2_support_before_fault_E",
+        "T2_support_before_fault_C",
+        "T2_support_before_fault_W"
+      ]
+    },
+    {
+      "basis_id": "PR_01",
+      "kind": "basis",
+      "grade": {
+        "parsed_value": 80,
+        "numeric_correct": true,
+        "eos_and_correct": true,
+        "frozen_extraction": {
+          "value": 80,
+          "method": "explicit_final_marker_terminal_integer",
+          "matched_text": "最终答案：80"
+        },
+        "scope": "Posthoc final-value grading only; never used to stop or select model output."
+      },
+      "stop_reason": "eos",
+      "new_tokens": 118,
+      "linked_case_ids": [
+        "T1_support_before_fault_E",
+        "T1_support_before_fault_C"
+      ]
+    },
+    {
+      "basis_id": "PR_02",
+      "kind": "basis",
+      "grade": {
+        "parsed_value": 63,
+        "numeric_correct": true,
+        "eos_and_correct": true,
+        "frozen_extraction": {
+          "value": 63,
+          "method": "explicit_final_marker_terminal_integer",
+          "matched_text": "最终答案：63"
+        },
+        "scope": "Posthoc final-value grading only; never used to stop or select model output."
+      },
+      "stop_reason": "eos",
+      "new_tokens": 85,
+      "linked_case_ids": [
+        "T2_support_before_fault_E",
+        "T2_support_before_fault_C"
+      ]
+    },
+    {
+      "basis_id": "PR_03",
+      "kind": "basis",
+      "grade": {
+        "parsed_value": 80,
+        "numeric_correct": true,
+        "eos_and_correct": true,
+        "frozen_extraction": {
+          "value": 80,
+          "method": "explicit_final_marker_terminal_integer",
+          "matched_text": "最终答案：80"
+        },
+        "scope": "Posthoc final-value grading only; never used to stop or select model output."
+      },
+      "stop_reason": "eos",
+      "new_tokens": 118,
+      "linked_case_ids": [
+        "T1_support_before_fault_W"
+      ]
+    },
+    {
+      "basis_id": "PR_04",
+      "kind": "basis",
+      "grade": {
+        "parsed_value": 63,
+        "numeric_correct": true,
+        "eos_and_correct": true,
+        "frozen_extraction": {
+          "value": 63,
+          "method": "explicit_final_marker_terminal_integer",
+          "matched_text": "最终答案：63"
+        },
+        "scope": "Posthoc final-value grading only; never used to stop or select model output."
+      },
+      "stop_reason": "eos",
+      "new_tokens": 91,
+      "linked_case_ids": [
+        "T2_support_before_fault_W"
+      ]
+    }
+  ],
+  "methods": {
+    "SharedGDirect": {
+      "n": 3,
+      "numeric_correct": 3,
+      "eos_and_correct": 3,
+      "eos": 3,
+      "hit_cap": 0,
+      "unparsed": 0,
+      "generated_tokens": 350,
+      "by_group": {
+        "E": {
+          "n": 2,
+          "numeric_correct": 2,
+          "eos_and_correct": 2,
+          "eos": 2,
+          "hit_cap": 0,
+          "unparsed": 0,
+          "generated_tokens": 234
+        },
+        "C": {
+          "n": 1,
+          "numeric_correct": 1,
+          "eos_and_correct": 1,
+          "eos": 1,
+          "hit_cap": 0,
+          "unparsed": 0,
+          "generated_tokens": 116
+        },
+        "W": {
+          "n": 0,
+          "numeric_correct": 0,
+          "eos_and_correct": 0,
+          "eos": 0,
+          "hit_cap": 0,
+          "unparsed": 0,
+          "generated_tokens": 0
+        }
+      }
+    },
+    "SharedGCompact": {
+      "n": 3,
+      "numeric_correct": 3,
+      "eos_and_correct": 3,
+      "eos": 3,
+      "hit_cap": 0,
+      "unparsed": 0,
+      "generated_tokens": 339,
+      "by_group": {
+        "E": {
+          "n": 2,
+          "numeric_correct": 2,
+          "eos_and_correct": 2,
+          "eos": 2,
+          "hit_cap": 0,
+          "unparsed": 0,
+          "generated_tokens": 227
+        },
+        "C": {
+          "n": 1,
+          "numeric_correct": 1,
+          "eos_and_correct": 1,
+          "eos": 1,
+          "hit_cap": 0,
+          "unparsed": 0,
+          "generated_tokens": 112
+        },
+        "W": {
+          "n": 0,
+          "numeric_correct": 0,
+          "eos_and_correct": 0,
+          "eos": 0,
+          "hit_cap": 0,
+          "unparsed": 0,
+          "generated_tokens": 0
+        }
+      }
+    },
+    "SharedGStepwise": {
+      "n": 3,
+      "numeric_correct": 3,
+      "eos_and_correct": 3,
+      "eos": 3,
+      "hit_cap": 0,
+      "unparsed": 0,
+      "generated_tokens": 906,
+      "by_group": {
+        "E": {
+          "n": 2,
+          "numeric_correct": 2,
+          "eos_and_correct": 2,
+          "eos": 2,
+          "hit_cap": 0,
+          "unparsed": 0,
+          "generated_tokens": 634
+        },
+        "C": {
+          "n": 1,
+          "numeric_correct": 1,
+          "eos_and_correct": 1,
+          "eos": 1,
+          "hit_cap": 0,
+          "unparsed": 0,
+          "generated_tokens": 272
+        },
+        "W": {
+          "n": 0,
+          "numeric_correct": 0,
+          "eos_and_correct": 0,
+          "eos": 0,
+          "hit_cap": 0,
+          "unparsed": 0,
+          "generated_tokens": 0
+        }
+      }
+    },
+    "VersionFrame": {
+      "n": 3,
+      "numeric_correct": 1,
+      "eos_and_correct": 1,
+      "eos": 3,
+      "hit_cap": 0,
+      "unparsed": 2,
+      "generated_tokens": 623,
+      "by_group": {
+        "E": {
+          "n": 2,
+          "numeric_correct": 1,
+          "eos_and_correct": 1,
+          "eos": 2,
+          "hit_cap": 0,
+          "unparsed": 1,
+          "generated_tokens": 521
+        },
+        "C": {
+          "n": 1,
+          "numeric_correct": 0,
+          "eos_and_correct": 0,
+          "eos": 1,
+          "hit_cap": 0,
+          "unparsed": 1,
+          "generated_tokens": 102
+        },
+        "W": {
+          "n": 0,
+          "numeric_correct": 0,
+          "eos_and_correct": 0,
+          "eos": 0,
+          "hit_cap": 0,
+          "unparsed": 0,
+          "generated_tokens": 0
+        }
+      }
+    }
+  },
+  "primary_denominator": "Complete four-method cases; no cap/parse/score-based exclusion within a complete case.",
+  "grading": "Frozen parser numeric_correct; eos_and_correct is separately reported; no runtime correctness checker.",
+  "experiment_scope": [
+    "Two arithmetic programs with E/C/W variants: exploratory development fixtures, not six independent natural tasks.",
+    "G certifies constant roots parsed from visible original definitions; old y/z stay UNVERIFIED.",
+    "All four methods share G/rules/graph/old records/R; no group or gold chooses a method or bypass.",
+    "VersionFrame is one-shot prompted organization, not runtime node checking or certified final submission.",
+    "No training, cache mask/crop, steering, teacher-forced scoring, auxiliary probes or forced tail window.",
+    "Real free outputs continue to configured EOS or the 512-token safety guard; the random CPU fixture has an explicit shorter guard. No parser-based early stopping.",
+    "Safety-cap/unknown/unparsed/failures remain visible; incomplete four-arm cases are not silently completed or replaced.",
+    "Per-method quality/cost is not compared with the prior P0.5 run's different prompts/protocol.",
+    "Shared input preparation and model loading are experimental overhead; actual per-request G/prompt/prefill/decode costs are separate.",
+    "Numeric final-answer extraction is posthoc grading, not a runtime model/tool correctness gate."
+  ],
+  "actual_forward_cost": {
+    "forward_calls": 2994,
+    "input_tokens": 15925,
+    "synchronized_forward_seconds": 191.93814651947469
+  },
+  "observed_postload_peak_allocated_bytes": 8739633152
+}

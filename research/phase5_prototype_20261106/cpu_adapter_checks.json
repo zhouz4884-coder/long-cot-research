@@ -1,0 +1,1099 @@
+{
+  "schema_version": "phase5_cpu_input_adapter_v1",
+  "date": "2026-11-06",
+  "adapter_source_sha256": "3556baa0920b344e87f22037c584f7d2bde77bbdede9808c4e360fc00200890f",
+  "source_files": {
+    "development_old16": {
+      "path": "D:\\ACL\\research\\direction_selection_20261105\\proposed_p0_cases.json",
+      "sha256": "6ffe069718396dc2543f85aa9270780f356e293cc9764afdaf2f06a083c5cc27"
+    },
+    "topology_v2": {
+      "path": "D:\\ACL\\research\\next_design_20261105\\P05_topology_cases_v2.json",
+      "sha256": "93f39936cb5d1dbdbc1eb647d1c0f228be11cf49f23d14b7b2163b52d01902d1"
+    }
+  },
+  "algorithm_input_whitelist": [
+    "visible.question",
+    "visible.old_assignment_clauses[].variable/text",
+    "visible.revision"
+  ],
+  "root_verification": "Only constant AST expressions parsed from visible original question; no hidden definitions/group/final gold for action.",
+  "derived_status_contract": "Old y/z remain UNVERIFIED in E/C/W; model proposals are not external certification.",
+  "methods": [
+    "SharedGDirect",
+    "SharedGCompact",
+    "SharedGStepwise",
+    "VersionFrame"
+  ],
+  "generation_policy_draft": {
+    "mode": "quality_first_draft_not_executed",
+    "do_sample": false,
+    "max_new_tokens": 512,
+    "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+    "forced_y_prefix": false,
+    "manual_tail_window": false,
+    "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+  },
+  "formal_initial_selection": "Only six fixed before-fault states T1E,T2E,T1C,T2C,T1W,T2W; 24 main + 6 basis outputs. Two programs, exploratory toy.",
+  "topology12_role": "Full v2 design pool retained separately; after-fault states not selected in this quality round.",
+  "old16_use": "Development and interface validation only; never pooled as unseen evaluation.",
+  "source_scope": "Exact AST grammar and root verifier are privileged toy tools shared by all methods; no natural parser validation.",
+  "cache_scope": "Logical versions/dirty nodes are not certificates for Transformer KV consistency; no cache operation performed.",
+  "no_new_descendant_numeric_fact_injection": true,
+  "old_literals_may_equal_gold": "Visible old literals are preserved, never removed merely because they equal hidden answers.",
+  "status": "CPU_ADAPTER_PASS",
+  "checks": [
+    {
+      "check": "source_counts_16_dev_12_formal",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E01:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E01:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E01:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E01:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E01:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E01:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E01:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E02:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E02:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E02:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E02:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E02:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E02:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E02:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E03:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E03:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E03:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E03:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E03:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E03:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E03:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E04:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E04:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E04:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E04:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E04:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E04:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E04:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E05:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E05:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E05:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E05:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E05:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E05:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E05:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E06:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E06:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E06:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E06:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E06:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E06:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E06:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E07:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E07:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E07:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E07:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E07:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E07:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E07:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E08:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E08:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E08:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E08:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E08:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E08:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "E08:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C01:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C01:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C01:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C01:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C01:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C01:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C01:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C02:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C02:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C02:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C02:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C02:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C02:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C02:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C03:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C03:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C03:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C03:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C03:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C03:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C03:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C04:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C04:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C04:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C04:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C04:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C04:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "C04:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W01:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W01:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W01:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W01:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W01:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W01:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W01:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W02:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W02:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W02:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W02:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W02:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W02:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W02:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W03:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W03:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W03:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W03:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W03:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W03:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W03:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W04:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W04:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W04:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W04:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W04:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W04:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "W04:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_E:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_E:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_E:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_E:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_E:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_E:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_E:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_C:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_C:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_C:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_C:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_C:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_C:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_C:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_W:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_W:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_W:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_W:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_W:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_W:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_before_fault_W:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_E:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_E:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_E:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_E:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_E:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_E:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_E:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_C:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_C:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_C:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_C:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_C:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_C:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_C:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_W:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_W:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_W:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_W:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_W:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_W:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T1_support_after_fault_W:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_E:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_E:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_E:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_E:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_E:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_E:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_E:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_C:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_C:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_C:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_C:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_C:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_C:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_C:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_W:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_W:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_W:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_W:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_W:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_W:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_before_fault_W:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_E:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_E:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_E:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_E:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_E:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_E:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_E:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_C:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_C:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_C:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_C:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_C:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_C:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_C:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_W:only_constant_roots_evaluated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_W:old_y_z_unverified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_W:no_uncertified_final_commit",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_W:shared_evidence_identical_across_methods",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_W:hidden_poison_cannot_change_action_or_prompt",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_W:derived_literal_poison_does_not_certify_or_control_G",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "T2_support_after_fault_W:visible_rule_parse_matches_source_metadata_afterward",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "unknown_R_is_not_accepted",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "unsupported_derived_revision_is_unknown",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "root_verifier_refuses_derived:3*x+2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "root_verifier_refuses_derived:x*x",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "root_verifier_refuses_derived:y+r",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "support_before_after_same_semantic_controller",
+      "passed": true,
+      "details": "Old clause order differs in visible prompts; semantic roots/G/dirty/plan are independent of placement. No KV-state equivalence claim."
+    },
+    {
+      "check": "selected6_order_and_old16_not_loaded",
+      "passed": true
+    },
+    {
+      "check": "basis_2P_4PR_no_G_B",
+      "passed": true
+    },
+    {
+      "check": "all_render_APIs_match_draft_messages",
+      "passed": true
+    },
+    {
+      "check": "basis_render_API_gold_blind",
+      "passed": true
+    },
+    {
+      "check": "model_messages_omit_experiment_meta_language",
+      "passed": true
+    },
+    {
+      "check": "VersionFrame_requests_candidates_without_refusal",
+      "passed": true
+    }
+  ],
+  "check_count": 209,
+  "passed_count": 209,
+  "gate_action_counts_all28": {
+    "accepted": 12,
+    "nochange": 8,
+    "rejected": 8
+  },
+  "constant_root_fact_count": 40,
+  "derived_old_records_unverified_count": 56,
+  "model_calls": 0,
+  "GPU_calls": 0,
+  "derived_value_evaluations": 0,
+  "warning": "CPU/metamorphic interface results only; no accuracy, natural-trigger or prototype superiority evidence."
+}

@@ -1,0 +1,3498 @@
+{
+  "schema_version": "phase5_quality_selected6_v1",
+  "cases": [
+    {
+      "schema_version": "shared_G_version_input_v1",
+      "case_id": "T1_support_before_fault_E",
+      "source_set": "selected_quality_before_fault6",
+      "visible": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=24；"
+          },
+          {
+            "variable": "x",
+            "text": "x=19；"
+          },
+          {
+            "variable": "y",
+            "text": "y=59；"
+          },
+          {
+            "variable": "z",
+            "text": "z=83；"
+          }
+        ],
+        "revision": "复核记录：x=18。其他变量须按题目原始定义处理。"
+      },
+      "controller": {
+        "rules": [
+          {
+            "variable": "r",
+            "expression": "6*4",
+            "parents": [],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "x",
+            "expression": "27-9",
+            "parents": [],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "y",
+            "expression": "3*x+2",
+            "parents": [
+              "x"
+            ],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "z",
+            "expression": "y+r",
+            "parents": [
+              "r",
+              "y"
+            ],
+            "origin": "original_visible_question_definition"
+          }
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "goal": "z",
+        "gate": {
+          "action": "accepted",
+          "reason": "proposal_matches_original_root_definition",
+          "proposal_installed": true,
+          "proposal_variable": "x",
+          "proposal_value": 18,
+          "root_evidence": {
+            "expression": "27-9",
+            "verified_value": 18
+          },
+          "source": "visible_revision_and_original_question_only",
+          "parse_policy": "Last explicit x literal in R; no Wait-word/group/gold trigger."
+        },
+        "current_roots": {
+          "r": {
+            "value": 24,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "6*4",
+            "origin": "exact_constant_AST_from_original_question",
+            "old_literal": 24,
+            "old_literal_satisfies_definition": true,
+            "semantic_only_no_KV_certification": true
+          },
+          "x": {
+            "value": 18,
+            "version": 1,
+            "status": "VERIFIED_ROOT",
+            "expression": "27-9",
+            "origin": "exact_constant_AST_from_original_question",
+            "old_literal": 19,
+            "old_literal_satisfies_definition": false,
+            "semantic_only_no_KV_certification": true
+          }
+        },
+        "changed_from_old_literal_roots": [
+          "x"
+        ],
+        "dirty_descendants": [
+          "y",
+          "z"
+        ],
+        "old_derived_records": {
+          "y": {
+            "recorded_value": 59,
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "DIRTY",
+            "dependency_versions": "UNATTESTED",
+            "invalidated_by_changed_roots": [
+              "x"
+            ]
+          },
+          "z": {
+            "recorded_value": 83,
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "DIRTY",
+            "dependency_versions": "UNATTESTED",
+            "invalidated_by_changed_roots": [
+              "x"
+            ]
+          }
+        },
+        "goal_support": [
+          "r",
+          "x",
+          "y",
+          "z"
+        ],
+        "goal_support_uncertified": [
+          "y",
+          "z"
+        ],
+        "ready_now": [
+          "y"
+        ],
+        "symbolic_ready_plan": [
+          {
+            "layer": 0,
+            "nodes": [
+              {
+                "variable": "y",
+                "rule": "3*x+2",
+                "parents": [
+                  "x"
+                ],
+                "operation": "REQUEST_MODEL_CANDIDATE_NOT_CERTIFICATION"
+              }
+            ]
+          },
+          {
+            "layer": 1,
+            "nodes": [
+              {
+                "variable": "z",
+                "rule": "y+r",
+                "parents": [
+                  "r",
+                  "y"
+                ],
+                "operation": "REQUEST_MODEL_CANDIDATE_NOT_CERTIFICATION"
+              }
+            ]
+          }
+        ],
+        "deterministic_final_commit": {
+          "allowed": false,
+          "value": null,
+          "reason": "goal_is_not_certified; old_z_is_not_an_authorized_commit"
+        },
+        "root_verifier_calls": [
+          {
+            "variable": "r",
+            "expression": "6*4",
+            "has_variable_reference": false,
+            "arithmetic_operations": 1
+          },
+          {
+            "variable": "x",
+            "expression": "27-9",
+            "has_variable_reference": false,
+            "arithmetic_operations": 1
+          }
+        ],
+        "derived_arithmetic_evaluations": 0,
+        "scope": "Symbolic input bookkeeping only; no Transformer state or model-output certification."
+      },
+      "shared_evidence": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=24；"
+          },
+          {
+            "variable": "x",
+            "text": "x=19；"
+          },
+          {
+            "variable": "y",
+            "text": "y=59；"
+          },
+          {
+            "variable": "z",
+            "text": "z=83；"
+          }
+        ],
+        "revision_record": "复核记录：x=18。其他变量须按题目原始定义处理。",
+        "original_rules": [
+          {
+            "variable": "r",
+            "expression": "6*4",
+            "parents": []
+          },
+          {
+            "variable": "x",
+            "expression": "27-9",
+            "parents": []
+          },
+          {
+            "variable": "y",
+            "expression": "3*x+2",
+            "parents": [
+              "x"
+            ]
+          },
+          {
+            "variable": "z",
+            "expression": "y+r",
+            "parents": [
+              "r",
+              "y"
+            ]
+          }
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "goal": "z",
+        "shared_G": {
+          "action": "accepted",
+          "reason": "proposal_matches_original_root_definition",
+          "proposal_variable": "x",
+          "proposal_value": 18,
+          "root_evidence": {
+            "expression": "27-9",
+            "verified_value": 18
+          }
+        },
+        "certified_parent_values": {
+          "r": {
+            "value": 24,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "6*4",
+            "old_literal": 24,
+            "old_literal_satisfies_definition": true
+          },
+          "x": {
+            "value": 18,
+            "version": 1,
+            "status": "VERIFIED_ROOT",
+            "expression": "27-9",
+            "old_literal": 19,
+            "old_literal_satisfies_definition": false
+          }
+        },
+        "old_derived_statuses": {
+          "y": {
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "DIRTY",
+            "dependency_versions": "UNATTESTED"
+          },
+          "z": {
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "DIRTY",
+            "dependency_versions": "UNATTESTED"
+          }
+        },
+        "permission": "允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。"
+      },
+      "model_inputs": {
+        "SharedGDirect": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=24；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=19；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=59；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=83；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=18。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"6*4\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"27-9\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*x+2\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y+r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"accepted\",\n    \"reason\": \"proposal_matches_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 18,\n    \"root_evidence\": {\n      \"expression\": \"27-9\",\n      \"verified_value\": 18\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 1,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 19,\n      \"old_literal_satisfies_definition\": false\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n直接给出最终答案即可；可自行完成必要推导并复用已核验父值，旧派生值只是待核验线索。"
+            }
+          ],
+          "shared_evidence_sha256": "07cdd995c75df5079889d9df09a38f6af40a71b3f99382d84bb2dbb8c57dc23b",
+          "shared_block_sha256": "9cf1346bf0673d4d0f32df5437b6a863f46eda229a79901ed808ec227d9f31bf",
+          "messages_sha256": "551710cde38ffa5efacedd9b3147ab16742e07720de730bfa85644e2c6834384",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2203,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "SharedGCompact": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=24；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=19；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=59；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=83；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=18。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"6*4\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"27-9\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*x+2\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y+r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"accepted\",\n    \"reason\": \"proposal_matches_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 18,\n    \"root_evidence\": {\n      \"expression\": \"27-9\",\n      \"verified_value\": 18\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 1,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 19,\n      \"old_literal_satisfies_definition\": false\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n紧凑展示必要代入或复合计算，再给最终答案。可复用已核验父值，不必重算全部根，也不强制只写一行。"
+            }
+          ],
+          "shared_evidence_sha256": "07cdd995c75df5079889d9df09a38f6af40a71b3f99382d84bb2dbb8c57dc23b",
+          "shared_block_sha256": "9cf1346bf0673d4d0f32df5437b6a863f46eda229a79901ed808ec227d9f31bf",
+          "messages_sha256": "797496d77e9436dc7031506f8970440c4c78f16792d38187e7d47e91b3a91309",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2209,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "SharedGStepwise": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=24；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=19；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=59；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=83；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=18。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"6*4\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"27-9\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*x+2\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y+r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"accepted\",\n    \"reason\": \"proposal_matches_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 18,\n    \"root_evidence\": {\n      \"expression\": \"27-9\",\n      \"verified_value\": 18\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 1,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 19,\n      \"old_literal_satisfies_definition\": false\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n使用充分的分步/自问自答求解：先识别目标还缺哪些未认证支持，按依赖只处理必要中间变量，可直接复用已核验父值和独立支持；允许复合计算或自行选择合理子问题，不要求机械地从根重做。不要遗漏合流父节点；完成后给最终答案。"
+            }
+          ],
+          "shared_evidence_sha256": "07cdd995c75df5079889d9df09a38f6af40a71b3f99382d84bb2dbb8c57dc23b",
+          "shared_block_sha256": "9cf1346bf0673d4d0f32df5437b6a863f46eda229a79901ed808ec227d9f31bf",
+          "messages_sha256": "046d71940e4a691924e19f19b595c4f86dab77a702475d39fc73e9d0d7a44b9c",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2268,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "VersionFrame": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=24；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=19；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=59；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=83；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=18。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"6*4\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"27-9\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*x+2\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y+r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"accepted\",\n    \"reason\": \"proposal_matches_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 18,\n    \"root_evidence\": {\n      \"expression\": \"27-9\",\n      \"verified_value\": 18\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 1,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 19,\n      \"old_literal_satisfies_definition\": false\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n依据下面版本工作帧组织候选推导：只把当前VERIFIED_ROOT根值当已认证父值；对goal所需的UNVERIFIED支持，沿ready计划提出计算。读父值时使用当前版本；dirty旧派生记录不能充当已认证结果。生成的派生值标为候选而非CERTIFIED；可复用独立根，不须从头重算。\n版本工作帧：\n{\n  \"current_roots\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 1,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 19,\n      \"old_literal_satisfies_definition\": false\n    }\n  },\n  \"dirty_descendants\": [\n    \"y\",\n    \"z\"\n  ],\n  \"goal_support_uncertified\": [\n    \"y\",\n    \"z\"\n  ],\n  \"ready_now\": [\n    \"y\"\n  ],\n  \"symbolic_ready_plan\": [\n    {\n      \"layer\": 0,\n      \"nodes\": [\n        {\n          \"variable\": \"y\",\n          \"rule\": \"3*x+2\",\n          \"parents\": [\n            \"x\"\n          ]\n        }\n      ]\n    },\n    {\n      \"layer\": 1,\n      \"nodes\": [\n        {\n          \"variable\": \"z\",\n          \"rule\": \"y+r\",\n          \"parents\": [\n            \"r\",\n            \"y\"\n          ]\n        }\n      ]\n    }\n  ],\n  \"old_derived_certification\": \"UNVERIFIED\"\n}\n这些是待评价的候选推导，按父依赖顺序给出数值代入式与候选最终答案；不需要拒绝作答。"
+            }
+          ],
+          "shared_evidence_sha256": "07cdd995c75df5079889d9df09a38f6af40a71b3f99382d84bb2dbb8c57dc23b",
+          "shared_block_sha256": "9cf1346bf0673d4d0f32df5437b6a863f46eda229a79901ed808ec227d9f31bf",
+          "messages_sha256": "618b27631eb35e959bb3ba3c37680fa53201b71c6d60878987e64a4f87b2bbc3",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 3346,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        }
+      },
+      "hidden_evaluation": {
+        "program_id": "T1",
+        "placement": "support_before_fault",
+        "group": "E",
+        "definitions": [
+          [
+            "r",
+            "6*4"
+          ],
+          [
+            "x",
+            "27-9"
+          ],
+          [
+            "y",
+            "3*x+2"
+          ],
+          [
+            "z",
+            "y+r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 80,
+        "old_final_value": 83,
+        "revision_implied_final_value": 80,
+        "old_x_valid": false,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true,
+        "source_fixed_mask_rules_not_used": {
+          "whole_B": [
+            "r",
+            "x",
+            "y",
+            "z"
+          ],
+          "closure": [
+            "x",
+            "y",
+            "z"
+          ],
+          "same_clause_budget_sham": [
+            "r",
+            "x",
+            "z"
+          ],
+          "sham_retains": "y, a dependent value; not a semantic equivalent"
+        }
+      },
+      "scope": "Input draft only; never serialize this whole record into a model prompt."
+    },
+    {
+      "schema_version": "shared_G_version_input_v1",
+      "case_id": "T2_support_before_fault_E",
+      "source_set": "selected_quality_before_fault6",
+      "visible": {
+        "question": "按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=18；"
+          },
+          {
+            "variable": "x",
+            "text": "x=8；"
+          },
+          {
+            "variable": "y",
+            "text": "y=64；"
+          },
+          {
+            "variable": "z",
+            "text": "z=46；"
+          }
+        ],
+        "revision": "复核记录：x=9。其他变量须按题目原始定义处理。"
+      },
+      "controller": {
+        "rules": [
+          {
+            "variable": "r",
+            "expression": "13+5",
+            "parents": [],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "x",
+            "expression": "54//6",
+            "parents": [],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "y",
+            "expression": "x*x",
+            "parents": [
+              "x"
+            ],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "z",
+            "expression": "y-r",
+            "parents": [
+              "r",
+              "y"
+            ],
+            "origin": "original_visible_question_definition"
+          }
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "goal": "z",
+        "gate": {
+          "action": "accepted",
+          "reason": "proposal_matches_original_root_definition",
+          "proposal_installed": true,
+          "proposal_variable": "x",
+          "proposal_value": 9,
+          "root_evidence": {
+            "expression": "54//6",
+            "verified_value": 9
+          },
+          "source": "visible_revision_and_original_question_only",
+          "parse_policy": "Last explicit x literal in R; no Wait-word/group/gold trigger."
+        },
+        "current_roots": {
+          "r": {
+            "value": 18,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "13+5",
+            "origin": "exact_constant_AST_from_original_question",
+            "old_literal": 18,
+            "old_literal_satisfies_definition": true,
+            "semantic_only_no_KV_certification": true
+          },
+          "x": {
+            "value": 9,
+            "version": 1,
+            "status": "VERIFIED_ROOT",
+            "expression": "54//6",
+            "origin": "exact_constant_AST_from_original_question",
+            "old_literal": 8,
+            "old_literal_satisfies_definition": false,
+            "semantic_only_no_KV_certification": true
+          }
+        },
+        "changed_from_old_literal_roots": [
+          "x"
+        ],
+        "dirty_descendants": [
+          "y",
+          "z"
+        ],
+        "old_derived_records": {
+          "y": {
+            "recorded_value": 64,
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "DIRTY",
+            "dependency_versions": "UNATTESTED",
+            "invalidated_by_changed_roots": [
+              "x"
+            ]
+          },
+          "z": {
+            "recorded_value": 46,
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "DIRTY",
+            "dependency_versions": "UNATTESTED",
+            "invalidated_by_changed_roots": [
+              "x"
+            ]
+          }
+        },
+        "goal_support": [
+          "r",
+          "x",
+          "y",
+          "z"
+        ],
+        "goal_support_uncertified": [
+          "y",
+          "z"
+        ],
+        "ready_now": [
+          "y"
+        ],
+        "symbolic_ready_plan": [
+          {
+            "layer": 0,
+            "nodes": [
+              {
+                "variable": "y",
+                "rule": "x*x",
+                "parents": [
+                  "x"
+                ],
+                "operation": "REQUEST_MODEL_CANDIDATE_NOT_CERTIFICATION"
+              }
+            ]
+          },
+          {
+            "layer": 1,
+            "nodes": [
+              {
+                "variable": "z",
+                "rule": "y-r",
+                "parents": [
+                  "r",
+                  "y"
+                ],
+                "operation": "REQUEST_MODEL_CANDIDATE_NOT_CERTIFICATION"
+              }
+            ]
+          }
+        ],
+        "deterministic_final_commit": {
+          "allowed": false,
+          "value": null,
+          "reason": "goal_is_not_certified; old_z_is_not_an_authorized_commit"
+        },
+        "root_verifier_calls": [
+          {
+            "variable": "r",
+            "expression": "13+5",
+            "has_variable_reference": false,
+            "arithmetic_operations": 1
+          },
+          {
+            "variable": "x",
+            "expression": "54//6",
+            "has_variable_reference": false,
+            "arithmetic_operations": 1
+          }
+        ],
+        "derived_arithmetic_evaluations": 0,
+        "scope": "Symbolic input bookkeeping only; no Transformer state or model-output certification."
+      },
+      "shared_evidence": {
+        "question": "按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=18；"
+          },
+          {
+            "variable": "x",
+            "text": "x=8；"
+          },
+          {
+            "variable": "y",
+            "text": "y=64；"
+          },
+          {
+            "variable": "z",
+            "text": "z=46；"
+          }
+        ],
+        "revision_record": "复核记录：x=9。其他变量须按题目原始定义处理。",
+        "original_rules": [
+          {
+            "variable": "r",
+            "expression": "13+5",
+            "parents": []
+          },
+          {
+            "variable": "x",
+            "expression": "54//6",
+            "parents": []
+          },
+          {
+            "variable": "y",
+            "expression": "x*x",
+            "parents": [
+              "x"
+            ]
+          },
+          {
+            "variable": "z",
+            "expression": "y-r",
+            "parents": [
+              "r",
+              "y"
+            ]
+          }
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "goal": "z",
+        "shared_G": {
+          "action": "accepted",
+          "reason": "proposal_matches_original_root_definition",
+          "proposal_variable": "x",
+          "proposal_value": 9,
+          "root_evidence": {
+            "expression": "54//6",
+            "verified_value": 9
+          }
+        },
+        "certified_parent_values": {
+          "r": {
+            "value": 18,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "13+5",
+            "old_literal": 18,
+            "old_literal_satisfies_definition": true
+          },
+          "x": {
+            "value": 9,
+            "version": 1,
+            "status": "VERIFIED_ROOT",
+            "expression": "54//6",
+            "old_literal": 8,
+            "old_literal_satisfies_definition": false
+          }
+        },
+        "old_derived_statuses": {
+          "y": {
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "DIRTY",
+            "dependency_versions": "UNATTESTED"
+          },
+          "z": {
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "DIRTY",
+            "dependency_versions": "UNATTESTED"
+          }
+        },
+        "permission": "允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。"
+      },
+      "model_inputs": {
+        "SharedGDirect": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=18；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=8；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=64；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=46；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=9。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"13+5\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"54//6\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"x*x\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y-r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"accepted\",\n    \"reason\": \"proposal_matches_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 9,\n    \"root_evidence\": {\n      \"expression\": \"54//6\",\n      \"verified_value\": 9\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 1,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 8,\n      \"old_literal_satisfies_definition\": false\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n直接给出最终答案即可；可自行完成必要推导并复用已核验父值，旧派生值只是待核验线索。"
+            }
+          ],
+          "shared_evidence_sha256": "33861fe5eaff9c6b256f34d842637ce562fbc48f742585a6596d29e7d9e14091",
+          "shared_block_sha256": "f613557b713216dcc253a258fa30416fea1175b3f2bbc96413b6880bddeaf438",
+          "messages_sha256": "b6bf2feed15ef7540d8b20977449abc4a8bf5af22af8623b53753655eb053323",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2200,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "SharedGCompact": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=18；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=8；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=64；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=46；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=9。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"13+5\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"54//6\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"x*x\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y-r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"accepted\",\n    \"reason\": \"proposal_matches_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 9,\n    \"root_evidence\": {\n      \"expression\": \"54//6\",\n      \"verified_value\": 9\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 1,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 8,\n      \"old_literal_satisfies_definition\": false\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n紧凑展示必要代入或复合计算，再给最终答案。可复用已核验父值，不必重算全部根，也不强制只写一行。"
+            }
+          ],
+          "shared_evidence_sha256": "33861fe5eaff9c6b256f34d842637ce562fbc48f742585a6596d29e7d9e14091",
+          "shared_block_sha256": "f613557b713216dcc253a258fa30416fea1175b3f2bbc96413b6880bddeaf438",
+          "messages_sha256": "ea07ec3fb4c66aee8e5c1c36f0a4cee1cca9244a0a6812bbe346252e3f95213a",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2206,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "SharedGStepwise": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=18；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=8；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=64；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=46；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=9。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"13+5\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"54//6\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"x*x\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y-r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"accepted\",\n    \"reason\": \"proposal_matches_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 9,\n    \"root_evidence\": {\n      \"expression\": \"54//6\",\n      \"verified_value\": 9\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 1,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 8,\n      \"old_literal_satisfies_definition\": false\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n使用充分的分步/自问自答求解：先识别目标还缺哪些未认证支持，按依赖只处理必要中间变量，可直接复用已核验父值和独立支持；允许复合计算或自行选择合理子问题，不要求机械地从根重做。不要遗漏合流父节点；完成后给最终答案。"
+            }
+          ],
+          "shared_evidence_sha256": "33861fe5eaff9c6b256f34d842637ce562fbc48f742585a6596d29e7d9e14091",
+          "shared_block_sha256": "f613557b713216dcc253a258fa30416fea1175b3f2bbc96413b6880bddeaf438",
+          "messages_sha256": "a3eaabda8c6029d3febfeb32b3eca55ac9746cdb9ca421d2cbc75abfa1cff7d5",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2265,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "VersionFrame": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=18；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=8；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=64；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=46；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=9。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"13+5\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"54//6\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"x*x\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y-r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"accepted\",\n    \"reason\": \"proposal_matches_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 9,\n    \"root_evidence\": {\n      \"expression\": \"54//6\",\n      \"verified_value\": 9\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 1,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 8,\n      \"old_literal_satisfies_definition\": false\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"DIRTY\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n依据下面版本工作帧组织候选推导：只把当前VERIFIED_ROOT根值当已认证父值；对goal所需的UNVERIFIED支持，沿ready计划提出计算。读父值时使用当前版本；dirty旧派生记录不能充当已认证结果。生成的派生值标为候选而非CERTIFIED；可复用独立根，不须从头重算。\n版本工作帧：\n{\n  \"current_roots\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 1,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 8,\n      \"old_literal_satisfies_definition\": false\n    }\n  },\n  \"dirty_descendants\": [\n    \"y\",\n    \"z\"\n  ],\n  \"goal_support_uncertified\": [\n    \"y\",\n    \"z\"\n  ],\n  \"ready_now\": [\n    \"y\"\n  ],\n  \"symbolic_ready_plan\": [\n    {\n      \"layer\": 0,\n      \"nodes\": [\n        {\n          \"variable\": \"y\",\n          \"rule\": \"x*x\",\n          \"parents\": [\n            \"x\"\n          ]\n        }\n      ]\n    },\n    {\n      \"layer\": 1,\n      \"nodes\": [\n        {\n          \"variable\": \"z\",\n          \"rule\": \"y-r\",\n          \"parents\": [\n            \"r\",\n            \"y\"\n          ]\n        }\n      ]\n    }\n  ],\n  \"old_derived_certification\": \"UNVERIFIED\"\n}\n这些是待评价的候选推导，按父依赖顺序给出数值代入式与候选最终答案；不需要拒绝作答。"
+            }
+          ],
+          "shared_evidence_sha256": "33861fe5eaff9c6b256f34d842637ce562fbc48f742585a6596d29e7d9e14091",
+          "shared_block_sha256": "f613557b713216dcc253a258fa30416fea1175b3f2bbc96413b6880bddeaf438",
+          "messages_sha256": "069b173548e5585665b75abbc9150297786c92ea933eae251643faf268b77079",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 3341,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        }
+      },
+      "hidden_evaluation": {
+        "program_id": "T2",
+        "placement": "support_before_fault",
+        "group": "E",
+        "definitions": [
+          [
+            "r",
+            "13+5"
+          ],
+          [
+            "x",
+            "54//6"
+          ],
+          [
+            "y",
+            "x*x"
+          ],
+          [
+            "z",
+            "y-r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 63,
+        "old_final_value": 46,
+        "revision_implied_final_value": 63,
+        "old_x_valid": false,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true,
+        "source_fixed_mask_rules_not_used": {
+          "whole_B": [
+            "r",
+            "x",
+            "y",
+            "z"
+          ],
+          "closure": [
+            "x",
+            "y",
+            "z"
+          ],
+          "same_clause_budget_sham": [
+            "r",
+            "x",
+            "z"
+          ],
+          "sham_retains": "y, a dependent value; not a semantic equivalent"
+        }
+      },
+      "scope": "Input draft only; never serialize this whole record into a model prompt."
+    },
+    {
+      "schema_version": "shared_G_version_input_v1",
+      "case_id": "T1_support_before_fault_C",
+      "source_set": "selected_quality_before_fault6",
+      "visible": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=24；"
+          },
+          {
+            "variable": "x",
+            "text": "x=18；"
+          },
+          {
+            "variable": "y",
+            "text": "y=56；"
+          },
+          {
+            "variable": "z",
+            "text": "z=80；"
+          }
+        ],
+        "revision": "复核记录：x=18。其他变量须按题目原始定义处理。"
+      },
+      "controller": {
+        "rules": [
+          {
+            "variable": "r",
+            "expression": "6*4",
+            "parents": [],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "x",
+            "expression": "27-9",
+            "parents": [],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "y",
+            "expression": "3*x+2",
+            "parents": [
+              "x"
+            ],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "z",
+            "expression": "y+r",
+            "parents": [
+              "r",
+              "y"
+            ],
+            "origin": "original_visible_question_definition"
+          }
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "goal": "z",
+        "gate": {
+          "action": "nochange",
+          "reason": "same_root_literal_already_satisfies_definition",
+          "proposal_installed": false,
+          "proposal_variable": "x",
+          "proposal_value": 18,
+          "root_evidence": {
+            "expression": "27-9",
+            "verified_value": 18
+          },
+          "source": "visible_revision_and_original_question_only",
+          "parse_policy": "Last explicit x literal in R; no Wait-word/group/gold trigger."
+        },
+        "current_roots": {
+          "r": {
+            "value": 24,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "6*4",
+            "origin": "exact_constant_AST_from_original_question",
+            "old_literal": 24,
+            "old_literal_satisfies_definition": true,
+            "semantic_only_no_KV_certification": true
+          },
+          "x": {
+            "value": 18,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "27-9",
+            "origin": "exact_constant_AST_from_original_question",
+            "old_literal": 18,
+            "old_literal_satisfies_definition": true,
+            "semantic_only_no_KV_certification": true
+          }
+        },
+        "changed_from_old_literal_roots": [],
+        "dirty_descendants": [],
+        "old_derived_records": {
+          "y": {
+            "recorded_value": 56,
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED",
+            "invalidated_by_changed_roots": []
+          },
+          "z": {
+            "recorded_value": 80,
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED",
+            "invalidated_by_changed_roots": []
+          }
+        },
+        "goal_support": [
+          "r",
+          "x",
+          "y",
+          "z"
+        ],
+        "goal_support_uncertified": [
+          "y",
+          "z"
+        ],
+        "ready_now": [
+          "y"
+        ],
+        "symbolic_ready_plan": [
+          {
+            "layer": 0,
+            "nodes": [
+              {
+                "variable": "y",
+                "rule": "3*x+2",
+                "parents": [
+                  "x"
+                ],
+                "operation": "REQUEST_MODEL_CANDIDATE_NOT_CERTIFICATION"
+              }
+            ]
+          },
+          {
+            "layer": 1,
+            "nodes": [
+              {
+                "variable": "z",
+                "rule": "y+r",
+                "parents": [
+                  "r",
+                  "y"
+                ],
+                "operation": "REQUEST_MODEL_CANDIDATE_NOT_CERTIFICATION"
+              }
+            ]
+          }
+        ],
+        "deterministic_final_commit": {
+          "allowed": false,
+          "value": null,
+          "reason": "goal_is_not_certified; old_z_is_not_an_authorized_commit"
+        },
+        "root_verifier_calls": [
+          {
+            "variable": "r",
+            "expression": "6*4",
+            "has_variable_reference": false,
+            "arithmetic_operations": 1
+          },
+          {
+            "variable": "x",
+            "expression": "27-9",
+            "has_variable_reference": false,
+            "arithmetic_operations": 1
+          }
+        ],
+        "derived_arithmetic_evaluations": 0,
+        "scope": "Symbolic input bookkeeping only; no Transformer state or model-output certification."
+      },
+      "shared_evidence": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=24；"
+          },
+          {
+            "variable": "x",
+            "text": "x=18；"
+          },
+          {
+            "variable": "y",
+            "text": "y=56；"
+          },
+          {
+            "variable": "z",
+            "text": "z=80；"
+          }
+        ],
+        "revision_record": "复核记录：x=18。其他变量须按题目原始定义处理。",
+        "original_rules": [
+          {
+            "variable": "r",
+            "expression": "6*4",
+            "parents": []
+          },
+          {
+            "variable": "x",
+            "expression": "27-9",
+            "parents": []
+          },
+          {
+            "variable": "y",
+            "expression": "3*x+2",
+            "parents": [
+              "x"
+            ]
+          },
+          {
+            "variable": "z",
+            "expression": "y+r",
+            "parents": [
+              "r",
+              "y"
+            ]
+          }
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "goal": "z",
+        "shared_G": {
+          "action": "nochange",
+          "reason": "same_root_literal_already_satisfies_definition",
+          "proposal_variable": "x",
+          "proposal_value": 18,
+          "root_evidence": {
+            "expression": "27-9",
+            "verified_value": 18
+          }
+        },
+        "certified_parent_values": {
+          "r": {
+            "value": 24,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "6*4",
+            "old_literal": 24,
+            "old_literal_satisfies_definition": true
+          },
+          "x": {
+            "value": 18,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "27-9",
+            "old_literal": 18,
+            "old_literal_satisfies_definition": true
+          }
+        },
+        "old_derived_statuses": {
+          "y": {
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED"
+          },
+          "z": {
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED"
+          }
+        },
+        "permission": "允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。"
+      },
+      "model_inputs": {
+        "SharedGDirect": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=24；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=18；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=56；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=80；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=18。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"6*4\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"27-9\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*x+2\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y+r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"nochange\",\n    \"reason\": \"same_root_literal_already_satisfies_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 18,\n    \"root_evidence\": {\n      \"expression\": \"27-9\",\n      \"verified_value\": 18\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n直接给出最终答案即可；可自行完成必要推导并复用已核验父值，旧派生值只是待核验线索。"
+            }
+          ],
+          "shared_evidence_sha256": "32d94ac80366feb6e8b8e6963937dc528d324fb12c66b76ea8d1e709373e7f74",
+          "shared_block_sha256": "313fb55ac045ddf8f9ffedc771497568370d5b204e783809c4a4cfce7d462d3e",
+          "messages_sha256": "6ef664b000823c7fa6f9dd01a816814120a97185d929156bcb4f911d7a4e0770",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2217,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "SharedGCompact": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=24；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=18；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=56；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=80；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=18。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"6*4\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"27-9\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*x+2\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y+r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"nochange\",\n    \"reason\": \"same_root_literal_already_satisfies_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 18,\n    \"root_evidence\": {\n      \"expression\": \"27-9\",\n      \"verified_value\": 18\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n紧凑展示必要代入或复合计算，再给最终答案。可复用已核验父值，不必重算全部根，也不强制只写一行。"
+            }
+          ],
+          "shared_evidence_sha256": "32d94ac80366feb6e8b8e6963937dc528d324fb12c66b76ea8d1e709373e7f74",
+          "shared_block_sha256": "313fb55ac045ddf8f9ffedc771497568370d5b204e783809c4a4cfce7d462d3e",
+          "messages_sha256": "c70dfa51024aa40297c0cfc15545c9f714116c1d6a17810598a9d864c1670e78",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2223,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "SharedGStepwise": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=24；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=18；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=56；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=80；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=18。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"6*4\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"27-9\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*x+2\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y+r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"nochange\",\n    \"reason\": \"same_root_literal_already_satisfies_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 18,\n    \"root_evidence\": {\n      \"expression\": \"27-9\",\n      \"verified_value\": 18\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n使用充分的分步/自问自答求解：先识别目标还缺哪些未认证支持，按依赖只处理必要中间变量，可直接复用已核验父值和独立支持；允许复合计算或自行选择合理子问题，不要求机械地从根重做。不要遗漏合流父节点；完成后给最终答案。"
+            }
+          ],
+          "shared_evidence_sha256": "32d94ac80366feb6e8b8e6963937dc528d324fb12c66b76ea8d1e709373e7f74",
+          "shared_block_sha256": "313fb55ac045ddf8f9ffedc771497568370d5b204e783809c4a4cfce7d462d3e",
+          "messages_sha256": "220cd9d58dfb09576ea67dec4b2a513de54657dc6cba477ffe25c473fc39b1a3",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2282,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "VersionFrame": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=24；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=18；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=56；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=80；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=18。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"6*4\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"27-9\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*x+2\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y+r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"nochange\",\n    \"reason\": \"same_root_literal_already_satisfies_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 18,\n    \"root_evidence\": {\n      \"expression\": \"27-9\",\n      \"verified_value\": 18\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n依据下面版本工作帧组织候选推导：只把当前VERIFIED_ROOT根值当已认证父值；对goal所需的UNVERIFIED支持，沿ready计划提出计算。读父值时使用当前版本；dirty旧派生记录不能充当已认证结果。生成的派生值标为候选而非CERTIFIED；可复用独立根，不须从头重算。\n版本工作帧：\n{\n  \"current_roots\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"dirty_descendants\": [],\n  \"goal_support_uncertified\": [\n    \"y\",\n    \"z\"\n  ],\n  \"ready_now\": [\n    \"y\"\n  ],\n  \"symbolic_ready_plan\": [\n    {\n      \"layer\": 0,\n      \"nodes\": [\n        {\n          \"variable\": \"y\",\n          \"rule\": \"3*x+2\",\n          \"parents\": [\n            \"x\"\n          ]\n        }\n      ]\n    },\n    {\n      \"layer\": 1,\n      \"nodes\": [\n        {\n          \"variable\": \"z\",\n          \"rule\": \"y+r\",\n          \"parents\": [\n            \"r\",\n            \"y\"\n          ]\n        }\n      ]\n    }\n  ],\n  \"old_derived_certification\": \"UNVERIFIED\"\n}\n这些是待评价的候选推导，按父依赖顺序给出数值代入式与候选最终答案；不需要拒绝作答。"
+            }
+          ],
+          "shared_evidence_sha256": "32d94ac80366feb6e8b8e6963937dc528d324fb12c66b76ea8d1e709373e7f74",
+          "shared_block_sha256": "313fb55ac045ddf8f9ffedc771497568370d5b204e783809c4a4cfce7d462d3e",
+          "messages_sha256": "31edec5cb8073bc2de00ace190c7c8fb57f8cc2906159150f07bf9d9c24e632e",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 3339,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        }
+      },
+      "hidden_evaluation": {
+        "program_id": "T1",
+        "placement": "support_before_fault",
+        "group": "C",
+        "definitions": [
+          [
+            "r",
+            "6*4"
+          ],
+          [
+            "x",
+            "27-9"
+          ],
+          [
+            "y",
+            "3*x+2"
+          ],
+          [
+            "z",
+            "y+r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 80,
+        "old_final_value": 80,
+        "revision_implied_final_value": 80,
+        "old_x_valid": true,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": false,
+        "source_fixed_mask_rules_not_used": {
+          "whole_B": [
+            "r",
+            "x",
+            "y",
+            "z"
+          ],
+          "closure": [
+            "x",
+            "y",
+            "z"
+          ],
+          "same_clause_budget_sham": [
+            "r",
+            "x",
+            "z"
+          ],
+          "sham_retains": "y, a dependent value; not a semantic equivalent"
+        }
+      },
+      "scope": "Input draft only; never serialize this whole record into a model prompt."
+    },
+    {
+      "schema_version": "shared_G_version_input_v1",
+      "case_id": "T2_support_before_fault_C",
+      "source_set": "selected_quality_before_fault6",
+      "visible": {
+        "question": "按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=18；"
+          },
+          {
+            "variable": "x",
+            "text": "x=9；"
+          },
+          {
+            "variable": "y",
+            "text": "y=81；"
+          },
+          {
+            "variable": "z",
+            "text": "z=63；"
+          }
+        ],
+        "revision": "复核记录：x=9。其他变量须按题目原始定义处理。"
+      },
+      "controller": {
+        "rules": [
+          {
+            "variable": "r",
+            "expression": "13+5",
+            "parents": [],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "x",
+            "expression": "54//6",
+            "parents": [],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "y",
+            "expression": "x*x",
+            "parents": [
+              "x"
+            ],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "z",
+            "expression": "y-r",
+            "parents": [
+              "r",
+              "y"
+            ],
+            "origin": "original_visible_question_definition"
+          }
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "goal": "z",
+        "gate": {
+          "action": "nochange",
+          "reason": "same_root_literal_already_satisfies_definition",
+          "proposal_installed": false,
+          "proposal_variable": "x",
+          "proposal_value": 9,
+          "root_evidence": {
+            "expression": "54//6",
+            "verified_value": 9
+          },
+          "source": "visible_revision_and_original_question_only",
+          "parse_policy": "Last explicit x literal in R; no Wait-word/group/gold trigger."
+        },
+        "current_roots": {
+          "r": {
+            "value": 18,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "13+5",
+            "origin": "exact_constant_AST_from_original_question",
+            "old_literal": 18,
+            "old_literal_satisfies_definition": true,
+            "semantic_only_no_KV_certification": true
+          },
+          "x": {
+            "value": 9,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "54//6",
+            "origin": "exact_constant_AST_from_original_question",
+            "old_literal": 9,
+            "old_literal_satisfies_definition": true,
+            "semantic_only_no_KV_certification": true
+          }
+        },
+        "changed_from_old_literal_roots": [],
+        "dirty_descendants": [],
+        "old_derived_records": {
+          "y": {
+            "recorded_value": 81,
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED",
+            "invalidated_by_changed_roots": []
+          },
+          "z": {
+            "recorded_value": 63,
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED",
+            "invalidated_by_changed_roots": []
+          }
+        },
+        "goal_support": [
+          "r",
+          "x",
+          "y",
+          "z"
+        ],
+        "goal_support_uncertified": [
+          "y",
+          "z"
+        ],
+        "ready_now": [
+          "y"
+        ],
+        "symbolic_ready_plan": [
+          {
+            "layer": 0,
+            "nodes": [
+              {
+                "variable": "y",
+                "rule": "x*x",
+                "parents": [
+                  "x"
+                ],
+                "operation": "REQUEST_MODEL_CANDIDATE_NOT_CERTIFICATION"
+              }
+            ]
+          },
+          {
+            "layer": 1,
+            "nodes": [
+              {
+                "variable": "z",
+                "rule": "y-r",
+                "parents": [
+                  "r",
+                  "y"
+                ],
+                "operation": "REQUEST_MODEL_CANDIDATE_NOT_CERTIFICATION"
+              }
+            ]
+          }
+        ],
+        "deterministic_final_commit": {
+          "allowed": false,
+          "value": null,
+          "reason": "goal_is_not_certified; old_z_is_not_an_authorized_commit"
+        },
+        "root_verifier_calls": [
+          {
+            "variable": "r",
+            "expression": "13+5",
+            "has_variable_reference": false,
+            "arithmetic_operations": 1
+          },
+          {
+            "variable": "x",
+            "expression": "54//6",
+            "has_variable_reference": false,
+            "arithmetic_operations": 1
+          }
+        ],
+        "derived_arithmetic_evaluations": 0,
+        "scope": "Symbolic input bookkeeping only; no Transformer state or model-output certification."
+      },
+      "shared_evidence": {
+        "question": "按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=18；"
+          },
+          {
+            "variable": "x",
+            "text": "x=9；"
+          },
+          {
+            "variable": "y",
+            "text": "y=81；"
+          },
+          {
+            "variable": "z",
+            "text": "z=63；"
+          }
+        ],
+        "revision_record": "复核记录：x=9。其他变量须按题目原始定义处理。",
+        "original_rules": [
+          {
+            "variable": "r",
+            "expression": "13+5",
+            "parents": []
+          },
+          {
+            "variable": "x",
+            "expression": "54//6",
+            "parents": []
+          },
+          {
+            "variable": "y",
+            "expression": "x*x",
+            "parents": [
+              "x"
+            ]
+          },
+          {
+            "variable": "z",
+            "expression": "y-r",
+            "parents": [
+              "r",
+              "y"
+            ]
+          }
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "goal": "z",
+        "shared_G": {
+          "action": "nochange",
+          "reason": "same_root_literal_already_satisfies_definition",
+          "proposal_variable": "x",
+          "proposal_value": 9,
+          "root_evidence": {
+            "expression": "54//6",
+            "verified_value": 9
+          }
+        },
+        "certified_parent_values": {
+          "r": {
+            "value": 18,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "13+5",
+            "old_literal": 18,
+            "old_literal_satisfies_definition": true
+          },
+          "x": {
+            "value": 9,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "54//6",
+            "old_literal": 9,
+            "old_literal_satisfies_definition": true
+          }
+        },
+        "old_derived_statuses": {
+          "y": {
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED"
+          },
+          "z": {
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED"
+          }
+        },
+        "permission": "允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。"
+      },
+      "model_inputs": {
+        "SharedGDirect": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=18；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=9；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=81；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=63；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=9。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"13+5\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"54//6\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"x*x\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y-r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"nochange\",\n    \"reason\": \"same_root_literal_already_satisfies_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 9,\n    \"root_evidence\": {\n      \"expression\": \"54//6\",\n      \"verified_value\": 9\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 9,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n直接给出最终答案即可；可自行完成必要推导并复用已核验父值，旧派生值只是待核验线索。"
+            }
+          ],
+          "shared_evidence_sha256": "420a4aeeb9b9aabad9268d8ca9c3f8beb64dd34da68eaa50e08f524847eb2dcb",
+          "shared_block_sha256": "9b01d3fc5b96219519ffbb99a46d4ce40c7749400a26b191d379a697538e2448",
+          "messages_sha256": "c358ffc4324d7b1f5598b376a777ee23ffc4b07663b1e1f53b2edb7566fcb26f",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2214,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "SharedGCompact": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=18；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=9；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=81；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=63；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=9。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"13+5\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"54//6\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"x*x\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y-r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"nochange\",\n    \"reason\": \"same_root_literal_already_satisfies_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 9,\n    \"root_evidence\": {\n      \"expression\": \"54//6\",\n      \"verified_value\": 9\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 9,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n紧凑展示必要代入或复合计算，再给最终答案。可复用已核验父值，不必重算全部根，也不强制只写一行。"
+            }
+          ],
+          "shared_evidence_sha256": "420a4aeeb9b9aabad9268d8ca9c3f8beb64dd34da68eaa50e08f524847eb2dcb",
+          "shared_block_sha256": "9b01d3fc5b96219519ffbb99a46d4ce40c7749400a26b191d379a697538e2448",
+          "messages_sha256": "3f3050cfa11c8b1b18393660ba6e7ac9c423b0b6d9308c928123a6d21bb70b9f",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2220,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "SharedGStepwise": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=18；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=9；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=81；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=63；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=9。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"13+5\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"54//6\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"x*x\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y-r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"nochange\",\n    \"reason\": \"same_root_literal_already_satisfies_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 9,\n    \"root_evidence\": {\n      \"expression\": \"54//6\",\n      \"verified_value\": 9\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 9,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n使用充分的分步/自问自答求解：先识别目标还缺哪些未认证支持，按依赖只处理必要中间变量，可直接复用已核验父值和独立支持；允许复合计算或自行选择合理子问题，不要求机械地从根重做。不要遗漏合流父节点；完成后给最终答案。"
+            }
+          ],
+          "shared_evidence_sha256": "420a4aeeb9b9aabad9268d8ca9c3f8beb64dd34da68eaa50e08f524847eb2dcb",
+          "shared_block_sha256": "9b01d3fc5b96219519ffbb99a46d4ce40c7749400a26b191d379a697538e2448",
+          "messages_sha256": "70db996be11d0d487100e30292e1bb55af87c090d921360e6e8d3fa2d7037ee4",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2279,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "VersionFrame": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=18；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=9；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=81；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=63；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=9。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"13+5\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"54//6\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"x*x\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y-r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"nochange\",\n    \"reason\": \"same_root_literal_already_satisfies_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 9,\n    \"root_evidence\": {\n      \"expression\": \"54//6\",\n      \"verified_value\": 9\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 9,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n依据下面版本工作帧组织候选推导：只把当前VERIFIED_ROOT根值当已认证父值；对goal所需的UNVERIFIED支持，沿ready计划提出计算。读父值时使用当前版本；dirty旧派生记录不能充当已认证结果。生成的派生值标为候选而非CERTIFIED；可复用独立根，不须从头重算。\n版本工作帧：\n{\n  \"current_roots\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 9,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"dirty_descendants\": [],\n  \"goal_support_uncertified\": [\n    \"y\",\n    \"z\"\n  ],\n  \"ready_now\": [\n    \"y\"\n  ],\n  \"symbolic_ready_plan\": [\n    {\n      \"layer\": 0,\n      \"nodes\": [\n        {\n          \"variable\": \"y\",\n          \"rule\": \"x*x\",\n          \"parents\": [\n            \"x\"\n          ]\n        }\n      ]\n    },\n    {\n      \"layer\": 1,\n      \"nodes\": [\n        {\n          \"variable\": \"z\",\n          \"rule\": \"y-r\",\n          \"parents\": [\n            \"r\",\n            \"y\"\n          ]\n        }\n      ]\n    }\n  ],\n  \"old_derived_certification\": \"UNVERIFIED\"\n}\n这些是待评价的候选推导，按父依赖顺序给出数值代入式与候选最终答案；不需要拒绝作答。"
+            }
+          ],
+          "shared_evidence_sha256": "420a4aeeb9b9aabad9268d8ca9c3f8beb64dd34da68eaa50e08f524847eb2dcb",
+          "shared_block_sha256": "9b01d3fc5b96219519ffbb99a46d4ce40c7749400a26b191d379a697538e2448",
+          "messages_sha256": "992bcc587489d3af77c37a1daec5bffa1d32f6e3c9b659f962d2ad8d0fbd40bf",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 3334,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        }
+      },
+      "hidden_evaluation": {
+        "program_id": "T2",
+        "placement": "support_before_fault",
+        "group": "C",
+        "definitions": [
+          [
+            "r",
+            "13+5"
+          ],
+          [
+            "x",
+            "54//6"
+          ],
+          [
+            "y",
+            "x*x"
+          ],
+          [
+            "z",
+            "y-r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 63,
+        "old_final_value": 63,
+        "revision_implied_final_value": 63,
+        "old_x_valid": true,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": false,
+        "source_fixed_mask_rules_not_used": {
+          "whole_B": [
+            "r",
+            "x",
+            "y",
+            "z"
+          ],
+          "closure": [
+            "x",
+            "y",
+            "z"
+          ],
+          "same_clause_budget_sham": [
+            "r",
+            "x",
+            "z"
+          ],
+          "sham_retains": "y, a dependent value; not a semantic equivalent"
+        }
+      },
+      "scope": "Input draft only; never serialize this whole record into a model prompt."
+    },
+    {
+      "schema_version": "shared_G_version_input_v1",
+      "case_id": "T1_support_before_fault_W",
+      "source_set": "selected_quality_before_fault6",
+      "visible": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=24；"
+          },
+          {
+            "variable": "x",
+            "text": "x=18；"
+          },
+          {
+            "variable": "y",
+            "text": "y=56；"
+          },
+          {
+            "variable": "z",
+            "text": "z=80；"
+          }
+        ],
+        "revision": "复核记录：x=19。其他变量须按题目原始定义处理。"
+      },
+      "controller": {
+        "rules": [
+          {
+            "variable": "r",
+            "expression": "6*4",
+            "parents": [],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "x",
+            "expression": "27-9",
+            "parents": [],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "y",
+            "expression": "3*x+2",
+            "parents": [
+              "x"
+            ],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "z",
+            "expression": "y+r",
+            "parents": [
+              "r",
+              "y"
+            ],
+            "origin": "original_visible_question_definition"
+          }
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "goal": "z",
+        "gate": {
+          "action": "rejected",
+          "reason": "proposal_violates_original_root_definition",
+          "proposal_installed": false,
+          "proposal_variable": "x",
+          "proposal_value": 19,
+          "root_evidence": {
+            "expression": "27-9",
+            "verified_value": 18
+          },
+          "source": "visible_revision_and_original_question_only",
+          "parse_policy": "Last explicit x literal in R; no Wait-word/group/gold trigger."
+        },
+        "current_roots": {
+          "r": {
+            "value": 24,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "6*4",
+            "origin": "exact_constant_AST_from_original_question",
+            "old_literal": 24,
+            "old_literal_satisfies_definition": true,
+            "semantic_only_no_KV_certification": true
+          },
+          "x": {
+            "value": 18,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "27-9",
+            "origin": "exact_constant_AST_from_original_question",
+            "old_literal": 18,
+            "old_literal_satisfies_definition": true,
+            "semantic_only_no_KV_certification": true
+          }
+        },
+        "changed_from_old_literal_roots": [],
+        "dirty_descendants": [],
+        "old_derived_records": {
+          "y": {
+            "recorded_value": 56,
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED",
+            "invalidated_by_changed_roots": []
+          },
+          "z": {
+            "recorded_value": 80,
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED",
+            "invalidated_by_changed_roots": []
+          }
+        },
+        "goal_support": [
+          "r",
+          "x",
+          "y",
+          "z"
+        ],
+        "goal_support_uncertified": [
+          "y",
+          "z"
+        ],
+        "ready_now": [
+          "y"
+        ],
+        "symbolic_ready_plan": [
+          {
+            "layer": 0,
+            "nodes": [
+              {
+                "variable": "y",
+                "rule": "3*x+2",
+                "parents": [
+                  "x"
+                ],
+                "operation": "REQUEST_MODEL_CANDIDATE_NOT_CERTIFICATION"
+              }
+            ]
+          },
+          {
+            "layer": 1,
+            "nodes": [
+              {
+                "variable": "z",
+                "rule": "y+r",
+                "parents": [
+                  "r",
+                  "y"
+                ],
+                "operation": "REQUEST_MODEL_CANDIDATE_NOT_CERTIFICATION"
+              }
+            ]
+          }
+        ],
+        "deterministic_final_commit": {
+          "allowed": false,
+          "value": null,
+          "reason": "goal_is_not_certified; old_z_is_not_an_authorized_commit"
+        },
+        "root_verifier_calls": [
+          {
+            "variable": "r",
+            "expression": "6*4",
+            "has_variable_reference": false,
+            "arithmetic_operations": 1
+          },
+          {
+            "variable": "x",
+            "expression": "27-9",
+            "has_variable_reference": false,
+            "arithmetic_operations": 1
+          }
+        ],
+        "derived_arithmetic_evaluations": 0,
+        "scope": "Symbolic input bookkeeping only; no Transformer state or model-output certification."
+      },
+      "shared_evidence": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=24；"
+          },
+          {
+            "variable": "x",
+            "text": "x=18；"
+          },
+          {
+            "variable": "y",
+            "text": "y=56；"
+          },
+          {
+            "variable": "z",
+            "text": "z=80；"
+          }
+        ],
+        "revision_record": "复核记录：x=19。其他变量须按题目原始定义处理。",
+        "original_rules": [
+          {
+            "variable": "r",
+            "expression": "6*4",
+            "parents": []
+          },
+          {
+            "variable": "x",
+            "expression": "27-9",
+            "parents": []
+          },
+          {
+            "variable": "y",
+            "expression": "3*x+2",
+            "parents": [
+              "x"
+            ]
+          },
+          {
+            "variable": "z",
+            "expression": "y+r",
+            "parents": [
+              "r",
+              "y"
+            ]
+          }
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "goal": "z",
+        "shared_G": {
+          "action": "rejected",
+          "reason": "proposal_violates_original_root_definition",
+          "proposal_variable": "x",
+          "proposal_value": 19,
+          "root_evidence": {
+            "expression": "27-9",
+            "verified_value": 18
+          }
+        },
+        "certified_parent_values": {
+          "r": {
+            "value": 24,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "6*4",
+            "old_literal": 24,
+            "old_literal_satisfies_definition": true
+          },
+          "x": {
+            "value": 18,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "27-9",
+            "old_literal": 18,
+            "old_literal_satisfies_definition": true
+          }
+        },
+        "old_derived_statuses": {
+          "y": {
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED"
+          },
+          "z": {
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED"
+          }
+        },
+        "permission": "允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。"
+      },
+      "model_inputs": {
+        "SharedGDirect": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=24；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=18；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=56；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=80；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=19。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"6*4\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"27-9\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*x+2\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y+r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"rejected\",\n    \"reason\": \"proposal_violates_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 19,\n    \"root_evidence\": {\n      \"expression\": \"27-9\",\n      \"verified_value\": 18\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n直接给出最终答案即可；可自行完成必要推导并复用已核验父值，旧派生值只是待核验线索。"
+            }
+          ],
+          "shared_evidence_sha256": "6ab5e7b997ee9cc21288f68d84b4acda0a2db81a528b7dd1ed6f59408b626ea2",
+          "shared_block_sha256": "6fb9280022d337703755aed3dd970ae4c704c5ca767830905ea04ecd96cdb9b6",
+          "messages_sha256": "14ebb65d4e6f24bc919e9c9426e01e2a3f1b56918f7d071f09da808f74937375",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2213,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "SharedGCompact": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=24；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=18；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=56；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=80；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=19。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"6*4\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"27-9\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*x+2\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y+r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"rejected\",\n    \"reason\": \"proposal_violates_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 19,\n    \"root_evidence\": {\n      \"expression\": \"27-9\",\n      \"verified_value\": 18\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n紧凑展示必要代入或复合计算，再给最终答案。可复用已核验父值，不必重算全部根，也不强制只写一行。"
+            }
+          ],
+          "shared_evidence_sha256": "6ab5e7b997ee9cc21288f68d84b4acda0a2db81a528b7dd1ed6f59408b626ea2",
+          "shared_block_sha256": "6fb9280022d337703755aed3dd970ae4c704c5ca767830905ea04ecd96cdb9b6",
+          "messages_sha256": "1cfdaba16aa21efc20d357cb0486e8d26903088175242e0b669819535294975a",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2219,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "SharedGStepwise": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=24；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=18；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=56；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=80；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=19。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"6*4\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"27-9\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*x+2\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y+r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"rejected\",\n    \"reason\": \"proposal_violates_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 19,\n    \"root_evidence\": {\n      \"expression\": \"27-9\",\n      \"verified_value\": 18\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n使用充分的分步/自问自答求解：先识别目标还缺哪些未认证支持，按依赖只处理必要中间变量，可直接复用已核验父值和独立支持；允许复合计算或自行选择合理子问题，不要求机械地从根重做。不要遗漏合流父节点；完成后给最终答案。"
+            }
+          ],
+          "shared_evidence_sha256": "6ab5e7b997ee9cc21288f68d84b4acda0a2db81a528b7dd1ed6f59408b626ea2",
+          "shared_block_sha256": "6fb9280022d337703755aed3dd970ae4c704c5ca767830905ea04ecd96cdb9b6",
+          "messages_sha256": "7092f3407c8a6ea4a5156e8b0983332e2b6936a8847e074ecde5ab6ca98c0c25",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2278,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "VersionFrame": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=24；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=18；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=56；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=80；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=19。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"6*4\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"27-9\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*x+2\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y+r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"rejected\",\n    \"reason\": \"proposal_violates_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 19,\n    \"root_evidence\": {\n      \"expression\": \"27-9\",\n      \"verified_value\": 18\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n依据下面版本工作帧组织候选推导：只把当前VERIFIED_ROOT根值当已认证父值；对goal所需的UNVERIFIED支持，沿ready计划提出计算。读父值时使用当前版本；dirty旧派生记录不能充当已认证结果。生成的派生值标为候选而非CERTIFIED；可复用独立根，不须从头重算。\n版本工作帧：\n{\n  \"current_roots\": {\n    \"r\": {\n      \"value\": 24,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"6*4\",\n      \"old_literal\": 24,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"27-9\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"dirty_descendants\": [],\n  \"goal_support_uncertified\": [\n    \"y\",\n    \"z\"\n  ],\n  \"ready_now\": [\n    \"y\"\n  ],\n  \"symbolic_ready_plan\": [\n    {\n      \"layer\": 0,\n      \"nodes\": [\n        {\n          \"variable\": \"y\",\n          \"rule\": \"3*x+2\",\n          \"parents\": [\n            \"x\"\n          ]\n        }\n      ]\n    },\n    {\n      \"layer\": 1,\n      \"nodes\": [\n        {\n          \"variable\": \"z\",\n          \"rule\": \"y+r\",\n          \"parents\": [\n            \"r\",\n            \"y\"\n          ]\n        }\n      ]\n    }\n  ],\n  \"old_derived_certification\": \"UNVERIFIED\"\n}\n这些是待评价的候选推导，按父依赖顺序给出数值代入式与候选最终答案；不需要拒绝作答。"
+            }
+          ],
+          "shared_evidence_sha256": "6ab5e7b997ee9cc21288f68d84b4acda0a2db81a528b7dd1ed6f59408b626ea2",
+          "shared_block_sha256": "6fb9280022d337703755aed3dd970ae4c704c5ca767830905ea04ecd96cdb9b6",
+          "messages_sha256": "6269798d713af8fbc39c0e9f07025ea281838ed40c47092e2df44b9fd09d32c4",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 3335,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        }
+      },
+      "hidden_evaluation": {
+        "program_id": "T1",
+        "placement": "support_before_fault",
+        "group": "W",
+        "definitions": [
+          [
+            "r",
+            "6*4"
+          ],
+          [
+            "x",
+            "27-9"
+          ],
+          [
+            "y",
+            "3*x+2"
+          ],
+          [
+            "z",
+            "y+r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 80,
+        "old_final_value": 80,
+        "revision_implied_final_value": 83,
+        "old_x_valid": true,
+        "revised_x_valid": false,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true,
+        "source_fixed_mask_rules_not_used": {
+          "whole_B": [
+            "r",
+            "x",
+            "y",
+            "z"
+          ],
+          "closure": [
+            "x",
+            "y",
+            "z"
+          ],
+          "same_clause_budget_sham": [
+            "r",
+            "x",
+            "z"
+          ],
+          "sham_retains": "y, a dependent value; not a semantic equivalent"
+        }
+      },
+      "scope": "Input draft only; never serialize this whole record into a model prompt."
+    },
+    {
+      "schema_version": "shared_G_version_input_v1",
+      "case_id": "T2_support_before_fault_W",
+      "source_set": "selected_quality_before_fault6",
+      "visible": {
+        "question": "按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=18；"
+          },
+          {
+            "variable": "x",
+            "text": "x=9；"
+          },
+          {
+            "variable": "y",
+            "text": "y=81；"
+          },
+          {
+            "variable": "z",
+            "text": "z=63；"
+          }
+        ],
+        "revision": "复核记录：x=8。其他变量须按题目原始定义处理。"
+      },
+      "controller": {
+        "rules": [
+          {
+            "variable": "r",
+            "expression": "13+5",
+            "parents": [],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "x",
+            "expression": "54//6",
+            "parents": [],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "y",
+            "expression": "x*x",
+            "parents": [
+              "x"
+            ],
+            "origin": "original_visible_question_definition"
+          },
+          {
+            "variable": "z",
+            "expression": "y-r",
+            "parents": [
+              "r",
+              "y"
+            ],
+            "origin": "original_visible_question_definition"
+          }
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "goal": "z",
+        "gate": {
+          "action": "rejected",
+          "reason": "proposal_violates_original_root_definition",
+          "proposal_installed": false,
+          "proposal_variable": "x",
+          "proposal_value": 8,
+          "root_evidence": {
+            "expression": "54//6",
+            "verified_value": 9
+          },
+          "source": "visible_revision_and_original_question_only",
+          "parse_policy": "Last explicit x literal in R; no Wait-word/group/gold trigger."
+        },
+        "current_roots": {
+          "r": {
+            "value": 18,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "13+5",
+            "origin": "exact_constant_AST_from_original_question",
+            "old_literal": 18,
+            "old_literal_satisfies_definition": true,
+            "semantic_only_no_KV_certification": true
+          },
+          "x": {
+            "value": 9,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "54//6",
+            "origin": "exact_constant_AST_from_original_question",
+            "old_literal": 9,
+            "old_literal_satisfies_definition": true,
+            "semantic_only_no_KV_certification": true
+          }
+        },
+        "changed_from_old_literal_roots": [],
+        "dirty_descendants": [],
+        "old_derived_records": {
+          "y": {
+            "recorded_value": 81,
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED",
+            "invalidated_by_changed_roots": []
+          },
+          "z": {
+            "recorded_value": 63,
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED",
+            "invalidated_by_changed_roots": []
+          }
+        },
+        "goal_support": [
+          "r",
+          "x",
+          "y",
+          "z"
+        ],
+        "goal_support_uncertified": [
+          "y",
+          "z"
+        ],
+        "ready_now": [
+          "y"
+        ],
+        "symbolic_ready_plan": [
+          {
+            "layer": 0,
+            "nodes": [
+              {
+                "variable": "y",
+                "rule": "x*x",
+                "parents": [
+                  "x"
+                ],
+                "operation": "REQUEST_MODEL_CANDIDATE_NOT_CERTIFICATION"
+              }
+            ]
+          },
+          {
+            "layer": 1,
+            "nodes": [
+              {
+                "variable": "z",
+                "rule": "y-r",
+                "parents": [
+                  "r",
+                  "y"
+                ],
+                "operation": "REQUEST_MODEL_CANDIDATE_NOT_CERTIFICATION"
+              }
+            ]
+          }
+        ],
+        "deterministic_final_commit": {
+          "allowed": false,
+          "value": null,
+          "reason": "goal_is_not_certified; old_z_is_not_an_authorized_commit"
+        },
+        "root_verifier_calls": [
+          {
+            "variable": "r",
+            "expression": "13+5",
+            "has_variable_reference": false,
+            "arithmetic_operations": 1
+          },
+          {
+            "variable": "x",
+            "expression": "54//6",
+            "has_variable_reference": false,
+            "arithmetic_operations": 1
+          }
+        ],
+        "derived_arithmetic_evaluations": 0,
+        "scope": "Symbolic input bookkeeping only; no Transformer state or model-output certification."
+      },
+      "shared_evidence": {
+        "question": "按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。",
+        "old_assignment_clauses": [
+          {
+            "variable": "r",
+            "text": "r=18；"
+          },
+          {
+            "variable": "x",
+            "text": "x=9；"
+          },
+          {
+            "variable": "y",
+            "text": "y=81；"
+          },
+          {
+            "variable": "z",
+            "text": "z=63；"
+          }
+        ],
+        "revision_record": "复核记录：x=8。其他变量须按题目原始定义处理。",
+        "original_rules": [
+          {
+            "variable": "r",
+            "expression": "13+5",
+            "parents": []
+          },
+          {
+            "variable": "x",
+            "expression": "54//6",
+            "parents": []
+          },
+          {
+            "variable": "y",
+            "expression": "x*x",
+            "parents": [
+              "x"
+            ]
+          },
+          {
+            "variable": "z",
+            "expression": "y-r",
+            "parents": [
+              "r",
+              "y"
+            ]
+          }
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "goal": "z",
+        "shared_G": {
+          "action": "rejected",
+          "reason": "proposal_violates_original_root_definition",
+          "proposal_variable": "x",
+          "proposal_value": 8,
+          "root_evidence": {
+            "expression": "54//6",
+            "verified_value": 9
+          }
+        },
+        "certified_parent_values": {
+          "r": {
+            "value": 18,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "13+5",
+            "old_literal": 18,
+            "old_literal_satisfies_definition": true
+          },
+          "x": {
+            "value": 9,
+            "version": 0,
+            "status": "VERIFIED_ROOT",
+            "expression": "54//6",
+            "old_literal": 9,
+            "old_literal_satisfies_definition": true
+          }
+        },
+        "old_derived_statuses": {
+          "y": {
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED"
+          },
+          "z": {
+            "certification_status": "UNVERIFIED",
+            "dependency_status": "UNATTESTED",
+            "dependency_versions": "UNATTESTED"
+          }
+        },
+        "permission": "允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。"
+      },
+      "model_inputs": {
+        "SharedGDirect": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=18；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=9；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=81；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=63；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=8。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"13+5\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"54//6\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"x*x\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y-r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"rejected\",\n    \"reason\": \"proposal_violates_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 8,\n    \"root_evidence\": {\n      \"expression\": \"54//6\",\n      \"verified_value\": 9\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 9,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n直接给出最终答案即可；可自行完成必要推导并复用已核验父值，旧派生值只是待核验线索。"
+            }
+          ],
+          "shared_evidence_sha256": "3208bd60b84ccc4f053bb52568dcadb920d4445233f865843112536305dd8746",
+          "shared_block_sha256": "0daca0d683f9d3054f9eb2d9e5b14d263a87051756afaf691237b8252b59d671",
+          "messages_sha256": "7540a47837269442b1355a0352dedcecdbac691c64a356505665c17d171ec802",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2210,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "SharedGCompact": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=18；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=9；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=81；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=63；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=8。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"13+5\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"54//6\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"x*x\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y-r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"rejected\",\n    \"reason\": \"proposal_violates_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 8,\n    \"root_evidence\": {\n      \"expression\": \"54//6\",\n      \"verified_value\": 9\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 9,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n紧凑展示必要代入或复合计算，再给最终答案。可复用已核验父值，不必重算全部根，也不强制只写一行。"
+            }
+          ],
+          "shared_evidence_sha256": "3208bd60b84ccc4f053bb52568dcadb920d4445233f865843112536305dd8746",
+          "shared_block_sha256": "0daca0d683f9d3054f9eb2d9e5b14d263a87051756afaf691237b8252b59d671",
+          "messages_sha256": "fbf403daafa4993ff4b0bf85cda4d2b64ec1e88080f94158b3d174c5b7cbb5e7",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2216,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "SharedGStepwise": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=18；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=9；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=81；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=63；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=8。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"13+5\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"54//6\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"x*x\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y-r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"rejected\",\n    \"reason\": \"proposal_violates_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 8,\n    \"root_evidence\": {\n      \"expression\": \"54//6\",\n      \"verified_value\": 9\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 9,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n使用充分的分步/自问自答求解：先识别目标还缺哪些未认证支持，按依赖只处理必要中间变量，可直接复用已核验父值和独立支持；允许复合计算或自行选择合理子问题，不要求机械地从根重做。不要遗漏合流父节点；完成后给最终答案。"
+            }
+          ],
+          "shared_evidence_sha256": "3208bd60b84ccc4f053bb52568dcadb920d4445233f865843112536305dd8746",
+          "shared_block_sha256": "0daca0d683f9d3054f9eb2d9e5b14d263a87051756afaf691237b8252b59d671",
+          "messages_sha256": "d61b4377490ee7eb0f6c23c752b06f3508837c9dcb12797e0fa83cc57d4696e4",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 2275,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        },
+        "VersionFrame": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "你要依据原题规则处理旧计算记录和修订记录。所给根值来自对原题常量根定义的精确核验；只有其列出的根值经过外部核验。旧派生值即使看起来正确也未被认证；模型新产生的推导仍是候选，不能把自称已验证当作外部认证。允许直接复用已核验的父值，不要求从头重算它们。数学定义以原题为准，输出样式按本方法要求。完成必要计算后，以“最终答案：整数”结束；不要仅因旧z存在就将它当作已认证结果。"
+            },
+            {
+              "role": "user",
+              "content": "题目与已知证据：\n{\n  \"question\": \"按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\",\n  \"old_assignment_clauses\": [\n    {\n      \"variable\": \"r\",\n      \"text\": \"r=18；\"\n    },\n    {\n      \"variable\": \"x\",\n      \"text\": \"x=9；\"\n    },\n    {\n      \"variable\": \"y\",\n      \"text\": \"y=81；\"\n    },\n    {\n      \"variable\": \"z\",\n      \"text\": \"z=63；\"\n    }\n  ],\n  \"revision_record\": \"复核记录：x=8。其他变量须按题目原始定义处理。\",\n  \"original_rules\": [\n    {\n      \"variable\": \"r\",\n      \"expression\": \"13+5\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"x\",\n      \"expression\": \"54//6\",\n      \"parents\": []\n    },\n    {\n      \"variable\": \"y\",\n      \"expression\": \"x*x\",\n      \"parents\": [\n        \"x\"\n      ]\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y-r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ]\n    }\n  ],\n  \"dependency_graph\": {\n    \"r\": [],\n    \"x\": [],\n    \"y\": [\n      \"x\"\n    ],\n    \"z\": [\n      \"r\",\n      \"y\"\n    ]\n  },\n  \"goal\": \"z\",\n  \"shared_G\": {\n    \"action\": \"rejected\",\n    \"reason\": \"proposal_violates_original_root_definition\",\n    \"proposal_variable\": \"x\",\n    \"proposal_value\": 8,\n    \"root_evidence\": {\n      \"expression\": \"54//6\",\n      \"verified_value\": 9\n    }\n  },\n  \"certified_parent_values\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 9,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"old_derived_statuses\": {\n    \"y\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    },\n    \"z\": {\n      \"certification_status\": \"UNVERIFIED\",\n      \"dependency_status\": \"UNATTESTED\",\n      \"dependency_versions\": \"UNATTESTED\"\n    }\n  },\n  \"permission\": \"允许复用全部VERIFIED_ROOT根值及原题规则，仅处理目标所需的未认证支持。\"\n}\n\n输出要求：\n依据下面版本工作帧组织候选推导：只把当前VERIFIED_ROOT根值当已认证父值；对goal所需的UNVERIFIED支持，沿ready计划提出计算。读父值时使用当前版本；dirty旧派生记录不能充当已认证结果。生成的派生值标为候选而非CERTIFIED；可复用独立根，不须从头重算。\n版本工作帧：\n{\n  \"current_roots\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 9,\n      \"old_literal_satisfies_definition\": true\n    }\n  },\n  \"dirty_descendants\": [],\n  \"goal_support_uncertified\": [\n    \"y\",\n    \"z\"\n  ],\n  \"ready_now\": [\n    \"y\"\n  ],\n  \"symbolic_ready_plan\": [\n    {\n      \"layer\": 0,\n      \"nodes\": [\n        {\n          \"variable\": \"y\",\n          \"rule\": \"x*x\",\n          \"parents\": [\n            \"x\"\n          ]\n        }\n      ]\n    },\n    {\n      \"layer\": 1,\n      \"nodes\": [\n        {\n          \"variable\": \"z\",\n          \"rule\": \"y-r\",\n          \"parents\": [\n            \"r\",\n            \"y\"\n          ]\n        }\n      ]\n    }\n  ],\n  \"old_derived_certification\": \"UNVERIFIED\"\n}\n这些是待评价的候选推导，按父依赖顺序给出数值代入式与候选最终答案；不需要拒绝作答。"
+            }
+          ],
+          "shared_evidence_sha256": "3208bd60b84ccc4f053bb52568dcadb920d4445233f865843112536305dd8746",
+          "shared_block_sha256": "0daca0d683f9d3054f9eb2d9e5b14d263a87051756afaf691237b8252b59d671",
+          "messages_sha256": "e130cfe8515987613e1f9fbfb027388ffc8ae2694ece69b9fbbfccc7e0cd6f59",
+          "generation_policy": {
+            "mode": "quality_first_draft_not_executed",
+            "do_sample": false,
+            "max_new_tokens": 512,
+            "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+            "forced_y_prefix": false,
+            "manual_tail_window": false,
+            "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+          },
+          "prompt_characters": 3330,
+          "tokenizer_tokens": "not measured; no tokenizer/model loaded"
+        }
+      },
+      "hidden_evaluation": {
+        "program_id": "T2",
+        "placement": "support_before_fault",
+        "group": "W",
+        "definitions": [
+          [
+            "r",
+            "13+5"
+          ],
+          [
+            "x",
+            "54//6"
+          ],
+          [
+            "y",
+            "x*x"
+          ],
+          [
+            "z",
+            "y-r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 63,
+        "old_final_value": 63,
+        "revision_implied_final_value": 46,
+        "old_x_valid": true,
+        "revised_x_valid": false,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true,
+        "source_fixed_mask_rules_not_used": {
+          "whole_B": [
+            "r",
+            "x",
+            "y",
+            "z"
+          ],
+          "closure": [
+            "x",
+            "y",
+            "z"
+          ],
+          "same_clause_budget_sham": [
+            "r",
+            "x",
+            "z"
+          ],
+          "sham_retains": "y, a dependent value; not a semantic equivalent"
+        }
+      },
+      "scope": "Input draft only; never serialize this whole record into a model prompt."
+    }
+  ],
+  "basis": [
+    {
+      "basis_id": "P_01",
+      "kind": "P_only",
+      "visible": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "revision": null
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "依据题目原始数学定义求解。若给出额外复核记录，不预设其正确。可使用必要计算，以“最终答案：整数”结束。"
+        },
+        {
+          "role": "user",
+          "content": "原题：\n按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。"
+        }
+      ],
+      "provenance": {
+        "basis_id": "P_01",
+        "kind": "P_only",
+        "messages_sha256": "7a91522100f0cdd81e7f28820ba01909564fc7bbf7130c5a325d595fe6fd5732",
+        "linked_case_ids_not_prompted": [
+          "T1_support_before_fault_E",
+          "T1_support_before_fault_C",
+          "T1_support_before_fault_W"
+        ],
+        "contains_G_or_B": false,
+        "revision_is_actual_visible_record_not_assumed_correct": true,
+        "generation_policy": {
+          "mode": "quality_first_draft_not_executed",
+          "do_sample": false,
+          "max_new_tokens": 512,
+          "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+          "forced_y_prefix": false,
+          "manual_tail_window": false,
+          "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+        }
+      },
+      "hidden_evaluation": {
+        "program_id": "T1",
+        "placement": "support_before_fault",
+        "group": "E",
+        "definitions": [
+          [
+            "r",
+            "6*4"
+          ],
+          [
+            "x",
+            "27-9"
+          ],
+          [
+            "y",
+            "3*x+2"
+          ],
+          [
+            "z",
+            "y+r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 80,
+        "old_final_value": 83,
+        "revision_implied_final_value": 80,
+        "old_x_valid": false,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true,
+        "source_fixed_mask_rules_not_used": {
+          "whole_B": [
+            "r",
+            "x",
+            "y",
+            "z"
+          ],
+          "closure": [
+            "x",
+            "y",
+            "z"
+          ],
+          "same_clause_budget_sham": [
+            "r",
+            "x",
+            "z"
+          ],
+          "sham_retains": "y, a dependent value; not a semantic equivalent"
+        }
+      }
+    },
+    {
+      "basis_id": "P_02",
+      "kind": "P_only",
+      "visible": {
+        "question": "按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。",
+        "revision": null
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "依据题目原始数学定义求解。若给出额外复核记录，不预设其正确。可使用必要计算，以“最终答案：整数”结束。"
+        },
+        {
+          "role": "user",
+          "content": "原题：\n按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。"
+        }
+      ],
+      "provenance": {
+        "basis_id": "P_02",
+        "kind": "P_only",
+        "messages_sha256": "c753c6c8e7defc45780abf000a295b51a966ac3ea871a47b651d8e0b90ff50f6",
+        "linked_case_ids_not_prompted": [
+          "T2_support_before_fault_E",
+          "T2_support_before_fault_C",
+          "T2_support_before_fault_W"
+        ],
+        "contains_G_or_B": false,
+        "revision_is_actual_visible_record_not_assumed_correct": true,
+        "generation_policy": {
+          "mode": "quality_first_draft_not_executed",
+          "do_sample": false,
+          "max_new_tokens": 512,
+          "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+          "forced_y_prefix": false,
+          "manual_tail_window": false,
+          "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+        }
+      },
+      "hidden_evaluation": {
+        "program_id": "T2",
+        "placement": "support_before_fault",
+        "group": "E",
+        "definitions": [
+          [
+            "r",
+            "13+5"
+          ],
+          [
+            "x",
+            "54//6"
+          ],
+          [
+            "y",
+            "x*x"
+          ],
+          [
+            "z",
+            "y-r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 63,
+        "old_final_value": 46,
+        "revision_implied_final_value": 63,
+        "old_x_valid": false,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true,
+        "source_fixed_mask_rules_not_used": {
+          "whole_B": [
+            "r",
+            "x",
+            "y",
+            "z"
+          ],
+          "closure": [
+            "x",
+            "y",
+            "z"
+          ],
+          "same_clause_budget_sham": [
+            "r",
+            "x",
+            "z"
+          ],
+          "sham_retains": "y, a dependent value; not a semantic equivalent"
+        }
+      }
+    },
+    {
+      "basis_id": "PR_01",
+      "kind": "P_plus_R",
+      "visible": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "revision": "复核记录：x=18。其他变量须按题目原始定义处理。"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "依据题目原始数学定义求解。若给出额外复核记录，不预设其正确。可使用必要计算，以“最终答案：整数”结束。"
+        },
+        {
+          "role": "user",
+          "content": "原题：\n按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\n额外复核记录（待核验，不预设正确）：\n复核记录：x=18。其他变量须按题目原始定义处理。"
+        }
+      ],
+      "provenance": {
+        "basis_id": "PR_01",
+        "kind": "P_plus_R",
+        "messages_sha256": "b412e52e43c6fc02fcd9e79c9b96384646f9ab66a65e8292ab37f14c9e6c1c62",
+        "linked_case_ids_not_prompted": [
+          "T1_support_before_fault_E",
+          "T1_support_before_fault_C"
+        ],
+        "contains_G_or_B": false,
+        "revision_is_actual_visible_record_not_assumed_correct": true,
+        "generation_policy": {
+          "mode": "quality_first_draft_not_executed",
+          "do_sample": false,
+          "max_new_tokens": 512,
+          "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+          "forced_y_prefix": false,
+          "manual_tail_window": false,
+          "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+        }
+      },
+      "hidden_evaluation": {
+        "program_id": "T1",
+        "placement": "support_before_fault",
+        "group": "E",
+        "definitions": [
+          [
+            "r",
+            "6*4"
+          ],
+          [
+            "x",
+            "27-9"
+          ],
+          [
+            "y",
+            "3*x+2"
+          ],
+          [
+            "z",
+            "y+r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 80,
+        "old_final_value": 83,
+        "revision_implied_final_value": 80,
+        "old_x_valid": false,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true,
+        "source_fixed_mask_rules_not_used": {
+          "whole_B": [
+            "r",
+            "x",
+            "y",
+            "z"
+          ],
+          "closure": [
+            "x",
+            "y",
+            "z"
+          ],
+          "same_clause_budget_sham": [
+            "r",
+            "x",
+            "z"
+          ],
+          "sham_retains": "y, a dependent value; not a semantic equivalent"
+        }
+      }
+    },
+    {
+      "basis_id": "PR_02",
+      "kind": "P_plus_R",
+      "visible": {
+        "question": "按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。",
+        "revision": "复核记录：x=9。其他变量须按题目原始定义处理。"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "依据题目原始数学定义求解。若给出额外复核记录，不预设其正确。可使用必要计算，以“最终答案：整数”结束。"
+        },
+        {
+          "role": "user",
+          "content": "原题：\n按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\n额外复核记录（待核验，不预设正确）：\n复核记录：x=9。其他变量须按题目原始定义处理。"
+        }
+      ],
+      "provenance": {
+        "basis_id": "PR_02",
+        "kind": "P_plus_R",
+        "messages_sha256": "656ff5ea0b0b5bf9b20314ecd9f2184693ce2705acbac5ea6ddb6d9329f6c79d",
+        "linked_case_ids_not_prompted": [
+          "T2_support_before_fault_E",
+          "T2_support_before_fault_C"
+        ],
+        "contains_G_or_B": false,
+        "revision_is_actual_visible_record_not_assumed_correct": true,
+        "generation_policy": {
+          "mode": "quality_first_draft_not_executed",
+          "do_sample": false,
+          "max_new_tokens": 512,
+          "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+          "forced_y_prefix": false,
+          "manual_tail_window": false,
+          "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+        }
+      },
+      "hidden_evaluation": {
+        "program_id": "T2",
+        "placement": "support_before_fault",
+        "group": "E",
+        "definitions": [
+          [
+            "r",
+            "13+5"
+          ],
+          [
+            "x",
+            "54//6"
+          ],
+          [
+            "y",
+            "x*x"
+          ],
+          [
+            "z",
+            "y-r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 63,
+        "old_final_value": 46,
+        "revision_implied_final_value": 63,
+        "old_x_valid": false,
+        "revised_x_valid": true,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true,
+        "source_fixed_mask_rules_not_used": {
+          "whole_B": [
+            "r",
+            "x",
+            "y",
+            "z"
+          ],
+          "closure": [
+            "x",
+            "y",
+            "z"
+          ],
+          "same_clause_budget_sham": [
+            "r",
+            "x",
+            "z"
+          ],
+          "sham_retains": "y, a dependent value; not a semantic equivalent"
+        }
+      }
+    },
+    {
+      "basis_id": "PR_03",
+      "kind": "P_plus_R",
+      "visible": {
+        "question": "按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。",
+        "revision": "复核记录：x=19。其他变量须按题目原始定义处理。"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "依据题目原始数学定义求解。若给出额外复核记录，不预设其正确。可使用必要计算，以“最终答案：整数”结束。"
+        },
+        {
+          "role": "user",
+          "content": "原题：\n按整数算术，依次定义 r=6*4，x=27-9，y=3*x+2，z=y+r。求 z。\n额外复核记录（待核验，不预设正确）：\n复核记录：x=19。其他变量须按题目原始定义处理。"
+        }
+      ],
+      "provenance": {
+        "basis_id": "PR_03",
+        "kind": "P_plus_R",
+        "messages_sha256": "f016ec66d995cb6e2bf59e5d27f0fb63d139c422fa3e8f4e6c81955ebf3f8743",
+        "linked_case_ids_not_prompted": [
+          "T1_support_before_fault_W"
+        ],
+        "contains_G_or_B": false,
+        "revision_is_actual_visible_record_not_assumed_correct": true,
+        "generation_policy": {
+          "mode": "quality_first_draft_not_executed",
+          "do_sample": false,
+          "max_new_tokens": 512,
+          "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+          "forced_y_prefix": false,
+          "manual_tail_window": false,
+          "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+        }
+      },
+      "hidden_evaluation": {
+        "program_id": "T1",
+        "placement": "support_before_fault",
+        "group": "W",
+        "definitions": [
+          [
+            "r",
+            "6*4"
+          ],
+          [
+            "x",
+            "27-9"
+          ],
+          [
+            "y",
+            "3*x+2"
+          ],
+          [
+            "z",
+            "y+r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 80,
+        "old_final_value": 80,
+        "revision_implied_final_value": 83,
+        "old_x_valid": true,
+        "revised_x_valid": false,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true,
+        "source_fixed_mask_rules_not_used": {
+          "whole_B": [
+            "r",
+            "x",
+            "y",
+            "z"
+          ],
+          "closure": [
+            "x",
+            "y",
+            "z"
+          ],
+          "same_clause_budget_sham": [
+            "r",
+            "x",
+            "z"
+          ],
+          "sham_retains": "y, a dependent value; not a semantic equivalent"
+        }
+      }
+    },
+    {
+      "basis_id": "PR_04",
+      "kind": "P_plus_R",
+      "visible": {
+        "question": "按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。",
+        "revision": "复核记录：x=8。其他变量须按题目原始定义处理。"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "依据题目原始数学定义求解。若给出额外复核记录，不预设其正确。可使用必要计算，以“最终答案：整数”结束。"
+        },
+        {
+          "role": "user",
+          "content": "原题：\n按整数算术，依次定义 r=13+5，x=54//6，y=x*x，z=y-r。求 z。\n额外复核记录（待核验，不预设正确）：\n复核记录：x=8。其他变量须按题目原始定义处理。"
+        }
+      ],
+      "provenance": {
+        "basis_id": "PR_04",
+        "kind": "P_plus_R",
+        "messages_sha256": "7f87dfa9e555205beb7776526e85e6164058a24d30af2ef4827e86f7f889e86d",
+        "linked_case_ids_not_prompted": [
+          "T2_support_before_fault_W"
+        ],
+        "contains_G_or_B": false,
+        "revision_is_actual_visible_record_not_assumed_correct": true,
+        "generation_policy": {
+          "mode": "quality_first_draft_not_executed",
+          "do_sample": false,
+          "max_new_tokens": 512,
+          "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+          "forced_y_prefix": false,
+          "manual_tail_window": false,
+          "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+        }
+      },
+      "hidden_evaluation": {
+        "program_id": "T2",
+        "placement": "support_before_fault",
+        "group": "W",
+        "definitions": [
+          [
+            "r",
+            "13+5"
+          ],
+          [
+            "x",
+            "54//6"
+          ],
+          [
+            "y",
+            "x*x"
+          ],
+          [
+            "z",
+            "y-r"
+          ]
+        ],
+        "dependency_graph": {
+          "r": [],
+          "x": [],
+          "y": [
+            "x"
+          ],
+          "z": [
+            "r",
+            "y"
+          ]
+        },
+        "required_final_value": 63,
+        "old_final_value": 63,
+        "revision_implied_final_value": 46,
+        "old_x_valid": true,
+        "revised_x_valid": false,
+        "dependency_closure_for_hypothetical_x_change": [
+          "x",
+          "y",
+          "z"
+        ],
+        "independent_shared_variables": [
+          "r"
+        ],
+        "actual_root_value_changed": true,
+        "source_fixed_mask_rules_not_used": {
+          "whole_B": [
+            "r",
+            "x",
+            "y",
+            "z"
+          ],
+          "closure": [
+            "x",
+            "y",
+            "z"
+          ],
+          "same_clause_budget_sham": [
+            "r",
+            "x",
+            "z"
+          ],
+          "sham_retains": "y, a dependent value; not a semantic equivalent"
+        }
+      }
+    }
+  ],
+  "dedupe_map": {
+    "T1_support_before_fault_E": {
+      "P_only": "P_01",
+      "P_plus_R": "PR_01"
+    },
+    "T2_support_before_fault_E": {
+      "P_only": "P_02",
+      "P_plus_R": "PR_02"
+    },
+    "T1_support_before_fault_C": {
+      "P_only": "P_01",
+      "P_plus_R": "PR_01"
+    },
+    "T2_support_before_fault_C": {
+      "P_only": "P_02",
+      "P_plus_R": "PR_02"
+    },
+    "T1_support_before_fault_W": {
+      "P_only": "P_01",
+      "P_plus_R": "PR_03"
+    },
+    "T2_support_before_fault_W": {
+      "P_only": "P_02",
+      "P_plus_R": "PR_04"
+    }
+  },
+  "hash": "5260ad988fd9dfe97c186ad9fb7970c7a8cc91540de86f6be59c3de26c6b723b",
+  "source_sha256": "93f39936cb5d1dbdbc1eb647d1c0f228be11cf49f23d14b7b2163b52d01902d1",
+  "adapter_source_sha256": "3556baa0920b344e87f22037c584f7d2bde77bbdede9808c4e360fc00200890f",
+  "selected_order": [
+    "T1_support_before_fault_E",
+    "T2_support_before_fault_E",
+    "T1_support_before_fault_C",
+    "T2_support_before_fault_C",
+    "T1_support_before_fault_W",
+    "T2_support_before_fault_W"
+  ],
+  "methods": [
+    "SharedGDirect",
+    "SharedGCompact",
+    "SharedGStepwise",
+    "VersionFrame"
+  ],
+  "primary_output_count": 24,
+  "basis_output_count": 6,
+  "expected_model_outputs": 30,
+  "old16_loaded_for_this_dataset": false,
+  "generation_policy_draft": {
+    "mode": "quality_first_draft_not_executed",
+    "do_sample": false,
+    "max_new_tokens": 512,
+    "stopping": "normal model EOS; 512 is a safety cap, not a forced short answer window",
+    "forced_y_prefix": false,
+    "manual_tail_window": false,
+    "budget_curve": "Separate later protocol; no equal-budget superiority claim in this draft."
+  },
+  "scope": "Two programs x E/C/W before-fault; exploratory toy, not six independent unseen tasks.",
+  "one_shot_frame_only": true,
+  "no_runtime_model_proposal_validation_implemented": true
+}

@@ -1,0 +1,117 @@
+{
+  "protocol_id": "Phase5A_sharedG_quality_first_v1_20261106",
+  "status": "Scientific choices frozen before new model outputs; source/render binding separate before launch",
+  "user_sequence": "Repository status, next comparison, algorithm formulas and loose-vs-tight token budget explained before this trial",
+  "goal": "Explore final-answer quality and actual cost without a tight64-token delivery bottleneck",
+  "implementation_scope": "Single-shot shared-root-G prompting/working-frame prototype; not full iterative model proposal verification, not natural-language graph discovery, not a formal dataset benchmark",
+  "input": {
+    "file": "../next_design_20261105/P05_topology_cases_v2.json",
+    "sha256": "93f39936cb5d1dbdbc1eb647d1c0f228be11cf49f23d14b7b2163b52d01902d1",
+    "adapter_sha256": "3556baa0920b344e87f22037c584f7d2bde77bbdede9808c4e360fc00200890f",
+    "prepared_dataset_hash": "5260ad988fd9dfe97c186ad9fb7970c7a8cc91540de86f6be59c3de26c6b723b",
+    "two_unique_programs": true,
+    "old16_used_as_unseen": false
+  },
+  "order": [
+    "T1_support_before_fault_E",
+    "T2_support_before_fault_E",
+    "T1_support_before_fault_C",
+    "T2_support_before_fault_C",
+    "T1_support_before_fault_W",
+    "T2_support_before_fault_W"
+  ],
+  "methods": [
+    "SharedGDirect",
+    "SharedGCompact",
+    "SharedGStepwise",
+    "VersionFrame"
+  ],
+  "basis": {
+    "P_only_unique": 2,
+    "P_plus_actual_R_unique": 4,
+    "G_or_old_B_in_basis": false,
+    "exact_prompt_deduplication": true,
+    "negative_R_not_called_correct": true,
+    "comparison_scope": "Base performance under its declared solve prompt, not proof of every readout capability or a unique interference cause"
+  },
+  "model": {
+    "snapshot": "Qwen3-4B existing read-only",
+    "manifest_sha256": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.2",
+    "dtype": "FP16",
+    "attention": "eager",
+    "do_sample": false,
+    "seed": 20261106
+  },
+  "quality_policy": {
+    "max_new_tokens": 512,
+    "normal_stop": "Configured model EOS only",
+    "integer_newline_stop": false,
+    "parser_stop": false,
+    "forced_tail_commit": false,
+    "forced_y_scaffold": false,
+    "budget_forcing": false,
+    "meaning": "512 is a resource guard for these short controls, not an artificially scarce primary budget; any cap is reported separately, not claimed natural EOS"
+  },
+  "fairness": {
+    "shared": "Same visible original rules/dependencies/B/R and exact root-only G evidence for all4; all may reuse certified x/r and choose subgoals",
+    "G_source": "Parse original visible question, evaluate only constant root definitions, never hidden group/gold to choose action",
+    "old_y_z": "UNVERIFIED in every group; root certification is not final-answer certification",
+    "new_descendant_numbers_in_prompt": false,
+    "VersionFrame_extra": "Versions/dirty/unverified goal supports/conditional ready plan derived from common visible facts; no runtime new-node certificate",
+    "SelfAsk_scope": "Prompt-defined stepwise baseline, not a faithful reproduction of every original tool-using Self-Ask implementation"
+  },
+  "metrics": {
+    "primary": "Frozen-parser final numeric correctness on every completed paired case; planned/started/completed denominators all explicit",
+    "natural_quality": "EOS-and-correct separately; numeric correctness alone at cap is not natural completion",
+    "secondary": [
+      "generated tokens",
+      "prompt/prefill tokens",
+      "per-call and study wall",
+      "G/bookkeeping CPU time",
+      "retries/failed or incomplete records",
+      "postload peak memory",
+      "cap/EOS/parse rate"
+    ],
+    "no_cross_P05_accuracy_gain_claim": true,
+    "no_accuracy_guarantee_or_statistical_power_claim": true
+  },
+  "resource_budget": {
+    "cumulative_single_gpu_seconds_all_attempts": 300,
+    "worker_seconds": 270,
+    "outer_seconds": 285,
+    "kill_after_seconds": 5,
+    "imports_hash_load_failure_counted": true,
+    "partial_policy": "Fixed basis then fixed complete four-method blocks; retain raw partial outputs, no replacement by easier cases or outcome-based continuation",
+    "no_parameter_sweep": true
+  },
+  "prelaunch_requirements": [
+    "independent static source review",
+    "target-TF random tiny CPU interface pass",
+    "visible-only/G/hidden-poison logic checks",
+    "actual tokenizer30-prompt render freeze before model forwards",
+    "current idle UUID/host/runtime/model identity",
+    "fresh output paths and source hashes"
+  ],
+  "not_executed_here": [
+    "tight-budget curve",
+    "step-by-step validation/controller or deterministic final bypass",
+    "KV mask/crop",
+    "training",
+    "100-case natural semantic annotation",
+    "formal multi-dataset comparison"
+  ],
+  "literature_context": [
+    {
+      "title": "s1: Simple test-time scaling",
+      "url": "https://arxiv.org/abs/2501.19393",
+      "used_for": "Compute/length intervention can change performance; not evidence of this prototype gain."
+    },
+    {
+      "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+      "url": "https://arxiv.org/abs/2408.03314",
+      "used_for": "Quality/compute allocation is a separate comparison dimension."
+    }
+  ]
+}

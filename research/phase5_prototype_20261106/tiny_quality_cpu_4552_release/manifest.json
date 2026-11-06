@@ -1,0 +1,204 @@
+{
+  "schema_version": "phase5_quality_one_shot_v1",
+  "source_sha256": "d0655569d185ca99019c068dd1f19bad70e530fc0cbfad75dd474dc29c2e03d7",
+  "adapter_source_sha256": "3556baa0920b344e87f22037c584f7d2bde77bbdede9808c4e360fc00200890f",
+  "base_source_sha256": "246219aee9774fae0966c7663c765daf3dba2f1df68bc054b539a4dd5d64331b",
+  "parser_sha256": "c2bc053b66778288f524d46f4353e825b1ee654d829027bd02b1cb3173255eed",
+  "input_sha256": "93f39936cb5d1dbdbc1eb647d1c0f228be11cf49f23d14b7b2163b52d01902d1",
+  "prepared_dataset_hash": "5260ad988fd9dfe97c186ad9fb7970c7a8cc91540de86f6be59c3de26c6b723b",
+  "dependencies": {
+    "base": "D:\\ACL\\research\\direction_selection_20261105\\real_model_p0.py",
+    "adapter": "D:\\ACL\\research\\phase5_prototype_20261106\\prepare_cpu_input_adapter.py",
+    "parser": "D:\\ACL\\research\\next_design_20261105\\frozen_answer_extractor.py",
+    "data": "D:\\ACL\\research\\next_design_20261105\\P05_topology_cases_v2.json"
+  },
+  "versions": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "torch": "2.11.0+cpu",
+    "transformers": "4.55.2"
+  },
+  "binding": {
+    "device": "cpu",
+    "scope": "interface_only"
+  },
+  "interface_only": true,
+  "quality_guard": 8,
+  "greedy": true,
+  "stopping": "Configured EOS only; safety cap separate. No integer-newline or parse-based stop.",
+  "executed_main_order": [
+    "T1_support_before_fault_E",
+    "T1_support_before_fault_C",
+    "T1_support_before_fault_W"
+  ],
+  "basis_order": [
+    "P_01",
+    "P_02",
+    "PR_01",
+    "PR_02",
+    "PR_03",
+    "PR_04"
+  ],
+  "method_order": [
+    "SharedGDirect",
+    "SharedGCompact",
+    "SharedGStepwise",
+    "VersionFrame"
+  ],
+  "execution_order": "six basis first, then each complete main case's four methods",
+  "source_selection_scope": "Two programs x E/C/W before-fault; exploratory toy, not six independent unseen tasks.",
+  "dedupe_map": {
+    "T1_support_before_fault_E": {
+      "P_only": "P_01",
+      "P_plus_R": "PR_01"
+    },
+    "T2_support_before_fault_E": {
+      "P_only": "P_02",
+      "P_plus_R": "PR_02"
+    },
+    "T1_support_before_fault_C": {
+      "P_only": "P_01",
+      "P_plus_R": "PR_01"
+    },
+    "T2_support_before_fault_C": {
+      "P_only": "P_02",
+      "P_plus_R": "PR_02"
+    },
+    "T1_support_before_fault_W": {
+      "P_only": "P_01",
+      "P_plus_R": "PR_03"
+    },
+    "T2_support_before_fault_W": {
+      "P_only": "P_02",
+      "P_plus_R": "PR_04"
+    }
+  },
+  "shared_preparation_seconds": 0.0038802999997642473,
+  "shared_preparation_scope": "Actual input preparation once; separate from per-request G recheck.",
+  "hard_limit_seconds": 270,
+  "limitations": [
+    "Two arithmetic programs with E/C/W variants: exploratory development fixtures, not six independent natural tasks.",
+    "G certifies constant roots parsed from visible original definitions; old y/z stay UNVERIFIED.",
+    "All four methods share G/rules/graph/old records/R; no group or gold chooses a method or bypass.",
+    "VersionFrame is one-shot prompted organization, not runtime node checking or certified final submission.",
+    "No training, cache mask/crop, steering, teacher-forced scoring, auxiliary probes or forced tail window.",
+    "Free outputs continue to configured EOS or the 512-token safety guard; no parser-based early stopping.",
+    "Safety-cap/unknown/unparsed/failures remain visible; incomplete four-arm cases are not silently completed or replaced.",
+    "Per-method quality/cost is not compared with the prior P0.5 run's different prompts/protocol.",
+    "Shared input preparation and model loading are experimental overhead; actual per-request G/prompt/prefill/decode costs are separate.",
+    "Numeric final-answer extraction is posthoc grading, not a runtime model/tool correctness gate."
+  ],
+  "no_runtime_derived_checker": true,
+  "model_input_whitelist": "Only adapter.render_prompt()['messages']; never serialize whole case/controller/hidden evaluator.",
+  "G_permission": "Exact constant roots x/r only; graph parsing and status bookkeeping. No new y/z evaluation.",
+  "no_cache_modifications": true,
+  "controller_forced_decode_tokens": 0,
+  "tail_injection": false,
+  "model_manifest_sha256": "851336e7e2a6b1addd8d41995cd46fa38a72be65d18de96a8fe12bcf5ecc9855",
+  "model_files": {
+    "scope": "RANDOM CPU FIXTURE"
+  },
+  "load_and_hash_seconds": 1.8301086999999825,
+  "parameter_dtype": "torch.float32",
+  "model_config": {
+    "vocab_size": 766,
+    "max_position_embeddings": 8192,
+    "hidden_size": 32,
+    "intermediate_size": 64,
+    "num_hidden_layers": 3,
+    "num_attention_heads": 4,
+    "use_sliding_window": false,
+    "sliding_window": null,
+    "max_window_layers": 28,
+    "num_key_value_heads": 2,
+    "head_dim": 8,
+    "hidden_act": "silu",
+    "initializer_range": 0.02,
+    "rms_norm_eps": 1e-06,
+    "use_cache": true,
+    "rope_theta": 10000.0,
+    "rope_scaling": null,
+    "attention_bias": false,
+    "attention_dropout": 0.0,
+    "layer_types": [
+      "full_attention",
+      "full_attention",
+      "full_attention"
+    ],
+    "return_dict": true,
+    "output_hidden_states": false,
+    "torchscript": false,
+    "torch_dtype": null,
+    "pruned_heads": {},
+    "tie_word_embeddings": false,
+    "chunk_size_feed_forward": 0,
+    "is_encoder_decoder": false,
+    "is_decoder": false,
+    "cross_attention_hidden_size": null,
+    "add_cross_attention": false,
+    "tie_encoder_decoder": false,
+    "architectures": null,
+    "finetuning_task": null,
+    "id2label": {
+      "0": "LABEL_0",
+      "1": "LABEL_1"
+    },
+    "label2id": {
+      "LABEL_0": 0,
+      "LABEL_1": 1
+    },
+    "task_specific_params": null,
+    "problem_type": null,
+    "tokenizer_class": null,
+    "prefix": null,
+    "bos_token_id": 1,
+    "pad_token_id": 0,
+    "eos_token_id": 4,
+    "sep_token_id": null,
+    "decoder_start_token_id": null,
+    "max_length": 20,
+    "min_length": 0,
+    "do_sample": false,
+    "early_stopping": false,
+    "num_beams": 1,
+    "num_beam_groups": 1,
+    "diversity_penalty": 0.0,
+    "temperature": 1.0,
+    "top_k": 50,
+    "top_p": 1.0,
+    "typical_p": 1.0,
+    "repetition_penalty": 1.0,
+    "length_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "encoder_no_repeat_ngram_size": 0,
+    "bad_words_ids": null,
+    "num_return_sequences": 1,
+    "output_scores": false,
+    "return_dict_in_generate": false,
+    "forced_bos_token_id": null,
+    "forced_eos_token_id": null,
+    "remove_invalid_values": false,
+    "exponential_decay_length_penalty": null,
+    "suppress_tokens": null,
+    "begin_suppress_tokens": null,
+    "_name_or_path": "",
+    "transformers_version": "4.55.2",
+    "tf_legacy_loss": false,
+    "use_bfloat16": false,
+    "model_type": "qwen3",
+    "output_attentions": false
+  },
+  "tokenizer": {
+    "class": "FixtureTokenizer",
+    "chat_template": "CPU fixture ChatML with nonthinking assistant; 8-char chunks",
+    "special_tokens_map": {
+      "eos_token": "<|im_end|>",
+      "pad_token": "<pad>"
+    }
+  },
+  "eos_token_ids": [
+    4
+  ],
+  "rendered_jobs_sha256": "fc2ede86b45ca3ae03ae7065497446c7d168c51d7047e29e59a7618bbe06371f",
+  "planned_model_outputs_this_run": 18,
+  "planned_real_outputs": 30
+}

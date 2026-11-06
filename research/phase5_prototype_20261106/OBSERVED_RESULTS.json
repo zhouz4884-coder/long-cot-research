@@ -1,0 +1,85 @@
+{
+  "status": "QUALITY_PARTIAL_TIME_BUDGET",
+  "planned_outputs": 30,
+  "started_outputs": 19,
+  "completed_outputs": 19,
+  "basis_complete": 6,
+  "main_outputs_complete": 13,
+  "paired_main_states": 3,
+  "planned_main_states": 6,
+  "independent_programs": 2,
+  "complete_main_ids": [
+    "T1_support_before_fault_E",
+    "T2_support_before_fault_E",
+    "T1_support_before_fault_C"
+  ],
+  "paired_E_C_W": [
+    2,
+    1,
+    0
+  ],
+  "all_complete_EOS": 19,
+  "all_complete_cap": 0,
+  "output_token_min_max": [
+    85,
+    419
+  ],
+  "total_generated_tokens": 2994,
+  "all_job_prompt_tokens": 12950,
+  "methods_paired_only": [
+    {
+      "method": "SharedGDirect",
+      "n": 3,
+      "numeric_correct": 3,
+      "eos_and_correct": 3,
+      "unparsed": 0,
+      "prompt_tokens": 2535,
+      "generated_tokens": 350,
+      "request_seconds": 22.810132956132293,
+      "G_cpu_seconds_included": 0.00304368045181036
+    },
+    {
+      "method": "SharedGCompact",
+      "n": 3,
+      "numeric_correct": 3,
+      "eos_and_correct": 3,
+      "unparsed": 0,
+      "prompt_tokens": 2547,
+      "generated_tokens": 339,
+      "request_seconds": 22.439482737332582,
+      "G_cpu_seconds_included": 0.001380239613354206
+    },
+    {
+      "method": "SharedGStepwise",
+      "n": 3,
+      "numeric_correct": 3,
+      "eos_and_correct": 3,
+      "unparsed": 0,
+      "prompt_tokens": 2667,
+      "generated_tokens": 906,
+      "request_seconds": 58.395253234542906,
+      "G_cpu_seconds_included": 0.001268136315047741
+    },
+    {
+      "method": "VersionFrame",
+      "n": 3,
+      "numeric_correct": 1,
+      "eos_and_correct": 1,
+      "unparsed": 2,
+      "prompt_tokens": 3686,
+      "generated_tokens": 623,
+      "request_seconds": 40.675203409045935,
+      "G_cpu_seconds_included": 0.0011614738032221794
+    }
+  ],
+  "load_and_hash_seconds": 62.29507418349385,
+  "launcher_seconds": 263.00707268714905,
+  "conservative_GPU_minutes": 4.383451211452484,
+  "exit_code": 0,
+  "forward_ledger": {
+    "forward_calls": 2994,
+    "input_tokens": 15925,
+    "synchronized_forward_seconds": 191.93814651947469
+  },
+  "postload_peak_allocated_bytes": 8739633152
+}

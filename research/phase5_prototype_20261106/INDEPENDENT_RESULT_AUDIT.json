@@ -1,0 +1,1515 @@
+{
+  "audit_status": "PASS",
+  "execution_status": "QUALITY_PARTIAL_TIME_BUDGET",
+  "analysis_source_sha256": "ea75879060a6810e14f1987b9ce56c63e67f1e19427cbe6d2290602201d4c2b3",
+  "frozen_parser_sha256": "c2bc053b66778288f524d46f4353e825b1ee654d829027bd02b1cb3173255eed",
+  "retrieval_manifest_sha256": "86ecf5a0dea7a380f592990841380a2239ad395a302b99ed04055db6f405e725",
+  "retrieved_files_verified": 33,
+  "retrieved_files_unchanged_during_audit": true,
+  "prelaunch_local_bindings": [
+    {
+      "reference": "source/phase5_quality_runner.py",
+      "local_path": "D:\\ACL\\research\\phase5_prototype_20261106\\phase5_quality_runner.py",
+      "sha256": "0eab8a3a62381db7f56c9cf9101647703cb8e1208d9f3c38e25eec59fafcd2f9",
+      "matched": true
+    },
+    {
+      "reference": "source/prepare_cpu_input_adapter.py",
+      "local_path": "D:\\ACL\\research\\phase5_prototype_20261106\\prepare_cpu_input_adapter.py",
+      "sha256": "3556baa0920b344e87f22037c584f7d2bde77bbdede9808c4e360fc00200890f",
+      "matched": true
+    },
+    {
+      "reference": "source/launch_quality.py",
+      "local_path": "D:\\ACL\\research\\phase5_prototype_20261106\\launch_quality.py",
+      "sha256": "03921e531dd6061824bc108713c60d9af78c4b8bb04e5010bfb8da1ae0ce5104",
+      "matched": true
+    },
+    {
+      "reference": "source/p0_base_frozen.py",
+      "local_path": "D:\\ACL\\research\\direction_selection_20261105\\real_model_p0.py",
+      "sha256": "246219aee9774fae0966c7663c765daf3dba2f1df68bc054b539a4dd5d64331b",
+      "matched": true
+    },
+    {
+      "reference": "source/frozen_answer_extractor.py",
+      "local_path": "D:\\ACL\\research\\next_design_20261105\\frozen_answer_extractor.py",
+      "sha256": "c2bc053b66778288f524d46f4353e825b1ee654d829027bd02b1cb3173255eed",
+      "matched": true
+    },
+    {
+      "reference": "data/topology_v2.json",
+      "local_path": "D:\\ACL\\research\\next_design_20261105\\P05_topology_cases_v2.json",
+      "sha256": "93f39936cb5d1dbdbc1eb647d1c0f228be11cf49f23d14b7b2163b52d01902d1",
+      "matched": true
+    },
+    {
+      "reference": "provenance/quality_protocol.json",
+      "local_path": "D:\\ACL\\research\\phase5_prototype_20261106\\QUALITY_PROTOCOL_V1.json",
+      "sha256": "4fd44203501fd2a0b4106084c75257db88ab63c09f53885c7176d81ffe3132ac",
+      "matched": true
+    },
+    {
+      "reference": "provenance/rendered_inputs_01.json",
+      "local_path": "D:\\ACL\\research\\phase5_prototype_20261106\\rendered_inputs_01.json",
+      "sha256": "03960b7aba661a36431ec41410c7dacaf26a169a4f75f5d4124009d69f26da4e",
+      "matched": true
+    }
+  ],
+  "planned_renderings_checked": 30,
+  "independent_question_oracle": "Parse/evaluate the four original visible integer definitions; no model, no adapter import, no gold-selection",
+  "planned_outputs": 30,
+  "available_complete_output_count": 19,
+  "basis_outputs": 6,
+  "unstarted_job_ids": [
+    "T2_support_before_fault_C__SharedGCompact",
+    "T2_support_before_fault_C__SharedGStepwise",
+    "T2_support_before_fault_C__VersionFrame",
+    "T1_support_before_fault_W__SharedGDirect",
+    "T1_support_before_fault_W__SharedGCompact",
+    "T1_support_before_fault_W__SharedGStepwise",
+    "T1_support_before_fault_W__VersionFrame",
+    "T2_support_before_fault_W__SharedGDirect",
+    "T2_support_before_fault_W__SharedGCompact",
+    "T2_support_before_fault_W__SharedGStepwise",
+    "T2_support_before_fault_W__VersionFrame"
+  ],
+  "incomplete_started_job_ids": [],
+  "main_outputs": 13,
+  "planned_main_states": 6,
+  "started_main_states": 4,
+  "complete_four_method_ids": [
+    "T1_support_before_fault_E",
+    "T2_support_before_fault_E",
+    "T1_support_before_fault_C"
+  ],
+  "partial_main_ids": [
+    "T2_support_before_fault_C"
+  ],
+  "unstarted_main_ids": [
+    "T1_support_before_fault_W",
+    "T2_support_before_fault_W"
+  ],
+  "independent_program_count": 2,
+  "primary_unit_caution": "Six planned related states from two independent arithmetic programs, not six IID natural questions; no significance/independence claim",
+  "primary_counts_complete_pairs": {
+    "SharedGDirect": {
+      "all": {
+        "n": 3,
+        "correct": 3,
+        "eos_correct": 3,
+        "eos": 3,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 350,
+        "prompt_tokens": 2535,
+        "request_seconds_inclusive": 22.810132956132293,
+        "G_seconds_already_in_request": 0.00304368045181036,
+        "compile_seconds_already_in_request": 0.008340761996805668
+      },
+      "E": {
+        "n": 2,
+        "correct": 2,
+        "eos_correct": 2,
+        "eos": 2,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 234,
+        "prompt_tokens": 1682,
+        "request_seconds_inclusive": 15.265177733264863,
+        "G_seconds_already_in_request": 0.0026467759162187576,
+        "compile_seconds_already_in_request": 0.00575562659651041
+      },
+      "C": {
+        "n": 1,
+        "correct": 1,
+        "eos_correct": 1,
+        "eos": 1,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 116,
+        "prompt_tokens": 853,
+        "request_seconds_inclusive": 7.544955222867429,
+        "G_seconds_already_in_request": 0.0003969045355916023,
+        "compile_seconds_already_in_request": 0.0025851354002952576
+      },
+      "W": {
+        "n": 0,
+        "correct": 0,
+        "eos_correct": 0,
+        "eos": 0,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": null,
+        "generated_tokens": 0,
+        "prompt_tokens": 0,
+        "request_seconds_inclusive": 0.0,
+        "G_seconds_already_in_request": 0.0,
+        "compile_seconds_already_in_request": 0.0
+      }
+    },
+    "SharedGCompact": {
+      "all": {
+        "n": 3,
+        "correct": 3,
+        "eos_correct": 3,
+        "eos": 3,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 339,
+        "prompt_tokens": 2547,
+        "request_seconds_inclusive": 22.439482737332582,
+        "G_seconds_already_in_request": 0.001380239613354206,
+        "compile_seconds_already_in_request": 0.0066579775884747505
+      },
+      "E": {
+        "n": 2,
+        "correct": 2,
+        "eos_correct": 2,
+        "eos": 2,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 227,
+        "prompt_tokens": 1690,
+        "request_seconds_inclusive": 14.717650038190186,
+        "G_seconds_already_in_request": 0.0008917329832911491,
+        "compile_seconds_already_in_request": 0.004298477433621883
+      },
+      "C": {
+        "n": 1,
+        "correct": 1,
+        "eos_correct": 1,
+        "eos": 1,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 112,
+        "prompt_tokens": 857,
+        "request_seconds_inclusive": 7.7218326991423965,
+        "G_seconds_already_in_request": 0.000488506630063057,
+        "compile_seconds_already_in_request": 0.002359500154852867
+      },
+      "W": {
+        "n": 0,
+        "correct": 0,
+        "eos_correct": 0,
+        "eos": 0,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": null,
+        "generated_tokens": 0,
+        "prompt_tokens": 0,
+        "request_seconds_inclusive": 0.0,
+        "G_seconds_already_in_request": 0.0,
+        "compile_seconds_already_in_request": 0.0
+      }
+    },
+    "SharedGStepwise": {
+      "all": {
+        "n": 3,
+        "correct": 3,
+        "eos_correct": 3,
+        "eos": 3,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 906,
+        "prompt_tokens": 2667,
+        "request_seconds_inclusive": 58.395253234542906,
+        "G_seconds_already_in_request": 0.001268136315047741,
+        "compile_seconds_already_in_request": 0.008484331890940666
+      },
+      "E": {
+        "n": 2,
+        "correct": 2,
+        "eos_correct": 2,
+        "eos": 2,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 634,
+        "prompt_tokens": 1770,
+        "request_seconds_inclusive": 40.90984978340566,
+        "G_seconds_already_in_request": 0.0008467407897114754,
+        "compile_seconds_already_in_request": 0.005267379805445671
+      },
+      "C": {
+        "n": 1,
+        "correct": 1,
+        "eos_correct": 1,
+        "eos": 1,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 272,
+        "prompt_tokens": 897,
+        "request_seconds_inclusive": 17.485403451137245,
+        "G_seconds_already_in_request": 0.00042139552533626556,
+        "compile_seconds_already_in_request": 0.003216952085494995
+      },
+      "W": {
+        "n": 0,
+        "correct": 0,
+        "eos_correct": 0,
+        "eos": 0,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": null,
+        "generated_tokens": 0,
+        "prompt_tokens": 0,
+        "request_seconds_inclusive": 0.0,
+        "G_seconds_already_in_request": 0.0,
+        "compile_seconds_already_in_request": 0.0
+      }
+    },
+    "VersionFrame": {
+      "all": {
+        "n": 3,
+        "correct": 1,
+        "eos_correct": 1,
+        "eos": 3,
+        "cap": 0,
+        "unparsed": 2,
+        "accuracy": 0.3333333333333333,
+        "generated_tokens": 623,
+        "prompt_tokens": 3686,
+        "request_seconds_inclusive": 40.675203409045935,
+        "G_seconds_already_in_request": 0.0011614738032221794,
+        "compile_seconds_already_in_request": 0.00932951271533966
+      },
+      "E": {
+        "n": 2,
+        "correct": 1,
+        "eos_correct": 1,
+        "eos": 2,
+        "cap": 0,
+        "unparsed": 1,
+        "accuracy": 0.5,
+        "generated_tokens": 521,
+        "prompt_tokens": 2455,
+        "request_seconds_inclusive": 33.93687678221613,
+        "G_seconds_already_in_request": 0.0007754797115921974,
+        "compile_seconds_already_in_request": 0.006063660606741905
+      },
+      "C": {
+        "n": 1,
+        "correct": 0,
+        "eos_correct": 0,
+        "eos": 1,
+        "cap": 0,
+        "unparsed": 1,
+        "accuracy": 0.0,
+        "generated_tokens": 102,
+        "prompt_tokens": 1231,
+        "request_seconds_inclusive": 6.738326626829803,
+        "G_seconds_already_in_request": 0.000385994091629982,
+        "compile_seconds_already_in_request": 0.0032658521085977554
+      },
+      "W": {
+        "n": 0,
+        "correct": 0,
+        "eos_correct": 0,
+        "eos": 0,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": null,
+        "generated_tokens": 0,
+        "prompt_tokens": 0,
+        "request_seconds_inclusive": 0.0,
+        "G_seconds_already_in_request": 0.0,
+        "compile_seconds_already_in_request": 0.0
+      }
+    }
+  },
+  "per_program_complete_pairs": {
+    "SharedGDirect": {
+      "T1": {
+        "n": 2,
+        "correct": 2,
+        "eos_correct": 2,
+        "eos": 2,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 242,
+        "prompt_tokens": 1698,
+        "request_seconds_inclusive": 15.812166201882064,
+        "G_seconds_already_in_request": 0.0026374347507953644,
+        "compile_seconds_already_in_request": 0.005709807388484478
+      },
+      "T2": {
+        "n": 1,
+        "correct": 1,
+        "eos_correct": 1,
+        "eos": 1,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 108,
+        "prompt_tokens": 837,
+        "request_seconds_inclusive": 6.997966754250228,
+        "G_seconds_already_in_request": 0.0004062457010149956,
+        "compile_seconds_already_in_request": 0.00263095460832119
+      }
+    },
+    "SharedGCompact": {
+      "T1": {
+        "n": 2,
+        "correct": 2,
+        "eos_correct": 2,
+        "eos": 2,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 233,
+        "prompt_tokens": 1706,
+        "request_seconds_inclusive": 15.552249078638852,
+        "G_seconds_already_in_request": 0.0008911127224564552,
+        "compile_seconds_already_in_request": 0.004436817951500416
+      },
+      "T2": {
+        "n": 1,
+        "correct": 1,
+        "eos_correct": 1,
+        "eos": 1,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 106,
+        "prompt_tokens": 841,
+        "request_seconds_inclusive": 6.887233658693731,
+        "G_seconds_already_in_request": 0.0004891268908977509,
+        "compile_seconds_already_in_request": 0.0022211596369743347
+      }
+    },
+    "SharedGStepwise": {
+      "T1": {
+        "n": 2,
+        "correct": 2,
+        "eos_correct": 2,
+        "eos": 2,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 599,
+        "prompt_tokens": 1786,
+        "request_seconds_inclusive": 38.60453221946955,
+        "G_seconds_already_in_request": 0.0008029201999306679,
+        "compile_seconds_already_in_request": 0.005384070798754692
+      },
+      "T2": {
+        "n": 1,
+        "correct": 1,
+        "eos_correct": 1,
+        "eos": 1,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 307,
+        "prompt_tokens": 881,
+        "request_seconds_inclusive": 19.79072101507336,
+        "G_seconds_already_in_request": 0.00046521611511707306,
+        "compile_seconds_already_in_request": 0.003100261092185974
+      }
+    },
+    "VersionFrame": {
+      "T1": {
+        "n": 2,
+        "correct": 0,
+        "eos_correct": 0,
+        "eos": 2,
+        "cap": 0,
+        "unparsed": 2,
+        "accuracy": 0.0,
+        "generated_tokens": 204,
+        "prompt_tokens": 2464,
+        "request_seconds_inclusive": 13.505240764468908,
+        "G_seconds_already_in_request": 0.0007740091532468796,
+        "compile_seconds_already_in_request": 0.006258051842451096
+      },
+      "T2": {
+        "n": 1,
+        "correct": 1,
+        "eos_correct": 1,
+        "eos": 1,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 419,
+        "prompt_tokens": 1222,
+        "request_seconds_inclusive": 27.169962644577026,
+        "G_seconds_already_in_request": 0.00038746464997529984,
+        "compile_seconds_already_in_request": 0.003071460872888565
+      }
+    }
+  },
+  "individual_available_counts_not_primary_comparison": {
+    "SharedGDirect": {
+      "n": 4,
+      "correct": 4,
+      "eos_correct": 4,
+      "eos": 4,
+      "cap": 0,
+      "unparsed": 0,
+      "accuracy": 1.0,
+      "generated_tokens": 444,
+      "prompt_tokens": 3380,
+      "request_seconds_inclusive": 28.901217736303806,
+      "G_seconds_already_in_request": 0.0034323250874876976,
+      "compile_seconds_already_in_request": 0.010601448826491833
+    },
+    "SharedGCompact": {
+      "n": 3,
+      "correct": 3,
+      "eos_correct": 3,
+      "eos": 3,
+      "cap": 0,
+      "unparsed": 0,
+      "accuracy": 1.0,
+      "generated_tokens": 339,
+      "prompt_tokens": 2547,
+      "request_seconds_inclusive": 22.439482737332582,
+      "G_seconds_already_in_request": 0.001380239613354206,
+      "compile_seconds_already_in_request": 0.0066579775884747505
+    },
+    "SharedGStepwise": {
+      "n": 3,
+      "correct": 3,
+      "eos_correct": 3,
+      "eos": 3,
+      "cap": 0,
+      "unparsed": 0,
+      "accuracy": 1.0,
+      "generated_tokens": 906,
+      "prompt_tokens": 2667,
+      "request_seconds_inclusive": 58.395253234542906,
+      "G_seconds_already_in_request": 0.001268136315047741,
+      "compile_seconds_already_in_request": 0.008484331890940666
+    },
+    "VersionFrame": {
+      "n": 3,
+      "correct": 1,
+      "eos_correct": 1,
+      "eos": 3,
+      "cap": 0,
+      "unparsed": 2,
+      "accuracy": 0.3333333333333333,
+      "generated_tokens": 623,
+      "prompt_tokens": 3686,
+      "request_seconds_inclusive": 40.675203409045935,
+      "G_seconds_already_in_request": 0.0011614738032221794,
+      "compile_seconds_already_in_request": 0.00932951271533966
+    }
+  },
+  "partial_state_outputs": [
+    {
+      "job_id": "T2_support_before_fault_C__SharedGDirect",
+      "kind": "main",
+      "case_id": "T2_support_before_fault_C",
+      "basis_id": null,
+      "method": "SharedGDirect",
+      "program_id": "T2",
+      "group": "C",
+      "target_from_visible_question": 63,
+      "visible_integer_values": {
+        "r": 18,
+        "x": 9,
+        "y": 81,
+        "z": 63
+      },
+      "complete_recorded": true,
+      "text": "根据题目规则和已核验的根值：\n\n- $ r = 13 + 5 = 18 $（已验证）\n- $ x = 54 // 6 = 9 $（已验证）\n- $ y = x \\times x = 9 \\times 9 = 81 $\n- $ z = y - r = 81 - 18 = 63 $\n\n最终答案：63",
+      "text_sha256_utf8": "f2844d26144c9f8f2f8e98d878e51947971170c3f9d461aefdd068a966108d36",
+      "extraction": {
+        "value": 63,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：63"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 94,
+      "prompt_tokens": 845,
+      "G_cpu_seconds": 0.00038864463567733765,
+      "compile_seconds": 0.002260686829686165,
+      "request_seconds_inclusive": 6.091084780171514,
+      "posthoc_grader_seconds": 3.666989505290985e-05,
+      "actual_forward_cost": {
+        "forward_calls": 94,
+        "input_tokens": 938,
+        "synchronized_forward_seconds": 5.995835115201771
+      }
+    }
+  ],
+  "basis_counts_separate": {
+    "P_only": {
+      "n": 2,
+      "correct": 2,
+      "eos_correct": 2,
+      "eos": 2,
+      "cap": 0,
+      "unparsed": 0,
+      "accuracy": 1.0,
+      "generated_tokens": 270,
+      "prompt_tokens": 180,
+      "request_seconds_inclusive": 17.931568830274045,
+      "G_seconds_already_in_request": 0.0,
+      "compile_seconds_already_in_request": 0.0017261141911149025
+    },
+    "P_plus_R": {
+      "n": 4,
+      "correct": 4,
+      "eos_correct": 4,
+      "eos": 4,
+      "cap": 0,
+      "unparsed": 0,
+      "accuracy": 1.0,
+      "generated_tokens": 412,
+      "prompt_tokens": 490,
+      "request_seconds_inclusive": 26.581802358850837,
+      "G_seconds_already_in_request": 0.0,
+      "compile_seconds_already_in_request": 0.0038916030898690224
+    }
+  },
+  "paired_changes": {
+    "SharedGDirect__to__SharedGCompact": {
+      "n_related_states": 3,
+      "independent_programs_at_most": 2,
+      "repair_ids": [],
+      "harm_ids": []
+    },
+    "SharedGDirect__to__SharedGStepwise": {
+      "n_related_states": 3,
+      "independent_programs_at_most": 2,
+      "repair_ids": [],
+      "harm_ids": []
+    },
+    "SharedGDirect__to__VersionFrame": {
+      "n_related_states": 3,
+      "independent_programs_at_most": 2,
+      "repair_ids": [],
+      "harm_ids": [
+        "T1_support_before_fault_E",
+        "T1_support_before_fault_C"
+      ]
+    },
+    "SharedGCompact__to__SharedGStepwise": {
+      "n_related_states": 3,
+      "independent_programs_at_most": 2,
+      "repair_ids": [],
+      "harm_ids": []
+    },
+    "SharedGCompact__to__VersionFrame": {
+      "n_related_states": 3,
+      "independent_programs_at_most": 2,
+      "repair_ids": [],
+      "harm_ids": [
+        "T1_support_before_fault_E",
+        "T1_support_before_fault_C"
+      ]
+    },
+    "SharedGStepwise__to__VersionFrame": {
+      "n_related_states": 3,
+      "independent_programs_at_most": 2,
+      "repair_ids": [],
+      "harm_ids": [
+        "T1_support_before_fault_E",
+        "T1_support_before_fault_C"
+      ]
+    }
+  },
+  "all_actual_raw_outputs": [
+    {
+      "job_id": "P_01",
+      "kind": "basis",
+      "case_id": null,
+      "basis_id": "P_01",
+      "method": null,
+      "program_id": "T1",
+      "group": "E",
+      "target_from_visible_question": 80,
+      "visible_integer_values": {
+        "r": 24,
+        "x": 18,
+        "y": 56,
+        "z": 80
+      },
+      "complete_recorded": true,
+      "text": "我们按照题目给出的步骤依次计算：\n\n1. 计算 $ r = 6 \\times 4 = 24 $  \n2. 计算 $ x = 27 - 9 = 18 $  \n3. 计算 $ y = 3 \\times x + 2 = 3 \\times 18 + 2 = 54 + 2 = 56 $  \n4. 计算 $ z = y + r = 56 + 24 = 80 $\n\n最终答案：80",
+      "text_sha256_utf8": "472414e786d9594f4078b5d196ec77b4998db176cbcfde2db963b2fbc38d8ec1",
+      "extraction": {
+        "value": 80,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：80"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 119,
+      "prompt_tokens": 91,
+      "G_cpu_seconds": 0.0,
+      "compile_seconds": 0.001072075217962265,
+      "request_seconds_inclusive": 8.349754524417222,
+      "posthoc_grader_seconds": 0.002259860746562481,
+      "actual_forward_cost": {
+        "forward_calls": 119,
+        "input_tokens": 209,
+        "synchronized_forward_seconds": 8.213032830506563
+      }
+    },
+    {
+      "job_id": "P_02",
+      "kind": "basis",
+      "case_id": null,
+      "basis_id": "P_02",
+      "method": null,
+      "program_id": "T2",
+      "group": "E",
+      "target_from_visible_question": 63,
+      "visible_integer_values": {
+        "r": 18,
+        "x": 9,
+        "y": 81,
+        "z": 63
+      },
+      "complete_recorded": true,
+      "text": "我们按照题目给出的步骤逐步计算：\n\n1. 计算 $ r = 13 + 5 $：  \n   $$\n   r = 18\n   $$\n\n2. 计算 $ x = 54 \\div 6 $（整数除法）：  \n   $$\n   x = 9\n   $$\n\n3. 计算 $ y = x \\times x $：  \n   $$\n   y = 9 \\times 9 = 81\n   $$\n\n4. 计算 $ z = y - r $：  \n   $$\n   z = 81 - 18 = 63\n   $$\n\n最终答案：63",
+      "text_sha256_utf8": "74dfcd56454dcf9f565b4d7323852654f6582d6e0ef19f9ad7e58569b332690e",
+      "extraction": {
+        "value": 63,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：63"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 151,
+      "prompt_tokens": 89,
+      "G_cpu_seconds": 0.0,
+      "compile_seconds": 0.0006540389731526375,
+      "request_seconds_inclusive": 9.581814305856824,
+      "posthoc_grader_seconds": 4.3789856135845184e-05,
+      "actual_forward_cost": {
+        "forward_calls": 151,
+        "input_tokens": 239,
+        "synchronized_forward_seconds": 9.447202916257083
+      }
+    },
+    {
+      "job_id": "PR_01",
+      "kind": "basis",
+      "case_id": null,
+      "basis_id": "PR_01",
+      "method": null,
+      "program_id": "T1",
+      "group": "E",
+      "target_from_visible_question": 80,
+      "visible_integer_values": {
+        "r": 24,
+        "x": 18,
+        "y": 56,
+        "z": 80
+      },
+      "complete_recorded": true,
+      "text": "根据题目原始数学定义进行计算：\n\n1. 计算 $ r = 6 \\times 4 = 24 $  \n2. 计算 $ x = 27 - 9 = 18 $  \n3. 计算 $ y = 3 \\times x + 2 = 3 \\times 18 + 2 = 54 + 2 = 56 $  \n4. 计算 $ z = y + r = 56 + 24 = 80 $\n\n最终答案：80",
+      "text_sha256_utf8": "51816d16867b86d47b383ee94e9824c2594c9dee6d881231a663d0debe7d143a",
+      "extraction": {
+        "value": 80,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：80"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 118,
+      "prompt_tokens": 124,
+      "G_cpu_seconds": 0.0,
+      "compile_seconds": 0.0007448503747582436,
+      "request_seconds_inclusive": 7.501601077616215,
+      "posthoc_grader_seconds": 5.0010159611701965e-05,
+      "actual_forward_cost": {
+        "forward_calls": 118,
+        "input_tokens": 241,
+        "synchronized_forward_seconds": 7.381589496508241
+      }
+    },
+    {
+      "job_id": "PR_02",
+      "kind": "basis",
+      "case_id": null,
+      "basis_id": "PR_02",
+      "method": null,
+      "program_id": "T2",
+      "group": "E",
+      "target_from_visible_question": 63,
+      "visible_integer_values": {
+        "r": 18,
+        "x": 9,
+        "y": 81,
+        "z": 63
+      },
+      "complete_recorded": true,
+      "text": "根据题目原始数学定义进行计算：\n\n1. $ r = 13 + 5 = 18 $\n2. $ x = 54 \\div 6 = 9 $\n3. $ y = x^2 = 9^2 = 81 $\n4. $ z = y - r = 81 - 18 = 63 $\n\n最终答案：63",
+      "text_sha256_utf8": "ef7d3950c4bce43e5f85f633b26ca6ddb92fa77f4cf4a7ae424c149847640615",
+      "extraction": {
+        "value": 63,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：63"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 85,
+      "prompt_tokens": 121,
+      "G_cpu_seconds": 0.0,
+      "compile_seconds": 0.0012873969972133636,
+      "request_seconds_inclusive": 5.421872605569661,
+      "posthoc_grader_seconds": 5.06499782204628e-05,
+      "actual_forward_cost": {
+        "forward_calls": 85,
+        "input_tokens": 205,
+        "synchronized_forward_seconds": 5.3412082847207785
+      }
+    },
+    {
+      "job_id": "PR_03",
+      "kind": "basis",
+      "case_id": null,
+      "basis_id": "PR_03",
+      "method": null,
+      "program_id": "T1",
+      "group": "W",
+      "target_from_visible_question": 80,
+      "visible_integer_values": {
+        "r": 24,
+        "x": 18,
+        "y": 56,
+        "z": 80
+      },
+      "complete_recorded": true,
+      "text": "根据题目原始数学定义进行计算：\n\n1. 计算 $ r = 6 \\times 4 = 24 $  \n2. 计算 $ x = 27 - 9 = 18 $  \n3. 计算 $ y = 3 \\times x + 2 = 3 \\times 18 + 2 = 54 + 2 = 56 $  \n4. 计算 $ z = y + r = 56 + 24 = 80 $\n\n最终答案：80",
+      "text_sha256_utf8": "51816d16867b86d47b383ee94e9824c2594c9dee6d881231a663d0debe7d143a",
+      "extraction": {
+        "value": 80,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：80"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 118,
+      "prompt_tokens": 124,
+      "G_cpu_seconds": 0.0,
+      "compile_seconds": 0.0011034654453396797,
+      "request_seconds_inclusive": 7.887857678346336,
+      "posthoc_grader_seconds": 4.095025360584259e-05,
+      "actual_forward_cost": {
+        "forward_calls": 118,
+        "input_tokens": 241,
+        "synchronized_forward_seconds": 7.778368189930916
+      }
+    },
+    {
+      "job_id": "PR_04",
+      "kind": "basis",
+      "case_id": null,
+      "basis_id": "PR_04",
+      "method": null,
+      "program_id": "T2",
+      "group": "W",
+      "target_from_visible_question": 63,
+      "visible_integer_values": {
+        "r": 18,
+        "x": 9,
+        "y": 81,
+        "z": 63
+      },
+      "complete_recorded": true,
+      "text": "根据题目原始数学定义进行计算：\n\n1. $ r = 13 + 5 = 18 $\n2. $ x = 54 \\div 6 = 9 $（整数除法）\n3. $ y = x^2 = 9^2 = 81 $\n4. $ z = y - r = 81 - 18 = 63 $\n\n最终答案：63",
+      "text_sha256_utf8": "2ddabf56f682941215248fbb0ac69d60b05bd437ad5911be8dc938bb8b2fc448",
+      "extraction": {
+        "value": 63,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：63"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 91,
+      "prompt_tokens": 121,
+      "G_cpu_seconds": 0.0,
+      "compile_seconds": 0.0007558902725577354,
+      "request_seconds_inclusive": 5.7704709973186255,
+      "posthoc_grader_seconds": 6.386078894138336e-05,
+      "actual_forward_cost": {
+        "forward_calls": 91,
+        "input_tokens": 211,
+        "synchronized_forward_seconds": 5.686236766166985
+      }
+    },
+    {
+      "job_id": "T1_support_before_fault_E__SharedGDirect",
+      "kind": "main",
+      "case_id": "T1_support_before_fault_E",
+      "basis_id": null,
+      "method": "SharedGDirect",
+      "program_id": "T1",
+      "group": "E",
+      "target_from_visible_question": 80,
+      "visible_integer_values": {
+        "r": 24,
+        "x": 18,
+        "y": 56,
+        "z": 80
+      },
+      "complete_recorded": true,
+      "text": "根据题目规则和已核验的根值，依次计算：\n\n1. $ r = 6 \\times 4 = 24 $（已核验）  \n2. $ x = 27 - 9 = 18 $（复核记录确认为正确值）  \n3. $ y = 3 \\times x + 2 = 3 \\times 18 + 2 = 54 + 2 = 56 $  \n4. $ z = y + r = 56 + 24 = 80 $\n\n最终答案：80",
+      "text_sha256_utf8": "7a1e27cc441766e3948ad6d279a5616940cb2505d3b38a7a9ae0fcae84d374dd",
+      "extraction": {
+        "value": 80,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：80"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 126,
+      "prompt_tokens": 845,
+      "G_cpu_seconds": 0.002240530215203762,
+      "compile_seconds": 0.0031246719881892204,
+      "request_seconds_inclusive": 8.267210979014635,
+      "posthoc_grader_seconds": 4.13600355386734e-05,
+      "actual_forward_cost": {
+        "forward_calls": 126,
+        "input_tokens": 970,
+        "synchronized_forward_seconds": 8.138006951659918
+      }
+    },
+    {
+      "job_id": "T1_support_before_fault_E__SharedGCompact",
+      "kind": "main",
+      "case_id": "T1_support_before_fault_E",
+      "basis_id": null,
+      "method": "SharedGCompact",
+      "program_id": "T1",
+      "group": "E",
+      "target_from_visible_question": 80,
+      "visible_integer_values": {
+        "r": 24,
+        "x": 18,
+        "y": 56,
+        "z": 80
+      },
+      "complete_recorded": true,
+      "text": "根据题目规则和已认证的根值，依次计算：\n\n1. **r = 6 * 4 = 24**（已认证）\n2. **x = 27 - 9 = 18**（复核记录确认为正确值，已认证）\n3. **y = 3 * x + 2 = 3 * 18 + 2 = 54 + 2 = 56**\n4. **z = y + r = 56 + 24 = 80**\n\n最终答案：80",
+      "text_sha256_utf8": "4c115bcf2cd58e8af8c62216cfdcabca03938921655d32e7f66ce04bbe079798",
+      "extraction": {
+        "value": 80,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：80"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 121,
+      "prompt_tokens": 849,
+      "G_cpu_seconds": 0.0004026060923933983,
+      "compile_seconds": 0.0020773177966475487,
+      "request_seconds_inclusive": 7.830416379496455,
+      "posthoc_grader_seconds": 4.266016185283661e-05,
+      "actual_forward_cost": {
+        "forward_calls": 121,
+        "input_tokens": 969,
+        "synchronized_forward_seconds": 7.709539289586246
+      }
+    },
+    {
+      "job_id": "T1_support_before_fault_E__SharedGStepwise",
+      "kind": "main",
+      "case_id": "T1_support_before_fault_E",
+      "basis_id": null,
+      "method": "SharedGStepwise",
+      "program_id": "T1",
+      "group": "E",
+      "target_from_visible_question": 80,
+      "visible_integer_values": {
+        "r": 24,
+        "x": 18,
+        "y": 56,
+        "z": 80
+      },
+      "complete_recorded": true,
+      "text": "根据题目要求，我们需要计算变量 `z` 的值。首先，我们明确目标变量 `z` 的定义和依赖关系：\n\n- `z = y + r`\n- `y = 3*x + 2`\n- `r = 6*4`\n- `x = 27 - 9`\n\n根据已知证据和复核记录，我们已经确认以下变量的值：\n\n- `r = 24`（已验证根值）\n- `x = 18`（复核记录中修正为 18，已验证根值）\n- `y = 3*x + 2`（依赖 `x`，但尚未验证）\n- `z = y + r`（依赖 `y` 和 `r`，但尚未验证）\n\n### 第一步：计算 `y`\n根据定义 `y = 3*x + 2`，我们已知 `x = 18`，因此：\n\n$$\ny = 3*18 + 2 = 54 + 2 = 56\n$$\n\n由于 `x` 已经被验证为 18，因此 `y` 的计算是有效的，可以复用已验证的 `x` 值。\n\n### 第二步：计算 `z`\n根据定义 `z = y + r`，我们已知 `y = 56` 和 `r = 24`，因此：\n\n$$\nz = 56 + 24 = 80\n$$\n\n### 最终答案：\n80",
+      "text_sha256_utf8": "5de57c7b2b9c5a53864a0e5721efc361c10c4d93d9b84eed1fc89677188146d8",
+      "extraction": {
+        "value": 80,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：\n80"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 327,
+      "prompt_tokens": 889,
+      "G_cpu_seconds": 0.0003815246745944023,
+      "compile_seconds": 0.002167118713259697,
+      "request_seconds_inclusive": 21.119128768332303,
+      "posthoc_grader_seconds": 5.4370611906051636e-05,
+      "actual_forward_cost": {
+        "forward_calls": 327,
+        "input_tokens": 1215,
+        "synchronized_forward_seconds": 20.801912430673838
+      }
+    },
+    {
+      "job_id": "T1_support_before_fault_E__VersionFrame",
+      "kind": "main",
+      "case_id": "T1_support_before_fault_E",
+      "basis_id": null,
+      "method": "VersionFrame",
+      "program_id": "T1",
+      "group": "E",
+      "target_from_visible_question": 80,
+      "visible_integer_values": {
+        "r": 24,
+        "x": 18,
+        "y": 56,
+        "z": 80
+      },
+      "complete_recorded": true,
+      "text": "{\n  \"candidate_derivations\": [\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*18+2\",\n      \"value\": 56,\n      \"status\": \"CANDIDATE\"\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"56+24\",\n      \"value\": 80,\n      \"status\": \"CANDIDATE\"\n    }\n  ],\n  \"final_answer\": 80\n}",
+      "text_sha256_utf8": "c1ffd8c259a5402dec8e12575c720330376dc4745a1f9ba0ce26438033725528",
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      },
+      "correct": false,
+      "eos_correct": false,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 102,
+      "prompt_tokens": 1233,
+      "G_cpu_seconds": 0.0003880150616168976,
+      "compile_seconds": 0.00299219973385334,
+      "request_seconds_inclusive": 6.766914137639105,
+      "posthoc_grader_seconds": 0.0004391055554151535,
+      "actual_forward_cost": {
+        "forward_calls": 102,
+        "input_tokens": 1334,
+        "synchronized_forward_seconds": 6.657244557514787
+      }
+    },
+    {
+      "job_id": "T2_support_before_fault_E__SharedGDirect",
+      "kind": "main",
+      "case_id": "T2_support_before_fault_E",
+      "basis_id": null,
+      "method": "SharedGDirect",
+      "program_id": "T2",
+      "group": "E",
+      "target_from_visible_question": 63,
+      "visible_integer_values": {
+        "r": 18,
+        "x": 9,
+        "y": 81,
+        "z": 63
+      },
+      "complete_recorded": true,
+      "text": "根据题目规则和已核验的根值，依次计算：\n\n1. **r = 13 + 5 = 18**（已核验）  \n2. **x = 54 // 6 = 9**（复核记录确认为正确值）  \n3. **y = x * x = 9 * 9 = 81**  \n4. **z = y - r = 81 - 18 = 63**\n\n最终答案：63",
+      "text_sha256_utf8": "44cb205795e6d1c443c925b43fbd678adb2a79a8b071ae69cff1643d6efdb930",
+      "extraction": {
+        "value": 63,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：63"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 108,
+      "prompt_tokens": 837,
+      "G_cpu_seconds": 0.0004062457010149956,
+      "compile_seconds": 0.00263095460832119,
+      "request_seconds_inclusive": 6.997966754250228,
+      "posthoc_grader_seconds": 8.780043572187424e-05,
+      "actual_forward_cost": {
+        "forward_calls": 108,
+        "input_tokens": 944,
+        "synchronized_forward_seconds": 6.888502722606063
+      }
+    },
+    {
+      "job_id": "T2_support_before_fault_E__SharedGCompact",
+      "kind": "main",
+      "case_id": "T2_support_before_fault_E",
+      "basis_id": null,
+      "method": "SharedGCompact",
+      "program_id": "T2",
+      "group": "E",
+      "target_from_visible_question": 63,
+      "visible_integer_values": {
+        "r": 18,
+        "x": 9,
+        "y": 81,
+        "z": 63
+      },
+      "complete_recorded": true,
+      "text": "根据题目规则和已认证的根值进行计算：\n\n1. **r** 的值为 18（已认证）。\n2. **x** 的值为 9（根据复核记录，已认证）。\n3. **y** 的值为 $ x \\times x = 9 \\times 9 = 81 $。\n4. **z** 的值为 $ y - r = 81 - 18 = 63 $。\n\n最终答案：63",
+      "text_sha256_utf8": "c89c2cde32f540c70b7764045300ced858ca1c771025e48864bfcfeb57f1bcee",
+      "extraction": {
+        "value": 63,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：63"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 106,
+      "prompt_tokens": 841,
+      "G_cpu_seconds": 0.0004891268908977509,
+      "compile_seconds": 0.0022211596369743347,
+      "request_seconds_inclusive": 6.887233658693731,
+      "posthoc_grader_seconds": 6.477069109678268e-05,
+      "actual_forward_cost": {
+        "forward_calls": 106,
+        "input_tokens": 946,
+        "synchronized_forward_seconds": 6.779022733680904
+      }
+    },
+    {
+      "job_id": "T2_support_before_fault_E__SharedGStepwise",
+      "kind": "main",
+      "case_id": "T2_support_before_fault_E",
+      "basis_id": null,
+      "method": "SharedGStepwise",
+      "program_id": "T2",
+      "group": "E",
+      "target_from_visible_question": 63,
+      "visible_integer_values": {
+        "r": 18,
+        "x": 9,
+        "y": 81,
+        "z": 63
+      },
+      "complete_recorded": true,
+      "text": "根据题目要求，我们需要计算变量 `z` 的值。首先，我们明确变量之间的依赖关系和已知的认证值。\n\n### 步骤 1：确定目标变量 `z` 的依赖\n根据题目定义，`z = y - r`，因此我们需要先计算 `y` 和 `r` 的值。\n\n- `r` 的值已经认证为 18（来自 `13 + 5`）。\n- `y` 的值依赖于 `x`，即 `y = x * x`，因此我们需要先计算 `x` 的值。\n\n### 步骤 2：确定 `x` 的值\n根据题目定义，`x = 54 // 6`。根据复核记录，`x` 的值应为 9，且该值已通过外部核验。因此，`x` 的值为 9。\n\n### 步骤 3：计算 `y` 的值\n根据 `y = x * x`，代入 `x = 9`，得到：\n$$\ny = 9 * 9 = 81\n$$\n\n### 步骤 4：计算 `z` 的值\n根据 `z = y - r`，代入 `y = 81` 和 `r = 18`，得到：\n$$\nz = 81 - 18 = 63\n$$\n\n### 最终答案：\n63",
+      "text_sha256_utf8": "e2ec9629362a8627a8b9c3df483585f09287cdb67f1a639653b8bbf7b890bae6",
+      "extraction": {
+        "value": 63,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：\n63"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 307,
+      "prompt_tokens": 881,
+      "G_cpu_seconds": 0.00046521611511707306,
+      "compile_seconds": 0.003100261092185974,
+      "request_seconds_inclusive": 19.79072101507336,
+      "posthoc_grader_seconds": 5.383044481277466e-05,
+      "actual_forward_cost": {
+        "forward_calls": 307,
+        "input_tokens": 1187,
+        "synchronized_forward_seconds": 19.493743885308504
+      }
+    },
+    {
+      "job_id": "T2_support_before_fault_E__VersionFrame",
+      "kind": "main",
+      "case_id": "T2_support_before_fault_E",
+      "basis_id": null,
+      "method": "VersionFrame",
+      "program_id": "T2",
+      "group": "E",
+      "target_from_visible_question": 63,
+      "visible_integer_values": {
+        "r": 18,
+        "x": 9,
+        "y": 81,
+        "z": 63
+      },
+      "complete_recorded": true,
+      "text": "{\n  \"current_roots\": {\n    \"r\": {\n      \"value\": 18,\n      \"version\": 0,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"13+5\",\n      \"old_literal\": 18,\n      \"old_literal_satisfies_definition\": true\n    },\n    \"x\": {\n      \"value\": 9,\n      \"version\": 1,\n      \"status\": \"VERIFIED_ROOT\",\n      \"expression\": \"54//6\",\n      \"old_literal\": 8,\n      \"old_literal_satisfies_definition\": false\n    }\n  },\n  \"dirty_descendants\": [\n    \"y\",\n    \"z\"\n  ],\n  \"goal_support_uncertified\": [\n    \"y\",\n    \"z\"\n  ],\n  \"ready_now\": [\n    \"y\"\n  ],\n  \"symbolic_ready_plan\": [\n    {\n      \"layer\": 0,\n      \"nodes\": [\n        {\n          \"variable\": \"y\",\n          \"rule\": \"x*x\",\n          \"parents\": [\n            \"x\"\n          ]\n        }\n      ]\n    },\n    {\n      \"layer\": 1,\n      \"nodes\": [\n        {\n          \"variable\": \"z\",\n          \"rule\": \"y-r\",\n          \"parents\": [\n            \"r\",\n            \"y\"\n          ]\n        }\n      ]\n    }\n  ],\n  \"old_derived_certification\": \"UNVERIFIED\"\n}\n{\n  \"candidate_derivations\": [\n    {\n      \"variable\": \"y\",\n      \"expression\": \"x*x\",\n      \"parents\": [\n        \"x\"\n      ],\n      \"value\": 81,\n      \"status\": \"CANDIDATE\"\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"y-r\",\n      \"parents\": [\n        \"r\",\n        \"y\"\n      ],\n      \"value\": 63,\n      \"status\": \"CANDIDATE\"\n    }\n  ]\n}\n最终答案：63",
+      "text_sha256_utf8": "0dec9e0d5a0af2e8cab7628e68e0193b840817f7b969dce9542119c2b264ce40",
+      "extraction": {
+        "value": 63,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：63"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 419,
+      "prompt_tokens": 1222,
+      "G_cpu_seconds": 0.00038746464997529984,
+      "compile_seconds": 0.003071460872888565,
+      "request_seconds_inclusive": 27.169962644577026,
+      "posthoc_grader_seconds": 0.0001074913889169693,
+      "actual_forward_cost": {
+        "forward_calls": 419,
+        "input_tokens": 1640,
+        "synchronized_forward_seconds": 26.752672651782632
+      }
+    },
+    {
+      "job_id": "T1_support_before_fault_C__SharedGDirect",
+      "kind": "main",
+      "case_id": "T1_support_before_fault_C",
+      "basis_id": null,
+      "method": "SharedGDirect",
+      "program_id": "T1",
+      "group": "C",
+      "target_from_visible_question": 80,
+      "visible_integer_values": {
+        "r": 24,
+        "x": 18,
+        "y": 56,
+        "z": 80
+      },
+      "complete_recorded": true,
+      "text": "根据题目原始定义和已核验的根值，依次计算：\n\n- $ r = 6 \\times 4 = 24 $（已核验）\n- $ x = 27 - 9 = 18 $（已核验）\n- $ y = 3 \\times x + 2 = 3 \\times 18 + 2 = 54 + 2 = 56 $\n- $ z = y + r = 56 + 24 = 80 $\n\n最终答案：80",
+      "text_sha256_utf8": "32499b29f7bf34eb0ab2e7504150199bce1ddd22071c68ce806d9e426be80a6e",
+      "extraction": {
+        "value": 80,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：80"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 116,
+      "prompt_tokens": 853,
+      "G_cpu_seconds": 0.0003969045355916023,
+      "compile_seconds": 0.0025851354002952576,
+      "request_seconds_inclusive": 7.544955222867429,
+      "posthoc_grader_seconds": 8.769053965806961e-05,
+      "actual_forward_cost": {
+        "forward_calls": 116,
+        "input_tokens": 968,
+        "synchronized_forward_seconds": 7.427571997977793
+      }
+    },
+    {
+      "job_id": "T1_support_before_fault_C__SharedGCompact",
+      "kind": "main",
+      "case_id": "T1_support_before_fault_C",
+      "basis_id": null,
+      "method": "SharedGCompact",
+      "program_id": "T1",
+      "group": "C",
+      "target_from_visible_question": 80,
+      "visible_integer_values": {
+        "r": 24,
+        "x": 18,
+        "y": 56,
+        "z": 80
+      },
+      "complete_recorded": true,
+      "text": "根据题目规则和已认证的根值，依次计算：\n\n- $ r = 6 \\times 4 = 24 $（已认证）\n- $ x = 27 - 9 = 18 $（已认证）\n- $ y = 3 \\times x + 2 = 3 \\times 18 + 2 = 54 + 2 = 56 $\n- $ z = y + r = 56 + 24 = 80 $\n\n最终答案：80",
+      "text_sha256_utf8": "c223910e5af99a9a0c4d8a52412b8d76341da5b6917fc96fc3d113520e582457",
+      "extraction": {
+        "value": 80,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：80"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 112,
+      "prompt_tokens": 857,
+      "G_cpu_seconds": 0.000488506630063057,
+      "compile_seconds": 0.002359500154852867,
+      "request_seconds_inclusive": 7.7218326991423965,
+      "posthoc_grader_seconds": 5.842093378305435e-05,
+      "actual_forward_cost": {
+        "forward_calls": 112,
+        "input_tokens": 968,
+        "synchronized_forward_seconds": 7.599479704163969
+      }
+    },
+    {
+      "job_id": "T1_support_before_fault_C__SharedGStepwise",
+      "kind": "main",
+      "case_id": "T1_support_before_fault_C",
+      "basis_id": null,
+      "method": "SharedGStepwise",
+      "program_id": "T1",
+      "group": "C",
+      "target_from_visible_question": 80,
+      "visible_integer_values": {
+        "r": 24,
+        "x": 18,
+        "y": 56,
+        "z": 80
+      },
+      "complete_recorded": true,
+      "text": "根据题目要求，我们需要计算变量 `z` 的值。首先，我们明确目标变量 `z` 的定义和依赖关系：\n\n- `z = y + r`\n- `y = 3*x + 2`\n- `x = 27 - 9`\n- `r = 6 * 4`\n\n根据已知证据和规则，我们已经验证了 `r` 和 `x` 的值：\n\n- `r = 24`（已验证）\n- `x = 18`（已验证）\n\n接下来，我们需要计算 `y` 的值，因为 `y` 是 `z` 的依赖项之一。根据定义：\n\n- `y = 3*x + 2`\n\n将已验证的 `x = 18` 代入：\n\n- `y = 3*18 + 2 = 54 + 2 = 56`\n\n现在，我们已经计算出 `y = 56`，虽然它未被认证，但它是基于已验证的 `x` 计算得出的，因此可以视为有效中间值。\n\n接下来，计算 `z` 的值：\n\n- `z = y + r = 56 + 24 = 80`\n\n因此，最终答案是：\n\n最终答案：80",
+      "text_sha256_utf8": "80bbf6ff8d0c313609b62e662fb0d059b6db4ea260bff9dde5781b3b506a50b6",
+      "extraction": {
+        "value": 80,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：80"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 272,
+      "prompt_tokens": 897,
+      "G_cpu_seconds": 0.00042139552533626556,
+      "compile_seconds": 0.003216952085494995,
+      "request_seconds_inclusive": 17.485403451137245,
+      "posthoc_grader_seconds": 6.294902414083481e-05,
+      "actual_forward_cost": {
+        "forward_calls": 272,
+        "input_tokens": 1168,
+        "synchronized_forward_seconds": 17.218393557704985
+      }
+    },
+    {
+      "job_id": "T1_support_before_fault_C__VersionFrame",
+      "kind": "main",
+      "case_id": "T1_support_before_fault_C",
+      "basis_id": null,
+      "method": "VersionFrame",
+      "program_id": "T1",
+      "group": "C",
+      "target_from_visible_question": 80,
+      "visible_integer_values": {
+        "r": 24,
+        "x": 18,
+        "y": 56,
+        "z": 80
+      },
+      "complete_recorded": true,
+      "text": "{\n  \"candidate_derivations\": [\n    {\n      \"variable\": \"y\",\n      \"expression\": \"3*18+2\",\n      \"value\": 56,\n      \"status\": \"CANDIDATE\"\n    },\n    {\n      \"variable\": \"z\",\n      \"expression\": \"56+24\",\n      \"value\": 80,\n      \"status\": \"CANDIDATE\"\n    }\n  ],\n  \"final_answer\": 80\n}",
+      "text_sha256_utf8": "c1ffd8c259a5402dec8e12575c720330376dc4745a1f9ba0ce26438033725528",
+      "extraction": {
+        "value": null,
+        "method": "unresolved",
+        "matched_text": null
+      },
+      "correct": false,
+      "eos_correct": false,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 102,
+      "prompt_tokens": 1231,
+      "G_cpu_seconds": 0.000385994091629982,
+      "compile_seconds": 0.0032658521085977554,
+      "request_seconds_inclusive": 6.738326626829803,
+      "posthoc_grader_seconds": 7.344875484704971e-05,
+      "actual_forward_cost": {
+        "forward_calls": 102,
+        "input_tokens": 1332,
+        "synchronized_forward_seconds": 6.628582437522709
+      }
+    },
+    {
+      "job_id": "T2_support_before_fault_C__SharedGDirect",
+      "kind": "main",
+      "case_id": "T2_support_before_fault_C",
+      "basis_id": null,
+      "method": "SharedGDirect",
+      "program_id": "T2",
+      "group": "C",
+      "target_from_visible_question": 63,
+      "visible_integer_values": {
+        "r": 18,
+        "x": 9,
+        "y": 81,
+        "z": 63
+      },
+      "complete_recorded": true,
+      "text": "根据题目规则和已核验的根值：\n\n- $ r = 13 + 5 = 18 $（已验证）\n- $ x = 54 // 6 = 9 $（已验证）\n- $ y = x \\times x = 9 \\times 9 = 81 $\n- $ z = y - r = 81 - 18 = 63 $\n\n最终答案：63",
+      "text_sha256_utf8": "f2844d26144c9f8f2f8e98d878e51947971170c3f9d461aefdd068a966108d36",
+      "extraction": {
+        "value": 63,
+        "method": "explicit_final_marker_terminal_integer",
+        "matched_text": "最终答案：63"
+      },
+      "correct": true,
+      "eos_correct": true,
+      "eos": true,
+      "cap": false,
+      "stop_reason": "eos",
+      "new_tokens": 94,
+      "prompt_tokens": 845,
+      "G_cpu_seconds": 0.00038864463567733765,
+      "compile_seconds": 0.002260686829686165,
+      "request_seconds_inclusive": 6.091084780171514,
+      "posthoc_grader_seconds": 3.666989505290985e-05,
+      "actual_forward_cost": {
+        "forward_calls": 94,
+        "input_tokens": 938,
+        "synchronized_forward_seconds": 5.995835115201771
+      }
+    }
+  ],
+  "unparsed_raw_layout_observations_not_rescoring": [
+    {
+      "job_id": "T1_support_before_fault_E__VersionFrame",
+      "normal_eos": true,
+      "cap": false,
+      "visible_JSON_final_answer": 80,
+      "scope": "Raw layout observation only. Never converted into an alternative primary score."
+    },
+    {
+      "job_id": "T1_support_before_fault_C__VersionFrame",
+      "normal_eos": true,
+      "cap": false,
+      "visible_JSON_final_answer": 80,
+      "scope": "Raw layout observation only. Never converted into an alternative primary score."
+    }
+  ],
+  "cost": {
+    "study_launcher_seconds": 263.00707268714905,
+    "single_gpu_minutes": 4.383451211452484,
+    "runner_seconds": 261.08111450169235,
+    "load_hash_seconds_already_in_study": 62.29507418349385,
+    "shared_preparation_seconds_already_in_study": 0.008584045805037022,
+    "request_seconds_sum_includes_G_compile_prefill_decode": 194.9245283063501,
+    "G_seconds_component_do_not_add": 0.007242174819111824,
+    "compile_seconds_component_do_not_add": 0.040690988302230835,
+    "generated_tokens_all": 2994,
+    "prompt_tokens_all": 12950,
+    "basis_actual_cost": {
+      "n": 6,
+      "correct": 6,
+      "eos_correct": 6,
+      "eos": 6,
+      "cap": 0,
+      "unparsed": 0,
+      "accuracy": 1.0,
+      "generated_tokens": 682,
+      "prompt_tokens": 670,
+      "request_seconds_inclusive": 44.51337118912488,
+      "G_seconds_already_in_request": 0.0,
+      "compile_seconds_already_in_request": 0.005617717280983925
+    },
+    "main_available_cost_including_partial_state": {
+      "n": 13,
+      "correct": 11,
+      "eos_correct": 11,
+      "eos": 13,
+      "cap": 0,
+      "unparsed": 2,
+      "accuracy": 0.8461538461538461,
+      "generated_tokens": 2312,
+      "prompt_tokens": 12280,
+      "request_seconds_inclusive": 150.41115711722523,
+      "G_seconds_already_in_request": 0.007242174819111824,
+      "compile_seconds_already_in_request": 0.03507327102124691
+    },
+    "paired_method_cost": {
+      "SharedGDirect": {
+        "n": 3,
+        "correct": 3,
+        "eos_correct": 3,
+        "eos": 3,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 350,
+        "prompt_tokens": 2535,
+        "request_seconds_inclusive": 22.810132956132293,
+        "G_seconds_already_in_request": 0.00304368045181036,
+        "compile_seconds_already_in_request": 0.008340761996805668
+      },
+      "SharedGCompact": {
+        "n": 3,
+        "correct": 3,
+        "eos_correct": 3,
+        "eos": 3,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 339,
+        "prompt_tokens": 2547,
+        "request_seconds_inclusive": 22.439482737332582,
+        "G_seconds_already_in_request": 0.001380239613354206,
+        "compile_seconds_already_in_request": 0.0066579775884747505
+      },
+      "SharedGStepwise": {
+        "n": 3,
+        "correct": 3,
+        "eos_correct": 3,
+        "eos": 3,
+        "cap": 0,
+        "unparsed": 0,
+        "accuracy": 1.0,
+        "generated_tokens": 906,
+        "prompt_tokens": 2667,
+        "request_seconds_inclusive": 58.395253234542906,
+        "G_seconds_already_in_request": 0.001268136315047741,
+        "compile_seconds_already_in_request": 0.008484331890940666
+      },
+      "VersionFrame": {
+        "n": 3,
+        "correct": 1,
+        "eos_correct": 1,
+        "eos": 3,
+        "cap": 0,
+        "unparsed": 2,
+        "accuracy": 0.3333333333333333,
+        "generated_tokens": 623,
+        "prompt_tokens": 3686,
+        "request_seconds_inclusive": 40.675203409045935,
+        "G_seconds_already_in_request": 0.0011614738032221794,
+        "compile_seconds_already_in_request": 0.00932951271533966
+      }
+    },
+    "forward_recount": {
+      "forward_calls": 2994,
+      "input_tokens": 15925,
+      "synchronized_forward_seconds": 191.93814651947469
+    },
+    "postload_peak_allocated_bytes_recorded": 8739633152,
+    "ending_compute_processes_recorded": "",
+    "accounting": "Request elapsed already includes G + compile + prefill + decode; components are not added again. Launcher/runner/load/request/forward are nested. Basis, the incomplete main block and failures remain study cost."
+  },
+  "issues": [],
+  "no_GPU_remote_or_rescoring": true,
+  "scope": "Single-shot shared-root-G prompt/frame test only. No full runtime node verification, no KV operation, no natural graph, no W main comparison, no cross-P05 improvement claim."
+}

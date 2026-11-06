@@ -81,6 +81,14 @@ def main():
         'research/p05_design_review_20261105/prelaunch_freeze_01.json',
         'research/p05_design_review_20261105/p05_five_arm_01/E02_logits.npz',
     ]
+    phase5_samples = [
+        'research/phase5_prototype_20261106/phase5_quality_runner.py',
+        'research/phase5_prototype_20261106/prelaunch_freeze_01.json',
+        'research/phase5_prototype_20261106/RUN_STATUS_ZH.md',
+        'research/phase5_prototype_20261106/results/quality_round_01/summary.json',
+        'research/phase5_prototype_20261106/results/quality_round_01/T1_support_before_fault_E__VersionFrame.json',
+    ]
+    representative.extend(path for path in phase5_samples if path in local)
     samples = []
     for path in representative:
         blob = api(prefix + '/git/blobs/' + local[path])
@@ -107,7 +115,8 @@ def main():
         'ancestor_count': len(ancestors), 'representative_content': samples,
         'anonymous_api_status': anonymous_status, 'credential_material_saved_or_printed': False,
         'mutation_performed': False,
-        'scope': 'Whole tree/ancestry via Git IDs plus six actual returned files, including a binary logits NPZ; not every byte fetched independently'}
+        'returned_file_count': len(samples),
+        'scope': 'Whole tree/ancestry via Git IDs plus representative actual returned files, including a binary logits NPZ and available Phase5 evidence; not every byte fetched independently'}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({k: v for k, v in report.items() if k != 'representative_content'}, ensure_ascii=True))

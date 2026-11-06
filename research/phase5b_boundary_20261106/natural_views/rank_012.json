@@ -1,0 +1,778 @@
+{
+  "rank": 12,
+  "problem_id": "test/geometry/711.json",
+  "question": "Let $ABCD$ be a regular tetrahedron with side length 2. The plane parallel to edges $AB$ and $CD$ and lying halfway between them cuts $ABCD$ into two pieces. Find the surface area of one of these pieces.",
+  "trace": "<think>\nOkay, so I need to find the surface area of one of the pieces created when a plane cuts a regular tetrahedron ABCD. The plane is parallel to edges AB and CD and lies halfway between them. The tetrahedron has side length 2. Hmm, let me start by recalling some properties of a regular tetrahedron.\n\nFirst, a regular tetrahedron has four triangular faces, each of which is an equilateral triangle. All edges are equal, so each edge is length 2. The plane in question is parallel to both AB and CD. Since AB and CD are skew lines in a tetrahedron (they don't intersect and aren't parallel), the plane that is parallel to both of them must be somewhere in the middle between them. The problem says it's halfway between them, so I need to figure out where exactly that plane is located.\n\nBut how do I determine the position of this plane? Maybe I need to find coordinates for the tetrahedron first. Coordinates might help me visualize and calculate the required surface area.\n\nLet me assign coordinates to the tetrahedron. A regular tetrahedron can be embedded in 3D space with vertices at (0,0,0), (1,1,1), etc., but maybe there's a more symmetric way. Alternatively, I can use coordinates that make calculations easier.\n\nAlternatively, maybe I can use vectors. Let me think. Let me recall that in a regular tetrahedron, the coordinates can be chosen such that one vertex is at (0,0,0), another at (2,0,0), the third at (1, ��3, 0), and the fourth at (1, ��3/3, ��6/3). Wait, but I need to check if that's correct.\n\nAlternatively, maybe it's easier to use coordinates where the base is an equilateral triangle in the xy-plane, and the fourth vertex is above it. Let me try that.\n\nLet me place vertex A at (0, 0, 0), vertex B at (2, 0, 0), vertex C at (1, ��3, 0), since that forms an equilateral triangle with side length 2. Then vertex D is somewhere above the base ABC. The coordinates of D can be found by knowing that all edges are length 2.\n\nThe centroid of the base triangle ABC is at ((0 + 2 + 1)/3, (0 + 0 + ��3)/3, 0) = (1, ��3/3, 0). The height of the tetrahedron can be calculated. In a regular tetrahedron, the height from a vertex to the base is h = ��(2² - (distance from centroid to vertex)^2). Wait, the centroid of the base triangle is at a distance of (2/√3) from each vertex? Wait, no. Wait, the centroid divides the median in a 2:1 ratio. The length of the median in an equilateral triangle with side length 2 is ��3. So the centroid is at 2/3 of that distance from each vertex. Wait, the centroid is located at a distance of (2/3)*(√3) from each vertex? Wait, no, the centroid is located at 2/3 of the median length from the vertex. The median length is ��3, so the distance from centroid to vertex is (2/3)*√3. Therefore, the height h of the tetrahedron satisfies h² + (2/3 * ��3)² = 2². Let me compute that:\n\nh² + (4/9 * 3) = 4 => h² + 4/3 = 4 => h² = 4 - 4/3 = 8/3 => h = 2√6 / 3. Wait, is that correct? Wait, let me check again.\n\nWait, the centroid of the base triangle is at distance (2/3)*height of the triangle from each vertex. The height of the base triangle is h_triangle = ��(2² - 1²) = ��3. Wait, no, the height of an equilateral triangle with side length 2 is (��3/2)*2 = ��3. So the centroid is located at 2/3 of that from each vertex. Therefore, the distance from centroid to vertex is (2/3)*√3. Therefore, the height of the tetrahedron is h, such that h² + (2/3 * ��3)^2 = 2². Therefore:\n\nh² + (4/9 * 3) = 4 => h² + 4/3 = 4 => h² = 8/3 => h = 2√6 / 3. Yes, that's correct. Therefore, the coordinates of D would be (1, ��3/3, 2√6 / 3). So:\n\nA = (0, 0, 0)\nB = (2, 0, 0)\nC = (1, ��3, 0)\nD = (1, ��3/3, 2√6/3)\n\nOkay, so now I have coordinates for all four vertices. Now, the plane is parallel to edges AB and CD and lies halfway between them. Let me first figure out the direction of edges AB and CD.\n\nEdge AB is from A(0,0,0) to B(2,0,0). So direction vector is (2, 0, 0). Edge CD is from C(1, ��3, 0) to D(1, ��3/3, 2√6/3). Let me compute the direction vector of CD. The coordinates of C are (1, ��3, 0), coordinates of D are (1, ��3/3, 2√6/3). Therefore, vector CD is D - C = (1 - 1, ��3/3 - ��3, 2√6/3 - 0) = (0, -2√3/3, 2√6/3). So direction vector CD is (0, -2√3/3, 2√6/3). Alternatively, we can simplify by multiplying by 3/2: (0, -√3, ��6). But maybe we can keep it as is for now.\n\nSo the plane is parallel to both AB and CD. Therefore, the plane has direction vectors AB and CD. Wait, but AB is (2, 0, 0) and CD is (0, -2√3/3, 2√6/3). Therefore, the plane is parallel to these two vectors. Therefore, the normal vector of the plane can be found by taking the cross product of AB and CD.\n\nLet me compute that cross product. Let me denote vector AB as u = (2, 0, 0) and vector CD as v = (0, -2√3/3, 2√6/3). Then cross product u × v is determinant:\n\ni | j | k\n2 | 0 | 0\n0 |-2√3/3 | 2√6/3\n\nCalculating determinant:\n\ni*(0*2√6/3 - 0*(-2√3/3)) - j*(2*2√6/3 - 0*0) + k*(2*(-2√3/3) - 0*0)\n\nSimplify:\n\ni*(0 - 0) - j*(4√6/3 - 0) + k*(-4√3/3 - 0)\n\nSo cross product is (0, -4√6/3, -4√3/3). Therefore, the normal vector is (0, -4√6/3, -4√3/3). We can simplify this by dividing by -4/3: (0, ��6, ��3). So the normal vector is proportional to (0, ��6, ��3). Therefore, the equation of the plane can be written as 0(x - x0) + ��6(y - y0) + ��3(z - z0) = 0. But we need to find the specific plane that is halfway between AB and CD.\n\nBut how do I find the equation of the plane? Since the plane is parallel to AB and CD, and lies halfway between them. Maybe I need to find the distance between AB and CD and then find the plane that is halfway between them.\n\nAlternatively, since the plane is parallel to both AB and CD, it must be a plane that is equidistant from AB and CD. But how do I find the equation of such a plane?\n\nAlternatively, maybe parametrize the line between AB and CD? Wait, AB and CD are skew lines. The distance between them can be calculated, and then the plane halfway between them would be at half that distance from each.\n\nBut how do I find the distance between AB and CD?\n\nAlternatively, since the plane is parallel to both AB and CD, then the plane is determined by a point and the direction vectors. But since it's halfway between AB and CD, maybe we can find a point on the plane that is halfway between AB and CD.\n\nAlternatively, perhaps parametrize the plane. Let me think.\n\nAlternatively, since the plane is parallel to AB and CD, it can be thought of as a translation of the line AB or CD. Wait, but since it's between them, maybe we can find a point on the plane that is halfway between AB and CD.\n\nAlternatively, maybe find parametric equations for the lines AB and CD and then find the plane equidistant from both.\n\nAlternatively, since the plane is parallel to AB and CD, then the plane can be represented as a set of points such that the vector from AB to the plane is the same as the vector from the plane to CD. Wait, maybe not. Maybe I need to find the plane such that the distance from AB to the plane is equal to the distance from the plane to CD.\n\nAlternatively, since AB and CD are skew lines, the distance between them can be calculated. Then the plane halfway between them would be at half that distance from each.\n\nSo let me compute the distance between AB and CD.\n\nTo compute the distance between two skew lines, we can use the formula:\n\nDistance = |(c - a) ��� (u × v)| / |u × v|,\n\nwhere a and c are points on the two lines, and u and v are direction vectors of the lines.\n\nSo let me take AB: points A(0,0,0) and B(2,0,0), direction vector u = (2, 0, 0).\n\nCD: points C(1, ��3, 0) and D(1, ��3/3, 2√6/3), direction vector v = (0, -2√3/3, 2√6/3).\n\nSo take a point on AB, say A(0,0,0), and a point on CD, say C(1, ��3, 0). Then vector AC is C - A = (1, ��3, 0).\n\nThen compute (AC) ��� (u × v). Wait, earlier we found u × v = (0, -4√6/3, -4√3/3). Wait, but earlier cross product was u × v = (0, -4√6/3, -4√3/3). Wait, but let me check again.\n\nWait, earlier when I calculated u × v, I had u = (2, 0, 0), v = (0, -2√3/3, 2√6/3). Then cross product is:\n\ni*(0*2√6/3 - 0*(-2√3/3)) - j*(2*2√6/3 - 0*0) + k*(2*(-2√3/3) - 0*0) = i*(0) - j*(4√6/3) + k*(-4√3/3). So yes, (0, -4√6/3, -4√3/3). Therefore, u × v = (0, -4√6/3, -4√3/3). The magnitude of this is sqrt(0² + ( -4√6/3 )² + ( -4√3/3 )² ) = sqrt( (16*6)/9 + (16*3)/9 ) = sqrt( (96 + 48)/9 ) = sqrt(144/9) = sqrt(16) = 4. Wait, that's interesting. The magnitude of u × v is 4. Therefore, the distance between AB and CD is |AC ��� (u × v)| / |u × v|.\n\nWait, but AC is vector from A to C, which is (1, ��3, 0). Then AC ��� (u × v) is (1, ��3, 0) ��� (0, -4√6/3, -4√3/3) = 1*0 + ��3*(-4√6/3) + 0*(-4√3/3) = -4√18 / 3 = -4*(3√2)/3 = -4√2. Therefore, the absolute value is 4√2. Then divide by |u × v| which is 4, so distance is 4√2 / 4 = ��2. Therefore, the distance between AB and CD is ��2. Therefore, the plane halfway between them is at distance ��2 / 2 from each.\n\nBut how do I find the equation of this plane?\n\nAlternatively, since the plane is parallel to AB and CD, and lies halfway between them, maybe I can find a point on the plane by moving halfway between AB and CD.\n\nAlternatively, since the plane is parallel to AB and CD, then it must contain a line that is parallel to AB and a line that is parallel to CD. But since it's halfway between AB and CD, maybe we can find a point on the plane by taking the midpoint between AB and CD?\n\nBut AB and CD are skew lines, so their midpoints are not directly applicable. Alternatively, maybe take a point on AB and a point on CD and find the midpoint between them? But that would be a point in space, but since the plane is parallel to both AB and CD, maybe the plane can be determined by moving from AB towards CD by half the distance.\n\nAlternatively, maybe parametrize the plane. Since the plane is parallel to AB and CD, then the plane can be represented parametrically as follows. Let me think.\n\nSince the plane is parallel to AB and CD, then any point on the plane can be written as a point on AB plus some vector in the direction of AB and CD. Wait, but since the plane is parallel to AB and CD, then the plane can be parametrized by moving along AB and CD directions. However, since AB and CD are skew, the plane is not uniquely determined by just the directions unless we have a specific point.\n\nAlternatively, maybe find the line of intersection of the plane with the line connecting the midpoints of AB and CD? Wait, not sure.\n\nAlternatively, since the plane is equidistant from AB and CD, and parallel to both, perhaps we can find a point on the plane by moving from AB towards CD by half the distance between them. But how?\n\nAlternatively, since we have coordinates for AB and CD, maybe find a point that is halfway between AB and CD in some sense.\n\nAlternatively, since we have the normal vector of the plane as (0, ��6, ��3) (from earlier), then the equation of the plane is 0(x) + ��6(y) + ��3(z) = d. We need to find d such that the plane is halfway between AB and CD.\n\nTo find d, we can find the distance from AB to the plane and set it equal to half the distance between AB and CD, which is ��2 / 2.\n\nBut how to compute the distance from AB to the plane?\n\nAlternatively, since the plane is parallel to AB, the distance from AB to the plane is the distance from any point on AB to the plane. Let me pick point A(0,0,0) and compute its distance to the plane.\n\nThe distance from a point (x0, y0, z0) to the plane ax + by + cz + d = 0 is |ax0 + by0 + cz0 + d| / sqrt(a² + b² + c²). Wait, but our plane equation is ��6 y + ��3 z = d. So rearranged: ��6 y + ��3 z - d = 0. Therefore, the distance from A(0,0,0) to the plane is |√6*0 + ��3*0 - d| / sqrt( (��6)^2 + (��3)^2 ) = | -d | / sqrt(6 + 3) = |d| / 3.\n\nSimilarly, the distance from the plane to CD should be the same. Wait, but the distance from the plane to CD is the same as the distance from AB to the plane, since the plane is halfway between them. But since the distance between AB and CD is ��2, then the distance from AB to plane is ��2 / 2, so |d| / 3 = ��2 / 2. Therefore, |d| = (3√2)/2. Therefore, d = ± (3√2)/2. Now, we need to determine the correct sign.\n\nBut which sign? Since the plane is between AB and CD, and AB is at (0,0,0), and CD is at some point. Let me check the direction of the normal vector. The normal vector is (0, ��6, ��3). So the plane equation is ��6 y + ��3 z = d. If we want the plane to be between AB and CD, then we need to figure out whether d is positive or negative.\n\nAlternatively, take a point on CD and compute the distance to the plane. Let me take point C(1, ��3, 0). The distance from C to the plane is |√6*√3 + ��3*0 - d| / 3 = |√18 - d| / 3 = |3√2 - d| / 3. Since the distance between AB and CD is ��2, and the plane is halfway, then the distance from AB to plane is ��2 / 2, and the distance from plane to CD is also ��2 / 2. Therefore, if we have |d| / 3 = ��2 / 2, then d = ± 3√2 / 2. Also, the distance from C to plane is |3√2 - d| / 3 = ��2 / 2. Therefore, |3√2 - d| = (3√2)/2. Therefore, solving:\n\nCase 1: 3√2 - d = (3√2)/2 => d = 3√2 - (3√2)/2 = (3√2)/2.\n\nCase 2: 3√2 - d = - (3√2)/2 => d = 3√2 + (3√2)/2 = (9√2)/2.\n\nBut since the plane is between AB and CD, and AB is at (0,0,0), which is on the plane if d = 0. But our plane is between AB and CD, so if d is positive, then the plane is on the side of AB where the normal vector points. Wait, the normal vector is (0, ��6, ��3), which points in the positive y and positive z direction. Since point C is at (1, ��3, 0), which is in the positive y direction. If the plane is between AB and CD, then the plane should be between AB (which is at z=0) and CD (which is at z= 2√6 / 3 �� 1.63). Therefore, the plane should have a positive z value. Therefore, if d is positive, then the plane is in the positive direction. Let me check with point A(0,0,0): distance to plane is | -d | / 3 = d / 3. If d = 3√2 / 2, then distance is (3√2 / 2) / 3 = ��2 / 2, which is correct. Similarly, distance from C to plane is |3√2 - d| / 3 = |3√2 - 3√2 / 2| / 3 = |3√2 / 2| / 3 = ��2 / 2, which is correct. Therefore, d = 3√2 / 2. Therefore, the equation of the plane is ��6 y + ��3 z = (3√2)/2.\n\nAlternatively, we can simplify this equation. Let me divide both sides by ��3:\n\n√6 / ��3 y + z = (3√2)/ (2√3)\n\nSimplify ��6 / ��3 = ��(6/3) = ��2. Therefore:\n\n√2 y + z = (3√2)/(2√3) = (3√2 * ��3) / (2*3) ) = (��6)/2. Therefore, the plane equation is ��2 y + z = ��6 / 2.\n\nAlternatively, maybe we can write it as ��2 y + z = ��6 / 2. Let me check if this is correct.\n\nYes, because multiplying both sides by ��3 gives ��6 y + ��3 z = (3√2)/2, which matches our previous equation. So that's the plane equation.\n\nNow, the plane cuts the tetrahedron into two pieces. The problem asks for the surface area of one of these pieces. So I need to figure out which surface areas contribute to the new piece.\n\nFirst, I need to figure out the shape of the piece. The original tetrahedron has four triangular faces. When we cut it with this plane, the piece will have the original faces that are not cut, plus the new face created by the plane.\n\nBut since the plane is cutting through the tetrahedron, the new piece will have the original faces that are on one side of the plane, and the new face. However, depending on which piece we take, the surface area will include different parts.\n\nAlternatively, maybe the plane intersects some edges of the tetrahedron. Therefore, the intersection of the plane with the tetrahedron is a polygon, which is a quadrilateral or triangle. Since the plane is parallel to AB and CD, which are skew lines, the intersection with the tetrahedron is likely a quadrilateral.\n\nBut to figure this out, I need to find where the plane intersects the edges of the tetrahedron.\n\nThe tetrahedron has six edges: AB, AC, AD, BC, BD, CD.\n\nWe know that the plane is parallel to AB and CD. Therefore, the plane cannot intersect AB or CD because if it's parallel, it doesn't intersect them. Therefore, the plane intersects the other four edges: AC, AD, BC, BD.\n\nTherefore, the intersection of the plane with the tetrahedron is a quadrilateral with vertices on AC, AD, BC, BD. Therefore, the piece that is cut off will have this quadrilateral as a new face, and parts of the original faces.\n\nBut to compute the surface area of one of the pieces, we need to figure out which original faces are included in the piece, and add the area of the new face.\n\nBut first, let me find the points where the plane intersects the edges AC, AD, BC, BD.\n\nLet me parametrize each edge and find the intersection with the plane.\n\nFirst, edge AC: from A(0,0,0) to C(1, ��3, 0). Let me parametrize this edge as A + t*(C - A) = (0 + t*1, 0 + t*√3, 0 + t*0) = (t, t√3, 0), where t ∈ [0,1].\n\nNow, substitute into the plane equation ��2 y + z = ��6 / 2.\n\nSo ��2*(t√3) + 0 = ��6 / 2.\n\nSimplify: ��2 * ��3 * t = ��6 / 2 => ��6 * t = ��6 / 2 => t = 1/2.\n\nTherefore, the intersection point on AC is at t=1/2: (1/2, (��3)/2, 0). Let me call this point P.\n\nSimilarly, let's check edge AD: from A(0,0,0) to D(1, ��3/3, 2√6/3). Parametrize as A + t*(D - A) = (t, t*(√3/3), t*(2√6/3)), t ∈ [0,1].\n\nSubstitute into plane equation ��2 y + z = ��6 / 2.\n\nSo ��2*(t√3/3) + t*(2√6/3) = ��6 / 2.\n\nCompute:\n\nFirst term: ��2*(√3/3)*t = (��6 / 3) * t.\n\nSecond term: (2√6 / 3) * t.\n\nTotal: [√6 / 3 + 2√6 / 3] * t = (��6) * t = ��6 / 2.\n\nTherefore, ��6 * t = ��6 / 2 => t = 1/2. Therefore, the intersection point on AD is at t=1/2: (1/2, (��3)/6, (2√6)/6) = (1/2, ��3/6, ��6/3). Let me call this point Q.\n\nNext, edge BC: from B(2,0,0) to C(1, ��3, 0). Let me parametrize this as B + t*(C - B) = (2 - t, 0 + t√3, 0 + 0) = (2 - t, t√3, 0), t ∈ [0,1].\n\nSubstitute into plane equation ��2 y + z = ��6 / 2.\n\nSo ��2*(t√3) + 0 = ��6 / 2.\n\nSame as before: ��6 t = ��6 / 2 => t = 1/2. Therefore, the intersection point on BC is at t=1/2: (2 - 1/2, (��3)/2, 0) = (3/2, ��3/2, 0). Let me call this point R.\n\nSimilarly, edge BD: from B(2,0,0) to D(1, ��3/3, 2√6/3). Parametrize as B + t*(D - B) = (2 - t, 0 + t*(√3/3 - 0), 0 + t*(2√6/3 - 0)) = (2 - t, t√3/3, 2√6 t / 3), t ∈ [0,1].\n\nSubstitute into plane equation ��2 y + z = ��6 / 2.\n\nCompute:\n\n√2*(t√3 / 3) + (2√6 t / 3) = ��6 / 2.\n\nSame as before:\n\nFirst term: ��2 * ��3 t / 3 = ��6 t / 3.\n\nSecond term: 2√6 t / 3.\n\nTotal: (��6 t / 3 + 2√6 t / 3) = ��6 t = ��6 / 2 => t = 1/2.\n\nTherefore, intersection point on BD is at t=1/2: (2 - 1/2, (��3)/6, (2√6)/6) = (3/2, ��3/6, ��6/3). Let me call this point S.\n\nTherefore, the intersection of the plane with the tetrahedron is the quadrilateral PQRS, where P is midpoint of AC, Q is midpoint of AD, R is midpoint of BC, and S is midpoint of BD.\n\nTherefore, the piece that is cut off (depending on which side) will have this quadrilateral as a new face, and parts of the original faces.\n\nNow, to compute the surface area of one of the pieces, I need to figure out which original faces are on that piece. Let me think about the orientation of the plane.\n\nSince the plane is between AB and CD, and we have the plane cutting through midpoints of AC, AD, BC, BD. Let me try to visualize the tetrahedron.\n\nOriginal tetrahedron ABCD. The plane is cutting through midpoints of AC, AD, BC, BD. So if we imagine the plane cutting through the midpoints of the edges connected to A and B, but not AB or CD. Therefore, the piece that is on the side of the plane closer to AB would include the original faces that are near AB, and the piece closer to CD would include the original faces near CD. However, since the plane is halfway between AB and CD, the two pieces would be congruent? Or not? Wait, maybe not necessarily, because the tetrahedron is regular, so maybe they are congruent. However, the problem says \"one of these pieces\", so maybe we need to compute the surface area of one, say, the piece that is closer to AB.\n\nBut to find the surface area, we need to know which original faces are included in the piece. Let me think.\n\nThe original tetrahedron has four faces: ABC, ABD, ACD, BCD.\n\nThe plane cuts through midpoints of AC, AD, BC, BD. So, the piece that is on the side of the plane closer to AB would include the original face ABC, but only the part that is not cut. However, since the plane cuts through BC and AC, the face ABC is divided into two parts: one part is a triangle (the part closer to AB) and the other part is a quadrilateral? Wait, no. Wait, the plane intersects AC and BC at their midpoints. Therefore, the original face ABC is cut by the plane into two regions: one triangle AP R and one quadrilateral? Wait, no. Wait, if you have triangle ABC, and you cut it with a line from midpoint of AC to midpoint of BC, then that line divides the triangle into two smaller triangles. Wait, but the plane is not just cutting the edge AC and BC, but also AD and BD. Wait, but the original face ABC is only intersected by the plane at points P and R. Therefore, the intersection is the line PR, which is the segment connecting midpoints of AC and BC. Therefore, the original face ABC is split into two triangles: APR and PRC? Wait, no. Wait, if you have triangle ABC, and you draw a line from midpoint of AC (P) to midpoint of BC (R), then that line divides ABC into two smaller triangles: APR and PRC? Wait, but APR is a triangle with vertices A, P, R. But point R is midpoint of BC, so yes. However, the plane also intersects other edges, but on face ABC, only PR is the intersection.\n\nTherefore, the piece that is closer to AB would include the triangle APR and the original face ABD? Wait, but the plane also intersects AD at Q and BD at S. Therefore, the piece closer to AB would include the original face ABD, but cut by the plane. Similarly, the original face ABD is cut by the plane along QS. Wait, but the plane cuts AD at Q and BD at S. So the intersection on face ABD is the line QS, connecting midpoints of AD and BD. Therefore, face ABD is split into two triangles: AQ S and QSD? Wait, but if we take the piece closer to AB, then it would include triangle AQS and the original face ABC's triangle APR? Wait, but the original face ABD is connected to AB. Wait, this is getting a bit confusing. Maybe I need to think of the two pieces.\n\nAlternatively, since the plane cuts the tetrahedron into two parts, each part will have some original faces and the new quadrilateral face. Let me try to figure out which original faces are on each piece.\n\nLet me consider the piece that is on the side of the plane containing AB. Since AB is on the original tetrahedron, and the plane is between AB and CD, the piece containing AB would include the original face ABC, ABD, and the new quadrilateral face. However, the plane cuts through AC and BC (on ABC) and AD and BD (on ABD), so the original faces ABC and ABD are each split into two parts. However, the piece containing AB would include the parts of ABC and ABD that are on the AB side. Therefore, those parts would be triangles APR and AQS. Then, the original face ACD is on the other side of the plane, and similarly BCD is on the other side. But the piece containing AB would not include ACD or BCD. However, the piece also includes the new quadrilateral face PQRS.\n\nWait, but maybe not. Wait, the original tetrahedron has four faces. The piece containing AB would have the original faces ABC and ABD, but only parts of them, and the new face PQRS. However, the other original faces (ACD and BCD) are on the other piece. But also, the piece containing AB might have parts of the other faces? Wait, no. Because the plane is cutting through the tetrahedron, and the other original faces (ACD and BCD) are on the other side of the plane.\n\nWait, but maybe not. Let me think again. The plane is cutting through the midpoints of AC, AD, BC, BD. Therefore, the piece containing AB would have the original face ABC, but only the part that's on the AB side, which is triangle APR. Similarly, original face ABD, only the part on the AB side, triangle AQS. Also, the new face PQRS. Additionally, is there another original face that is included? The original face ACD is on the other side of the plane. Similarly, BCD is on the other side. However, the piece containing AB also includes the original face ABD and ABC, but only parts of them. However, the piece also includes the new face PQRS. Therefore, the surface area of the piece would be the areas of APR, AQS, and PQRS. But wait, but maybe there are other original faces?\n\nAlternatively, maybe the piece also includes parts of the original faces ACD and BCD? No, because the plane is between AB and CD. If you take the piece containing AB, then the other part of the tetrahedron is the piece containing CD. Therefore, the piece containing AB would not include the faces ACD or BCD, only parts of ABC and ABD.\n\nBut then, the surface area of the piece would be the area of APR, area of AQS, and the area of PQRS. However, we need to check if there are any other original faces included. Wait, but the original tetrahedron has four faces. The piece containing AB would have two original faces (ABC and ABD) each split into two parts, but only the parts on the AB side. However, if the plane cuts through the tetrahedron, then the piece containing AB would have the original faces ABC and ABD, but only the parts that are on the AB side. However, since the plane is cutting through the midpoints, those parts would be triangles. So the area of APR and AQS. Plus the new face PQRS. Therefore, total surface area would be area of APR + area of AQS + area of PQRS.\n\nAlternatively, maybe the piece also includes part of the face ACD? Wait, no, because the plane is between AB and CD. If you take the piece containing AB, then it's on the side of the plane closer to AB, so it doesn't include the face ACD or BCD. Therefore, the surface area would be as above.\n\nBut let me check. Alternatively, maybe the piece also includes the original face ACD? No, because the plane is cutting through the tetrahedron, and the piece containing AB is on the side of AB, so the other side is the piece containing CD. Therefore, the piece containing AB would have the original faces ABC and ABD, but only the parts that are on the AB side, and the new face. Therefore, the total surface area would be the sum of those areas.\n\nAlternatively, maybe the piece also includes some parts of the other faces? Wait, no. The plane only intersects the edges AC, AD, BC, BD. Therefore, the only original faces intersected are ABC and ABD, and the rest of the original faces (ACD and BCD) are entirely on the other side. Therefore, the piece containing AB would have:\n\n- The triangle APR (part of ABC)\n- The triangle AQS (part of ABD)\n- The quadrilateral PQRS (new face)\n\nTherefore, total surface area is area(APR) + area(AQS) + area(PQRS).\n\nAlternatively, maybe I need to check if the piece also includes the original face ACD? No, because the plane is between AB and CD, and the piece containing AB is on the side of AB, so it's not including CD's side.\n\nAlternatively, maybe I need to check if the original face ACD is partially included? But since the plane is cutting through AD and CD? Wait, no, the plane is parallel to CD, so it doesn't intersect CD. Therefore, the original face ACD is adjacent to AD, which is cut by the plane, but since the plane is on the AB side",
+  "paragraphs": [
+    {
+      "index": 1,
+      "start": 0,
+      "end": 303,
+      "text": "<think>\nOkay, so I need to find the surface area of one of the pieces created when a plane cuts a regular tetrahedron ABCD. The plane is parallel to edges AB and CD and lies halfway between them. The tetrahedron has side length 2. Hmm, let me start by recalling some properties of a regular tetrahedron."
+    },
+    {
+      "index": 2,
+      "start": 305,
+      "end": 788,
+      "text": "First, a regular tetrahedron has four triangular faces, each of which is an equilateral triangle. All edges are equal, so each edge is length 2. The plane in question is parallel to both AB and CD. Since AB and CD are skew lines in a tetrahedron (they don't intersect and aren't parallel), the plane that is parallel to both of them must be somewhere in the middle between them. The problem says it's halfway between them, so I need to figure out where exactly that plane is located."
+    },
+    {
+      "index": 3,
+      "start": 790,
+      "end": 977,
+      "text": "But how do I determine the position of this plane? Maybe I need to find coordinates for the tetrahedron first. Coordinates might help me visualize and calculate the required surface area."
+    },
+    {
+      "index": 4,
+      "start": 979,
+      "end": 1223,
+      "text": "Let me assign coordinates to the tetrahedron. A regular tetrahedron can be embedded in 3D space with vertices at (0,0,0), (1,1,1), etc., but maybe there's a more symmetric way. Alternatively, I can use coordinates that make calculations easier."
+    },
+    {
+      "index": 5,
+      "start": 1225,
+      "end": 1517,
+      "text": "Alternatively, maybe I can use vectors. Let me think. Let me recall that in a regular tetrahedron, the coordinates can be chosen such that one vertex is at (0,0,0), another at (2,0,0), the third at (1, ��3, 0), and the fourth at (1, ��3/3, ��6/3). Wait, but I need to check if that's correct."
+    },
+    {
+      "index": 6,
+      "start": 1519,
+      "end": 1681,
+      "text": "Alternatively, maybe it's easier to use coordinates where the base is an equilateral triangle in the xy-plane, and the fourth vertex is above it. Let me try that."
+    },
+    {
+      "index": 7,
+      "start": 1683,
+      "end": 1948,
+      "text": "Let me place vertex A at (0, 0, 0), vertex B at (2, 0, 0), vertex C at (1, ��3, 0), since that forms an equilateral triangle with side length 2. Then vertex D is somewhere above the base ABC. The coordinates of D can be found by knowing that all edges are length 2."
+    },
+    {
+      "index": 8,
+      "start": 1950,
+      "end": 2833,
+      "text": "The centroid of the base triangle ABC is at ((0 + 2 + 1)/3, (0 + 0 + ��3)/3, 0) = (1, ��3/3, 0). The height of the tetrahedron can be calculated. In a regular tetrahedron, the height from a vertex to the base is h = ��(2² - (distance from centroid to vertex)^2). Wait, the centroid of the base triangle is at a distance of (2/√3) from each vertex? Wait, no. Wait, the centroid divides the median in a 2:1 ratio. The length of the median in an equilateral triangle with side length 2 is ��3. So the centroid is at 2/3 of that distance from each vertex. Wait, the centroid is located at a distance of (2/3)*(√3) from each vertex? Wait, no, the centroid is located at 2/3 of the median length from the vertex. The median length is ��3, so the distance from centroid to vertex is (2/3)*√3. Therefore, the height h of the tetrahedron satisfies h² + (2/3 * ��3)² = 2². Let me compute that:"
+    },
+    {
+      "index": 9,
+      "start": 2835,
+      "end": 2956,
+      "text": "h² + (4/9 * 3) = 4 => h² + 4/3 = 4 => h² = 4 - 4/3 = 8/3 => h = 2√6 / 3. Wait, is that correct? Wait, let me check again."
+    },
+    {
+      "index": 10,
+      "start": 2958,
+      "end": 3427,
+      "text": "Wait, the centroid of the base triangle is at distance (2/3)*height of the triangle from each vertex. The height of the base triangle is h_triangle = ��(2² - 1²) = ��3. Wait, no, the height of an equilateral triangle with side length 2 is (��3/2)*2 = ��3. So the centroid is located at 2/3 of that from each vertex. Therefore, the distance from centroid to vertex is (2/3)*√3. Therefore, the height of the tetrahedron is h, such that h² + (2/3 * ��3)^2 = 2². Therefore:"
+    },
+    {
+      "index": 11,
+      "start": 3429,
+      "end": 3578,
+      "text": "h² + (4/9 * 3) = 4 => h² + 4/3 = 4 => h² = 8/3 => h = 2√6 / 3. Yes, that's correct. Therefore, the coordinates of D would be (1, ��3/3, 2√6 / 3). So:"
+    },
+    {
+      "index": 12,
+      "start": 3580,
+      "end": 3645,
+      "text": "A = (0, 0, 0)\nB = (2, 0, 0)\nC = (1, ��3, 0)\nD = (1, ��3/3, 2√6/3)"
+    },
+    {
+      "index": 13,
+      "start": 3647,
+      "end": 3836,
+      "text": "Okay, so now I have coordinates for all four vertices. Now, the plane is parallel to edges AB and CD and lies halfway between them. Let me first figure out the direction of edges AB and CD."
+    },
+    {
+      "index": 14,
+      "start": 3838,
+      "end": 4323,
+      "text": "Edge AB is from A(0,0,0) to B(2,0,0). So direction vector is (2, 0, 0). Edge CD is from C(1, ��3, 0) to D(1, ��3/3, 2√6/3). Let me compute the direction vector of CD. The coordinates of C are (1, ��3, 0), coordinates of D are (1, ��3/3, 2√6/3). Therefore, vector CD is D - C = (1 - 1, ��3/3 - ��3, 2√6/3 - 0) = (0, -2√3/3, 2√6/3). So direction vector CD is (0, -2√3/3, 2√6/3). Alternatively, we can simplify by multiplying by 3/2: (0, -√3, ��6). But maybe we can keep it as is for now."
+    },
+    {
+      "index": 15,
+      "start": 4325,
+      "end": 4630,
+      "text": "So the plane is parallel to both AB and CD. Therefore, the plane has direction vectors AB and CD. Wait, but AB is (2, 0, 0) and CD is (0, -2√3/3, 2√6/3). Therefore, the plane is parallel to these two vectors. Therefore, the normal vector of the plane can be found by taking the cross product of AB and CD."
+    },
+    {
+      "index": 16,
+      "start": 4632,
+      "end": 4789,
+      "text": "Let me compute that cross product. Let me denote vector AB as u = (2, 0, 0) and vector CD as v = (0, -2√3/3, 2√6/3). Then cross product u × v is determinant:"
+    },
+    {
+      "index": 17,
+      "start": 4791,
+      "end": 4828,
+      "text": "i | j | k\n2 | 0 | 0\n0 |-2√3/3 | 2√6/3"
+    },
+    {
+      "index": 18,
+      "start": 4830,
+      "end": 4854,
+      "text": "Calculating determinant:"
+    },
+    {
+      "index": 19,
+      "start": 4856,
+      "end": 4923,
+      "text": "i*(0*2√6/3 - 0*(-2√3/3)) - j*(2*2√6/3 - 0*0) + k*(2*(-2√3/3) - 0*0)"
+    },
+    {
+      "index": 20,
+      "start": 4925,
+      "end": 4934,
+      "text": "Simplify:"
+    },
+    {
+      "index": 21,
+      "start": 4936,
+      "end": 4978,
+      "text": "i*(0 - 0) - j*(4√6/3 - 0) + k*(-4√3/3 - 0)"
+    },
+    {
+      "index": 22,
+      "start": 4980,
+      "end": 5357,
+      "text": "So cross product is (0, -4√6/3, -4√3/3). Therefore, the normal vector is (0, -4√6/3, -4√3/3). We can simplify this by dividing by -4/3: (0, ��6, ��3). So the normal vector is proportional to (0, ��6, ��3). Therefore, the equation of the plane can be written as 0(x - x0) + ��6(y - y0) + ��3(z - z0) = 0. But we need to find the specific plane that is halfway between AB and CD."
+    },
+    {
+      "index": 23,
+      "start": 5359,
+      "end": 5582,
+      "text": "But how do I find the equation of the plane? Since the plane is parallel to AB and CD, and lies halfway between them. Maybe I need to find the distance between AB and CD and then find the plane that is halfway between them."
+    },
+    {
+      "index": 24,
+      "start": 5584,
+      "end": 5748,
+      "text": "Alternatively, since the plane is parallel to both AB and CD, it must be a plane that is equidistant from AB and CD. But how do I find the equation of such a plane?"
+    },
+    {
+      "index": 25,
+      "start": 5750,
+      "end": 5969,
+      "text": "Alternatively, maybe parametrize the line between AB and CD? Wait, AB and CD are skew lines. The distance between them can be calculated, and then the plane halfway between them would be at half that distance from each."
+    },
+    {
+      "index": 26,
+      "start": 5971,
+      "end": 6020,
+      "text": "But how do I find the distance between AB and CD?"
+    },
+    {
+      "index": 27,
+      "start": 6022,
+      "end": 6266,
+      "text": "Alternatively, since the plane is parallel to both AB and CD, then the plane is determined by a point and the direction vectors. But since it's halfway between AB and CD, maybe we can find a point on the plane that is halfway between AB and CD."
+    },
+    {
+      "index": 28,
+      "start": 6268,
+      "end": 6327,
+      "text": "Alternatively, perhaps parametrize the plane. Let me think."
+    },
+    {
+      "index": 29,
+      "start": 6329,
+      "end": 6554,
+      "text": "Alternatively, since the plane is parallel to AB and CD, it can be thought of as a translation of the line AB or CD. Wait, but since it's between them, maybe we can find a point on the plane that is halfway between AB and CD."
+    },
+    {
+      "index": 30,
+      "start": 6556,
+      "end": 6673,
+      "text": "Alternatively, maybe find parametric equations for the lines AB and CD and then find the plane equidistant from both."
+    },
+    {
+      "index": 31,
+      "start": 6675,
+      "end": 7013,
+      "text": "Alternatively, since the plane is parallel to AB and CD, then the plane can be represented as a set of points such that the vector from AB to the plane is the same as the vector from the plane to CD. Wait, maybe not. Maybe I need to find the plane such that the distance from AB to the plane is equal to the distance from the plane to CD."
+    },
+    {
+      "index": 32,
+      "start": 7015,
+      "end": 7184,
+      "text": "Alternatively, since AB and CD are skew lines, the distance between them can be calculated. Then the plane halfway between them would be at half that distance from each."
+    },
+    {
+      "index": 33,
+      "start": 7186,
+      "end": 7235,
+      "text": "So let me compute the distance between AB and CD."
+    },
+    {
+      "index": 34,
+      "start": 7237,
+      "end": 7308,
+      "text": "To compute the distance between two skew lines, we can use the formula:"
+    },
+    {
+      "index": 35,
+      "start": 7310,
+      "end": 7353,
+      "text": "Distance = |(c - a) ��� (u × v)| / |u × v|,"
+    },
+    {
+      "index": 36,
+      "start": 7355,
+      "end": 7445,
+      "text": "where a and c are points on the two lines, and u and v are direction vectors of the lines."
+    },
+    {
+      "index": 37,
+      "start": 7447,
+      "end": 7527,
+      "text": "So let me take AB: points A(0,0,0) and B(2,0,0), direction vector u = (2, 0, 0)."
+    },
+    {
+      "index": 38,
+      "start": 7529,
+      "end": 7617,
+      "text": "CD: points C(1, ��3, 0) and D(1, ��3/3, 2√6/3), direction vector v = (0, -2√3/3, 2√6/3)."
+    },
+    {
+      "index": 39,
+      "start": 7619,
+      "end": 7731,
+      "text": "So take a point on AB, say A(0,0,0), and a point on CD, say C(1, ��3, 0). Then vector AC is C - A = (1, ��3, 0)."
+    },
+    {
+      "index": 40,
+      "start": 7733,
+      "end": 7910,
+      "text": "Then compute (AC) ��� (u × v). Wait, earlier we found u × v = (0, -4√6/3, -4√3/3). Wait, but earlier cross product was u × v = (0, -4√6/3, -4√3/3). Wait, but let me check again."
+    },
+    {
+      "index": 41,
+      "start": 7912,
+      "end": 8018,
+      "text": "Wait, earlier when I calculated u × v, I had u = (2, 0, 0), v = (0, -2√3/3, 2√6/3). Then cross product is:"
+    },
+    {
+      "index": 42,
+      "start": 8020,
+      "end": 8463,
+      "text": "i*(0*2√6/3 - 0*(-2√3/3)) - j*(2*2√6/3 - 0*0) + k*(2*(-2√3/3) - 0*0) = i*(0) - j*(4√6/3) + k*(-4√3/3). So yes, (0, -4√6/3, -4√3/3). Therefore, u × v = (0, -4√6/3, -4√3/3). The magnitude of this is sqrt(0² + ( -4√6/3 )² + ( -4√3/3 )² ) = sqrt( (16*6)/9 + (16*3)/9 ) = sqrt( (96 + 48)/9 ) = sqrt(144/9) = sqrt(16) = 4. Wait, that's interesting. The magnitude of u × v is 4. Therefore, the distance between AB and CD is |AC ��� (u × v)| / |u × v|."
+    },
+    {
+      "index": 43,
+      "start": 8465,
+      "end": 8877,
+      "text": "Wait, but AC is vector from A to C, which is (1, ��3, 0). Then AC ��� (u × v) is (1, ��3, 0) ��� (0, -4√6/3, -4√3/3) = 1*0 + ��3*(-4√6/3) + 0*(-4√3/3) = -4√18 / 3 = -4*(3√2)/3 = -4√2. Therefore, the absolute value is 4√2. Then divide by |u × v| which is 4, so distance is 4√2 / 4 = ��2. Therefore, the distance between AB and CD is ��2. Therefore, the plane halfway between them is at distance ��2 / 2 from each."
+    },
+    {
+      "index": 44,
+      "start": 8879,
+      "end": 8924,
+      "text": "But how do I find the equation of this plane?"
+    },
+    {
+      "index": 45,
+      "start": 8926,
+      "end": 9088,
+      "text": "Alternatively, since the plane is parallel to AB and CD, and lies halfway between them, maybe I can find a point on the plane by moving halfway between AB and CD."
+    },
+    {
+      "index": 46,
+      "start": 9090,
+      "end": 9355,
+      "text": "Alternatively, since the plane is parallel to AB and CD, then it must contain a line that is parallel to AB and a line that is parallel to CD. But since it's halfway between AB and CD, maybe we can find a point on the plane by taking the midpoint between AB and CD?"
+    },
+    {
+      "index": 47,
+      "start": 9357,
+      "end": 9700,
+      "text": "But AB and CD are skew lines, so their midpoints are not directly applicable. Alternatively, maybe take a point on AB and a point on CD and find the midpoint between them? But that would be a point in space, but since the plane is parallel to both AB and CD, maybe the plane can be determined by moving from AB towards CD by half the distance."
+    },
+    {
+      "index": 48,
+      "start": 9702,
+      "end": 9862,
+      "text": "Alternatively, maybe parametrize the plane. Since the plane is parallel to AB and CD, then the plane can be represented parametrically as follows. Let me think."
+    },
+    {
+      "index": 49,
+      "start": 9864,
+      "end": 10266,
+      "text": "Since the plane is parallel to AB and CD, then any point on the plane can be written as a point on AB plus some vector in the direction of AB and CD. Wait, but since the plane is parallel to AB and CD, then the plane can be parametrized by moving along AB and CD directions. However, since AB and CD are skew, the plane is not uniquely determined by just the directions unless we have a specific point."
+    },
+    {
+      "index": 50,
+      "start": 10268,
+      "end": 10400,
+      "text": "Alternatively, maybe find the line of intersection of the plane with the line connecting the midpoints of AB and CD? Wait, not sure."
+    },
+    {
+      "index": 51,
+      "start": 10402,
+      "end": 10599,
+      "text": "Alternatively, since the plane is equidistant from AB and CD, and parallel to both, perhaps we can find a point on the plane by moving from AB towards CD by half the distance between them. But how?"
+    },
+    {
+      "index": 52,
+      "start": 10601,
+      "end": 10724,
+      "text": "Alternatively, since we have coordinates for AB and CD, maybe find a point that is halfway between AB and CD in some sense."
+    },
+    {
+      "index": 53,
+      "start": 10726,
+      "end": 10948,
+      "text": "Alternatively, since we have the normal vector of the plane as (0, ��6, ��3) (from earlier), then the equation of the plane is 0(x) + ��6(y) + ��3(z) = d. We need to find d such that the plane is halfway between AB and CD."
+    },
+    {
+      "index": 54,
+      "start": 10950,
+      "end": 11081,
+      "text": "To find d, we can find the distance from AB to the plane and set it equal to half the distance between AB and CD, which is ��2 / 2."
+    },
+    {
+      "index": 55,
+      "start": 11083,
+      "end": 11136,
+      "text": "But how to compute the distance from AB to the plane?"
+    },
+    {
+      "index": 56,
+      "start": 11138,
+      "end": 11338,
+      "text": "Alternatively, since the plane is parallel to AB, the distance from AB to the plane is the distance from any point on AB to the plane. Let me pick point A(0,0,0) and compute its distance to the plane."
+    },
+    {
+      "index": 57,
+      "start": 11340,
+      "end": 11683,
+      "text": "The distance from a point (x0, y0, z0) to the plane ax + by + cz + d = 0 is |ax0 + by0 + cz0 + d| / sqrt(a² + b² + c²). Wait, but our plane equation is ��6 y + ��3 z = d. So rearranged: ��6 y + ��3 z - d = 0. Therefore, the distance from A(0,0,0) to the plane is |√6*0 + ��3*0 - d| / sqrt( (��6)^2 + (��3)^2 ) = | -d | / sqrt(6 + 3) = |d| / 3."
+    },
+    {
+      "index": 58,
+      "start": 11685,
+      "end": 12098,
+      "text": "Similarly, the distance from the plane to CD should be the same. Wait, but the distance from the plane to CD is the same as the distance from AB to the plane, since the plane is halfway between them. But since the distance between AB and CD is ��2, then the distance from AB to plane is ��2 / 2, so |d| / 3 = ��2 / 2. Therefore, |d| = (3√2)/2. Therefore, d = ± (3√2)/2. Now, we need to determine the correct sign."
+    },
+    {
+      "index": 59,
+      "start": 12100,
+      "end": 12437,
+      "text": "But which sign? Since the plane is between AB and CD, and AB is at (0,0,0), and CD is at some point. Let me check the direction of the normal vector. The normal vector is (0, ��6, ��3). So the plane equation is ��6 y + ��3 z = d. If we want the plane to be between AB and CD, then we need to figure out whether d is positive or negative."
+    },
+    {
+      "index": 60,
+      "start": 12439,
+      "end": 12981,
+      "text": "Alternatively, take a point on CD and compute the distance to the plane. Let me take point C(1, ��3, 0). The distance from C to the plane is |√6*√3 + ��3*0 - d| / 3 = |√18 - d| / 3 = |3√2 - d| / 3. Since the distance between AB and CD is ��2, and the plane is halfway, then the distance from AB to plane is ��2 / 2, and the distance from plane to CD is also ��2 / 2. Therefore, if we have |d| / 3 = ��2 / 2, then d = ± 3√2 / 2. Also, the distance from C to plane is |3√2 - d| / 3 = ��2 / 2. Therefore, |3√2 - d| = (3√2)/2. Therefore, solving:"
+    },
+    {
+      "index": 61,
+      "start": 12983,
+      "end": 13040,
+      "text": "Case 1: 3√2 - d = (3√2)/2 => d = 3√2 - (3√2)/2 = (3√2)/2."
+    },
+    {
+      "index": 62,
+      "start": 13042,
+      "end": 13101,
+      "text": "Case 2: 3√2 - d = - (3√2)/2 => d = 3√2 + (3√2)/2 = (9√2)/2."
+    },
+    {
+      "index": 63,
+      "start": 13103,
+      "end": 14110,
+      "text": "But since the plane is between AB and CD, and AB is at (0,0,0), which is on the plane if d = 0. But our plane is between AB and CD, so if d is positive, then the plane is on the side of AB where the normal vector points. Wait, the normal vector is (0, ��6, ��3), which points in the positive y and positive z direction. Since point C is at (1, ��3, 0), which is in the positive y direction. If the plane is between AB and CD, then the plane should be between AB (which is at z=0) and CD (which is at z= 2√6 / 3 �� 1.63). Therefore, the plane should have a positive z value. Therefore, if d is positive, then the plane is in the positive direction. Let me check with point A(0,0,0): distance to plane is | -d | / 3 = d / 3. If d = 3√2 / 2, then distance is (3√2 / 2) / 3 = ��2 / 2, which is correct. Similarly, distance from C to plane is |3√2 - d| / 3 = |3√2 - 3√2 / 2| / 3 = |3√2 / 2| / 3 = ��2 / 2, which is correct. Therefore, d = 3√2 / 2. Therefore, the equation of the plane is ��6 y + ��3 z = (3√2)/2."
+    },
+    {
+      "index": 64,
+      "start": 14112,
+      "end": 14190,
+      "text": "Alternatively, we can simplify this equation. Let me divide both sides by ��3:"
+    },
+    {
+      "index": 65,
+      "start": 14192,
+      "end": 14221,
+      "text": "√6 / ��3 y + z = (3√2)/ (2√3)"
+    },
+    {
+      "index": 66,
+      "start": 14223,
+      "end": 14269,
+      "text": "Simplify ��6 / ��3 = ��(6/3) = ��2. Therefore:"
+    },
+    {
+      "index": 67,
+      "start": 14271,
+      "end": 14382,
+      "text": "√2 y + z = (3√2)/(2√3) = (3√2 * ��3) / (2*3) ) = (��6)/2. Therefore, the plane equation is ��2 y + z = ��6 / 2."
+    },
+    {
+      "index": 68,
+      "start": 14384,
+      "end": 14477,
+      "text": "Alternatively, maybe we can write it as ��2 y + z = ��6 / 2. Let me check if this is correct."
+    },
+    {
+      "index": 69,
+      "start": 14479,
+      "end": 14619,
+      "text": "Yes, because multiplying both sides by ��3 gives ��6 y + ��3 z = (3√2)/2, which matches our previous equation. So that's the plane equation."
+    },
+    {
+      "index": 70,
+      "start": 14621,
+      "end": 14808,
+      "text": "Now, the plane cuts the tetrahedron into two pieces. The problem asks for the surface area of one of these pieces. So I need to figure out which surface areas contribute to the new piece."
+    },
+    {
+      "index": 71,
+      "start": 14810,
+      "end": 15042,
+      "text": "First, I need to figure out the shape of the piece. The original tetrahedron has four triangular faces. When we cut it with this plane, the piece will have the original faces that are not cut, plus the new face created by the plane."
+    },
+    {
+      "index": 72,
+      "start": 15044,
+      "end": 15285,
+      "text": "But since the plane is cutting through the tetrahedron, the new piece will have the original faces that are on one side of the plane, and the new face. However, depending on which piece we take, the surface area will include different parts."
+    },
+    {
+      "index": 73,
+      "start": 15287,
+      "end": 15602,
+      "text": "Alternatively, maybe the plane intersects some edges of the tetrahedron. Therefore, the intersection of the plane with the tetrahedron is a polygon, which is a quadrilateral or triangle. Since the plane is parallel to AB and CD, which are skew lines, the intersection with the tetrahedron is likely a quadrilateral."
+    },
+    {
+      "index": 74,
+      "start": 15604,
+      "end": 15699,
+      "text": "But to figure this out, I need to find where the plane intersects the edges of the tetrahedron."
+    },
+    {
+      "index": 75,
+      "start": 15701,
+      "end": 15755,
+      "text": "The tetrahedron has six edges: AB, AC, AD, BC, BD, CD."
+    },
+    {
+      "index": 76,
+      "start": 15757,
+      "end": 15975,
+      "text": "We know that the plane is parallel to AB and CD. Therefore, the plane cannot intersect AB or CD because if it's parallel, it doesn't intersect them. Therefore, the plane intersects the other four edges: AC, AD, BC, BD."
+    },
+    {
+      "index": 77,
+      "start": 15977,
+      "end": 16204,
+      "text": "Therefore, the intersection of the plane with the tetrahedron is a quadrilateral with vertices on AC, AD, BC, BD. Therefore, the piece that is cut off will have this quadrilateral as a new face, and parts of the original faces."
+    },
+    {
+      "index": 78,
+      "start": 16206,
+      "end": 16363,
+      "text": "But to compute the surface area of one of the pieces, we need to figure out which original faces are included in the piece, and add the area of the new face."
+    },
+    {
+      "index": 79,
+      "start": 16365,
+      "end": 16451,
+      "text": "But first, let me find the points where the plane intersects the edges AC, AD, BC, BD."
+    },
+    {
+      "index": 80,
+      "start": 16453,
+      "end": 16523,
+      "text": "Let me parametrize each edge and find the intersection with the plane."
+    },
+    {
+      "index": 81,
+      "start": 16525,
+      "end": 16680,
+      "text": "First, edge AC: from A(0,0,0) to C(1, ��3, 0). Let me parametrize this edge as A + t*(C - A) = (0 + t*1, 0 + t*√3, 0 + t*0) = (t, t√3, 0), where t ∈ [0,1]."
+    },
+    {
+      "index": 82,
+      "start": 16682,
+      "end": 16742,
+      "text": "Now, substitute into the plane equation ��2 y + z = ��6 / 2."
+    },
+    {
+      "index": 83,
+      "start": 16744,
+      "end": 16771,
+      "text": "So ��2*(t√3) + 0 = ��6 / 2."
+    },
+    {
+      "index": 84,
+      "start": 16773,
+      "end": 16839,
+      "text": "Simplify: ��2 * ��3 * t = ��6 / 2 => ��6 * t = ��6 / 2 => t = 1/2."
+    },
+    {
+      "index": 85,
+      "start": 16841,
+      "end": 16938,
+      "text": "Therefore, the intersection point on AC is at t=1/2: (1/2, (��3)/2, 0). Let me call this point P."
+    },
+    {
+      "index": 86,
+      "start": 16940,
+      "end": 17076,
+      "text": "Similarly, let's check edge AD: from A(0,0,0) to D(1, ��3/3, 2√6/3). Parametrize as A + t*(D - A) = (t, t*(√3/3), t*(2√6/3)), t ∈ [0,1]."
+    },
+    {
+      "index": 87,
+      "start": 17078,
+      "end": 17129,
+      "text": "Substitute into plane equation ��2 y + z = ��6 / 2."
+    },
+    {
+      "index": 88,
+      "start": 17131,
+      "end": 17168,
+      "text": "So ��2*(t√3/3) + t*(2√6/3) = ��6 / 2."
+    },
+    {
+      "index": 89,
+      "start": 17170,
+      "end": 17178,
+      "text": "Compute:"
+    },
+    {
+      "index": 90,
+      "start": 17180,
+      "end": 17221,
+      "text": "First term: ��2*(√3/3)*t = (��6 / 3) * t."
+    },
+    {
+      "index": 91,
+      "start": 17223,
+      "end": 17250,
+      "text": "Second term: (2√6 / 3) * t."
+    },
+    {
+      "index": 92,
+      "start": 17252,
+      "end": 17304,
+      "text": "Total: [√6 / 3 + 2√6 / 3] * t = (��6) * t = ��6 / 2."
+    },
+    {
+      "index": 93,
+      "start": 17306,
+      "end": 17472,
+      "text": "Therefore, ��6 * t = ��6 / 2 => t = 1/2. Therefore, the intersection point on AD is at t=1/2: (1/2, (��3)/6, (2√6)/6) = (1/2, ��3/6, ��6/3). Let me call this point Q."
+    },
+    {
+      "index": 94,
+      "start": 17474,
+      "end": 17616,
+      "text": "Next, edge BC: from B(2,0,0) to C(1, ��3, 0). Let me parametrize this as B + t*(C - B) = (2 - t, 0 + t√3, 0 + 0) = (2 - t, t√3, 0), t ∈ [0,1]."
+    },
+    {
+      "index": 95,
+      "start": 17618,
+      "end": 17669,
+      "text": "Substitute into plane equation ��2 y + z = ��6 / 2."
+    },
+    {
+      "index": 96,
+      "start": 17671,
+      "end": 17698,
+      "text": "So ��2*(t√3) + 0 = ��6 / 2."
+    },
+    {
+      "index": 97,
+      "start": 17700,
+      "end": 17863,
+      "text": "Same as before: ��6 t = ��6 / 2 => t = 1/2. Therefore, the intersection point on BC is at t=1/2: (2 - 1/2, (��3)/2, 0) = (3/2, ��3/2, 0). Let me call this point R."
+    },
+    {
+      "index": 98,
+      "start": 17865,
+      "end": 18037,
+      "text": "Similarly, edge BD: from B(2,0,0) to D(1, ��3/3, 2√6/3). Parametrize as B + t*(D - B) = (2 - t, 0 + t*(√3/3 - 0), 0 + t*(2√6/3 - 0)) = (2 - t, t√3/3, 2√6 t / 3), t ∈ [0,1]."
+    },
+    {
+      "index": 99,
+      "start": 18039,
+      "end": 18090,
+      "text": "Substitute into plane equation ��2 y + z = ��6 / 2."
+    },
+    {
+      "index": 100,
+      "start": 18092,
+      "end": 18100,
+      "text": "Compute:"
+    },
+    {
+      "index": 101,
+      "start": 18102,
+      "end": 18139,
+      "text": "√2*(t√3 / 3) + (2√6 t / 3) = ��6 / 2."
+    },
+    {
+      "index": 102,
+      "start": 18141,
+      "end": 18156,
+      "text": "Same as before:"
+    },
+    {
+      "index": 103,
+      "start": 18158,
+      "end": 18198,
+      "text": "First term: ��2 * ��3 t / 3 = ��6 t / 3."
+    },
+    {
+      "index": 104,
+      "start": 18200,
+      "end": 18223,
+      "text": "Second term: 2√6 t / 3."
+    },
+    {
+      "index": 105,
+      "start": 18225,
+      "end": 18285,
+      "text": "Total: (��6 t / 3 + 2√6 t / 3) = ��6 t = ��6 / 2 => t = 1/2."
+    },
+    {
+      "index": 106,
+      "start": 18287,
+      "end": 18412,
+      "text": "Therefore, intersection point on BD is at t=1/2: (2 - 1/2, (��3)/6, (2√6)/6) = (3/2, ��3/6, ��6/3). Let me call this point S."
+    },
+    {
+      "index": 107,
+      "start": 18414,
+      "end": 18596,
+      "text": "Therefore, the intersection of the plane with the tetrahedron is the quadrilateral PQRS, where P is midpoint of AC, Q is midpoint of AD, R is midpoint of BC, and S is midpoint of BD."
+    },
+    {
+      "index": 108,
+      "start": 18598,
+      "end": 18737,
+      "text": "Therefore, the piece that is cut off (depending on which side) will have this quadrilateral as a new face, and parts of the original faces."
+    },
+    {
+      "index": 109,
+      "start": 18739,
+      "end": 18903,
+      "text": "Now, to compute the surface area of one of the pieces, I need to figure out which original faces are on that piece. Let me think about the orientation of the plane."
+    },
+    {
+      "index": 110,
+      "start": 18905,
+      "end": 19050,
+      "text": "Since the plane is between AB and CD, and we have the plane cutting through midpoints of AC, AD, BC, BD. Let me try to visualize the tetrahedron."
+    },
+    {
+      "index": 111,
+      "start": 19052,
+      "end": 19764,
+      "text": "Original tetrahedron ABCD. The plane is cutting through midpoints of AC, AD, BC, BD. So if we imagine the plane cutting through the midpoints of the edges connected to A and B, but not AB or CD. Therefore, the piece that is on the side of the plane closer to AB would include the original faces that are near AB, and the piece closer to CD would include the original faces near CD. However, since the plane is halfway between AB and CD, the two pieces would be congruent? Or not? Wait, maybe not necessarily, because the tetrahedron is regular, so maybe they are congruent. However, the problem says \"one of these pieces\", so maybe we need to compute the surface area of one, say, the piece that is closer to AB."
+    },
+    {
+      "index": 112,
+      "start": 19766,
+      "end": 19873,
+      "text": "But to find the surface area, we need to know which original faces are included in the piece. Let me think."
+    },
+    {
+      "index": 113,
+      "start": 19875,
+      "end": 19935,
+      "text": "The original tetrahedron has four faces: ABC, ABD, ACD, BCD."
+    },
+    {
+      "index": 114,
+      "start": 19937,
+      "end": 21346,
+      "text": "The plane cuts through midpoints of AC, AD, BC, BD. So, the piece that is on the side of the plane closer to AB would include the original face ABC, but only the part that is not cut. However, since the plane cuts through BC and AC, the face ABC is divided into two parts: one part is a triangle (the part closer to AB) and the other part is a quadrilateral? Wait, no. Wait, the plane intersects AC and BC at their midpoints. Therefore, the original face ABC is cut by the plane into two regions: one triangle AP R and one quadrilateral? Wait, no. Wait, if you have triangle ABC, and you cut it with a line from midpoint of AC to midpoint of BC, then that line divides the triangle into two smaller triangles. Wait, but the plane is not just cutting the edge AC and BC, but also AD and BD. Wait, but the original face ABC is only intersected by the plane at points P and R. Therefore, the intersection is the line PR, which is the segment connecting midpoints of AC and BC. Therefore, the original face ABC is split into two triangles: APR and PRC? Wait, no. Wait, if you have triangle ABC, and you draw a line from midpoint of AC (P) to midpoint of BC (R), then that line divides ABC into two smaller triangles: APR and PRC? Wait, but APR is a triangle with vertices A, P, R. But point R is midpoint of BC, so yes. However, the plane also intersects other edges, but on face ABC, only PR is the intersection."
+    },
+    {
+      "index": 115,
+      "start": 21348,
+      "end": 22106,
+      "text": "Therefore, the piece that is closer to AB would include the triangle APR and the original face ABD? Wait, but the plane also intersects AD at Q and BD at S. Therefore, the piece closer to AB would include the original face ABD, but cut by the plane. Similarly, the original face ABD is cut by the plane along QS. Wait, but the plane cuts AD at Q and BD at S. So the intersection on face ABD is the line QS, connecting midpoints of AD and BD. Therefore, face ABD is split into two triangles: AQ S and QSD? Wait, but if we take the piece closer to AB, then it would include triangle AQS and the original face ABC's triangle APR? Wait, but the original face ABD is connected to AB. Wait, this is getting a bit confusing. Maybe I need to think of the two pieces."
+    },
+    {
+      "index": 116,
+      "start": 22108,
+      "end": 22312,
+      "text": "Alternatively, since the plane cuts the tetrahedron into two parts, each part will have some original faces and the new quadrilateral face. Let me try to figure out which original faces are on each piece."
+    },
+    {
+      "index": 117,
+      "start": 22314,
+      "end": 23081,
+      "text": "Let me consider the piece that is on the side of the plane containing AB. Since AB is on the original tetrahedron, and the plane is between AB and CD, the piece containing AB would include the original face ABC, ABD, and the new quadrilateral face. However, the plane cuts through AC and BC (on ABC) and AD and BD (on ABD), so the original faces ABC and ABD are each split into two parts. However, the piece containing AB would include the parts of ABC and ABD that are on the AB side. Therefore, those parts would be triangles APR and AQS. Then, the original face ACD is on the other side of the plane, and similarly BCD is on the other side. But the piece containing AB would not include ACD or BCD. However, the piece also includes the new quadrilateral face PQRS."
+    },
+    {
+      "index": 118,
+      "start": 23083,
+      "end": 23550,
+      "text": "Wait, but maybe not. Wait, the original tetrahedron has four faces. The piece containing AB would have the original faces ABC and ABD, but only parts of them, and the new face PQRS. However, the other original faces (ACD and BCD) are on the other piece. But also, the piece containing AB might have parts of the other faces? Wait, no. Because the plane is cutting through the tetrahedron, and the other original faces (ACD and BCD) are on the other side of the plane."
+    },
+    {
+      "index": 119,
+      "start": 23552,
+      "end": 24332,
+      "text": "Wait, but maybe not. Let me think again. The plane is cutting through the midpoints of AC, AD, BC, BD. Therefore, the piece containing AB would have the original face ABC, but only the part that's on the AB side, which is triangle APR. Similarly, original face ABD, only the part on the AB side, triangle AQS. Also, the new face PQRS. Additionally, is there another original face that is included? The original face ACD is on the other side of the plane. Similarly, BCD is on the other side. However, the piece containing AB also includes the original face ABD and ABC, but only parts of them. However, the piece also includes the new face PQRS. Therefore, the surface area of the piece would be the areas of APR, AQS, and PQRS. But wait, but maybe there are other original faces?"
+    },
+    {
+      "index": 120,
+      "start": 24334,
+      "end": 24669,
+      "text": "Alternatively, maybe the piece also includes parts of the original faces ACD and BCD? No, because the plane is between AB and CD. If you take the piece containing AB, then the other part of the tetrahedron is the piece containing CD. Therefore, the piece containing AB would not include the faces ACD or BCD, only parts of ABC and ABD."
+    },
+    {
+      "index": 121,
+      "start": 24671,
+      "end": 25418,
+      "text": "But then, the surface area of the piece would be the area of APR, area of AQS, and the area of PQRS. However, we need to check if there are any other original faces included. Wait, but the original tetrahedron has four faces. The piece containing AB would have two original faces (ABC and ABD) each split into two parts, but only the parts on the AB side. However, if the plane cuts through the tetrahedron, then the piece containing AB would have the original faces ABC and ABD, but only the parts that are on the AB side. However, since the plane is cutting through the midpoints, those parts would be triangles. So the area of APR and AQS. Plus the new face PQRS. Therefore, total surface area would be area of APR + area of AQS + area of PQRS."
+    },
+    {
+      "index": 122,
+      "start": 25420,
+      "end": 25712,
+      "text": "Alternatively, maybe the piece also includes part of the face ACD? Wait, no, because the plane is between AB and CD. If you take the piece containing AB, then it's on the side of the plane closer to AB, so it doesn't include the face ACD or BCD. Therefore, the surface area would be as above."
+    },
+    {
+      "index": 123,
+      "start": 25714,
+      "end": 26160,
+      "text": "But let me check. Alternatively, maybe the piece also includes the original face ACD? No, because the plane is cutting through the tetrahedron, and the piece containing AB is on the side of AB, so the other side is the piece containing CD. Therefore, the piece containing AB would have the original faces ABC and ABD, but only the parts that are on the AB side, and the new face. Therefore, the total surface area would be the sum of those areas."
+    },
+    {
+      "index": 124,
+      "start": 26162,
+      "end": 26491,
+      "text": "Alternatively, maybe the piece also includes some parts of the other faces? Wait, no. The plane only intersects the edges AC, AD, BC, BD. Therefore, the only original faces intersected are ABC and ABD, and the rest of the original faces (ACD and BCD) are entirely on the other side. Therefore, the piece containing AB would have:"
+    },
+    {
+      "index": 125,
+      "start": 26493,
+      "end": 26594,
+      "text": "- The triangle APR (part of ABC)\n- The triangle AQS (part of ABD)\n- The quadrilateral PQRS (new face)"
+    },
+    {
+      "index": 126,
+      "start": 26596,
+      "end": 26664,
+      "text": "Therefore, total surface area is area(APR) + area(AQS) + area(PQRS)."
+    },
+    {
+      "index": 127,
+      "start": 26666,
+      "end": 26879,
+      "text": "Alternatively, maybe I need to check if the piece also includes the original face ACD? No, because the plane is between AB and CD, and the piece containing AB is on the side of AB, so it's not including CD's side."
+    },
+    {
+      "index": 128,
+      "start": 26881,
+      "end": 27199,
+      "text": "Alternatively, maybe I need to check if the original face ACD is partially included? But since the plane is cutting through AD and CD? Wait, no, the plane is parallel to CD, so it doesn't intersect CD. Therefore, the original face ACD is adjacent to AD, which is cut by the plane, but since the plane is on the AB side"
+    }
+  ],
+  "trace_sha256": "6f6110bcf21001fed17b4d3326a9922f7b3dca2f1fcf732cbb523c77e2357141",
+  "annotation_scope": "Historical thinking only. Gold, final forced readout, grade/correct omitted. Review target selection uses outcome and is disclosed separately."
+}

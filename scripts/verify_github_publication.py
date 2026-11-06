@@ -89,6 +89,15 @@ def main():
         'research/phase5_prototype_20261106/results/quality_round_01/T1_support_before_fault_E__VersionFrame.json',
     ]
     representative.extend(path for path in phase5_samples if path in local)
+    phase5b_samples = [
+        'research/phase5b_boundary_20261106/boundary_core.py',
+        'research/phase5b_boundary_20261106/prelaunch_freeze.json',
+        'research/phase5b_boundary_20261106/RUN_STATUS_ZH.md',
+        'research/phase5b_boundary_20261106/NATURAL_DIAGNOSIS_ZH.md',
+        'research/phase5b_boundary_20261106/results/round_01/summary.json',
+        'research/phase5b_boundary_20261106/results/round_01/LongR_E__SharedGFull.json',
+    ]
+    representative.extend(path for path in phase5b_samples if path in local)
     samples = []
     for path in representative:
         blob = api(prefix + '/git/blobs/' + local[path])

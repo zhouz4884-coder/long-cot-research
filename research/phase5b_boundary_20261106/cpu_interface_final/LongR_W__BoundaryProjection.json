@@ -1,0 +1,295 @@
+{
+  "job_id": "LongR_W__BoundaryProjection",
+  "case_id": "LongR_W",
+  "method": "BoundaryProjection",
+  "status": "COMPLETE",
+  "complete": true,
+  "rendering": {
+    "job_id": "LongR_W__BoundaryProjection",
+    "case_id": "LongR_W",
+    "method": "BoundaryProjection",
+    "messages": [
+      {
+        "role": "system",
+        "content": "按原题定义求目标。旧记录和修订均可能有错，不能因其位置较晚就默认正确。用必要的简短算式说明，避免复述题干；最后以‘最终答案：整数’结束。"
+      },
+      {
+        "role": "user",
+        "content": "已核验且当前有效：r=153，x=23。\n目标：z。仅需按当前规则计算：\na=x+11\nb=3*a-7\nc=b*2\nd=c+17\ne=d//3\nf=e*4-9\nz=f+r\n用必要的简短算式说明，避免复述题干；最后以‘最终答案：整数’结束。"
+      }
+    ],
+    "messages_hash": "ec2f3897dbd4bff4def80fc2be08db3bd93fb25d1aa937982a0716a6f543f849",
+    "G_state_hash": "4984e33209bc867edce1060a74e018f13d545c1371e5153c058a12c74c0711e0",
+    "prompt_text": "<|im_start|>system\n按原题定义求目标。旧记录和修订均可能有错，不能因其位置较晚就默认正确。用必要的简短算式说明，避免复述题干；最后以‘最终答案：整数’结束。<|im_end|>\n<|im_start|>user\n已核验且当前有效：r=153，x=23。\n目标：z。仅需按当前规则计算：\na=x+11\nb=3*a-7\nc=b*2\nd=c+17\ne=d//3\nf=e*4-9\nz=f+r\n用必要的简短算式说明，避免复述题干；最后以‘最终答案：整数’结束。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "prompt_token_ids": [
+      3,
+      63,
+      80,
+      86,
+      97,
+      76,
+      92,
+      94,
+      100,
+      88,
+      96,
+      4,
+      7,
+      3,
+      65,
+      72,
+      24,
+      70,
+      102,
+      104,
+      9,
+      10,
+      49,
+      55,
+      15,
+      18,
+      91,
+      82,
+      68,
+      69,
+      4,
+      7,
+      3,
+      52,
+      64,
+      5,
+      8,
+      6,
+      8
+    ],
+    "position_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "prompt_tokens": 39
+  },
+  "source_sha256": "f08808257d6d267e5102b0040a62f56e053035e23b4c15ecacf6a39447762306",
+  "core_sha256": "ecb28668bf13f4987024466a773c3b1596eca65749f917652193d683a1febf0a",
+  "G_cpu_seconds": 0.004197099999146303,
+  "G_and_bookkeeping": {
+    "G": "rejected",
+    "certificates": {
+      "x": {
+        "value": 23,
+        "scope": "x",
+        "rule_closure_hash": "082265487480cba572e10516cdd760759480cf8e540ef942c71c6c3ba548d052",
+        "version": 0
+      },
+      "r": {
+        "value": 153,
+        "scope": "r",
+        "rule_closure_hash": "b8324f101db06fb1a19ef4ae2a215bdbcc21c5dab77725fdbd98ee6c96fdf899",
+        "version": 0
+      }
+    },
+    "projection": {
+      "pending": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "z"
+      ],
+      "boundary": [
+        "r",
+        "x"
+      ],
+      "rules": {
+        "a": "x+11",
+        "b": "3*a-7",
+        "c": "b*2",
+        "d": "c+17",
+        "e": "d//3",
+        "f": "e*4-9",
+        "z": "f+r"
+      },
+      "boundary_values": {
+        "r": 153,
+        "x": 23
+      },
+      "goal": "z"
+    },
+    "dirty_old_slots": [],
+    "checked_operations": [
+      {
+        "node": "s0",
+        "expression": "19",
+        "value": 19,
+        "old_literal_matches": true
+      },
+      {
+        "node": "x",
+        "expression": "37-14",
+        "value": 23,
+        "old_literal_matches": true
+      },
+      {
+        "node": "s1",
+        "expression": "s0+7",
+        "value": 26,
+        "old_literal_matches": true
+      },
+      {
+        "node": "s2",
+        "expression": "s1*3",
+        "value": 78,
+        "old_literal_matches": true
+      },
+      {
+        "node": "s3",
+        "expression": "s2-11",
+        "value": 67,
+        "old_literal_matches": true
+      },
+      {
+        "node": "s4",
+        "expression": "s3+29",
+        "value": 96,
+        "old_literal_matches": true
+      },
+      {
+        "node": "s5",
+        "expression": "s4//4",
+        "value": 24,
+        "old_literal_matches": true
+      },
+      {
+        "node": "s6",
+        "expression": "s5*5",
+        "value": 120,
+        "old_literal_matches": true
+      },
+      {
+        "node": "s7",
+        "expression": "s6-17",
+        "value": 103,
+        "old_literal_matches": true
+      },
+      {
+        "node": "s8",
+        "expression": "s7+13",
+        "value": 116,
+        "old_literal_matches": true
+      },
+      {
+        "node": "s9",
+        "expression": "s8//2",
+        "value": 58,
+        "old_literal_matches": true
+      },
+      {
+        "node": "s10",
+        "expression": "s9*3",
+        "value": 174,
+        "old_literal_matches": true
+      },
+      {
+        "node": "r",
+        "expression": "s10-21",
+        "value": 153,
+        "old_literal_matches": true
+      }
+    ],
+    "target_branch_evaluations": 0,
+    "rule_set_hash": "9782626b113995151311f0704e019f301414de19d1e6e0e919301f6d86f3b683",
+    "full_controller_not_shown_to_LM": true
+  },
+  "prefill_timing": {
+    "stage": "prefill",
+    "seconds": 0.0044643000001087785,
+    "peak_allocated_bytes": null,
+    "peak_reserved_bytes": null
+  },
+  "free": {
+    "token_ids": [
+      109,
+      59,
+      107,
+      78,
+      46,
+      15,
+      56,
+      12
+    ],
+    "text": "：整数’结束。s2=s1*3\n：修订判定=no分支r=153。=78；b=95*4-9\nz=fjected；当\n修订记录：x=",
+    "stop_reason": "token_safety_cap",
+    "new_tokens": 8,
+    "additional_forward_tokens": 7,
+    "hit_safety_cap": true,
+    "eos_reached": false,
+    "guard": 8,
+    "no_dynamic_grader_stop": true,
+    "input_checkpoint_cache_length_before_after": [
+      39,
+      39
+    ]
+  },
+  "generation_timing": {
+    "stage": "generation",
+    "seconds": 0.024814899999910267,
+    "peak_allocated_bytes": null,
+    "peak_reserved_bytes": null
+  },
+  "request_seconds_including_G": 0.03898749999643769,
+  "grade": {
+    "extraction": {
+      "value": null,
+      "method": "unresolved"
+    },
+    "numeric_correct": false,
+    "eos_and_correct": false
+  },
+  "evaluation_only": {
+    "gold": 420,
+    "group": "W"
+  },
+  "forward_cost": {
+    "forward_calls": 8,
+    "input_tokens": 46,
+    "synchronized_forward_seconds": 0.02868250000028638
+  }
+}

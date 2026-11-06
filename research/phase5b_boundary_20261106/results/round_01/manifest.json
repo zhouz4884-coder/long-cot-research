@@ -1,0 +1,224 @@
+{
+  "status": "ADMITTED",
+  "source_sha256": "f08808257d6d267e5102b0040a62f56e053035e23b4c15ecacf6a39447762306",
+  "core_sha256": "65371119e3b557ba524461d298fd2e30f98f65927a6b5ee6c927f9efd5876f80",
+  "dataset_sha256": "a8e3b34a1d5a9f1249070b6f8654d18a6bd6efa1103a53d6275bf6a7336e8341",
+  "prepared_jobs_sha256": "c0da8cc6ba4e8e7df1aaf89efe3bda459a32f92ad7665e91fa186d6ce0465867",
+  "cpu_admission_sha256": "bc62ac11234a069e3ad895a10a6a37be4c7c0b6bf01f79301b291ca02a496a75",
+  "binding": {
+    "device": "cuda:0",
+    "allocation_mode": "explicit_authorized_standalone",
+    "physical_index": "0",
+    "physical_uuid": "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+    "requested_visible_identifier": "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+    "CUDA_VISIBLE_DEVICES": "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+    "compute_process_check": "empty before torch import",
+    "PBS_JOBID": null
+  },
+  "base_sha256": "246219aee9774fae0966c7663c765daf3dba2f1df68bc054b539a4dd5d64331b",
+  "quality_sha256": "0eab8a3a62381db7f56c9cf9101647703cb8e1208d9f3c38e25eec59fafcd2f9",
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.2",
+    "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]"
+  },
+  "interface_only": false,
+  "guard": 768,
+  "max_seconds": 270.0,
+  "normal_stop": "configured EOS only; no parser/newline stop",
+  "planned_outputs": 10,
+  "scope": "One synthetic20-definition program, three related E/C/W states; exact scoped checker and known graph; one-shot readout, no per-new-node checker. Not natural end-to-end algorithm.",
+  "model_files": {
+    "local_model_directory": "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B",
+    "files": [
+      {
+        "name": "model-00001-of-00003.safetensors",
+        "size_bytes": 3957900840,
+        "sha256": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223"
+      },
+      {
+        "name": "model-00002-of-00003.safetensors",
+        "size_bytes": 3987450520,
+        "sha256": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5"
+      },
+      {
+        "name": "model-00003-of-00003.safetensors",
+        "size_bytes": 99630640,
+        "sha256": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1"
+      },
+      {
+        "name": "config.json",
+        "size_bytes": 726,
+        "sha256": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a"
+      },
+      {
+        "name": "configuration.json",
+        "size_bytes": 73,
+        "sha256": "f888421726665e8a84b738eed42a64875aed79de8be7daade851ac8bf4c0cef9"
+      },
+      {
+        "name": "generation_config.json",
+        "size_bytes": 239,
+        "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+      },
+      {
+        "name": "merges.txt",
+        "size_bytes": 1671853,
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      },
+      {
+        "name": "model.safetensors.index.json",
+        "size_bytes": 32819,
+        "sha256": "6dc0981b8829fead746441f68f38f24c5ca4a3a66351f652c26c6df0efc43ab2"
+      },
+      {
+        "name": "tokenizer.json",
+        "size_bytes": 11422654,
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "size_bytes": 9732,
+        "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+      },
+      {
+        "name": "vocab.json",
+        "size_bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ],
+    "manifest_sha256": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+    "hash_scope": "All root model weight files plus JSON/TXT/Jinja tokenizer/config assets."
+  },
+  "load_and_hash_seconds": 50.29735276848078,
+  "rendered_jobs_sha256": "01de09574d9fce82a530202051fb9a6b58e3319d99641abaf982c9bcaa9e376e",
+  "model_config": {
+    "vocab_size": 151936,
+    "max_position_embeddings": 40960,
+    "hidden_size": 2560,
+    "intermediate_size": 9728,
+    "num_hidden_layers": 36,
+    "num_attention_heads": 32,
+    "use_sliding_window": false,
+    "sliding_window": null,
+    "max_window_layers": 36,
+    "num_key_value_heads": 8,
+    "head_dim": 128,
+    "hidden_act": "silu",
+    "initializer_range": 0.02,
+    "rms_norm_eps": 1e-06,
+    "use_cache": true,
+    "rope_theta": 1000000,
+    "rope_scaling": null,
+    "attention_bias": false,
+    "attention_dropout": 0.0,
+    "layer_types": [
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention"
+    ],
+    "return_dict": true,
+    "output_hidden_states": false,
+    "torchscript": false,
+    "torch_dtype": "float16",
+    "pruned_heads": {},
+    "tie_word_embeddings": true,
+    "chunk_size_feed_forward": 0,
+    "is_encoder_decoder": false,
+    "is_decoder": false,
+    "cross_attention_hidden_size": null,
+    "add_cross_attention": false,
+    "tie_encoder_decoder": false,
+    "architectures": [
+      "Qwen3ForCausalLM"
+    ],
+    "finetuning_task": null,
+    "id2label": {
+      "0": "LABEL_0",
+      "1": "LABEL_1"
+    },
+    "label2id": {
+      "LABEL_0": 0,
+      "LABEL_1": 1
+    },
+    "task_specific_params": null,
+    "problem_type": null,
+    "tokenizer_class": null,
+    "prefix": null,
+    "bos_token_id": 151643,
+    "pad_token_id": null,
+    "eos_token_id": 151645,
+    "sep_token_id": null,
+    "decoder_start_token_id": null,
+    "max_length": 20,
+    "min_length": 0,
+    "do_sample": false,
+    "early_stopping": false,
+    "num_beams": 1,
+    "num_beam_groups": 1,
+    "diversity_penalty": 0.0,
+    "temperature": 1.0,
+    "top_k": 50,
+    "top_p": 1.0,
+    "typical_p": 1.0,
+    "repetition_penalty": 1.0,
+    "length_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "encoder_no_repeat_ngram_size": 0,
+    "bad_words_ids": null,
+    "num_return_sequences": 1,
+    "output_scores": false,
+    "return_dict_in_generate": false,
+    "forced_bos_token_id": null,
+    "forced_eos_token_id": null,
+    "remove_invalid_values": false,
+    "exponential_decay_length_penalty": null,
+    "suppress_tokens": null,
+    "begin_suppress_tokens": null,
+    "_name_or_path": "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B",
+    "transformers_version": "4.55.2",
+    "model_type": "qwen3",
+    "tf_legacy_loss": false,
+    "use_bfloat16": false,
+    "output_attentions": false
+  },
+  "eos_ids": [
+    151643,
+    151645
+  ],
+  "parameter_dtype": "torch.float16",
+  "tokenizer_class": "Qwen2TokenizerFast"
+}

@@ -1,0 +1,472 @@
+{
+  "rank": 34,
+  "problem_id": "test/intermediate_algebra/1806.json",
+  "question": "Let $z$ be a complex number such that $|z| = 1.$  Find the maximum value of\n\\[|1 + z| + |1 - z + z^2|.\\]",
+  "trace": "<think>\nOkay, so I need to find the maximum value of the expression |1 + z| + |1 - z + z²| where z is a complex number with |z| = 1. Hmm, let me think about how to approach this. \n\nFirst, since |z| = 1, z lies on the unit circle in the complex plane. That means I can represent z as e^(iθ) where �� is the argument of z, right? So maybe I can write z = cosθ + i sinθ, or more simply, z = e^(iθ). That might make it easier to work with trigonometric identities.\n\nLet me try that. Let z = e^(iθ). Then, I can compute each term in the expression separately.\n\nFirst term: |1 + z|. Since z is on the unit circle, 1 + z is a complex number. Let me compute its magnitude. \n\n|1 + z| = |1 + e^(iθ)|. Using the formula for the magnitude of a complex number, which is sqrt[(Re(z1 + z2))² + (Im(z1 + z2))²]. Alternatively, I remember that |1 + e^(iθ)| can be simplified using trigonometric identities. Let me recall that 1 + e^(iθ) = e^(iθ/2) * 2 cos(θ/2). Wait, is that right?\n\nYes, because e^(iθ/2) * 2 cos(θ/2) = 2 cos(θ/2) * [cos(θ/2) + i sin(θ/2)] = 2 cos(θ/2) cos(θ/2) + 2i cos(θ/2) sin(θ/2) = 2 cos²(θ/2) + 2i cos(θ/2) sin(θ/2). On the other hand, 1 + e^(iθ) = 1 + cosθ + i sinθ. Let me check if these are equal.\n\nUsing the double-angle formulas: 2 cos²(θ/2) = 1 + cosθ and 2 sin(θ/2) cos(θ/2) = sinθ. So yes, indeed, 1 + e^(iθ) = 2 e^(iθ/2) cos(θ/2). Therefore, the magnitude |1 + e^(iθ)| is 2 |cos(θ/2)|. Since cosine can be positive or negative, but the magnitude is absolute value. However, since �� is an angle, ��/2 can be in any range, but the absolute value would make it 2|cos(θ/2)|. Therefore, |1 + z| = 2|cos(θ/2)|.\n\nOkay, that's the first term. Now, the second term is |1 - z + z²|. Let me try to simplify that expression. Let's compute 1 - z + z². Maybe I can factor it or express it in terms of z.\n\nAlternatively, since z is on the unit circle, z² is just e^(i2θ). Let me write that out:\n\n1 - z + z² = 1 - e^(iθ) + e^(i2θ). Maybe I can combine these terms. Let me think about how to compute the magnitude of this complex number.\n\nAlternatively, maybe I can factor it. Let me try to factor 1 - z + z². Let me treat this as a quadratic in z. Let me write it as z² - z + 1. Hmm, the quadratic equation z² - z + 1. The roots of this quadratic would be [1 ± sqrt(1 - 4)] / 2 = [1 ± sqrt(-3)] / 2 = [1 ± i√3]/2. So the roots are complex numbers, but maybe that's not helpful here.\n\nAlternatively, maybe I can write 1 - z + z² as z² - z + 1. Since z is on the unit circle, maybe there's a way to express this in terms of trigonometric functions. Let me try substituting z = e^(iθ):\n\nz² - z + 1 = e^(i2θ) - e^(iθ) + 1. Let me compute this expression. Let me write it as 1 - e^(iθ) + e^(i2θ). Maybe I can factor this expression. Let me think. Let me try to write it as e^(i2θ) - e^(iθ) + 1. Alternatively, maybe factor terms:\n\nLet me factor e^(iθ) from the first two terms? e^(iθ)(e^(iθ) - 1) + 1. Not sure if that helps. Alternatively, maybe write it as e^(i2θ) + 1 - e^(iθ). \n\nAlternatively, maybe use the identity for e^(i2θ) + 1. Let me recall that e^(i2θ) + 1 = 2 e^(iθ) cosθ. Wait, is that right? Let me check. 2 e^(iθ) cosθ = 2 e^(iθ) [ (e^(iθ) + e^(-iθ))/2 ] = e^(iθ) [ e^(iθ) + e^(-iθ) ] = e^(i2θ) + 1. Yes! So e^(i2θ) + 1 = 2 e^(iθ) cosθ. Therefore, e^(i2θ) + 1 - e^(iθ) = 2 e^(iθ) cosθ - e^(iθ) = e^(iθ)(2 cosθ - 1). Therefore, 1 - z + z² = e^(iθ)(2 cosθ - 1). Therefore, the magnitude |1 - z + z²| is |e^(iθ)(2 cosθ - 1)| = |2 cosθ - 1|, since |e^(iθ)| = 1.\n\nWait, that seems too simple. Let me check again. If 1 - z + z² = e^(iθ)(2 cosθ - 1), then the magnitude is |2 cosθ - 1|. Let me verify with �� = 0. If �� = 0, z = 1. Then 1 - 1 + 1 = 1. On the other hand, e^(i0)(2 cos0 - 1) = 1*(2*1 -1) = 1. Correct. If �� = π, z = -1. Then 1 - (-1) + (-1)^2 = 1 + 1 + 1 = 3. On the other hand, e^(iπ)(2 cosπ - 1) = (-1)(2*(-1) -1) = (-1)(-2 -1) = (-1)(-3) = 3. Correct. Another check: �� = π/2. z = i. Then 1 - i + i² = 1 - i -1 = -i. The magnitude is 1. On the other hand, e^(iπ/2)(2 cos(π/2) - 1) = i*(0 - 1) = -i. The magnitude is 1. Correct. So that formula seems to hold. Therefore, |1 - z + z²| = |2 cosθ - 1|.\n\nTherefore, the original expression is |1 + z| + |1 - z + z²| = 2|cos(θ/2)| + |2 cosθ - 1|. Therefore, the problem reduces to maximizing the function f(θ) = 2|cos(θ/2)| + |2 cosθ - 1| over �� in [0, 2π). \n\nNow, since the function is periodic with period 2π, we can consider �� in [0, 2π). Also, since cosine is even, and the absolute values might make it symmetric, maybe we can restrict �� to [0, π] and double check? Or maybe not. Let me think. However, since �� is in [0, 2π), and cos(θ/2) is symmetric around �� = π, maybe it's better to consider �� in [0, π] and then check if the maximum occurs there or in another interval. Alternatively, maybe split into cases based on the value of �� where the expressions inside the absolute values change sign.\n\nAlternatively, since the function is in terms of ��, maybe we can write it without absolute values by considering different intervals where the expressions inside are positive or negative. Let me try that.\n\nFirst, let's note that |cos(θ/2)| is equal to cos(θ/2) when ��/2 is in [-π/2, π/2], i.e., �� in [-π, π], but since �� is between 0 and 2π, ��/2 is between 0 and π. Therefore, cos(θ/2) is non-negative in [0, π], and non-positive in [π, 2π]. However, since we take absolute value, |cos(θ/2)| = cos(θ/2) when �� ∈ [0, π], and |cos(θ/2)| = -cos(θ/2) when �� ∈ [π, 2π]. But since cos(θ/2) is symmetric around �� = π, maybe we can just consider �� ∈ [0, π] and then double the function? Wait, no, because the second term is |2 cosθ - 1|, which may have different behavior.\n\nAlternatively, let me consider �� ∈ [0, π] and �� ∈ [π, 2π) separately. Let me first analyze the second term, |2 cosθ - 1|. The expression inside is 2 cosθ - 1. Let's find when 2 cosθ - 1 is positive or negative. \n\n2 cosθ - 1 ≥ 0 => cosθ ≥ 1/2. Which occurs when �� ∈ [-π/3 + 2πk, π/3 + 2πk], for integers k. In the interval [0, 2π), this is �� ∈ [0, π/3] �� [5π/3, 2π). Therefore, in �� ∈ [0, π/3] �� [5π/3, 2π), 2 cosθ - 1 is non-negative, and in �� ∈ [π/3, 5π/3], it is negative. Therefore, |2 cosθ - 1| = 2 cosθ - 1 when �� ∈ [0, π/3] �� [5π/3, 2π), and |2 cosθ - 1| = 1 - 2 cosθ when �� ∈ [π/3, 5π/3].\n\nTherefore, the function f(θ) can be split into different cases. Let me try to split �� into intervals:\n\nCase 1: �� ∈ [0, π/3]. Here, |cos(θ/2)| = cos(θ/2), and |2 cosθ - 1| = 2 cosθ - 1. Therefore, f(θ) = 2 cos(θ/2) + 2 cosθ - 1.\n\nCase 2: �� ∈ [π/3, 5π/3]. Here, |cos(θ/2)| = cos(θ/2) if �� ∈ [0, π], and |cos(θ/2)| = -cos(θ/2) if �� ∈ [π, 2π). Wait, but �� ∈ [π/3, 5π/3], which includes �� ∈ [π/3, π] and �� ∈ [π, 5π/3]. So maybe split into two subcases:\n\nCase 2a: �� ∈ [π/3, π]. Here, |cos(θ/2)| = cos(θ/2) because ��/2 ∈ [π/6, π/2], so cos(θ/2) is positive. And |2 cosθ - 1| = 1 - 2 cosθ because �� ∈ [π/3, 5π/3], but in this subinterval �� ∈ [π/3, π], cosθ is decreasing from 1/2 to -1, so 2 cosθ - 1 is negative here. Therefore, f(θ) = 2 cos(θ/2) + 1 - 2 cosθ.\n\nCase 2b: �� ∈ [π, 5π/3]. Here, ��/2 ∈ [π/2, 5π/6], so cos(θ/2) is negative, so |cos(θ/2)| = -cos(θ/2). Also, �� ∈ [π, 5π/3], which is still within [π/3, 5π/3], so |2 cosθ - 1| = 1 - 2 cosθ. Therefore, f(θ) = -2 cos(θ/2) + 1 - 2 cosθ.\n\nCase 3: �� ∈ [5π/3, 2π). Here, |cos(θ/2)| = -cos(θ/2) because �� ∈ [5π/3, 2π), so ��/2 ∈ [5π/6, π), where cos(θ/2) is negative. Also, since �� ∈ [5π/3, 2π), which is within [0, 2π), and 2 cosθ - 1 is non-negative here. Wait, earlier we had that 2 cosθ - 1 is non-negative when �� ∈ [0, π/3] �� [5π/3, 2π). Therefore, in this case, �� ∈ [5π/3, 2π), so |2 cosθ - 1| = 2 cosθ - 1. Therefore, f(θ) = -2 cos(θ/2) + 2 cosθ - 1.\n\nSo, now we have four cases. However, note that Case 3 is a subset of Case 1? No, Case 1 is �� ∈ [0, π/3], and Case 3 is �� ∈ [5π/3, 2π). Therefore, the function is split into four intervals. However, maybe we can analyze each interval separately and find the maximum in each.\n\nAlternatively, maybe it's easier to consider �� in [0, π] and �� in [π, 2π), but given that the function is symmetric? Wait, maybe not. Let me think. Since �� is in [0, 2π), and the function f(θ) is periodic, but with absolute values, maybe there's some symmetry. However, since cos(θ/2) is symmetric around �� = π? Let me check. If we replace �� with 2π - ��, then cos((2π - ��)/2) = cos(π - ��/2) = -cos(θ/2). Therefore, |cos((2π - ��)/2)| = | -cos(θ/2)| = |cos(θ/2)|. Similarly, for the second term, |2 cos(2π - ��) - 1| = |2 cosθ - 1|. Therefore, f(2π - ��) = |1 + z| + |1 - z + z²| where z = e^(i(2π - ��)) = e^(-iθ). Therefore, |1 + z| = |1 + e^(-iθ)| = |1 + e^(iθ)| = same as before. Similarly, |1 - z + z²| = |1 - e^(-iθ) + e^(-i2θ)|. Let me compute that:\n\n1 - e^(-iθ) + e^(-i2θ) = e^(-i2θ) - e^(-iθ) + 1. Which is the conjugate of 1 - e^(iθ) + e^(i2θ). Therefore, the magnitude is the same. Therefore, f(2π - ��) = f(θ). Therefore, the function is symmetric with respect to �� → 2π - ��. Therefore, the maximum on [0, 2π) is the same as the maximum on [0, π], and the maximum on [π, 2π) is same as maximum on [0, π]. Therefore, maybe I can just consider �� ∈ [0, π], and then double check the maximum there. However, since �� ∈ [0, π] includes the interval [0, π/3] and [π/3, π], which is Case 1 and Case 2a. Therefore, maybe I can focus on �� ∈ [0, π], and then check �� ∈ [π, 2π) is symmetric. However, since the maximum is likely to occur in �� ∈ [0, π], but not sure. Alternatively, proceed with analyzing each case.\n\nBut maybe instead of splitting into cases, I can use calculus. Since f(θ) is differentiable except at points where the absolute values change, which are �� = π/3, �� = π, �� = 5π/3. However, since we have symmetry, maybe focus on �� ∈ [0, π], and then check �� ∈ [π, 2π) if needed.\n\nAlternatively, let me try to write f(θ) for �� ∈ [0, π/3], �� ∈ [π/3, π], and �� ∈ [π, 2π). But given the symmetry, maybe focus on �� ∈ [0, π].\n\nLet me first consider �� ∈ [0, π/3]. Then f(θ) = 2 cos(θ/2) + 2 cosθ - 1. Let me compute derivative here. Let me denote f(θ) = 2 cos(θ/2) + 2 cosθ - 1. Then f’(θ) = -sin(θ/2) + (-2 sinθ). Let me compute this:\n\nf’(θ) = -sin(θ/2) - 2 sinθ. Let me set derivative to zero to find critical points.\n\nSo, -sin(θ/2) - 2 sinθ = 0 => sin(θ/2) + 2 sinθ = 0.\n\nLet me express sinθ in terms of sin(θ/2). Recall that sinθ = 2 sin(θ/2) cos(θ/2). Therefore:\n\nsin(θ/2) + 2 * 2 sin(θ/2) cos(θ/2) = 0 => sin(θ/2) [1 + 4 cos(θ/2)] = 0.\n\nTherefore, either sin(θ/2) = 0 or 1 + 4 cos(θ/2) = 0.\n\nBut �� ∈ [0, π/3], so ��/2 ∈ [0, π/6]. In this interval, sin(θ/2) is non-negative, and equals zero only at �� = 0. The other equation: 1 + 4 cos(θ/2) = 0 => cos(θ/2) = -1/4. However, ��/2 ∈ [0, π/6], so cos(θ/2) is in [cos(π/6), 1] = [√3/2, 1], which is approximately [0.866, 1]. Therefore, cos(θ/2) = -1/4 is not possible here. Therefore, the only critical point in [0, π/3] is �� = 0. Therefore, in this interval, the maximum occurs either at �� = 0 or at �� = π/3.\n\nLet me compute f(0): 2 cos(0) + 2 cos(0) - 1 = 2*1 + 2*1 -1 = 2 + 2 -1 = 3.\n\nf(π/3): 2 cos(π/6) + 2 cos(π/3) -1. Let me compute:\n\ncos(π/6) = ��3/2 �� 0.866, cos(π/3) = 1/2. Therefore:\n\n2*(√3/2) + 2*(1/2) -1 = ��3 + 1 -1 = ��3 �� 1.732. So, at �� = π/3, the value is ��3, which is less than 3. Therefore, in this interval, the maximum is 3 at �� = 0.\n\nNow, moving to Case 2a: �� ∈ [π/3, π]. Here, f(θ) = 2 cos(θ/2) + 1 - 2 cosθ. Let me compute derivative here. f(θ) = 2 cos(θ/2) + 1 - 2 cosθ. Then f’(θ) = -sin(θ/2) + 2 sinθ.\n\nSet derivative to zero: -sin(θ/2) + 2 sinθ = 0 => 2 sinθ = sin(θ/2).\n\nAgain, express sinθ as 2 sin(θ/2) cos(θ/2). Therefore:\n\n2 * 2 sin(θ/2) cos(θ/2) = sin(θ/2) => 4 sin(θ/2) cos(θ/2) - sin(θ/2) = 0 => sin(θ/2) [4 cos(θ/2) - 1] = 0.\n\nTherefore, either sin(θ/2) = 0 or 4 cos(θ/2) - 1 = 0.\n\nIn �� ∈ [π/3, π], ��/2 ∈ [π/6, π/2]. Therefore, sin(θ/2) is positive here. Therefore, sin(θ/2) = 0 only when ��/2 = 0 or π, but �� ∈ [π/3, π], so ��/2 ∈ [π/6, π/2], so sin(θ/2) ≠ 0. Therefore, the critical points occur when 4 cos(θ/2) - 1 = 0 => cos(θ/2) = 1/4. Therefore, ��/2 = arccos(1/4), so �� = 2 arccos(1/4). Let me compute this value numerically. arccos(1/4) is approximately 1.318 radians (since cos(π/3) = 0.5, cos(π/2) = 0, so 1/4 is between π/3 and π/2). Therefore, �� �� 2 * 1.318 �� 2.636 radians. Let me check if this is within [π/3, π]. π �� 3.1416, so 2.636 is between π/3 �� 1.047 and π �� 3.1416. Yes, so that's a critical point in this interval. Therefore, we need to evaluate f(θ) at �� = 2 arccos(1/4), as well as at the endpoints �� = π/3 and �� = π.\n\nFirst, let me compute f(π/3): as before, it was ��3 �� 1.732. Wait, but earlier in Case 1, at �� = π/3, f(θ) was ��3. But here, in Case 2a, �� ∈ [π/3, π], so �� = π/3 is included here. Wait, but earlier when I calculated f(π/3) in Case 1, I had f(π/3) = ��3. However, in Case 2a, the expression is f(θ) = 2 cos(θ/2) + 1 - 2 cosθ. Let me check if that gives the same value.\n\nAt �� = π/3:\n\n2 cos(π/6) + 1 - 2 cos(π/3) = 2*(√3/2) + 1 - 2*(1/2) = ��3 + 1 - 1 = ��3. Correct. So that's consistent.\n\nNow, compute f(π):\n\nf(π) = 2 cos(π/2) + 1 - 2 cosπ = 2*0 + 1 - 2*(-1) = 0 + 1 + 2 = 3. So f(π) = 3.\n\nNow, compute f at �� = 2 arccos(1/4). Let me denote �� = 2 arccos(1/4). Let me compute cos(θ/2) = 1/4, so ��/2 = arccos(1/4). Therefore, �� = 2 arccos(1/4). Let me compute f(θ):\n\nf(θ) = 2 cos(θ/2) + 1 - 2 cosθ. Since cos(θ/2) = 1/4, then 2 cos(θ/2) = 2*(1/4) = 1/2. Now, need to compute cosθ. Since �� = 2 arccos(1/4), we can use double-angle formula: cosθ = 2 cos²(θ/2) - 1 = 2*(1/4)^2 - 1 = 2*(1/16) - 1 = 1/8 - 1 = -7/8. Therefore, -2 cosθ = -2*(-7/8) = 14/8 = 7/4. Therefore, f(θ) = 1/2 + 1 + 7/4 = 1/2 + 1 is 3/2, plus 7/4 is 3/2 + 7/4 = 6/4 + 7/4 = 13/4 = 3.25. \n\nSo 13/4 is 3.25. Which is higher than 3. Therefore, this critical point gives a higher value. Therefore, in this interval, the maximum is 13/4 at �� = 2 arccos(1/4). Therefore, in Case 2a, the maximum is 13/4.\n\nNow, moving on to Case 2b: �� ∈ [π, 5π/3]. Here, f(θ) = -2 cos(θ/2) + 1 - 2 cosθ. However, due to the symmetry, since �� ∈ [π, 5π/3], and we know that f(θ) = f(2π - ��). Let me check �� = π + x, where x ∈ [0, π]. Then 2π - �� = π - x. Therefore, f(θ) = f(π - x). Therefore, the function in �� ∈ [π, 5π/3] is symmetric to �� ∈ [π/3, π], but mirrored. Therefore, perhaps the maximum in this interval is same as the maximum in [π/3, π], which was 13/4. But let me check.\n\nAlternatively, maybe compute derivative here. Let me do that. f(θ) = -2 cos(θ/2) + 1 - 2 cosθ. Then f’(θ) = sin(θ/2) + 2 sinθ. Set derivative to zero: sin(θ/2) + 2 sinθ = 0. Again, express sinθ as 2 sin(θ/2) cos(θ/2). Therefore:\n\nsin(θ/2) + 2 * 2 sin(θ/2) cos(θ/2) = 0 => sin(θ/2) [1 + 4 cos(θ/2)] = 0.\n\nTherefore, either sin(θ/2) = 0 or 1 + 4 cos(θ/2) = 0.\n\nIn �� ∈ [π, 5π/3], ��/2 ∈ [π/2, 5π/6]. Therefore, sin(θ/2) is non-negative here (since ��/2 is between π/2 and 5π/6, which is in the second quadrant where sine is positive). Therefore, sin(θ/2) = 0 only when ��/2 = π, i.e., �� = 2π, which is the endpoint. The other equation: 1 + 4 cos(θ/2) = 0 => cos(θ/2) = -1/4. Therefore, ��/2 = arccos(-1/4). Since ��/2 ∈ [π/2, 5π/6], arccos(-1/4) is in the second quadrant. Let me compute arccos(-1/4). Since cos(π - arccos(1/4)) = -cos(arccos(1/4)) = -1/4. Therefore, arccos(-1/4) = π - arccos(1/4). Therefore, ��/2 = π - arccos(1/4), so �� = 2π - 2 arccos(1/4). Let me check if this is within [π, 5π/3]. Let me compute �� = 2π - 2 arccos(1/4). Since arccos(1/4) �� 1.318 radians, so 2 arccos(1/4) �� 2.636 radians. Therefore, �� �� 2π - 2.636 �� 6.283 - 2.636 �� 3.647 radians. Now, π �� 3.1416, 5π/3 �� 5.236. Therefore, 3.647 is between π and 5π/3, so yes, this is in the interval. Therefore, there is a critical point here.\n\nTherefore, need to evaluate f(θ) at �� = 2π - 2 arccos(1/4), as well as endpoints �� = π and �� = 5π/3.\n\nFirst, compute f(π) = -2 cos(π/2) + 1 - 2 cosπ = -2*0 + 1 - 2*(-1) = 0 + 1 + 2 = 3.\n\nCompute f(5π/3). Let me compute �� = 5π/3. Then ��/2 = 5π/6. Therefore:\n\nf(θ) = -2 cos(5π/6) + 1 - 2 cos(5π/3). \n\ncos(5π/6) = -√3/2, cos(5π/3) = cos(π/3) = 1/2. Therefore:\n\n-2*(-√3/2) + 1 - 2*(1/2) = ��3 + 1 - 1 = ��3 �� 1.732. \n\nNow, compute f at �� = 2π - 2 arccos(1/4). Let me denote �� = 2π - 2 arccos(1/4). Let me compute cos(θ/2) = cos(π - arccos(1/4)) = -cos(arccos(1/4)) = -1/4. Therefore, -2 cos(θ/2) = -2*(-1/4) = 1/2. Now, compute cosθ. Since �� = 2π - 2 arccos(1/4), cosθ = cos(2π - 2 arccos(1/4)) = cos(2 arccos(1/4)) = same as earlier. Wait, cos(2 arccos(1/4)) was calculated earlier as -7/8. Therefore, cosθ = -7/8. Therefore, -2 cosθ = -2*(-7/8) = 14/8 = 7/4. Therefore, f(θ) = 1/2 + 1 + 7/4 = same as before, 13/4 = 3.25. Therefore, this critical point also gives 13/4. Therefore, in this interval, the maximum is 13/4.\n\nFinally, Case 3: �� ∈ [5π/3, 2π). Here, f(θ) = -2 cos(θ/2) + 2 cosθ - 1. Let me check if this is symmetric. Since �� ∈ [5π/3, 2π), which is symmetric to �� ∈ [0, π/3] via �� → 2π - ��. Let me check f(θ) = -2 cos(θ/2) + 2 cosθ - 1. If we take �� = 2π - φ where φ ∈ [0, π/3], then:\n\nf(θ) = -2 cos( (2π - φ)/2 ) + 2 cos(2π - φ) - 1 = -2 cos(π - φ/2) + 2 cosφ - 1 = -2*(-cos(φ/2)) + 2 cosφ - 1 = 2 cos(φ/2) + 2 cosφ - 1, which is the same as Case 1. Therefore, this function is symmetric to Case 1. Therefore, the maximum in this interval is same as in Case 1, which was 3 at �� = 0 (but �� = 0 is not in this interval). Wait, but in this interval �� ∈ [5π/3, 2π), the maximum would be similar to Case 1. Let me check endpoints.\n\nAt �� = 5π/3: f(θ) = -2 cos(5π/6) + 2 cos(5π/3) -1 = -2*(-√3/2) + 2*(1/2) -1 = ��3 + 1 -1 = ��3 �� 1.732.\n\nAt �� = 2π: f(θ) = -2 cos(π) + 2 cos(2π) -1 = -2*(-1) + 2*1 -1 = 2 + 2 -1 = 3. Therefore, same as �� = 0. Therefore, in this interval, the maximum is 3 at �� = 2π. However, since �� = 2π is the same as �� = 0, which is already considered.\n\nTherefore, overall, the maximum of f(θ) is 13/4, which is 3.25, achieved at �� = 2 arccos(1/4) and �� = 2π - 2 arccos(1/4). Therefore, the maximum value is 13/4. But wait, let me check if that's correct. Wait, 13/4 is 3.25, which is higher than 3, which was the value at �� = 0 and �� = π and �� = 2π. Therefore, 13/4 is the maximum. \n\nBut let me verify this with another approach. Maybe using complex numbers or geometric interpretations. Let me think. \n\nAlternatively, since z is on the unit circle, maybe we can parametrize z as e^(iθ) and use trigonometric identities. But we already did that. Alternatively, perhaps consider specific points where the maximum might occur. For example, when z is real. If z = 1, then |1 + z| = |2| = 2, |1 - z + z²| = |1 - 1 + 1| = 1, so total is 3. If z = -1, then |1 + z| = |0| = 0, |1 - z + z²| = |1 - (-1) + 1| = |3| = 3, so total is 0 + 3 = 3. If z = i, then |1 + i| = ��2, |1 - i + (-1)| = | -i | = 1, total is ��2 + 1 �� 2.414, which is less than 3.25. If z = e^(iθ) where �� is such that cosθ = 1/4, but maybe not. Wait, but we found that at �� = 2 arccos(1/4), the value is 13/4 = 3.25. Let me check with �� �� 2.636 radians. Let me compute �� �� 2.636 radians. Let me compute cos(θ/2) = 1/4, so ��/2 �� arccos(1/4) �� 1.",
+  "paragraphs": [
+    {
+      "index": 1,
+      "start": 0,
+      "end": 179,
+      "text": "<think>\nOkay, so I need to find the maximum value of the expression |1 + z| + |1 - z + z²| where z is a complex number with |z| = 1. Hmm, let me think about how to approach this."
+    },
+    {
+      "index": 2,
+      "start": 181,
+      "end": 460,
+      "text": "First, since |z| = 1, z lies on the unit circle in the complex plane. That means I can represent z as e^(iθ) where �� is the argument of z, right? So maybe I can write z = cosθ + i sinθ, or more simply, z = e^(iθ). That might make it easier to work with trigonometric identities."
+    },
+    {
+      "index": 3,
+      "start": 462,
+      "end": 554,
+      "text": "Let me try that. Let z = e^(iθ). Then, I can compute each term in the expression separately."
+    },
+    {
+      "index": 4,
+      "start": 556,
+      "end": 665,
+      "text": "First term: |1 + z|. Since z is on the unit circle, 1 + z is a complex number. Let me compute its magnitude."
+    },
+    {
+      "index": 5,
+      "start": 667,
+      "end": 965,
+      "text": "|1 + z| = |1 + e^(iθ)|. Using the formula for the magnitude of a complex number, which is sqrt[(Re(z1 + z2))² + (Im(z1 + z2))²]. Alternatively, I remember that |1 + e^(iθ)| can be simplified using trigonometric identities. Let me recall that 1 + e^(iθ) = e^(iθ/2) * 2 cos(θ/2). Wait, is that right?"
+    },
+    {
+      "index": 6,
+      "start": 967,
+      "end": 1207,
+      "text": "Yes, because e^(iθ/2) * 2 cos(θ/2) = 2 cos(θ/2) * [cos(θ/2) + i sin(θ/2)] = 2 cos(θ/2) cos(θ/2) + 2i cos(θ/2) sin(θ/2) = 2 cos²(θ/2) + 2i cos(θ/2) sin(θ/2). On the other hand, 1 + e^(iθ) = 1 + cosθ + i sinθ. Let me check if these are equal."
+    },
+    {
+      "index": 7,
+      "start": 1209,
+      "end": 1621,
+      "text": "Using the double-angle formulas: 2 cos²(θ/2) = 1 + cosθ and 2 sin(θ/2) cos(θ/2) = sinθ. So yes, indeed, 1 + e^(iθ) = 2 e^(iθ/2) cos(θ/2). Therefore, the magnitude |1 + e^(iθ)| is 2 |cos(θ/2)|. Since cosine can be positive or negative, but the magnitude is absolute value. However, since �� is an angle, ��/2 can be in any range, but the absolute value would make it 2|cos(θ/2)|. Therefore, |1 + z| = 2|cos(θ/2)|."
+    },
+    {
+      "index": 8,
+      "start": 1623,
+      "end": 1806,
+      "text": "Okay, that's the first term. Now, the second term is |1 - z + z²|. Let me try to simplify that expression. Let's compute 1 - z + z². Maybe I can factor it or express it in terms of z."
+    },
+    {
+      "index": 9,
+      "start": 1808,
+      "end": 1896,
+      "text": "Alternatively, since z is on the unit circle, z² is just e^(i2θ). Let me write that out:"
+    },
+    {
+      "index": 10,
+      "start": 1898,
+      "end": 2037,
+      "text": "1 - z + z² = 1 - e^(iθ) + e^(i2θ). Maybe I can combine these terms. Let me think about how to compute the magnitude of this complex number."
+    },
+    {
+      "index": 11,
+      "start": 2039,
+      "end": 2383,
+      "text": "Alternatively, maybe I can factor it. Let me try to factor 1 - z + z². Let me treat this as a quadratic in z. Let me write it as z² - z + 1. Hmm, the quadratic equation z² - z + 1. The roots of this quadratic would be [1 ± sqrt(1 - 4)] / 2 = [1 ± sqrt(-3)] / 2 = [1 ± i√3]/2. So the roots are complex numbers, but maybe that's not helpful here."
+    },
+    {
+      "index": 12,
+      "start": 2385,
+      "end": 2583,
+      "text": "Alternatively, maybe I can write 1 - z + z² as z² - z + 1. Since z is on the unit circle, maybe there's a way to express this in terms of trigonometric functions. Let me try substituting z = e^(iθ):"
+    },
+    {
+      "index": 13,
+      "start": 2585,
+      "end": 2825,
+      "text": "z² - z + 1 = e^(i2θ) - e^(iθ) + 1. Let me compute this expression. Let me write it as 1 - e^(iθ) + e^(i2θ). Maybe I can factor this expression. Let me think. Let me try to write it as e^(i2θ) - e^(iθ) + 1. Alternatively, maybe factor terms:"
+    },
+    {
+      "index": 14,
+      "start": 2827,
+      "end": 2977,
+      "text": "Let me factor e^(iθ) from the first two terms? e^(iθ)(e^(iθ) - 1) + 1. Not sure if that helps. Alternatively, maybe write it as e^(i2θ) + 1 - e^(iθ)."
+    },
+    {
+      "index": 15,
+      "start": 2979,
+      "end": 3469,
+      "text": "Alternatively, maybe use the identity for e^(i2θ) + 1. Let me recall that e^(i2θ) + 1 = 2 e^(iθ) cosθ. Wait, is that right? Let me check. 2 e^(iθ) cosθ = 2 e^(iθ) [ (e^(iθ) + e^(-iθ))/2 ] = e^(iθ) [ e^(iθ) + e^(-iθ) ] = e^(i2θ) + 1. Yes! So e^(i2θ) + 1 = 2 e^(iθ) cosθ. Therefore, e^(i2θ) + 1 - e^(iθ) = 2 e^(iθ) cosθ - e^(iθ) = e^(iθ)(2 cosθ - 1). Therefore, 1 - z + z² = e^(iθ)(2 cosθ - 1). Therefore, the magnitude |1 - z + z²| is |e^(iθ)(2 cosθ - 1)| = |2 cosθ - 1|, since |e^(iθ)| = 1."
+    },
+    {
+      "index": 16,
+      "start": 3471,
+      "end": 4122,
+      "text": "Wait, that seems too simple. Let me check again. If 1 - z + z² = e^(iθ)(2 cosθ - 1), then the magnitude is |2 cosθ - 1|. Let me verify with �� = 0. If �� = 0, z = 1. Then 1 - 1 + 1 = 1. On the other hand, e^(i0)(2 cos0 - 1) = 1*(2*1 -1) = 1. Correct. If �� = π, z = -1. Then 1 - (-1) + (-1)^2 = 1 + 1 + 1 = 3. On the other hand, e^(iπ)(2 cosπ - 1) = (-1)(2*(-1) -1) = (-1)(-2 -1) = (-1)(-3) = 3. Correct. Another check: �� = π/2. z = i. Then 1 - i + i² = 1 - i -1 = -i. The magnitude is 1. On the other hand, e^(iπ/2)(2 cos(π/2) - 1) = i*(0 - 1) = -i. The magnitude is 1. Correct. So that formula seems to hold. Therefore, |1 - z + z²| = |2 cosθ - 1|."
+    },
+    {
+      "index": 17,
+      "start": 4124,
+      "end": 4327,
+      "text": "Therefore, the original expression is |1 + z| + |1 - z + z²| = 2|cos(θ/2)| + |2 cosθ - 1|. Therefore, the problem reduces to maximizing the function f(θ) = 2|cos(θ/2)| + |2 cosθ - 1| over �� in [0, 2π)."
+    },
+    {
+      "index": 18,
+      "start": 4329,
+      "end": 4878,
+      "text": "Now, since the function is periodic with period 2π, we can consider �� in [0, 2π). Also, since cosine is even, and the absolute values might make it symmetric, maybe we can restrict �� to [0, π] and double check? Or maybe not. Let me think. However, since �� is in [0, 2π), and cos(θ/2) is symmetric around �� = π, maybe it's better to consider �� in [0, π] and then check if the maximum occurs there or in another interval. Alternatively, maybe split into cases based on the value of �� where the expressions inside the absolute values change sign."
+    },
+    {
+      "index": 19,
+      "start": 4880,
+      "end": 5085,
+      "text": "Alternatively, since the function is in terms of ��, maybe we can write it without absolute values by considering different intervals where the expressions inside are positive or negative. Let me try that."
+    },
+    {
+      "index": 20,
+      "start": 5087,
+      "end": 5653,
+      "text": "First, let's note that |cos(θ/2)| is equal to cos(θ/2) when ��/2 is in [-π/2, π/2], i.e., �� in [-π, π], but since �� is between 0 and 2π, ��/2 is between 0 and π. Therefore, cos(θ/2) is non-negative in [0, π], and non-positive in [π, 2π]. However, since we take absolute value, |cos(θ/2)| = cos(θ/2) when �� ∈ [0, π], and |cos(θ/2)| = -cos(θ/2) when �� ∈ [π, 2π]. But since cos(θ/2) is symmetric around �� = π, maybe we can just consider �� ∈ [0, π] and then double the function? Wait, no, because the second term is |2 cosθ - 1|, which may have different behavior."
+    },
+    {
+      "index": 21,
+      "start": 5655,
+      "end": 5868,
+      "text": "Alternatively, let me consider �� ∈ [0, π] and �� ∈ [π, 2π) separately. Let me first analyze the second term, |2 cosθ - 1|. The expression inside is 2 cosθ - 1. Let's find when 2 cosθ - 1 is positive or negative."
+    },
+    {
+      "index": 22,
+      "start": 5870,
+      "end": 6261,
+      "text": "2 cosθ - 1 ≥ 0 => cosθ ≥ 1/2. Which occurs when �� ∈ [-π/3 + 2πk, π/3 + 2πk], for integers k. In the interval [0, 2π), this is �� ∈ [0, π/3] �� [5π/3, 2π). Therefore, in �� ∈ [0, π/3] �� [5π/3, 2π), 2 cosθ - 1 is non-negative, and in �� ∈ [π/3, 5π/3], it is negative. Therefore, |2 cosθ - 1| = 2 cosθ - 1 when �� ∈ [0, π/3] �� [5π/3, 2π), and |2 cosθ - 1| = 1 - 2 cosθ when �� ∈ [π/3, 5π/3]."
+    },
+    {
+      "index": 23,
+      "start": 6263,
+      "end": 6365,
+      "text": "Therefore, the function f(θ) can be split into different cases. Let me try to split �� into intervals:"
+    },
+    {
+      "index": 24,
+      "start": 6367,
+      "end": 6492,
+      "text": "Case 1: �� ∈ [0, π/3]. Here, |cos(θ/2)| = cos(θ/2), and |2 cosθ - 1| = 2 cosθ - 1. Therefore, f(θ) = 2 cos(θ/2) + 2 cosθ - 1."
+    },
+    {
+      "index": 25,
+      "start": 6494,
+      "end": 6718,
+      "text": "Case 2: �� ∈ [π/3, 5π/3]. Here, |cos(θ/2)| = cos(θ/2) if �� ∈ [0, π], and |cos(θ/2)| = -cos(θ/2) if �� ∈ [π, 2π). Wait, but �� ∈ [π/3, 5π/3], which includes �� ∈ [π/3, π] and �� ∈ [π, 5π/3]. So maybe split into two subcases:"
+    },
+    {
+      "index": 26,
+      "start": 6720,
+      "end": 7028,
+      "text": "Case 2a: �� ∈ [π/3, π]. Here, |cos(θ/2)| = cos(θ/2) because ��/2 ∈ [π/6, π/2], so cos(θ/2) is positive. And |2 cosθ - 1| = 1 - 2 cosθ because �� ∈ [π/3, 5π/3], but in this subinterval �� ∈ [π/3, π], cosθ is decreasing from 1/2 to -1, so 2 cosθ - 1 is negative here. Therefore, f(θ) = 2 cos(θ/2) + 1 - 2 cosθ."
+    },
+    {
+      "index": 27,
+      "start": 7030,
+      "end": 7263,
+      "text": "Case 2b: �� ∈ [π, 5π/3]. Here, ��/2 ∈ [π/2, 5π/6], so cos(θ/2) is negative, so |cos(θ/2)| = -cos(θ/2). Also, �� ∈ [π, 5π/3], which is still within [π/3, 5π/3], so |2 cosθ - 1| = 1 - 2 cosθ. Therefore, f(θ) = -2 cos(θ/2) + 1 - 2 cosθ."
+    },
+    {
+      "index": 28,
+      "start": 7265,
+      "end": 7686,
+      "text": "Case 3: �� ∈ [5π/3, 2π). Here, |cos(θ/2)| = -cos(θ/2) because �� ∈ [5π/3, 2π), so ��/2 ∈ [5π/6, π), where cos(θ/2) is negative. Also, since �� ∈ [5π/3, 2π), which is within [0, 2π), and 2 cosθ - 1 is non-negative here. Wait, earlier we had that 2 cosθ - 1 is non-negative when �� ∈ [0, π/3] �� [5π/3, 2π). Therefore, in this case, �� ∈ [5π/3, 2π), so |2 cosθ - 1| = 2 cosθ - 1. Therefore, f(θ) = -2 cos(θ/2) + 2 cosθ - 1."
+    },
+    {
+      "index": 29,
+      "start": 7688,
+      "end": 7963,
+      "text": "So, now we have four cases. However, note that Case 3 is a subset of Case 1? No, Case 1 is �� ∈ [0, π/3], and Case 3 is �� ∈ [5π/3, 2π). Therefore, the function is split into four intervals. However, maybe we can analyze each interval separately and find the maximum in each."
+    },
+    {
+      "index": 30,
+      "start": 7965,
+      "end": 8728,
+      "text": "Alternatively, maybe it's easier to consider �� in [0, π] and �� in [π, 2π), but given that the function is symmetric? Wait, maybe not. Let me think. Since �� is in [0, 2π), and the function f(θ) is periodic, but with absolute values, maybe there's some symmetry. However, since cos(θ/2) is symmetric around �� = π? Let me check. If we replace �� with 2π - ��, then cos((2π - ��)/2) = cos(π - ��/2) = -cos(θ/2). Therefore, |cos((2π - ��)/2)| = | -cos(θ/2)| = |cos(θ/2)|. Similarly, for the second term, |2 cos(2π - ��) - 1| = |2 cosθ - 1|. Therefore, f(2π - ��) = |1 + z| + |1 - z + z²| where z = e^(i(2π - ��)) = e^(-iθ). Therefore, |1 + z| = |1 + e^(-iθ)| = |1 + e^(iθ)| = same as before. Similarly, |1 - z + z²| = |1 - e^(-iθ) + e^(-i2θ)|. Let me compute that:"
+    },
+    {
+      "index": 31,
+      "start": 8730,
+      "end": 9494,
+      "text": "1 - e^(-iθ) + e^(-i2θ) = e^(-i2θ) - e^(-iθ) + 1. Which is the conjugate of 1 - e^(iθ) + e^(i2θ). Therefore, the magnitude is the same. Therefore, f(2π - ��) = f(θ). Therefore, the function is symmetric with respect to �� → 2π - ��. Therefore, the maximum on [0, 2π) is the same as the maximum on [0, π], and the maximum on [π, 2π) is same as maximum on [0, π]. Therefore, maybe I can just consider �� ∈ [0, π], and then double check the maximum there. However, since �� ∈ [0, π] includes the interval [0, π/3] and [π/3, π], which is Case 1 and Case 2a. Therefore, maybe I can focus on �� ∈ [0, π], and then check �� ∈ [π, 2π) is symmetric. However, since the maximum is likely to occur in �� ∈ [0, π], but not sure. Alternatively, proceed with analyzing each case."
+    },
+    {
+      "index": 32,
+      "start": 9496,
+      "end": 9777,
+      "text": "But maybe instead of splitting into cases, I can use calculus. Since f(θ) is differentiable except at points where the absolute values change, which are �� = π/3, �� = π, �� = 5π/3. However, since we have symmetry, maybe focus on �� ∈ [0, π], and then check �� ∈ [π, 2π) if needed."
+    },
+    {
+      "index": 33,
+      "start": 9779,
+      "end": 9922,
+      "text": "Alternatively, let me try to write f(θ) for �� ∈ [0, π/3], �� ∈ [π/3, π], and �� ∈ [π, 2π). But given the symmetry, maybe focus on �� ∈ [0, π]."
+    },
+    {
+      "index": 34,
+      "start": 9924,
+      "end": 10132,
+      "text": "Let me first consider �� ∈ [0, π/3]. Then f(θ) = 2 cos(θ/2) + 2 cosθ - 1. Let me compute derivative here. Let me denote f(θ) = 2 cos(θ/2) + 2 cosθ - 1. Then f’(θ) = -sin(θ/2) + (-2 sinθ). Let me compute this:"
+    },
+    {
+      "index": 35,
+      "start": 10134,
+      "end": 10216,
+      "text": "f’(θ) = -sin(θ/2) - 2 sinθ. Let me set derivative to zero to find critical points."
+    },
+    {
+      "index": 36,
+      "start": 10218,
+      "end": 10270,
+      "text": "So, -sin(θ/2) - 2 sinθ = 0 => sin(θ/2) + 2 sinθ = 0."
+    },
+    {
+      "index": 37,
+      "start": 10272,
+      "end": 10364,
+      "text": "Let me express sinθ in terms of sin(θ/2). Recall that sinθ = 2 sin(θ/2) cos(θ/2). Therefore:"
+    },
+    {
+      "index": 38,
+      "start": 10366,
+      "end": 10438,
+      "text": "sin(θ/2) + 2 * 2 sin(θ/2) cos(θ/2) = 0 => sin(θ/2) [1 + 4 cos(θ/2)] = 0."
+    },
+    {
+      "index": 39,
+      "start": 10440,
+      "end": 10493,
+      "text": "Therefore, either sin(θ/2) = 0 or 1 + 4 cos(θ/2) = 0."
+    },
+    {
+      "index": 40,
+      "start": 10495,
+      "end": 10962,
+      "text": "But �� ∈ [0, π/3], so ��/2 ∈ [0, π/6]. In this interval, sin(θ/2) is non-negative, and equals zero only at �� = 0. The other equation: 1 + 4 cos(θ/2) = 0 => cos(θ/2) = -1/4. However, ��/2 ∈ [0, π/6], so cos(θ/2) is in [cos(π/6), 1] = [√3/2, 1], which is approximately [0.866, 1]. Therefore, cos(θ/2) = -1/4 is not possible here. Therefore, the only critical point in [0, π/3] is �� = 0. Therefore, in this interval, the maximum occurs either at �� = 0 or at �� = π/3."
+    },
+    {
+      "index": 41,
+      "start": 10964,
+      "end": 11039,
+      "text": "Let me compute f(0): 2 cos(0) + 2 cos(0) - 1 = 2*1 + 2*1 -1 = 2 + 2 -1 = 3."
+    },
+    {
+      "index": 42,
+      "start": 11041,
+      "end": 11092,
+      "text": "f(π/3): 2 cos(π/6) + 2 cos(π/3) -1. Let me compute:"
+    },
+    {
+      "index": 43,
+      "start": 11094,
+      "end": 11147,
+      "text": "cos(π/6) = ��3/2 �� 0.866, cos(π/3) = 1/2. Therefore:"
+    },
+    {
+      "index": 44,
+      "start": 11149,
+      "end": 11313,
+      "text": "2*(√3/2) + 2*(1/2) -1 = ��3 + 1 -1 = ��3 �� 1.732. So, at �� = π/3, the value is ��3, which is less than 3. Therefore, in this interval, the maximum is 3 at �� = 0."
+    },
+    {
+      "index": 45,
+      "start": 11315,
+      "end": 11488,
+      "text": "Now, moving to Case 2a: �� ∈ [π/3, π]. Here, f(θ) = 2 cos(θ/2) + 1 - 2 cosθ. Let me compute derivative here. f(θ) = 2 cos(θ/2) + 1 - 2 cosθ. Then f’(θ) = -sin(θ/2) + 2 sinθ."
+    },
+    {
+      "index": 46,
+      "start": 11490,
+      "end": 11558,
+      "text": "Set derivative to zero: -sin(θ/2) + 2 sinθ = 0 => 2 sinθ = sin(θ/2)."
+    },
+    {
+      "index": 47,
+      "start": 11560,
+      "end": 11614,
+      "text": "Again, express sinθ as 2 sin(θ/2) cos(θ/2). Therefore:"
+    },
+    {
+      "index": 48,
+      "start": 11616,
+      "end": 11722,
+      "text": "2 * 2 sin(θ/2) cos(θ/2) = sin(θ/2) => 4 sin(θ/2) cos(θ/2) - sin(θ/2) = 0 => sin(θ/2) [4 cos(θ/2) - 1] = 0."
+    },
+    {
+      "index": 49,
+      "start": 11724,
+      "end": 11777,
+      "text": "Therefore, either sin(θ/2) = 0 or 4 cos(θ/2) - 1 = 0."
+    },
+    {
+      "index": 50,
+      "start": 11779,
+      "end": 12552,
+      "text": "In �� ∈ [π/3, π], ��/2 ∈ [π/6, π/2]. Therefore, sin(θ/2) is positive here. Therefore, sin(θ/2) = 0 only when ��/2 = 0 or π, but �� ∈ [π/3, π], so ��/2 ∈ [π/6, π/2], so sin(θ/2) ≠ 0. Therefore, the critical points occur when 4 cos(θ/2) - 1 = 0 => cos(θ/2) = 1/4. Therefore, ��/2 = arccos(1/4), so �� = 2 arccos(1/4). Let me compute this value numerically. arccos(1/4) is approximately 1.318 radians (since cos(π/3) = 0.5, cos(π/2) = 0, so 1/4 is between π/3 and π/2). Therefore, �� �� 2 * 1.318 �� 2.636 radians. Let me check if this is within [π/3, π]. π �� 3.1416, so 2.636 is between π/3 �� 1.047 and π �� 3.1416. Yes, so that's a critical point in this interval. Therefore, we need to evaluate f(θ) at �� = 2 arccos(1/4), as well as at the endpoints �� = π/3 and �� = π."
+    },
+    {
+      "index": 51,
+      "start": 12554,
+      "end": 12926,
+      "text": "First, let me compute f(π/3): as before, it was ��3 �� 1.732. Wait, but earlier in Case 1, at �� = π/3, f(θ) was ��3. But here, in Case 2a, �� ∈ [π/3, π], so �� = π/3 is included here. Wait, but earlier when I calculated f(π/3) in Case 1, I had f(π/3) = ��3. However, in Case 2a, the expression is f(θ) = 2 cos(θ/2) + 1 - 2 cosθ. Let me check if that gives the same value."
+    },
+    {
+      "index": 52,
+      "start": 12928,
+      "end": 12940,
+      "text": "At �� = π/3:"
+    },
+    {
+      "index": 53,
+      "start": 12942,
+      "end": 13046,
+      "text": "2 cos(π/6) + 1 - 2 cos(π/3) = 2*(√3/2) + 1 - 2*(1/2) = ��3 + 1 - 1 = ��3. Correct. So that's consistent."
+    },
+    {
+      "index": 54,
+      "start": 13048,
+      "end": 13066,
+      "text": "Now, compute f(π):"
+    },
+    {
+      "index": 55,
+      "start": 13068,
+      "end": 13147,
+      "text": "f(π) = 2 cos(π/2) + 1 - 2 cosπ = 2*0 + 1 - 2*(-1) = 0 + 1 + 2 = 3. So f(π) = 3."
+    },
+    {
+      "index": 56,
+      "start": 13149,
+      "end": 13326,
+      "text": "Now, compute f at �� = 2 arccos(1/4). Let me denote �� = 2 arccos(1/4). Let me compute cos(θ/2) = 1/4, so ��/2 = arccos(1/4). Therefore, �� = 2 arccos(1/4). Let me compute f(θ):"
+    },
+    {
+      "index": 57,
+      "start": 13328,
+      "end": 13717,
+      "text": "f(θ) = 2 cos(θ/2) + 1 - 2 cosθ. Since cos(θ/2) = 1/4, then 2 cos(θ/2) = 2*(1/4) = 1/2. Now, need to compute cosθ. Since �� = 2 arccos(1/4), we can use double-angle formula: cosθ = 2 cos²(θ/2) - 1 = 2*(1/4)^2 - 1 = 2*(1/16) - 1 = 1/8 - 1 = -7/8. Therefore, -2 cosθ = -2*(-7/8) = 14/8 = 7/4. Therefore, f(θ) = 1/2 + 1 + 7/4 = 1/2 + 1 is 3/2, plus 7/4 is 3/2 + 7/4 = 6/4 + 7/4 = 13/4 = 3.25."
+    },
+    {
+      "index": 58,
+      "start": 13719,
+      "end": 13928,
+      "text": "So 13/4 is 3.25. Which is higher than 3. Therefore, this critical point gives a higher value. Therefore, in this interval, the maximum is 13/4 at �� = 2 arccos(1/4). Therefore, in Case 2a, the maximum is 13/4."
+    },
+    {
+      "index": 59,
+      "start": 13930,
+      "end": 14397,
+      "text": "Now, moving on to Case 2b: �� ∈ [π, 5π/3]. Here, f(θ) = -2 cos(θ/2) + 1 - 2 cosθ. However, due to the symmetry, since �� ∈ [π, 5π/3], and we know that f(θ) = f(2π - ��). Let me check �� = π + x, where x ∈ [0, π]. Then 2π - �� = π - x. Therefore, f(θ) = f(π - x). Therefore, the function in �� ∈ [π, 5π/3] is symmetric to �� ∈ [π/3, π], but mirrored. Therefore, perhaps the maximum in this interval is same as the maximum in [π/3, π], which was 13/4. But let me check."
+    },
+    {
+      "index": 60,
+      "start": 14399,
+      "end": 14627,
+      "text": "Alternatively, maybe compute derivative here. Let me do that. f(θ) = -2 cos(θ/2) + 1 - 2 cosθ. Then f’(θ) = sin(θ/2) + 2 sinθ. Set derivative to zero: sin(θ/2) + 2 sinθ = 0. Again, express sinθ as 2 sin(θ/2) cos(θ/2). Therefore:"
+    },
+    {
+      "index": 61,
+      "start": 14629,
+      "end": 14701,
+      "text": "sin(θ/2) + 2 * 2 sin(θ/2) cos(θ/2) = 0 => sin(θ/2) [1 + 4 cos(θ/2)] = 0."
+    },
+    {
+      "index": 62,
+      "start": 14703,
+      "end": 14756,
+      "text": "Therefore, either sin(θ/2) = 0 or 1 + 4 cos(θ/2) = 0."
+    },
+    {
+      "index": 63,
+      "start": 14758,
+      "end": 15725,
+      "text": "In �� ∈ [π, 5π/3], ��/2 ∈ [π/2, 5π/6]. Therefore, sin(θ/2) is non-negative here (since ��/2 is between π/2 and 5π/6, which is in the second quadrant where sine is positive). Therefore, sin(θ/2) = 0 only when ��/2 = π, i.e., �� = 2π, which is the endpoint. The other equation: 1 + 4 cos(θ/2) = 0 => cos(θ/2) = -1/4. Therefore, ��/2 = arccos(-1/4). Since ��/2 ∈ [π/2, 5π/6], arccos(-1/4) is in the second quadrant. Let me compute arccos(-1/4). Since cos(π - arccos(1/4)) = -cos(arccos(1/4)) = -1/4. Therefore, arccos(-1/4) = π - arccos(1/4). Therefore, ��/2 = π - arccos(1/4), so �� = 2π - 2 arccos(1/4). Let me check if this is within [π, 5π/3]. Let me compute �� = 2π - 2 arccos(1/4). Since arccos(1/4) �� 1.318 radians, so 2 arccos(1/4) �� 2.636 radians. Therefore, �� �� 2π - 2.636 �� 6.283 - 2.636 �� 3.647 radians. Now, π �� 3.1416, 5π/3 �� 5.236. Therefore, 3.647 is between π and 5π/3, so yes, this is in the interval. Therefore, there is a critical point here."
+    },
+    {
+      "index": 64,
+      "start": 15727,
+      "end": 15830,
+      "text": "Therefore, need to evaluate f(θ) at �� = 2π - 2 arccos(1/4), as well as endpoints �� = π and �� = 5π/3."
+    },
+    {
+      "index": 65,
+      "start": 15832,
+      "end": 15915,
+      "text": "First, compute f(π) = -2 cos(π/2) + 1 - 2 cosπ = -2*0 + 1 - 2*(-1) = 0 + 1 + 2 = 3."
+    },
+    {
+      "index": 66,
+      "start": 15917,
+      "end": 15988,
+      "text": "Compute f(5π/3). Let me compute �� = 5π/3. Then ��/2 = 5π/6. Therefore:"
+    },
+    {
+      "index": 67,
+      "start": 15990,
+      "end": 16029,
+      "text": "f(θ) = -2 cos(5π/6) + 1 - 2 cos(5π/3)."
+    },
+    {
+      "index": 68,
+      "start": 16031,
+      "end": 16088,
+      "text": "cos(5π/6) = -√3/2, cos(5π/3) = cos(π/3) = 1/2. Therefore:"
+    },
+    {
+      "index": 69,
+      "start": 16090,
+      "end": 16145,
+      "text": "-2*(-√3/2) + 1 - 2*(1/2) = ��3 + 1 - 1 = ��3 �� 1.732."
+    },
+    {
+      "index": 70,
+      "start": 16147,
+      "end": 16753,
+      "text": "Now, compute f at �� = 2π - 2 arccos(1/4). Let me denote �� = 2π - 2 arccos(1/4). Let me compute cos(θ/2) = cos(π - arccos(1/4)) = -cos(arccos(1/4)) = -1/4. Therefore, -2 cos(θ/2) = -2*(-1/4) = 1/2. Now, compute cosθ. Since �� = 2π - 2 arccos(1/4), cosθ = cos(2π - 2 arccos(1/4)) = cos(2 arccos(1/4)) = same as earlier. Wait, cos(2 arccos(1/4)) was calculated earlier as -7/8. Therefore, cosθ = -7/8. Therefore, -2 cosθ = -2*(-7/8) = 14/8 = 7/4. Therefore, f(θ) = 1/2 + 1 + 7/4 = same as before, 13/4 = 3.25. Therefore, this critical point also gives 13/4. Therefore, in this interval, the maximum is 13/4."
+    },
+    {
+      "index": 71,
+      "start": 16755,
+      "end": 17034,
+      "text": "Finally, Case 3: �� ∈ [5π/3, 2π). Here, f(θ) = -2 cos(θ/2) + 2 cosθ - 1. Let me check if this is symmetric. Since �� ∈ [5π/3, 2π), which is symmetric to �� ∈ [0, π/3] via �� → 2π - ��. Let me check f(θ) = -2 cos(θ/2) + 2 cosθ - 1. If we take �� = 2π - φ where φ ∈ [0, π/3], then:"
+    },
+    {
+      "index": 72,
+      "start": 17036,
+      "end": 17479,
+      "text": "f(θ) = -2 cos( (2π - φ)/2 ) + 2 cos(2π - φ) - 1 = -2 cos(π - φ/2) + 2 cosφ - 1 = -2*(-cos(φ/2)) + 2 cosφ - 1 = 2 cos(φ/2) + 2 cosφ - 1, which is the same as Case 1. Therefore, this function is symmetric to Case 1. Therefore, the maximum in this interval is same as in Case 1, which was 3 at �� = 0 (but �� = 0 is not in this interval). Wait, but in this interval �� ∈ [5π/3, 2π), the maximum would be similar to Case 1. Let me check endpoints."
+    },
+    {
+      "index": 73,
+      "start": 17481,
+      "end": 17586,
+      "text": "At �� = 5π/3: f(θ) = -2 cos(5π/6) + 2 cos(5π/3) -1 = -2*(-√3/2) + 2*(1/2) -1 = ��3 + 1 -1 = ��3 �� 1.732."
+    },
+    {
+      "index": 74,
+      "start": 17588,
+      "end": 17826,
+      "text": "At �� = 2π: f(θ) = -2 cos(π) + 2 cos(2π) -1 = -2*(-1) + 2*1 -1 = 2 + 2 -1 = 3. Therefore, same as �� = 0. Therefore, in this interval, the maximum is 3 at �� = 2π. However, since �� = 2π is the same as �� = 0, which is already considered."
+    },
+    {
+      "index": 75,
+      "start": 17828,
+      "end": 18162,
+      "text": "Therefore, overall, the maximum of f(θ) is 13/4, which is 3.25, achieved at �� = 2 arccos(1/4) and �� = 2π - 2 arccos(1/4). Therefore, the maximum value is 13/4. But wait, let me check if that's correct. Wait, 13/4 is 3.25, which is higher than 3, which was the value at �� = 0 and �� = π and �� = 2π. Therefore, 13/4 is the maximum."
+    },
+    {
+      "index": 76,
+      "start": 18164,
+      "end": 18282,
+      "text": "But let me verify this with another approach. Maybe using complex numbers or geometric interpretations. Let me think."
+    },
+    {
+      "index": 77,
+      "start": 18284,
+      "end": 19095,
+      "text": "Alternatively, since z is on the unit circle, maybe we can parametrize z as e^(iθ) and use trigonometric identities. But we already did that. Alternatively, perhaps consider specific points where the maximum might occur. For example, when z is real. If z = 1, then |1 + z| = |2| = 2, |1 - z + z²| = |1 - 1 + 1| = 1, so total is 3. If z = -1, then |1 + z| = |0| = 0, |1 - z + z²| = |1 - (-1) + 1| = |3| = 3, so total is 0 + 3 = 3. If z = i, then |1 + i| = ��2, |1 - i + (-1)| = | -i | = 1, total is ��2 + 1 �� 2.414, which is less than 3.25. If z = e^(iθ) where �� is such that cosθ = 1/4, but maybe not. Wait, but we found that at �� = 2 arccos(1/4), the value is 13/4 = 3.25. Let me check with �� �� 2.636 radians. Let me compute �� �� 2.636 radians. Let me compute cos(θ/2) = 1/4, so ��/2 �� arccos(1/4) �� 1."
+    }
+  ],
+  "trace_sha256": "3e3acb4bbc83f80de669de3aa98cb353491f7436640e595942ce6efe38b8ed73",
+  "annotation_scope": "Historical thinking only. Gold, final forced readout, grade/correct omitted. Review target selection uses outcome and is disclosed separately."
+}

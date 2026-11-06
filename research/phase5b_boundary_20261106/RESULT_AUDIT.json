@@ -1,0 +1,149 @@
+{
+  "status": "PASS",
+  "run_status": "COMPLETE",
+  "complete_outputs": 10,
+  "planned_outputs": 10,
+  "independent_programs": 1,
+  "primary_groups": {
+    "E": {
+      "SharedGFull": {
+        "correct": false,
+        "eos": true,
+        "cap": false,
+        "tokens": 70,
+        "parsed": 428
+      },
+      "BoundaryProjection": {
+        "correct": true,
+        "eos": true,
+        "cap": false,
+        "tokens": 111,
+        "parsed": 420
+      },
+      "RawFull": {
+        "correct": true,
+        "eos": true,
+        "cap": false,
+        "tokens": 244,
+        "parsed": 420
+      }
+    },
+    "C": {
+      "SharedGFull": {
+        "correct": true,
+        "eos": true,
+        "cap": false,
+        "tokens": 244,
+        "parsed": 420
+      },
+      "BoundaryProjection": {
+        "correct": true,
+        "eos": true,
+        "cap": false,
+        "tokens": 111,
+        "parsed": 420
+      },
+      "RawFull": {
+        "correct": true,
+        "eos": true,
+        "cap": false,
+        "tokens": 244,
+        "parsed": 420
+      }
+    },
+    "W": {
+      "SharedGFull": {
+        "correct": true,
+        "eos": true,
+        "cap": false,
+        "tokens": 244,
+        "parsed": 420
+      },
+      "BoundaryProjection": {
+        "correct": true,
+        "eos": true,
+        "cap": false,
+        "tokens": 111,
+        "parsed": 420
+      },
+      "RawFull": {
+        "correct": true,
+        "eos": true,
+        "cap": false,
+        "tokens": 244,
+        "parsed": 420
+      }
+    }
+  },
+  "methods": {
+    "RawFull": {
+      "n": 3,
+      "correct": 3,
+      "eos_correct": 3,
+      "eos": 3,
+      "cap": 0,
+      "unparsed": 0,
+      "prompt_tokens": 1149,
+      "generated_tokens": 732,
+      "request_seconds_including_G": 46.253723059780896,
+      "G_cpu_seconds_included": 5.5301934480667114e-06
+    },
+    "SharedGFull": {
+      "n": 3,
+      "correct": 2,
+      "eos_correct": 2,
+      "eos": 3,
+      "cap": 0,
+      "unparsed": 0,
+      "prompt_tokens": 1290,
+      "generated_tokens": 558,
+      "request_seconds_including_G": 36.34543787688017,
+      "G_cpu_seconds_included": 0.028085543774068356
+    },
+    "BoundaryProjection": {
+      "n": 3,
+      "correct": 3,
+      "eos_correct": 3,
+      "eos": 3,
+      "cap": 0,
+      "unparsed": 0,
+      "prompt_tokens": 483,
+      "generated_tokens": 333,
+      "request_seconds_including_G": 20.988671427592635,
+      "G_cpu_seconds_included": 0.022944463416934013
+    },
+    "RestartP": {
+      "n": 1,
+      "correct": 1,
+      "eos_correct": 1,
+      "eos": 1,
+      "cap": 0,
+      "unparsed": 0,
+      "prompt_tokens": 247,
+      "generated_tokens": 244,
+      "request_seconds_including_G": 15.393232469446957,
+      "G_cpu_seconds_included": 2.1206215023994446e-06
+    }
+  },
+  "all_EOS": 10,
+  "all_cap": 0,
+  "generated_tokens": 1867,
+  "prompt_tokens": 3169,
+  "forward_ledger": {
+    "forward_calls": 1867,
+    "input_tokens": 5026,
+    "synchronized_forward_seconds": 117.21535112895072
+  },
+  "same_projected_input_same_output": true,
+  "launcher_seconds": 174.40666437149048,
+  "single_GPU_minutes": 2.9067777395248413,
+  "simple_exact_interpreter_control": {
+    "value": 420,
+    "evaluated_nodes": 20,
+    "local_sympy_seconds": 0.03611480000108713,
+    "scope": "Exact synthetic semantics validation; this full interpreter already solves the known program. Not an LLM gain, not a GPU latency comparison."
+  },
+  "retrieval_files_verified": 19,
+  "scope": "Known-DAG/scoped-exact-checker conditional pilot. All LM calls fresh-prefill; not warm-cache continuation serving or natural graph extraction.",
+  "cost_notes": "Per-request G/compile/prefill/decode nested within request; all requests/hash/load within study wall. No double addition."
+}

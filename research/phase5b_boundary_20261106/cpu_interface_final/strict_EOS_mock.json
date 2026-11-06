@@ -1,0 +1,50 @@
+{
+  "scope": "Deterministic loop mock, not Qwen/model execution; excluded from model forward ledger.",
+  "checks": {
+    "integer_newline_does_not_stop": true,
+    "EOS_is_counted_and_no_post_EOS_forward": true,
+    "cap_without_EOS_is_reported": true,
+    "mock_original_cache_unchanged": true
+  },
+  "passed": true,
+  "EOS_case": {
+    "token_ids": [
+      7,
+      8,
+      9,
+      10,
+      4
+    ],
+    "text": "123\n",
+    "stop_reason": "eos",
+    "new_tokens": 5,
+    "additional_forward_tokens": 4,
+    "hit_safety_cap": false,
+    "eos_reached": true,
+    "guard": 8,
+    "no_dynamic_grader_stop": true,
+    "input_checkpoint_cache_length_before_after": [
+      3,
+      3
+    ]
+  },
+  "cap_case": {
+    "token_ids": [
+      7,
+      8,
+      9
+    ],
+    "text": "123",
+    "stop_reason": "token_safety_cap",
+    "new_tokens": 3,
+    "additional_forward_tokens": 2,
+    "hit_safety_cap": true,
+    "eos_reached": false,
+    "guard": 3,
+    "no_dynamic_grader_stop": true,
+    "input_checkpoint_cache_length_before_after": [
+      3,
+      3
+    ]
+  }
+}

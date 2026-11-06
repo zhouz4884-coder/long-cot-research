@@ -1,0 +1,1354 @@
+{
+  "rank": 62,
+  "problem_id": "test/intermediate_algebra/582.json",
+  "question": "The equation\n\\[x^{10}+(13x-1)^{10}=0\\,\\]has 10 complex roots $r_1,$ $\\overline{r}_1,$ $r_2,$ $\\overline{r}_2,$ $r_3,$ $\\overline{r}_3,$ $r_4,$ $\\overline{r}_4,$ $r_5,$ $\\overline{r}_5,$ where the bar denotes complex conjugation. Find the value of\n\\[\\frac 1{r_1\\overline{r}_1}+\\frac 1{r_2\\overline{r}_2}+\\frac 1{r_3\\overline{r}_3}+\\frac 1{r_4\\overline{r}_4}+\\frac 1{r_5\\overline{r}_5}.\\]",
+  "trace": "<think>\nOkay, let's see. I need to find the sum of 1 over the product of each pair of complex conjugate roots for the equation $x^{10} + (13x - 1)^{10} = 0$. The roots are given as pairs $r_1, \\overline{r}_1$, etc., so there are five such pairs. The question is asking for the sum $\\frac{1}{r_1\\overline{r}_1} + \\frac{1}{r_2\\overline{r}_2} + \\dots + \\frac{1}{r_5\\overline{r}_5}$.\n\nFirst, I need to recall that for any complex number $z$, the product $z\\overline{z}$ is equal to the square of its modulus, which is $|z|^2$. Therefore, $\\frac{1}{r_i\\overline{r}_i} = \\frac{1}{|r_i|^2}$. So the problem is essentially asking for the sum of the reciprocals of the squared moduli of each root.\n\nBut maybe there's another way to think about this. Since the polynomial is of degree 10, and it's given that the roots come in complex conjugate pairs, that makes sense because the coefficients of the polynomial are real numbers. So the polynomial is real, hence complex roots come in conjugate pairs.\n\nBut how do I find the sum of $1/|r_i|^2$ for each root? Maybe I need to relate this to the coefficients of the polynomial. Let me think.\n\nAlternatively, perhaps I can rewrite the equation. Let me write the original equation:\n\n$x^{10} + (13x - 1)^{10} = 0$\n\nWhich implies that $x^{10} = - (13x - 1)^{10}$. Taking both sides to the power of 1/10, we get $x = - (13x - 1) e^{i\\pi(2k + 1)/10}$ for k = 0, 1, ..., 9. Wait, but maybe that's overcomplicating. Alternatively, since both sides are raised to the 10th power, maybe I can write:\n\n$\\left( \\frac{x}{13x - 1} \\right)^{10} = -1$\n\nSo, $\\frac{x}{13x - 1} = e^{i(\\pi + 2\\pi k)/10}$ for k = 0, 1, ..., 9.\n\nTherefore, solving for x:\n\nLet me denote $ \\omega = e^{i(\\pi + 2\\pi k)/10} $, so that $ \\frac{x}{13x - 1} = \\omega $, which gives:\n\n$x = \\omega (13x - 1)$\n\nSo, $x = 13 \\omega x - \\omega$\n\nRearranging terms:\n\n$x - 13 \\omega x = - \\omega$\n\n$x (1 - 13 \\omega) = - \\omega$\n\nTherefore, $x = \\frac{ - \\omega }{1 - 13 \\omega } = \\frac{ \\omega }{13 \\omega - 1 } $\n\nSo each root is given by $x_k = \\frac{ \\omega_k }{13 \\omega_k - 1 }$, where $ \\omega_k = e^{i(\\pi + 2\\pi k)/10} $ for k from 0 to 9.\n\nBut since the original equation is of degree 10, there are 10 roots. However, the problem states that they come in complex conjugate pairs. So, maybe each root $x_k$ and its conjugate $ \\overline{x}_k $ are roots. Therefore, the roots can be grouped into 5 pairs, each pair being conjugates. Therefore, for each pair, $x$ and $\\overline{x}$, their product $x \\overline{x} = |x|^2$, so the reciprocal is $1/|x|^2$. Therefore, the sum we need is the sum over each pair of $1/|x|^2$.\n\nBut since each pair contributes twice? Wait, no. Wait, the problem says that the roots are $r_1, \\overline{r}_1, r_2, \\overline{r}_2$, etc., so each pair is counted once. Therefore, the sum is over 5 terms, each term being $1/(r_i \\overline{r}_i)$. Therefore, since each pair is counted once, and each pair's contribution is $1/|r_i|^2$.\n\nBut perhaps instead of dealing with each root, I can find a way to compute the sum of $1/|r_i|^2$ over all roots. However, since roots come in conjugate pairs, maybe there's a way to compute this sum using Vieta's formula or something else.\n\nAlternatively, note that for each root $x$, $1/|x|^2 = \\frac{1}{x \\overline{x}}$. But since $x$ is a root of the equation, maybe I can relate this to the polynomial's coefficients.\n\nAlternatively, perhaps I can consider that if $x$ is a root, then so is $\\overline{x}$. Therefore, the polynomial can be written as a product of quadratic factors, each corresponding to a conjugate pair. Therefore, the polynomial is $ \\prod_{k=1}^5 (x - r_k)(x - \\overline{r}_k) = \\prod_{k=1}^5 (x^2 - 2 \\text{Re}(r_k) x + |r_k|^2) $.\n\nTherefore, if I can find the sum of $1/|r_k|^2$, that would be the sum over each quadratic factor's constant term. Wait, but how does that relate to the coefficients of the original polynomial?\n\nAlternatively, maybe consider that the product of the roots. Wait, but the original equation is $x^{10} + (13x - 1)^{10} = 0$. Let me expand this equation to find the coefficients, but that seems complicated. Alternatively, maybe we can use Vieta's formula.\n\nBut Vieta's formula relates the sum and products of roots to the coefficients. However, the problem is not directly about the sum of roots or products, but about the sum of reciprocals of |r_i|^2. So maybe I need to find a clever way to relate that.\n\nAlternatively, note that $1/|x|^2 = \\overline{x}^2 / |x|^2 \\times x^2? Wait, no. Wait, $1/|x|^2 = 1/(x \\overline{x}) = \\overline{x} / |x|^2 \\times x / |x|^2? Hmm, not sure.\n\nWait, if I take the reciprocal of |x|^2, which is 1/(x \\overline{x}), which is equal to (1/x)(1/\\overline{x}) = \\overline{(1/x)}. But not sure if that helps.\n\nAlternatively, maybe consider that for each root x, since x satisfies the equation $x^{10} + (13x - 1)^{10} = 0$, so $x^{10} = - (13x - 1)^{10}$. Therefore, taking modulus on both sides:\n\n$|x|^{10} = | - (13x - 1)^{10} | = |13x - 1|^{10}$\n\nTherefore, $|x|^{10} = |13x - 1|^{10}$, so taking 10th root (since modulus is non-negative):\n\n$|x| = |13x - 1|$\n\nTherefore, for each root x, we have $|x| = |13x - 1|$. Therefore, squaring both sides:\n\n$|x|^2 = |13x - 1|^2$\n\nBut $|13x - 1|^2 = (13x - 1)(\\overline{13x - 1}) = (13x - 1)(13\\overline{x} - 1) = 169 |x|^2 - 13x - 13\\overline{x} + 1$\n\nTherefore, equating to |x|^2:\n\n|x|^2 = 169 |x|^2 - 13(x + \\overline{x}) + 1\n\nLet me write that equation:\n\n|x|^2 = 169 |x|^2 - 13(x + \\overline{x}) + 1\n\nLet me rearrange terms:\n\n0 = 168 |x|^2 - 13(x + \\overline{x}) + 1\n\nBut x + \\overline{x} is 2 Re(x), so:\n\n0 = 168 |x|^2 - 26 Re(x) + 1\n\nSo, for each root x, we have:\n\n168 |x|^2 - 26 Re(x) + 1 = 0\n\nTherefore, 168 |x|^2 = 26 Re(x) - 1\n\nTherefore, |x|^2 = (26 Re(x) - 1)/168\n\nBut then, the problem asks for the sum over all roots of 1/|x|^2. Wait, but each root is paired with its conjugate, so for each pair, we have two roots, say x and \\overline{x}. Let me denote that for each pair, we have x and \\overline{x}, so their contributions to the sum would be 1/|x|^2 + 1/|\\overline{x}|^2 = 2/|x|^2. Therefore, the total sum is 2 times the sum over each pair of 1/|x|^2. But since there are five pairs, the total sum is 2 times the sum over five terms of 1/|x|^2. Wait, no, the problem says that the sum is over each pair once. Wait, the problem says:\n\n\"the value of 1/(r1\\overline{r1}) + ... + 1/(r5\\overline{r5})\"\n\nSo each term is 1/(r_i \\overline{r_i}) which is 1/|r_i|^2, and since each pair is counted once, so the total sum is the sum over each of the five pairs of 1/|r_i|^2. Therefore, if I can find 1/|r_i|^2 for each pair, then sum them up.\n\nBut from the previous equation, we have for each root x:\n\n|x|^2 = (26 Re(x) - 1)/168\n\nTherefore, 1/|x|^2 = 168 / (26 Re(x) - 1)\n\nBut since for each pair, x and \\overline{x}, Re(x) is the same for both. Because Re(x) = Re(\\overline{x}), so for each pair, the value of Re(x) is the same. Therefore, if I denote that for each pair, Re(x) = a, then 1/|x|^2 = 168/(26a - 1), and since both roots contribute the same term, but since the problem is summing over each pair once, we just need to compute 168/(26a - 1) for each pair.\n\nBut how do I find the sum over all pairs of 168/(26a - 1)?\n\nAlternatively, maybe I need to find the sum over all roots of 1/|x|^2, but since each pair contributes twice, but the problem wants the sum over each pair once. However, if I can compute the total sum over all roots, then divide by 2, but since the problem is summing over each pair once, that would be the same as the total sum over all roots divided by 2. Wait, no, because if each pair contributes 1/|x|^2 + 1/|\\overline{x}|^2 = 2/|x|^2, then the total sum over all roots would be 2*(sum over pairs of 1/|x|^2). Therefore, the problem's desired sum is half of the total sum over all roots of 1/|x|^2.\n\nBut maybe there's a better way. Alternatively, maybe I can find the sum over all roots of 1/|x|^2, then divide by 2. But how?\n\nAlternatively, perhaps I can find an expression for 1/|x|^2 in terms of x and its conjugate, and then use Vieta's formula.\n\nBut let's think again. From the equation above, we have for each root x:\n\n168 |x|^2 = 26 Re(x) - 1\n\nBut Re(x) = (x + \\overline{x}) / 2. Therefore, substituting:\n\n168 |x|^2 = 26*(x + \\overline{x}) / 2 - 1 = 13(x + \\overline{x}) - 1\n\nTherefore, 168 |x|^2 = 13(x + \\overline{x}) - 1\n\nBut we need to find the sum over all roots of 1/|x|^2. Let me denote S = sum_{i=1}^{10} 1/|x_i|^2.\n\nBut since each pair contributes twice, as above, then S = 2*(sum over pairs of 1/|x_i|^2). Therefore, the desired value is S / 2.\n\nBut how do I compute S?\n\nFrom the equation above, for each root x_i:\n\n168 |x_i|^2 = 13(x_i + \\overline{x_i}) - 1\n\nTherefore, rearranged:\n\n13(x_i + \\overline{x_i}) = 168 |x_i|^2 + 1\n\nTherefore, (x_i + \\overline{x_i}) = (168 |x_i|^2 + 1)/13\n\nBut if I take the sum over all roots:\n\nSum_{i=1}^{10} (x_i + \\overline{x_i}) = Sum_{i=1}^{10} [ (168 |x_i|^2 + 1)/13 ]\n\nBut the left-hand side is Sum_{i=1}^{10} (x_i + \\overline{x_i}) = 2 Sum_{i=1}^{10} Re(x_i) = 2 Re( Sum_{i=1}^{10} x_i )\n\nBut the right-hand side is (1/13) [ 168 Sum_{i=1}^{10} |x_i|^2 + 10 ]\n\nTherefore, equating both sides:\n\n2 Re( Sum_{i=1}^{10} x_i ) = (1/13)(168 Sum |x_i|^2 + 10 )\n\nBut now, I need to find Sum |x_i|^2 and Sum x_i.\n\nBut from Vieta's formula, I can find Sum x_i and Sum |x_i|^2?\n\nWait, but Vieta's formula gives the sum of roots, sum of products, etc., but how do I get Sum |x_i|^2?\n\nAlternatively, note that for any complex number x, |x|^2 = x \\overline{x}. Therefore, Sum |x_i|^2 = Sum x_i \\overline{x_i}.\n\nBut how is that related to the coefficients?\n\nAlternatively, maybe I can use the fact that for a polynomial with roots x_i, the sum of |x_i|^2 can be related to the coefficients. However, this might be complicated. Alternatively, note that if we have a polynomial P(x) = x^{10} + (13x - 1)^{10} = 0.\n\nLet me first expand the polynomial to find its coefficients, but that seems very tedious. Alternatively, maybe consider that the polynomial is x^{10} + (13x - 1)^{10} = 0. Let me write this as:\n\n(13x - 1)^{10} = -x^{10}\n\nTaking modulus on both sides, as before, gives |13x - 1|^{10} = |x|^{10}, which gives |13x - 1| = |x|, as before.\n\nBut perhaps another approach. Let me consider that the polynomial is P(x) = x^{10} + (13x - 1)^{10} = 0.\n\nLet me denote y = 13x - 1. Then, solving for x, we have x = (y + 1)/13.\n\nBut substituting into the equation:\n\n[(y + 1)/13]^{10} + y^{10} = 0\n\nMultiply both sides by 13^{10}:\n\n(y + 1)^{10} + 13^{10} y^{10} = 0\n\nTherefore, (y + 1)^{10} = -13^{10} y^{10}\n\nTaking modulus on both sides:\n\n|y + 1|^{10} = | -13^{10} y^{10} | = 13^{10} |y|^{10}\n\nTherefore, |y + 1| = 13 |y|\n\nWhich is similar to the previous equation. But maybe this substitution helps in some way.\n\nBut perhaps not directly. Alternatively, maybe consider that the roots y satisfy (y + 1)^{10} + 13^{10} y^{10} = 0. Therefore, (y + 1)^{10} = -13^{10} y^{10}\n\nWhich can be written as [(y + 1)/y]^{10} = -13^{10}\n\nTherefore, [(y + 1)/y]^{10} = -13^{10}\n\nTherefore, (1 + 1/y)^{10} = -13^{10}\n\nTherefore, 1 + 1/y = -13 e^{i \\pi (2k + 1)/10} for k = 0, 1, ..., 9\n\nTherefore, solving for 1/y:\n\n1/y = -13 e^{i \\pi (2k + 1)/10} - 1\n\nTherefore, y = 1 / [ -13 e^{i \\pi (2k + 1)/10} - 1 ]\n\nBut since y = 13x - 1, so x = (y + 1)/13. Therefore, substituting:\n\nx = [ 1 / ( -13 e^{i \\pi (2k + 1)/10} - 1 ) + 1 ] / 13\n\nSimplify numerator:\n\n[ 1 + (-13 e^{i \\pi (2k + 1)/10} - 1 ) ] / [ -13 e^{i \\pi (2k + 1)/10} - 1 ]\n\nWait, that seems messy. Maybe another approach.\n\nAlternatively, since we have for each root x, |x| = |13x - 1|, and we have the equation 168 |x|^2 = 26 Re(x) - 1, so if we can find the sum of Re(x) over all roots, and the sum of |x|^2 over all roots, then maybe we can find S.\n\nBut how?\n\nAlternatively, let's note that the original polynomial is P(x) = x^{10} + (13x - 1)^{10} = 0.\n\nLet me denote that polynomial as P(x) = 0. Then, the sum of the roots can be found via Vieta's formula. For a polynomial of the form a_n x^n + ... + a_0 = 0, the sum of roots is -a_{n-1}/a_n.\n\nBut in this case, the polynomial is x^{10} + (13x - 1)^{10} = 0. Let me expand (13x - 1)^{10}:\n\n(13x - 1)^{10} = \\sum_{k=0}^{10} \\binom{10}{k} (13x)^{10 - k} (-1)^k\n\nTherefore, the entire polynomial is:\n\nx^{10} + \\sum_{k=0}^{10} \\binom{10}{k} (13x)^{10 - k} (-1)^k = 0\n\nBut combining like terms, the x^{10} term is 1 + \\binom{10}{0} (13x)^0 (-1)^0 = 1 + 1 = 2? Wait, no. Wait, the original polynomial is x^{10} + (13x - 1)^{10} = 0. So when expanding (13x - 1)^{10}, the leading term is (13x)^{10} = 13^{10} x^{10}, and then the x^{10} term from the original polynomial is x^{10}, so total x^{10} coefficient is 1 + 13^{10}.\n\nTherefore, the polynomial is:\n\n[1 + 13^{10}]x^{10} + ... + [(-1)^{10}] = 0.\n\nBut the coefficient of x^9 in the expansion of (13x - 1)^{10} is \\binom{10}{1} (13x)^9 (-1)^1 = -10 * 13^9 x^9. Then, adding the x^9 term from the original polynomial? Wait, the original polynomial is x^{10} + (13x - 1)^{10} = 0, so the x^9 term is only from (13x - 1)^{10}. The original polynomial's x^{10} term is 1*x^{10}, but there is no x^9 term in that. Therefore, the coefficient of x^9 in the entire polynomial is -10 * 13^9.\n\nTherefore, the sum of the roots is - (coefficient of x^9) / (coefficient of x^{10}).\n\nTherefore, Sum_{i=1}^{10} x_i = - [ -10 * 13^9 ] / [1 + 13^{10} ] = [10 * 13^9] / [1 + 13^{10} ].\n\nSimplify denominator: 1 + 13^{10} = 13^{10} + 1. Therefore, Sum x_i = [10 * 13^9] / [13^{10} + 1].\n\nBut note that 13^{10} + 1 = 13^{10} + 1, and 13^9 is 13^9. So this is a value we can keep for now.\n\nNow, going back to the earlier equation:\n\nSum_{i=1}^{10} (x_i + \\overline{x_i}) = 2 Re( Sum x_i ) = 2 * [10 * 13^9 / (13^{10} + 1)].\n\nBut earlier, we had:\n\n2 Re( Sum x_i ) = (1/13)(168 Sum |x_i|^2 + 10 )\n\nTherefore, equating:\n\n2 * [10 * 13^9 / (13^{10} + 1)] = (1/13)(168 Sum |x_i|^2 + 10 )\n\nMultiply both sides by 13:\n\n2 * [10 * 13^{10} / (13^{10} + 1)] = 168 Sum |x_i|^2 + 10\n\nTherefore:\n\n(20 * 13^{10}) / (13^{10} + 1) - 10 = 168 Sum |x_i|^2\n\nTherefore, solving for Sum |x_i|^2:\n\nSum |x_i|^2 = [ (20 * 13^{10} / (13^{10} + 1) ) - 10 ] / 168\n\nLet me compute this expression:\n\nFirst, write 10 as 10*(13^{10} + 1)/(13^{10} + 1):\n\nSo:\n\n[ (20 * 13^{10} - 10*(13^{10} + 1)) / (13^{10} + 1) ] / 168\n\nCompute numerator:\n\n20 * 13^{10} - 10*(13^{10} + 1) = 20*13^{10} - 10*13^{10} - 10 = 10*13^{10} - 10 = 10*(13^{10} - 1)\n\nTherefore:\n\nSum |x_i|^2 = [10*(13^{10} - 1) / (13^{10} + 1) ] / 168 = [10*(13^{10} - 1)] / [168*(13^{10} + 1)]\n\nSimplify numerator and denominator:\n\nDivide numerator and denominator by 2:\n\n[5*(13^{10} - 1)] / [84*(13^{10} + 1)]\n\nSo Sum |x_i|^2 = [5*(13^{10} - 1)] / [84*(13^{10} + 1)]\n\nBut recall that S = sum_{i=1}^{10} 1/|x_i|^2, and the desired value is S / 2.\n\nBut how do I compute S?\n\nAlternatively, maybe I can find another equation involving Sum 1/|x_i|^2. However, I need another relation. Alternatively, maybe I can use the fact that for each root x, 1/|x|^2 = 168 / (26 Re(x) - 1) as derived earlier.\n\nTherefore, S = sum_{i=1}^{10} 1/|x_i|^2 = sum_{i=1}^{10} 168 / (26 Re(x_i) - 1)\n\nBut since the roots come in conjugate pairs, and Re(x_i) is the same for x_i and \\overline{x_i}, we can write this as 2 * sum_{i=1}^5 [ 168 / (26 Re(r_i) - 1) ] where r_i is one root from each pair. Therefore, the desired value is sum_{i=1}^5 [ 168 / (26 Re(r_i) - 1) ].\n\nBut how can I compute this sum?\n\nAlternatively, maybe I can find the sum over all roots of 1/(26 Re(x_i) - 1) and then multiply by 168. However, I need to find that sum.\n\nAlternatively, perhaps I can relate this to the previous equation.\n\nEarlier, we had:\n\nFor each root x_i, 168 |x_i|^2 = 26 Re(x_i) - 1\n\nTherefore, 26 Re(x_i) - 1 = 168 |x_i|^2\n\nTherefore, 1/(26 Re(x_i) - 1) = 1/(168 |x_i|^2)\n\nTherefore, S = sum_{i=1}^{10} 1/|x_i|^2 = sum_{i=1}^{10} 168 / (26 Re(x_i) - 1) = sum_{i=1}^{10} 168 * [ 1/(168 |x_i|^2) ] = sum_{i=1}^{10} 1/|x_i|^2 = S. Wait, this is circular.\n\nWait, that seems like a tautology. So that approach doesn't help.\n\nAlternatively, maybe I need to consider that we have expressions for Sum |x_i|^2 and Sum Re(x_i), and maybe find another relation. Let me recall that:\n\nFrom the equation 168 |x_i|^2 = 26 Re(x_i) - 1, which can be rearranged as 26 Re(x_i) = 168 |x_i|^2 + 1.\n\nTherefore, if I sum over all roots:\n\nSum_{i=1}^{10} 26 Re(x_i) = Sum_{i=1}^{10} [168 |x_i|^2 + 1]\n\nTherefore:\n\n26 * Sum Re(x_i) = 168 Sum |x_i|^2 + 10\n\nBut earlier, we found that Sum Re(x_i) = [10 * 13^9] / [13^{10} + 1]\n\nTherefore, substituting:\n\n26 * [10 * 13^9 / (13^{10} + 1) ] = 168 Sum |x_i|^2 + 10\n\nBut we already used this to find Sum |x_i|^2. Therefore, this is not helpful for finding S.\n\nAlternatively, maybe I need to find another equation involving Sum 1/|x_i|^2. But I don't see a direct way.\n\nWait, but we have that for each root x, |x| = |13x - 1|. Therefore, squaring both sides:\n\n|x|^2 = |13x - 1|^2 = (13x - 1)(13\\overline{x} - 1) = 169 |x|^2 - 13(x + \\overline{x}) + 1\n\nWhich gives us the equation 0 = 168 |x|^2 - 13(x + \\overline{x}) + 1, which we already used.\n\nAlternatively, maybe consider that if we take the reciprocal of |x|^2, which is 1/|x|^2, and relate it to something else. But I don't see a direct relation.\n\nAlternatively, maybe consider that for each root x, we have the equation x^{10} = - (13x - 1)^{10}, so x^{10} + (13x - 1)^{10} = 0. Let me write this as:\n\nx^{10} = - (13x - 1)^{10}\n\nTherefore, taking modulus squared on both sides:\n\n|x|^{20} = | - (13x - 1)^{10} |^2 = |13x - 1|^{20}\n\nTherefore, |x|^{20} = |13x - 1|^{20}, so |x| = |13x - 1|, which is the same as before.\n\nAlternatively, maybe consider the reciprocal of |x|^2, which is 1/|x|^2. Let me denote y = 1/|x|^2. Then, since |x| = |13x - 1|, squaring gives |x|^2 = |13x - 1|^2. Therefore, 1 = |13x - 1|^2 / |x|^2 = |(13x - 1)/x|^2 = |13 - 1/x|^2. Therefore, |13 - 1/x|^2 = 1.\n\nExpanding this:\n\n|13 - 1/x|^2 = (13 - 1/x)(13 - \\overline{1/x}) = 13^2 - 13 \\overline{1/x} - 13 (1/x) + 1/(x \\overline{x}) = 169 - 13(1/x + \\overline{1/x}) + 1/|x|^2 = 1\n\nBut 1/x + \\overline{1/x} = 2 Re(1/x). Therefore:\n\n169 - 13 * 2 Re(1/x) + 1/|x|^2 = 1\n\nTherefore:\n\n169 - 26 Re(1/x) + y = 1, where y = 1/|x|^2\n\nTherefore:\n\n-26 Re(1/x) + y = 1 - 169 = -168\n\nTherefore:\n\n-26 Re(1/x) + y = -168\n\nTherefore, rearranged:\n\ny = 26 Re(1/x) - 168\n\nBut y = 1/|x|^2, so:\n\n1/|x|^2 = 26 Re(1/x) - 168\n\nBut this seems similar to previous equations.\n\nBut how can I use this? Let me think. If I can find the sum over all roots of Re(1/x), then I can compute the sum of 1/|x|^2.\n\nLet me denote T = sum_{i=1}^{10} Re(1/x_i). Then, from the above equation:\n\nsum_{i=1}^{10} 1/|x_i|^2 = 26 T - 168 * 10\n\nTherefore, S = 26 T - 1680\n\nTherefore, if I can find T, then I can compute S.\n\nSo how to find T?\n\nT = sum_{i=1}^{10} Re(1/x_i) = Re( sum_{i=1}^{10} 1/x_i )\n\nTherefore, if I can compute the sum of 1/x_i over all roots, then take its real part, that would be T.\n\nSo let me compute Sum_{i=1}^{10} 1/x_i.\n\nBut the sum of reciprocals of roots of a polynomial can be found using Vieta's formula. For a polynomial P(x) = a_n x^n + a_{n-1} x^{n-1} + ... + a_0, the sum of reciprocals of roots is -a_1 / a_0, provided that a_0 ≠ 0.\n\nWait, let me recall Vieta's formula. The sum of reciprocals of roots is sum_{i=1}^n 1/x_i = (sum_{i=1}^n product_{j≠i} x_j ) / product_{i=1}^n x_i.\n\nBut product_{i=1}^n x_i = (-1)^n a_0 / a_n.\n\nSimilarly, sum_{i=1}^n product_{j≠i} x_j = (-1)^{n-1} a_1 / a_n.\n\nTherefore, sum_{i=1}^n 1/x_i = [ (-1)^{n-1} a_1 / a_n ] / [ (-1)^n a_0 / a_n ] = [ (-1)^{n-1} a_1 / a_n ] * [ a_n / (-1)^n a_0 ] = [ (-1)^{n-1} / (-1)^n ] * a_1 / a_0 = -a_1 / a_0.\n\nTherefore, sum_{i=1}^n 1/x_i = -a_1 / a_0.\n\nBut in our case, the polynomial is P(x) = x^{10} + (13x - 1)^{10} = 0. Let me write this as:\n\nP(x) = x^{10} + (13x - 1)^{10} = 0.\n\nLet me expand (13x - 1)^{10} as before. But maybe instead of expanding, I can write P(x) in standard form:\n\nP(x) = x^{10} + (13x - 1)^{10} = 0.\n\nLet me denote this as P(x) = a_{10}x^{10} + a_9x^9 + ... + a_0 = 0.\n\nWe need to find a_0 and a_1.\n\nFirst, a_0 is the constant term of P(x). The constant term of x^{10} is 0, and the constant term of (13x - 1)^{10} is (-1)^{10} = 1. Therefore, a_0 = 1.\n\nThen, a_1 is the coefficient of x^1 in P(x). The coefficient of x^1 in x^{10} is 0. The coefficient of x^1 in (13x - 1)^{10} is \\binom{10}{1} (13x)^1 (-1)^{9} = 10 * 13x * (-1)^9 = -10 * 13 x = -130 x. Therefore, the coefficient a_1 is -130.\n\nTherefore, sum_{i=1}^{10} 1",
+  "paragraphs": [
+    {
+      "index": 1,
+      "start": 0,
+      "end": 379,
+      "text": "<think>\nOkay, let's see. I need to find the sum of 1 over the product of each pair of complex conjugate roots for the equation $x^{10} + (13x - 1)^{10} = 0$. The roots are given as pairs $r_1, \\overline{r}_1$, etc., so there are five such pairs. The question is asking for the sum $\\frac{1}{r_1\\overline{r}_1} + \\frac{1}{r_2\\overline{r}_2} + \\dots + \\frac{1}{r_5\\overline{r}_5}$."
+    },
+    {
+      "index": 2,
+      "start": 381,
+      "end": 688,
+      "text": "First, I need to recall that for any complex number $z$, the product $z\\overline{z}$ is equal to the square of its modulus, which is $|z|^2$. Therefore, $\\frac{1}{r_i\\overline{r}_i} = \\frac{1}{|r_i|^2}$. So the problem is essentially asking for the sum of the reciprocals of the squared moduli of each root."
+    },
+    {
+      "index": 3,
+      "start": 690,
+      "end": 991,
+      "text": "But maybe there's another way to think about this. Since the polynomial is of degree 10, and it's given that the roots come in complex conjugate pairs, that makes sense because the coefficients of the polynomial are real numbers. So the polynomial is real, hence complex roots come in conjugate pairs."
+    },
+    {
+      "index": 4,
+      "start": 993,
+      "end": 1129,
+      "text": "But how do I find the sum of $1/|r_i|^2$ for each root? Maybe I need to relate this to the coefficients of the polynomial. Let me think."
+    },
+    {
+      "index": 5,
+      "start": 1131,
+      "end": 1217,
+      "text": "Alternatively, perhaps I can rewrite the equation. Let me write the original equation:"
+    },
+    {
+      "index": 6,
+      "start": 1219,
+      "end": 1248,
+      "text": "$x^{10} + (13x - 1)^{10} = 0$"
+    },
+    {
+      "index": 7,
+      "start": 1250,
+      "end": 1526,
+      "text": "Which implies that $x^{10} = - (13x - 1)^{10}$. Taking both sides to the power of 1/10, we get $x = - (13x - 1) e^{i\\pi(2k + 1)/10}$ for k = 0, 1, ..., 9. Wait, but maybe that's overcomplicating. Alternatively, since both sides are raised to the 10th power, maybe I can write:"
+    },
+    {
+      "index": 8,
+      "start": 1528,
+      "end": 1572,
+      "text": "$\\left( \\frac{x}{13x - 1} \\right)^{10} = -1$"
+    },
+    {
+      "index": 9,
+      "start": 1574,
+      "end": 1644,
+      "text": "So, $\\frac{x}{13x - 1} = e^{i(\\pi + 2\\pi k)/10}$ for k = 0, 1, ..., 9."
+    },
+    {
+      "index": 10,
+      "start": 1646,
+      "end": 1671,
+      "text": "Therefore, solving for x:"
+    },
+    {
+      "index": 11,
+      "start": 1673,
+      "end": 1776,
+      "text": "Let me denote $ \\omega = e^{i(\\pi + 2\\pi k)/10} $, so that $ \\frac{x}{13x - 1} = \\omega $, which gives:"
+    },
+    {
+      "index": 12,
+      "start": 1778,
+      "end": 1800,
+      "text": "$x = \\omega (13x - 1)$"
+    },
+    {
+      "index": 13,
+      "start": 1802,
+      "end": 1832,
+      "text": "So, $x = 13 \\omega x - \\omega$"
+    },
+    {
+      "index": 14,
+      "start": 1834,
+      "end": 1852,
+      "text": "Rearranging terms:"
+    },
+    {
+      "index": 15,
+      "start": 1854,
+      "end": 1882,
+      "text": "$x - 13 \\omega x = - \\omega$"
+    },
+    {
+      "index": 16,
+      "start": 1884,
+      "end": 1914,
+      "text": "$x (1 - 13 \\omega) = - \\omega$"
+    },
+    {
+      "index": 17,
+      "start": 1916,
+      "end": 2001,
+      "text": "Therefore, $x = \\frac{ - \\omega }{1 - 13 \\omega } = \\frac{ \\omega }{13 \\omega - 1 } $"
+    },
+    {
+      "index": 18,
+      "start": 2003,
+      "end": 2135,
+      "text": "So each root is given by $x_k = \\frac{ \\omega_k }{13 \\omega_k - 1 }$, where $ \\omega_k = e^{i(\\pi + 2\\pi k)/10} $ for k from 0 to 9."
+    },
+    {
+      "index": 19,
+      "start": 2137,
+      "end": 2617,
+      "text": "But since the original equation is of degree 10, there are 10 roots. However, the problem states that they come in complex conjugate pairs. So, maybe each root $x_k$ and its conjugate $ \\overline{x}_k $ are roots. Therefore, the roots can be grouped into 5 pairs, each pair being conjugates. Therefore, for each pair, $x$ and $\\overline{x}$, their product $x \\overline{x} = |x|^2$, so the reciprocal is $1/|x|^2$. Therefore, the sum we need is the sum over each pair of $1/|x|^2$."
+    },
+    {
+      "index": 20,
+      "start": 2619,
+      "end": 2956,
+      "text": "But since each pair contributes twice? Wait, no. Wait, the problem says that the roots are $r_1, \\overline{r}_1, r_2, \\overline{r}_2$, etc., so each pair is counted once. Therefore, the sum is over 5 terms, each term being $1/(r_i \\overline{r}_i)$. Therefore, since each pair is counted once, and each pair's contribution is $1/|r_i|^2$."
+    },
+    {
+      "index": 21,
+      "start": 2958,
+      "end": 3198,
+      "text": "But perhaps instead of dealing with each root, I can find a way to compute the sum of $1/|r_i|^2$ over all roots. However, since roots come in conjugate pairs, maybe there's a way to compute this sum using Vieta's formula or something else."
+    },
+    {
+      "index": 22,
+      "start": 3200,
+      "end": 3380,
+      "text": "Alternatively, note that for each root $x$, $1/|x|^2 = \\frac{1}{x \\overline{x}}$. But since $x$ is a root of the equation, maybe I can relate this to the polynomial's coefficients."
+    },
+    {
+      "index": 23,
+      "start": 3382,
+      "end": 3716,
+      "text": "Alternatively, perhaps I can consider that if $x$ is a root, then so is $\\overline{x}$. Therefore, the polynomial can be written as a product of quadratic factors, each corresponding to a conjugate pair. Therefore, the polynomial is $ \\prod_{k=1}^5 (x - r_k)(x - \\overline{r}_k) = \\prod_{k=1}^5 (x^2 - 2 \\text{Re}(r_k) x + |r_k|^2) $."
+    },
+    {
+      "index": 24,
+      "start": 3718,
+      "end": 3911,
+      "text": "Therefore, if I can find the sum of $1/|r_k|^2$, that would be the sum over each quadratic factor's constant term. Wait, but how does that relate to the coefficients of the original polynomial?"
+    },
+    {
+      "index": 25,
+      "start": 3913,
+      "end": 4170,
+      "text": "Alternatively, maybe consider that the product of the roots. Wait, but the original equation is $x^{10} + (13x - 1)^{10} = 0$. Let me expand this equation to find the coefficients, but that seems complicated. Alternatively, maybe we can use Vieta's formula."
+    },
+    {
+      "index": 26,
+      "start": 4172,
+      "end": 4421,
+      "text": "But Vieta's formula relates the sum and products of roots to the coefficients. However, the problem is not directly about the sum of roots or products, but about the sum of reciprocals of |r_i|^2. So maybe I need to find a clever way to relate that."
+    },
+    {
+      "index": 27,
+      "start": 4423,
+      "end": 4595,
+      "text": "Alternatively, note that $1/|x|^2 = \\overline{x}^2 / |x|^2 \\times x^2? Wait, no. Wait, $1/|x|^2 = 1/(x \\overline{x}) = \\overline{x} / |x|^2 \\times x / |x|^2? Hmm, not sure."
+    },
+    {
+      "index": 28,
+      "start": 4597,
+      "end": 4754,
+      "text": "Wait, if I take the reciprocal of |x|^2, which is 1/(x \\overline{x}), which is equal to (1/x)(1/\\overline{x}) = \\overline{(1/x)}. But not sure if that helps."
+    },
+    {
+      "index": 29,
+      "start": 4756,
+      "end": 4942,
+      "text": "Alternatively, maybe consider that for each root x, since x satisfies the equation $x^{10} + (13x - 1)^{10} = 0$, so $x^{10} = - (13x - 1)^{10}$. Therefore, taking modulus on both sides:"
+    },
+    {
+      "index": 30,
+      "start": 4944,
+      "end": 4994,
+      "text": "$|x|^{10} = | - (13x - 1)^{10} | = |13x - 1|^{10}$"
+    },
+    {
+      "index": 31,
+      "start": 4996,
+      "end": 5088,
+      "text": "Therefore, $|x|^{10} = |13x - 1|^{10}$, so taking 10th root (since modulus is non-negative):"
+    },
+    {
+      "index": 32,
+      "start": 5090,
+      "end": 5107,
+      "text": "$|x| = |13x - 1|$"
+    },
+    {
+      "index": 33,
+      "start": 5109,
+      "end": 5195,
+      "text": "Therefore, for each root x, we have $|x| = |13x - 1|$. Therefore, squaring both sides:"
+    },
+    {
+      "index": 34,
+      "start": 5197,
+      "end": 5218,
+      "text": "$|x|^2 = |13x - 1|^2$"
+    },
+    {
+      "index": 35,
+      "start": 5220,
+      "end": 5340,
+      "text": "But $|13x - 1|^2 = (13x - 1)(\\overline{13x - 1}) = (13x - 1)(13\\overline{x} - 1) = 169 |x|^2 - 13x - 13\\overline{x} + 1$"
+    },
+    {
+      "index": 36,
+      "start": 5342,
+      "end": 5371,
+      "text": "Therefore, equating to |x|^2:"
+    },
+    {
+      "index": 37,
+      "start": 5373,
+      "end": 5417,
+      "text": "|x|^2 = 169 |x|^2 - 13(x + \\overline{x}) + 1"
+    },
+    {
+      "index": 38,
+      "start": 5419,
+      "end": 5446,
+      "text": "Let me write that equation:"
+    },
+    {
+      "index": 39,
+      "start": 5448,
+      "end": 5492,
+      "text": "|x|^2 = 169 |x|^2 - 13(x + \\overline{x}) + 1"
+    },
+    {
+      "index": 40,
+      "start": 5494,
+      "end": 5517,
+      "text": "Let me rearrange terms:"
+    },
+    {
+      "index": 41,
+      "start": 5519,
+      "end": 5559,
+      "text": "0 = 168 |x|^2 - 13(x + \\overline{x}) + 1"
+    },
+    {
+      "index": 42,
+      "start": 5561,
+      "end": 5597,
+      "text": "But x + \\overline{x} is 2 Re(x), so:"
+    },
+    {
+      "index": 43,
+      "start": 5599,
+      "end": 5627,
+      "text": "0 = 168 |x|^2 - 26 Re(x) + 1"
+    },
+    {
+      "index": 44,
+      "start": 5629,
+      "end": 5658,
+      "text": "So, for each root x, we have:"
+    },
+    {
+      "index": 45,
+      "start": 5660,
+      "end": 5688,
+      "text": "168 |x|^2 - 26 Re(x) + 1 = 0"
+    },
+    {
+      "index": 46,
+      "start": 5690,
+      "end": 5725,
+      "text": "Therefore, 168 |x|^2 = 26 Re(x) - 1"
+    },
+    {
+      "index": 47,
+      "start": 5727,
+      "end": 5764,
+      "text": "Therefore, |x|^2 = (26 Re(x) - 1)/168"
+    },
+    {
+      "index": 48,
+      "start": 5766,
+      "end": 6339,
+      "text": "But then, the problem asks for the sum over all roots of 1/|x|^2. Wait, but each root is paired with its conjugate, so for each pair, we have two roots, say x and \\overline{x}. Let me denote that for each pair, we have x and \\overline{x}, so their contributions to the sum would be 1/|x|^2 + 1/|\\overline{x}|^2 = 2/|x|^2. Therefore, the total sum is 2 times the sum over each pair of 1/|x|^2. But since there are five pairs, the total sum is 2 times the sum over five terms of 1/|x|^2. Wait, no, the problem says that the sum is over each pair once. Wait, the problem says:"
+    },
+    {
+      "index": 49,
+      "start": 6341,
+      "end": 6403,
+      "text": "\"the value of 1/(r1\\overline{r1}) + ... + 1/(r5\\overline{r5})\""
+    },
+    {
+      "index": 50,
+      "start": 6405,
+      "end": 6638,
+      "text": "So each term is 1/(r_i \\overline{r_i}) which is 1/|r_i|^2, and since each pair is counted once, so the total sum is the sum over each of the five pairs of 1/|r_i|^2. Therefore, if I can find 1/|r_i|^2 for each pair, then sum them up."
+    },
+    {
+      "index": 51,
+      "start": 6640,
+      "end": 6696,
+      "text": "But from the previous equation, we have for each root x:"
+    },
+    {
+      "index": 52,
+      "start": 6698,
+      "end": 6724,
+      "text": "|x|^2 = (26 Re(x) - 1)/168"
+    },
+    {
+      "index": 53,
+      "start": 6726,
+      "end": 6767,
+      "text": "Therefore, 1/|x|^2 = 168 / (26 Re(x) - 1)"
+    },
+    {
+      "index": 54,
+      "start": 6769,
+      "end": 7163,
+      "text": "But since for each pair, x and \\overline{x}, Re(x) is the same for both. Because Re(x) = Re(\\overline{x}), so for each pair, the value of Re(x) is the same. Therefore, if I denote that for each pair, Re(x) = a, then 1/|x|^2 = 168/(26a - 1), and since both roots contribute the same term, but since the problem is summing over each pair once, we just need to compute 168/(26a - 1) for each pair."
+    },
+    {
+      "index": 55,
+      "start": 7165,
+      "end": 7223,
+      "text": "But how do I find the sum over all pairs of 168/(26a - 1)?"
+    },
+    {
+      "index": 56,
+      "start": 7225,
+      "end": 7828,
+      "text": "Alternatively, maybe I need to find the sum over all roots of 1/|x|^2, but since each pair contributes twice, but the problem wants the sum over each pair once. However, if I can compute the total sum over all roots, then divide by 2, but since the problem is summing over each pair once, that would be the same as the total sum over all roots divided by 2. Wait, no, because if each pair contributes 1/|x|^2 + 1/|\\overline{x}|^2 = 2/|x|^2, then the total sum over all roots would be 2*(sum over pairs of 1/|x|^2). Therefore, the problem's desired sum is half of the total sum over all roots of 1/|x|^2."
+    },
+    {
+      "index": 57,
+      "start": 7830,
+      "end": 7955,
+      "text": "But maybe there's a better way. Alternatively, maybe I can find the sum over all roots of 1/|x|^2, then divide by 2. But how?"
+    },
+    {
+      "index": 58,
+      "start": 7957,
+      "end": 8079,
+      "text": "Alternatively, perhaps I can find an expression for 1/|x|^2 in terms of x and its conjugate, and then use Vieta's formula."
+    },
+    {
+      "index": 59,
+      "start": 8081,
+      "end": 8153,
+      "text": "But let's think again. From the equation above, we have for each root x:"
+    },
+    {
+      "index": 60,
+      "start": 8155,
+      "end": 8179,
+      "text": "168 |x|^2 = 26 Re(x) - 1"
+    },
+    {
+      "index": 61,
+      "start": 8181,
+      "end": 8241,
+      "text": "But Re(x) = (x + \\overline{x}) / 2. Therefore, substituting:"
+    },
+    {
+      "index": 62,
+      "start": 8243,
+      "end": 8311,
+      "text": "168 |x|^2 = 26*(x + \\overline{x}) / 2 - 1 = 13(x + \\overline{x}) - 1"
+    },
+    {
+      "index": 63,
+      "start": 8313,
+      "end": 8360,
+      "text": "Therefore, 168 |x|^2 = 13(x + \\overline{x}) - 1"
+    },
+    {
+      "index": 64,
+      "start": 8362,
+      "end": 8460,
+      "text": "But we need to find the sum over all roots of 1/|x|^2. Let me denote S = sum_{i=1}^{10} 1/|x_i|^2."
+    },
+    {
+      "index": 65,
+      "start": 8462,
+      "end": 8591,
+      "text": "But since each pair contributes twice, as above, then S = 2*(sum over pairs of 1/|x_i|^2). Therefore, the desired value is S / 2."
+    },
+    {
+      "index": 66,
+      "start": 8593,
+      "end": 8616,
+      "text": "But how do I compute S?"
+    },
+    {
+      "index": 67,
+      "start": 8618,
+      "end": 8661,
+      "text": "From the equation above, for each root x_i:"
+    },
+    {
+      "index": 68,
+      "start": 8663,
+      "end": 8705,
+      "text": "168 |x_i|^2 = 13(x_i + \\overline{x_i}) - 1"
+    },
+    {
+      "index": 69,
+      "start": 8707,
+      "end": 8729,
+      "text": "Therefore, rearranged:"
+    },
+    {
+      "index": 70,
+      "start": 8731,
+      "end": 8773,
+      "text": "13(x_i + \\overline{x_i}) = 168 |x_i|^2 + 1"
+    },
+    {
+      "index": 71,
+      "start": 8775,
+      "end": 8831,
+      "text": "Therefore, (x_i + \\overline{x_i}) = (168 |x_i|^2 + 1)/13"
+    },
+    {
+      "index": 72,
+      "start": 8833,
+      "end": 8870,
+      "text": "But if I take the sum over all roots:"
+    },
+    {
+      "index": 73,
+      "start": 8872,
+      "end": 8951,
+      "text": "Sum_{i=1}^{10} (x_i + \\overline{x_i}) = Sum_{i=1}^{10} [ (168 |x_i|^2 + 1)/13 ]"
+    },
+    {
+      "index": 74,
+      "start": 8953,
+      "end": 9072,
+      "text": "But the left-hand side is Sum_{i=1}^{10} (x_i + \\overline{x_i}) = 2 Sum_{i=1}^{10} Re(x_i) = 2 Re( Sum_{i=1}^{10} x_i )"
+    },
+    {
+      "index": 75,
+      "start": 9074,
+      "end": 9143,
+      "text": "But the right-hand side is (1/13) [ 168 Sum_{i=1}^{10} |x_i|^2 + 10 ]"
+    },
+    {
+      "index": 76,
+      "start": 9145,
+      "end": 9176,
+      "text": "Therefore, equating both sides:"
+    },
+    {
+      "index": 77,
+      "start": 9178,
+      "end": 9236,
+      "text": "2 Re( Sum_{i=1}^{10} x_i ) = (1/13)(168 Sum |x_i|^2 + 10 )"
+    },
+    {
+      "index": 78,
+      "start": 9238,
+      "end": 9286,
+      "text": "But now, I need to find Sum |x_i|^2 and Sum x_i."
+    },
+    {
+      "index": 79,
+      "start": 9288,
+      "end": 9349,
+      "text": "But from Vieta's formula, I can find Sum x_i and Sum |x_i|^2?"
+    },
+    {
+      "index": 80,
+      "start": 9351,
+      "end": 9453,
+      "text": "Wait, but Vieta's formula gives the sum of roots, sum of products, etc., but how do I get Sum |x_i|^2?"
+    },
+    {
+      "index": 81,
+      "start": 9455,
+      "end": 9578,
+      "text": "Alternatively, note that for any complex number x, |x|^2 = x \\overline{x}. Therefore, Sum |x_i|^2 = Sum x_i \\overline{x_i}."
+    },
+    {
+      "index": 82,
+      "start": 9580,
+      "end": 9624,
+      "text": "But how is that related to the coefficients?"
+    },
+    {
+      "index": 83,
+      "start": 9626,
+      "end": 9879,
+      "text": "Alternatively, maybe I can use the fact that for a polynomial with roots x_i, the sum of |x_i|^2 can be related to the coefficients. However, this might be complicated. Alternatively, note that if we have a polynomial P(x) = x^{10} + (13x - 1)^{10} = 0."
+    },
+    {
+      "index": 84,
+      "start": 9881,
+      "end": 10074,
+      "text": "Let me first expand the polynomial to find its coefficients, but that seems very tedious. Alternatively, maybe consider that the polynomial is x^{10} + (13x - 1)^{10} = 0. Let me write this as:"
+    },
+    {
+      "index": 85,
+      "start": 10076,
+      "end": 10100,
+      "text": "(13x - 1)^{10} = -x^{10}"
+    },
+    {
+      "index": 86,
+      "start": 10102,
+      "end": 10215,
+      "text": "Taking modulus on both sides, as before, gives |13x - 1|^{10} = |x|^{10}, which gives |13x - 1| = |x|, as before."
+    },
+    {
+      "index": 87,
+      "start": 10217,
+      "end": 10321,
+      "text": "But perhaps another approach. Let me consider that the polynomial is P(x) = x^{10} + (13x - 1)^{10} = 0."
+    },
+    {
+      "index": 88,
+      "start": 10323,
+      "end": 10394,
+      "text": "Let me denote y = 13x - 1. Then, solving for x, we have x = (y + 1)/13."
+    },
+    {
+      "index": 89,
+      "start": 10396,
+      "end": 10431,
+      "text": "But substituting into the equation:"
+    },
+    {
+      "index": 90,
+      "start": 10433,
+      "end": 10463,
+      "text": "[(y + 1)/13]^{10} + y^{10} = 0"
+    },
+    {
+      "index": 91,
+      "start": 10465,
+      "end": 10496,
+      "text": "Multiply both sides by 13^{10}:"
+    },
+    {
+      "index": 92,
+      "start": 10498,
+      "end": 10531,
+      "text": "(y + 1)^{10} + 13^{10} y^{10} = 0"
+    },
+    {
+      "index": 93,
+      "start": 10533,
+      "end": 10574,
+      "text": "Therefore, (y + 1)^{10} = -13^{10} y^{10}"
+    },
+    {
+      "index": 94,
+      "start": 10576,
+      "end": 10605,
+      "text": "Taking modulus on both sides:"
+    },
+    {
+      "index": 95,
+      "start": 10607,
+      "end": 10660,
+      "text": "|y + 1|^{10} = | -13^{10} y^{10} | = 13^{10} |y|^{10}"
+    },
+    {
+      "index": 96,
+      "start": 10662,
+      "end": 10689,
+      "text": "Therefore, |y + 1| = 13 |y|"
+    },
+    {
+      "index": 97,
+      "start": 10691,
+      "end": 10780,
+      "text": "Which is similar to the previous equation. But maybe this substitution helps in some way."
+    },
+    {
+      "index": 98,
+      "start": 10782,
+      "end": 10939,
+      "text": "But perhaps not directly. Alternatively, maybe consider that the roots y satisfy (y + 1)^{10} + 13^{10} y^{10} = 0. Therefore, (y + 1)^{10} = -13^{10} y^{10}"
+    },
+    {
+      "index": 99,
+      "start": 10941,
+      "end": 10992,
+      "text": "Which can be written as [(y + 1)/y]^{10} = -13^{10}"
+    },
+    {
+      "index": 100,
+      "start": 10994,
+      "end": 11032,
+      "text": "Therefore, [(y + 1)/y]^{10} = -13^{10}"
+    },
+    {
+      "index": 101,
+      "start": 11034,
+      "end": 11070,
+      "text": "Therefore, (1 + 1/y)^{10} = -13^{10}"
+    },
+    {
+      "index": 102,
+      "start": 11072,
+      "end": 11139,
+      "text": "Therefore, 1 + 1/y = -13 e^{i \\pi (2k + 1)/10} for k = 0, 1, ..., 9"
+    },
+    {
+      "index": 103,
+      "start": 11141,
+      "end": 11168,
+      "text": "Therefore, solving for 1/y:"
+    },
+    {
+      "index": 104,
+      "start": 11170,
+      "end": 11205,
+      "text": "1/y = -13 e^{i \\pi (2k + 1)/10} - 1"
+    },
+    {
+      "index": 105,
+      "start": 11207,
+      "end": 11259,
+      "text": "Therefore, y = 1 / [ -13 e^{i \\pi (2k + 1)/10} - 1 ]"
+    },
+    {
+      "index": 106,
+      "start": 11261,
+      "end": 11327,
+      "text": "But since y = 13x - 1, so x = (y + 1)/13. Therefore, substituting:"
+    },
+    {
+      "index": 107,
+      "start": 11329,
+      "end": 11383,
+      "text": "x = [ 1 / ( -13 e^{i \\pi (2k + 1)/10} - 1 ) + 1 ] / 13"
+    },
+    {
+      "index": 108,
+      "start": 11385,
+      "end": 11404,
+      "text": "Simplify numerator:"
+    },
+    {
+      "index": 109,
+      "start": 11406,
+      "end": 11482,
+      "text": "[ 1 + (-13 e^{i \\pi (2k + 1)/10} - 1 ) ] / [ -13 e^{i \\pi (2k + 1)/10} - 1 ]"
+    },
+    {
+      "index": 110,
+      "start": 11484,
+      "end": 11531,
+      "text": "Wait, that seems messy. Maybe another approach."
+    },
+    {
+      "index": 111,
+      "start": 11533,
+      "end": 11760,
+      "text": "Alternatively, since we have for each root x, |x| = |13x - 1|, and we have the equation 168 |x|^2 = 26 Re(x) - 1, so if we can find the sum of Re(x) over all roots, and the sum of |x|^2 over all roots, then maybe we can find S."
+    },
+    {
+      "index": 112,
+      "start": 11762,
+      "end": 11770,
+      "text": "But how?"
+    },
+    {
+      "index": 113,
+      "start": 11772,
+      "end": 11865,
+      "text": "Alternatively, let's note that the original polynomial is P(x) = x^{10} + (13x - 1)^{10} = 0."
+    },
+    {
+      "index": 114,
+      "start": 11867,
+      "end": 12058,
+      "text": "Let me denote that polynomial as P(x) = 0. Then, the sum of the roots can be found via Vieta's formula. For a polynomial of the form a_n x^n + ... + a_0 = 0, the sum of roots is -a_{n-1}/a_n."
+    },
+    {
+      "index": 115,
+      "start": 12060,
+      "end": 12154,
+      "text": "But in this case, the polynomial is x^{10} + (13x - 1)^{10} = 0. Let me expand (13x - 1)^{10}:"
+    },
+    {
+      "index": 116,
+      "start": 12156,
+      "end": 12224,
+      "text": "(13x - 1)^{10} = \\sum_{k=0}^{10} \\binom{10}{k} (13x)^{10 - k} (-1)^k"
+    },
+    {
+      "index": 117,
+      "start": 12226,
+      "end": 12262,
+      "text": "Therefore, the entire polynomial is:"
+    },
+    {
+      "index": 118,
+      "start": 12264,
+      "end": 12328,
+      "text": "x^{10} + \\sum_{k=0}^{10} \\binom{10}{k} (13x)^{10 - k} (-1)^k = 0"
+    },
+    {
+      "index": 119,
+      "start": 12330,
+      "end": 12684,
+      "text": "But combining like terms, the x^{10} term is 1 + \\binom{10}{0} (13x)^0 (-1)^0 = 1 + 1 = 2? Wait, no. Wait, the original polynomial is x^{10} + (13x - 1)^{10} = 0. So when expanding (13x - 1)^{10}, the leading term is (13x)^{10} = 13^{10} x^{10}, and then the x^{10} term from the original polynomial is x^{10}, so total x^{10} coefficient is 1 + 13^{10}."
+    },
+    {
+      "index": 120,
+      "start": 12686,
+      "end": 12715,
+      "text": "Therefore, the polynomial is:"
+    },
+    {
+      "index": 121,
+      "start": 12717,
+      "end": 12761,
+      "text": "[1 + 13^{10}]x^{10} + ... + [(-1)^{10}] = 0."
+    },
+    {
+      "index": 122,
+      "start": 12763,
+      "end": 13196,
+      "text": "But the coefficient of x^9 in the expansion of (13x - 1)^{10} is \\binom{10}{1} (13x)^9 (-1)^1 = -10 * 13^9 x^9. Then, adding the x^9 term from the original polynomial? Wait, the original polynomial is x^{10} + (13x - 1)^{10} = 0, so the x^9 term is only from (13x - 1)^{10}. The original polynomial's x^{10} term is 1*x^{10}, but there is no x^9 term in that. Therefore, the coefficient of x^9 in the entire polynomial is -10 * 13^9."
+    },
+    {
+      "index": 123,
+      "start": 13198,
+      "end": 13282,
+      "text": "Therefore, the sum of the roots is - (coefficient of x^9) / (coefficient of x^{10})."
+    },
+    {
+      "index": 124,
+      "start": 13284,
+      "end": 13381,
+      "text": "Therefore, Sum_{i=1}^{10} x_i = - [ -10 * 13^9 ] / [1 + 13^{10} ] = [10 * 13^9] / [1 + 13^{10} ]."
+    },
+    {
+      "index": 125,
+      "start": 13383,
+      "end": 13481,
+      "text": "Simplify denominator: 1 + 13^{10} = 13^{10} + 1. Therefore, Sum x_i = [10 * 13^9] / [13^{10} + 1]."
+    },
+    {
+      "index": 126,
+      "start": 13483,
+      "end": 13581,
+      "text": "But note that 13^{10} + 1 = 13^{10} + 1, and 13^9 is 13^9. So this is a value we can keep for now."
+    },
+    {
+      "index": 127,
+      "start": 13583,
+      "end": 13623,
+      "text": "Now, going back to the earlier equation:"
+    },
+    {
+      "index": 128,
+      "start": 13625,
+      "end": 13715,
+      "text": "Sum_{i=1}^{10} (x_i + \\overline{x_i}) = 2 Re( Sum x_i ) = 2 * [10 * 13^9 / (13^{10} + 1)]."
+    },
+    {
+      "index": 129,
+      "start": 13717,
+      "end": 13737,
+      "text": "But earlier, we had:"
+    },
+    {
+      "index": 130,
+      "start": 13739,
+      "end": 13786,
+      "text": "2 Re( Sum x_i ) = (1/13)(168 Sum |x_i|^2 + 10 )"
+    },
+    {
+      "index": 131,
+      "start": 13788,
+      "end": 13808,
+      "text": "Therefore, equating:"
+    },
+    {
+      "index": 132,
+      "start": 13810,
+      "end": 13873,
+      "text": "2 * [10 * 13^9 / (13^{10} + 1)] = (1/13)(168 Sum |x_i|^2 + 10 )"
+    },
+    {
+      "index": 133,
+      "start": 13875,
+      "end": 13901,
+      "text": "Multiply both sides by 13:"
+    },
+    {
+      "index": 134,
+      "start": 13903,
+      "end": 13960,
+      "text": "2 * [10 * 13^{10} / (13^{10} + 1)] = 168 Sum |x_i|^2 + 10"
+    },
+    {
+      "index": 135,
+      "start": 13962,
+      "end": 13972,
+      "text": "Therefore:"
+    },
+    {
+      "index": 136,
+      "start": 13974,
+      "end": 14027,
+      "text": "(20 * 13^{10}) / (13^{10} + 1) - 10 = 168 Sum |x_i|^2"
+    },
+    {
+      "index": 137,
+      "start": 14029,
+      "end": 14064,
+      "text": "Therefore, solving for Sum |x_i|^2:"
+    },
+    {
+      "index": 138,
+      "start": 14066,
+      "end": 14126,
+      "text": "Sum |x_i|^2 = [ (20 * 13^{10} / (13^{10} + 1) ) - 10 ] / 168"
+    },
+    {
+      "index": 139,
+      "start": 14128,
+      "end": 14159,
+      "text": "Let me compute this expression:"
+    },
+    {
+      "index": 140,
+      "start": 14161,
+      "end": 14211,
+      "text": "First, write 10 as 10*(13^{10} + 1)/(13^{10} + 1):"
+    },
+    {
+      "index": 141,
+      "start": 14213,
+      "end": 14216,
+      "text": "So:"
+    },
+    {
+      "index": 142,
+      "start": 14218,
+      "end": 14277,
+      "text": "[ (20 * 13^{10} - 10*(13^{10} + 1)) / (13^{10} + 1) ] / 168"
+    },
+    {
+      "index": 143,
+      "start": 14279,
+      "end": 14297,
+      "text": "Compute numerator:"
+    },
+    {
+      "index": 144,
+      "start": 14299,
+      "end": 14398,
+      "text": "20 * 13^{10} - 10*(13^{10} + 1) = 20*13^{10} - 10*13^{10} - 10 = 10*13^{10} - 10 = 10*(13^{10} - 1)"
+    },
+    {
+      "index": 145,
+      "start": 14400,
+      "end": 14410,
+      "text": "Therefore:"
+    },
+    {
+      "index": 146,
+      "start": 14412,
+      "end": 14510,
+      "text": "Sum |x_i|^2 = [10*(13^{10} - 1) / (13^{10} + 1) ] / 168 = [10*(13^{10} - 1)] / [168*(13^{10} + 1)]"
+    },
+    {
+      "index": 147,
+      "start": 14512,
+      "end": 14547,
+      "text": "Simplify numerator and denominator:"
+    },
+    {
+      "index": 148,
+      "start": 14549,
+      "end": 14587,
+      "text": "Divide numerator and denominator by 2:"
+    },
+    {
+      "index": 149,
+      "start": 14589,
+      "end": 14627,
+      "text": "[5*(13^{10} - 1)] / [84*(13^{10} + 1)]"
+    },
+    {
+      "index": 150,
+      "start": 14629,
+      "end": 14684,
+      "text": "So Sum |x_i|^2 = [5*(13^{10} - 1)] / [84*(13^{10} + 1)]"
+    },
+    {
+      "index": 151,
+      "start": 14686,
+      "end": 14763,
+      "text": "But recall that S = sum_{i=1}^{10} 1/|x_i|^2, and the desired value is S / 2."
+    },
+    {
+      "index": 152,
+      "start": 14765,
+      "end": 14788,
+      "text": "But how do I compute S?"
+    },
+    {
+      "index": 153,
+      "start": 14790,
+      "end": 15010,
+      "text": "Alternatively, maybe I can find another equation involving Sum 1/|x_i|^2. However, I need another relation. Alternatively, maybe I can use the fact that for each root x, 1/|x|^2 = 168 / (26 Re(x) - 1) as derived earlier."
+    },
+    {
+      "index": 154,
+      "start": 15012,
+      "end": 15091,
+      "text": "Therefore, S = sum_{i=1}^{10} 1/|x_i|^2 = sum_{i=1}^{10} 168 / (26 Re(x_i) - 1)"
+    },
+    {
+      "index": 155,
+      "start": 15093,
+      "end": 15363,
+      "text": "But since the roots come in conjugate pairs, and Re(x_i) is the same for x_i and \\overline{x_i}, we can write this as 2 * sum_{i=1}^5 [ 168 / (26 Re(r_i) - 1) ] where r_i is one root from each pair. Therefore, the desired value is sum_{i=1}^5 [ 168 / (26 Re(r_i) - 1) ]."
+    },
+    {
+      "index": 156,
+      "start": 15365,
+      "end": 15396,
+      "text": "But how can I compute this sum?"
+    },
+    {
+      "index": 157,
+      "start": 15398,
+      "end": 15534,
+      "text": "Alternatively, maybe I can find the sum over all roots of 1/(26 Re(x_i) - 1) and then multiply by 168. However, I need to find that sum."
+    },
+    {
+      "index": 158,
+      "start": 15536,
+      "end": 15602,
+      "text": "Alternatively, perhaps I can relate this to the previous equation."
+    },
+    {
+      "index": 159,
+      "start": 15604,
+      "end": 15620,
+      "text": "Earlier, we had:"
+    },
+    {
+      "index": 160,
+      "start": 15622,
+      "end": 15669,
+      "text": "For each root x_i, 168 |x_i|^2 = 26 Re(x_i) - 1"
+    },
+    {
+      "index": 161,
+      "start": 15671,
+      "end": 15710,
+      "text": "Therefore, 26 Re(x_i) - 1 = 168 |x_i|^2"
+    },
+    {
+      "index": 162,
+      "start": 15712,
+      "end": 15759,
+      "text": "Therefore, 1/(26 Re(x_i) - 1) = 1/(168 |x_i|^2)"
+    },
+    {
+      "index": 163,
+      "start": 15761,
+      "end": 15939,
+      "text": "Therefore, S = sum_{i=1}^{10} 1/|x_i|^2 = sum_{i=1}^{10} 168 / (26 Re(x_i) - 1) = sum_{i=1}^{10} 168 * [ 1/(168 |x_i|^2) ] = sum_{i=1}^{10} 1/|x_i|^2 = S. Wait, this is circular."
+    },
+    {
+      "index": 164,
+      "start": 15941,
+      "end": 16006,
+      "text": "Wait, that seems like a tautology. So that approach doesn't help."
+    },
+    {
+      "index": 165,
+      "start": 16008,
+      "end": 16158,
+      "text": "Alternatively, maybe I need to consider that we have expressions for Sum |x_i|^2 and Sum Re(x_i), and maybe find another relation. Let me recall that:"
+    },
+    {
+      "index": 166,
+      "start": 16160,
+      "end": 16264,
+      "text": "From the equation 168 |x_i|^2 = 26 Re(x_i) - 1, which can be rearranged as 26 Re(x_i) = 168 |x_i|^2 + 1."
+    },
+    {
+      "index": 167,
+      "start": 16266,
+      "end": 16301,
+      "text": "Therefore, if I sum over all roots:"
+    },
+    {
+      "index": 168,
+      "start": 16303,
+      "end": 16363,
+      "text": "Sum_{i=1}^{10} 26 Re(x_i) = Sum_{i=1}^{10} [168 |x_i|^2 + 1]"
+    },
+    {
+      "index": 169,
+      "start": 16365,
+      "end": 16375,
+      "text": "Therefore:"
+    },
+    {
+      "index": 170,
+      "start": 16377,
+      "end": 16416,
+      "text": "26 * Sum Re(x_i) = 168 Sum |x_i|^2 + 10"
+    },
+    {
+      "index": 171,
+      "start": 16418,
+      "end": 16486,
+      "text": "But earlier, we found that Sum Re(x_i) = [10 * 13^9] / [13^{10} + 1]"
+    },
+    {
+      "index": 172,
+      "start": 16488,
+      "end": 16512,
+      "text": "Therefore, substituting:"
+    },
+    {
+      "index": 173,
+      "start": 16514,
+      "end": 16570,
+      "text": "26 * [10 * 13^9 / (13^{10} + 1) ] = 168 Sum |x_i|^2 + 10"
+    },
+    {
+      "index": 174,
+      "start": 16572,
+      "end": 16663,
+      "text": "But we already used this to find Sum |x_i|^2. Therefore, this is not helpful for finding S."
+    },
+    {
+      "index": 175,
+      "start": 16665,
+      "end": 16772,
+      "text": "Alternatively, maybe I need to find another equation involving Sum 1/|x_i|^2. But I don't see a direct way."
+    },
+    {
+      "index": 176,
+      "start": 16774,
+      "end": 16862,
+      "text": "Wait, but we have that for each root x, |x| = |13x - 1|. Therefore, squaring both sides:"
+    },
+    {
+      "index": 177,
+      "start": 16864,
+      "end": 16954,
+      "text": "|x|^2 = |13x - 1|^2 = (13x - 1)(13\\overline{x} - 1) = 169 |x|^2 - 13(x + \\overline{x}) + 1"
+    },
+    {
+      "index": 178,
+      "start": 16956,
+      "end": 17048,
+      "text": "Which gives us the equation 0 = 168 |x|^2 - 13(x + \\overline{x}) + 1, which we already used."
+    },
+    {
+      "index": 179,
+      "start": 17050,
+      "end": 17206,
+      "text": "Alternatively, maybe consider that if we take the reciprocal of |x|^2, which is 1/|x|^2, and relate it to something else. But I don't see a direct relation."
+    },
+    {
+      "index": 180,
+      "start": 17208,
+      "end": 17361,
+      "text": "Alternatively, maybe consider that for each root x, we have the equation x^{10} = - (13x - 1)^{10}, so x^{10} + (13x - 1)^{10} = 0. Let me write this as:"
+    },
+    {
+      "index": 181,
+      "start": 17363,
+      "end": 17388,
+      "text": "x^{10} = - (13x - 1)^{10}"
+    },
+    {
+      "index": 182,
+      "start": 17390,
+      "end": 17438,
+      "text": "Therefore, taking modulus squared on both sides:"
+    },
+    {
+      "index": 183,
+      "start": 17440,
+      "end": 17490,
+      "text": "|x|^{20} = | - (13x - 1)^{10} |^2 = |13x - 1|^{20}"
+    },
+    {
+      "index": 184,
+      "start": 17492,
+      "end": 17578,
+      "text": "Therefore, |x|^{20} = |13x - 1|^{20}, so |x| = |13x - 1|, which is the same as before."
+    },
+    {
+      "index": 185,
+      "start": 17580,
+      "end": 17842,
+      "text": "Alternatively, maybe consider the reciprocal of |x|^2, which is 1/|x|^2. Let me denote y = 1/|x|^2. Then, since |x| = |13x - 1|, squaring gives |x|^2 = |13x - 1|^2. Therefore, 1 = |13x - 1|^2 / |x|^2 = |(13x - 1)/x|^2 = |13 - 1/x|^2. Therefore, |13 - 1/x|^2 = 1."
+    },
+    {
+      "index": 186,
+      "start": 17844,
+      "end": 17859,
+      "text": "Expanding this:"
+    },
+    {
+      "index": 187,
+      "start": 17861,
+      "end": 18013,
+      "text": "|13 - 1/x|^2 = (13 - 1/x)(13 - \\overline{1/x}) = 13^2 - 13 \\overline{1/x} - 13 (1/x) + 1/(x \\overline{x}) = 169 - 13(1/x + \\overline{1/x}) + 1/|x|^2 = 1"
+    },
+    {
+      "index": 188,
+      "start": 18015,
+      "end": 18063,
+      "text": "But 1/x + \\overline{1/x} = 2 Re(1/x). Therefore:"
+    },
+    {
+      "index": 189,
+      "start": 18065,
+      "end": 18099,
+      "text": "169 - 13 * 2 Re(1/x) + 1/|x|^2 = 1"
+    },
+    {
+      "index": 190,
+      "start": 18101,
+      "end": 18111,
+      "text": "Therefore:"
+    },
+    {
+      "index": 191,
+      "start": 18113,
+      "end": 18156,
+      "text": "169 - 26 Re(1/x) + y = 1, where y = 1/|x|^2"
+    },
+    {
+      "index": 192,
+      "start": 18158,
+      "end": 18168,
+      "text": "Therefore:"
+    },
+    {
+      "index": 193,
+      "start": 18170,
+      "end": 18202,
+      "text": "-26 Re(1/x) + y = 1 - 169 = -168"
+    },
+    {
+      "index": 194,
+      "start": 18204,
+      "end": 18214,
+      "text": "Therefore:"
+    },
+    {
+      "index": 195,
+      "start": 18216,
+      "end": 18238,
+      "text": "-26 Re(1/x) + y = -168"
+    },
+    {
+      "index": 196,
+      "start": 18240,
+      "end": 18262,
+      "text": "Therefore, rearranged:"
+    },
+    {
+      "index": 197,
+      "start": 18264,
+      "end": 18284,
+      "text": "y = 26 Re(1/x) - 168"
+    },
+    {
+      "index": 198,
+      "start": 18286,
+      "end": 18306,
+      "text": "But y = 1/|x|^2, so:"
+    },
+    {
+      "index": 199,
+      "start": 18308,
+      "end": 18334,
+      "text": "1/|x|^2 = 26 Re(1/x) - 168"
+    },
+    {
+      "index": 200,
+      "start": 18336,
+      "end": 18381,
+      "text": "But this seems similar to previous equations."
+    },
+    {
+      "index": 201,
+      "start": 18383,
+      "end": 18508,
+      "text": "But how can I use this? Let me think. If I can find the sum over all roots of Re(1/x), then I can compute the sum of 1/|x|^2."
+    },
+    {
+      "index": 202,
+      "start": 18510,
+      "end": 18584,
+      "text": "Let me denote T = sum_{i=1}^{10} Re(1/x_i). Then, from the above equation:"
+    },
+    {
+      "index": 203,
+      "start": 18586,
+      "end": 18628,
+      "text": "sum_{i=1}^{10} 1/|x_i|^2 = 26 T - 168 * 10"
+    },
+    {
+      "index": 204,
+      "start": 18630,
+      "end": 18656,
+      "text": "Therefore, S = 26 T - 1680"
+    },
+    {
+      "index": 205,
+      "start": 18658,
+      "end": 18707,
+      "text": "Therefore, if I can find T, then I can compute S."
+    },
+    {
+      "index": 206,
+      "start": 18709,
+      "end": 18726,
+      "text": "So how to find T?"
+    },
+    {
+      "index": 207,
+      "start": 18728,
+      "end": 18785,
+      "text": "T = sum_{i=1}^{10} Re(1/x_i) = Re( sum_{i=1}^{10} 1/x_i )"
+    },
+    {
+      "index": 208,
+      "start": 18787,
+      "end": 18889,
+      "text": "Therefore, if I can compute the sum of 1/x_i over all roots, then take its real part, that would be T."
+    },
+    {
+      "index": 209,
+      "start": 18891,
+      "end": 18930,
+      "text": "So let me compute Sum_{i=1}^{10} 1/x_i."
+    },
+    {
+      "index": 210,
+      "start": 18932,
+      "end": 19152,
+      "text": "But the sum of reciprocals of roots of a polynomial can be found using Vieta's formula. For a polynomial P(x) = a_n x^n + a_{n-1} x^{n-1} + ... + a_0, the sum of reciprocals of roots is -a_1 / a_0, provided that a_0 ≠ 0."
+    },
+    {
+      "index": 211,
+      "start": 19154,
+      "end": 19301,
+      "text": "Wait, let me recall Vieta's formula. The sum of reciprocals of roots is sum_{i=1}^n 1/x_i = (sum_{i=1}^n product_{j≠i} x_j ) / product_{i=1}^n x_i."
+    },
+    {
+      "index": 212,
+      "start": 19303,
+      "end": 19346,
+      "text": "But product_{i=1}^n x_i = (-1)^n a_0 / a_n."
+    },
+    {
+      "index": 213,
+      "start": 19348,
+      "end": 19412,
+      "text": "Similarly, sum_{i=1}^n product_{j≠i} x_j = (-1)^{n-1} a_1 / a_n."
+    },
+    {
+      "index": 214,
+      "start": 19414,
+      "end": 19594,
+      "text": "Therefore, sum_{i=1}^n 1/x_i = [ (-1)^{n-1} a_1 / a_n ] / [ (-1)^n a_0 / a_n ] = [ (-1)^{n-1} a_1 / a_n ] * [ a_n / (-1)^n a_0 ] = [ (-1)^{n-1} / (-1)^n ] * a_1 / a_0 = -a_1 / a_0."
+    },
+    {
+      "index": 215,
+      "start": 19596,
+      "end": 19638,
+      "text": "Therefore, sum_{i=1}^n 1/x_i = -a_1 / a_0."
+    },
+    {
+      "index": 216,
+      "start": 19640,
+      "end": 19732,
+      "text": "But in our case, the polynomial is P(x) = x^{10} + (13x - 1)^{10} = 0. Let me write this as:"
+    },
+    {
+      "index": 217,
+      "start": 19734,
+      "end": 19769,
+      "text": "P(x) = x^{10} + (13x - 1)^{10} = 0."
+    },
+    {
+      "index": 218,
+      "start": 19771,
+      "end": 19877,
+      "text": "Let me expand (13x - 1)^{10} as before. But maybe instead of expanding, I can write P(x) in standard form:"
+    },
+    {
+      "index": 219,
+      "start": 19879,
+      "end": 19914,
+      "text": "P(x) = x^{10} + (13x - 1)^{10} = 0."
+    },
+    {
+      "index": 220,
+      "start": 19916,
+      "end": 19983,
+      "text": "Let me denote this as P(x) = a_{10}x^{10} + a_9x^9 + ... + a_0 = 0."
+    },
+    {
+      "index": 221,
+      "start": 19985,
+      "end": 20013,
+      "text": "We need to find a_0 and a_1."
+    },
+    {
+      "index": 222,
+      "start": 20015,
+      "end": 20167,
+      "text": "First, a_0 is the constant term of P(x). The constant term of x^{10} is 0, and the constant term of (13x - 1)^{10} is (-1)^{10} = 1. Therefore, a_0 = 1."
+    },
+    {
+      "index": 223,
+      "start": 20169,
+      "end": 20410,
+      "text": "Then, a_1 is the coefficient of x^1 in P(x). The coefficient of x^1 in x^{10} is 0. The coefficient of x^1 in (13x - 1)^{10} is \\binom{10}{1} (13x)^1 (-1)^{9} = 10 * 13x * (-1)^9 = -10 * 13 x = -130 x. Therefore, the coefficient a_1 is -130."
+    },
+    {
+      "index": 224,
+      "start": 20412,
+      "end": 20439,
+      "text": "Therefore, sum_{i=1}^{10} 1"
+    }
+  ],
+  "trace_sha256": "1b6696d101fd9725b249d57f5982872ac0cecf51795b3c552603c2d7d75ff41a",
+  "annotation_scope": "Historical thinking only. Gold, final forced readout, grade/correct omitted. Review target selection uses outcome and is disclosed separately."
+}

@@ -24,6 +24,8 @@ def git(*args):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--repository', default='zhouz4884-coder/long-cot-research')
+    parser.add_argument('--expected-visibility', choices=['private', 'public'],
+                        help='Require this explicitly selected visibility; never mutate visibility.')
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     assert re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', args.repository)
@@ -47,7 +49,10 @@ def main():
     assert identity['login'] == args.repository.split('/')[0], 'Do not verify under an unintended account'
     prefix = '/repos/' + args.repository
     repo = api(prefix)
-    assert repo['private'] and repo['default_branch'] == 'main'
+    assert repo['default_branch'] == 'main'
+    actual_visibility = 'private' if repo['private'] else 'public'
+    if args.expected_visibility is not None:
+        assert actual_visibility == args.expected_visibility, 'Repository visibility differs from explicit expectation'
     local_head = git('rev-parse', 'HEAD').decode().strip()
     local_tree = git('rev-parse', 'HEAD^{tree}').decode().strip()
     ref = api(prefix + '/git/ref/heads/main')
@@ -126,15 +131,17 @@ def main():
 
     anonymous_status = None
     request = urllib.request.Request('https://api.github.com' + prefix,
-                                     headers={'User-Agent': 'ACL-private-visibility-check'})
+                                     headers={'User-Agent': 'ACL-repository-visibility-check'})
     try:
         with urllib.request.urlopen(request, timeout=20) as response:
             anonymous_status = response.status
     except urllib.error.HTTPError as error:
         anonymous_status = error.code
-    # private:true above is authoritative; an unauthenticated rate limit is not a privacy proof.
+    # The authenticated private flag is authoritative; an anonymous rate limit is not a privacy proof.
     report = {'status': 'PASS', 'repository': args.repository, 'url': repo['html_url'],
-        'private': repo['private'], 'account': identity['login'], 'default_branch': 'main',
+        'private': repo['private'], 'visibility': actual_visibility,
+        'expected_visibility': args.expected_visibility, 'visibility_mutated': False,
+        'account': identity['login'], 'default_branch': 'main',
         'head': local_head, 'tree': local_tree, 'files_in_complete_tree': len(local),
         'all_tree_blob_ids_match': True, 'all_ancestor_commit_ids_match': True,
         'ancestor_count': len(ancestors), 'representative_content': samples,

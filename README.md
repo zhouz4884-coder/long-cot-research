@@ -2,7 +2,7 @@
 
 长思维链研究：以**最终回答正确率、同预算的算法增量和完整成本**为主线，探索局部修订后的有效计算复用与答案交付。
 
-私有研究仓库：[zhouz4884-coder/long-cot-research](https://github.com/zhouz4884-coder/long-cot-research)。原工作目录为 `D:\ACL`。更新日期：2026-11-06。
+研究仓库：[zhouz4884-coder/long-cot-research](https://github.com/zhouz4884-coder/long-cot-research)。原工作目录为 `D:\ACL`。更新日期：2026-11-06。当前远端可见性为public（只读核对，未由本轮更改）；早期交付记录中的private为当时状态。
 
 ## 从哪里开始
 

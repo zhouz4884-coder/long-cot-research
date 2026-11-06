@@ -1,0 +1,1077 @@
+{
+  "status": "PASS",
+  "passed": 49,
+  "checks": [
+    "target_CPU_transformers_4552_SDPA",
+    "fresh_cache_entry_0",
+    "fresh_cache_entry_1",
+    "fresh_cache_entry_2",
+    "left_pad_rowA_matches_single",
+    "left_pad_rowB_matches_single",
+    "actual_left_padding",
+    "semantic_positions_after_padding",
+    "fresh_cache_entry_3",
+    "fresh_cache_entry_4",
+    "fresh_cache_entry_5",
+    "changing_other_row_does_not_change_A",
+    "row_permutation_invariance",
+    "repeated_batch_same_outputs",
+    "nonvacuous_fresh_cache_object_observation",
+    "cache_objects_distinct_across_calls",
+    "padded_and_unpadded_accounting",
+    "physical_forward_ledger_count",
+    "uncached_argmax_A_0",
+    "uncached_argmax_A_1",
+    "uncached_argmax_A_2",
+    "uncached_argmax_A_3",
+    "uncached_argmax_A_4",
+    "uncached_argmax_A_5",
+    "uncached_argmax_A_6",
+    "uncached_argmax_A_7",
+    "uncached_argmax_B_0",
+    "uncached_argmax_B_1",
+    "uncached_argmax_B_2",
+    "uncached_argmax_B_3",
+    "uncached_argmax_B_4",
+    "uncached_argmax_B_5",
+    "uncached_argmax_B_6",
+    "uncached_argmax_B_7",
+    "fixture_not_near_tie",
+    "mock_early_EOS_trimmed",
+    "mock_late_EOS_retained",
+    "mock_no_finished_row_PAD_scored",
+    "mock_logical_tokens7",
+    "mock_physical_inputs18",
+    "mock_EOS_rows_not_cap",
+    "mock_no_EOS_hits_cap",
+    "forced_prefix_counted_in_prompt",
+    "forced_prefix_is_exact_suffix",
+    "forced_complete_tuple_not_cut_at_first_component",
+    "forced_score_prefix_not_generated_tokens",
+    "forced_prompt_in_physical_ledger",
+    "forced_tuple_EOS_only",
+    "source_unchanged_during_check"
+  ],
+  "paired_readout_source_sha256": "e08273ce10805173a693672484490b3821af6d34d987617a8055eb6647bf7ac5",
+  "scope": "Synthetic target-HF CPU random-tiny SDPA and deterministic mocks only; no32-case bank, eval/Gold, real model or GPU.",
+  "versions": {
+    "torch": "2.11.0+cpu",
+    "transformers": "4.55.2"
+  },
+  "random_fixture": {
+    "seed": 20261106,
+    "layers": 3,
+    "hidden_size": 32,
+    "max_new_tokens": 8,
+    "backend": "sdpa",
+    "minimum_uncached_top2_margin": 0.0018062293529510498,
+    "output_EOS_rows_in_initial_batch": 0,
+    "batch_single_equal": true,
+    "all_calls_fresh_cache": true,
+    "observed_fresh_cache_objects": 6,
+    "run_logs": [
+      {
+        "rows": [
+          "A",
+          "B"
+        ],
+        "outputs": [
+          {
+            "job_id": "A",
+            "rank": 1,
+            "bank_id": "CPU-synthetic",
+            "method": "CPU",
+            "prompt_tokens": 3,
+            "token_ids": [
+              41,
+              85,
+              82,
+              88,
+              14,
+              52,
+              95,
+              30
+            ],
+            "text": "Amjp&Lw6",
+            "answer_text": "Amjp&Lw6",
+            "eos_reached": false,
+            "hit_cap": true,
+            "new_tokens": 8,
+            "shared_packet_sha256": null,
+            "contract_hash": "CPU-only"
+          },
+          {
+            "job_id": "B",
+            "rank": 1,
+            "bank_id": "CPU-synthetic",
+            "method": "CPU",
+            "prompt_tokens": 5,
+            "token_ids": [
+              60,
+              39,
+              57,
+              97,
+              93,
+              82,
+              88,
+              14
+            ],
+            "text": "T?Qyujp&",
+            "answer_text": "T?Qyujp&",
+            "eos_reached": false,
+            "hit_cap": true,
+            "new_tokens": 8,
+            "shared_packet_sha256": null,
+            "contract_hash": "CPU-only"
+          }
+        ],
+        "ledger": {
+          "seconds": 0.06552519999968354,
+          "rows": [
+            "A",
+            "B"
+          ],
+          "padded_prefill_tokens": 10,
+          "unpadded_prompt_tokens": 8,
+          "physical_forward_input_tokens": 24,
+          "forward_calls": [
+            {
+              "batch": 2,
+              "sequence": 5,
+              "physical_input_tokens": 10
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            }
+          ],
+          "logical_generated_tokens": 16,
+          "peak_allocated_bytes": null
+        },
+        "first_mask": [
+          [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "first_position_ids": [
+          [
+            1,
+            1,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "rows": [
+          "A"
+        ],
+        "outputs": [
+          {
+            "job_id": "A",
+            "rank": 1,
+            "bank_id": "CPU-synthetic",
+            "method": "CPU",
+            "prompt_tokens": 3,
+            "token_ids": [
+              41,
+              85,
+              82,
+              88,
+              14,
+              52,
+              95,
+              30
+            ],
+            "text": "Amjp&Lw6",
+            "answer_text": "Amjp&Lw6",
+            "eos_reached": false,
+            "hit_cap": true,
+            "new_tokens": 8,
+            "shared_packet_sha256": null,
+            "contract_hash": "CPU-only"
+          }
+        ],
+        "ledger": {
+          "seconds": 0.023775399997248314,
+          "rows": [
+            "A"
+          ],
+          "padded_prefill_tokens": 3,
+          "unpadded_prompt_tokens": 3,
+          "physical_forward_input_tokens": 10,
+          "forward_calls": [
+            {
+              "batch": 1,
+              "sequence": 3,
+              "physical_input_tokens": 3
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            }
+          ],
+          "logical_generated_tokens": 8,
+          "peak_allocated_bytes": null
+        },
+        "first_mask": [
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "first_position_ids": [
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "rows": [
+          "B"
+        ],
+        "outputs": [
+          {
+            "job_id": "B",
+            "rank": 1,
+            "bank_id": "CPU-synthetic",
+            "method": "CPU",
+            "prompt_tokens": 5,
+            "token_ids": [
+              60,
+              39,
+              57,
+              97,
+              93,
+              82,
+              88,
+              14
+            ],
+            "text": "T?Qyujp&",
+            "answer_text": "T?Qyujp&",
+            "eos_reached": false,
+            "hit_cap": true,
+            "new_tokens": 8,
+            "shared_packet_sha256": null,
+            "contract_hash": "CPU-only"
+          }
+        ],
+        "ledger": {
+          "seconds": 0.021855800001503667,
+          "rows": [
+            "B"
+          ],
+          "padded_prefill_tokens": 5,
+          "unpadded_prompt_tokens": 5,
+          "physical_forward_input_tokens": 12,
+          "forward_calls": [
+            {
+              "batch": 1,
+              "sequence": 5,
+              "physical_input_tokens": 5
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            },
+            {
+              "batch": 1,
+              "sequence": 1,
+              "physical_input_tokens": 1
+            }
+          ],
+          "logical_generated_tokens": 8,
+          "peak_allocated_bytes": null
+        },
+        "first_mask": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "first_position_ids": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "rows": [
+          "A",
+          "C"
+        ],
+        "outputs": [
+          {
+            "job_id": "A",
+            "rank": 1,
+            "bank_id": "CPU-synthetic",
+            "method": "CPU",
+            "prompt_tokens": 3,
+            "token_ids": [
+              41,
+              85,
+              82,
+              88,
+              14,
+              52,
+              95,
+              30
+            ],
+            "text": "Amjp&Lw6",
+            "answer_text": "Amjp&Lw6",
+            "eos_reached": false,
+            "hit_cap": true,
+            "new_tokens": 8,
+            "shared_packet_sha256": null,
+            "contract_hash": "CPU-only"
+          },
+          {
+            "job_id": "C",
+            "rank": 1,
+            "bank_id": "CPU-synthetic",
+            "method": "CPU",
+            "prompt_tokens": 7,
+            "token_ids": [
+              35,
+              29,
+              59,
+              76,
+              57,
+              55,
+              73,
+              30
+            ],
+            "text": ";5SdQOa6",
+            "answer_text": ";5SdQOa6",
+            "eos_reached": false,
+            "hit_cap": true,
+            "new_tokens": 8,
+            "shared_packet_sha256": null,
+            "contract_hash": "CPU-only"
+          }
+        ],
+        "ledger": {
+          "seconds": 0.053776400000060676,
+          "rows": [
+            "A",
+            "C"
+          ],
+          "padded_prefill_tokens": 14,
+          "unpadded_prompt_tokens": 10,
+          "physical_forward_input_tokens": 28,
+          "forward_calls": [
+            {
+              "batch": 2,
+              "sequence": 7,
+              "physical_input_tokens": 14
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            }
+          ],
+          "logical_generated_tokens": 16,
+          "peak_allocated_bytes": null
+        },
+        "first_mask": [
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "first_position_ids": [
+          [
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "rows": [
+          "B",
+          "A"
+        ],
+        "outputs": [
+          {
+            "job_id": "B",
+            "rank": 1,
+            "bank_id": "CPU-synthetic",
+            "method": "CPU",
+            "prompt_tokens": 5,
+            "token_ids": [
+              60,
+              39,
+              57,
+              97,
+              93,
+              82,
+              88,
+              14
+            ],
+            "text": "T?Qyujp&",
+            "answer_text": "T?Qyujp&",
+            "eos_reached": false,
+            "hit_cap": true,
+            "new_tokens": 8,
+            "shared_packet_sha256": null,
+            "contract_hash": "CPU-only"
+          },
+          {
+            "job_id": "A",
+            "rank": 1,
+            "bank_id": "CPU-synthetic",
+            "method": "CPU",
+            "prompt_tokens": 3,
+            "token_ids": [
+              41,
+              85,
+              82,
+              88,
+              14,
+              52,
+              95,
+              30
+            ],
+            "text": "Amjp&Lw6",
+            "answer_text": "Amjp&Lw6",
+            "eos_reached": false,
+            "hit_cap": true,
+            "new_tokens": 8,
+            "shared_packet_sha256": null,
+            "contract_hash": "CPU-only"
+          }
+        ],
+        "ledger": {
+          "seconds": 0.061061300002620555,
+          "rows": [
+            "B",
+            "A"
+          ],
+          "padded_prefill_tokens": 10,
+          "unpadded_prompt_tokens": 8,
+          "physical_forward_input_tokens": 24,
+          "forward_calls": [
+            {
+              "batch": 2,
+              "sequence": 5,
+              "physical_input_tokens": 10
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            }
+          ],
+          "logical_generated_tokens": 16,
+          "peak_allocated_bytes": null
+        },
+        "first_mask": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            1
+          ]
+        ],
+        "first_position_ids": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            1,
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "rows": [
+          "A",
+          "B"
+        ],
+        "outputs": [
+          {
+            "job_id": "A",
+            "rank": 1,
+            "bank_id": "CPU-synthetic",
+            "method": "CPU",
+            "prompt_tokens": 3,
+            "token_ids": [
+              41,
+              85,
+              82,
+              88,
+              14,
+              52,
+              95,
+              30
+            ],
+            "text": "Amjp&Lw6",
+            "answer_text": "Amjp&Lw6",
+            "eos_reached": false,
+            "hit_cap": true,
+            "new_tokens": 8,
+            "shared_packet_sha256": null,
+            "contract_hash": "CPU-only"
+          },
+          {
+            "job_id": "B",
+            "rank": 1,
+            "bank_id": "CPU-synthetic",
+            "method": "CPU",
+            "prompt_tokens": 5,
+            "token_ids": [
+              60,
+              39,
+              57,
+              97,
+              93,
+              82,
+              88,
+              14
+            ],
+            "text": "T?Qyujp&",
+            "answer_text": "T?Qyujp&",
+            "eos_reached": false,
+            "hit_cap": true,
+            "new_tokens": 8,
+            "shared_packet_sha256": null,
+            "contract_hash": "CPU-only"
+          }
+        ],
+        "ledger": {
+          "seconds": 0.05767370000103256,
+          "rows": [
+            "A",
+            "B"
+          ],
+          "padded_prefill_tokens": 10,
+          "unpadded_prompt_tokens": 8,
+          "physical_forward_input_tokens": 24,
+          "forward_calls": [
+            {
+              "batch": 2,
+              "sequence": 5,
+              "physical_input_tokens": 10
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            },
+            {
+              "batch": 2,
+              "sequence": 1,
+              "physical_input_tokens": 2
+            }
+          ],
+          "logical_generated_tokens": 16,
+          "peak_allocated_bytes": null
+        },
+        "first_mask": [
+          [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "first_position_ids": [
+          [
+            1,
+            1,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      }
+    ]
+  },
+  "mock_early_late_EOS": {
+    "outputs": [
+      {
+        "job_id": "A",
+        "rank": 1,
+        "bank_id": "CPU-synthetic",
+        "method": "CPU",
+        "prompt_tokens": 3,
+        "token_ids": [
+          96,
+          2
+        ],
+        "text": "x",
+        "answer_text": "x",
+        "eos_reached": true,
+        "hit_cap": false,
+        "new_tokens": 2,
+        "shared_packet_sha256": null,
+        "contract_hash": "CPU-only"
+      },
+      {
+        "job_id": "B",
+        "rank": 1,
+        "bank_id": "CPU-synthetic",
+        "method": "CPU",
+        "prompt_tokens": 5,
+        "token_ids": [
+          73,
+          74,
+          75,
+          76,
+          2
+        ],
+        "text": "abcd",
+        "answer_text": "abcd",
+        "eos_reached": true,
+        "hit_cap": false,
+        "new_tokens": 5,
+        "shared_packet_sha256": null,
+        "contract_hash": "CPU-only"
+      }
+    ],
+    "ledger": {
+      "seconds": 0.00015039999925647862,
+      "rows": [
+        "A",
+        "B"
+      ],
+      "padded_prefill_tokens": 10,
+      "unpadded_prompt_tokens": 8,
+      "physical_forward_input_tokens": 18,
+      "forward_calls": [
+        {
+          "batch": 2,
+          "sequence": 5,
+          "physical_input_tokens": 10
+        },
+        {
+          "batch": 2,
+          "sequence": 1,
+          "physical_input_tokens": 2
+        },
+        {
+          "batch": 2,
+          "sequence": 1,
+          "physical_input_tokens": 2
+        },
+        {
+          "batch": 2,
+          "sequence": 1,
+          "physical_input_tokens": 2
+        },
+        {
+          "batch": 2,
+          "sequence": 1,
+          "physical_input_tokens": 2
+        }
+      ],
+      "logical_generated_tokens": 7,
+      "peak_allocated_bytes": null
+    }
+  },
+  "mock_cap": {
+    "outputs": [
+      {
+        "job_id": "A",
+        "rank": 1,
+        "bank_id": "CPU-synthetic",
+        "method": "CPU",
+        "prompt_tokens": 3,
+        "token_ids": [
+          98,
+          98,
+          98,
+          98,
+          98,
+          98,
+          98,
+          98
+        ],
+        "text": "zzzzzzzz",
+        "answer_text": "zzzzzzzz",
+        "eos_reached": false,
+        "hit_cap": true,
+        "new_tokens": 8,
+        "shared_packet_sha256": null,
+        "contract_hash": "CPU-only"
+      },
+      {
+        "job_id": "B",
+        "rank": 1,
+        "bank_id": "CPU-synthetic",
+        "method": "CPU",
+        "prompt_tokens": 5,
+        "token_ids": [
+          97,
+          97,
+          97,
+          97,
+          97,
+          97,
+          97,
+          97
+        ],
+        "text": "yyyyyyyy",
+        "answer_text": "yyyyyyyy",
+        "eos_reached": false,
+        "hit_cap": true,
+        "new_tokens": 8,
+        "shared_packet_sha256": null,
+        "contract_hash": "CPU-only"
+      }
+    ]
+  },
+  "mock_forced_tuple": {
+    "output": {
+      "job_id": "forced",
+      "rank": 1,
+      "bank_id": "CPU-synthetic",
+      "method": "ForcedBoxCue",
+      "prompt_tokens": 122,
+      "token_ids": [
+        16,
+        26,
+        20,
+        27,
+        20,
+        28,
+        17,
+        101,
+        2
+      ],
+      "text": "(2,3,4)}",
+      "answer_text": "\\boxed{(2,3,4)}",
+      "eos_reached": true,
+      "hit_cap": false,
+      "new_tokens": 9,
+      "shared_packet_sha256": null,
+      "contract_hash": "CPU-only"
+    },
+    "ledger": {
+      "seconds": 0.00010549999933573417,
+      "rows": [
+        "forced"
+      ],
+      "padded_prefill_tokens": 122,
+      "unpadded_prompt_tokens": 122,
+      "physical_forward_input_tokens": 130,
+      "forward_calls": [
+        {
+          "batch": 1,
+          "sequence": 122,
+          "physical_input_tokens": 122
+        },
+        {
+          "batch": 1,
+          "sequence": 1,
+          "physical_input_tokens": 1
+        },
+        {
+          "batch": 1,
+          "sequence": 1,
+          "physical_input_tokens": 1
+        },
+        {
+          "batch": 1,
+          "sequence": 1,
+          "physical_input_tokens": 1
+        },
+        {
+          "batch": 1,
+          "sequence": 1,
+          "physical_input_tokens": 1
+        },
+        {
+          "batch": 1,
+          "sequence": 1,
+          "physical_input_tokens": 1
+        },
+        {
+          "batch": 1,
+          "sequence": 1,
+          "physical_input_tokens": 1
+        },
+        {
+          "batch": 1,
+          "sequence": 1,
+          "physical_input_tokens": 1
+        },
+        {
+          "batch": 1,
+          "sequence": 1,
+          "physical_input_tokens": 1
+        }
+      ],
+      "logical_generated_tokens": 9,
+      "peak_allocated_bytes": null
+    },
+    "mock_limit": 16
+  },
+  "limitations": [
+    "Random fixture is not Qwen3-4B quality or CUDA/FP16 equivalence.",
+    "Real tiny EOS coverage is explicitly reported; mixed early/late EOS branch coverage belongs to mock.",
+    "Physical forward counts include left padding and finished rows until batch terminates; logical scored outputs stop at each row EOS.",
+    "Scoring prefix is supplied input, not generated evidence; exact tuple parser correctness remains a separate grader test."
+  ]
+}

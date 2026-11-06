@@ -1,0 +1,71 @@
+{
+  "status": "FINISHED",
+  "pid": 903498,
+  "started_unix": 1793954976.7704546,
+  "single_model": "Qwen3-4B",
+  "physical_gpus": [
+    "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+    "GPU-a696ce9a-7137-cf6f-b4d3-deb992a72f28"
+  ],
+  "aggregate_GPU_seconds_cap": 1800,
+  "workers": {
+    "0": {
+      "status": "FINISHED",
+      "gpu": "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+      "started_unix": 1793954976.7713375,
+      "command": [
+        "timeout",
+        "--signal=TERM",
+        "--kill-after=5s",
+        "880s",
+        "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013/.venv/bin/python",
+        "-u",
+        "-B",
+        "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_phase5c_20261106/paired_readout.py",
+        "--root",
+        "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_phase5c_20261106",
+        "--model",
+        "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B",
+        "--gpu",
+        "GPU-ef01d441-985f-50b3-6e64-5d4c3e2def3a",
+        "--worker",
+        "0",
+        "--max-seconds",
+        "850"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 851.0697746276855
+    },
+    "1": {
+      "status": "FINISHED",
+      "gpu": "GPU-a696ce9a-7137-cf6f-b4d3-deb992a72f28",
+      "started_unix": 1793954976.7722673,
+      "command": [
+        "timeout",
+        "--signal=TERM",
+        "--kill-after=5s",
+        "880s",
+        "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/radar20261013/.venv/bin/python",
+        "-u",
+        "-B",
+        "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_phase5c_20261106/paired_readout.py",
+        "--root",
+        "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/projects/longcot_phase5c_20261106",
+        "--model",
+        "/media/user/5bc0dc8d-c938-4b2a-af1b-94174fc511a9/models/Qwen3-4B",
+        "--gpu",
+        "GPU-a696ce9a-7137-cf6f-b4d3-deb992a72f28",
+        "--worker",
+        "1",
+        "--max-seconds",
+        "850"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 826.3997867107391
+    }
+  },
+  "elapsed_seconds": 851.0742981433868,
+  "conservative_aggregate_GPU_seconds": 1677.4695613384247,
+  "conservative_GPU_minutes": 27.957826022307078,
+  "ending_compute_processes": ""
+}

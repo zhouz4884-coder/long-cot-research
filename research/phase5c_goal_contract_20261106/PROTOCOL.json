@@ -1,0 +1,95 @@
+{
+  "id": "Phase5C_goal_evidence_paired_readout_v1",
+  "date": "2026-11-06",
+  "status": "FROZEN_CHOICES_BEFORE_NEW_GPU_OUTPUTS",
+  "model": "Qwen3-4B",
+  "model_manifest": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+  "n_distinct_questions": 32,
+  "history_source": "historicalFULL300minusP1fixed100, IDonlyhashselect32",
+  "n_methods": 7,
+  "planned_outputs": 224,
+  "methods": [
+    "ForcedBoxCue",
+    "FullContinue",
+    "FullContract",
+    "FullContractEvidence",
+    "TailContract",
+    "ProjectedContractEvidence",
+    "RestartP"
+  ],
+  "primary_component_comparison": [
+    "ProjectedContractEvidence",
+    "FullContractEvidence"
+  ],
+  "other_required_baselines": [
+    "FullContinue",
+    "FullContract",
+    "TailContract",
+    "RestartP",
+    "ForcedBoxCue"
+  ],
+  "true_G_implemented": false,
+  "certified_boundary_implemented": false,
+  "target_type_hints": {
+    "count": 7,
+    "unknown": 25
+  },
+  "evidence_budget": {
+    "max_quoted_characters": 1800,
+    "max_spans": 8
+  },
+  "original_question_preserved_all_methods": true,
+  "same_packet_full_and_projected": true,
+  "manual_Gold_or_parent_facts_injected": false,
+  "do_sample": false,
+  "seed": 20261106,
+  "normal_stop": "configured EOS",
+  "forced_box_close_early_stop": false,
+  "additional_generation_guard": 384,
+  "padding": "left with attentionmask; physicalforwardinputsincludeinactivepadding",
+  "backend": "SDPA",
+  "dtype": "FP16",
+  "transformers": "4.55.2",
+  "torch": "2.8.0+cu128",
+  "batch_size_max": 2,
+  "workers": 2,
+  "split": "rank parity, each16questions112outputs",
+  "batch_order": [
+    [
+      "ForcedBoxCue",
+      "FullContinue"
+    ],
+    [
+      "FullContract",
+      "FullContractEvidence"
+    ],
+    [
+      "TailContract",
+      "ProjectedContractEvidence"
+    ],
+    [
+      "RestartP"
+    ]
+  ],
+  "worker_soft_seconds": 850,
+  "outer_timeout_seconds": 880,
+  "kill_after_seconds": 5,
+  "aggregate_GPU_seconds_cap_all_attempts": 1800,
+  "grades": "new frozen math_verify0.9.0 scorer, separate CPU after generation; oldgradesunchanged",
+  "unknown_and_missing": "retain planned denominators, report separate; commoncompletecases only explicitly declared pairedsubset ifpartial",
+  "continuation_gate": "exploratory net>=2/32 over strongest baseline aggregate before independent confirmation; not significance proof",
+  "adaptive_rule_or_sample_changes": false,
+  "raw_trace_control_tags": "uniform fullwidth escaping of ChatML/think tags; original text rerender, not exact historicalcache replay",
+  "scope": "singlemodel fixedhistoricalprefix terminalreadout exploration, not32freshnative trajectories or formal independent benchmark",
+  "source_sha256": "e08273ce10805173a693672484490b3821af6d34d987617a8055eb6647bf7ac5",
+  "helper_sha256": "9d86b95f423bcc4805574e4c1b1b91d0597b0fd14a1c4437b4c24460d28cd15f",
+  "bank_sha256": "3c75c9814e7635d68ae476ab8dcc6617faa2be6d9eea68b481ecca724c04d139",
+  "jobs_sha256": "77df41824dfa92f96511c12c5a853a5cefed1625fc99acd05544b3cf14ca6e62",
+  "grader_sha256": "ba394c1a42f86126f5a70bd0ed6f086b92dd551996cf44c410cfa6d896fa49fe",
+  "CPU_admission": {
+    "batch": 49,
+    "helper": 46,
+    "grader_structure": 48,
+    "grader_math": 22
+  }
+}

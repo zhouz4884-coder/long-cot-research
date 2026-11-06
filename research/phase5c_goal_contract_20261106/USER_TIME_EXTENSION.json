@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-06",
+  "recorded_at_utc": "2026-11-06T09:03:59.793291+00:00",
+  "authorization": "User explicitly said lab-owned3090 time is available; complete the fixed experiment before comparison.",
+  "superseded": "Original30singleGPUminute study cap and850secondworker soft limit as a reason to leave matrix partial.",
+  "unchanged": [
+    "32selectedIDs",
+    "7methods",
+    "224plannedoutputs",
+    "originalcompiledmessages/tokenIDs",
+    "modelassets",
+    "FP16SDPA",
+    "batchpaircomposition",
+    "greedyseed",
+    "384generationguard",
+    "evidencealgorithm",
+    "graderba394c1"
+  ],
+  "execution": "Allow original workers to save and stop; resume only missing IDs using original generate_batch function. Do not re-score/select/retry based on correctness, cap, or parser results.",
+  "existing_result_policy": "Immutable; partial originalpair recompute uses samewholepair, discard newlyregeneratedalready-present row and count allwork.",
+  "resume_safety_timeout_seconds_perworker": 7500,
+  "no_new_scientific_GPU_minute_cap": true,
+  "quality_outputs_seen_for_this_amendment": false,
+  "stage": "Before any bank scoring; only runtime coverage has been monitored."
+}

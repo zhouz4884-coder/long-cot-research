@@ -98,6 +98,14 @@ def main():
         'research/phase5b_boundary_20261106/results/round_01/LongR_E__SharedGFull.json',
     ]
     representative.extend(path for path in phase5b_samples if path in local)
+    phase5c_samples = [
+        'docs/phases/Phase5C_单模型自然轨迹验证与收尾_ZH.md',
+        'research/phase5c_goal_contract_20261106/PHASE_CLOSEOUT_ZH.md',
+        'research/phase5c_goal_contract_20261106/prelaunch_freeze.json',
+        'research/phase5c_goal_contract_20261106/scoring/summary.json',
+        'research/phase5c_goal_contract_20261106/results/resume_worker_1/32__ProjectedContractEvidence.json',
+    ]
+    representative.extend(path for path in phase5c_samples if path in local)
     samples = []
     for path in representative:
         blob = api(prefix + '/git/blobs/' + local[path])

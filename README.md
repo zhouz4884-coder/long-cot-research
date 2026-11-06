@@ -9,7 +9,8 @@
 - [Phase 1–5 总索引](docs/phases/INDEX_ZH.md)
 - [当前研究目标](docs/next_phase/CURRENT_RESEARCH_GOAL_20261105_ZH.md)
 - [最新建议审查与下一轮公平对照](research/repository_phase_plan_20261106/ADVISOR_REVIEW_20261106_ZH.md)
-- [最新实测：Phase5-B自然诊断与边界投影](research/phase5b_boundary_20261106/RUN_STATUS_ZH.md)
+- [最新阶段收尾：Phase5-C的目的、方法、数据与问题](research/phase5c_goal_contract_20261106/PHASE_CLOSEOUT_ZH.md)
+- [Phase5-C简明报告](docs/phases/Phase5C_单模型自然轨迹验证与收尾_ZH.md)
 - [对外部建议的逐条判断与当前进度](docs/phases/Phase5B_自然诊断与父边界投影_ZH.md)
 - [当前算法公式与token上限解释](research/phase5_prototype_20261106/PLAN_AND_FORMULAS_ZH.md)
 - [文件发布范围与来源](docs/repository/PUBLISH_SCOPE_ZH.md)
@@ -24,6 +25,7 @@
 | [Phase 4](docs/phases/Phase4_理论审查与P05五臂短试_ZH.md) | 模型/数学审查、P0.5、裁尾复用、候选溯源 | 16题primary完成，8题诊断完成 |
 | [Phase 5](docs/phases/Phase5_候选算法与公平基线_计划_ZH.md) | 版本一致局部重推候选、同信息强baseline与质量优先短试 | Phase5-A按预算partial；当前静态帧未显示增量，正式benchmark未开展 |
 | [Phase 5-B](docs/phases/Phase5B_自然诊断与父边界投影_ZH.md) | 自然失败条件诊断、后台证书/父边界投影、Raw与同G对照 | 10/10输出完整，三态覆盖；投影节省但未胜最强基线正确率 |
+| [Phase 5-C](docs/phases/Phase5C_单模型自然轨迹验证与收尾_ZH.md) | 32不同自然题、7条件、自动候选投影与强读出对照 | 224/224完整；当前原型未过扩大门槛，阶段收尾完成 |
 
 每个Phase统一记录：问题、输入与协议、实际动作、数据结论、失败与猜想、下一门槛、证据路径。后续工作继续新增Phase或阶段内子报告，不改写已冻结的结果。
 
@@ -36,6 +38,7 @@
 | P0.5同轮五臂 | 8/11/0/12/8；4.4591单卡分钟 | 80自由输出全完成，辅助诊断8题；联合净+1涉及预算/交付差异 |
 | Phase5-A同信息质量优先原型 | 3个完整配对：Direct/Compact/Stepwise各3/3，Frame1/3；4.38345单卡分钟 | 两条Frame是正确JSON未解析；19/30输出完成、W主比较未跑；全部EOS、cap0；仅2个独立程序 |
 | Phase5-B后台父边界投影 | Raw3/3、SharedGFull2/3、Projection3/3、唯一RestartP1/1；2.90678单卡分钟 | 10输出完整/全EOS/cap0；仅1程序三态，投影prompt相同；无自然任务或最强基线质量增益 |
+| Phase5-C固定历史终局读出 | Forced27/32、Full15、Contract14、同证据Full18、Tail11、Projection13、Restart8；51.486914单卡分钟 | 224/224完整，109触384顶；严格交付评分，非无限长度能力；当前候选不扩大 |
 
 P0与P0.5使用不同读出协议，不连成跨轮提升曲线。CPU随机模型、形式/代数控制、人工短状态、自然轨迹观察和正式benchmark各自标明，不互相替代。
 
@@ -55,6 +58,8 @@ P0与P0.5使用不同读出协议，不连成跨轮提升曲线。CPU随机模�
 
 Phase5-B先查历史自然失败，再后台维护受限DAG证书并投影当前父边界；较长受控程序使用768保护顶，实际10输出全部自然结束。投影161对共享G430输入token减少62.56%，但Raw/Restart同样答对；普通DAG切片也给相同输入，不称新增理论创新。下一问题优先是自然目标/答案类型与核验范围，正式自然算法与多数据集验证仍未开展。
 
+Phase5-C将自动目标提示/未核验候选投影用于32个不同历史自然题，完整七条件后未胜强基线；109条触384顶、1项解析过严等交付问题必须与数学错误分开。用户已要求自有3090完整执行优先，下一轮解除紧token上限，正常EOS作质量主条件。具体已知问题/待证猜想与下一控制见阶段收尾，不改旧分数、不直接扩模型刷结果。
+
 主要指标是逐数据集accuracy或声明采样协议的pass@1；pass@k另列。完整成本包括核验、解析、被拒候选、注入前缀、prefill、重构与最终输出。NLL、梯度、KV距离和机制标签仅用于诊断。
 
 ## 目录
@@ -69,6 +74,7 @@ research/p05_design_review_20261105/    冻结P0.5与独立审计
 research/repository_phase_plan_20261106/ 本次整理与建议审查
 research/phase5_prototype_20261106/   算法公式、质量优先原型、真实partial与独立审计
 research/phase5b_boundary_20261106/   自然诊断、建议取舍、后台投影、三态完整短试
+research/phase5c_goal_contract_20261106/ 32题七条件完整终局读出、统一评分、阶段收尾
 scripts/ reason_transition/ tests/     原研究实现与检查
 experiments/radar20261013/             后续历史路线，当前冻结
 data/ results/ provenance/ recovery/   历史输入、输出和恢复证据

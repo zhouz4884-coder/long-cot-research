@@ -1,0 +1,662 @@
+{
+  "status": "PASS",
+  "scope": "Generic non-bank CPU extraction and optional mathematical smoke; no experimental sample/Gold rules used.",
+  "source_sha256": "ba394c1a42f86126f5a70bd0ed6f086b92dd551996cf44c410cfa6d896fa49fe",
+  "backend_state": {
+    "status": "backend_unavailable",
+    "expected_version": "0.9.0"
+  },
+  "extraction_checks": 48,
+  "math_checks_executed": 0,
+  "math_checks_planned": 22,
+  "issues": [],
+  "seconds": 0.056159400002798066,
+  "checks": [
+    {
+      "name": "extract_0",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "\\frac{2}{5}",
+        "normalized_surface": "\\frac{2}{5}",
+        "method": "terminal_boxed",
+        "evidence": {
+          "span": [
+            7,
+            18
+          ]
+        },
+        "normalization_applied": false,
+        "answer_kind": "scalar_or_expression",
+        "components": null
+      }
+    },
+    {
+      "name": "extract_1",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "(5,-2,7)",
+        "normalized_surface": "(5,-2,7)",
+        "method": "terminal_boxed",
+        "evidence": {
+          "span": [
+            7,
+            15
+          ]
+        },
+        "normalization_applied": false,
+        "answer_kind": "ordered_tuple",
+        "components": [
+          "5",
+          "-2",
+          "7"
+        ],
+        "arity": 3
+      }
+    },
+    {
+      "name": "extract_2",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "(5,\\frac{2}{5},7)",
+        "normalized_surface": "(5,\\frac{2}{5},7)",
+        "method": "label_and_boxed",
+        "evidence": {
+          "label_start": 0,
+          "span": [
+            12,
+            29
+          ]
+        },
+        "normalization_applied": false,
+        "answer_kind": "ordered_tuple",
+        "components": [
+          "5",
+          "\\frac{2}{5}",
+          "7"
+        ],
+        "arity": 3
+      }
+    },
+    {
+      "name": "extract_3",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "\\begin{pmatrix}2\\\\3\\end{pmatrix}",
+        "normalized_surface": "\\begin{pmatrix}2\\\\3\\end{pmatrix}",
+        "method": "final_label",
+        "evidence": {
+          "label_start": 0,
+          "span": [
+            13,
+            46
+          ]
+        },
+        "normalization_applied": false,
+        "answer_kind": "vector",
+        "components": [
+          "2",
+          "3"
+        ],
+        "shape": [
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "name": "extract_4",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "\\begin{bmatrix}2&3\\end{bmatrix}",
+        "normalized_surface": "\\begin{bmatrix}2&3\\end{bmatrix}",
+        "method": "terminal_boxed",
+        "evidence": {
+          "span": [
+            7,
+            38
+          ]
+        },
+        "normalization_applied": false,
+        "answer_kind": "vector",
+        "components": [
+          "2",
+          "3"
+        ],
+        "shape": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "name": "extract_5",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "0.4",
+        "normalized_surface": "0.4",
+        "method": "final_label",
+        "evidence": {
+          "label_start": 0,
+          "span": [
+            16,
+            19
+          ]
+        },
+        "normalization_applied": false,
+        "answer_kind": "scalar_or_expression",
+        "components": null
+      }
+    },
+    {
+      "name": "extract_6",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "0",
+        "normalized_surface": "0",
+        "method": "final_label",
+        "evidence": {
+          "label_start": 0,
+          "span": [
+            5,
+            6
+          ]
+        },
+        "normalization_applied": false,
+        "answer_kind": "scalar_or_expression",
+        "components": null
+      }
+    },
+    {
+      "name": "extract_7",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "1",
+        "normalized_surface": "1",
+        "method": "final_label",
+        "evidence": {
+          "label_start": 2,
+          "span": [
+            7,
+            10
+          ]
+        },
+        "normalization_applied": false,
+        "answer_kind": "scalar_or_expression",
+        "components": null
+      }
+    },
+    {
+      "name": "extract_8",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "\\frac{2}{5}",
+        "normalized_surface": "\\frac{2}{5}",
+        "method": "final_label",
+        "evidence": {
+          "label_start": 0,
+          "span": [
+            5,
+            19
+          ]
+        },
+        "normalization_applied": false,
+        "answer_kind": "scalar_or_expression",
+        "components": null
+      }
+    },
+    {
+      "name": "extract_9",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "(5,-2,7)",
+        "normalized_surface": "(5,-2,7)",
+        "method": "JSON_final_answer",
+        "evidence": {
+          "field": "final_answer"
+        },
+        "normalization_applied": false,
+        "answer_kind": "ordered_tuple",
+        "components": [
+          "5",
+          "-2",
+          "7"
+        ],
+        "arity": 3,
+        "JSON_list_order_preserved": true
+      }
+    },
+    {
+      "name": "extract_10",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "(2,3)",
+        "normalized_surface": "(2,3)",
+        "method": "JSON_final_answer",
+        "evidence": {
+          "field": "final_answer"
+        },
+        "normalization_applied": false,
+        "answer_kind": "ordered_tuple",
+        "components": [
+          "2",
+          "3"
+        ],
+        "arity": 2,
+        "JSON_list_order_preserved": true
+      }
+    },
+    {
+      "name": "extract_11",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "0.4",
+        "normalized_surface": "0.4",
+        "method": "JSON_final_answer",
+        "evidence": {
+          "field": "final_answer"
+        },
+        "normalization_applied": false,
+        "answer_kind": "scalar_or_expression",
+        "components": null
+      }
+    },
+    {
+      "name": "extract_12",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "2/5",
+        "normalized_surface": "2/5",
+        "method": "JSON_final_answer",
+        "evidence": {
+          "field": "final_answer"
+        },
+        "normalization_applied": false,
+        "answer_kind": "scalar_or_expression",
+        "components": null
+      }
+    },
+    {
+      "name": "extract_13",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "1",
+        "normalized_surface": "1",
+        "method": "JSON_final_answer",
+        "evidence": {
+          "field": "final_answer"
+        },
+        "normalization_applied": false,
+        "answer_kind": "scalar_or_expression",
+        "components": null
+      }
+    },
+    {
+      "name": "extract_14",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "5",
+        "normalized_surface": "5",
+        "method": "JSON_final_answer",
+        "evidence": {
+          "field": "final_answer"
+        },
+        "normalization_applied": false,
+        "answer_kind": "scalar_or_expression",
+        "components": null
+      }
+    },
+    {
+      "name": "extract_15",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "7",
+        "normalized_surface": "7",
+        "method": "final_label",
+        "evidence": {
+          "label_start": 25,
+          "span": [
+            38,
+            40
+          ]
+        },
+        "normalization_applied": false,
+        "answer_kind": "scalar_or_expression",
+        "components": null
+      }
+    },
+    {
+      "name": "extract_16",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "7",
+        "normalized_surface": "7",
+        "method": "terminal_boxed",
+        "evidence": {
+          "span": [
+            58,
+            59
+          ]
+        },
+        "normalization_applied": false,
+        "answer_kind": "scalar_or_expression",
+        "components": null
+      }
+    },
+    {
+      "name": "extract_17",
+      "pass": true,
+      "expected_status": "ambiguous",
+      "got": {
+        "status": "ambiguous",
+        "reason": "adjacent_boxed_components_need_one_complete_object"
+      }
+    },
+    {
+      "name": "extract_18",
+      "pass": true,
+      "expected_status": "ambiguous",
+      "got": {
+        "status": "ambiguous",
+        "reason": "multiple_boxed_final_objects_after_final_label"
+      }
+    },
+    {
+      "name": "extract_19",
+      "pass": true,
+      "expected_status": "incomplete",
+      "got": {
+        "status": "incomplete",
+        "reason": "incomplete_boxed_object"
+      }
+    },
+    {
+      "name": "extract_20",
+      "pass": true,
+      "expected_status": "incomplete",
+      "got": {
+        "status": "incomplete",
+        "reason": "incomplete_boxed_object"
+      }
+    },
+    {
+      "name": "extract_21",
+      "pass": true,
+      "expected_status": "ambiguous",
+      "got": {
+        "status": "ambiguous",
+        "reason": "invalid_JSON_final_object",
+        "error_type": "ValueError"
+      }
+    },
+    {
+      "name": "extract_22",
+      "pass": true,
+      "expected_status": "ambiguous",
+      "got": {
+        "status": "ambiguous",
+        "reason": "invalid_JSON_final_object",
+        "error_type": "ValueError"
+      }
+    },
+    {
+      "name": "extract_23",
+      "pass": true,
+      "expected_status": "incomplete",
+      "got": {
+        "status": "incomplete",
+        "reason": "invalid_JSON_final_object",
+        "error_type": "JSONDecodeError"
+      }
+    },
+    {
+      "name": "extract_24",
+      "pass": true,
+      "expected_status": "unparsed",
+      "got": {
+        "status": "unparsed",
+        "reason": "unsupported_JSON_answer_type"
+      }
+    },
+    {
+      "name": "extract_25",
+      "pass": true,
+      "expected_status": "unparsed",
+      "got": {
+        "status": "unparsed",
+        "reason": "unsupported_JSON_answer_type"
+      }
+    },
+    {
+      "name": "extract_26",
+      "pass": true,
+      "expected_status": "ambiguous",
+      "got": {
+        "status": "ambiguous",
+        "reason": "invalid_JSON_final_object",
+        "error_type": "ValueError"
+      }
+    },
+    {
+      "name": "extract_27",
+      "pass": true,
+      "expected_status": "unparsed",
+      "got": {
+        "status": "unparsed",
+        "reason": "unsupported_JSON_answer_type"
+      }
+    },
+    {
+      "name": "extract_28",
+      "pass": true,
+      "expected_status": "unparsed",
+      "got": {
+        "status": "unparsed",
+        "reason": "empty_JSON_list"
+      }
+    },
+    {
+      "name": "extract_29",
+      "pass": true,
+      "expected_status": "unparsed",
+      "got": {
+        "status": "unparsed",
+        "reason": "unsupported_JSON_answer_type"
+      }
+    },
+    {
+      "name": "extract_30",
+      "pass": true,
+      "expected_status": "unparsed",
+      "got": {
+        "status": "unparsed",
+        "reason": "missing_explicit_complete_final_object"
+      }
+    },
+    {
+      "name": "extract_31",
+      "pass": true,
+      "expected_status": "incomplete",
+      "got": {
+        "status": "incomplete",
+        "reason": "incomplete_or_unsupported_code_fence"
+      }
+    },
+    {
+      "name": "extract_32",
+      "pass": true,
+      "expected_status": "incomplete",
+      "got": {
+        "status": "incomplete",
+        "reason": "unbalanced_final_object",
+        "method": "final_label"
+      }
+    },
+    {
+      "name": "extract_33",
+      "pass": true,
+      "expected_status": "ambiguous",
+      "got": {
+        "status": "ambiguous",
+        "reason": "uncertain_or_alternative_final_object",
+        "method": "final_label"
+      }
+    },
+    {
+      "name": "extract_34",
+      "pass": true,
+      "expected_status": "ambiguous",
+      "got": {
+        "status": "ambiguous",
+        "reason": "uncertain_or_alternative_final_object",
+        "method": "terminal_boxed"
+      }
+    },
+    {
+      "name": "extract_35",
+      "pass": true,
+      "expected_status": "ambiguous",
+      "got": {
+        "status": "ambiguous",
+        "reason": "uncertain_or_alternative_final_object",
+        "method": "final_label"
+      }
+    },
+    {
+      "name": "extract_36",
+      "pass": true,
+      "expected_status": "ambiguous",
+      "got": {
+        "status": "ambiguous",
+        "reason": "uncertain_or_alternative_final_object",
+        "method": "final_label"
+      }
+    },
+    {
+      "name": "extract_37",
+      "pass": true,
+      "expected_status": "ambiguous",
+      "got": {
+        "status": "ambiguous",
+        "reason": "uncertain_or_alternative_final_object",
+        "method": "final_label"
+      }
+    },
+    {
+      "name": "extract_38",
+      "pass": true,
+      "expected_status": "ambiguous",
+      "got": {
+        "status": "ambiguous",
+        "reason": "unbracketed_multiple_final_components",
+        "method": "final_label"
+      }
+    },
+    {
+      "name": "extract_39",
+      "pass": true,
+      "expected_status": "ambiguous",
+      "got": {
+        "status": "ambiguous",
+        "reason": "unbracketed_multiple_final_components",
+        "method": "terminal_boxed"
+      }
+    },
+    {
+      "name": "extract_40",
+      "pass": true,
+      "expected_status": "ambiguous",
+      "got": {
+        "status": "ambiguous",
+        "reason": "unbracketed_multiple_final_components",
+        "method": "terminal_boxed"
+      }
+    },
+    {
+      "name": "extract_41",
+      "pass": true,
+      "expected_status": "ok",
+      "got": {
+        "status": "ok",
+        "surface": "\\begin{matrix}2\\\\3\\end{matrix}",
+        "normalized_surface": "\\begin{matrix}2\\\\3\\end{matrix}",
+        "method": "final_label",
+        "evidence": {
+          "label_start": 0,
+          "span": [
+            13,
+            44
+          ]
+        },
+        "normalization_applied": false,
+        "answer_kind": "vector",
+        "components": [
+          "2",
+          "3"
+        ],
+        "shape": [
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "name": "normalization_cot",
+      "pass": true
+    },
+    {
+      "name": "normalization_sin",
+      "pass": true
+    },
+    {
+      "name": "normalization_cos",
+      "pass": true
+    },
+    {
+      "name": "normalization_not_substring",
+      "pass": true
+    },
+    {
+      "name": "normalization_already_TeX",
+      "pass": true
+    },
+    {
+      "name": "hard_worker_timeout_mock",
+      "pass": true
+    }
+  ],
+  "semantic_checks": []
+}

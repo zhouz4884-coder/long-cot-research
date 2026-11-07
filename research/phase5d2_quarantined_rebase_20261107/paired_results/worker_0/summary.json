@@ -1,0 +1,610 @@
+{
+  "status": "COMPLETE",
+  "completed": 2,
+  "cases": [
+    {
+      "case_id": "D2_05",
+      "seed": 20261107,
+      "identity": {
+        "proposal_tokens": 31,
+        "proposal_boundary": "COMPLETED_STEP",
+        "proposal_prefix_equal": true,
+        "logit_comparisons_after_proposal": 4920,
+        "maximum_logit_difference": 0.0,
+        "RNG_equal_at_compared_steps": true,
+        "terminal_RNG_equal": true,
+        "sampled_tokens_equal": true,
+        "same_terminal_status": true,
+        "original_snapshot_unmodified": true,
+        "matches_recorded_native_full_ids": true,
+        "compared_continuation_tokens": 4951,
+        "proposal_cost": {
+          "wall_seconds": 1.8786758910864592,
+          "initial_copy": {
+            "wall_seconds": 0.013571989722549915,
+            "cache_bytes": 681984000,
+            "logits_bytes": 607744,
+            "rng_bytes": 16
+          },
+          "generated_tokens": 31,
+          "forward_calls": 31,
+          "forward_input_tokens": 31
+        },
+        "direct_restore_cost": {
+          "wall_seconds": 0.006623128429055214,
+          "cache_bytes": 681984000,
+          "logits_bytes": 607744,
+          "rng_bytes": 16
+        },
+        "lockstep_decode_seconds": {
+          "NativeContinue": 266.7993209771812,
+          "UnknownIdentity": 266.74384500738233
+        },
+        "joint_wall_seconds": 539.1556751597673,
+        "joint_paid_work": {
+          "forward_calls": 9900,
+          "forward_input_tokens": 9900,
+          "attention_pairs": 70294950
+        },
+        "limits": "logits compared at proposal merge and subsequent live steps; proposal internal logits not recorded"
+      },
+      "arms": [
+        {
+          "arm": "InContextCheck",
+          "EOS": true,
+          "tokens": 11529,
+          "disposition": "UNKNOWN",
+          "paid_work": {
+            "forward_calls": 6993,
+            "forward_input_tokens": 6993,
+            "attention_pairs": 56797146
+          },
+          "standalone_end_to_end_seconds": 623.3472195686772,
+          "standalone_paid_work": {
+            "forward_calls": 11529,
+            "forward_input_tokens": 11618,
+            "attention_pairs": 67494771
+          },
+          "peak_allocated_bytes": 11222221312
+        },
+        {
+          "arm": "UnscopedIsolatedCheck",
+          "EOS": true,
+          "tokens": 11529,
+          "disposition": "UNKNOWN",
+          "paid_work": {
+            "forward_calls": 6993,
+            "forward_input_tokens": 6993,
+            "attention_pairs": 56797146
+          },
+          "standalone_end_to_end_seconds": 621.768796171993,
+          "standalone_paid_work": {
+            "forward_calls": 11529,
+            "forward_input_tokens": 11618,
+            "attention_pairs": 67494771
+          },
+          "peak_allocated_bytes": 11222221312
+        },
+        {
+          "arm": "ScopedIsolatedCheck",
+          "EOS": true,
+          "tokens": 11529,
+          "disposition": "UNKNOWN",
+          "paid_work": {
+            "forward_calls": 6993,
+            "forward_input_tokens": 6993,
+            "attention_pairs": 56797146
+          },
+          "standalone_end_to_end_seconds": 620.7358222035691,
+          "standalone_paid_work": {
+            "forward_calls": 11529,
+            "forward_input_tokens": 11618,
+            "attention_pairs": 67494771
+          },
+          "peak_allocated_bytes": 11222221312
+        }
+      ],
+      "repair": {
+        "status": "NOT_ELIGIBLE",
+        "case_id": "D2_05",
+        "seed": 20261107,
+        "reason": "NO_ACTIONABLE_CHALLENGE",
+        "metadata": {
+          "source_prefix_sha256": "7a59e5cfdf49ed75cf7c7551915903cad53143beab0205c9e2fd649fe9598dff",
+          "observed_length": 4535,
+          "candidate_relation_sha256": "e798de07ec89f2a039fa84ebbde19a23fa3ea19d5d68d1119d5c7090e334cfcc",
+          "candidate_proof_id": null,
+          "role_status": "MISSING",
+          "processed_relations": [
+            {
+              "relation_sha256": "ceed9d0711c6b494d1c843a16d828f03c1f1543447f5060d617368a9f3b7bed2",
+              "claim_id": "claim_88752416272e4481ebf78836",
+              "proof_id": "proof_ceed9d0711c6b494d1c843a1",
+              "expression_subject": "expr_15b1869c90affde1c4ff1ffe",
+              "literal_result": {
+                "status": "VERIFIED",
+                "verdict": "PASS",
+                "truth": true,
+                "reason": "checked_exact_point_statement",
+                "binding": {
+                  "target": {
+                    "id": "literal_ceed9d0711c6b494d1c843a1",
+                    "version": 0,
+                    "sha256": "9f2ad981fc569117ffd5d3ec5641cba66875415e48e2aac52cacc3c91dd09852"
+                  },
+                  "scope": {
+                    "id": "closed_rational_eval",
+                    "version": 0,
+                    "sha256": "f2fca33ad8275b202a1bec9722c01310a2c60b6d6bf25f52f19e73286d61ddcf"
+                  },
+                  "premises": []
+                },
+                "witness": {
+                  "lhs": "1",
+                  "rhs": "1",
+                  "assignment": {},
+                  "semantics": "scoped_point_statement"
+                },
+                "trace": [
+                  {
+                    "stage": "snapshot",
+                    "premises_bound": 0,
+                    "result": "matched"
+                  },
+                  {
+                    "stage": "exact_check",
+                    "result": "VERIFIED",
+                    "reason": "checked_exact_point_statement"
+                  }
+                ],
+                "work_units": 5,
+                "certificate": {
+                  "checker_id": "restricted-math-json-v1",
+                  "certificate_type": "ARITHMETIC_EQ",
+                  "binding_sha256": "d0be56be8e4b8dd0e36b3bcc3b0dc130da01269250c1e6c48d921dd50d24a4ae",
+                  "request_sha256": "a7df20e1d25b964df8bb2db4d8569a951eed61cc4e710787785268c23139c590",
+                  "status": "VERIFIED",
+                  "truth": true,
+                  "witness_sha256": "00b6c949336e6fecc142897453e9c3910dce68001247e5be9a4a2d9df51cdafe",
+                  "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+                  "sha256": "dfcc3e352c486023c1ee442b3563a68bb1570b37986a7810957440dcdcd27e92"
+                }
+              },
+              "ledger_verdict": "PASS",
+              "source_token_span": [
+                466,
+                474
+              ]
+            }
+          ],
+          "skipped_relations": [
+            {
+              "relation_sha256": "a74eb6faf5adb3ecf34d832c7dbb63f9028373aede1d05df8e6ba13d456b8d82",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "09d47f0d323e82027ba4e01ef6648192a14b91180129b8f1975c34fc821af48f",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "237ecc1cabfaf0b63f59d30755549d2945af324ca0e0841f8aa50c80e8fa5667",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "dc7f6dcd9eaa7b291a95f95fe1735481d66c7d02a210a000f95c053168a04558",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "7454801f11ba91b802d822dbb3d9c3c33343779427afaf46ccda98bc0daa0bef",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "6bb5f918f252c8e9eef3c0c74e18f2876a8eee3bf9d0aea25e1e78410f5977fe",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "142a92a5965d62fa500b805a3b7176ddf88ca417c8ee122eb653204081a8ff47",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "b3d0b5e1d524a9685c2c2a14417c06d51eac3b6fd0f95c844d4deb0599aefb25",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "ffbfd6c78f141a9efe93bf8601431ec996820218bab6d88b6654543d46f17c78",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "33d69e0bb479c60766a44afe4699855ad1ece60d7728714a441ffd9223c45b88",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "6660770f92ae63f574145b6f9cf736d8d68be8fe552cd8d4ba36da20628522e4",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "dce2b3e90678661f54f0da100fb9bffe4af0de883ab848c236f9dd6a1b3aa162",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "d58e11afe694b641701542d96119c376b0cde31ea87393dae4036eb23af5d0b6",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "c1a94339fc473a24670e3b92f582ced2ae13bc8c56267691d4818dc379897f58",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "916774b77ae85241734acb662bf7d1c5acc0e3be3b4a8a63ee04177a1e1d7d5d",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "e798de07ec89f2a039fa84ebbde19a23fa3ea19d5d68d1119d5c7090e334cfcc",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            }
+          ],
+          "role_certificate_sha256": null,
+          "support_scope": "Closed expression evaluation only. Source-role approval concerns use as an asserted proof step.",
+          "role_review_authority": "Trusted caller review receipt with local identities and byte bindings.",
+          "boundaries_need_native_token_validation": true,
+          "trusted_given_calls": 0
+        },
+        "arms": [],
+        "source_boundaries": {
+          "accepted_paragraph_offsets": [
+            0,
+            264,
+            271,
+            296,
+            300,
+            320,
+            323,
+            340,
+            397,
+            429,
+            455,
+            466,
+            474,
+            488,
+            502,
+            521,
+            573,
+            602,
+            617,
+            638,
+            663,
+            715,
+            746,
+            764,
+            768,
+            790,
+            817,
+            867,
+            897,
+            912,
+            934,
+            962,
+            1000,
+            1050,
+            1101,
+            1123,
+            1138,
+            1160,
+            1177,
+            1192,
+            1198,
+            1230,
+            1253,
+            1279,
+            1286,
+            1290,
+            1343,
+            1360,
+            1365,
+            1382,
+            1414,
+            1452,
+            1471,
+            1491,
+            1526,
+            1582,
+            1604,
+            1613,
+            1634,
+            1659,
+            1681,
+            1712,
+            1744,
+            1765,
+            1777,
+            1794,
+            1890,
+            1905,
+            1927,
+            1937,
+            1961,
+            1996,
+            2023,
+            2047,
+            2082,
+            2121,
+            2137,
+            2157,
+            2178,
+            2199,
+            2205,
+            2227,
+            2252,
+            2299,
+            2318,
+            2381,
+            2411,
+            2519,
+            2579,
+            2590,
+            2611,
+            2638,
+            2654,
+            2681,
+            2710,
+            2760,
+            2773,
+            2920
+          ],
+          "rejected_paragraph_offsets": [
+            111,
+            124,
+            136,
+            203,
+            3011,
+            3034,
+            3082,
+            3107,
+            3178,
+            3264,
+            3300,
+            3316,
+            3336,
+            3390,
+            3427,
+            3444,
+            3465,
+            3497,
+            3524,
+            3544,
+            3559,
+            3575,
+            3605,
+            3633,
+            3646,
+            3661,
+            3682,
+            3705,
+            3738,
+            3755,
+            3778,
+            3795,
+            3800,
+            3822,
+            3849,
+            3888,
+            3907,
+            3932,
+            3935,
+            3952,
+            3981,
+            4012,
+            4055,
+            4099,
+            4118,
+            4145,
+            4159,
+            4182,
+            4207,
+            4241,
+            4249,
+            4283,
+            4342,
+            4351,
+            4377,
+            4403,
+            4431,
+            4468,
+            4473,
+            4505,
+            4535
+          ],
+          "rejected_paragraph_count": 61
+        }
+      },
+      "identity_joint_peak_allocated_bytes": 11638140928,
+      "repair_peak_allocated_bytes": 8792820736,
+      "peak_allocated_bytes": 11638140928,
+      "elapsed_seconds": 2649.74928774219,
+      "all_paid_work": {
+        "forward_calls": 49023,
+        "forward_input_tokens": 49379,
+        "attention_pairs": 283476888
+      }
+    },
+    {
+      "case_id": "D2_02",
+      "seed": 20261108,
+      "identity": {
+        "proposal_tokens": 20,
+        "proposal_boundary": "COMPLETED_STEP",
+        "proposal_prefix_equal": true,
+        "logit_comparisons_after_proposal": 1414,
+        "maximum_logit_difference": 0.0,
+        "RNG_equal_at_compared_steps": true,
+        "terminal_RNG_equal": true,
+        "sampled_tokens_equal": true,
+        "same_terminal_status": true,
+        "original_snapshot_unmodified": true,
+        "matches_recorded_native_full_ids": true,
+        "compared_continuation_tokens": 1434,
+        "proposal_cost": {
+          "wall_seconds": 1.0834856126457453,
+          "initial_copy": {
+            "wall_seconds": 0.006433103233575821,
+            "cache_bytes": 77266944,
+            "logits_bytes": 607744,
+            "rng_bytes": 16
+          },
+          "generated_tokens": 20,
+          "forward_calls": 20,
+          "forward_input_tokens": 20
+        },
+        "direct_restore_cost": {
+          "wall_seconds": 0.006270299665629864,
+          "cache_bytes": 77266944,
+          "logits_bytes": 607744,
+          "rng_bytes": 16
+        },
+        "lockstep_decode_seconds": {
+          "NativeContinue": 76.38144216965884,
+          "UnknownIdentity": 76.35520527418703
+        },
+        "joint_wall_seconds": 155.2250557905063,
+        "joint_paid_work": {
+          "forward_calls": 2866,
+          "forward_input_tokens": 2866,
+          "attention_pairs": 3556706
+        },
+        "limits": "logits compared at proposal merge and subsequent live steps; proposal internal logits not recorded"
+      },
+      "arms": [
+        {
+          "arm": "InContextCheck",
+          "EOS": true,
+          "tokens": 1892,
+          "disposition": "UNKNOWN",
+          "paid_work": {
+            "forward_calls": 1432,
+            "forward_input_tokens": 1432,
+            "attention_pairs": 1776396
+          },
+          "standalone_end_to_end_seconds": 101.93460613675416,
+          "standalone_paid_work": {
+            "forward_calls": 1892,
+            "forward_input_tokens": 1956,
+            "attention_pairs": 1913946
+          },
+          "peak_allocated_bytes": 8593660928
+        },
+        {
+          "arm": "UnscopedIsolatedCheck",
+          "EOS": true,
+          "tokens": 1892,
+          "disposition": "UNKNOWN",
+          "paid_work": {
+            "forward_calls": 1432,
+            "forward_input_tokens": 1432,
+            "attention_pairs": 1776396
+          },
+          "standalone_end_to_end_seconds": 101.88407624326646,
+          "standalone_paid_work": {
+            "forward_calls": 1892,
+            "forward_input_tokens": 1956,
+            "attention_pairs": 1913946
+          },
+          "peak_allocated_bytes": 8593660928
+        },
+        {
+          "arm": "ScopedIsolatedCheck",
+          "EOS": true,
+          "tokens": 1892,
+          "disposition": "UNKNOWN",
+          "paid_work": {
+            "forward_calls": 1432,
+            "forward_input_tokens": 1432,
+            "attention_pairs": 1776396
+          },
+          "standalone_end_to_end_seconds": 101.87308555562049,
+          "standalone_paid_work": {
+            "forward_calls": 1892,
+            "forward_input_tokens": 1956,
+            "attention_pairs": 1913946
+          },
+          "peak_allocated_bytes": 8593660928
+        }
+      ],
+      "repair": {
+        "status": "NOT_ELIGIBLE",
+        "case_id": "D2_02",
+        "seed": 20261108,
+        "reason": "NO_ACTIONABLE_CHALLENGE",
+        "metadata": {
+          "source_prefix_sha256": "eee6a666890d8c9ea429ebfbcf34de13a0881d8c3d77f4eebfdffdae53f0ab6f",
+          "observed_length": 459,
+          "candidate_relation_sha256": "d03e7826385367e4f4cb5446aecdaea36227f3ab22fdac0349d5f99fcf3b5c71",
+          "candidate_proof_id": null,
+          "role_status": "MISSING",
+          "processed_relations": [],
+          "skipped_relations": [
+            {
+              "relation_sha256": "d03e7826385367e4f4cb5446aecdaea36227f3ab22fdac0349d5f99fcf3b5c71",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "864dc9071a8dbd74ea4219d7b07e79454251c6ab0117eb8da11955f7e033e1c2",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            }
+          ],
+          "role_certificate_sha256": null,
+          "support_scope": "Closed expression evaluation only. Source-role approval concerns use as an asserted proof step.",
+          "role_review_authority": "Trusted caller review receipt with local identities and byte bindings.",
+          "boundaries_need_native_token_validation": true,
+          "trusted_given_calls": 0
+        },
+        "arms": [],
+        "source_boundaries": {
+          "accepted_paragraph_offsets": [
+            0,
+            62,
+            181,
+            247,
+            271,
+            279,
+            308,
+            322,
+            333,
+            348,
+            378,
+            414,
+            459
+          ],
+          "rejected_paragraph_offsets": [],
+          "rejected_paragraph_count": 0
+        }
+      },
+      "identity_joint_peak_allocated_bytes": 8805910016,
+      "repair_peak_allocated_bytes": 8193764352,
+      "peak_allocated_bytes": 8805910016,
+      "elapsed_seconds": 485.47210531309247,
+      "all_paid_work": {
+        "forward_calls": 9002,
+        "forward_input_tokens": 9258,
+        "attention_pairs": 9436094
+      }
+    }
+  ]
+}

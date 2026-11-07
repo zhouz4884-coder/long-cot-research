@@ -1,0 +1,17 @@
+# 同证据原生修复动作的执行接口
+
+2026-11-07。`repair_actions.py`提供run_repair_experiment，并可由调用方传helpers。缺省复用paired_d2_worker的append_checked_text、finish、state_result与cost。
+
+入口先逐段用实际snapshot tokens解码核对baseline文本、case/seed与选定关系，再执行角色收据和字面证明核验。闭合边界在任何修复输出前过滤，拒绝数单列。真正源损坏或READY后的执行错误会抛出并阻断本次尝试。合法的不适用情况写NOT_ELIGIBLE及原因。
+
+五个动作分别是最近合法边界GenericRewind、同一双前沿cut的RebaseNoCarry/RebaseCarry、原prompt与实际opener的FullRestart、原snapshot追加同一证据的SameEvidenceCompactBridge。五者从相同checkpoint的post-observation RNG状态开始采样。强基线获得完整carry与坏等式证据，NoCarry按特征消融约定省去carry序列化。
+
+当前自然字面求值图可能没有跨段依赖，GenericRewind与RebaseCarry也可能具有相同cut和完全相同的预解码token前缀。结果写出这些等价标记与SHA，保持真实退化情形。carry包为空时，同样需要按实际条件解释消融。
+
+独立Resampling用固定八种种子上限，每次均到自然EOS或实际上下文边界。全部尝试付费，只有EOS副本进入冻结LastBox表面指纹多数投票，平票取最早出现。目标为五动作已测postcheckpoint最大秒数。实际累计成本在目标下/上的EOS集合各自给出多数选择，缺任一侧则预算括区间不可用。每个副本及每次付费forward均保存。
+
+原观察前缀付费工作从连续baseline ledger精确取出，对每个完整成本表述加同一份。没有前缀逐段墙钟测量时，wall字段保持null。postcheckpoint记录包括调度回放、物化证据、hot clone与decode，Resampling汇总所有副本的工作并只加一次共有前缀。角色审阅属于执行器之前的外部过程，其成本另列。
+
+输出保存在传入folder的repair子目录，包含REPAIR_STATUS、五动作、Resampling与每个副本。现有JSON记录会阻止同目录重复执行，保留先前尝试。
+
+8项CPU回归使用模拟原生引擎核对来源损坏、闭合边界过滤、无角色零forward、五动作证据/输出schema、真实括区间逻辑、多数平票与未交付、READY故障传播。测试成本是受控时钟值，作用是核对调度与记账语义，GPU效果由真实运行产物记录。

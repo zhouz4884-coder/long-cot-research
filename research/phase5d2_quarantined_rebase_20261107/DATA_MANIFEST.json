@@ -1,0 +1,84 @@
+{
+  "dataset": "EleutherAI/hendrycks_math",
+  "split": "test",
+  "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+  "selection_salt": "ACL-D2-MATH-test-v1-20261107",
+  "strata": {
+    "algebra": {
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 1
+    },
+    "intermediate_algebra": {
+      "3": 1,
+      "4": 2,
+      "5": 3
+    },
+    "number_theory": {
+      "2": 1,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    },
+    "counting_and_probability": {
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 2
+    }
+  },
+  "shards": [
+    {
+      "file": "algebra/test-00000-of-00001.parquet",
+      "sha256": "0e04a850dac9cfc758eac0c80afd2d0cc65e29ea72f916c8ac1045b12af937f5",
+      "rows": 1187
+    },
+    {
+      "file": "intermediate_algebra/test-00000-of-00001.parquet",
+      "sha256": "e859f72486c951c2017da880541ca729940eaa986b0364eb23e238983df9bfeb",
+      "rows": 903
+    },
+    {
+      "file": "number_theory/test-00000-of-00001.parquet",
+      "sha256": "ba156c9c9fa2040836ba12135fd964e6e67d6bccd8c469ec4a3ad941f8f6fbe9",
+      "rows": 540
+    },
+    {
+      "file": "counting_and_probability/test-00000-of-00001.parquet",
+      "sha256": "c324818949c75a6227c0328a8499d58023cbbf6757cfc1736f5ab24cc8d87966",
+      "rows": 474
+    }
+  ],
+  "excluded_sources": {
+    "data/math500_source.jsonl": "35dc41080a3680858b27fa7e0533d2d547825316fc5dafe5d316f4ccc5a06132",
+    "experiments/radar20261013/data/calibration.jsonl": "c9ff06f6bdaec0716c8811b1891e1b0d95d45a71a092b03a7ea76ccf69ee6a0e",
+    "experiments/radar20261013/data/development.jsonl": "6947db23ffc7fb1bb7e12c72eaac752f35c7d2ff43a9b0a254a4aa8f5b10dcc6",
+    "experiments/radar20261013/data/pilot.jsonl": "bfcf2be8e2072a58b597029047f995331202c25b4d28d29ec22bb95ea42cc9c4",
+    "experiments/radar20261013/data/selection.jsonl": "b1c9b9c2556e7b7beaca0f27ca8d2a2d9124ed5864f56a94e4741ce94036e2d7",
+    "experiments/radar20261013/data/test.jsonl": "e11307b1a74590b8f1dcf01f8286f19c8664c0f13281e4db4994f43e0e730337",
+    "experiments/radar20261013/data/v1/calibration.jsonl": "4ebfff1bcc8080cc2ef681d04cc3d451c4718d4827f7a9a6c97b59c2947fbe6b",
+    "experiments/radar20261013/data/v1/development.jsonl": "60910560a82076ee873b61e69f0d1a0e885dcab84a61fc352f963f629193221e",
+    "experiments/radar20261013/data/v1/selection.jsonl": "a8d0ae70ef3879b78c69a1ec2c08062e0d464c41f30636fa46aceaffb7256f1e",
+    "experiments/radar20261013/data/v1/test.jsonl": "ac63fdcc85938bf31302765e5742dc467779cae44095f385cc6cf678ea359e51",
+    "experiments/radar20261013/data/v2/calibration.jsonl": "85a0f59db312c2e662caa18f306c51d4fb71b5cec78f0fb53e555bc6adc9f628",
+    "experiments/radar20261013/data/v2/development.jsonl": "0752dd348b89c7b03f169a1e132af7849cd93f101e56841a153af13712e05c6b",
+    "experiments/radar20261013/data/v2/selection.jsonl": "9b511ceec713780eae783235780f51ed51610675c82da0b3c4250a449f1ea2ec",
+    "experiments/radar20261013/data/v2/test.jsonl": "731e24b436a66ae5db357034f16ff30a21f61d0d9c59b2aa42f54558842f67c0",
+    "experiments/radar20261013/data/v3/calibration.jsonl": "94d3e4a93cd5a5e4f9f09470d8ae3672f568c3280d238f3a9f3ba6b39f331225",
+    "experiments/radar20261013/data/v3/development.jsonl": "1acb3ca9f73e65949101c9533a60d2ca6d4ffb748bfa95c280e48b75640d7929",
+    "experiments/radar20261013/data/v3/selection.jsonl": "044f3310a30a636e625288bec360a774d3434cd528013ca512efded3fd7f817c",
+    "experiments/radar20261013/data/v3/test.jsonl": "48d617b1bc931046fda87c229bcd997f570f851a0b0fa5e5f762f24ca0f3dd20",
+    "research/phase5d_scope_rebase_20261106/native_visible.jsonl": "53b17bdec3891eae7133884a4e34bfb4041c88e3dc927d6fe3f27c4c02911d95"
+  },
+  "exclude_asy": true,
+  "normalized_stem_overlap": 0,
+  "questions": 24,
+  "seed_slots": [
+    20261107,
+    20261108
+  ],
+  "visible_sha256": "fb5a28ae5b43936c01f0b5346a59de1021e256c800ad851a3a70c8f8a66016bc",
+  "eval_sha256": "a407e4feaa7bf238250abf3c9964ef74a05be9f7f83d4d7a46aa7b262acb5027",
+  "missing_gold_boxes": 0
+}

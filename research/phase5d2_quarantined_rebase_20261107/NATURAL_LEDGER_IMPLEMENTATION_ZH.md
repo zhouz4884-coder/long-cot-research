@@ -1,0 +1,15 @@
+# 自然算术片段到证据账本的接入
+
+2026-11-07。`natural_ledger.py`的12项针对性CPU回归通过。输入范围为已观察前缀中的闭合字面算术关系，使用受限检查器和前一阶段冻结的exact解释器双重计算。
+
+每个规范LHS表达式对应一个`expr_HASH`主题。主题仅指该表达式在有理数域的精确求值，RHS通过exact得到有理数。检查器实际返回VERIFIED后，才许可这一求值定义并签发算术证明。同表达式/RHS的不同观察位置形成同一claim的多条支持。代码没有调用trust_given。
+
+错误等式保存为FAIL证明，不获得求值规则许可。只有其角色通过完整已观察前缀的两位独立审阅，且关系与prefix哈希吻合，才调用冻结账本的check_arithmetic_invalidation产生Challenge。这个转换撤回具体算术证明，不建立claim-refutation记录。
+
+`make_observed_relations`建立带实际prompt/generated IDs、观察长度和候选边界的来源信封。`relation_sha256`绑定公式、AST、规范表达式、位置及observed_prefix_sha256。source_prefix_sha256与observed_prefix_sha256只要出现，都须与当前源吻合。真实原生段落边界的词法核对由dual_frontier的bind继续执行。
+
+角色收据由`make_role_certificate`构造。两位reviewer以`{id, verdict}`记录，包含/root与独立/root/agent身份，均同意ASSERTED_ARITHMETIC_PROOF且review_phase为PRE_GOLD_FULL_OBSERVED_PREFIX。收据哈希核对字节一致性。审阅过程及身份来自受信调用方，其真实性仍依靠实际审阅记录。角色结论只涉及原文是否作为断言证明使用，数学真假由执行的检查器负责。
+
+无角色收据时保留合法的字面表达式求值facts，challenge为空。带变量、命名量建模、声明为符号证书的关系、浮点字面量、除零、资源超限、AST与原表面不符和未观察跨度均显式跳过并记UNKNOWN。纯关系列表可作非行动元数据输入，行动须有实际token来源。
+
+函数`build_natural_ledger(source, observed_length, candidate_relation, role_certificate)`返回NaturalLedgerResult，含ledger、challenge、status与metadata。本模块CPU试验没有读取原始轨迹或Gold，没有模型调用。

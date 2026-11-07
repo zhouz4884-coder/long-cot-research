@@ -1,0 +1,157 @@
+{
+  "status": "COMPLETE",
+  "created_utc": "2026-11-07T05:51:08.264365+00:00",
+  "relations_sha256": "c46fb1f792081e18bdfc35cbbe432dca4a6cdb6e2c1954b238717b691905c623",
+  "invalid_literal_rows": 9,
+  "rounding_matches": 5,
+  "cross_paragraph_sums": 4,
+  "distinct_problems": 2,
+  "distinct_seeded_trajectories": 3,
+  "scope": "Secondary diagnostic after fixed pair selection and before Gold. Exact Decimal re-evaluation using observed text; no changes to original checker labels, authorization or selection. Only the two selected invalid targets have independent full-prefix role review.",
+  "rows": [
+    {
+      "case_id": "D2_05",
+      "seed": 20261107,
+      "step": 157,
+      "source_result": "native_results/worker_0/D2_05_20261107/result.json",
+      "extracted_surface": "1.33822558 * 0.04 = 0.053529023",
+      "previous_step": "First, 1.33822558 * 0.7 = 0.936757906",
+      "observed_step": "1.33822558 * 0.04 = 0.053529023",
+      "reason": "ROUNDING_MATCH",
+      "checked_witness": {
+        "literal_product_exact": "0.0535290232",
+        "printed_decimal": "0.053529023",
+        "nearest_at_printed_precision": "0.053529023",
+        "absolute_difference": "2E-10"
+      }
+    },
+    {
+      "case_id": "D2_05",
+      "seed": 20261107,
+      "step": 158,
+      "source_result": "native_results/worker_0/D2_05_20261107/result.json",
+      "extracted_surface": "1.33822558 * 0.007 = 0.009367579",
+      "previous_step": "1.33822558 * 0.04 = 0.053529023",
+      "observed_step": "1.33822558 * 0.007 = 0.009367579",
+      "reason": "ROUNDING_MATCH",
+      "checked_witness": {
+        "literal_product_exact": "0.00936757906",
+        "printed_decimal": "0.009367579",
+        "nearest_at_printed_precision": "0.009367579",
+        "absolute_difference": "6E-11"
+      }
+    },
+    {
+      "case_id": "D2_05",
+      "seed": 20261107,
+      "step": 274,
+      "source_result": "native_results/worker_0/D2_05_20261107/result.json",
+      "extracted_surface": "1.221402758 * 0.02 = 0.024428055",
+      "previous_step": "First, 1.221402758 * 1 = 1.221402758",
+      "observed_step": "1.221402758 * 0.02 = 0.024428055",
+      "reason": "ROUNDING_MATCH",
+      "checked_witness": {
+        "literal_product_exact": "0.02442805516",
+        "printed_decimal": "0.024428055",
+        "nearest_at_printed_precision": "0.024428055",
+        "absolute_difference": "1.6E-10"
+      }
+    },
+    {
+      "case_id": "D2_05",
+      "seed": 20261108,
+      "step": 168,
+      "source_result": "native_results/worker_1/D2_05_20261108/result.json",
+      "extracted_surface": "0.04 * 1.3382255776 = 0.053529023",
+      "previous_step": "Well, 0.7 * 1.3382255776 = 0.936757904",
+      "observed_step": "0.04 * 1.3382255776 = 0.053529023",
+      "reason": "ROUNDING_MATCH",
+      "checked_witness": {
+        "literal_product_exact": "0.053529023104",
+        "printed_decimal": "0.053529023",
+        "nearest_at_printed_precision": "0.053529023",
+        "absolute_difference": "1.04E-10"
+      }
+    },
+    {
+      "case_id": "D2_05",
+      "seed": 20261108,
+      "step": 169,
+      "source_result": "native_results/worker_1/D2_05_20261108/result.json",
+      "extracted_surface": "0.007 * 1.3382255776 = 0.009367579",
+      "previous_step": "0.04 * 1.3382255776 = 0.053529023",
+      "observed_step": "0.007 * 1.3382255776 = 0.009367579",
+      "reason": "ROUNDING_MATCH",
+      "checked_witness": {
+        "literal_product_exact": "0.0093675790432",
+        "printed_decimal": "0.009367579",
+        "nearest_at_printed_precision": "0.009367579",
+        "absolute_difference": "4.32E-11"
+      }
+    },
+    {
+      "case_id": "D2_05",
+      "seed": 20261108,
+      "step": 173,
+      "source_result": "native_results/worker_1/D2_05_20261108/result.json",
+      "extracted_surface": "+ 0.009367579 = 0.999654506",
+      "previous_step": "0.936757904 + 0.053529023 = 0.990286927",
+      "observed_step": "+ 0.009367579 = 0.999654506",
+      "reason": "CROSS_PARAGRAPH_SUM",
+      "checked_witness": {
+        "preceding_subtotal": "0.990286927",
+        "new_summand": "0.009367579",
+        "contextual_sum": "0.999654506",
+        "printed_decimal": "0.999654506"
+      }
+    },
+    {
+      "case_id": "D2_15",
+      "seed": 20261108,
+      "step": 129,
+      "source_result": "native_results/worker_1/D2_15_20261108/result.json",
+      "extracted_surface": "+ 0.4771 = 0.7781",
+      "previous_step": "0 + 0.3010 = 0.3010",
+      "observed_step": "+ 0.4771 = 0.7781",
+      "reason": "CROSS_PARAGRAPH_SUM",
+      "checked_witness": {
+        "preceding_subtotal": "0.3010",
+        "new_summand": "0.4771",
+        "contextual_sum": "0.7781",
+        "printed_decimal": "0.7781"
+      }
+    },
+    {
+      "case_id": "D2_15",
+      "seed": 20261108,
+      "step": 130,
+      "source_result": "native_results/worker_1/D2_15_20261108/result.json",
+      "extracted_surface": "+ 0.6020 = 1.3801",
+      "previous_step": "+ 0.4771 = 0.7781",
+      "observed_step": "+ 0.6020 = 1.3801",
+      "reason": "CROSS_PARAGRAPH_SUM",
+      "checked_witness": {
+        "preceding_subtotal": "0.7781",
+        "new_summand": "0.6020",
+        "contextual_sum": "1.3801",
+        "printed_decimal": "1.3801"
+      }
+    },
+    {
+      "case_id": "D2_15",
+      "seed": 20261108,
+      "step": 136,
+      "source_result": "native_results/worker_1/D2_15_20261108/result.json",
+      "extracted_surface": "+ 1.0 = 6.55947",
+      "previous_step": "+ 0.9542 ≈ 5.55947",
+      "observed_step": "+ 1.0 = 6.55947",
+      "reason": "CROSS_PARAGRAPH_SUM",
+      "checked_witness": {
+        "preceding_subtotal": "5.55947",
+        "new_summand": "1.0",
+        "contextual_sum": "6.55947",
+        "printed_decimal": "6.55947"
+      }
+    }
+  ]
+}

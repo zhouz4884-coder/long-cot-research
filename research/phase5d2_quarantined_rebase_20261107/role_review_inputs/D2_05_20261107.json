@@ -1,0 +1,61 @@
+{
+  "case_id": "D2_05",
+  "seed": 20261107,
+  "event_step": 157,
+  "question": "A man nearing retirement wants to invest some money in a fund that compounds annually at a rate of 6 percent, so that in five years, he will have at least $\\$100,000$.  How much money must he invest now to make that happen?  (Give your answer to the nearest dollar.)",
+  "relation": {
+    "status": "parsed",
+    "reason": null,
+    "surface": "1.33822558 * 0.04 = 0.053529023",
+    "equation_index": 0,
+    "statement": {
+      "lhs": {
+        "op": "mul",
+        "args": [
+          {
+            "op": "rat",
+            "num": 66911279,
+            "den": 50000000
+          },
+          {
+            "op": "rat",
+            "num": 1,
+            "den": 25
+          }
+        ]
+      },
+      "rhs": {
+        "op": "rat",
+        "num": 53529023,
+        "den": 1000000000
+      }
+    },
+    "variables": [],
+    "certificate_type": "ARITHMETIC_EQ",
+    "normalized": [
+      "1.33822558*0.04",
+      "0.053529023"
+    ],
+    "step": 157,
+    "token_span": [
+      4505,
+      4535
+    ],
+    "char_span_in_step": [
+      0,
+      33
+    ],
+    "scope_source": "closed arithmetic",
+    "literal_check_only": true,
+    "actionable_role_candidate": true,
+    "role_certified": false,
+    "domains": {},
+    "observed_prefix_sha256": "7a59e5cfdf49ed75cf7c7551915903cad53143beab0205c9e2fd649fe9598dff"
+  },
+  "exact_observed_step": "1.33822558 * 0.04 = 0.053529023\n\n",
+  "full_observed_thinking_prefix": "<think>\nOkay, let me try to figure out how much money the man needs to invest now to have at least $100,000 in five years with an annual compound interest rate of 6%. Hmm, compound interest... I remember the formula for compound interest is something like A equals P times (1 plus r over n) to the power of nt. But wait, in this case, it's compounded annually, so n would be 1, right? Because it's once per year. So maybe the formula simplifies?\n\nLet me write that down. The formula for compound interest is:\n\nA = P(1 + r/n)^(nt)\n\nWhere:\n- A is the amount of money accumulated after n years, including interest.\n- P is the principal amount (the initial amount of money).\n- r is the annual interest rate (decimal).\n- n is the number of times that interest is compounded per year.\n- t is the time the money is invested for in years.\n\nSince it's compounded annually, n = 1. The time t is 5 years. The rate r is 6%, which is 0.06 in decimal. The amount A needs to be at least $100,000. So we need to solve for P.\n\nSo plugging in the values:\n\n100,000 = P(1 + 0.06/1)^(1*5)\n\nSimplify that:\n\n100,000 = P(1 + 0.06)^5\n\nWhich is:\n\n100,000 = P(1.06)^5\n\nOkay, so I need to calculate (1.06)^5 first. Let me compute that. I might need to do this step by step. Let me recall that 1.06^5 can be calculated by multiplying 1.06 by itself five times.\n\nAlternatively, maybe I can remember that 1.06^5 is approximately... Hmm, I don't remember the exact value. Let me compute it.\n\nFirst, 1.06 squared is 1.06 * 1.06. Let me calculate that:\n\n1.06 * 1.06:\n\n1 * 1 = 1\n\n1 * 0.06 = 0.06\n\n0.06 * 1 = 0.06\n\n0.06 * 0.06 = 0.0036\n\nAdding them up: 1 + 0.06 + 0.06 + 0.0036 = 1.1236. So 1.06^2 is 1.1236.\n\nThen, 1.06^3 is 1.1236 * 1.06. Let me compute that.\n\nMultiply 1.1236 by 1.06:\n\nFirst, 1 * 1.1236 = 1.1236\n\nThen 0.06 * 1.1236 = 0.067416\n\nAdding them together: 1.1236 + 0.067416 = 1.191016. So 1.06^3 ≈ 1.191016.\n\nNext, 1.06^4 is 1.191016 * 1.06. Let me compute that.\n\nAgain, 1.191016 * 1.06:\n\nBreak it down:\n\n1 * 1.191016 = 1.191016\n\n0.06 * 1.191016 = 0.07146096\n\nAdding them: 1.191016 + 0.07146096 ≈ 1.26247696. So approximately 1.262477.\n\nThen 1.06^5 is 1.262477 * 1.06. Let me calculate that.\n\n1.262477 * 1.06:\n\n1 * 1.262477 = 1.262477\n\n0.06 * 1.262477 ≈ 0.07574862\n\nAdding them: 1.262477 + 0.07574862 ≈ 1.33822562.\n\nSo approximately 1.33822562. Let me check if that's accurate. Alternatively, maybe I can use logarithms or another method, but since I'm doing this step by step, I think that's okay.\n\nAlternatively, maybe I can use the rule of 72 to estimate? But that might not be precise enough. Alternatively, maybe I can use a calculator? Wait, but since I need to do this manually, let me just verify my calculations again.\n\nStarting with 1.06^2 = 1.1236, that's correct.\n\nThen 1.1236 * 1.06:\n\nLet me do that multiplication more carefully. 1.1236 * 1.06.\n\nFirst, multiply 1.1236 by 1.06:\n\nMultiply 1.1236 by 1.06:\n\nLet me write it as:\n\n1.1236\nx 1.06\n--------\nFirst, multiply 1.1236 by 0.06:\n\n0.06 * 1.1236 = 0.067416\n\nThen multiply 1.1236 by 1.00 (the 1 in 1.06):\n\n1.1236\n\nAdd them together:\n\n0.067416 + 1.1236 = 1.191016. Yes, that's correct. So 1.06^3 is indeed 1.191016.\n\nThen 1.191016 * 1.06:\n\nAgain, same process.\n\nMultiply 1.191016 by 1.06:\n\nBreak it into 1.191016 * 1 + 1.191016 * 0.06.\n\nWhich is 1.191016 + 0.07146096 = 1.26247696. Correct.\n\nThen 1.26247696 * 1.06:\n\nAgain, 1.26247696 * 1.06.\n\nBreak into 1.26247696 * 1 + 1.26247696 * 0.06.\n\nWhich is 1.26247696 + 0.0757486176 ≈ 1.3382255776. So approximately 1.3382256.\n\nSo, 1.06^5 ≈ 1.3382256.\n\nTherefore, going back to the original equation:\n\n100,000 = P * 1.3382256\n\nTherefore, to solve for P, we need to divide both sides by 1.3382256:\n\nP = 100,000 / 1.3382256\n\nLet me compute that. Let me see, 100,000 divided by approximately 1.3382256.\n\nFirst, let me approximate this division. Let me think of 1.3382256 as roughly 1.3382.\n\nSo, 100,000 / 1.3382 ≈ ?\n\nAlternatively, maybe I can compute this division step by step.\n\nAlternatively, note that 1 / 1.3382 ≈ ?\n\nLet me recall that 1 / 1.3382 is approximately... Well, 1 / 1.3333 is 0.75, since 1/1.3333 is 3/4. But 1.3382 is a bit more than 1.3333, so 1 / 1.3382 will be a bit less than 0.75.\n\nAlternatively, let me use a better method. Let me do the division:\n\nCompute 100,000 ÷ 1.3382256.\n\nAlternatively, maybe I can use decimal approximations.\n\nLet me note that 1.3382256 × 74,600 = ?\n\nWait, maybe that's not helpful. Alternatively, let me try to compute 1.3382256 × 74,600 = ?\n\nWait, perhaps I need to use a calculator-like approach here. But since I don't have a calculator, maybe I can approximate.\n\nAlternatively, think of 1.3382256 × 74,000 = ?\n\nWait, maybe I need to find a value of P such that P × 1.3382256 = 100,000.\n\nAlternatively, maybe I can use linear approximation or something. But perhaps I can use the fact that 1.3382256 is approximately 1.3382.\n\nLet me try to compute 1 / 1.3382.\n\nLet me use the Newton-Raphson method for division? Hmm, that might be too complicated.\n\nAlternatively, let me consider that 1.3382 × 74.7 = ?\n\nWait, maybe I can think of 1.3382 × 74.7.\n\nBut this seems too vague.\n\nAlternatively, maybe I can note that 1.3382 × 74.6 = ?\n\nWait, maybe I can use the fact that 1.3382 × 74.6 ≈ ?\n\nAlternatively, perhaps I can think of 1.3382 × 74.6 ≈ 1.3382 × 70 + 1.3382 × 4.6\n\n1.3382 × 70 = 93.674\n\n1.3382 × 4.6 ≈ 1.3382 × 4 + 1.3382 × 0.6 ≈ 5.3528 + 0.8029 ≈ 6.1557\n\nSo total ≈ 93.674 + 6.1557 ≈ 99.8297\n\nSo 1.3382 × 74.6 ≈ 99.83, which is very close to 100. Therefore, 1.3382 × 74.6 ≈ 99.83. Therefore, 1.3382 × 74.6 ≈ 99.83, so to get 100, we need to multiply by a little more than 74.6. Let me see:\n\nIf 74.6 gives 99.83, then the difference between 100 and 99.83 is 0.17. So how much more do we need to add to 74.6 to get 0.17 more?\n\nLet me denote x as the additional amount. So:\n\n1.3382 × (74.6 + x) = 100\n\nWe know that 1.3382 × 74.6 ≈ 99.83, so:\n\n1.3382 × x ≈ 0.17\n\nTherefore, x ≈ 0.17 / 1.3382 ≈ 0.127.\n\nTherefore, the total multiplier is approximately 74.6 + 0.127 ≈ 74.727.\n\nTherefore, 1 / 1.3382 ≈ 74.727. Therefore, 100,000 / 1.3382 ≈ 74,727.\n\nTherefore, P ≈ 74,727.\n\nBut let me check this. If P is 74,727, then 74,727 × 1.3382 ≈ 74,727 × 1.3382. Wait, but earlier we saw that 1.3382 × 74.6 ≈ 99.83, so 1.3382 × 74,727 ≈ 1.3382 × 74.727 × 1000 ≈ 100 × 1000 = 100,000. Therefore, that seems correct.\n\nBut wait, actually, the original problem was 100,000 divided by 1.3382, so if 1.3382 × 74.727 ≈ 100, then 100,000 divided by 1.3382 is 74,727. So that would be approximately $74,727.\n\nBut let me check with another approach. Let me use the exact value of 1.06^5.\n\nAlternatively, maybe I can use logarithms or another formula? Wait, but I think my previous calculation is correct. However, maybe I made a mistake in calculating 1.06^5. Let me verify that with another method.\n\nAlternatively, I can use the formula for compound interest. Let me check the value of 1.06^5.\n\nAlternatively, I can use the fact that ln(1.06) is approximately 0.058268908. Then 5 * ln(1.06) ≈ 0.29134454. Then e^0.29134454 ≈ ?\n\nWe know that e^0.2913 is approximately... e^0.3 is about 1.349858. Since 0.2913 is slightly less than 0.3, so e^0.2913 ≈ 1.338. Which matches our previous calculation of 1.3382. Therefore, that seems correct.\n\nTherefore, 1.06^5 ≈ 1.3382, so the calculation of P ≈ 74,727 is correct.\n\nBut let me check with another approach. Let me use the present value formula.\n\nThe present value (PV) is given by PV = A / (1 + r)^t.\n\nWhich is exactly what we did. So PV = 100,000 / (1.06)^5 ≈ 100,000 / 1.3382 ≈ 74,727.\n\nBut maybe I need to be more precise. Let me try to compute 100,000 divided by 1.3382256 more accurately.\n\nAlternatively, let me use the exact value of 1.06^5.\n\nAlternatively, perhaps I can use more decimal places in the calculation of 1.06^5.\n\nEarlier, I had 1.06^5 ≈ 1.3382256. Let me confirm this with another method.\n\nAlternatively, use binomial expansion? Not sure. Alternatively, use the fact that (1 + 0.06)^5.\n\nAlternatively, maybe I can use the formula for compound interest step by step again, but more accurately.\n\nLet me recalculate 1.06^5 with more precision.\n\nFirst, 1.06^1 = 1.06\n\n1.06^2 = 1.06 * 1.06 = 1.1236 (as before)\n\n1.06^3 = 1.1236 * 1.06. Let me compute that more precisely.\n\n1.1236 * 1.06:\n\nMultiply 1.1236 by 1.06:\n\nFirst, 1.1236 * 1 = 1.1236\n\n1.1236 * 0.06 = 0.067416\n\nAdding them gives 1.1236 + 0.067416 = 1.191016. Correct.\n\n1.06^3 = 1.191016\n\n1.06^4 = 1.191016 * 1.06\n\nCompute 1.191016 * 1.06:\n\nBreak it down as:\n\n1.191016 * 1 = 1.191016\n\n1.191016 * 0.06 = 0.07146096\n\nAdding them gives 1.191016 + 0.07146096 = 1.26247696. Correct.\n\n1.06^4 = 1.26247696\n\n1.06^5 = 1.26247696 * 1.06\n\nCompute that:\n\n1.26247696 * 1.06:\n\nBreak into 1.26247696 * 1 = 1.26247696\n\n1.26247696 * 0.06 = 0.0757486176\n\nAdding them: 1.26247696 + 0.0757486176 = 1.3382255776\n\nSo, 1.06^5 = 1.3382255776. Therefore, more accurately, it's approximately 1.33822558.\n\nSo, the exact value is approximately 1.33822558.\n\nTherefore, P = 100,000 / 1.33822558 ≈ ?\n\nLet me perform this division more accurately. Let me write this as:\n\nDivide 100,000 by 1.33822558.\n\nLet me note that 1.33822558 × 74,725 = ?\n\nWait, but this might not be helpful. Alternatively, let me use the fact that 1 / 1.33822558 ≈ ?\n\nAlternatively, use the linear approximation method.\n\nLet me consider that 1.33822558 × 74,727 ≈ 100,000?\n\nWait, earlier we saw that 1.3382 × 74.727 ≈ 100, so 1.33822558 × 74,727 ≈ 100,000.\n\nBut let me check with more precise calculation.\n\nAlternatively, use the Newton-Raphson method to compute 1 / 1.33822558.\n\nLet me denote x = 1.33822558, and we need to compute 1/x.\n\nLet me take an initial guess. Let me assume that 1/x ≈ 0.74727, as before.\n\nLet me compute x * 0.74727 = 1.33822558 * 0.74727 ≈ ?\n\nLet me compute that:\n\nFirst, 1.33822558 * 0.7 = 0.936757906\n\n1.33822558 * 0.04 = 0.053529023\n\n",
+  "observed_generated_count": 4535,
+  "observed_prefix_sha256": "7a59e5cfdf49ed75cf7c7551915903cad53143beab0205c9e2fd649fe9598dff",
+  "source_result_sha256": "fb912588927acaed2ae05d71d7b8a6294d4bdfef1b58c71c3b0f1fb4f1153faa",
+  "review_scope": "Only this observed prefix. Use the registered role rubric. No future, Gold, or intervention output."
+}

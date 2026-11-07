@@ -1,0 +1,1057 @@
+{
+  "status": "PASS",
+  "checker_id": "restricted-math-json-v1",
+  "limits": {
+    "input_nodes": 4096,
+    "input_depth": 32,
+    "input_text_characters": 65536,
+    "input_integer_bits": 256,
+    "variables": 4,
+    "premises": 16,
+    "constraints": 24,
+    "domain_values": 64,
+    "exponent": 12,
+    "polynomial_degree": 24,
+    "polynomial_terms": 256,
+    "coefficient_bits": 1024,
+    "original_guards": 48,
+    "witness_points": 128,
+    "work_units": 60000
+  },
+  "unit_tests_run": 23,
+  "integer_polynomial_convolution_trials": 64,
+  "seconds": 0.06545679999999265,
+  "source_sha256": "2a3147db9d621ca77c911574149b6343ef49c1be7be55757d5fa1ca1ed91f38a",
+  "test_sha256": "7539d145c494d4cc97a4cdfe9e467ffbfe7b082987d05719713f5ea04c0b884c",
+  "scope": "CPU structured arithmetic and declared scopes. Synthetic controls.",
+  "failures": [],
+  "inspectable_scenarios": [
+    {
+      "name": "invalid_derivation_square_five",
+      "target": {
+        "id": "claim-or-proof",
+        "version": 0,
+        "kind": "justification",
+        "certificate_type": "ARITHMETIC_EQ",
+        "scope": {
+          "id": "S",
+          "version": 0,
+          "coefficient_domain": "Q",
+          "domains": {
+            "x": {
+              "kind": "integer"
+            }
+          }
+        },
+        "statement": {
+          "lhs": {
+            "op": "pow",
+            "base": {
+              "op": "var",
+              "name": "x"
+            },
+            "exp": 2
+          },
+          "rhs": 5
+        },
+        "required_premises": [
+          {
+            "id": "x-is-two",
+            "version": 0,
+            "scope_id": "S",
+            "scope_version": 0
+          }
+        ]
+      },
+      "premises": [
+        {
+          "id": "x-is-two",
+          "version": 0,
+          "scope_id": "S",
+          "scope_version": 0,
+          "predicate": {
+            "op": "eq",
+            "lhs": {
+              "op": "var",
+              "name": "x"
+            },
+            "rhs": 2
+          },
+          "evidence_id": "trusted-x-is-two"
+        }
+      ],
+      "request": {
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "4724a37fee43c7acfd58361a1991079020d30c05d88841030a8480658f7a22f5"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "19d020f67da368ace16d0271526a2530a7b47704936c4f9937daf8e25a2f86ca"
+          },
+          "premises": [
+            {
+              "id": "x-is-two",
+              "version": 0,
+              "scope_id": "S",
+              "scope_version": 0,
+              "sha256": "035269c63dff758fe70a0003f43c80413fd7112b39a022574588081873f2ef69"
+            }
+          ]
+        },
+        "mode": "verify"
+      },
+      "result": {
+        "status": "INVALID_JUSTIFICATION",
+        "verdict": "PASS",
+        "truth": false,
+        "reason": "checked_exact_point_statement",
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "4724a37fee43c7acfd58361a1991079020d30c05d88841030a8480658f7a22f5"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "19d020f67da368ace16d0271526a2530a7b47704936c4f9937daf8e25a2f86ca"
+          },
+          "premises": [
+            {
+              "id": "x-is-two",
+              "version": 0,
+              "scope_id": "S",
+              "scope_version": 0,
+              "sha256": "035269c63dff758fe70a0003f43c80413fd7112b39a022574588081873f2ef69"
+            }
+          ]
+        },
+        "witness": {
+          "lhs": "4",
+          "rhs": "5",
+          "assignment": {
+            "x": "2"
+          },
+          "semantics": "scoped_point_statement"
+        },
+        "trace": [
+          {
+            "stage": "snapshot",
+            "premises_bound": 1,
+            "result": "matched"
+          },
+          {
+            "stage": "exact_check",
+            "result": "INVALID_JUSTIFICATION",
+            "reason": "checked_exact_point_statement"
+          }
+        ],
+        "work_units": 9,
+        "certificate": {
+          "checker_id": "restricted-math-json-v1",
+          "certificate_type": "ARITHMETIC_EQ",
+          "binding_sha256": "c5abeea933b171c99f4dd52b979cec11b3d3ef18731d699b2f3ce69abf65a6d0",
+          "request_sha256": "bd82ec9ad82bb508442d048efe3542561a23c5720ee3875d2b61e03bddf59abc",
+          "status": "INVALID_JUSTIFICATION",
+          "truth": false,
+          "witness_sha256": "a66f044267fcb15887499e550f6edabed4b2f9800093af06d199c1bf1f86cd9e",
+          "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+          "sha256": "b6baa78a9a1533d445b1398685268deddc5c9174979c45561de640412be23b86"
+        }
+      },
+      "certificate_replayed": true
+    },
+    {
+      "name": "scoped_refutation",
+      "target": {
+        "id": "claim-or-proof",
+        "version": 0,
+        "kind": "claim",
+        "certificate_type": "POLYNOMIAL_IDENTITY",
+        "scope": {
+          "id": "S",
+          "version": 0,
+          "coefficient_domain": "Q",
+          "domains": {
+            "x": {
+              "kind": "integer",
+              "lower": 1
+            }
+          }
+        },
+        "statement": {
+          "lhs": {
+            "op": "pow",
+            "base": {
+              "op": "var",
+              "name": "x"
+            },
+            "exp": 2
+          },
+          "rhs": {
+            "op": "var",
+            "name": "x"
+          }
+        },
+        "required_premises": []
+      },
+      "premises": [],
+      "request": {
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "7074abc214829518724fe97ca1043779ac2bdce1f08e06caa0043a3a597dde67"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "075fdb2a09b96d348ee48a928e84dcae1c1f7f5ba97ac97d7b1b2c0370b30873"
+          },
+          "premises": []
+        },
+        "mode": "counterexample",
+        "assignment": {
+          "x": 2
+        }
+      },
+      "result": {
+        "status": "REFUTED_CLAIM",
+        "verdict": "PASS",
+        "truth": false,
+        "reason": "checked_scoped_counterexample",
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "7074abc214829518724fe97ca1043779ac2bdce1f08e06caa0043a3a597dde67"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "075fdb2a09b96d348ee48a928e84dcae1c1f7f5ba97ac97d7b1b2c0370b30873"
+          },
+          "premises": []
+        },
+        "witness": {
+          "lhs": "4",
+          "rhs": "2",
+          "assignment": {
+            "x": "2"
+          }
+        },
+        "trace": [
+          {
+            "stage": "snapshot",
+            "premises_bound": 0,
+            "result": "matched"
+          },
+          {
+            "stage": "exact_check",
+            "result": "REFUTED_CLAIM",
+            "reason": "checked_scoped_counterexample"
+          }
+        ],
+        "work_units": 14,
+        "certificate": {
+          "checker_id": "restricted-math-json-v1",
+          "certificate_type": "POLYNOMIAL_IDENTITY",
+          "binding_sha256": "2b359941fd7f275634595b9311241fd4445e81995de4546254ac4808769e7822",
+          "request_sha256": "848702891f0fa180d260026d7399b753e6a97d874a424a6a52fa76759b188aaf",
+          "status": "REFUTED_CLAIM",
+          "truth": false,
+          "witness_sha256": "9ac27413f838c523bf8f85f884da3f7a321693f12dc58c7e57e5ac4a9e298707",
+          "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+          "sha256": "e7d59a49c907009d811908f5f30b10d8153baf78c57e15c9697373bc4f4f4393"
+        }
+      },
+      "certificate_replayed": true
+    },
+    {
+      "name": "pole_excluded_counterexample",
+      "target": {
+        "id": "claim-or-proof",
+        "version": 0,
+        "kind": "claim",
+        "certificate_type": "POLYNOMIAL_IDENTITY",
+        "scope": {
+          "id": "S",
+          "version": 0,
+          "coefficient_domain": "Q",
+          "domains": {
+            "x": {
+              "kind": "real",
+              "exclude": [
+                1
+              ]
+            }
+          }
+        },
+        "statement": {
+          "lhs": {
+            "op": "div",
+            "lhs": {
+              "op": "sub",
+              "lhs": {
+                "op": "pow",
+                "base": {
+                  "op": "var",
+                  "name": "x"
+                },
+                "exp": 2
+              },
+              "rhs": 1
+            },
+            "rhs": {
+              "op": "sub",
+              "lhs": {
+                "op": "var",
+                "name": "x"
+              },
+              "rhs": 1
+            }
+          },
+          "rhs": {
+            "op": "add",
+            "args": [
+              {
+                "op": "var",
+                "name": "x"
+              },
+              1
+            ]
+          }
+        },
+        "required_premises": []
+      },
+      "premises": [],
+      "request": {
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "2b9637cb455d296fb96aab5aeff1e3c6bf5ae5d2299bfa8ec3d0555c0d6dad33"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "2ece2ef9bc23b1718bc185853057e9be488bf46e4fb6830bc1e1a19d8bf85d58"
+          },
+          "premises": []
+        },
+        "mode": "counterexample",
+        "assignment": {
+          "x": 1
+        }
+      },
+      "result": {
+        "status": "INVALID_COUNTEREXAMPLE",
+        "verdict": "FAIL",
+        "truth": null,
+        "reason": "counterexample_outside_scope",
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "2b9637cb455d296fb96aab5aeff1e3c6bf5ae5d2299bfa8ec3d0555c0d6dad33"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "2ece2ef9bc23b1718bc185853057e9be488bf46e4fb6830bc1e1a19d8bf85d58"
+          },
+          "premises": []
+        },
+        "witness": {
+          "assignment": {
+            "x": "1"
+          },
+          "outside_domains": [
+            "x"
+          ]
+        },
+        "trace": [
+          {
+            "stage": "snapshot",
+            "premises_bound": 0,
+            "result": "matched"
+          },
+          {
+            "stage": "exact_check",
+            "result": "INVALID_COUNTEREXAMPLE",
+            "reason": "counterexample_outside_scope"
+          }
+        ],
+        "work_units": 0,
+        "certificate": {
+          "checker_id": "restricted-math-json-v1",
+          "certificate_type": "POLYNOMIAL_IDENTITY",
+          "binding_sha256": "0d969f75d2ad6bea504691cde429210d9fbe4fec9158ab10f341b6fd09f5933f",
+          "request_sha256": "27ea2c367842cb0c59dace235eda6c576cf9a2c98b8a2f758dd89b20d58b6209",
+          "status": "INVALID_COUNTEREXAMPLE",
+          "truth": null,
+          "witness_sha256": "020bd3293e6f0b0713bbbec6740170034f3f7de558d98185d9f31fcf3d1800fd",
+          "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+          "sha256": "c6d8f1b15030611961fe757bf8b578a398a6db42811ab13f6f77f6d16b5d370d"
+        }
+      },
+      "certificate_replayed": true
+    },
+    {
+      "name": "cancellation_guard_unproven",
+      "target": {
+        "id": "claim-or-proof",
+        "version": 0,
+        "kind": "claim",
+        "certificate_type": "POLYNOMIAL_IDENTITY",
+        "scope": {
+          "id": "S",
+          "version": 0,
+          "coefficient_domain": "Q",
+          "domains": {
+            "x": {
+              "kind": "real"
+            }
+          }
+        },
+        "statement": {
+          "lhs": {
+            "op": "div",
+            "lhs": {
+              "op": "sub",
+              "lhs": {
+                "op": "pow",
+                "base": {
+                  "op": "var",
+                  "name": "x"
+                },
+                "exp": 2
+              },
+              "rhs": 1
+            },
+            "rhs": {
+              "op": "sub",
+              "lhs": {
+                "op": "var",
+                "name": "x"
+              },
+              "rhs": 1
+            }
+          },
+          "rhs": {
+            "op": "add",
+            "args": [
+              {
+                "op": "var",
+                "name": "x"
+              },
+              1
+            ]
+          }
+        },
+        "required_premises": []
+      },
+      "premises": [],
+      "request": {
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "f75d91691d56992111d289d7255544505e2ee489cc79c1ed8846cfd9a47af791"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "94236106183347fef9feced78a0d1d4793c2d0d5a08f37ccab19637efee3c3ea"
+          },
+          "premises": []
+        },
+        "mode": "verify"
+      },
+      "result": {
+        "status": "UNKNOWN",
+        "verdict": "UNKNOWN",
+        "truth": null,
+        "reason": "original_denominator_guard_unproven",
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "f75d91691d56992111d289d7255544505e2ee489cc79c1ed8846cfd9a47af791"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "94236106183347fef9feced78a0d1d4793c2d0d5a08f37ccab19637efee3c3ea"
+          },
+          "premises": []
+        },
+        "witness": null,
+        "trace": [
+          {
+            "stage": "snapshot",
+            "premises_bound": 0,
+            "result": "matched"
+          },
+          {
+            "stage": "abstain",
+            "reason": "original_denominator_guard_unproven",
+            "unproven_guard": {
+              "term_count": 2,
+              "terms": [
+                {
+                  "exponents": [
+                    0
+                  ],
+                  "coefficient": "-1"
+                },
+                {
+                  "exponents": [
+                    1
+                  ],
+                  "coefficient": "1"
+                }
+              ],
+              "sha256": "ed823ad69b6ac18b1aeeaed10c73d6ae89d386fd6e52c64e08f3e2bb90bd005a"
+            }
+          }
+        ],
+        "work_units": 56,
+        "certificate": null
+      },
+      "certificate_replayed": null
+    },
+    {
+      "name": "cancellation_guard_proven",
+      "target": {
+        "id": "claim-or-proof",
+        "version": 0,
+        "kind": "claim",
+        "certificate_type": "POLYNOMIAL_IDENTITY",
+        "scope": {
+          "id": "S",
+          "version": 0,
+          "coefficient_domain": "Q",
+          "domains": {
+            "x": {
+              "kind": "real",
+              "exclude": [
+                1
+              ]
+            }
+          }
+        },
+        "statement": {
+          "lhs": {
+            "op": "div",
+            "lhs": {
+              "op": "sub",
+              "lhs": {
+                "op": "pow",
+                "base": {
+                  "op": "var",
+                  "name": "x"
+                },
+                "exp": 2
+              },
+              "rhs": 1
+            },
+            "rhs": {
+              "op": "sub",
+              "lhs": {
+                "op": "var",
+                "name": "x"
+              },
+              "rhs": 1
+            }
+          },
+          "rhs": {
+            "op": "add",
+            "args": [
+              {
+                "op": "var",
+                "name": "x"
+              },
+              1
+            ]
+          }
+        },
+        "required_premises": []
+      },
+      "premises": [],
+      "request": {
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "2b9637cb455d296fb96aab5aeff1e3c6bf5ae5d2299bfa8ec3d0555c0d6dad33"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "2ece2ef9bc23b1718bc185853057e9be488bf46e4fb6830bc1e1a19d8bf85d58"
+          },
+          "premises": []
+        },
+        "mode": "verify"
+      },
+      "result": {
+        "status": "VERIFIED",
+        "verdict": "PASS",
+        "truth": true,
+        "reason": "checked_exact_symbolic_statement",
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "2b9637cb455d296fb96aab5aeff1e3c6bf5ae5d2299bfa8ec3d0555c0d6dad33"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "2ece2ef9bc23b1718bc185853057e9be488bf46e4fb6830bc1e1a19d8bf85d58"
+          },
+          "premises": []
+        },
+        "witness": {
+          "variables": [
+            "x"
+          ],
+          "coefficient_domain": "Q",
+          "original_denominator_checks": [
+            {
+              "polynomial": {
+                "term_count": 2,
+                "terms": [
+                  {
+                    "exponents": [
+                      0
+                    ],
+                    "coefficient": "-1"
+                  },
+                  {
+                    "exponents": [
+                      1
+                    ],
+                    "coefficient": "1"
+                  }
+                ],
+                "sha256": "ed823ad69b6ac18b1aeeaed10c73d6ae89d386fd6e52c64e08f3e2bb90bd005a"
+              },
+              "type": "linear_root_excluded_by_domain",
+              "variable": "x",
+              "root": "1"
+            }
+          ],
+          "normalized_difference": {
+            "term_count": 0,
+            "terms": [],
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "semantics": "scoped_equality_with_original_definedness"
+        },
+        "trace": [
+          {
+            "stage": "snapshot",
+            "premises_bound": 0,
+            "result": "matched"
+          },
+          {
+            "stage": "exact_check",
+            "result": "VERIFIED",
+            "reason": "checked_exact_symbolic_statement"
+          }
+        ],
+        "work_units": 66,
+        "certificate": {
+          "checker_id": "restricted-math-json-v1",
+          "certificate_type": "POLYNOMIAL_IDENTITY",
+          "binding_sha256": "0d969f75d2ad6bea504691cde429210d9fbe4fec9158ab10f341b6fd09f5933f",
+          "request_sha256": "5b14aa5a9fcd77c005bc2126894d327a61c2f523069da4e6650897b7b323086e",
+          "status": "VERIFIED",
+          "truth": true,
+          "witness_sha256": "46e01a8371807365cccab2d66f240f066c99b7abc6c4a2a0833db5079fc47cb7",
+          "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+          "sha256": "33d9fb4bfd87fc4009fd8efc8eadc96f0e35df305111475cd5034ecf843cb7f1"
+        }
+      },
+      "certificate_replayed": true
+    },
+    {
+      "name": "polynomial_divisibility_Q",
+      "target": {
+        "id": "claim-or-proof",
+        "version": 0,
+        "kind": "claim",
+        "certificate_type": "POLYNOMIAL_DIVISIBILITY",
+        "scope": {
+          "id": "S",
+          "version": 0,
+          "coefficient_domain": "Q",
+          "domains": {
+            "x": {
+              "kind": "integer"
+            }
+          }
+        },
+        "statement": {
+          "dividend": {
+            "op": "var",
+            "name": "x"
+          },
+          "divisor": {
+            "op": "mul",
+            "args": [
+              2,
+              {
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          }
+        },
+        "required_premises": []
+      },
+      "premises": [],
+      "request": {
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "fc141ca630f91e21989acb776059a0238589cac11d5f22389eee3e7c8a09eb62"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "19d020f67da368ace16d0271526a2530a7b47704936c4f9937daf8e25a2f86ca"
+          },
+          "premises": []
+        },
+        "mode": "verify"
+      },
+      "result": {
+        "status": "VERIFIED",
+        "verdict": "PASS",
+        "truth": true,
+        "reason": "checked_exact_symbolic_statement",
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "fc141ca630f91e21989acb776059a0238589cac11d5f22389eee3e7c8a09eb62"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "19d020f67da368ace16d0271526a2530a7b47704936c4f9937daf8e25a2f86ca"
+          },
+          "premises": []
+        },
+        "witness": {
+          "variables": [
+            "x"
+          ],
+          "coefficient_domain": "Q",
+          "original_denominator_checks": [],
+          "semantics": "formal_polynomial_divisibility",
+          "quotient": {
+            "term_count": 1,
+            "terms": [
+              {
+                "exponents": [
+                  0
+                ],
+                "coefficient": "1/2"
+              }
+            ],
+            "sha256": "194b594f396c299b4f17cecf999cd8eb85d23e6e3a0cfbcef7bacfedcdfdf32f"
+          },
+          "remainder": {
+            "term_count": 0,
+            "terms": [],
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "quotient_in_coefficient_ring": true
+        },
+        "trace": [
+          {
+            "stage": "snapshot",
+            "premises_bound": 0,
+            "result": "matched"
+          },
+          {
+            "stage": "exact_check",
+            "result": "VERIFIED",
+            "reason": "checked_exact_symbolic_statement"
+          }
+        ],
+        "work_units": 12,
+        "certificate": {
+          "checker_id": "restricted-math-json-v1",
+          "certificate_type": "POLYNOMIAL_DIVISIBILITY",
+          "binding_sha256": "68d51af6030a71137242e4c7f467636ab490e4bdcda19f53c77328b6286694b0",
+          "request_sha256": "a900d3234e9385c276ec151520a134478625792dc07559c245eb63e76a929e41",
+          "status": "VERIFIED",
+          "truth": true,
+          "witness_sha256": "7ea0aa9cc7d442b0ede2ba3438dacb653628c6e1d4f5b636cc2d5d19cbcb3e81",
+          "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+          "sha256": "9b66ee1b24b5505cb5b5ca01a39539061d0427086fd44922da101ff623e991e7"
+        }
+      },
+      "certificate_replayed": true
+    },
+    {
+      "name": "polynomial_divisibility_Z",
+      "target": {
+        "id": "claim-or-proof",
+        "version": 0,
+        "kind": "claim",
+        "certificate_type": "POLYNOMIAL_DIVISIBILITY",
+        "scope": {
+          "id": "S",
+          "version": 0,
+          "coefficient_domain": "Z",
+          "domains": {
+            "x": {
+              "kind": "integer"
+            }
+          }
+        },
+        "statement": {
+          "dividend": {
+            "op": "var",
+            "name": "x"
+          },
+          "divisor": {
+            "op": "mul",
+            "args": [
+              2,
+              {
+                "op": "var",
+                "name": "x"
+              }
+            ]
+          }
+        },
+        "required_premises": []
+      },
+      "premises": [],
+      "request": {
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "e19fe12d98556ea3621de87feb84c1c26867d51da68148391cf4735667af2b13"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "d32c91671f00647f4403cef80b91e7321e7c0ec12f23f75fae4ca3c37dbd573d"
+          },
+          "premises": []
+        },
+        "mode": "verify"
+      },
+      "result": {
+        "status": "REFUTED_CLAIM",
+        "verdict": "PASS",
+        "truth": false,
+        "reason": "checked_exact_symbolic_statement",
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "e19fe12d98556ea3621de87feb84c1c26867d51da68148391cf4735667af2b13"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "d32c91671f00647f4403cef80b91e7321e7c0ec12f23f75fae4ca3c37dbd573d"
+          },
+          "premises": []
+        },
+        "witness": {
+          "variables": [
+            "x"
+          ],
+          "coefficient_domain": "Z",
+          "original_denominator_checks": [],
+          "semantics": "formal_polynomial_divisibility",
+          "quotient": {
+            "term_count": 1,
+            "terms": [
+              {
+                "exponents": [
+                  0
+                ],
+                "coefficient": "1/2"
+              }
+            ],
+            "sha256": "194b594f396c299b4f17cecf999cd8eb85d23e6e3a0cfbcef7bacfedcdfdf32f"
+          },
+          "remainder": {
+            "term_count": 0,
+            "terms": [],
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "quotient_in_coefficient_ring": false
+        },
+        "trace": [
+          {
+            "stage": "snapshot",
+            "premises_bound": 0,
+            "result": "matched"
+          },
+          {
+            "stage": "exact_check",
+            "result": "REFUTED_CLAIM",
+            "reason": "checked_exact_symbolic_statement"
+          }
+        ],
+        "work_units": 12,
+        "certificate": {
+          "checker_id": "restricted-math-json-v1",
+          "certificate_type": "POLYNOMIAL_DIVISIBILITY",
+          "binding_sha256": "8c9c8c560320a324b1a21df2c02b0d6c2f6e58ecf5079ba88d54859db27cfa9c",
+          "request_sha256": "c38b8f22300eb850f0ba927b09e9c596ff4b8dad554592fa0dc5f27ba1fa6882",
+          "status": "REFUTED_CLAIM",
+          "truth": false,
+          "witness_sha256": "acdd7c16b52b3594566e0187a81cd6b316fa4ff8ec108efcb1745a4ac111f095",
+          "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+          "sha256": "ae26b0dcd89b55e62830aa71d869e776c9047cbfa9a429c512bbba26e432c442"
+        }
+      },
+      "certificate_replayed": true
+    },
+    {
+      "name": "substitution_partial_success",
+      "target": {
+        "id": "claim-or-proof",
+        "version": 0,
+        "kind": "claim",
+        "certificate_type": "SUBSTITUTION",
+        "scope": {
+          "id": "S",
+          "version": 0,
+          "coefficient_domain": "Q",
+          "domains": {
+            "x": {
+              "kind": "integer"
+            }
+          }
+        },
+        "statement": {
+          "assignment": {
+            "x": -3
+          },
+          "constraints": [
+            {
+              "op": "eq",
+              "lhs": {
+                "op": "pow",
+                "base": {
+                  "op": "var",
+                  "name": "x"
+                },
+                "exp": 2
+              },
+              "rhs": 9
+            },
+            {
+              "op": "positive",
+              "arg": {
+                "op": "var",
+                "name": "x"
+              }
+            }
+          ]
+        },
+        "required_premises": []
+      },
+      "premises": [],
+      "request": {
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "582cc5c996088072195e30c9f4faaaf67077c10f193dd5213a29c3a75a458f3a"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "19d020f67da368ace16d0271526a2530a7b47704936c4f9937daf8e25a2f86ca"
+          },
+          "premises": []
+        },
+        "mode": "verify"
+      },
+      "result": {
+        "status": "REFUTED_CLAIM",
+        "verdict": "PASS",
+        "truth": false,
+        "reason": "checked_exact_point_statement",
+        "binding": {
+          "target": {
+            "id": "claim-or-proof",
+            "version": 0,
+            "sha256": "582cc5c996088072195e30c9f4faaaf67077c10f193dd5213a29c3a75a458f3a"
+          },
+          "scope": {
+            "id": "S",
+            "version": 0,
+            "sha256": "19d020f67da368ace16d0271526a2530a7b47704936c4f9937daf8e25a2f86ca"
+          },
+          "premises": []
+        },
+        "witness": {
+          "constraints": [
+            {
+              "satisfied": true,
+              "lhs": "9",
+              "rhs": "9",
+              "op": "eq"
+            },
+            {
+              "satisfied": false,
+              "value": "-3",
+              "op": "positive"
+            }
+          ],
+          "assignment": {
+            "x": "-3"
+          },
+          "semantics": "declared_constraint_conjunction"
+        },
+        "trace": [
+          {
+            "stage": "snapshot",
+            "premises_bound": 0,
+            "result": "matched"
+          },
+          {
+            "stage": "exact_check",
+            "result": "REFUTED_CLAIM",
+            "reason": "checked_exact_point_statement"
+          }
+        ],
+        "work_units": 6,
+        "certificate": {
+          "checker_id": "restricted-math-json-v1",
+          "certificate_type": "SUBSTITUTION",
+          "binding_sha256": "749ca8a10e821123fa8606bf8513f23f6acb88985edad0825ee9faab0babe047",
+          "request_sha256": "42ba7ef913b4e15955960d15c95da56c0ca50bfa7714ab05ccc3b4085f26b9c6",
+          "status": "REFUTED_CLAIM",
+          "truth": false,
+          "witness_sha256": "79071d03264d1021e27ab0931313bfa3d1dfe3f87805b2b9431df79cd78a62e1",
+          "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+          "sha256": "f5caed003eb7e44aa5da0539e0203c8a01918d52d704478b53f227198caf0487"
+        }
+      },
+      "certificate_replayed": true
+    }
+  ]
+}

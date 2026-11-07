@@ -1,0 +1,40 @@
+{
+  "checkpoint_id": "D2_15_20261108_129",
+  "execution_sha256": "9554faf12bd133e57644f4238d12d362ad26cbd4a0fc383294cd68152ca4447e",
+  "prefix_sha256": "40bb4985cbb2a97869b800e71ad59ee40529c3710b4e453384016c647227e5b2",
+  "prompt_tokens": 68,
+  "generated_tokens": 4664,
+  "cache_position": 4732,
+  "thinking_open": true,
+  "stop_reason": "RUNNING",
+  "copy_cost": {
+    "wall_seconds": 0.013741820119321346,
+    "cache_bytes": 697761792,
+    "logits_bytes": 607744,
+    "rng_bytes": 16
+  },
+  "setup_paid_work": {
+    "forward_calls": 4665,
+    "forward_input_tokens": 4732,
+    "attention_pairs": 11198278
+  },
+  "setup_seconds": 245.43863614741713,
+  "execution": {
+    "model_sha256": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+    "tokenizer_sha256": "1e66b3f4568beeb3394ff4d1d966d7377a9301ddb01e1c2459bf3717f00fe3f7",
+    "engine_sha256": "064f31fc1af93bd2d10a17244de30cd062a9bbd6ec8e188e7ee195c0440fd5c2",
+    "backend": "sdpa",
+    "dtype": "FP16",
+    "device": "cuda:0",
+    "runtime": "{\"gpu\": \"GPU-a696ce9a-7137-cf6f-b4d3-deb992a72f28\", \"torch\": \"2.8.0+cu128\", \"transformers\": \"4.55.2\"}",
+    "sampling_config": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0,
+      "batch": 1
+    },
+    "position_policy": "batch_one_zero_based_contiguous_all_ones",
+    "prefill_schedule": "D1_prompt_chunks_then_singleton_decode"
+  }
+}

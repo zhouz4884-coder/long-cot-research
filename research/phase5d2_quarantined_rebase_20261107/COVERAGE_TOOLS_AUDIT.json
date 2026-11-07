@@ -1,0 +1,59 @@
+{
+  "status": "CPU_TESTED_AND_PARTIAL_NATIVE_AUDIT",
+  "cpu_tests": {
+    "command": "python -X utf8 -m unittest test_coverage_tools -v",
+    "passed": 7,
+    "failed": 0
+  },
+  "source_files": [
+    {
+      "name": "audit_coverage.py",
+      "sha256": "d05dcc3857e4cb89bf3c99a9f6801179fbc479bb9ceb7de3ee84bad6e3306fd1"
+    },
+    {
+      "name": "fetch_coverage.py",
+      "sha256": "f35b72bf0141bb4ffcd2fb736900c7e18f616e55b4a3718dfa6d33209cc108eb"
+    },
+    {
+      "name": "test_coverage_tools.py",
+      "sha256": "a9c7050dbcf21991a3e94bc9d2776d08d14a3293e9da6621617e0dbf750837f2"
+    },
+    {
+      "name": "paired_d2_worker.py",
+      "sha256": "e221b9c2abe42460307893f8fac1e9109983fdda9148aae2b264902c71092107"
+    },
+    {
+      "name": "proposal_check.py",
+      "sha256": "4796ab0ba3d10ffa7422f9f624ea13d9fa640f5e63b7bdcb6fe9411c7d13edf0"
+    }
+  ],
+  "partial_audit": {
+    "sha256": "72dd025ab6ed352b124faa8b267456d18ee13348f7f926c37969a82d3d710c4e",
+    "retrieval_manifest_sha256": "08004d8a2048b2d13432d52499800561a48e1e441ca9174db3bc66c9832d0d94",
+    "checks_passed": 4039,
+    "completed_trajectories": 17,
+    "planned_trajectories": 48,
+    "source_decode_validation": "PASS"
+  },
+  "tokenizer_manifest_sha256": "e780bd6dd6af5a645d5f5167052ee6acfcc55019e05776a99d4b6d8cbf0a8c1c",
+  "static_findings": [
+    {
+      "scope": "identity_and_source",
+      "status": "NO_BLOCKER_OBSERVED",
+      "detail": "Same schedule prefix reconstruction, fresh independent RNG per arm, exact prefix/RNG regeneration checks, no suffix KV graft, immutable original snapshot checks and full EOS identity outputs."
+    },
+    {
+      "scope": "closed_literal_proposal_semantics",
+      "status": "INTERPRETATION_BOUNDARY",
+      "detail": "parse_counterexample requires a nonempty variable set. Closed literal targets always yield UNKNOWN. The three equal-cue check arms therefore have no verifier-dependent intervention under these targets."
+    },
+    {
+      "scope": "insufficient_context_audit_cue",
+      "status": "EXPOSURE_DENOMINATOR",
+      "detail": "append_checked_text returns INSUFFICIENT_CONTEXT and zero tokens while run_check_arm can continue. Such records must remain explicit cue-not-injected technical outcomes."
+    }
+  ],
+  "no_gold_or_accuracy_evaluation": true,
+  "no_gpu_changes": true,
+  "final_selection_frozen": false
+}

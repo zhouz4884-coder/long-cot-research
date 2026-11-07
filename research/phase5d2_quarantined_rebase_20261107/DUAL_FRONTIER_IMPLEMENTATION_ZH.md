@@ -1,0 +1,17 @@
+# 双前沿重建的CPU实现与接入
+
+2026-11-07。当前15项针对性CPU回归通过，使用前一阶段冻结的EvidenceLedger和本阶段native_snapshot.replay_schedule。验证覆盖状态规划和模拟执行器调度，真实GPU结果另行记录。
+
+`bind_observed_thinking`接收原prompt/generated token IDs、snapshot_id、source_version和候选段落边界。它核对同一未闭合assistant、实际thinking opener、已观察长度与段落/数学标记闭合。D1通常由模型生成opener，其后第1个位置才可作为最早回退点。
+
+`plan_rebase`通过冻结checker重新核验Challenge，在CPU副本上应用证据变更。它独立保留lost_support与invalidated_text_spans，按两者的最早位置选择可观察闭合边界。循环无根支持、跨scope、旧版本、未签发PASS、残缺span和不一致证书分别进入拒绝或隔离状态。
+
+证据承接先穷尽保留前缀内的完整证明，再为其余仍有效结论选择有根证明。每个fact带scope/版本、实际证书、完整前提证书、许可表达式、原声明/证明span与源token SHA。缺来源的结论及依赖结论列入incomplete_carry_provenance。桥接写入规范表达，carry=False给出相同裁剪与证据变更而无事实桥。
+
+`replay_rebase`校验当前snapshot/source_version/token IDs与原观察，并重新计算计划。它按D1调度预填原prompt，逐token回放保留的生成前缀，再逐token物化桥接，返回新的cache和next_logits。原账本保持由调用方持有，成功回放后可将修订账本与新状态一并提交。调用方显式声明修改前缀后的RNG规则。
+
+后续多次修复需要重新绑定来源。修订账本的旧proof/claim跨度仍指历史文本，新增source锚点会阻止它被直接用于另一段等长新文本。完整控制器需重提取或可靠重映射活跃来源，再建立下一次观察。
+
+当前边界规则是词法闭合段落。自然声明、proof与token跨度的语义绑定由上游提取/角色核验负责。独立反驳一个此前无支持的claim，若没有可退役的proof文本或支持损失，当前规划返回NO_REBASE。这一范围应由调用方单独处理和计数。
+
+运行回归可执行`python -X utf8 -B research/phase5d2_quarantined_rebase_20261107/test_dual_frontier_rebase.py -v`。源码、依赖与实际检查范围保存在CPU_DUAL_FRONTIER.json。

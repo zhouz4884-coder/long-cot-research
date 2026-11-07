@@ -1,0 +1,17 @@
+{
+  "protocol": "D2 natural coverage v1",
+  "questions": 24,
+  "seeds": [20261107, 20261108],
+  "model_manifest": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+  "execution": "D1 native thinking, batch 1, prompt prefill chunks of 256, then single generated tokens",
+  "capacity_guard": "actual loaded context capacity only",
+  "event_classes": ["candidate", "reflection_cue", "relation", "repeated_paragraph"],
+  "event_boundary": "first complete paragraph boundary observed in the native token stream; include the last partial paragraph on observed think close for coverage only",
+  "repeated_paragraph_rule": "third occurrence of exactly the same nonempty whitespace-normalized casefolded paragraph",
+  "rng_checkpoints": "all event boundaries observed while thinking remains open",
+  "collection_arm": "NativeContinue",
+  "online_inputs": ["d2_visible.jsonl", "D1 model and tokenizer", "previously generated native tokens"],
+  "offline_only_inputs": ["d2_eval_only.jsonl"],
+  "denominators": "24 distinct problems, 48 seeded trajectories, event subsets reported separately",
+  "worker_assignment": "(zero-based question index + zero-based seed index) modulo 2"
+}

@@ -1,0 +1,657 @@
+{
+  "status": "COMPLETE",
+  "completed": 2,
+  "cases": [
+    {
+      "case_id": "D2_15",
+      "seed": 20261108,
+      "identity": {
+        "proposal_tokens": 17,
+        "proposal_boundary": "COMPLETED_STEP",
+        "proposal_prefix_equal": true,
+        "logit_comparisons_after_proposal": 3594,
+        "maximum_logit_difference": 0.0,
+        "RNG_equal_at_compared_steps": true,
+        "terminal_RNG_equal": true,
+        "sampled_tokens_equal": true,
+        "same_terminal_status": true,
+        "original_snapshot_unmodified": true,
+        "matches_recorded_native_full_ids": true,
+        "compared_continuation_tokens": 3611,
+        "proposal_cost": {
+          "wall_seconds": 1.0780411111190915,
+          "initial_copy": {
+            "wall_seconds": 0.013126718811690807,
+            "cache_bytes": 697761792,
+            "logits_bytes": 607744,
+            "rng_bytes": 16
+          },
+          "generated_tokens": 17,
+          "forward_calls": 17,
+          "forward_input_tokens": 17
+        },
+        "direct_restore_cost": {
+          "wall_seconds": 0.006449679844081402,
+          "cache_bytes": 697761792,
+          "logits_bytes": 607744,
+          "rng_bytes": 16
+        },
+        "lockstep_decode_seconds": {
+          "NativeContinue": 190.07342241238803,
+          "UnknownIdentity": 189.99742287956178
+        },
+        "joint_wall_seconds": 383.8719935948029,
+        "joint_paid_work": {
+          "forward_calls": 7220,
+          "forward_input_tokens": 7220,
+          "attention_pairs": 47200750
+        },
+        "limits": "logits compared at proposal merge and subsequent live steps; proposal internal logits not recorded"
+      },
+      "arms": [
+        {
+          "arm": "InContextCheck",
+          "EOS": true,
+          "tokens": 11723,
+          "disposition": "UNKNOWN",
+          "paid_work": {
+            "forward_calls": 7058,
+            "forward_input_tokens": 7058,
+            "attention_pairs": 58309667
+          },
+          "standalone_end_to_end_seconds": 612.150287094526,
+          "standalone_paid_work": {
+            "forward_calls": 11723,
+            "forward_input_tokens": 11790,
+            "attention_pairs": 69507945
+          },
+          "peak_allocated_bytes": 11351883776
+        },
+        {
+          "arm": "UnscopedIsolatedCheck",
+          "EOS": true,
+          "tokens": 11723,
+          "disposition": "UNKNOWN",
+          "paid_work": {
+            "forward_calls": 7058,
+            "forward_input_tokens": 7058,
+            "attention_pairs": 58309667
+          },
+          "standalone_end_to_end_seconds": 610.6736994544044,
+          "standalone_paid_work": {
+            "forward_calls": 11723,
+            "forward_input_tokens": 11790,
+            "attention_pairs": 69507945
+          },
+          "peak_allocated_bytes": 11351883776
+        },
+        {
+          "arm": "ScopedIsolatedCheck",
+          "EOS": true,
+          "tokens": 11723,
+          "disposition": "UNKNOWN",
+          "paid_work": {
+            "forward_calls": 7058,
+            "forward_input_tokens": 7058,
+            "attention_pairs": 58309667
+          },
+          "standalone_end_to_end_seconds": 612.0286886421964,
+          "standalone_paid_work": {
+            "forward_calls": 11723,
+            "forward_input_tokens": 11790,
+            "attention_pairs": 69507945
+          },
+          "peak_allocated_bytes": 11351883776
+        }
+      ],
+      "repair": {
+        "status": "NOT_ELIGIBLE",
+        "case_id": "D2_15",
+        "seed": 20261108,
+        "reason": "NO_ACTIONABLE_CHALLENGE",
+        "metadata": {
+          "source_prefix_sha256": "40bb4985cbb2a97869b800e71ad59ee40529c3710b4e453384016c647227e5b2",
+          "observed_length": 4664,
+          "candidate_relation_sha256": "0fd870ac62d743ddf8637ffafd07afe32caee970d9ac682fb73fce532b48b8e9",
+          "candidate_proof_id": null,
+          "role_status": "MISSING",
+          "processed_relations": [],
+          "skipped_relations": [
+            {
+              "relation_sha256": "b31a0a809a4e905ada9ea243a8061fb0231e06e24d2b3f74bbbd88d96ee4cdff",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "3f27b21783f75e6a475e44ff36be21ce7a1c81251f1a1e340ac0e36b844d8fd7",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "6ff14c0fe2619f45407e5245979557a9be1dd9abf332bfa6724963b4dfc84b6e",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "0fd870ac62d743ddf8637ffafd07afe32caee970d9ac682fb73fce532b48b8e9",
+              "reason": "Only bounded integer literals",
+              "status": "UNKNOWN"
+            }
+          ],
+          "role_certificate_sha256": null,
+          "support_scope": "Closed expression evaluation only. Source-role approval concerns use as an asserted proof step.",
+          "role_review_authority": "Trusted caller review receipt with local identities and byte bindings.",
+          "boundaries_need_native_token_validation": true,
+          "trusted_given_calls": 0
+        },
+        "arms": [],
+        "source_boundaries": {
+          "accepted_paragraph_offsets": [
+            0,
+            121,
+            181,
+            288,
+            347,
+            392,
+            402,
+            418,
+            434,
+            468,
+            484,
+            524,
+            540,
+            574,
+            608,
+            621,
+            638,
+            694,
+            711,
+            753,
+            797,
+            832,
+            849,
+            891,
+            908,
+            947,
+            965,
+            967,
+            974,
+            981,
+            988,
+            996,
+            1003,
+            1010,
+            1017,
+            1024,
+            1028,
+            1035,
+            1042,
+            1049,
+            1056,
+            1063,
+            1070,
+            1077,
+            1084,
+            1091,
+            1098,
+            1113,
+            1137,
+            1140,
+            1146,
+            1153,
+            1165,
+            1207,
+            1245,
+            1287,
+            1329,
+            1371,
+            1413,
+            1455,
+            1491,
+            1501,
+            1544,
+            1587,
+            1630,
+            1674,
+            1719,
+            1764,
+            1809,
+            1854,
+            1899,
+            1944,
+            2037,
+            2070,
+            2084,
+            2101,
+            2129,
+            2236,
+            2264,
+            2275,
+            2316,
+            2368,
+            2389,
+            2411,
+            2429,
+            2453,
+            2476,
+            2500,
+            2553,
+            2586,
+            2614,
+            2645,
+            2684,
+            2701,
+            2742,
+            2764,
+            2812,
+            2835,
+            2851,
+            2904,
+            2916,
+            3000,
+            3186,
+            3325,
+            3359,
+            3390,
+            3445,
+            3556,
+            3732,
+            3972,
+            4137,
+            4247,
+            4283,
+            4296,
+            4324,
+            4389,
+            4459,
+            4473,
+            4483,
+            4499,
+            4515,
+            4531,
+            4548,
+            4564,
+            4580,
+            4596,
+            4612,
+            4625,
+            4629,
+            4647,
+            4664
+          ],
+          "rejected_paragraph_offsets": [],
+          "rejected_paragraph_count": 0
+        }
+      },
+      "identity_joint_peak_allocated_bytes": 11287757312,
+      "repair_peak_allocated_bytes": 8808598528,
+      "peak_allocated_bytes": 11351883776,
+      "elapsed_seconds": 2465.1685473974794,
+      "all_paid_work": {
+        "forward_calls": 47054,
+        "forward_input_tokens": 47322,
+        "attention_pairs": 266922863
+      }
+    },
+    {
+      "case_id": "D2_07",
+      "seed": 20261108,
+      "identity": {
+        "proposal_tokens": 37,
+        "proposal_boundary": "COMPLETED_STEP",
+        "proposal_prefix_equal": true,
+        "logit_comparisons_after_proposal": 2063,
+        "maximum_logit_difference": 0.0,
+        "RNG_equal_at_compared_steps": true,
+        "terminal_RNG_equal": true,
+        "sampled_tokens_equal": true,
+        "same_terminal_status": true,
+        "original_snapshot_unmodified": true,
+        "matches_recorded_native_full_ids": true,
+        "compared_continuation_tokens": 2100,
+        "proposal_cost": {
+          "wall_seconds": 1.9542627912014723,
+          "initial_copy": {
+            "wall_seconds": 0.006537212058901787,
+            "cache_bytes": 186679296,
+            "logits_bytes": 607744,
+            "rng_bytes": 16
+          },
+          "generated_tokens": 37,
+          "forward_calls": 37,
+          "forward_input_tokens": 37
+        },
+        "direct_restore_cost": {
+          "wall_seconds": 0.006273397244513035,
+          "cache_bytes": 186679296,
+          "logits_bytes": 607744,
+          "rng_bytes": 16
+        },
+        "lockstep_decode_seconds": {
+          "NativeContinue": 107.89838922582567,
+          "UnknownIdentity": 107.82437489833683
+        },
+        "joint_wall_seconds": 220.2041810033843,
+        "joint_paid_work": {
+          "forward_calls": 4198,
+          "forward_input_tokens": 4198,
+          "attention_pairs": 9722568
+        },
+        "limits": "logits compared at proposal merge and subsequent live steps; proposal internal logits not recorded"
+      },
+      "arms": [
+        {
+          "arm": "InContextCheck",
+          "EOS": true,
+          "tokens": 4126,
+          "disposition": "UNKNOWN",
+          "paid_work": {
+            "forward_calls": 2939,
+            "forward_input_tokens": 2939,
+            "attention_pairs": 8041104
+          },
+          "standalone_end_to_end_seconds": 215.7853186680004,
+          "standalone_paid_work": {
+            "forward_calls": 4126,
+            "forward_input_tokens": 4205,
+            "attention_pairs": 8843115
+          },
+          "peak_allocated_bytes": 9120772608
+        },
+        {
+          "arm": "UnscopedIsolatedCheck",
+          "EOS": true,
+          "tokens": 4126,
+          "disposition": "UNKNOWN",
+          "paid_work": {
+            "forward_calls": 2939,
+            "forward_input_tokens": 2939,
+            "attention_pairs": 8041104
+          },
+          "standalone_end_to_end_seconds": 215.94066554587334,
+          "standalone_paid_work": {
+            "forward_calls": 4126,
+            "forward_input_tokens": 4205,
+            "attention_pairs": 8843115
+          },
+          "peak_allocated_bytes": 9120772608
+        },
+        {
+          "arm": "ScopedIsolatedCheck",
+          "EOS": true,
+          "tokens": 4126,
+          "disposition": "UNKNOWN",
+          "paid_work": {
+            "forward_calls": 2939,
+            "forward_input_tokens": 2939,
+            "attention_pairs": 8041104
+          },
+          "standalone_end_to_end_seconds": 216.06843068730086,
+          "standalone_paid_work": {
+            "forward_calls": 4126,
+            "forward_input_tokens": 4205,
+            "attention_pairs": 8843115
+          },
+          "peak_allocated_bytes": 9120772608
+        }
+      ],
+      "repair": {
+        "status": "NOT_ELIGIBLE",
+        "case_id": "D2_07",
+        "seed": 20261108,
+        "reason": "NO_ACTIONABLE_CHALLENGE",
+        "metadata": {
+          "source_prefix_sha256": "8422b911b54f08509a3eefd95ae3d416b2e1c0c337490812d2933e5b7db543b9",
+          "observed_length": 1186,
+          "candidate_relation_sha256": "3ba5649d61b64977177b2b3a203c69abf2a492ca2b9d71cf98bd8c97d54e7736",
+          "candidate_proof_id": "proof_3ba5649d61b64977177b2b3a",
+          "role_status": "MISSING",
+          "processed_relations": [
+            {
+              "relation_sha256": "3ba5649d61b64977177b2b3a203c69abf2a492ca2b9d71cf98bd8c97d54e7736",
+              "claim_id": "claim_0aab659b507f37d7e766376d",
+              "proof_id": "proof_3ba5649d61b64977177b2b3a",
+              "expression_subject": "expr_770d793a9f6d32964c26481c",
+              "literal_result": {
+                "status": "VERIFIED",
+                "verdict": "PASS",
+                "truth": true,
+                "reason": "checked_exact_point_statement",
+                "binding": {
+                  "target": {
+                    "id": "literal_3ba5649d61b64977177b2b3a",
+                    "version": 0,
+                    "sha256": "3d9170845666cd455d4d4aeadd553da02df1f5830f5c19a4ca706e7e1ceac900"
+                  },
+                  "scope": {
+                    "id": "closed_rational_eval",
+                    "version": 0,
+                    "sha256": "f2fca33ad8275b202a1bec9722c01310a2c60b6d6bf25f52f19e73286d61ddcf"
+                  },
+                  "premises": []
+                },
+                "witness": {
+                  "lhs": "11664",
+                  "rhs": "11664",
+                  "assignment": {},
+                  "semantics": "scoped_point_statement"
+                },
+                "trace": [
+                  {
+                    "stage": "snapshot",
+                    "premises_bound": 0,
+                    "result": "matched"
+                  },
+                  {
+                    "stage": "exact_check",
+                    "result": "VERIFIED",
+                    "reason": "checked_exact_point_statement"
+                  }
+                ],
+                "work_units": 7,
+                "certificate": {
+                  "checker_id": "restricted-math-json-v1",
+                  "certificate_type": "ARITHMETIC_EQ",
+                  "binding_sha256": "859ad9d5db4a8a464314e106431e4c264c4925f043224eb8fb066ac7d72f6f75",
+                  "request_sha256": "e71b6f90b9fb2a44fe2507f38129d337ff0c21840cd9bce09689d47d03b2cddb",
+                  "status": "VERIFIED",
+                  "truth": true,
+                  "witness_sha256": "e0ad4edf9fa8e7ab4fba4bb35146dbc191e6e1022d4914e9f8b6134b959809a0",
+                  "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+                  "sha256": "8c1c19afbf59653d6e15925fc2cfa268a7bc5b6d7546e5b62aa8d1dc74840b44"
+                }
+              },
+              "ledger_verdict": "PASS",
+              "source_token_span": [
+                1168,
+                1186
+              ]
+            }
+          ],
+          "skipped_relations": [
+            {
+              "relation_sha256": "fa507774903dc2d300b83ccf7345519ff908da8aee536de8ed2dcd77e5a77251",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "897d11e16f77347640e067250c9f99210c06627783e5a2bb99a5a79e0ca8924b",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "0599550894d87d9a96054c27160c7f8da5255426539970d3d91098e2ee69c488",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "43c6f19821c105d0893252f5d8c463c671b3b7cdb9a7e34589d46699de69a233",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "8bac7adba70c6d1d4df0facd8029378e90c9a945c4122f75fa834bcf564d0ddf",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "289adf80b92d1c1f862c2ebca9d18641c87ccc6cde09e120b5278a435fc2554e",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "4b79073cc94506219911e15e4f1d12a16fc272779f582c7dc2440096f241bac2",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "fa507774903dc2d300b83ccf7345519ff908da8aee536de8ed2dcd77e5a77251",
+              "reason": "Duplicate observed relation identity",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "897d11e16f77347640e067250c9f99210c06627783e5a2bb99a5a79e0ca8924b",
+              "reason": "Duplicate observed relation identity",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "1aaccdfae35f01a35ae585c5fdffcccc668fbb0f96fd5bcc25be74d921b2edfa",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "1440677b75b8bfe03f4c9368ce40bff78e786d719d4aee7938efdc930961d305",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "5ae4398c2092fd97b0b7d8e059d51cde4dba568c4fc4f5e6f199ad60e9c51c81",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "169ac4a509ece6d568df693fe263485fcda74c69c2c70a3f75a0e51729cb847e",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "df5c73a3433126f75d78b9a3eb51c6bbf473f4423a641485044da1c44ee7368c",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "8845e735d892d3973a73040b385550ba508114d49cf4d974fbe36827d50d217a",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "66dc9ba774cea089d696eb53ca7a9198321b6263bb71056ce7df021c62302f5a",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "abb03d26fb98c47c522b1df60400567a6111020b104b83ff005dee4a3ec18726",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "5f11a671d3462855a7cf305a6449fa0c14738e2afd0ce267f7262fa1a8a07660",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "13354186f8ac3924583724790a56b836cda955cad066452742d477369c69fe07",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "c70f8669b876e9c695c406dc30c078c1b6750dbacc5bcb9e09bba4fca3b3b266",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "897d11e16f77347640e067250c9f99210c06627783e5a2bb99a5a79e0ca8924b",
+              "reason": "Duplicate observed relation identity",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "eb32bc15272c08fa17b1d2ae5e1f4298a37899a714f2ddebbd83eecf3d0918d7",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            },
+            {
+              "relation_sha256": "f0fb71b9da770c0b2deec72581db4356a3ae956b8c4a3935374c19a2ad86fab7",
+              "reason": "Only closed literal arithmetic is supported",
+              "status": "UNKNOWN"
+            }
+          ],
+          "role_certificate_sha256": null,
+          "support_scope": "Closed expression evaluation only. Source-role approval concerns use as an asserted proof step.",
+          "role_review_authority": "Trusted caller review receipt with local identities and byte bindings.",
+          "boundaries_need_native_token_validation": true,
+          "trusted_given_calls": 0
+        },
+        "arms": [],
+        "source_boundaries": {
+          "accepted_paragraph_offsets": [
+            0,
+            77,
+            164,
+            234,
+            260,
+            286,
+            302,
+            353,
+            358,
+            371,
+            409,
+            437,
+            459,
+            489,
+            542,
+            569,
+            577,
+            613,
+            623,
+            648,
+            654,
+            684,
+            707,
+            751,
+            757,
+            777,
+            790,
+            792,
+            818,
+            828,
+            848,
+            854,
+            873,
+            885,
+            907,
+            926,
+            948,
+            1045,
+            1084,
+            1111,
+            1118,
+            1162,
+            1168,
+            1186
+          ],
+          "rejected_paragraph_offsets": [],
+          "rejected_paragraph_count": 0
+        }
+      },
+      "identity_joint_peak_allocated_bytes": 9340832256,
+      "repair_peak_allocated_bytes": 8297516032,
+      "peak_allocated_bytes": 9340832256,
+      "elapsed_seconds": 929.0564049659297,
+      "all_paid_work": {
+        "forward_calls": 17763,
+        "forward_input_tokens": 18079,
+        "attention_pairs": 37053924
+      }
+    }
+  ]
+}

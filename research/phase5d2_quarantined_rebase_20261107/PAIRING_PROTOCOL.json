@@ -1,0 +1,34 @@
+{
+  "version": "D2 observed-prefix pairing v1",
+  "frozen_before_generated_text_inspection": true,
+  "collection": "24 frozen questions by 2 frozen seeds, all 48 runs retained",
+  "selection_time": "after all 48 collection runs finish, before opening evaluation-only answers",
+  "max_distinct_problem_ids": 4,
+  "selection_order": [
+    "decisive INVALID_JUSTIFICATION of a closed literal relation with actionable_role_candidate and a live observed paragraph checkpoint",
+    "any decisive bounded relation at a live observed paragraph checkpoint",
+    "first reflection-cue event at a live observed paragraph checkpoint"
+  ],
+  "ties": "case_id ascending, seed ascending, step ascending, equation_index ascending; at most one event per problem ID",
+  "source_role": "literal expression truth is distinct from its use in a proof; natural repair requires two independent pre-Gold full-observed-prefix reviews agreeing ASSERTED_ARITHMETIC_PROOF, otherwise no repair",
+  "source_role_review_rules": [
+    "exact expression and token span must match the already observed prefix",
+    "exclude quoted false arithmetic, hypothetical/case assumptions, reductio endpoints and already repudiated arithmetic",
+    "certify only the literal expression-evaluation proof, never original-problem modelling or answer correctness"
+  ],
+  "isolation_arms": ["NativeContinue", "InContextCheck", "UnscopedIsolatedCheck", "ScopedIsolatedCheck", "UnknownIdentity"],
+  "audit_cue": "An explicit identical equality-audit cue is used by the three check arms. NativeContinue and UnknownIdentity receive no cue. UNKNOWN equality with NativeContinue is tested only in the no-cue UnknownIdentity arm.",
+  "proposal": "first complete observed paragraph, or 192 proposal tokens, native think-close, EOS or actual context capacity; proposal guard does not cap main continuation",
+  "candidate_counterexample": "only a complete JSON object with one assignment field containing exactly all target variables and bounded integer/rational values; all other outputs are UNKNOWN",
+  "verdicts": "unscoped and scoped use the same checker and observed target, differing only in explicit domain predicates. No blanket acceptance of the latest reflection. Unknown adopts the already generated branch.",
+  "reject_policy": "reject only a mathematically invalid counterexample to the registered target, restore the original audit checkpoint, consume post-proposal RNG, append a bounded checked reason and continue to natural EOS; never certify the old final answer",
+  "repair_eligibility": "a unanimous source-role certificate, an independently replayable literal arithmetic invalidation, a READY dual-frontier plan and actual complete native token boundary",
+  "repair_arms": ["GenericRewind", "RebaseNoCarry", "RebaseCarry", "FullRestart", "SameEvidenceCompactBridge", "Resampling"],
+  "repair_evidence": "all repair arms receive identical checked bad-equality evidence, all certified carry facts with provenance and the same frozen problem. Each arm may use only the already observed prefix and these facts.",
+  "repair_decisions": "cut selection and carry precede all arm outputs and all evaluation-only answer reads. No learned controller or selective rerunning by correctness.",
+  "cost_matching": "report actual full prefix/decode/branch/replay work. Resampling is independent native generation with the same checked evidence. Only compare a budget-matched bracket after all paid work is counted, never claim equal cost from equal max tokens.",
+  "main_generation": "natural EOS or loaded model actual context limit, no scientific new-token or wall-time cap",
+  "scoring": "evaluation-only answers opened only after selection, role review, protocol and all paired generation are frozen. Same final-response LastBox and math scorer for every arm.",
+  "denominators": ["24 problems", "48 seeded trajectories", "all observed complete steps", "all event steps", "extracted relations", "literal-checkable relations", "scope-bound symbolic relations", "decisive checks", "role-certified actionable errors", "selected distinct problems"],
+  "claims": "CPU tests, replay identity, natural checker coverage, conditional intervention quality and full-bank answer accuracy are reported separately"
+}

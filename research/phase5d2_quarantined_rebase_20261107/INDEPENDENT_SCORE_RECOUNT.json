@@ -1,0 +1,270 @@
+{
+  "status": "PASS",
+  "reviewer_agent": "/root/phase5d_support",
+  "started_utc": "2026-11-07T06:54:47.765418+00:00",
+  "completed_utc": "2026-11-07T06:54:54.168364+00:00",
+  "wall_seconds": 6.403,
+  "generation_freeze_sha256": "0da454bccecf3207714a604477cccac277b3d843a53a5160437a87a1f5dd1f20",
+  "scores_sha256": "da6dfab96effa16c376028c568bc0cd4a4e7a8904a1d93ddd1ee427d9863a4c2",
+  "score_receipt_sha256": "1a6a58a14da89122e14dee4f9576b478ebe62391f6485efb7ee8fa1325f96161",
+  "eval_sha256": "a407e4feaa7bf238250abf3c9964ef74a05be9f7f83d4d7a46aa7b262acb5027",
+  "scoring_sources_sha256": {
+    "extractor": "e64ef21c1b9e90ad8ecb41b0ce5058307248d33668b91fbfa3ece4e98b69d37d",
+    "grader": "b6cd1b9f15d015204e54c445ab0f4f1d1bdc93775515ee4bfc8fdb41e5823980"
+  },
+  "local_dependency_versions": {
+    "math-verify": "0.9.0",
+    "latex2sympy2_extended": "1.11.0",
+    "sympy": "1.14.0",
+    "antlr4-python3-runtime": "4.13.2"
+  },
+  "recount_procedure": "Independently reconstructed expected native case×seed and selected case×arm membership; verified manifest, score receipt, raw bytes, result metadata, native pairing, and 4 repair receipts; reran frozen LastBox on exact final_response and pinned mathematical comparison on extracted selections.",
+  "local_timeout_adaptation": "Math-Verify 0.9.0 Windows multiprocessing timeout returned gold_parse_unknown even on a simple fraction in the stock smoke. For this independent local replay only, parser/grader internal timeout decorators are passed through in each child. Each child remains bounded by an external 20-second subprocess timeout. Frozen scoring and package files were left untouched.",
+  "membership_counts": {
+    "all_natural": 48,
+    "selected_events": 20
+  },
+  "all_selected_native_source_token_sequences_match": true,
+  "licensed_repair_records": 0,
+  "frozen_selection_reproduced": 68,
+  "math_verify_runs": 67,
+  "frozen_vs_recount_grade_outcome_mismatches": [],
+  "frozen_vs_recount_grade_detail_mismatches": [],
+  "summaries": [
+    {
+      "bank": "all_natural",
+      "arm": "NativeContinue",
+      "trajectories": 48,
+      "distinct_problems": 24,
+      "correct": 46,
+      "incorrect_or_undelivered": 2,
+      "grading_unknown": 0,
+      "EOS": 48
+    },
+    {
+      "bank": "selected_events",
+      "arm": "InContextCheck",
+      "trajectories": 4,
+      "distinct_problems": 4,
+      "correct": 4,
+      "incorrect_or_undelivered": 0,
+      "grading_unknown": 0,
+      "EOS": 4
+    },
+    {
+      "bank": "selected_events",
+      "arm": "NativeContinue",
+      "trajectories": 4,
+      "distinct_problems": 4,
+      "correct": 4,
+      "incorrect_or_undelivered": 0,
+      "grading_unknown": 0,
+      "EOS": 4
+    },
+    {
+      "bank": "selected_events",
+      "arm": "ScopedIsolatedCheck",
+      "trajectories": 4,
+      "distinct_problems": 4,
+      "correct": 4,
+      "incorrect_or_undelivered": 0,
+      "grading_unknown": 0,
+      "EOS": 4
+    },
+    {
+      "bank": "selected_events",
+      "arm": "UnknownIdentity",
+      "trajectories": 4,
+      "distinct_problems": 4,
+      "correct": 4,
+      "incorrect_or_undelivered": 0,
+      "grading_unknown": 0,
+      "EOS": 4
+    },
+    {
+      "bank": "selected_events",
+      "arm": "UnscopedIsolatedCheck",
+      "trajectories": 4,
+      "distinct_problems": 4,
+      "correct": 4,
+      "incorrect_or_undelivered": 0,
+      "grading_unknown": 0,
+      "EOS": 4
+    }
+  ],
+  "natural_frozen_miss_audit": [
+    {
+      "case_id": "D2_10",
+      "seed": 20261108,
+      "source": "native_results/worker_0/D2_10_20261108/result.json",
+      "source_sha256": "89c35669b4c0731acc2bde45cddcc5a4924cbf95694b1eab485c5531ebba199b",
+      "evidence_scope": "post-thinking final_response",
+      "final_answer_excerpt": "\\boxed{2 + \\sqrt{3}}, \\boxed{2 - \\sqrt{3}}, \\boxed{1 + \\sqrt{2}}, \\boxed{1 - \\sqrt{2}}",
+      "final_answer_char_span": [
+        1737,
+        1823
+      ],
+      "source_boxes": [
+        {
+          "kind": "boxed",
+          "start": 1737,
+          "end": 1757,
+          "surface": "2 + \\sqrt{3}"
+        },
+        {
+          "kind": "boxed",
+          "start": 1759,
+          "end": 1779,
+          "surface": "2 - \\sqrt{3}"
+        },
+        {
+          "kind": "boxed",
+          "start": 1781,
+          "end": 1801,
+          "surface": "1 + \\sqrt{2}"
+        },
+        {
+          "kind": "boxed",
+          "start": 1803,
+          "end": 1823,
+          "surface": "1 - \\sqrt{2}"
+        }
+      ],
+      "last_box_gap": ", ",
+      "frozen_selection": {
+        "version": "phase5d_d0_answer_policies_v1",
+        "policy": "LastBox",
+        "text_sha256": "db711367d1411a48f768042b23726174b3911d5fe1ed67e94ea2b8c469c197a3",
+        "signals": {
+          "boxed_count": 4,
+          "final_label_count": 1,
+          "unclosed_box_starts": [],
+          "unresolved_final_labels": [],
+          "distinct_surface_count": 5,
+          "surface_disagreement_is_not_certified_logical_conflict": true
+        },
+        "selection_uses_gold": false,
+        "truth_certified": false,
+        "status": "ambiguous",
+        "reason": "adjacent_boxed_components_need_complete_object"
+      },
+      "frozen_grade": {
+        "status": "not_delivered",
+        "correct": false
+      },
+      "failure_category": "answer_format_or_extraction",
+      "cause": "adjacent_boxed_components_abstention",
+      "independent_math_judgment": "complete_correct_root_set",
+      "gold": "1+\\sqrt 2,\\ 1-\\sqrt 2,\\ 2+\\sqrt 3,\\ 2-\\sqrt 3",
+      "dataset_answer_ambiguity_observed": false,
+      "independent_derivation": {
+        "original_polynomial": "f(f(z))-z for f(z)=z^2-3z+1",
+        "expanded_coefficients_low_to_high": [
+          -1,
+          2,
+          8,
+          -6,
+          1
+        ],
+        "factorization": "(z^2-4z+1)(z^2-2z-1)",
+        "factor_roots": [
+          "2 ± sqrt(3)",
+          "1 ± sqrt(2)"
+        ]
+      }
+    },
+    {
+      "case_id": "D2_10",
+      "seed": 20261107,
+      "source": "native_results/worker_1/D2_10_20261107/result.json",
+      "source_sha256": "0a79a70cab28ba9616563381f1d84ea0156e6c3e3a96e5d588a010f261df32de",
+      "evidence_scope": "post-thinking final_response",
+      "final_answer_excerpt": "\\boxed{1 - \\sqrt{2}}, \\quad \\boxed{1 + \\sqrt{2}}, \\quad \\boxed{2 - \\sqrt{3}}, \\quad \\boxed{2 + \\sqrt{3}}",
+      "final_answer_char_span": [
+        1769,
+        1873
+      ],
+      "source_boxes": [
+        {
+          "kind": "boxed",
+          "start": 1769,
+          "end": 1789,
+          "surface": "1 - \\sqrt{2}"
+        },
+        {
+          "kind": "boxed",
+          "start": 1797,
+          "end": 1817,
+          "surface": "1 + \\sqrt{2}"
+        },
+        {
+          "kind": "boxed",
+          "start": 1825,
+          "end": 1845,
+          "surface": "2 - \\sqrt{3}"
+        },
+        {
+          "kind": "boxed",
+          "start": 1853,
+          "end": 1873,
+          "surface": "2 + \\sqrt{3}"
+        }
+      ],
+      "last_box_gap": ", \\quad ",
+      "frozen_selection": {
+        "version": "phase5d_d0_answer_policies_v1",
+        "policy": "LastBox",
+        "text_sha256": "97f55e28ac35220c39231746a2c7e7b24ffd76e2b5cf0db2964d9d2e3ae11fb9",
+        "signals": {
+          "boxed_count": 4,
+          "final_label_count": 1,
+          "unclosed_box_starts": [],
+          "unresolved_final_labels": [],
+          "distinct_surface_count": 5,
+          "surface_disagreement_is_not_certified_logical_conflict": true
+        },
+        "selection_uses_gold": false,
+        "truth_certified": false,
+        "status": "ok",
+        "surface": "2 + \\sqrt{3}",
+        "normalized_surface": "2 + \\sqrt{3}",
+        "selected_span": [
+          1853,
+          1873
+        ],
+        "selected_kind": "boxed",
+        "reason": "fixed_position_policy_not_gold_best"
+      },
+      "frozen_grade": {
+        "status": "ok",
+        "correct": false,
+        "comparison": "math_verify_whole_object",
+        "parsed_candidate": "[sqrt(3) + 2, '2 + \\\\sqrt{3}']",
+        "parsed_gold": "[{1 - sqrt(2), 1 + sqrt(2), 2 - sqrt(3), sqrt(3) + 2}, '1+\\\\sqrt{2}, 1-\\\\sqrt{2}, 2+\\\\sqrt{3}, 2-\\\\sqrt{3}']",
+        "grader_version": "phase5d_d0_selected_surface_v1",
+        "backend_version": "0.9.0"
+      },
+      "failure_category": "answer_format_or_extraction",
+      "cause": "last_box_retains_only_last_root",
+      "independent_math_judgment": "complete_correct_root_set",
+      "gold": "1+\\sqrt 2,\\ 1-\\sqrt 2,\\ 2+\\sqrt 3,\\ 2-\\sqrt 3",
+      "dataset_answer_ambiguity_observed": false,
+      "independent_derivation": {
+        "original_polynomial": "f(f(z))-z for f(z)=z^2-3z+1",
+        "expanded_coefficients_low_to_high": [
+          -1,
+          2,
+          8,
+          -6,
+          1
+        ],
+        "factorization": "(z^2-4z+1)(z^2-2z-1)",
+        "factor_roots": [
+          "2 ± sqrt(3)",
+          "1 ± sqrt(2)"
+        ]
+      }
+    }
+  ],
+  "scope": "The post hoc root-set audit explains the two official misses. All frozen LastBox labels remain official; the root-set audit is not a replacement evaluation."
+}

@@ -1,0 +1,449 @@
+{
+  "status": "PAPER_PIN_BYTES_VERIFIED_METADATA_ONLY",
+  "dataset": {
+    "repo_id": "suryadv/qwen3-8b-aime-2009-2024-16x",
+    "revision": "c34143c92856d9b90fdb9c808c7e66070dcab9a1",
+    "public_resolve_base": "https://huggingface.co/datasets/suryadv/qwen3-8b-aime-2009-2024-16x/resolve/c34143c92856d9b90fdb9c808c7e66070dcab9a1/",
+    "publication_contract_sha256": "185daff44fc19ac2102b42bf480de11a7651bae7eb6253fff8ea9d030ac58e61"
+  },
+  "source_directory": "outputs/d43_aime_source_20261110",
+  "publication_manifest": {
+    "path": "PUBLICATION_MANIFEST.json",
+    "size": 3941,
+    "sha256": "f1b27b3528a8f6d8b23db46d394bade22067bdbae973d87f9bb5182746f86453"
+  },
+  "manifest_verified_files": [
+    {
+      "path": "data/draw-00.parquet",
+      "sha256": "5da6ef58914d22c60659e7e21266f4530021993014d8af6cebe1a640d137c787",
+      "size": 4317872
+    },
+    {
+      "path": "data/draw-01.parquet",
+      "sha256": "f9d42707698f8bbfac4f83d73625c997eb9dbdca7cebec6e76e0ea8f263e3033",
+      "size": 4343158
+    },
+    {
+      "path": "data/draw-02.parquet",
+      "sha256": "2772d6ad2797086750aaa0cf4568c61451b6a7b5b37b87645c661a7381686c11",
+      "size": 4410238
+    },
+    {
+      "path": "data/draw-03.parquet",
+      "sha256": "92df8920678ce9f0557cd657fd2645bb19ad525d50eb4ecaa6ed1c675ca65330",
+      "size": 4427514
+    },
+    {
+      "path": "data/problems.jsonl",
+      "sha256": "44bed75d19619c4f847173ebe4814b8610b713de3b5a452ab0e6f28a90011749",
+      "size": 491902
+    },
+    {
+      "path": "README.md",
+      "sha256": "534f83a4e9977dea103446a9f535d96adeaee18cfb8e8125ffd912e1000b45b5",
+      "size": 4772
+    },
+    {
+      "path": "SCHEMA.txt",
+      "sha256": "245cc5c87217a21725b3b290939387571612ba5412cae5f1ff4d22f51692953b",
+      "size": 1021
+    },
+    {
+      "path": "eval_policy.json",
+      "sha256": "a58428cbaeff2641f866829b2e3ca4a4a7d181bf5edf17f5a0b5511a4f4fc096",
+      "size": 2884
+    },
+    {
+      "path": "corpus_manifest.json",
+      "sha256": "486a79ee934aa597e50666f1d365027f62e44ba878b19ead7498d80448972f00",
+      "size": 3285
+    },
+    {
+      "path": "source_inputs.json",
+      "sha256": "25b232cceb1c1b2b2f762e11eae8190c7d50fe8010a3558072d5eabe1b403e6d",
+      "size": 2312
+    }
+  ],
+  "downloaded_byte_count": 18008899,
+  "downloaded_shards": [
+    {
+      "path": "data/draw-00.parquet",
+      "rows": 480,
+      "row_groups": 1
+    },
+    {
+      "path": "data/draw-01.parquet",
+      "rows": 480,
+      "row_groups": 1
+    },
+    {
+      "path": "data/draw-02.parquet",
+      "rows": 480,
+      "row_groups": 1
+    },
+    {
+      "path": "data/draw-03.parquet",
+      "rows": 480,
+      "row_groups": 1
+    }
+  ],
+  "downloaded_trace_rows_from_footer": 1920,
+  "trace_parquet_schema": [
+    {
+      "field": "sample_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "eval_index",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "draw_index",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "seed",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "problem_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "year",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "part",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "contest",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "problem_number",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "problem",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "has_asy",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "field": "prompt",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "messages_json",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "rendered_prompt",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "response",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "gold_answer_raw",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "gold_answer_canonical",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "accepted_answer_integers",
+      "type": "list<element: int64>",
+      "nullable": true
+    },
+    {
+      "field": "extracted_answer_raw",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "extracted_answer_integer",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "is_scorable",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "field": "is_correct",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "field": "matched_gold_integer",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "decision_reason",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "complete_box_found",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "field": "cap_hit",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "field": "finish_reason",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "stop_condition",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "stop_token_id",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "input_tokens",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "output_tokens",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "effective_max_new_tokens",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "model_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "model_revision",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "generation_parameters_json",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "scorer_version",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "scorer_trace_json",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "source_kind",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "source_dataset",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "source_revision",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "source_url",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "source_record_sha256",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "rendered_prompt_sha256",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "response_sha256",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "contract_sha256",
+      "type": "string",
+      "nullable": true
+    }
+  ],
+  "inventory_metadata": {
+    "path": "data/problems.jsonl",
+    "row_count": 480,
+    "field_names_and_types": {
+      "accepted_answer_integers": {
+        "json_types": [
+          "list"
+        ],
+        "present_in_rows": 480
+      },
+      "answer_canonical": {
+        "json_types": [
+          "str"
+        ],
+        "present_in_rows": 480
+      },
+      "answer_raw": {
+        "json_types": [
+          "str"
+        ],
+        "present_in_rows": 480
+      },
+      "contest": {
+        "json_types": [
+          "str"
+        ],
+        "present_in_rows": 480
+      },
+      "eval_index": {
+        "json_types": [
+          "int"
+        ],
+        "present_in_rows": 480
+      },
+      "has_asy": {
+        "json_types": [
+          "bool"
+        ],
+        "present_in_rows": 480
+      },
+      "part": {
+        "json_types": [
+          "str"
+        ],
+        "present_in_rows": 480
+      },
+      "problem": {
+        "json_types": [
+          "str"
+        ],
+        "present_in_rows": 480
+      },
+      "problem_id": {
+        "json_types": [
+          "str"
+        ],
+        "present_in_rows": 480
+      },
+      "problem_number": {
+        "json_types": [
+          "int"
+        ],
+        "present_in_rows": 480
+      },
+      "source": {
+        "json_types": [
+          "dict"
+        ],
+        "present_in_rows": 480
+      },
+      "source_record_sha256": {
+        "json_types": [
+          "str"
+        ],
+        "present_in_rows": 480
+      },
+      "year": {
+        "json_types": [
+          "int"
+        ],
+        "present_in_rows": 480
+      }
+    },
+    "projected_allowlist_for_separate_selector": [
+      "problem_id",
+      "eval_index",
+      "year",
+      "part",
+      "contest",
+      "problem_number",
+      "has_asy"
+    ],
+    "boundary": "JSONL does not enforce column access. A trusted reader must project an explicit field allowlist before yielding rows to a selector. No inventory values are included in this receipt."
+  },
+  "generation_metadata": {
+    "model_id": "Qwen/Qwen3-8B",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "dtype": "bfloat16",
+    "vllm": "0.10.2",
+    "generation": {
+      "completions_per_problem": 16,
+      "enable_thinking": true,
+      "ignore_eos": false,
+      "min_p": 0.0,
+      "response_excludes_stop_control_tokens": true,
+      "seed_base": 1234,
+      "seed_formula": "1234 + 480 * draw_index + eval_index",
+      "temperature": 0.6,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "total_context_budget": 32768,
+    "stop": {
+      "accepted_token_ids": [
+        151643,
+        151645
+      ],
+      "accepted_tokens": [
+        "<|endoftext|>",
+        "<|im_end|>"
+      ],
+      "include_stop_token_in_response": false
+    }
+  },
+  "attribution": {
+    "license_tag": "other",
+    "terms_file": "README.md",
+    "standalone_license_in_pinned_tree": false,
+    "scope": "Original AIME problem statements retain their copyright. The author code license does not relicense these statements. Source bytes are kept outside the tracked phase artifact."
+  },
+  "scope": "Exact file-byte acquisition and format metadata only. No trace rows selected, displayed, or scored. No answer values, problem text or trace text in the receipt."
+}

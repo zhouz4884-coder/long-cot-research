@@ -1,0 +1,26 @@
+{
+  "status": "RULES_FROZEN_BEFORE_CANDIDATE_SCORE",
+  "cohort_freeze_sha256": "1eb07b5bcc988124ed0b79af779b6a08a20e3621b736a590f928df1790d8a01d",
+  "independent_unit": "AIME problem; draw is a paired within-problem observation",
+  "draws": [0, 1, 2, 3],
+  "native_finish_policy": "Pinned stop token ID and condition both match; cap is an incomplete endpoint, tracked separately",
+  "native_readout": "Draw 0 complete strict integer box in final channel after genuine native stop",
+  "thinking_preferred_draw0_readout": "Eligible complete thinking candidate of draw 0 when native stop is observed, then fallback to native draw 0",
+  "strict_final_majority": "Only native final candidates, one vote each. Tie breaks by earliest eligible final occurrence",
+  "inclusive_majority": "Give each eligible native draw exactly two integer vote units: two to one distinct bound value, one each if bound thinking and final disagree. Tie breaks by earliest eligible final occurrence then earliest eligible thinking occurrence. Never count a value twice within a draw",
+  "thinking_eligibility": "Complete terminal explicit integer in a closed thinking channel of a native-stopped trace. Generic explicit target declaration is a provisional claim. Bare boxes enter the main pool only when blind role audit establishes a final target claim; show inclusion of all bare terminal boxes separately",
+  "scope_policy": "Retain typed scope as provenance. Candidate equality is exact integer equality only after delivery or target declaration. An explicit mismatch with requested object or qualifiers remains a separate record, and is never used as a thinking candidate in the primary pool. Preserve final stated answer for native delivery scoring",
+  "disagreement_subset": "At least two distinct eligible values in the complete primary native-inclusive candidate pool. Define before scoring. Report within-trace comparable channels and disagreement transitions separately",
+  "disagreement_review_queue": "Audit every comparable two-channel value disagreement, every unanchored thinking box or missing terminal readout, and the first eight comparable equal cases by cohort order and draw. Keep automatic extraction and review decisions separately frozen",
+  "ordinary_same_access": "Directly test every eligible candidate against the same reviewed necessary predicates using independent plain arithmetic and retain the original vote ordering among survivors. Zero new generators or full solves. Preserve fallback when survivor set is empty",
+  "scoped_refutation": "Use the same ranked inclusive pool and approved necessary predicates through the scope-aware checker. Discard only a state-authorized, actually evaluated refutation. Preserve the ordinary inclusive ranking and fallback on an empty survivor set. Report certification and computation overhead separately",
+  "separate_direct_complete_diagnostic": "Any pre-score complete direct solution obtained independently from the question must remain outside the verifier-only comparison and may be described separately",
+  "cost_boundary": "Charge upstream input and output tokens of all used draws including length caps and failed parses. Only fixed-source token counts are available for original generation. Measure local elapsed and CPU, one-time proof/review setup, predicate requests, individual candidate checks and primitive operations. No new inference is charged unless actually executed",
+  "oracle_boundary": "Final-only and eligible inclusive fixed-pool oracle are only hindsight coverage bounds. No target answer, upstream score or reference solution enters selection",
+  "admission": {
+    "minimum_independent_problems_with_non_format_discriminating_proof": 4,
+    "minimum_net_correct_against_strongest_same_access_arm": 2,
+    "require_independent_review_of_any_correct_value_refutation": true,
+    "heldout_count_if_admitted": "12–24"
+  }
+}

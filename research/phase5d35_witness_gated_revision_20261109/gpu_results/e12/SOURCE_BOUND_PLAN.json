@@ -1,0 +1,89 @@
+{
+  "status": "READY",
+  "plan": {
+    "prior_certificate": {
+      "checker": "d35-witness-arbitration-v1",
+      "contract_id": "wc_a123f4904e51f447de4f5eedb5396e1dde5ea6c2",
+      "question_sha256": "cc6fae59337098413557f98d618019ff86d5bf63937d1ffa4d1abc27ef37f9d9",
+      "target_id": "goal_f2a5343594b98ca41203ddebb66c9e8b767651356617a3df12c666577632d83b",
+      "claim_id": "obs_ffe1bd44d1268f3a77d2a0904589fb03a43b71d773792f6908176ecfc70918d6",
+      "claim_type": "EXACT_ANSWER",
+      "observed_prefix_sha256": "435c58882f44898840b275c69c34a7c7ac5068312df3ac205acf2eabc8c4f7c9",
+      "status": "CERTIFIED_EXACT",
+      "action": "PERMIT_EXACT_DELIVERY",
+      "reason": "unique_sequence_parameters_and_target",
+      "witness": null,
+      "mathematical": {
+        "status": "CERTIFIED_EXACT",
+        "reason": "unique_sequence_parameters_and_target",
+        "proof_scope": "FULL_OBJECTIVE",
+        "certified_value": 61,
+        "witness": {
+          "a1": {
+            "den": 2,
+            "num": 1,
+            "op": "rat"
+          },
+          "answer": 61,
+          "b1": {
+            "den": 2,
+            "num": 1,
+            "op": "rat"
+          },
+          "d": 5,
+          "r": -3
+        },
+        "evidence": {
+          "constraints": [
+            {
+              "index": 1,
+              "expected": 1,
+              "actual": 1
+            },
+            {
+              "index": 2,
+              "expected": 4,
+              "actual": 4
+            },
+            {
+              "index": 3,
+              "expected": 15,
+              "actual": 15
+            },
+            {
+              "index": 4,
+              "expected": 2,
+              "actual": 2
+            }
+          ],
+          "uniqueness": {
+            "first_second_difference": 8,
+            "second_second_difference": -24,
+            "rule": "nonzero_second_difference_fixes_common_ratio"
+          }
+        },
+        "checker_version": "wgr-witness-contract-v1",
+        "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+        "paid_check_count": 7,
+        "work": {
+          "used": 7,
+          "by_operation": {
+            "sequence_constraint": 4,
+            "sequence_target": 1,
+            "sequence_second_difference": 1,
+            "sequence_unique_parameters": 1
+          },
+          "trace_sha256": "43df09a05ce9ab3a3caf8fadf203cdb8c90ed088cbc4ba775ccaf7534ad98442"
+        },
+        "certificate_sha256": "14f729f3779ceb5064b19d415cb3a645deadb186c97b553139ebc185cc00d220"
+      },
+      "released_value": 61,
+      "certificate_sha256": "4934ed691c43448ac717f5ae4ace5c50a1f79b7109be5d409096d52046634efa",
+      "verification_wall_seconds": 0.0015894845128059387
+    },
+    "shared_verified_message": "\n\nAn exact verifier checked the previously observed candidate under every original sequence condition. The requested term is uniquely 61. When writing the final answer, preserve that result and do not rederive it with different parameters. Use a boxed answer.\n\n"
+  },
+  "observed_records": 4,
+  "extract_seconds": 0.10035301744937897,
+  "planning_seconds": 0.1042228126898408
+}

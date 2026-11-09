@@ -1,0 +1,1481 @@
+{
+  "status": "PASS",
+  "scope": "Historical selected development windows; no new accuracy or population trigger estimate",
+  "contract_compilation": {
+    "selected_development": [
+      5,
+      5
+    ],
+    "historical_formal_problem_bank": [
+      4,
+      16
+    ],
+    "matched_source_ids": [
+      "D3_E06",
+      "D3_E12",
+      "D3_E14",
+      "D3_E15"
+    ]
+  },
+  "real_automatic_triggers": 5,
+  "legally_admitted_actions": 5,
+  "adverse_controls_passed": 29,
+  "adverse_controls_total": 29,
+  "rows": [
+    {
+      "case": "E12",
+      "window": "last_live_before_close",
+      "prefix_sha256": "435c58882f44898840b275c69c34a7c7ac5068312df3ac205acf2eabc8c4f7c9",
+      "early_control_window": "before_parameters_control",
+      "template": "arithmetic_geometric_sequence_v1",
+      "observed_objects": 4,
+      "typed_objects": {
+        "EXACT_ANSWER": 4
+      },
+      "detection_seconds": 0.07282649999979185,
+      "real_trigger": true,
+      "legal_revision": true,
+      "same_tool_direct_baseline": {
+        "status": "CERTIFIED_EXACT",
+        "reason": "unique_sequence_parameters_and_target",
+        "witness": {
+          "a1": {
+            "op": "rat",
+            "num": 1,
+            "den": 2
+          },
+          "d": 5,
+          "b1": {
+            "op": "rat",
+            "num": 1,
+            "den": 2
+          },
+          "r": -3
+        },
+        "certificate_sha256": "90698e55c3700ca0afabcb41e6d83304549daf8f79bdb3fd21d124e79313c247",
+        "proof_scope": "FULL_OBJECTIVE",
+        "paid_check_count": 9,
+        "receipt_replayed": true
+      },
+      "prior_observed_candidate": {
+        "candidate_id": "obs_9f83c98f5cfb68e33c8f29fb9da97f34d23013bce243d1a2fa4ed03bcbe26b3e",
+        "goal_claim_type": "EXACT_ANSWER",
+        "segment": "thinking",
+        "role": "explicit_answer",
+        "contract_id": "wc_a123f4904e51f447de4f5eedb5396e1dde5ea6c2",
+        "target_id": "goal_f2a5343594b98ca41203ddebb66c9e8b767651356617a3df12c666577632d83b",
+        "question_sha256": "cc6fae59337098413557f98d618019ff86d5bf63937d1ffa4d1abc27ef37f9d9",
+        "trajectory_id": "D3_E12_20261110",
+        "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "observed_count": 3848,
+        "observed_prefix_sha256": "435c58882f44898840b275c69c34a7c7ac5068312df3ac205acf2eabc8c4f7c9",
+        "source_span": {
+          "char_span": [
+            8745,
+            8767
+          ],
+          "token_span": [
+            3839,
+            3848
+          ],
+          "token_sha256": "68c0a926123a29ac3772a5dcfec371ae41459c96520a7230cf9fd24d0a060e06",
+          "text": " So, the answer is 61."
+        },
+        "field_spans": {
+          "a1": {
+            "char_span": [
+              6118,
+              6121
+            ],
+            "token_span": [
+              2755,
+              2758
+            ],
+            "token_sha256": "0d47e3690acb431a568f4da89ceed673390fe670d96de95eeb4f0486ca2b960b",
+            "text": "1/2"
+          },
+          "b1": {
+            "char_span": [
+              6136,
+              6139
+            ],
+            "token_span": [
+              2769,
+              2772
+            ],
+            "token_sha256": "0d47e3690acb431a568f4da89ceed673390fe670d96de95eeb4f0486ca2b960b",
+            "text": "1/2"
+          },
+          "d": {
+            "char_span": [
+              6127,
+              6128
+            ],
+            "token_span": [
+              2762,
+              2763
+            ],
+            "token_sha256": "49e165525ebdb26f765e7bbab7689c4772a55771dd3ce3b1786d75188895cf03",
+            "text": "5"
+          },
+          "r": {
+            "char_span": [
+              6145,
+              6147
+            ],
+            "token_span": [
+              2775,
+              2777
+            ],
+            "token_sha256": "5f4aaef36b7a4fa8788d2c8be6a86ea15e7b7562cac1eaafad079265a1330dcc",
+            "text": "-3"
+          },
+          "value": {
+            "char_span": [
+              8764,
+              8766
+            ],
+            "token_span": [
+              3845,
+              3847
+            ],
+            "token_sha256": "c1d2c8a3448528b13bd8eafeb90200a6b95a60277bf5c9507cb9ffe46f0d75cc",
+            "text": "61"
+          }
+        },
+        "lineage": [],
+        "source_origin": "OBSERVED_CANDIDATE",
+        "assignments": {
+          "a1": {
+            "den": 2,
+            "num": 1,
+            "op": "rat"
+          },
+          "b1": {
+            "den": 2,
+            "num": 1,
+            "op": "rat"
+          },
+          "d": 5,
+          "r": -3
+        },
+        "claim": {},
+        "value": 61
+      },
+      "actual_certificate": {
+        "status": "CERTIFIED_EXACT",
+        "action": "PERMIT_EXACT_DELIVERY",
+        "reason": "unique_sequence_parameters_and_target",
+        "witness": null,
+        "released_value": 61,
+        "certificate_sha256": "4e657edb593244fca83fe9af530698773997a75a74204c728a6807a3faa72196",
+        "mathematical": {
+          "status": "CERTIFIED_EXACT",
+          "reason": "unique_sequence_parameters_and_target",
+          "proof_scope": "FULL_OBJECTIVE",
+          "certified_value": 61,
+          "witness": {
+            "a1": {
+              "den": 2,
+              "num": 1,
+              "op": "rat"
+            },
+            "answer": 61,
+            "b1": {
+              "den": 2,
+              "num": 1,
+              "op": "rat"
+            },
+            "d": 5,
+            "r": -3
+          },
+          "evidence": {
+            "constraints": [
+              {
+                "index": 1,
+                "expected": 1,
+                "actual": 1
+              },
+              {
+                "index": 2,
+                "expected": 4,
+                "actual": 4
+              },
+              {
+                "index": 3,
+                "expected": 15,
+                "actual": 15
+              },
+              {
+                "index": 4,
+                "expected": 2,
+                "actual": 2
+              }
+            ],
+            "uniqueness": {
+              "first_second_difference": 8,
+              "second_second_difference": -24,
+              "rule": "nonzero_second_difference_fixes_common_ratio"
+            }
+          },
+          "checker_version": "wgr-witness-contract-v1",
+          "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+          "paid_check_count": 7,
+          "work": {
+            "used": 7,
+            "by_operation": {
+              "sequence_constraint": 4,
+              "sequence_target": 1,
+              "sequence_second_difference": 1,
+              "sequence_unique_parameters": 1
+            },
+            "trace_sha256": "43df09a05ce9ab3a3caf8fadf203cdb8c90ed088cbc4ba775ccaf7534ad98442"
+          },
+          "certificate_sha256": "14f729f3779ceb5064b19d415cb3a645deadb186c97b553139ebc185cc00d220"
+        }
+      },
+      "observed_final_draft_arbitration": {
+        "status": "FINAL_ANSWER_CONFLICT",
+        "action": "VETO_DRAFT_AND_DELIVER_CERTIFIED",
+        "reason": "checked_unique_answer",
+        "witness": {
+          "source": "OBSERVED_CANDIDATE",
+          "candidate_id": "obs_9f83c98f5cfb68e33c8f29fb9da97f34d23013bce243d1a2fa4ed03bcbe26b3e",
+          "value": 61
+        },
+        "released_value": 61,
+        "certificate_sha256": "c6a6c5df51418366d0fe008a193a249f7550fd0f05d8f4d6fc21afd220441713",
+        "mathematical": {
+          "status": "CERTIFIED_EXACT",
+          "reason": "unique_sequence_parameters_and_target",
+          "proof_scope": "FULL_OBJECTIVE",
+          "certified_value": 61,
+          "witness": {
+            "a1": {
+              "den": 2,
+              "num": 1,
+              "op": "rat"
+            },
+            "answer": 61,
+            "b1": {
+              "den": 2,
+              "num": 1,
+              "op": "rat"
+            },
+            "d": 5,
+            "r": -3
+          },
+          "evidence": {
+            "constraints": [
+              {
+                "index": 1,
+                "expected": 1,
+                "actual": 1
+              },
+              {
+                "index": 2,
+                "expected": 4,
+                "actual": 4
+              },
+              {
+                "index": 3,
+                "expected": 15,
+                "actual": 15
+              },
+              {
+                "index": 4,
+                "expected": 2,
+                "actual": 2
+              }
+            ],
+            "uniqueness": {
+              "first_second_difference": 8,
+              "second_second_difference": -24,
+              "rule": "nonzero_second_difference_fixes_common_ratio"
+            }
+          },
+          "checker_version": "wgr-witness-contract-v1",
+          "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+          "paid_check_count": 7,
+          "work": {
+            "used": 7,
+            "by_operation": {
+              "sequence_constraint": 4,
+              "sequence_target": 1,
+              "sequence_second_difference": 1,
+              "sequence_unique_parameters": 1
+            },
+            "trace_sha256": "43df09a05ce9ab3a3caf8fadf203cdb8c90ed088cbc4ba775ccaf7534ad98442"
+          },
+          "certificate_sha256": "14f729f3779ceb5064b19d415cb3a645deadb186c97b553139ebc185cc00d220"
+        }
+      }
+    },
+    {
+      "case": "E15",
+      "window": "after_reasserted_maximum",
+      "prefix_sha256": "f68c69ec382b4b4439938b3cdf5391b3f48e6baa1a32750e40a0fc1370ec68eb",
+      "early_control_window": "before_observed_larger_candidate_control",
+      "template": "fibbish_max_v1",
+      "observed_objects": 17,
+      "typed_objects": {
+        "FEASIBLE_CANDIDATE": 15,
+        "MAXIMALITY_CLAIM": 2
+      },
+      "detection_seconds": 3.816377299997839,
+      "real_trigger": true,
+      "legal_revision": true,
+      "same_tool_direct_baseline": {
+        "status": "CERTIFIED_EXACT",
+        "reason": "exhausted_all_feasible_digit_extensions",
+        "witness": 10112369,
+        "certificate_sha256": "dccdfd79cc41cc82748f703a8fb3bda58d3be1cc7a9cbe39f1fd51ec3d92f294",
+        "proof_scope": "FULL_OBJECTIVE",
+        "paid_check_count": 8229,
+        "receipt_replayed": true
+      },
+      "observed_dominance": {
+        "status": "DOMINATED_CANDIDATE",
+        "action": "RETRACT_EXTREMUM_ONLY",
+        "reason": "strictly_larger_feasible_integer",
+        "witness": {
+          "source": "OBSERVED_CANDIDATE",
+          "candidate_id": "obs_446e9ade9b0cd85400cf1848583984f960a11ab21e3a8eced5460ddc57f1793e",
+          "value": 1011235
+        },
+        "released_value": null,
+        "certificate_sha256": "4adea866c754da67eecea141ffb81c0ef0804167355c8436643702107322be9d",
+        "mathematical": {
+          "status": "DOMINATED_CANDIDATE",
+          "reason": "strictly_larger_feasible_integer",
+          "proof_scope": "ORIGINAL_OBJECTIVE_FALSIFICATION",
+          "certified_value": null,
+          "witness": 1011235,
+          "evidence": {
+            "digits": [
+              1,
+              0,
+              1,
+              1,
+              2,
+              3,
+              5
+            ]
+          },
+          "checker_version": "wgr-witness-contract-v1",
+          "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+          "paid_check_count": 6,
+          "work": {
+            "used": 6,
+            "by_operation": {
+              "digit_candidate": 1,
+              "digit_recurrence": 5
+            },
+            "trace_sha256": "aab6dc584315f2d16534bf592a8a6bd33c51a561503e55f3454b6ecf957083b1"
+          },
+          "certificate_sha256": "c9f88f020d37a23622f197a18b3b42b0af9cc1f47756acb5ef348ae4d2ecdd1b",
+          "incumbent_feasibility": {
+            "status": "FEASIBLE_ONLY",
+            "reason": "digit_feasibility",
+            "proof_scope": "FULL_ORIGINAL_CONSTRAINTS",
+            "certified_value": null,
+            "witness": 303369,
+            "evidence": {
+              "digits": [
+                3,
+                0,
+                3,
+                3,
+                6,
+                9
+              ]
+            },
+            "checker_version": "wgr-witness-contract-v1",
+            "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+            "paid_check_count": 5,
+            "work": {
+              "used": 5,
+              "by_operation": {
+                "digit_candidate": 1,
+                "digit_recurrence": 4
+              },
+              "trace_sha256": "6c0a127a71d892078fc6aae9fd50e07f6a90d0c997d84d8b4dd411361af5a638"
+            },
+            "certificate_sha256": "bf846f960fccf06c2b90c9b6f5cb85eb2c488b31d65ad5cc11dcc3f923f7f411"
+          }
+        }
+      },
+      "source_bound_cuts": {
+        "scope_cut": 19747,
+        "generic_cut": 24454,
+        "scope_cut_discards_witness_source": true
+      }
+    },
+    {
+      "case": "P02",
+      "window": "first_live_after_selected_lift_claim",
+      "prefix_sha256": "6492a91eac02fe01c70671324cbff2d070c83a0febf5244f44b5d150f2dae43a",
+      "early_control_window": "before_134_control",
+      "template": "least_prime_square_residue_v1",
+      "observed_objects": 2,
+      "typed_objects": {
+        "COMPLETE_SOLUTIONS_CLAIM": 1,
+        "MINIMALITY_CLAIM": 1
+      },
+      "detection_seconds": 0.11776459999964572,
+      "real_trigger": true,
+      "legal_revision": true,
+      "same_tool_direct_baseline": {
+        "status": "CERTIFIED_EXACT",
+        "reason": "least_prime_and_all_smaller_positive_values_checked",
+        "witness": {
+          "p": 17,
+          "m": 110
+        },
+        "certificate_sha256": "2bee00d6061925015309b435d83815d92e009ea53f0afac2a96eac8cf8980ef8",
+        "proof_scope": "FULL_OBJECTIVE",
+        "paid_check_count": 634,
+        "receipt_replayed": true
+      },
+      "source_claim": {
+        "candidate_id": "obs_139035f04700c9e2dede22fdde5a60dfe2da5c3be8e10142c77d52face0b098c",
+        "goal_claim_type": "MINIMALITY_CLAIM",
+        "segment": "thinking",
+        "role": "asserted_minimum",
+        "contract_id": "wc_adbebecc53b4adb98290a70c8201f7ba5875bef6",
+        "target_id": "goal_700709b495f742625db28ae0b939355b610af473829ee25a6def6617d5ea9de5",
+        "question_sha256": "4827451ee78b173fce0a2b248a10c01442ec7346d87aba46c59a0ad1218f71ed",
+        "trajectory_id": "D3_P02_20261109",
+        "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "observed_count": 8353,
+        "observed_prefix_sha256": "6492a91eac02fe01c70671324cbff2d070c83a0febf5244f44b5d150f2dae43a",
+        "source_span": {
+          "char_span": [
+            17236,
+            17305
+          ],
+          "token_span": [
+            8106,
+            8124
+          ],
+          "token_sha256": "095f563a8aed3da4145d8ffad2b55903f7339868e27c9aff623ede056a47842d",
+          "text": "the minimal positive integer is the smaller of the two, which is 134."
+        },
+        "field_spans": {
+          "p": {
+            "char_span": [
+              7845,
+              7847
+            ],
+            "token_span": [
+              4082,
+              4084
+            ],
+            "token_sha256": "afc247faf314f9cb2a96e34c2cee7857a1ab4a5d49906025524543cfb7e43891",
+            "text": "17"
+          },
+          "value": {
+            "char_span": [
+              17301,
+              17304
+            ],
+            "token_span": [
+              8120,
+              8123
+            ],
+            "token_sha256": "5ace41db40d6c413168dbe95fe0bbd624e035c902349518fd093e288d0fcd5ba",
+            "text": "134"
+          }
+        },
+        "lineage": [],
+        "source_origin": "OBSERVED_CANDIDATE",
+        "assignments": {
+          "p": 17
+        },
+        "claim": {
+          "kind": "MIN",
+          "p": 17,
+          "value": 134
+        },
+        "value": 134
+      },
+      "bounded_online_search": {
+        "status": "DOMINATED_CANDIDATE",
+        "reason": "strictly_smaller_feasible_residue",
+        "proof_scope": "ORIGINAL_OBJECTIVE_FALSIFICATION",
+        "certified_value": null,
+        "witness": {
+          "p": 17,
+          "m": 110
+        },
+        "evidence": {
+          "certified_prime": 17
+        },
+        "checker_version": "wgr-witness-contract-v1",
+        "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+        "paid_check_count": 548,
+        "work": {
+          "used": 548,
+          "by_operation": {
+            "prime_candidate": 16,
+            "modular_residue": 512,
+            "prime_trial_division": 20
+          },
+          "trace_sha256": "710b06c05e3f1216861c0bf132cde58ec8f2eebe2658563c3cac758f85615b6a"
+        },
+        "certificate_sha256": "0bd57a514b37fbc525efd663a5c353f8dd2ff7346ca45007abc50617aba85388",
+        "request": {
+          "algorithm": "wgr-bounded-online-search-v1",
+          "budget": 1000,
+          "claim": {
+            "kind": "MIN",
+            "p": 17,
+            "value": 134
+          },
+          "contract_id": "wc_adbebecc53b4adb98290a70c8201f7ba5875bef6",
+          "purpose": "COUNTEREXAMPLE"
+        },
+        "prerequisite": {
+          "status": "LEAST_PRIME_CERTIFIED",
+          "contract_id": "wc_adbebecc53b4adb98290a70c8201f7ba5875bef6",
+          "prime": 17,
+          "positive_residue_witness": 179,
+          "exhausted_smaller_primes": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13
+          ],
+          "work": {
+            "used": 524,
+            "by_operation": {
+              "prime_candidate": 16,
+              "modular_residue": 488,
+              "prime_trial_division": 20
+            },
+            "trace_sha256": "6b90c2373ba86fe9064c40dad27c4c504f794035868dd9595baa52dd4ea4eca6"
+          },
+          "certificate_sha256": "4b601e2b52453052dd0a5154800ca4ce838ff14dc9782a59a4842957bc9b6dd3"
+        },
+        "algorithm_sha256": "5384ab6d33899032e2152ce9f180f3d6c88f72f960e34fd2149b1e267b465cc7",
+        "witness_source": "ONLINE_SEARCH",
+        "receipt_sha256": "3558fc7d024dec76c26e1259e5e8781cca19f59d4d54fa86f88b77cfd47532db"
+      },
+      "candidate_feasibility": null,
+      "completeness_refutation": {
+        "status": "UNIVERSAL_REFUTATION",
+        "action": "RETRACT_CLAIM_ONLY",
+        "reason": "satisfying_residue_omitted_from_asserted_complete_set",
+        "witness": {
+          "source": "ONLINE_SEARCH",
+          "search_receipt": {
+            "status": "UNIVERSAL_REFUTATION",
+            "reason": "satisfying_residue_omitted_from_asserted_complete_set",
+            "proof_scope": "PARTIAL_CLAIM_REFUTATION",
+            "certified_value": null,
+            "witness": {
+              "p": 17,
+              "m": 110
+            },
+            "evidence": {
+              "certified_prime": 17,
+              "modulus": 289,
+              "canonical_residue_interval": [
+                0,
+                288
+              ],
+              "checked_residue": 110
+            },
+            "checker_version": "wgr-witness-contract-v1",
+            "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+            "paid_check_count": 635,
+            "work": {
+              "used": 635,
+              "by_operation": {
+                "prime_candidate": 16,
+                "modular_residue": 599,
+                "prime_trial_division": 20
+              },
+              "trace_sha256": "51194dbcce1c9792afd8258f342b62647377a4176e22f02a4dee2c68e2993ec6"
+            },
+            "certificate_sha256": "a95621812efd25f99ea0a6a16d7fb36ed0bb5a5dd27397180b412686c120e165",
+            "request": {
+              "algorithm": "wgr-bounded-online-search-v1",
+              "budget": 1000,
+              "claim": {
+                "kind": "COMPLETE_SOLUTIONS",
+                "modulus": 289,
+                "values": [
+                  155,
+                  134
+                ]
+              },
+              "contract_id": "wc_adbebecc53b4adb98290a70c8201f7ba5875bef6",
+              "purpose": "COUNTEREXAMPLE"
+            },
+            "prerequisite": {
+              "status": "LEAST_PRIME_CERTIFIED",
+              "contract_id": "wc_adbebecc53b4adb98290a70c8201f7ba5875bef6",
+              "prime": 17,
+              "positive_residue_witness": 179,
+              "exhausted_smaller_primes": [
+                2,
+                3,
+                5,
+                7,
+                11,
+                13
+              ],
+              "work": {
+                "used": 524,
+                "by_operation": {
+                  "prime_candidate": 16,
+                  "modular_residue": 488,
+                  "prime_trial_division": 20
+                },
+                "trace_sha256": "6b90c2373ba86fe9064c40dad27c4c504f794035868dd9595baa52dd4ea4eca6"
+              },
+              "certificate_sha256": "4b601e2b52453052dd0a5154800ca4ce838ff14dc9782a59a4842957bc9b6dd3"
+            },
+            "algorithm_sha256": "5384ab6d33899032e2152ce9f180f3d6c88f72f960e34fd2149b1e267b465cc7",
+            "witness_source": "ONLINE_SEARCH",
+            "receipt_sha256": "cb931f1ca041dcb2ab17c3840ba629c6a4d250b6c25f700f63b2a367c2162ecb"
+          },
+          "value": {
+            "p": 17,
+            "m": 110
+          }
+        },
+        "released_value": null,
+        "certificate_sha256": "ea026bd44c8f487d6097616d594aec5593d4b7d9d84f90f98c4d16041e8bbc82",
+        "mathematical": {
+          "status": "UNIVERSAL_REFUTATION",
+          "reason": "satisfying_residue_omitted_from_asserted_complete_set",
+          "proof_scope": "PARTIAL_CLAIM_REFUTATION",
+          "certified_value": null,
+          "witness": {
+            "m": 110,
+            "p": 17
+          },
+          "evidence": {
+            "certified_prime": 17,
+            "modulus": 289,
+            "canonical_residue_interval": [
+              0,
+              288
+            ],
+            "checked_residue": 110
+          },
+          "checker_version": "wgr-witness-contract-v1",
+          "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+          "paid_check_count": 525,
+          "work": {
+            "used": 525,
+            "by_operation": {
+              "prime_candidate": 16,
+              "modular_residue": 489,
+              "prime_trial_division": 20
+            },
+            "trace_sha256": "8c92f7f53843c0f7f39915bee695f263cbbb3a655ec1adb03ce53ed2b9eaadee"
+          },
+          "certificate_sha256": "d1975833da00639d4585e00c13a880ecd963360235f9f4cfab4597cb8a950d0d"
+        }
+      },
+      "actual_arbitration": {
+        "status": "DOMINATED_CANDIDATE",
+        "action": "RETRACT_EXTREMUM_ONLY",
+        "reason": "strictly_smaller_feasible_residue",
+        "witness": {
+          "source": "ONLINE_SEARCH",
+          "search_receipt": {
+            "status": "DOMINATED_CANDIDATE",
+            "reason": "strictly_smaller_feasible_residue",
+            "proof_scope": "ORIGINAL_OBJECTIVE_FALSIFICATION",
+            "certified_value": null,
+            "witness": {
+              "p": 17,
+              "m": 110
+            },
+            "evidence": {
+              "certified_prime": 17
+            },
+            "checker_version": "wgr-witness-contract-v1",
+            "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+            "paid_check_count": 548,
+            "work": {
+              "used": 548,
+              "by_operation": {
+                "prime_candidate": 16,
+                "modular_residue": 512,
+                "prime_trial_division": 20
+              },
+              "trace_sha256": "710b06c05e3f1216861c0bf132cde58ec8f2eebe2658563c3cac758f85615b6a"
+            },
+            "certificate_sha256": "0bd57a514b37fbc525efd663a5c353f8dd2ff7346ca45007abc50617aba85388",
+            "request": {
+              "algorithm": "wgr-bounded-online-search-v1",
+              "budget": 1000,
+              "claim": {
+                "kind": "MIN",
+                "p": 17,
+                "value": 134
+              },
+              "contract_id": "wc_adbebecc53b4adb98290a70c8201f7ba5875bef6",
+              "purpose": "COUNTEREXAMPLE"
+            },
+            "prerequisite": {
+              "status": "LEAST_PRIME_CERTIFIED",
+              "contract_id": "wc_adbebecc53b4adb98290a70c8201f7ba5875bef6",
+              "prime": 17,
+              "positive_residue_witness": 179,
+              "exhausted_smaller_primes": [
+                2,
+                3,
+                5,
+                7,
+                11,
+                13
+              ],
+              "work": {
+                "used": 524,
+                "by_operation": {
+                  "prime_candidate": 16,
+                  "modular_residue": 488,
+                  "prime_trial_division": 20
+                },
+                "trace_sha256": "6b90c2373ba86fe9064c40dad27c4c504f794035868dd9595baa52dd4ea4eca6"
+              },
+              "certificate_sha256": "4b601e2b52453052dd0a5154800ca4ce838ff14dc9782a59a4842957bc9b6dd3"
+            },
+            "algorithm_sha256": "5384ab6d33899032e2152ce9f180f3d6c88f72f960e34fd2149b1e267b465cc7",
+            "witness_source": "ONLINE_SEARCH",
+            "receipt_sha256": "3558fc7d024dec76c26e1259e5e8781cca19f59d4d54fa86f88b77cfd47532db"
+          },
+          "value": {
+            "p": 17,
+            "m": 110
+          }
+        },
+        "released_value": null,
+        "certificate_sha256": "2821fed2c45e61ae9fc7b293d81573e56f884ebe78137bfccf84cb48a7529251",
+        "mathematical": {
+          "status": "DOMINATED_CANDIDATE",
+          "reason": "strictly_smaller_feasible_residue",
+          "proof_scope": "ORIGINAL_OBJECTIVE_FALSIFICATION",
+          "certified_value": null,
+          "witness": {
+            "m": 110,
+            "p": 17
+          },
+          "evidence": {
+            "certified_prime": 17
+          },
+          "checker_version": "wgr-witness-contract-v1",
+          "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+          "paid_check_count": 525,
+          "work": {
+            "used": 525,
+            "by_operation": {
+              "prime_candidate": 16,
+              "modular_residue": 489,
+              "prime_trial_division": 20
+            },
+            "trace_sha256": "8c92f7f53843c0f7f39915bee695f263cbbb3a655ec1adb03ce53ed2b9eaadee"
+          },
+          "certificate_sha256": "c89019421022ab9c8b037b08cd1e5f7cae2a4aaa2b9a72804c96bd36ba2ccc77",
+          "incumbent_feasibility": {
+            "status": "FEASIBLE_ONLY",
+            "reason": "checked_prime_and_residue_constraints",
+            "proof_scope": "FULL_ORIGINAL_CONSTRAINTS",
+            "certified_value": null,
+            "witness": {
+              "m": 134,
+              "p": 17
+            },
+            "evidence": {
+              "certified_prime": 17
+            },
+            "checker_version": "wgr-witness-contract-v1",
+            "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+            "paid_check_count": 525,
+            "work": {
+              "used": 525,
+              "by_operation": {
+                "prime_candidate": 16,
+                "modular_residue": 489,
+                "prime_trial_division": 20
+              },
+              "trace_sha256": "e961c7d55b9de7540f99cae48135df41081a0ea73e5ef832ac1bfc75413292c1"
+            },
+            "certificate_sha256": "1c24ae007d4e32e77e55c88d8aebca9a0b6d8c0a74c8481573b3dfef4f5bb3ca"
+          }
+        }
+      }
+    },
+    {
+      "case": "E14",
+      "window": "after_renewed_universal",
+      "prefix_sha256": "8aa9369209b9e66589fa4ee28da2147ce8e1cdf6680bc2b67df1d49dc82dd1ae",
+      "early_control_window": "before_observed_pair_control",
+      "template": "lcm_divisor_count_v1",
+      "observed_objects": 10,
+      "typed_objects": {
+        "FEASIBLE_CANDIDATE": 7,
+        "EXACT_ANSWER": 2,
+        "UNIVERSAL_CLAIM": 1
+      },
+      "detection_seconds": 0.7633688999994774,
+      "real_trigger": true,
+      "legal_revision": true,
+      "same_tool_direct_baseline": {
+        "status": "CERTIFIED_EXACT",
+        "reason": "exhausted_all_divisors_of_lcm",
+        "witness": null,
+        "certificate_sha256": "1b7ee1805b88d2d0cd41af20bbccafb34e209abe134a67e6d88b12a4b2df028c",
+        "proof_scope": "FULL_OBJECTIVE",
+        "paid_check_count": 245833,
+        "receipt_replayed": true
+      },
+      "source_claim": {
+        "candidate_id": "obs_7f3ac5426176f259bc064a9fa203581b95e1acf6e99dd7ccc8b795b6f0b721b2",
+        "goal_claim_type": "UNIVERSAL_CLAIM",
+        "segment": "thinking",
+        "role": "asserted_removed_pair_class",
+        "contract_id": "wc_718e81ec1052d334b131c8d7e0561fe7f21abcd3",
+        "target_id": "goal_ca09ab6cba76bfbe715a6f8aa87f60e87c73bfe304b617c94ae817f6f3a15430",
+        "question_sha256": "63c65a5773e2ab224d265919edd647c6e968b18ecc089e4fa846cd3173cf2d73",
+        "trajectory_id": "D3_E14_20261110",
+        "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "observed_count": 27182,
+        "observed_prefix_sha256": "8aa9369209b9e66589fa4ee28da2147ce8e1cdf6680bc2b67df1d49dc82dd1ae",
+        "source_span": {
+          "char_span": [
+            81855,
+            82028
+          ],
+          "token_span": [
+            27080,
+            27131
+          ],
+          "token_sha256": "256114dfdadfeea76d1f196d2dfb07f69baabb78cb90f70bd3b51a050100c83d",
+          "text": "the numbers from 16 to 30 are such that removing any two of them ensures that their multiples are not in S, and therefore, the LCM(S \\ {m1, m2}) is not divisible by m1 or m2"
+        },
+        "field_spans": {
+          "lower": {
+            "char_span": [
+              81872,
+              81874
+            ],
+            "token_span": [
+              27084,
+              27086
+            ],
+            "token_sha256": "73192a4c3f43495e435d2ac7fa8a9353380471b371c319d912b9f1d1d9663181",
+            "text": "16"
+          },
+          "upper": {
+            "char_span": [
+              81878,
+              81880
+            ],
+            "token_span": [
+              27088,
+              27090
+            ],
+            "token_sha256": "40a6539708f9d8fdc9781d35ccaf8fa580f42d7151e60a11cddf669f24f03744",
+            "text": "30"
+          }
+        },
+        "lineage": [],
+        "source_origin": "OBSERVED_CANDIDATE",
+        "assignments": {},
+        "claim": {
+          "kind": "ALL_REMOVED_PAIR_LCM_FAILS_BOTH",
+          "lower": 16,
+          "upper": 30
+        },
+        "value": null
+      },
+      "observed_point": {
+        "candidate_id": "obs_0893860f61bb58b1bd54a640b0f7dcd749e3d8bf22231af950fdda1b2cda5dc9",
+        "goal_claim_type": "FEASIBLE_CANDIDATE",
+        "segment": "thinking",
+        "role": "observed_pair_trial",
+        "contract_id": "wc_718e81ec1052d334b131c8d7e0561fe7f21abcd3",
+        "target_id": "goal_ca09ab6cba76bfbe715a6f8aa87f60e87c73bfe304b617c94ae817f6f3a15430",
+        "question_sha256": "63c65a5773e2ab224d265919edd647c6e968b18ecc089e4fa846cd3173cf2d73",
+        "trajectory_id": "D3_E14_20261110",
+        "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "observed_count": 27182,
+        "observed_prefix_sha256": "8aa9369209b9e66589fa4ee28da2147ce8e1cdf6680bc2b67df1d49dc82dd1ae",
+        "source_span": {
+          "char_span": [
+            46660,
+            46683
+          ],
+          "token_span": [
+            15412,
+            15426
+          ],
+          "token_sha256": "ddfca468e1d074e4a159d4b79e820e90e2d25074ac751ec4bb1a9d538f229149",
+          "text": "for m1 = 16 and m2 = 18"
+        },
+        "field_spans": {
+          "first": {
+            "char_span": [
+              46669,
+              46671
+            ],
+            "token_span": [
+              15417,
+              15419
+            ],
+            "token_sha256": "73192a4c3f43495e435d2ac7fa8a9353380471b371c319d912b9f1d1d9663181",
+            "text": "16"
+          },
+          "second": {
+            "char_span": [
+              46681,
+              46683
+            ],
+            "token_span": [
+              15424,
+              15426
+            ],
+            "token_sha256": "d0d12712169179d95bfef6d68e786723ef44ae4938d396dec1fbe82dc3154374",
+            "text": "18"
+          }
+        },
+        "lineage": [],
+        "source_origin": "OBSERVED_CANDIDATE",
+        "assignments": {},
+        "claim": {},
+        "value": {
+          "pair": [
+            16,
+            18
+          ]
+        }
+      },
+      "actual_arbitration": {
+        "status": "UNIVERSAL_REFUTATION",
+        "action": "RETRACT_CLAIM_ONLY",
+        "reason": "removed_member_still_divides_retained_lcm",
+        "witness": {
+          "source": "OBSERVED_CANDIDATE",
+          "candidate_id": "obs_0893860f61bb58b1bd54a640b0f7dcd749e3d8bf22231af950fdda1b2cda5dc9",
+          "value": {
+            "pair": [
+              16,
+              18
+            ]
+          }
+        },
+        "released_value": null,
+        "certificate_sha256": "8d8ef611ee0a21a73044ebab777132470ff997097426cd80749322818c131c96",
+        "mathematical": {
+          "status": "UNIVERSAL_REFUTATION",
+          "reason": "removed_member_still_divides_retained_lcm",
+          "proof_scope": "PARTIAL_CLAIM_REFUTATION",
+          "certified_value": null,
+          "witness": {
+            "pair": [
+              16,
+              18
+            ]
+          },
+          "evidence": {
+            "retained_lcm": 1164544781400,
+            "removed_members_still_dividing": [
+              18
+            ]
+          },
+          "checker_version": "wgr-witness-contract-v1",
+          "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+          "paid_check_count": 30,
+          "work": {
+            "used": 30,
+            "by_operation": {
+              "lcm_member": 28,
+              "removed_pair_divisibility": 2
+            },
+            "trace_sha256": "46ac74effac69ef4a9e43723e20280688180a081981f657a9c1e5b7def4fe3b4"
+          },
+          "certificate_sha256": "1fb63ada931ba4923229218b8843e47c3a04f28aa920b77841635a740c93c559"
+        }
+      }
+    },
+    {
+      "case": "E06",
+      "window": "last_live_before_close",
+      "prefix_sha256": "5e784b3b752d8aa9054602441a06739f282fafdb72c082df704e9c991a236dc3",
+      "early_control_window": "before_45_control",
+      "template": "greedy_coin_count_v1",
+      "observed_objects": 33,
+      "typed_objects": {
+        "UNIVERSAL_CLAIM": 1,
+        "FEASIBLE_CANDIDATE": 23,
+        "EXACT_ANSWER": 9
+      },
+      "detection_seconds": 4.789222800005518,
+      "real_trigger": true,
+      "legal_revision": true,
+      "same_tool_direct_baseline": {
+        "status": "CERTIFIED_EXACT",
+        "reason": "exhausted_all_coin_amounts",
+        "witness": null,
+        "certificate_sha256": "dfb08a8520b27324c6bd4c89f26a718741ad218505fa3ac33a466fb1126a45e7",
+        "proof_scope": "FULL_OBJECTIVE",
+        "paid_check_count": 20540,
+        "receipt_replayed": true
+      },
+      "source_claim": {
+        "candidate_id": "obs_89d5a683afabfd322eb152d0813ab6985a076d05e1ce8af9ac6d0d1b14af3c4d",
+        "goal_claim_type": "UNIVERSAL_CLAIM",
+        "segment": "thinking",
+        "role": "asserted_greedy_residue_class",
+        "contract_id": "wc_db39ea4892251aeb40005b19d4831e13e9604200",
+        "target_id": "goal_ed364c27869f940593ae8726a45c9ae1756eb073cc636fda94d7fa76f2bfffa5",
+        "question_sha256": "dac11627201ea0d253903fcee1537661ca88b83499fea9d02a7d596af79550ab",
+        "trajectory_id": "D3_E06_20261109",
+        "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "observed_count": 28506,
+        "observed_prefix_sha256": "5e784b3b752d8aa9054602441a06739f282fafdb72c082df704e9c991a236dc3",
+        "source_span": {
+          "char_span": [
+            41031,
+            41151
+          ],
+          "token_span": [
+            14941,
+            15003
+          ],
+          "token_sha256": "27092bf71e0f7cbcb5611f598c9c3010fe7f4b576d80c85136ad110773bcf727",
+          "text": "For N from 25 to 1000: for each N, if N mod 25 is in {0,1,2,3,4,10,11,12,13,14}, then it's optimal. Otherwise, it's not."
+        },
+        "field_spans": {
+          "lower": {
+            "char_span": [
+              41042,
+              41044
+            ],
+            "token_span": [
+              14945,
+              14947
+            ],
+            "token_sha256": "9d5dfc038f2c10da352f5e8e8840393fa0d4bad3128093e35316d8cf7ac15fad",
+            "text": "25"
+          },
+          "modulus": {
+            "char_span": [
+              41075,
+              41077
+            ],
+            "token_span": [
+              14962,
+              14964
+            ],
+            "token_sha256": "9d5dfc038f2c10da352f5e8e8840393fa0d4bad3128093e35316d8cf7ac15fad",
+            "text": "25"
+          },
+          "relation": {
+            "char_span": [
+              41131,
+              41151
+            ],
+            "token_span": [
+              14997,
+              15003
+            ],
+            "token_sha256": "cde16189cc5beb240269c048f62a6f310649d3f9045be6fcd862fc8708b10b74",
+            "text": "Otherwise, it's not."
+          },
+          "residues": {
+            "char_span": [
+              41085,
+              41109
+            ],
+            "token_span": [
+              14967,
+              14991
+            ],
+            "token_sha256": "492b73178cbb10c242be34728dfb9e586398644717900084971d4a531af8f469",
+            "text": "0,1,2,3,4,10,11,12,13,14"
+          },
+          "upper": {
+            "char_span": [
+              41048,
+              41052
+            ],
+            "token_span": [
+              14949,
+              14953
+            ],
+            "token_sha256": "ca72e4f00d8cbd6dea41a1159128da11c8d8a3a47650c406d6a71b112a126de1",
+            "text": "1000"
+          }
+        },
+        "lineage": [],
+        "source_origin": "OBSERVED_CANDIDATE",
+        "assignments": {},
+        "claim": {
+          "kind": "GREEDY_RESIDUE_CLASS",
+          "lower": 25,
+          "modulus": 25,
+          "relation": "IFF",
+          "residues": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "upper": 1000
+        },
+        "value": null
+      },
+      "observed_point": {
+        "candidate_id": "obs_81a0e2d623add3f2ef52bf0efd7e9427b0f3925290117c321a11614d5a497942",
+        "goal_claim_type": "FEASIBLE_CANDIDATE",
+        "segment": "thinking",
+        "role": "observed_greedy_point_trial",
+        "contract_id": "wc_db39ea4892251aeb40005b19d4831e13e9604200",
+        "target_id": "goal_ed364c27869f940593ae8726a45c9ae1756eb073cc636fda94d7fa76f2bfffa5",
+        "question_sha256": "dac11627201ea0d253903fcee1537661ca88b83499fea9d02a7d596af79550ab",
+        "trajectory_id": "D3_E06_20261109",
+        "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "observed_count": 28506,
+        "observed_prefix_sha256": "5e784b3b752d8aa9054602441a06739f282fafdb72c082df704e9c991a236dc3",
+        "source_span": {
+          "char_span": [
+            44526,
+            44541
+          ],
+          "token_span": [
+            16453,
+            16464
+          ],
+          "token_sha256": "21f787401ed7249d9c34814511c3fa5f2026dbf2376c732cb6b5d7cafbb8f397",
+          "text": "N=45: 20 → not."
+        },
+        "field_spans": {
+          "n": {
+            "char_span": [
+              44528,
+              44530
+            ],
+            "token_span": [
+              16455,
+              16457
+            ],
+            "token_sha256": "06fa2ca73c0fa7564b269d43e1658e83660968b8b4178910338a37d64d4f31ec",
+            "text": "45"
+          }
+        },
+        "lineage": [],
+        "source_origin": "OBSERVED_CANDIDATE",
+        "assignments": {},
+        "claim": {},
+        "value": {
+          "n": 45
+        }
+      },
+      "actual_arbitration": {
+        "status": "UNIVERSAL_REFUTATION",
+        "action": "RETRACT_CLAIM_ONLY",
+        "reason": "greedy_residue_claim_violated",
+        "witness": {
+          "source": "OBSERVED_CANDIDATE",
+          "candidate_id": "obs_81a0e2d623add3f2ef52bf0efd7e9427b0f3925290117c321a11614d5a497942",
+          "value": {
+            "n": 45
+          }
+        },
+        "released_value": null,
+        "certificate_sha256": "04d6a67cc655777413cc579b0f2bf2a77a9625985c1d917caf31e7ef516509b4",
+        "mathematical": {
+          "status": "UNIVERSAL_REFUTATION",
+          "reason": "greedy_residue_claim_violated",
+          "proof_scope": "PARTIAL_CLAIM_REFUTATION",
+          "certified_value": null,
+          "witness": {
+            "n": 45
+          },
+          "evidence": {
+            "n": 45,
+            "greedy_coins": 3,
+            "minimum_coins": 3,
+            "optimal_counts_by_denomination": [
+              0,
+              2,
+              1
+            ],
+            "in_claimed_residue_class": false
+          },
+          "checker_version": "wgr-witness-contract-v1",
+          "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+          "paid_check_count": 2,
+          "work": {
+            "used": 2,
+            "by_operation": {
+              "coin_allocation": 2
+            },
+            "trace_sha256": "4328cc5efcb9f527c54244fbd5ca4a01a489841536bed6c5268497869f7f4940"
+          },
+          "certificate_sha256": "49d7ff23960b251fce6dd6fa57706535a9cbd38f985c3eabd793007f1cafc2d8"
+        }
+      }
+    }
+  ],
+  "controls": [
+    {
+      "case": "E12",
+      "control": "wrong_objective_contract",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E12",
+      "control": "missing_original_statement",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E12",
+      "control": "future_claim_before_original_parameters",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E12",
+      "control": "offline_certificate_cannot_revise",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E12",
+      "control": "wrong_sequence_parameter",
+      "actual": "INVALID_CANDIDATE",
+      "expected": "INVALID_CANDIDATE",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E12",
+      "control": "incomplete_sequence_parameters",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E15",
+      "control": "wrong_objective_contract",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E15",
+      "control": "missing_original_statement",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E15",
+      "control": "future_larger_candidate",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E15",
+      "control": "known_larger_number_is_not_a_licensed_offline_input",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E15",
+      "control": "larger_but_digit_rule_invalid",
+      "actual": "INVALID_COUNTEREXAMPLE",
+      "expected": "INVALID_COUNTEREXAMPLE",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E15",
+      "control": "wrong_extremum_direction",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "P02",
+      "control": "wrong_objective_contract",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "P02",
+      "control": "missing_original_statement",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "P02",
+      "control": "bounded_search_exhaustion",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "P02",
+      "control": "explicit_offline_origin",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "P02",
+      "control": "tampered_search_result",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "P02",
+      "control": "wrong_prime_domain",
+      "actual": "INVALID_COUNTEREXAMPLE",
+      "expected": "INVALID_COUNTEREXAMPLE",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "P02",
+      "control": "missing_least_prime_proof",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E14",
+      "control": "wrong_objective_contract",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E14",
+      "control": "missing_original_statement",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E14",
+      "control": "out_of_domain_point",
+      "actual": "INVALID_COUNTEREXAMPLE",
+      "expected": "INVALID_COUNTEREXAMPLE",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E14",
+      "control": "pseudo_counterexample_satisfies_claim",
+      "actual": "INVALID_COUNTEREXAMPLE",
+      "expected": "INVALID_COUNTEREXAMPLE",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E14",
+      "control": "future_point_source",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E06",
+      "control": "wrong_objective_contract",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E06",
+      "control": "missing_original_statement",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E06",
+      "control": "out_of_domain_point",
+      "actual": "INVALID_COUNTEREXAMPLE",
+      "expected": "INVALID_COUNTEREXAMPLE",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E06",
+      "control": "pseudo_counterexample_satisfies_claim",
+      "actual": "INVALID_COUNTEREXAMPLE",
+      "expected": "INVALID_COUNTEREXAMPLE",
+      "action": "NONE",
+      "passed": true
+    },
+    {
+      "case": "E06",
+      "control": "future_point_source",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "action": "NONE",
+      "passed": true
+    }
+  ],
+  "additional_GPU_seconds": 0,
+  "source_sha256": {
+    "candidate_archive.py": "b3a358f0db7fb71af410e9a3bc0880e2845911241a25823c7d8e2cbdedbd0928",
+    "goal_claim_detector.py": "cb49ea8eb93e7c578aa7bfce2ca7e571d491da42839d7c473c4344af6852647c",
+    "witness_contract.py": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+    "witness_verifier.py": "fb73aac0947b944df0f0870a83ec09a3369646e8dcdbb260ddbe03bde51c4ad4",
+    "bounded_witness_search.py": "5384ab6d33899032e2152ce9f180f3d6c88f72f960e34fd2149b1e267b465cc7",
+    "development_worker.py": "9f41f7411ffe713f23cc0bb7dec82e098568ddef3895f469e366c092fa7ba6c9",
+    "prepare_checkpoints.py": "0551fe75999b2f32814196a594e87ca2053b5513a1ac0948a248a495514fe49f"
+  }
+}

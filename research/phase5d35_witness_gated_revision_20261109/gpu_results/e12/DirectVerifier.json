@@ -1,0 +1,91 @@
+{
+  "status": "COMPLETE",
+  "arm": "DirectVerifier",
+  "delivery_mode": "direct_tool",
+  "delivered_value": 61,
+  "final_response": "\\boxed{61}",
+  "native_generation_used": false,
+  "natural_EOS": null,
+  "search": {
+    "status": "CERTIFIED_EXACT",
+    "reason": "unique_sequence_parameters_and_target",
+    "proof_scope": "FULL_OBJECTIVE",
+    "certified_value": 61,
+    "witness": {
+      "a1": {
+        "op": "rat",
+        "num": 1,
+        "den": 2
+      },
+      "d": 5,
+      "b1": {
+        "op": "rat",
+        "num": 1,
+        "den": 2
+      },
+      "r": -3
+    },
+    "evidence": {
+      "constraints": [
+        {
+          "index": 1,
+          "expected": 1,
+          "actual": 1
+        },
+        {
+          "index": 2,
+          "expected": 4,
+          "actual": 4
+        },
+        {
+          "index": 3,
+          "expected": 15,
+          "actual": 15
+        },
+        {
+          "index": 4,
+          "expected": 2,
+          "actual": 2
+        }
+      ],
+      "uniqueness": {
+        "first_second_difference": 8,
+        "second_second_difference": -24,
+        "rule": "nonzero_second_difference_fixes_common_ratio"
+      }
+    },
+    "checker_version": "wgr-witness-contract-v1",
+    "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+    "paid_check_count": 9,
+    "work": {
+      "used": 9,
+      "by_operation": {
+        "sequence_second_difference": 2,
+        "sequence_unique_parameters": 2,
+        "sequence_constraint": 4,
+        "sequence_target": 1
+      },
+      "trace_sha256": "70ae39ac412a9264421ed15ec58cfb85c5b85890a3e13598ab7a61e1998e1a30"
+    },
+    "certificate_sha256": "c9d3d28291986e02a7ed8b8760a7d787168ce7e22c1acce478c8cda2bbd1f350",
+    "request": {
+      "algorithm": "wgr-bounded-online-search-v1",
+      "budget": 20000,
+      "claim": null,
+      "contract_id": "wc_a123f4904e51f447de4f5eedb5396e1dde5ea6c2",
+      "purpose": "SOLVE"
+    },
+    "prerequisite": null,
+    "algorithm_sha256": "5384ab6d33899032e2152ce9f180f3d6c88f72f960e34fd2149b1e267b465cc7",
+    "witness_source": "ONLINE_SEARCH",
+    "receipt_sha256": "f8c715cb05b7f479976173f8ba6986907e99c553bea45caf95f17ccfa9454343"
+  },
+  "independent_search_replay_passed": true,
+  "wall_seconds_including_replay": 0.0012592505663633347,
+  "tool_budget": 20000,
+  "paid_work": {
+    "forward_calls": 0,
+    "forward_input_tokens": 0,
+    "attention_pairs": 0
+  }
+}

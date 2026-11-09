@@ -9,7 +9,8 @@
 - [Phase 1–5 总索引](docs/phases/INDEX_ZH.md)
 - [当前研究目标](docs/next_phase/CURRENT_RESEARCH_GOAL_20261105_ZH.md)
 - [最新建议审查与下一轮公平对照](research/repository_phase_plan_20261106/ADVISOR_REVIEW_20261106_ZH.md)
-- [最新收尾与下一步判断](research/phase5d25_constraint_revision_20261109/D3_CLOSEOUT_ZH.md)
+- [Phase 5-D3.5 见证门控修订进度](research/phase5d35_witness_gated_revision_20261109/RUN_STATUS_ZH.md)
+- [Phase 5-D3 收尾与下一步判断](research/phase5d25_constraint_revision_20261109/D3_CLOSEOUT_ZH.md)
 - [Phase5-D2 隔离反思与双前沿收尾](research/phase5d2_quarantined_rebase_20261107/D2_CLOSEOUT_ZH.md)
 - [Phase5-D 第一批设计重构、D0 与原生 D1](research/phase5d_scope_rebase_20261106/STAGE1_CLOSEOUT_ZH.md)
 - [强基线公平性与新题即时/大规模验证](research/phase5d_scope_rebase_20261106/FAIRNESS_AND_FRESH_VALIDATION_ZH.md)
@@ -32,6 +33,7 @@
 | [Phase 5-D第一批](docs/phases/Phase5D_方法重构与原生接口准入_ZH.md) | scope/完整支持设计、D0审计、CPU内核与原生D1准入 | D0/D1完整；8EOS/0cap，同调度参考8cp通过；自然修复收益未测 |
 | [Phase 5-D2](research/phase5d2_quarantined_rebase_20261107/D2_CLOSEOUT_ZH.md) | 受限核验、隔离反思、双前沿重建、自然覆盖与同状态配对 | 48/48 EOS，四个 UNKNOWN 对照通过，修复准入 0/4 |
 | [Phase 5-D2.5 与 D3](research/phase5d25_constraint_revision_20261109/D3_CLOSEOUT_ZH.md) | 类型化数学核验、旁路审计、历史回退对照与新题原生验证 | 4/4 实机一致性通过，32 条正式轨迹全部自然 EOS，正式修复准入 0 |
+| [Phase 5-D3.5](research/phase5d35_witness_gated_revision_20261109/RUN_STATUS_ZH.md) | 有界见证、终局一致性保护、同证据回退 | 离线开发和 E12 实机已复核，E15 在跑 |
 
 每个Phase统一记录：问题、输入与协议、实际动作、数据结论、失败与猜想、下一门槛、证据路径。后续工作继续新增Phase或阶段内子报告，不改写已冻结的结果。
 
@@ -90,6 +92,7 @@ research/phase5b_boundary_20261106/   自然诊断、建议取舍、后台投影
 research/phase5c_goal_contract_20261106/ 32题七条件完整终局读出、统一评分、阶段收尾
 research/phase5d_scope_rebase_20261106/ 方法重构、D0审计、支持内核、原生接口与后续公平验证
 research/phase5d25_constraint_revision_20261109/ D2.5 与 D3 源码、完整运行、评分和独立复核
+research/phase5d35_witness_gated_revision_20261109/ D3.5 协议、见证内核、开发轨迹及实机审计
 scripts/ reason_transition/ tests/     原研究实现与检查
 experiments/radar20261013/             后续历史路线，当前冻结
 data/ results/ provenance/ recovery/   历史输入、输出和恢复证据

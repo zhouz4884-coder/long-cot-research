@@ -1,0 +1,288 @@
+{
+  "status": "PASS_CURRENT_BYTES_WITH_PREFLIGHT_QUALIFICATIONS",
+  "offline_audit_sha256": "8e4bc105f4aef7d944511f0a5f05d53f04781a5a9d7ecc505bd4a9c1a8c0224e",
+  "runtime_source_sha256": {
+    "candidate_archive.py": "b3a358f0db7fb71af410e9a3bc0880e2845911241a25823c7d8e2cbdedbd0928",
+    "goal_claim_detector.py": "cb49ea8eb93e7c578aa7bfce2ca7e571d491da42839d7c473c4344af6852647c",
+    "witness_contract.py": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+    "witness_verifier.py": "fb73aac0947b944df0f0870a83ec09a3369646e8dcdbb260ddbe03bde51c4ad4",
+    "bounded_witness_search.py": "5384ab6d33899032e2152ce9f180f3d6c88f72f960e34fd2149b1e267b465cc7",
+    "development_worker.py": "9f41f7411ffe713f23cc0bb7dec82e098568ddef3895f469e366c092fa7ba6c9",
+    "prepare_checkpoints.py": "0551fe75999b2f32814196a594e87ca2053b5513a1ac0948a248a495514fe49f"
+  },
+  "verified_action_cases": 5,
+  "authorities": {
+    "E12": {
+      "prior_source": {
+        "type": "EXACT_ANSWER",
+        "role": "explicit_answer",
+        "span": {
+          "char_span": [
+            8745,
+            8767
+          ],
+          "token_span": [
+            3839,
+            3848
+          ],
+          "token_sha256": "68c0a926123a29ac3772a5dcfec371ae41459c96520a7230cf9fd24d0a060e06",
+          "text": " So, the answer is 61."
+        },
+        "source_origin": "OBSERVED_CANDIDATE",
+        "candidate_id": "obs_9f83c98f5cfb68e33c8f29fb9da97f34d23013bce243d1a2fa4ed03bcbe26b3e"
+      },
+      "certified_value": 61,
+      "historical_draft_source": {
+        "type": "FINAL_ANSWER_REVISION",
+        "role": "different_explicit_final_value",
+        "span": {
+          "char_span": [
+            12874,
+            12884
+          ],
+          "token_span": [
+            5905,
+            5911
+          ],
+          "token_sha256": "523497065b4cba0ff0800dca89371aeb345f1e1f77961d14618cb1368c0e5397",
+          "text": "\\boxed{45}"
+        },
+        "source_origin": "OBSERVED_CANDIDATE",
+        "candidate_id": "obs_2c998b65915f49abd49626cc2d0b50b7965eccb2d83825beb0dbb9757f48c9bf"
+      },
+      "live_cut_action": "PERMIT_EXACT_DELIVERY",
+      "post_draft_action": "VETO_DRAFT_AND_DELIVER_CERTIFIED"
+    },
+    "E15": {
+      "claim_source": {
+        "type": "MAXIMALITY_CLAIM",
+        "role": "provisional_cross_length_maximum",
+        "span": {
+          "char_span": [
+            66193,
+            66236
+          ],
+          "token_span": [
+            24457,
+            24473
+          ],
+          "token_sha256": "42158d3ddab0679c4858a5b70812c042dca79f5d46de69735788e46b2d678528",
+          "text": "\n\nTherefore, I think 303369 is the maximum."
+        },
+        "source_origin": "OBSERVED_CANDIDATE",
+        "candidate_id": "obs_6ed6b1e6d963bdceb38ea551b85294fb23e69c12a2e96f09dc49a8e9ca30cd72"
+      },
+      "witness_source": {
+        "type": "FEASIBLE_CANDIDATE",
+        "role": "constructed_candidate",
+        "span": {
+          "char_span": [
+            53584,
+            53630
+          ],
+          "token_span": [
+            19873,
+            19889
+          ],
+          "token_sha256": "2cc0a690376a927201d2a7408a0831a6384542b480ef8b3e8d802fa1234eb305",
+          "text": " Therefore, the seven-digit number is 1011235."
+        },
+        "source_origin": "OBSERVED_CANDIDATE",
+        "candidate_id": "obs_446e9ade9b0cd85400cf1848583984f960a11ab21e3a8eced5460ddc57f1793e"
+      },
+      "action": "RETRACT_EXTREMUM_ONLY",
+      "scope_cut": 19747,
+      "generic_cut": 24454,
+      "common_bridge_tokens": 84,
+      "common_bridge_sha256": "c944fc36e0d8e1e3862bc41e4d01d6e39bfa31616e00a6ec67109b782c840f32",
+      "archived_candidate_ids_equal_between_CPU_and_runtime_tokenizer_id": false
+    },
+    "P02": {
+      "claim_source": {
+        "type": "MINIMALITY_CLAIM",
+        "role": "asserted_minimum",
+        "span": {
+          "char_span": [
+            17236,
+            17305
+          ],
+          "token_span": [
+            8106,
+            8124
+          ],
+          "token_sha256": "095f563a8aed3da4145d8ffad2b55903f7339868e27c9aff623ede056a47842d",
+          "text": "the minimal positive integer is the smaller of the two, which is 134."
+        },
+        "source_origin": "OBSERVED_CANDIDATE",
+        "candidate_id": "obs_139035f04700c9e2dede22fdde5a60dfe2da5c3be8e10142c77d52face0b098c"
+      },
+      "minimum_action": "RETRACT_EXTREMUM_ONLY",
+      "omitted_set_claim_source": {
+        "type": "COMPLETE_SOLUTIONS_CLAIM",
+        "role": "asserted_complete_residue_roots",
+        "span": {
+          "char_span": [
+            14512,
+            14557
+          ],
+          "token_span": [
+            7047,
+            7067
+          ],
+          "token_sha256": "06ce2ff0448d8fe1921d68631d7d7a3015b12cc617204694449f69b6e4cdd19f",
+          "text": "there are two solutions mod 17²: 155 and 134."
+        },
+        "source_origin": "OBSERVED_CANDIDATE",
+        "candidate_id": "obs_50d860759d41b2ab7f3cc26402506658815ae348fb5b6522cbd51cc3cfdf6678"
+      },
+      "witness_origin": "ONLINE_SEARCH",
+      "minimum_search_checks": 548,
+      "completeness_search_checks": 635
+    },
+    "E14": {
+      "claim_source": {
+        "type": "UNIVERSAL_CLAIM",
+        "role": "asserted_removed_pair_class",
+        "span": {
+          "char_span": [
+            81855,
+            82028
+          ],
+          "token_span": [
+            27080,
+            27131
+          ],
+          "token_sha256": "256114dfdadfeea76d1f196d2dfb07f69baabb78cb90f70bd3b51a050100c83d",
+          "text": "the numbers from 16 to 30 are such that removing any two of them ensures that their multiples are not in S, and therefore, the LCM(S \\ {m1, m2}) is not divisible by m1 or m2"
+        },
+        "source_origin": "OBSERVED_CANDIDATE",
+        "candidate_id": "obs_7f3ac5426176f259bc064a9fa203581b95e1acf6e99dd7ccc8b795b6f0b721b2"
+      },
+      "witness_source": {
+        "type": "FEASIBLE_CANDIDATE",
+        "role": "observed_pair_trial",
+        "span": {
+          "char_span": [
+            46660,
+            46683
+          ],
+          "token_span": [
+            15412,
+            15426
+          ],
+          "token_sha256": "ddfca468e1d074e4a159d4b79e820e90e2d25074ac751ec4bb1a9d538f229149",
+          "text": "for m1 = 16 and m2 = 18"
+        },
+        "source_origin": "OBSERVED_CANDIDATE",
+        "candidate_id": "obs_0893860f61bb58b1bd54a640b0f7dcd749e3d8bf22231af950fdda1b2cda5dc9"
+      },
+      "action": "RETRACT_CLAIM_ONLY"
+    },
+    "E06": {
+      "claim_source": {
+        "type": "UNIVERSAL_CLAIM",
+        "role": "asserted_greedy_residue_class",
+        "span": {
+          "char_span": [
+            41031,
+            41151
+          ],
+          "token_span": [
+            14941,
+            15003
+          ],
+          "token_sha256": "27092bf71e0f7cbcb5611f598c9c3010fe7f4b576d80c85136ad110773bcf727",
+          "text": "For N from 25 to 1000: for each N, if N mod 25 is in {0,1,2,3,4,10,11,12,13,14}, then it's optimal. Otherwise, it's not."
+        },
+        "source_origin": "OBSERVED_CANDIDATE",
+        "candidate_id": "obs_89d5a683afabfd322eb152d0813ab6985a076d05e1ce8af9ac6d0d1b14af3c4d"
+      },
+      "witness_source": {
+        "type": "FEASIBLE_CANDIDATE",
+        "role": "observed_greedy_point_trial",
+        "span": {
+          "char_span": [
+            44526,
+            44541
+          ],
+          "token_span": [
+            16453,
+            16464
+          ],
+          "token_sha256": "21f787401ed7249d9c34814511c3fa5f2026dbf2376c732cb6b5d7cafbb8f397",
+          "text": "N=45: 20 → not."
+        },
+        "source_origin": "OBSERVED_CANDIDATE",
+        "candidate_id": "obs_81a0e2d623add3f2ef52bf0efd7e9427b0f3925290117c321a11614d5a497942"
+      },
+      "action": "RETRACT_CLAIM_ONLY"
+    }
+  },
+  "observed_early_controls": {
+    "E12": {
+      "observed_count": 2654,
+      "typed_objects": 0,
+      "observed_witness_actions": []
+    },
+    "E15": {
+      "observed_count": 19609,
+      "typed_objects": 7,
+      "observed_witness_actions": []
+    },
+    "P02": {
+      "observed_count": 6886,
+      "typed_objects": 0,
+      "observed_witness_actions": []
+    },
+    "E14": {
+      "observed_count": 11137,
+      "typed_objects": 2,
+      "observed_witness_actions": []
+    },
+    "E06": {
+      "observed_count": 11793,
+      "typed_objects": 0,
+      "observed_witness_actions": []
+    }
+  },
+  "prefix_only_packet_verification": {
+    "E12": {
+      "packet_file": "prepared/e12_checkpoint.json",
+      "packet_sha256": "3d2475e67b435c580841002135c21bf4613e0ad66e51440a32c9b356c0336b07",
+      "source_sha256": "7e49a6b442143ee7b43da32d04bc170c02c51a338dfd64c4f9e050b4d17474ff",
+      "observed_tokens": 3848,
+      "prefix_sha256": "435c58882f44898840b275c69c34a7c7ac5068312df3ac205acf2eabc8c4f7c9",
+      "rng_sha256": "99aaea7ebc24e67ed168a2d98650c63303ffcc23e2b13f342df75f2833e8cfd3",
+      "step": 152
+    },
+    "E15": {
+      "packet_file": "prepared/e15_checkpoint.json",
+      "packet_sha256": "76a20dd3821f2f8b3560a3bed2da9dc0062edadb4fe43f033982aa1256f09be0",
+      "source_sha256": "f57d658638a95d86a9643d6a308baf1cb8f57c3993d0b18af30fff04d3b88b7b",
+      "observed_tokens": 24532,
+      "prefix_sha256": "f68c69ec382b4b4439938b3cdf5391b3f48e6baa1a32750e40a0fc1370ec68eb",
+      "rng_sha256": "32a1a4995ce94026503fabe9c92db5fe2682455b01dfce4301ee4fb7927aba3c",
+      "step": 464
+    }
+  },
+  "historical_compiler_coverage": {
+    "matched": [
+      "D3_E06",
+      "D3_E12",
+      "D3_E14",
+      "D3_E15"
+    ],
+    "denominator": 16,
+    "conditional_only": true,
+    "new_heldout_generation_or_score_observed": false
+  },
+  "launch_integrity_note": "Current prepared packet bytes match original raw sources. The then-audited launch gate hashes runtime source files against offline audit, but the packet is first bound during remote freeze; bind the expected packet SHA prospectively.",
+  "cost_and_method_notes": [
+    "Scope and Generic rewind use the same saved late-checkpoint RNG, while only the original full-cut state can be compared for historical replay identity.",
+    "E15 edited arms share byte-identical checked witness text; observed historical source and legal cuts differ. This isolates cut-policy differences from cue content, not an independent carry ablation.",
+    "Sequential shared replay is paid once. Per-arm replay-through-cut is a standalone equivalent and is not added again to the actual total. Common planning/checking and model load are outside per-arm times.",
+    "E12 verified commit is an after-EOS delivery arbitration; full NativeContinue draft work remains paid.",
+    "P02 replay validates new bounded search and recomputation. It does not consume the separate retrospective oracle file."
+  ],
+  "new_GPU_seconds": 0
+}

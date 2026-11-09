@@ -1,0 +1,311 @@
+{
+  "status": "PASS",
+  "retrieval_manifest_sha256": "9b1905781e5adc8da8dd2305a6aa57428ab699e38185c3c05dc548f9920310a5",
+  "verified_retrieval_files": 33,
+  "v1_scores_sha256": "f4adc253b1afa39556cf37d23d68cfe2940dfd6ae9f3a103a71bbd2ee21998ec",
+  "v2_replay_sha256": "a6aa7f6d69bed3afa0d11a6d34507439771772b571cbe6751543182a40e29110",
+  "v2_freeze_sha256": "02934dc7840b087f1315f680587464fc232c6d74c6186982136eae70b869d64b",
+  "calibration_only_reference_sha256": "cb06a100f0bf1e9bbce0d6b374755b9028e60a4a8a5b4440301a6abab9043701",
+  "precheck_problems": 8,
+  "raw_outputs_EOS": 7,
+  "actual_context_caps": 1,
+  "v1_official_correct": 4,
+  "v2_posthoc_correct": 6,
+  "readout_recoveries_only": [
+    "D3_P01",
+    "D3_P04"
+  ],
+  "exact_chain_source_verification": {
+    "D3_P01": {
+      "answer": 721,
+      "r_squared": "657/64",
+      "exact_method": "Positive constrained extrema have two equal sides; x=2 gives max perimeter 39/4."
+    },
+    "D3_P04": {
+      "answer": 62,
+      "intersection_x": "(sqrt(19)-sqrt(3))/2",
+      "intersection_y": "(3-sqrt(57))/2",
+      "exact_method": "Inverse rotation maps to (-x,y) on the original parabola."
+    }
+  },
+  "P02_completeness_oracle": {
+    "least_prime": 17,
+    "all_residues_mod_p_squared": {
+      "2": [],
+      "3": [],
+      "5": [],
+      "7": [],
+      "11": [],
+      "13": [],
+      "17": [
+        110,
+        134,
+        155,
+        179
+      ]
+    },
+    "mod17_roots": [
+      2,
+      8,
+      9,
+      15
+    ],
+    "reported_feasible_but_nonminimal": 134,
+    "minimum_positive": 110,
+    "observed_claim_token_span": [
+      8046,
+      8124
+    ],
+    "later_checkpoint_prefix_sha256": "6492a91eac02fe01c70671324cbff2d070c83a0febf5244f44b5d150f2dae43a",
+    "repaired_model_run_observed": false
+  },
+  "P08_context_stop": {
+    "prompt_tokens": 110,
+    "generated_tokens": 40850,
+    "actual_capacity": 40960,
+    "close_think_present": false,
+    "eos_present": false
+  },
+  "emitted_tokens": 111667,
+  "paid_work": {
+    "forward_calls": 111667,
+    "forward_input_tokens": 112401,
+    "attention_pairs": 1326397772
+  },
+  "sum_case_seconds": 5890.687632928602,
+  "sum_worker_seconds": 5938.861791206524,
+  "sum_worker_GPU_minutes": 98.98102985344207,
+  "worker_elapsed_seconds": {
+    "0": 2081.7276008352637,
+    "1": 3857.13419037126
+  },
+  "staggered_launcher_wall_seconds": 4914.628482737578,
+  "rows": [
+    {
+      "case_id": "D3_P01",
+      "worker": 0,
+      "raw_result_sha256": "fd300376d800f170a3a827f95f0e07149e3018f517ca78cde1dcebda08cef91e",
+      "prompt_tokens": 120,
+      "generated_tokens": 15884,
+      "context_capacity": 40960,
+      "context_used": 16004,
+      "EOS": true,
+      "think_closed": true,
+      "stop_reason": "EOS",
+      "v1_status": "ambiguous",
+      "v2_status": "ok",
+      "v2_components": [
+        "721"
+      ],
+      "v1_correct": false,
+      "v2_correct": true,
+      "wall_seconds": 840.300515637733,
+      "paid_work": {
+        "forward_calls": 15884,
+        "forward_input_tokens": 16003,
+        "attention_pairs": 128056006
+      }
+    },
+    {
+      "case_id": "D3_P02",
+      "worker": 1,
+      "raw_result_sha256": "59b7ab5d0ef00858e41462974000b80ae8aa013c4eb1c76cefa2f85502141842",
+      "prompt_tokens": 88,
+      "generated_tokens": 11408,
+      "context_capacity": 40960,
+      "context_used": 11496,
+      "EOS": true,
+      "think_closed": true,
+      "stop_reason": "EOS",
+      "v1_status": "ok",
+      "v2_status": "ok",
+      "v2_components": [
+        "134"
+      ],
+      "v1_correct": false,
+      "v2_correct": false,
+      "wall_seconds": 600.519865998067,
+      "paid_work": {
+        "forward_calls": 11408,
+        "forward_input_tokens": 11495,
+        "attention_pairs": 66073260
+      }
+    },
+    {
+      "case_id": "D3_P03",
+      "worker": 0,
+      "raw_result_sha256": "b0e83b03f70c8081504a927011c14101e25eb567a76d3504812b898cb2e58a46",
+      "prompt_tokens": 96,
+      "generated_tokens": 15685,
+      "context_capacity": 40960,
+      "context_used": 15781,
+      "EOS": true,
+      "think_closed": true,
+      "stop_reason": "EOS",
+      "v1_status": "ok",
+      "v2_status": "ok",
+      "v2_components": [
+        "279"
+      ],
+      "v1_correct": true,
+      "v2_correct": true,
+      "wall_seconds": 835.2076811129227,
+      "paid_work": {
+        "forward_calls": 15685,
+        "forward_input_tokens": 15780,
+        "attention_pairs": 124512090
+      }
+    },
+    {
+      "case_id": "D3_P04",
+      "worker": 1,
+      "raw_result_sha256": "d5a0430fd05d190f9173fa5e54d2554fd6ce36ccccec56fec6533a3e0afb53f0",
+      "prompt_tokens": 124,
+      "generated_tokens": 17116,
+      "context_capacity": 40960,
+      "context_used": 17240,
+      "EOS": true,
+      "think_closed": true,
+      "stop_reason": "EOS",
+      "v1_status": "ambiguous",
+      "v2_status": "ok",
+      "v2_components": [
+        "62"
+      ],
+      "v1_correct": false,
+      "v2_correct": true,
+      "wall_seconds": 899.8693880122155,
+      "paid_work": {
+        "forward_calls": 17116,
+        "forward_input_tokens": 17239,
+        "attention_pairs": 148600180
+      }
+    },
+    {
+      "case_id": "D3_P05",
+      "worker": 0,
+      "raw_result_sha256": "4d1e141b1053b84c9b908832b22be853d513b536c1838c3eda5c0991ba375c97",
+      "prompt_tokens": 56,
+      "generated_tokens": 2954,
+      "context_capacity": 40960,
+      "context_used": 3010,
+      "EOS": true,
+      "think_closed": true,
+      "stop_reason": "EOS",
+      "v1_status": "ok",
+      "v2_status": "ok",
+      "v2_components": [
+        "9"
+      ],
+      "v1_correct": true,
+      "v2_correct": true,
+      "wall_seconds": 157.01078689657152,
+      "paid_work": {
+        "forward_calls": 2954,
+        "forward_input_tokens": 3009,
+        "attention_pairs": 4528545
+      }
+    },
+    {
+      "case_id": "D3_P06",
+      "worker": 1,
+      "raw_result_sha256": "adca43a087937cdcb71dbe5d36e97fb893cf63ddb593bf58a3ad47a71a401b5a",
+      "prompt_tokens": 89,
+      "generated_tokens": 3527,
+      "context_capacity": 40960,
+      "context_used": 3616,
+      "EOS": true,
+      "think_closed": true,
+      "stop_reason": "EOS",
+      "v1_status": "ok",
+      "v2_status": "ok",
+      "v2_components": [
+        "101"
+      ],
+      "v1_correct": true,
+      "v2_correct": true,
+      "wall_seconds": 185.11127359606326,
+      "paid_work": {
+        "forward_calls": 3527,
+        "forward_input_tokens": 3615,
+        "attention_pairs": 6535920
+      }
+    },
+    {
+      "case_id": "D3_P07",
+      "worker": 0,
+      "raw_result_sha256": "ebfdf44b6fdb43e664e65ec6380ffcdeb9b72ee42e8eab6fa6e9445a4b7e1069",
+      "prompt_tokens": 59,
+      "generated_tokens": 4243,
+      "context_capacity": 40960,
+      "context_used": 4302,
+      "EOS": true,
+      "think_closed": true,
+      "stop_reason": "EOS",
+      "v1_status": "ok",
+      "v2_status": "ok",
+      "v2_components": [
+        "70"
+      ],
+      "v1_correct": true,
+      "v2_correct": true,
+      "wall_seconds": 225.37606968916953,
+      "paid_work": {
+        "forward_calls": 4243,
+        "forward_input_tokens": 4301,
+        "attention_pairs": 9251451
+      }
+    },
+    {
+      "case_id": "D3_P08",
+      "worker": 1,
+      "raw_result_sha256": "689d712c7305051044e6ed7890488500231368df7d5148fc61f054d032314971",
+      "prompt_tokens": 110,
+      "generated_tokens": 40850,
+      "context_capacity": 40960,
+      "context_used": 40960,
+      "EOS": false,
+      "think_closed": false,
+      "stop_reason": "CONTEXT_CAP",
+      "v1_status": "uncommitted",
+      "v2_status": "uncommitted",
+      "v2_components": null,
+      "v1_correct": false,
+      "v2_correct": false,
+      "wall_seconds": 2147.29205198586,
+      "paid_work": {
+        "forward_calls": 40850,
+        "forward_input_tokens": 40959,
+        "attention_pairs": 838840320
+      }
+    }
+  ],
+  "formal_pool": {
+    "same_visible_sha256": "54dd3be09ec7b952e4ca6ade399eebba9ac58cff4b61bfc4b8e0e083bad619fc",
+    "same_question_ids_and_order": true,
+    "seed_slots": [
+      20261109,
+      20261110
+    ],
+    "planned_trajectories": 32,
+    "bank_native_freeze_sha256": "767f3a6bbe95d10f9585950959c55a81a1686d837544897dc847f70242e59efe",
+    "launch_receipt_sha256": "0ffb15db9d50ed16097fee4caec0e19b10c37164d866a6da6e458b3d46995f97",
+    "launch_utc": "2026-11-09T06:13:17.360800+00:00",
+    "formal_eval_read_by_independent_audit": false,
+    "expected_eval_sha256_metadata_only": "58c81f05b5ede1dbc4746ea4148ed48e91db0a31d19e165559dd419299e934a3"
+  },
+  "workload_projection": {
+    "basis": "Four times 8-case calibration with equal stratum proportions and unchanged EOS/actual-context policy. Seed lengths can differ and small calibration includes a context cap.",
+    "calibration_effective_generated_tokens_per_GPU_second": 18.956530537417727,
+    "projected_formal_generated_tokens": 446668,
+    "projected_formal_GPU_hours": 6.54520848103178,
+    "projected_balanced_two_GPU_wall_hours": 3.27260424051589,
+    "rough_native_wall_planning_range_hours": [
+      3,
+      5
+    ],
+    "formal_context_only_upper_bound_generated_tokens": 1307112,
+    "range_scope": "Native bank only; subsequent action-eligible pairing and scoring are additional, and duration is not a guarantee."
+  },
+  "scope": "Verified CPU extraction of both frozen versions on raw final responses. Scalar integers were independently graded using only calibration references and exact source mathematics. Formal eval bytes were never opened."
+}

@@ -1,0 +1,40 @@
+{
+  "status": "CPU_VERIFIED_SCORER_FROZEN",
+  "created_utc": "2026-11-09T04:30:59.656140+00:00",
+  "version": "phase5d25_complete_answer_v1",
+  "source_sha256": "ed5f67d54633b2d83ff0f67fee3a96ba95ac6e194db69f91f6f54c7f470b63a1",
+  "tests_sha256": "c5f5ba4e2e2dfcfb14463d5d03311b9bc7773e1cbfd1cc064c48395ce0f5bc43",
+  "backend_versions_in_cpu_replay": {
+    "math-verify": "0.9.0",
+    "latex2sympy2_extended": "1.11.0",
+    "sympy": "1.14.0",
+    "antlr4-python3-runtime": "4.13.2"
+  },
+  "tests": {
+    "command": "python -m unittest -v test_complete_answer",
+    "passed": 21,
+    "failed": 0,
+    "skipped": 0,
+    "mathematical_type_subcases": 29,
+    "log": "test_conflicting_repeats_do_not_choose_a_winner (test_complete_answer.ExtractionTest.test_conflicting_repeats_do_not_choose_a_winner) ... ok\ntest_different_gold_cannot_change_selection (test_complete_answer.ExtractionTest.test_different_gold_cannot_change_selection) ... ok\ntest_disjoint_midtrace_or_incomplete_payload_never_delivers (test_complete_answer.ExtractionTest.test_disjoint_midtrace_or_incomplete_payload_never_delivers) ... ok\ntest_equivalent_rational_repetitions_and_equality_chain (test_complete_answer.ExtractionTest.test_equivalent_rational_repetitions_and_equality_chain) ... ok\ntest_explicit_inline_answer_after_heading (test_complete_answer.ExtractionTest.test_explicit_inline_answer_after_heading) ... ok\ntest_explicit_solution_set_and_or (test_complete_answer.ExtractionTest.test_explicit_solution_set_and_or) ... ok\ntest_factorial_and_percent_remain_math (test_complete_answer.ExtractionTest.test_factorial_and_percent_remain_math) ... ok\ntest_mixed_interval_and_vector_shape (test_complete_answer.ExtractionTest.test_mixed_interval_and_vector_shape) ... ok\ntest_nested_delimiters_and_negative_values (test_complete_answer.ExtractionTest.test_nested_delimiters_and_negative_values) ... ok\ntest_non_eos_or_open_thinking_is_uncommitted (test_complete_answer.ExtractionTest.test_non_eos_or_open_thinking_is_uncommitted) ... ok\ntest_open_pair_requires_kind (test_complete_answer.ExtractionTest.test_open_pair_requires_kind) ... ok\ntest_quad_is_a_visible_set_separator (test_complete_answer.ExtractionTest.test_quad_is_a_visible_set_separator) ... ok\ntest_set_metadata_does_not_override_uncertain_alternatives (test_complete_answer.ExtractionTest.test_set_metadata_does_not_override_uncertain_alternatives) ... ok\ntest_single_box_and_exact_source (test_complete_answer.ExtractionTest.test_single_box_and_exact_source) ... ok\ntest_terminal_conclusion_inside_a_step (test_complete_answer.ExtractionTest.test_terminal_conclusion_inside_a_step) ... ok\ntest_two_boxes_inside_tuple_are_ordered (test_complete_answer.ExtractionTest.test_two_boxes_inside_tuple_are_ordered) ... ok\ntest_types_do_not_follow_list_punctuation_alone (test_complete_answer.ExtractionTest.test_types_do_not_follow_list_punctuation_alone) ... ok\ntest_units_outside_wrappers_and_inside_box (test_complete_answer.ExtractionTest.test_units_outside_wrappers_and_inside_box) ... ok\ntest_unlabeled_terminal_box (test_complete_answer.ExtractionTest.test_unlabeled_terminal_box) ... ok\ntest_historical_failures_replayed_with_frozen_bytes (test_complete_answer.GradingTest.test_historical_failures_replayed_with_frozen_bytes) ... ok\ntest_mathematical_and_type_controls (test_complete_answer.GradingTest.test_mathematical_and_type_controls) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 4.569s\n\nOK\n"
+  },
+  "old_readout": {
+    "frozen_d2_scores_sha256": "da6dfab96effa16c376028c568bc0cd4a4e7a8904a1d93ddd1ee427d9863a4c2",
+    "official_correct": 46,
+    "content_review_correct": 48,
+    "denominator": 48
+  },
+  "development": {
+    "initial_replay_sha256": "4a85444b9872d27401b656a0c7e72d36d42415d393891b3b6963851b39ac92c6",
+    "final_replay_sha256": "e70db1bdf80755f83a82e2765a298c1482dc382882d1ae405c08570120c955dd",
+    "initial_correct": 44,
+    "final_correct": 47,
+    "denominator": 48,
+    "D2_10_full_root_sets_correct": 2,
+    "D2_05_inline_explanatory_suffix_undelivered": 1
+  },
+  "d3_evaluation_answers_accessed": false,
+  "new_gpu_seconds": 0,
+  "wall_seconds": 9.757,
+  "scope": "Scoring and development replay only. D3 generation is scored later from frozen final_response and visible answer_kind metadata."
+}

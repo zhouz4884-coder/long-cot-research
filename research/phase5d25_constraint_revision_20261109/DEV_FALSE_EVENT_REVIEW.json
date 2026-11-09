@@ -1,0 +1,3795 @@
+{
+  "status": "PASS",
+  "review_scope": "Observed prefixes only. No evaluation answers, final-score reads, new GPU work or live historical KV/RNG claims.",
+  "source_typed_replay_sha256": "f17763d8a25b2196a16d3bccdc19a43202dde1c7524c9fb49018e5a27deaa24d",
+  "original_exact_checker_sha256": "2a3147db9d621ca77c911574149b6343ef49c1be7be55757d5fa1ca1ed91f38a",
+  "tokenizer_manifest_sha256": "e780bd6dd6af5a645d5f5167052ee6acfcc55019e05776a99d4b6d8cbf0a8c1c",
+  "d2_rows_reviewed": 8,
+  "d2_distinct_steps_reviewed": 7,
+  "d2_true_asserted_local_arithmetic_errors": 1,
+  "d2_authorized_revisions": 0,
+  "d2_by_classification": {
+    "APPROX_DISPLAY_DISAGREEMENT": 2,
+    "ROUNDING_COMPATIBLE_IN_OBSERVED_CONTEXT": 1,
+    "MIXED_CHAIN_LOCAL_NOTATION": 1,
+    "RUNNING_EXPRESSION_TOPOLOGY": 1,
+    "TRUE_ASSERTED_LOCAL_ARITHMETIC_ERROR": 1,
+    "FACTORIAL_OPERATOR_STRIPPED": 2
+  },
+  "d2_rows": [
+    {
+      "case_id": "D2_05",
+      "seed": 20261107,
+      "step": 159,
+      "event_id": "e_4a850ebca003ce6abb56c9b4b8f1a52ad4e6703b",
+      "source_result": "native_results/worker_0/D2_05_20261107/result.json",
+      "source_sha256": "fb912588927acaed2ae05d71d7b8a6294d4bdfef1b58c71c3b0f1fb4f1153faa",
+      "event_source": {
+        "step": 159,
+        "token_span": [
+          4566,
+          4600
+        ],
+        "char_span": [
+          0,
+          34
+        ],
+        "text_sha256": "84da396e926618b8c67ec16226c9c86e61d8433f12514650c20b4694def42e28",
+        "observed_prefix_sha256": "f6ad87c5f0a5abd8139cbc169ea401688ce6c6cbdbb6965b0928f4f7c4f69bda"
+      },
+      "event_raw": "1.33822558 * 0.00027 ≈ 0.000361319",
+      "event_kind": "APPROX_ARITHMETIC",
+      "initial_check_status": "ROUNDING_INCOMPATIBLE",
+      "initial_witness": {
+        "exact": "1806604533/5000000000000",
+        "printed": "361319/1000000000",
+        "absolute_difference": "9533/5000000000000",
+        "tolerance": "1/2000000000",
+        "decimal_places": 9
+      },
+      "observed_context_excerpt": [
+        {
+          "step": 153,
+          "start": 4403,
+          "end": 4431,
+          "text": "Let me take an initial guess. Let me assume that 1/x ≈ 0.74727, as before.\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 154,
+          "start": 4431,
+          "end": 4468,
+          "text": "Let me compute x * 0.74727 = 1.33822558 * 0.74727 ≈ ?\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 155,
+          "start": 4468,
+          "end": 4473,
+          "text": "Let me compute that:\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 156,
+          "start": 4473,
+          "end": 4505,
+          "text": "First, 1.33822558 * 0.7 = 0.936757906\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 157,
+          "start": 4505,
+          "end": 4535,
+          "text": "1.33822558 * 0.04 = 0.053529023\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 158,
+          "start": 4535,
+          "end": 4566,
+          "text": "1.33822558 * 0.007 = 0.009367579\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 159,
+          "start": 4566,
+          "end": 4600,
+          "text": "1.33822558 * 0.00027 ≈ 0.000361319\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        }
+      ],
+      "classification": "APPROX_DISPLAY_DISAGREEMENT",
+      "exact_recount": "0.0003613209066",
+      "role_and_action_assessment": "The written value is 0.000361319; nearest at nine places is 0.000361321 (error 0.0000000019066). This term belongs to an approximate decomposition without declared decimal precision.",
+      "authorized_revision": false
+    },
+    {
+      "case_id": "D2_05",
+      "seed": 20261108,
+      "step": 100,
+      "event_id": "e_7ca884b92a712a3da24b2140efdecd3ce9ab6b08",
+      "source_result": "native_results/worker_1/D2_05_20261108/result.json",
+      "source_sha256": "31c73edf1e22462aad15c51acac6f879a87f44a6ef7dfcda8360325a151a0fdd",
+      "event_source": {
+        "step": 100,
+        "token_span": [
+          3942,
+          3970
+        ],
+        "char_span": [
+          7,
+          33
+        ],
+        "text_sha256": "9639d2287964de9e1c52d6c5a57b3af98aa558b5fc919d63e5e1723be2d7ae44",
+        "observed_prefix_sha256": "dd929a9fc7cafdc2e81348895b370d2eef21e7768bd7f6dcd8c1ed3dbe3daea1"
+      },
+      "event_raw": "1.349858 * 0.99 = 1.336359",
+      "event_kind": "CLOSED_ARITHMETIC",
+      "initial_check_status": "FALSE_LITERAL",
+      "initial_witness": {
+        "lhs": "66817971/50000000",
+        "rhs": "1336359/1000000",
+        "assignment": {},
+        "semantics": "scoped_point_statement"
+      },
+      "observed_context_excerpt": [
+        {
+          "step": 94,
+          "start": 3633,
+          "end": 3650,
+          "text": "Alternatively, let me use the exact value of (1.06)^5.\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 95,
+          "start": 3650,
+          "end": 3689,
+          "text": "Alternatively, I can use the fact that (1.06)^5 is equal to e^(5 ln 1.06). Let me compute ln(1.06). \n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 96,
+          "start": 3689,
+          "end": 3747,
+          "text": "I remember that ln(1.06) is approximately 0.058268908. So multiplying by 5 gives 0.29134454. Then e^0.29134454. \n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 97,
+          "start": 3747,
+          "end": 3852,
+          "text": "Now, e^0.29134454. Let me recall that e^0.2913 is approximately... Well, e^0.3 is about 1.349858, as I thought before. So 0.2913 is 0.3 - 0.0087. Therefore, e^0.2913 ≈ e^0.3 * e^(-0.0087). \n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 98,
+          "start": 3852,
+          "end": 3910,
+          "text": "We know that e^(-0.0087) ≈ 1 - 0.0087 + (0.0087)^2/2 - ... ≈ approximately 0.99135 (using the Taylor series approximation). \n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 99,
+          "start": 3910,
+          "end": 3942,
+          "text": "So e^0.2913 ≈ 1.349858 * 0.99135 ≈ \n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 100,
+          "start": 3942,
+          "end": 3970,
+          "text": "First, 1.349858 * 0.99 = 1.336359\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        }
+      ],
+      "classification": "ROUNDING_COMPATIBLE_IN_OBSERVED_CONTEXT",
+      "exact_recount": "1.33635942",
+      "role_and_action_assessment": "The exact product rounds to the printed 1.336359. The preceding steps explicitly introduced an approximate product.",
+      "authorized_revision": false
+    },
+    {
+      "case_id": "D2_05",
+      "seed": 20261108,
+      "step": 129,
+      "event_id": "e_b80cbd2117a5d2637db19b26d3a71183b8943153",
+      "source_result": "native_results/worker_1/D2_05_20261108/result.json",
+      "source_sha256": "31c73edf1e22462aad15c51acac6f879a87f44a6ef7dfcda8360325a151a0fdd",
+      "event_source": {
+        "step": 129,
+        "token_span": [
+          5354,
+          5467
+        ],
+        "char_span": [
+          0,
+          142
+        ],
+        "text_sha256": "9445cb6f179a94f2e60880c8726eab456d515231c24ef301ac02ab39002cf528",
+        "observed_prefix_sha256": "15b508e3d64a219fba3379086dc4e91043a9381cf13c7d4e5df133103e4854f4"
+      },
+      "event_raw": "(1.3382)^2 = (1 + 0.3382)^2 = 1 + 2*0.3382 + (0.3382)^2 ≈ 1 + 0.6764 + 0.1144 ≈ 1 + 0.6764 = 1.6764 + 0.1144 ≈ 1.7908. So approximately 1.7908",
+      "event_kind": "CLOSED_ARITHMETIC",
+      "initial_check_status": "FALSE_LITERAL",
+      "initial_witness": {
+        "lhs": "4191/2500",
+        "rhs": "4477/2500",
+        "assignment": {},
+        "semantics": "scoped_point_statement"
+      },
+      "observed_context_excerpt": [
+        {
+          "step": 123,
+          "start": 5192,
+          "end": 5203,
+          "text": "A = 100,000\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 124,
+          "start": 5203,
+          "end": 5216,
+          "text": "D = 1.3382256\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 125,
+          "start": 5216,
+          "end": 5253,
+          "text": "ΔP ≈ 100,000 * 0.0000256 / (1.3382256)^2\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 126,
+          "start": 5253,
+          "end": 5272,
+          "text": "First compute denominator: (1.3382256)^2 ≈ ?\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 127,
+          "start": 5272,
+          "end": 5327,
+          "text": "Well, we know that (1.3382)^2 is approximately 1.7907 (since 1.3382 * 1.3382 ≈ 1.7907). But let me check:\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 128,
+          "start": 5327,
+          "end": 5354,
+          "text": "Wait, 1.3382^2 = (1.3382)^2. Let me compute that:\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "reflection_cue",
+            "relation"
+          ]
+        },
+        {
+          "step": 129,
+          "start": 5354,
+          "end": 5467,
+          "text": "(1.3382)^2 = (1 + 0.3382)^2 = 1 + 2*0.3382 + (0.3382)^2 ≈ 1 + 0.6764 + 0.1144 ≈ 1 + 0.6764 = 1.6764 + 0.1144 ≈ 1.7908. So approximately 1.7908.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        }
+      ],
+      "classification": "MIXED_CHAIN_LOCAL_NOTATION",
+      "exact_recount": "1.79077924",
+      "role_and_action_assessment": "The intermediate written equality 1.6764 = 1.7908 is false; the same paragraph explicitly retains the correctly rounded denominator 1.7908. This mixed notation is insufficient to identify a stale proof branch.",
+      "authorized_revision": false
+    },
+    {
+      "case_id": "D2_05",
+      "seed": 20261108,
+      "step": 170,
+      "event_id": "e_e5a5d5302e0f95735c8d75124fe0b7a710cdb358",
+      "source_result": "native_results/worker_1/D2_05_20261108/result.json",
+      "source_sha256": "31c73edf1e22462aad15c51acac6f879a87f44a6ef7dfcda8360325a151a0fdd",
+      "event_source": {
+        "step": 170,
+        "token_span": [
+          7046,
+          7082
+        ],
+        "char_span": [
+          0,
+          36
+        ],
+        "text_sha256": "4bed3a2c3b77490f9b4d080cff9c0dcb21c2c98fe8fa7a8a6ca9fd5f18b7cb40",
+        "observed_prefix_sha256": "db09b9d1490d868caabdfef7506976ab3cd776b81b29ec38c41ad56c5482f98c"
+      },
+      "event_raw": "0.00026 * 1.3382255776 ≈ 0.000347938",
+      "event_kind": "APPROX_ARITHMETIC",
+      "initial_check_status": "ROUNDING_INCOMPATIBLE",
+      "initial_witness": {
+        "exact": "5436541409/15625000000000",
+        "printed": "173969/500000000",
+        "absolute_difference": "10159/15625000000000",
+        "tolerance": "1/2000000000",
+        "decimal_places": 9
+      },
+      "observed_context_excerpt": [
+        {
+          "step": 164,
+          "start": 6870,
+          "end": 6897,
+          "text": "Let me start with an initial guess. Earlier, we had that 1/x ≈ 0.74726.\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 165,
+          "start": 6897,
+          "end": 6916,
+          "text": "Let me take an initial guess of y₀ = 0.74726.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 166,
+          "start": 6916,
+          "end": 6947,
+          "text": "Compute y₀ * x = 0.74726 * 1.3382255776 ≈ ?\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 167,
+          "start": 6947,
+          "end": 6981,
+          "text": "Well, 0.7 * 1.3382255776 = 0.936757904\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 168,
+          "start": 6981,
+          "end": 7013,
+          "text": "0.04 * 1.3382255776 = 0.053529023\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 169,
+          "start": 7013,
+          "end": 7046,
+          "text": "0.007 * 1.3382255776 = 0.009367579\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 170,
+          "start": 7046,
+          "end": 7082,
+          "text": "0.00026 * 1.3382255776 ≈ 0.000347938\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        }
+      ],
+      "classification": "APPROX_DISPLAY_DISAGREEMENT",
+      "exact_recount": "0.000347938650176",
+      "role_and_action_assessment": "The printed 0.000347938 matches truncation and differs from nearest at nine places by one displayed unit. No rounding convention is declared.",
+      "authorized_revision": false
+    },
+    {
+      "case_id": "D2_14",
+      "seed": 20261107,
+      "step": 95,
+      "event_id": "e_a27ef41026bdc2cb7dc03dcb787170654c85655b",
+      "source_result": "native_results/worker_1/D2_14_20261107/result.json",
+      "source_sha256": "cecd5000e8dd6efc3a4e93cd4f46987289fbc30b23b6d7a3f920ec7fd4feec18",
+      "event_source": {
+        "step": 95,
+        "token_span": [
+          4073,
+          4146
+        ],
+        "char_span": [
+          0,
+          79
+        ],
+        "text_sha256": "8157fdc6df2d56a9b79a102a9ce322c22186eb1027e906bad50a4255095b9ae9",
+        "observed_prefix_sha256": "17a85403503142a664d2452f6a16fa4b9b190482e5bf62da8e7018287aa2fd57"
+      },
+      "event_raw": "Total ≈ 2.7092699613 + 0.4771212547 = 3.186391216 + 5.5917600344 ≈ 8.7771512504",
+      "event_kind": "CLOSED_ARITHMETIC",
+      "initial_check_status": "FALSE_LITERAL",
+      "initial_witness": {
+        "lhs": "199149451/62500000",
+        "rhs": "10972689063/1250000000",
+        "assignment": {},
+        "semantics": "scoped_point_statement"
+      },
+      "observed_context_excerpt": [
+        {
+          "step": 89,
+          "start": 3942,
+          "end": 3973,
+          "text": "0.0989700043 * 8 ≈ 0.7917600344\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 90,
+          "start": 3973,
+          "end": 4010,
+          "text": "Total ≈ 4.8 + 0.7917600344 ≈ 5.5917600344\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 91,
+          "start": 4010,
+          "end": 4016,
+          "text": "Now adding all three terms:\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 92,
+          "start": 4016,
+          "end": 4035,
+          "text": "First term: ≈ 2.7092699613\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 93,
+          "start": 4035,
+          "end": 4054,
+          "text": "Second term: ≈ 0.4771212547\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 94,
+          "start": 4054,
+          "end": 4073,
+          "text": "Third term: ≈ 5.5917600344\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 95,
+          "start": 4073,
+          "end": 4146,
+          "text": "Total ≈ 2.7092699613 + 0.4771212547 = 3.186391216 + 5.5917600344 ≈ 8.7771512504\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        }
+      ],
+      "classification": "RUNNING_EXPRESSION_TOPOLOGY",
+      "exact_recount": "3.1863912160",
+      "role_and_action_assessment": "Extractor compares A+B to subtotal+C; A+B equals the printed subtotal. The final error in the same paragraph is a separate edge of the same calculation, counted once.",
+      "authorized_revision": false
+    },
+    {
+      "case_id": "D2_14",
+      "seed": 20261107,
+      "step": 95,
+      "event_id": "e_7eb448f88ca85a78a9e22130cf51323a9f1042af",
+      "source_result": "native_results/worker_1/D2_14_20261107/result.json",
+      "source_sha256": "cecd5000e8dd6efc3a4e93cd4f46987289fbc30b23b6d7a3f920ec7fd4feec18",
+      "event_source": {
+        "step": 95,
+        "token_span": [
+          4073,
+          4146
+        ],
+        "char_span": [
+          0,
+          79
+        ],
+        "text_sha256": "8157fdc6df2d56a9b79a102a9ce322c22186eb1027e906bad50a4255095b9ae9",
+        "observed_prefix_sha256": "17a85403503142a664d2452f6a16fa4b9b190482e5bf62da8e7018287aa2fd57"
+      },
+      "event_raw": "Total ≈ 2.7092699613 + 0.4771212547 = 3.186391216 + 5.5917600344 ≈ 8.7771512504",
+      "event_kind": "APPROX_ARITHMETIC",
+      "initial_check_status": "ROUNDING_INCOMPATIBLE",
+      "initial_witness": {
+        "exact": "10972689063/1250000000",
+        "printed": "10971439063/1250000000",
+        "absolute_difference": "1/1000",
+        "tolerance": "1/20000000000",
+        "decimal_places": 10
+      },
+      "observed_context_excerpt": [
+        {
+          "step": 89,
+          "start": 3942,
+          "end": 3973,
+          "text": "0.0989700043 * 8 ≈ 0.7917600344\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 90,
+          "start": 3973,
+          "end": 4010,
+          "text": "Total ≈ 4.8 + 0.7917600344 ≈ 5.5917600344\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 91,
+          "start": 4010,
+          "end": 4016,
+          "text": "Now adding all three terms:\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 92,
+          "start": 4016,
+          "end": 4035,
+          "text": "First term: ≈ 2.7092699613\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 93,
+          "start": 4035,
+          "end": 4054,
+          "text": "Second term: ≈ 0.4771212547\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 94,
+          "start": 4054,
+          "end": 4073,
+          "text": "Third term: ≈ 5.5917600344\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 95,
+          "start": 4073,
+          "end": 4146,
+          "text": "Total ≈ 2.7092699613 + 0.4771212547 = 3.186391216 + 5.5917600344 ≈ 8.7771512504\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        }
+      ],
+      "classification": "TRUE_ASSERTED_LOCAL_ARITHMETIC_ERROR",
+      "exact_recount": "8.7781512504",
+      "role_and_action_assessment": "Explicit proof subtotal plus third term is 8.7781512504, printed 8.7771512504. Error 0.001 exceeds rounding at input scale. Both are in [8,9); original quantity 600000000 independently lies in the same decimal bin. No invalidation action for ROUNDING_INCOMPATIBLE.",
+      "authorized_revision": false
+    },
+    {
+      "case_id": "D2_22",
+      "seed": 20261107,
+      "step": 133,
+      "event_id": "e_b7a9edd930ba780999f1a19b6bfa5d8da78196ab",
+      "source_result": "native_results/worker_1/D2_22_20261107/result.json",
+      "source_sha256": "df69f8730f9cfd88baad15d4e7a506007eb4a701417714f9fb1da563e9dddbcd",
+      "event_source": {
+        "step": 133,
+        "token_span": [
+          7294,
+          7315
+        ],
+        "char_span": [
+          0,
+          29
+        ],
+        "text_sha256": "374ffd6c61d29449a204d5cab319399a327520aa9680d3fcf5c895b5c4e18b81",
+        "observed_prefix_sha256": "ebe827c8b5795841a8524e5c61fca3e5aeb0483731e0f00d7956d260572ec703"
+      },
+      "event_raw": "k=2, sum is 1 + 1 + 4 = 6 = 3",
+      "event_kind": "CLOSED_ARITHMETIC",
+      "initial_check_status": "FALSE_LITERAL",
+      "initial_witness": {
+        "lhs": "6",
+        "rhs": "3",
+        "assignment": {},
+        "semantics": "scoped_point_statement"
+      },
+      "observed_context_excerpt": [
+        {
+          "step": 127,
+          "start": 7110,
+          "end": 7158,
+          "text": "But just to make sure, let me check if 51! is divisible by 47. Since 47 is a prime number, and 47 ≤ 51, then 47 divides 51!.\n\n",
+          "boundary": "paragraph",
+          "event_types": []
+        },
+        {
+          "step": 128,
+          "start": 7158,
+          "end": 7169,
+          "text": "Yes. Therefore, the answer is 47.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "candidate"
+          ]
+        },
+        {
+          "step": 129,
+          "start": 7169,
+          "end": 7199,
+          "text": "Alternatively, maybe there's a mistake in the problem's translation or my understanding? But according to the telescoping sum, it's 51!.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "reflection_cue"
+          ]
+        },
+        {
+          "step": 130,
+          "start": 7199,
+          "end": 7229,
+          "text": "Alternatively, maybe the problem is not S = 51! but something else. For example, if I miscalculated the telescoping sum.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 131,
+          "start": 7229,
+          "end": 7275,
+          "text": "Wait, let me check with k=0. If k=0, then the sum is 0! = 1. According to the formula, (k+1)! = 1! = 1. Correct.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "reflection_cue",
+            "relation"
+          ]
+        },
+        {
+          "step": 132,
+          "start": 7275,
+          "end": 7294,
+          "text": "If k=1, sum is 1 + 1 = 2 = 2!.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 133,
+          "start": 7294,
+          "end": 7315,
+          "text": "k=2, sum is 1 + 1 + 4 = 6 = 3!.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        }
+      ],
+      "classification": "FACTORIAL_OPERATOR_STRIPPED",
+      "exact_recount": "1+1+4=6=3!",
+      "role_and_action_assessment": "Observed finite check is correct when the factorial operator is retained.",
+      "authorized_revision": false
+    },
+    {
+      "case_id": "D2_22",
+      "seed": 20261107,
+      "step": 134,
+      "event_id": "e_1acde8319e55ca054cbbbe39d306b2cb4cba2214",
+      "source_result": "native_results/worker_1/D2_22_20261107/result.json",
+      "source_sha256": "df69f8730f9cfd88baad15d4e7a506007eb4a701417714f9fb1da563e9dddbcd",
+      "event_source": {
+        "step": 134,
+        "token_span": [
+          7315,
+          7341
+        ],
+        "char_span": [
+          0,
+          35
+        ],
+        "text_sha256": "4de111c30cf2ec09074e49e2c915ee73d5988c17d9ae4c119fa8024a756fc364",
+        "observed_prefix_sha256": "c0e7a0d6a206a4bdc395fc0bb7603fcd41d95bf8a703bfee28dcf73f5c8342c5"
+      },
+      "event_raw": "k=3, sum is 1 + 1 + 4 + 18 = 24 = 4",
+      "event_kind": "CLOSED_ARITHMETIC",
+      "initial_check_status": "FALSE_LITERAL",
+      "initial_witness": {
+        "lhs": "24",
+        "rhs": "4",
+        "assignment": {},
+        "semantics": "scoped_point_statement"
+      },
+      "observed_context_excerpt": [
+        {
+          "step": 128,
+          "start": 7158,
+          "end": 7169,
+          "text": "Yes. Therefore, the answer is 47.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "candidate"
+          ]
+        },
+        {
+          "step": 129,
+          "start": 7169,
+          "end": 7199,
+          "text": "Alternatively, maybe there's a mistake in the problem's translation or my understanding? But according to the telescoping sum, it's 51!.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "reflection_cue"
+          ]
+        },
+        {
+          "step": 130,
+          "start": 7199,
+          "end": 7229,
+          "text": "Alternatively, maybe the problem is not S = 51! but something else. For example, if I miscalculated the telescoping sum.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 131,
+          "start": 7229,
+          "end": 7275,
+          "text": "Wait, let me check with k=0. If k=0, then the sum is 0! = 1. According to the formula, (k+1)! = 1! = 1. Correct.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "reflection_cue",
+            "relation"
+          ]
+        },
+        {
+          "step": 132,
+          "start": 7275,
+          "end": 7294,
+          "text": "If k=1, sum is 1 + 1 = 2 = 2!.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 133,
+          "start": 7294,
+          "end": 7315,
+          "text": "k=2, sum is 1 + 1 + 4 = 6 = 3!.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        },
+        {
+          "step": 134,
+          "start": 7315,
+          "end": 7341,
+          "text": "k=3, sum is 1 + 1 + 4 + 18 = 24 = 4!.\n\n",
+          "boundary": "paragraph",
+          "event_types": [
+            "relation"
+          ]
+        }
+      ],
+      "classification": "FACTORIAL_OPERATOR_STRIPPED",
+      "exact_recount": "1+1+4+18=24=4!",
+      "role_and_action_assessment": "Observed finite check is correct when the factorial operator is retained.",
+      "authorized_revision": false
+    }
+  ],
+  "phase5b_development_only": [
+    {
+      "rank": 39,
+      "question": "In how many ways can 8 people sit around a round table if 3 of the people -- Pierre, Rosa, and Thomas -- all want to sit together?  (Two seatings are considered the same if one is a rotation of the other.)",
+      "question_char_span": [
+        0,
+        205
+      ],
+      "source_raw_line_sha256": "bec38f806aef6b2d2f8b7384c2962a094ede791a59180f44c14e7f63d9819b9e",
+      "source_trace_ids_sha256": "32fd255ae661cc2bb943f017014e207617b543b2ae98c9bf4b3462283081befe",
+      "source_line": "qwen3_4b_1.jsonl:632",
+      "view_file_sha256": "43ede4977cf6bc120cbe4d6b4580e7fc3dfe15d29ce6c8384cc27ea9356a8fd3",
+      "archive_manifest_sha256": "6ee72c687db428cf341ec0f65ce1c3d51de94aa57eb8033e899baeccd0ce30eb",
+      "maximum_observed_paragraph_used": 27,
+      "observed": {
+        "5": {
+          "paragraph": 5,
+          "observed_paragraph_token_span": [
+            292,
+            362
+          ],
+          "observed_paragraph_token_ids": [
+            3983,
+            3783,
+            11,
+            1077,
+            752,
+            1779,
+            429,
+            1549,
+            13,
+            1416,
+            582,
+            614,
+            220,
+            21,
+            8153,
+            11,
+            26931,
+            71949,
+            1035,
+            387,
+            320,
+            21,
+            12,
+            16,
+            41295,
+            284,
+            220,
+            20,
+            0,
+            323,
+            1221,
+            30270,
+            553,
+            279,
+            71949,
+            2878,
+            279,
+            2504,
+            13,
+            2055,
+            220,
+            20,
+            0,
+            353,
+            220,
+            18,
+            0,
+            284,
+            220,
+            16,
+            17,
+            15,
+            353,
+            220,
+            21,
+            284,
+            220,
+            22,
+            17,
+            15,
+            13,
+            1988,
+            1077,
+            752,
+            10146,
+            421,
+            419,
+            374,
+            4396,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "16c0b496a8fde3bae98d0d790f1b4137bd1a86472de3d4486213f11eb5f45776",
+          "original_generated_prefix_ids_sha256": "e47f89955b02880dd57a20bd6418de88ae54a94c10af09974a0df8a1d80406ed",
+          "observed_paragraph_trace_char_span": [
+            1207,
+            1426
+          ],
+          "quoted_text": "5! * 3! = 120 * 6 = 720",
+          "quote_trace_char_span": [
+            1364,
+            1387
+          ],
+          "quote_covering_original_token_span": [
+            333,
+            352
+          ],
+          "quote_covering_original_token_ids": [
+            20,
+            0,
+            353,
+            220,
+            18,
+            0,
+            284,
+            220,
+            16,
+            17,
+            15,
+            353,
+            220,
+            21,
+            284,
+            220,
+            22,
+            17,
+            15
+          ],
+          "quote_char_span_within_covering_tokens": [
+            0,
+            23
+          ]
+        },
+        "12": {
+          "paragraph": 12,
+          "observed_paragraph_token_span": [
+            880,
+            1017
+          ],
+          "observed_paragraph_token_ids": [
+            92014,
+            11,
+            7196,
+            279,
+            1156,
+            5486,
+            374,
+            4396,
+            13,
+            6771,
+            752,
+            1779,
+            448,
+            264,
+            9155,
+            1372,
+            13,
+            82610,
+            1052,
+            525,
+            220,
+            18,
+            1251,
+            11,
+            323,
+            678,
+            2326,
+            1969,
+            2444,
+            3786,
+            13,
+            5005,
+            11,
+            1246,
+            1657,
+            26931,
+            27804,
+            30,
+            8325,
+            11,
+            2474,
+            807,
+            614,
+            311,
+            2444,
+            3786,
+            11,
+            432,
+            594,
+            1101,
+            220,
+            16,
+            1616,
+            11,
+            1576,
+            678,
+            69201,
+            525,
+            6509,
+            279,
+            1852,
+            13,
+            1988,
+            4092,
+            311,
+            279,
+            14806,
+            11,
+            421,
+            582,
+            614,
+            220,
+            16,
+            2504,
+            11,
+            1221,
+            320,
+            16,
+            12,
+            16,
+            41295,
+            353,
+            220,
+            18,
+            0,
+            284,
+            220,
+            15,
+            0,
+            353,
+            220,
+            21,
+            284,
+            220,
+            16,
+            353,
+            220,
+            21,
+            284,
+            220,
+            21,
+            13,
+            1988,
+            429,
+            594,
+            4969,
+            11,
+            1576,
+            304,
+            26931,
+            1965,
+            11,
+            421,
+            678,
+            2326,
+            525,
+            3786,
+            11,
+            1052,
+            374,
+            1172,
+            220,
+            16,
+            12460,
+            26112,
+            13,
+            13824,
+            11,
+            773,
+            429,
+            13230,
+            429,
+            847,
+            14806,
+            374,
+            4969,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "19cfc0b7c81e26ca11bed9e44481971f8c3a7c5a2ab6e0b870d1db11588a63aa",
+          "original_generated_prefix_ids_sha256": "84c440ea5e4bffdcb022234a041bec31a5b88b87838d77e91f249a8b14bafadd",
+          "observed_paragraph_trace_char_span": [
+            3752,
+            4289
+          ],
+          "quoted_text": "there is only 1 distinct arrangement",
+          "quote_trace_char_span": [
+            4203,
+            4239
+          ],
+          "quote_covering_original_token_span": [
+            998,
+            1005
+          ],
+          "quote_covering_original_token_ids": [
+            1052,
+            374,
+            1172,
+            220,
+            16,
+            12460,
+            26112
+          ],
+          "quote_char_span_within_covering_tokens": [
+            1,
+            37
+          ]
+        },
+        "14": {
+          "paragraph": 14,
+          "observed_paragraph_token_span": [
+            1058,
+            1123
+          ],
+          "observed_paragraph_token_ids": [
+            3983,
+            304,
+            279,
+            1142,
+            315,
+            308,
+            284,
+            220,
+            18,
+            11,
+            595,
+            284,
+            220,
+            18,
+            11,
+            429,
+            1035,
+            387,
+            320,
+            18,
+            481,
+            220,
+            18,
+            41295,
+            353,
+            220,
+            18,
+            0,
+            284,
+            220,
+            16,
+            353,
+            220,
+            21,
+            284,
+            220,
+            21,
+            11,
+            714,
+            304,
+            8729,
+            11,
+            1052,
+            374,
+            1172,
+            220,
+            16,
+            1616,
+            13,
+            2055,
+            9355,
+            11,
+            429,
+            14806,
+            374,
+            537,
+            4396,
+            13,
+            2055,
+            847,
+            3681,
+            32711,
+            572,
+            4969,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "a92d5f3d7aa7961c2056227b43d772366eb7762a97fc658c9bf81a07b4d6ec30",
+          "original_generated_prefix_ids_sha256": "b6d50319d9b3c48269ffae258f90a5b7b0fb05f673e275f0c7266bd03e4449be",
+          "observed_paragraph_trace_char_span": [
+            4441,
+            4628
+          ],
+          "quoted_text": "So my previous reasoning was wrong.",
+          "quote_trace_char_span": [
+            4593,
+            4628
+          ],
+          "quote_covering_original_token_span": [
+            1116,
+            1123
+          ],
+          "quote_covering_original_token_ids": [
+            2055,
+            847,
+            3681,
+            32711,
+            572,
+            4969,
+            382
+          ],
+          "quote_char_span_within_covering_tokens": [
+            1,
+            36
+          ]
+        },
+        "19": {
+          "paragraph": 19,
+          "observed_paragraph_token_span": [
+            1272,
+            1287
+          ],
+          "observed_paragraph_token_ids": [
+            54815,
+            11,
+            847,
+            2856,
+            5486,
+            572,
+            4969,
+            13,
+            2055,
+            358,
+            1184,
+            311,
+            1744,
+            1549,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "49b92b360079e25a98114b2200bb09cc07a6769b449e467e3a2492abe6a6e068",
+          "original_generated_prefix_ids_sha256": "a3e78d83fb4b270c1333cd1559e38d5c241abd90ccbfba696d4824ef51f8f8b2",
+          "observed_paragraph_trace_char_span": [
+            5165,
+            5232
+          ],
+          "quoted_text": "Therefore, my initial approach was wrong.",
+          "quote_trace_char_span": [
+            5165,
+            5206
+          ],
+          "quote_covering_original_token_span": [
+            1272,
+            1280
+          ],
+          "quote_covering_original_token_ids": [
+            54815,
+            11,
+            847,
+            2856,
+            5486,
+            572,
+            4969,
+            13
+          ],
+          "quote_char_span_within_covering_tokens": [
+            0,
+            41
+          ]
+        },
+        "22": {
+          "paragraph": 22,
+          "observed_paragraph_token_span": [
+            1925,
+            1997
+          ],
+          "observed_paragraph_token_ids": [
+            14190,
+            11,
+            7196,
+            358,
+            1184,
+            311,
+            50087,
+            419,
+            13,
+            6771,
+            752,
+            12793,
+            279,
+            1965,
+            448,
+            36977,
+            8356,
+            518,
+            264,
+            3654,
+            2309,
+            13,
+            576,
+            16312,
+            525,
+            27802,
+            304,
+            264,
+            12671,
+            13,
+            6771,
+            752,
+            2383,
+            279,
+            16312,
+            65670,
+            438,
+            39223,
+            220,
+            16,
+            320,
+            47,
+            44423,
+            701,
+            39223,
+            220,
+            17,
+            11,
+            39223,
+            220,
+            18,
+            11,
+            39223,
+            220,
+            19,
+            11,
+            39223,
+            220,
+            20,
+            11,
+            39223,
+            220,
+            21,
+            11,
+            39223,
+            220,
+            22,
+            11,
+            39223,
+            220,
+            23,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "035058eeb3a36cc3930815c8df4bcc9721db62f9268c65d098bda641f3cdc267",
+          "original_generated_prefix_ids_sha256": "abde738196edd913c24c314ce33139e87892c02394fd0af4f8ff0a7b875eab21",
+          "observed_paragraph_trace_char_span": [
+            8045,
+            8293
+          ],
+          "quoted_text": "Seat 1 (Pierre)",
+          "quote_trace_char_span": [
+            8221,
+            8236
+          ],
+          "quote_covering_original_token_span": [
+            1962,
+            1969
+          ],
+          "quote_covering_original_token_ids": [
+            39223,
+            220,
+            16,
+            320,
+            47,
+            44423,
+            701
+          ],
+          "quote_char_span_within_covering_tokens": [
+            1,
+            16
+          ]
+        },
+        "24": {
+          "paragraph": 24,
+          "observed_paragraph_token_span": [
+            2029,
+            2040
+          ],
+          "observed_paragraph_token_ids": [
+            12,
+            74435,
+            220,
+            16,
+            11,
+            220,
+            17,
+            11,
+            220,
+            18,
+            271
+          ],
+          "observed_paragraph_token_ids_sha256": "ad5c43e3fcf22a52d21749d162c35edd07c7b02f5818c4ea7838582286f933ca",
+          "original_generated_prefix_ids_sha256": "4125b6047b9d3c8611d98ef68e19d5ae35912fa33f9ddcb968514d0e79461ea2",
+          "observed_paragraph_trace_char_span": [
+            8440,
+            8455
+          ],
+          "quoted_text": "- Seats 1, 2, 3",
+          "quote_trace_char_span": [
+            8440,
+            8455
+          ],
+          "quote_covering_original_token_span": [
+            2029,
+            2039
+          ],
+          "quote_covering_original_token_ids": [
+            12,
+            74435,
+            220,
+            16,
+            11,
+            220,
+            17,
+            11,
+            220,
+            18
+          ],
+          "quote_char_span_within_covering_tokens": [
+            0,
+            15
+          ]
+        },
+        "25": {
+          "paragraph": 25,
+          "observed_paragraph_token_span": [
+            2040,
+            2051
+          ],
+          "observed_paragraph_token_ids": [
+            12,
+            74435,
+            220,
+            23,
+            11,
+            220,
+            16,
+            11,
+            220,
+            17,
+            271
+          ],
+          "observed_paragraph_token_ids_sha256": "bc7706ee8dd3fa6f72c1403cfe8b61eef5135a85cc63ccda013453a3b0f766d8",
+          "original_generated_prefix_ids_sha256": "9be3b01ab85b81eb73d4d2fd9d2f28a059cfdf29c94b71da5ddfa5e7aa049b35",
+          "observed_paragraph_trace_char_span": [
+            8457,
+            8472
+          ],
+          "quoted_text": "- Seats 8, 1, 2",
+          "quote_trace_char_span": [
+            8457,
+            8472
+          ],
+          "quote_covering_original_token_span": [
+            2040,
+            2050
+          ],
+          "quote_covering_original_token_ids": [
+            12,
+            74435,
+            220,
+            23,
+            11,
+            220,
+            16,
+            11,
+            220,
+            17
+          ],
+          "quote_char_span_within_covering_tokens": [
+            0,
+            15
+          ]
+        },
+        "26": {
+          "paragraph": 26,
+          "observed_paragraph_token_span": [
+            2051,
+            2264
+          ],
+          "observed_paragraph_token_ids": [
+            4416,
+            1052,
+            525,
+            1378,
+            3204,
+            10010,
+            429,
+            2924,
+            36977,
+            13,
+            13824,
+            11,
+            714,
+            421,
+            279,
+            2504,
+            374,
+            2326,
+            23921,
+            16312,
+            11,
+            323,
+            36977,
+            374,
+            518,
+            39223,
+            220,
+            16,
+            11,
+            1221,
+            279,
+            2504,
+            646,
+            387,
+            2987,
+            74435,
+            220,
+            16,
+            12,
+            17,
+            12,
+            18,
+            476,
+            74435,
+            220,
+            23,
+            12,
+            16,
+            12,
+            17,
+            13,
+            2055,
+            1378,
+            2155,
+            10010,
+            13,
+            15277,
+            11,
+            369,
+            1817,
+            315,
+            1493,
+            1378,
+            10010,
+            11,
+            582,
+            646,
+            30893,
+            279,
+            2326,
+            1251,
+            320,
+            47,
+            44423,
+            11,
+            46830,
+            11,
+            11108,
+            8,
+            304,
+            220,
+            17,
+            0,
+            5510,
+            30,
+            13824,
+            11,
+            902,
+            13,
+            9211,
+            421,
+            279,
+            2504,
+            374,
+            74435,
+            220,
+            16,
+            12,
+            17,
+            12,
+            18,
+            11,
+            1221,
+            36977,
+            374,
+            8356,
+            518,
+            39223,
+            220,
+            16,
+            11,
+            773,
+            46830,
+            323,
+            11108,
+            646,
+            387,
+            27802,
+            304,
+            74435,
+            220,
+            17,
+            323,
+            220,
+            18,
+            304,
+            220,
+            17,
+            0,
+            5510,
+            13,
+            34239,
+            11,
+            421,
+            279,
+            2504,
+            374,
+            74435,
+            220,
+            23,
+            12,
+            16,
+            12,
+            17,
+            11,
+            1221,
+            36977,
+            374,
+            518,
+            39223,
+            220,
+            16,
+            11,
+            773,
+            46830,
+            323,
+            11108,
+            646,
+            387,
+            27802,
+            304,
+            74435,
+            220,
+            23,
+            323,
+            220,
+            17,
+            304,
+            220,
+            17,
+            0,
+            5510,
+            13,
+            15277,
+            11,
+            2790,
+            1372,
+            315,
+            27804,
+            369,
+            279,
+            2504,
+            374,
+            220,
+            17,
+            320,
+            27436,
+            315,
+            279,
+            2504,
+            8,
+            353,
+            220,
+            17,
+            0,
+            320,
+            1118,
+            524,
+            3723,
+            2878,
+            279,
+            2504,
+            8,
+            284,
+            220,
+            17,
+            353,
+            220,
+            17,
+            284,
+            220,
+            19,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "1e5f7f48adc3f8a35987528147b7cc3bb3fee31ac1024346073e54403ab801ce",
+          "original_generated_prefix_ids_sha256": "42ea95b55f56e8e307d20cc617d46f59e427ca03b930d260ddb0e5126d52e9d3",
+          "observed_paragraph_trace_char_span": [
+            8474,
+            9200
+          ],
+          "quoted_text": "So there are two possible blocks that include Pierre.",
+          "quote_trace_char_span": [
+            8474,
+            8527
+          ],
+          "quote_covering_original_token_span": [
+            2051,
+            2061
+          ],
+          "quote_covering_original_token_ids": [
+            4416,
+            1052,
+            525,
+            1378,
+            3204,
+            10010,
+            429,
+            2924,
+            36977,
+            13
+          ],
+          "quote_char_span_within_covering_tokens": [
+            0,
+            53
+          ]
+        },
+        "27": {
+          "paragraph": 27,
+          "observed_paragraph_token_span": [
+            2264,
+            2380
+          ],
+          "observed_paragraph_token_ids": [
+            12209,
+            11,
+            3055,
+            279,
+            2504,
+            374,
+            8356,
+            11,
+            279,
+            9664,
+            220,
+            20,
+            1251,
+            646,
+            387,
+            27802,
+            304,
+            279,
+            9664,
+            220,
+            20,
+            16312,
+            13,
+            8704,
+            279,
+            1965,
+            374,
+            26931,
+            11,
+            714,
+            582,
+            3003,
+            2669,
+            8356,
+            36977,
+            594,
+            2309,
+            11,
+            773,
+            279,
+            9664,
+            16312,
+            525,
+            13482,
+            30,
+            13824,
+            11,
+            902,
+            13,
+            13824,
+            11,
+            421,
+            582,
+            8356,
+            36977,
+            594,
+            2309,
+            11,
+            1221,
+            279,
+            2732,
+            315,
+            279,
+            16312,
+            525,
+            27802,
+            13482,
+            398,
+            304,
+            3793,
+            315,
+            58441,
+            13,
+            2055,
+            279,
+            9664,
+            220,
+            20,
+            1251,
+            646,
+            387,
+            27802,
+            304,
+            220,
+            20,
+            0,
+            5510,
+            13,
+            15277,
+            11,
+            2790,
+            1372,
+            315,
+            27804,
+            1035,
+            387,
+            220,
+            19,
+            353,
+            220,
+            20,
+            0,
+            284,
+            220,
+            19,
+            353,
+            220,
+            16,
+            17,
+            15,
+            284,
+            220,
+            19,
+            23,
+            15,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "7855fb988c839527adebf29b069e5bb5467311b7b054e221690953dc4306c129",
+          "original_generated_prefix_ids_sha256": "9c801f0cf02ab4e56549017dba04843273cc62245669575e27016e575a2ba20c",
+          "observed_paragraph_trace_char_span": [
+            9202,
+            9652
+          ],
+          "quoted_text": "4 * 5! = 4 * 120 = 480.",
+          "quote_trace_char_span": [
+            9629,
+            9652
+          ],
+          "quote_covering_original_token_span": [
+            2361,
+            2380
+          ],
+          "quote_covering_original_token_ids": [
+            19,
+            353,
+            220,
+            20,
+            0,
+            284,
+            220,
+            19,
+            353,
+            220,
+            16,
+            17,
+            15,
+            284,
+            220,
+            19,
+            23,
+            15,
+            382
+          ],
+          "quote_char_span_within_covering_tokens": [
+            0,
+            23
+          ]
+        }
+      },
+      "status": "SCOPED_COMBINATORIAL_WITNESS_OFFLINE",
+      "earliest_unlicensed_dismissal_paragraph": 14,
+      "explicit_missing_case_paragraph": 26,
+      "observed_wrong_count_paragraph": 27,
+      "early_probe_scope": {
+        "original": [
+          8,
+          3
+        ],
+        "probe": [
+          3,
+          3
+        ],
+        "exact_rotation_classes_at_probe": [
+          [
+            "P",
+            "R",
+            "T"
+          ],
+          [
+            "P",
+            "T",
+            "R"
+          ]
+        ],
+        "detail": "The exact count 2 falsifies an unrestricted formula at n=k=3. The original claim fixes n=8,k=3."
+      },
+      "same_problem_witness": {
+        "fixed_pierre_seat": 1,
+        "missing_consecutive_block": [
+          7,
+          8,
+          1
+        ],
+        "clockwise_seating": [
+          "P",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "R",
+          "T"
+        ],
+        "enumerated_counts_by_block": [
+          {
+            "block": [
+              1,
+              2,
+              3
+            ],
+            "seatings": 240
+          },
+          {
+            "block": [
+              1,
+              2,
+              8
+            ],
+            "seatings": 240
+          },
+          {
+            "block": [
+              1,
+              7,
+              8
+            ],
+            "seatings": 240
+          }
+        ],
+        "exact_total": 720
+      },
+      "authorized_revision": false,
+      "blocked_by": [
+        "bounded_checker_has_no_cyclic_count_certificate_type",
+        "no_original_RNG_KV_or_live_state"
+      ]
+    },
+    {
+      "rank": 88,
+      "question": "The polynomial $x^3 - 3x^2 + 4x - 1$ is a factor of $x^9 + px^6 + qx^3 + r.$  Enter the ordered triple $(p,q,r).$",
+      "question_char_span": [
+        0,
+        113
+      ],
+      "source_raw_line_sha256": "fda402ad8035aa87fa77f39bc670a28ebdd9ce3e0ed3263fee6c3ec44acb899c",
+      "source_trace_ids_sha256": "32935884c52d54243cb831644dc53002aa813911832786db015fed950b8cccc0",
+      "source_line": "qwen3_4b_1.jsonl:344",
+      "view_file_sha256": "9b93261a4e3413b0d6d0446015564e79e125a0ff1ffb88d330a089ea607d1892",
+      "archive_manifest_sha256": "6ee72c687db428cf341ec0f65ce1c3d51de94aa57eb8033e899baeccd0ce30eb",
+      "maximum_observed_paragraph_used": 233,
+      "observed": {
+        "150": {
+          "paragraph": 150,
+          "observed_paragraph_token_span": [
+            3321,
+            3353
+          ],
+          "observed_paragraph_token_ids": [
+            54815,
+            11,
+            279,
+            11457,
+            23725,
+            374,
+            320,
+            79,
+            11,
+            2804,
+            11,
+            435,
+            8,
+            284,
+            320,
+            21,
+            11,
+            220,
+            18,
+            16,
+            11,
+            481,
+            16,
+            568,
+            6771,
+            752,
+            1779,
+            421,
+            429,
+            3643,
+            5530,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "3508f726ed7deaccf1197e7372f2636abd43f1a023bdd52884d4c5581fe4d859",
+          "original_generated_prefix_ids_sha256": "eb62ccfaec00d25b73ec42054a951fa91bd82c62b9c05645b22f6acfe267ea2a",
+          "observed_paragraph_trace_char_span": [
+            7101,
+            7192
+          ],
+          "quoted_text": "(p, q, r) = (6, 31, -1)",
+          "quote_trace_char_span": [
+            7134,
+            7157
+          ],
+          "quote_covering_original_token_span": [
+            3327,
+            3345
+          ],
+          "quote_covering_original_token_ids": [
+            320,
+            79,
+            11,
+            2804,
+            11,
+            435,
+            8,
+            284,
+            320,
+            21,
+            11,
+            220,
+            18,
+            16,
+            11,
+            481,
+            16,
+            568
+          ],
+          "quote_char_span_within_covering_tokens": [
+            1,
+            24
+          ]
+        },
+        "158": {
+          "paragraph": 158,
+          "observed_paragraph_token_span": [
+            3705,
+            3809
+          ],
+          "observed_paragraph_token_ids": [
+            92014,
+            11,
+            2474,
+            279,
+            40899,
+            374,
+            264,
+            8168,
+            11,
+            1221,
+            279,
+            42541,
+            37675,
+            47311,
+            374,
+            6144,
+            311,
+            320,
+            87,
+            43201,
+            481,
+            18,
+            87,
+            29456,
+            488,
+            19,
+            87,
+            481,
+            16,
+            8,
+            54916,
+            553,
+            2441,
+            47311,
+            13,
+            6771,
+            752,
+            9658,
+            429,
+            279,
+            42541,
+            37675,
+            47311,
+            374,
+            320,
+            87,
+            43201,
+            481,
+            18,
+            87,
+            29456,
+            488,
+            19,
+            87,
+            481,
+            16,
+            17729,
+            87,
+            61,
+            21,
+            488,
+            264,
+            856,
+            61,
+            20,
+            488,
+            293,
+            856,
+            61,
+            19,
+            488,
+            272,
+            856,
+            61,
+            18,
+            488,
+            294,
+            856,
+            61,
+            17,
+            488,
+            384,
+            856,
+            488,
+            282,
+            568,
+            5005,
+            30270,
+            1105,
+            700,
+            323,
+            9429,
+            36829,
+            13,
+            10696,
+            419,
+            374,
+            2441,
+            1616,
+            311,
+            5486,
+            279,
+            3491,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "d39a4a5a7bc8d36263970b73298e722b9aeeb95dfba2a46d94df1dcd353d0c8d",
+          "original_generated_prefix_ids_sha256": "dac759b94d0fd2844baff1f7803818b6d8c3254303db24df6327ebcc991e5f97",
+          "observed_paragraph_trace_char_span": [
+            8502,
+            8857
+          ],
+          "quoted_text": "(x³ -3x² +4x -1)*(x^6 + a x^5 + b x^4 + c x^3 + d x^2 + e x + f)",
+          "quote_trace_char_span": [
+            8692,
+            8756
+          ],
+          "quote_covering_original_token_span": [
+            3749,
+            3791
+          ],
+          "quote_covering_original_token_ids": [
+            320,
+            87,
+            43201,
+            481,
+            18,
+            87,
+            29456,
+            488,
+            19,
+            87,
+            481,
+            16,
+            17729,
+            87,
+            61,
+            21,
+            488,
+            264,
+            856,
+            61,
+            20,
+            488,
+            293,
+            856,
+            61,
+            19,
+            488,
+            272,
+            856,
+            61,
+            18,
+            488,
+            294,
+            856,
+            61,
+            17,
+            488,
+            384,
+            856,
+            488,
+            282,
+            568
+          ],
+          "quote_char_span_within_covering_tokens": [
+            1,
+            65
+          ]
+        },
+        "161": {
+          "paragraph": 161,
+          "observed_paragraph_token_span": [
+            3875,
+            3953
+          ],
+          "observed_paragraph_token_ids": [
+            95155,
+            856,
+            43201,
+            553,
+            1817,
+            4647,
+            304,
+            279,
+            37003,
+            292,
+            25,
+            856,
+            43201,
+            6599,
+            87,
+            61,
+            21,
+            488,
+            264,
+            856,
+            61,
+            20,
+            488,
+            293,
+            856,
+            61,
+            19,
+            488,
+            272,
+            856,
+            61,
+            18,
+            488,
+            294,
+            856,
+            61,
+            17,
+            488,
+            384,
+            856,
+            488,
+            282,
+            8,
+            284,
+            856,
+            61,
+            24,
+            488,
+            264,
+            856,
+            61,
+            23,
+            488,
+            293,
+            856,
+            61,
+            22,
+            488,
+            272,
+            856,
+            61,
+            21,
+            488,
+            294,
+            856,
+            61,
+            20,
+            488,
+            384,
+            856,
+            61,
+            19,
+            488,
+            282,
+            856,
+            61,
+            18,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "0541b27bfa8d5403d7bb14a9e24ff656f479f11eea24622868cb478cc5ff41ac",
+          "original_generated_prefix_ids_sha256": "544dff36729d313a4c2a796b6416bf7dd4c16efd68f0801c0151a81b56c9ac39",
+          "observed_paragraph_trace_char_span": [
+            9046,
+            9191
+          ],
+          "quoted_text": "x^9 + a x^8 + b x^7",
+          "quote_trace_char_span": [
+            9139,
+            9158
+          ],
+          "quote_covering_original_token_span": [
+            3919,
+            3932
+          ],
+          "quote_covering_original_token_ids": [
+            856,
+            61,
+            24,
+            488,
+            264,
+            856,
+            61,
+            23,
+            488,
+            293,
+            856,
+            61,
+            22
+          ],
+          "quote_char_span_within_covering_tokens": [
+            1,
+            20
+          ]
+        },
+        "162": {
+          "paragraph": 162,
+          "observed_paragraph_token_span": [
+            3953,
+            4039
+          ],
+          "observed_paragraph_token_ids": [
+            95155,
+            481,
+            18,
+            87,
+            29456,
+            553,
+            1817,
+            4647,
+            25,
+            481,
+            18,
+            87,
+            29456,
+            6599,
+            87,
+            61,
+            21,
+            488,
+            264,
+            856,
+            61,
+            20,
+            488,
+            293,
+            856,
+            61,
+            19,
+            488,
+            272,
+            856,
+            61,
+            18,
+            488,
+            294,
+            856,
+            61,
+            17,
+            488,
+            384,
+            856,
+            488,
+            282,
+            8,
+            284,
+            481,
+            18,
+            87,
+            61,
+            23,
+            481,
+            18,
+            64,
+            856,
+            61,
+            22,
+            481,
+            18,
+            65,
+            856,
+            61,
+            21,
+            481,
+            18,
+            66,
+            856,
+            61,
+            20,
+            481,
+            18,
+            67,
+            856,
+            61,
+            19,
+            481,
+            18,
+            68,
+            856,
+            61,
+            18,
+            481,
+            18,
+            69,
+            856,
+            61,
+            17,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "0239b8bfeefb97cff944cbf8106addc1e524746b10d749530c48d30ac7e21522",
+          "original_generated_prefix_ids_sha256": "21e90982d7c47578e723fb5e9f743e0c63f78e3ab7cd13a2a6ec225fff274916",
+          "observed_paragraph_trace_char_span": [
+            9193,
+            9330
+          ],
+          "quoted_text": "-3x^8 -3a x^7",
+          "quote_trace_char_span": [
+            9276,
+            9289
+          ],
+          "quote_covering_original_token_span": [
+            3997,
+            4008
+          ],
+          "quote_covering_original_token_ids": [
+            481,
+            18,
+            87,
+            61,
+            23,
+            481,
+            18,
+            64,
+            856,
+            61,
+            22
+          ],
+          "quote_char_span_within_covering_tokens": [
+            1,
+            14
+          ]
+        },
+        "163": {
+          "paragraph": 163,
+          "observed_paragraph_token_span": [
+            4039,
+            4121
+          ],
+          "observed_paragraph_token_ids": [
+            95155,
+            220,
+            19,
+            87,
+            553,
+            1817,
+            4647,
+            25,
+            220,
+            19,
+            87,
+            6599,
+            87,
+            61,
+            21,
+            488,
+            264,
+            856,
+            61,
+            20,
+            488,
+            293,
+            856,
+            61,
+            19,
+            488,
+            272,
+            856,
+            61,
+            18,
+            488,
+            294,
+            856,
+            61,
+            17,
+            488,
+            384,
+            856,
+            488,
+            282,
+            8,
+            284,
+            220,
+            19,
+            87,
+            61,
+            22,
+            488,
+            19,
+            64,
+            856,
+            61,
+            21,
+            488,
+            19,
+            65,
+            856,
+            61,
+            20,
+            488,
+            19,
+            66,
+            856,
+            61,
+            19,
+            488,
+            19,
+            67,
+            856,
+            61,
+            18,
+            488,
+            19,
+            68,
+            856,
+            61,
+            17,
+            488,
+            19,
+            69,
+            856,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "cdcc21351833a49ed452c194111a84daeabb8a15102acbdeca76d2542e38a9c6",
+          "original_generated_prefix_ids_sha256": "61a6ea088773d47e7dfa26891ab58e0707e3fb97a1d00bc49bf1c007f44f3b33",
+          "observed_paragraph_trace_char_span": [
+            9332,
+            9462
+          ],
+          "quoted_text": "4x^7 +4a x^6",
+          "quote_trace_char_span": [
+            9411,
+            9423
+          ],
+          "quote_covering_original_token_span": [
+            4082,
+            4092
+          ],
+          "quote_covering_original_token_ids": [
+            19,
+            87,
+            61,
+            22,
+            488,
+            19,
+            64,
+            856,
+            61,
+            21
+          ],
+          "quote_char_span_within_covering_tokens": [
+            0,
+            12
+          ]
+        },
+        "167": {
+          "paragraph": 167,
+          "observed_paragraph_token_span": [
+            4214,
+            4237
+          ],
+          "observed_paragraph_token_ids": [
+            87,
+            61,
+            23,
+            3793,
+            25,
+            264,
+            856,
+            61,
+            23,
+            481,
+            18,
+            87,
+            61,
+            23,
+            284,
+            320,
+            64,
+            481,
+            18,
+            50724,
+            61,
+            23,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "ae99d252261a6b054b252cc4f77aec63c6c8318e1acfabae8a11c8a34c2dfc21",
+          "original_generated_prefix_ids_sha256": "57d1c11a14db96b154e432c110971a05846f41a3b5c68803e091c45ccbeb490e",
+          "observed_paragraph_trace_char_span": [
+            9656,
+            9691
+          ],
+          "quoted_text": "a x^8 -3x^8 = (a -3)x^8.",
+          "quote_trace_char_span": [
+            9667,
+            9691
+          ],
+          "quote_covering_original_token_span": [
+            4219,
+            4237
+          ],
+          "quote_covering_original_token_ids": [
+            264,
+            856,
+            61,
+            23,
+            481,
+            18,
+            87,
+            61,
+            23,
+            284,
+            320,
+            64,
+            481,
+            18,
+            50724,
+            61,
+            23,
+            382
+          ],
+          "quote_char_span_within_covering_tokens": [
+            1,
+            25
+          ]
+        },
+        "168": {
+          "paragraph": 168,
+          "observed_paragraph_token_span": [
+            4237,
+            4265
+          ],
+          "observed_paragraph_token_ids": [
+            87,
+            61,
+            22,
+            3793,
+            25,
+            293,
+            856,
+            61,
+            22,
+            488,
+            19,
+            64,
+            856,
+            61,
+            22,
+            481,
+            18,
+            64,
+            856,
+            61,
+            22,
+            30,
+            13824,
+            11,
+            1077,
+            752,
+            1779,
+            1447
+          ],
+          "observed_paragraph_token_ids_sha256": "c074363c5be5f8ac9c534e7e37b8cc667447a53b416e04c25cdfc2c6679a0e11",
+          "original_generated_prefix_ids_sha256": "42e5246c9b40b6fa8e7d41931b4698f31cd891c0bef779f45611fc6acc97b7fe",
+          "observed_paragraph_trace_char_span": [
+            9693,
+            9746
+          ],
+          "quoted_text": "b x^7 +4a x^7 -3a x^7?",
+          "quote_trace_char_span": [
+            9704,
+            9726
+          ],
+          "quote_covering_original_token_span": [
+            4242,
+            4259
+          ],
+          "quote_covering_original_token_ids": [
+            293,
+            856,
+            61,
+            22,
+            488,
+            19,
+            64,
+            856,
+            61,
+            22,
+            481,
+            18,
+            64,
+            856,
+            61,
+            22,
+            30
+          ],
+          "quote_char_span_within_covering_tokens": [
+            1,
+            23
+          ]
+        },
+        "170": {
+          "paragraph": 170,
+          "observed_paragraph_token_span": [
+            4309,
+            4421
+          ],
+          "observed_paragraph_token_ids": [
+            14190,
+            11,
+            279,
+            1156,
+            949,
+            320,
+            1499,
+            856,
+            43201,
+            9,
+            325,
+            2252,
+            292,
+            8,
+            702,
+            293,
+            856,
+            61,
+            22,
+            13,
+            5005,
+            504,
+            481,
+            18,
+            87,
+            29456,
+            9,
+            325,
+            2252,
+            292,
+            25,
+            481,
+            18,
+            64,
+            856,
+            61,
+            22,
+            13,
+            5005,
+            504,
+            220,
+            19,
+            87,
+            9,
+            325,
+            2252,
+            292,
+            25,
+            488,
+            19,
+            64,
+            856,
+            61,
+            22,
+            13,
+            5005,
+            504,
+            481,
+            16,
+            9,
+            325,
+            2252,
+            292,
+            25,
+            902,
+            856,
+            61,
+            22,
+            4647,
+            13,
+            15277,
+            2790,
+            856,
+            61,
+            22,
+            3793,
+            25,
+            293,
+            856,
+            61,
+            22,
+            481,
+            18,
+            64,
+            856,
+            61,
+            22,
+            488,
+            19,
+            64,
+            856,
+            61,
+            22,
+            284,
+            293,
+            856,
+            61,
+            22,
+            488,
+            264,
+            856,
+            61,
+            22,
+            284,
+            320,
+            64,
+            488,
+            293,
+            50724,
+            61,
+            22,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "ed502aaf8504b3ff8b580401ef3b418a00f167eff6ec30b3b4b17e0f0b64b52a",
+          "original_generated_prefix_ids_sha256": "65c14fb0d2c06334ac95ab909f531043621203b0fc80daa1ad3d81a339655f55",
+          "observed_paragraph_trace_char_span": [
+            9871,
+            10094
+          ],
+          "quoted_text": "Therefore total x^7 terms: b x^7 -3a x^7 +4a x^7 = b x^7 + a x^7 = (a + b)x^7.",
+          "quote_trace_char_span": [
+            10016,
+            10094
+          ],
+          "quote_covering_original_token_span": [
+            4379,
+            4421
+          ],
+          "quote_covering_original_token_ids": [
+            15277,
+            2790,
+            856,
+            61,
+            22,
+            3793,
+            25,
+            293,
+            856,
+            61,
+            22,
+            481,
+            18,
+            64,
+            856,
+            61,
+            22,
+            488,
+            19,
+            64,
+            856,
+            61,
+            22,
+            284,
+            293,
+            856,
+            61,
+            22,
+            488,
+            264,
+            856,
+            61,
+            22,
+            284,
+            320,
+            64,
+            488,
+            293,
+            50724,
+            61,
+            22,
+            382
+          ],
+          "quote_char_span_within_covering_tokens": [
+            1,
+            79
+          ]
+        },
+        "207": {
+          "paragraph": 207,
+          "observed_paragraph_token_span": [
+            4999,
+            5077
+          ],
+          "observed_paragraph_token_ids": [
+            87,
+            61,
+            24,
+            488,
+            320,
+            64,
+            481,
+            220,
+            18,
+            50724,
+            61,
+            23,
+            488,
+            320,
+            64,
+            488,
+            293,
+            50724,
+            61,
+            22,
+            488,
+            320,
+            65,
+            488,
+            272,
+            481,
+            16,
+            50724,
+            61,
+            21,
+            488,
+            320,
+            66,
+            488,
+            294,
+            481,
+            64,
+            50724,
+            61,
+            20,
+            488,
+            320,
+            67,
+            488,
+            384,
+            481,
+            65,
+            50724,
+            61,
+            19,
+            488,
+            320,
+            68,
+            488,
+            282,
+            481,
+            66,
+            50724,
+            61,
+            18,
+            488,
+            320,
+            69,
+            481,
+            294,
+            50724,
+            61,
+            17,
+            488,
+            320,
+            19,
+            69,
+            481,
+            384,
+            50724,
+            481,
+            282,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "84ee843477c17c213ad5c1128beed5bca0db846d5e2d8b84853aa23d861be01d",
+          "original_generated_prefix_ids_sha256": "78d32ffe5383fd5cd3cc2a18937ef536e90167fb997f7c39780e6df89abccc50",
+          "observed_paragraph_trace_char_span": [
+            11141,
+            11264
+          ],
+          "quoted_text": "(a + b)x^7",
+          "quote_trace_char_span": [
+            11160,
+            11170
+          ],
+          "quote_covering_original_token_span": [
+            5012,
+            5019
+          ],
+          "quote_covering_original_token_ids": [
+            320,
+            64,
+            488,
+            293,
+            50724,
+            61,
+            22
+          ],
+          "quote_char_span_within_covering_tokens": [
+            1,
+            11
+          ]
+        },
+        "231": {
+          "paragraph": 231,
+          "observed_paragraph_token_span": [
+            5768,
+            5812
+          ],
+          "observed_paragraph_token_ids": [
+            51608,
+            481,
+            22,
+            284,
+            220,
+            19,
+            80,
+            488,
+            17,
+            21,
+            589,
+            481,
+            80,
+            481,
+            19,
+            80,
+            284,
+            220,
+            17,
+            21,
+            488,
+            22,
+            589,
+            481,
+            20,
+            80,
+            284,
+            220,
+            18,
+            18,
+            589,
+            2804,
+            284,
+            481,
+            18,
+            18,
+            14,
+            20,
+            284,
+            481,
+            21,
+            13,
+            21,
+            382
+          ],
+          "observed_paragraph_token_ids_sha256": "1bbf754c80574bc9b1364331a7e503b159160c9661658763d83b6dd64384c9a2",
+          "original_generated_prefix_ids_sha256": "318cca57cc21411b9f31dddaa1a00983e58b4239644cb0ea932c64c95a448bc0",
+          "observed_paragraph_trace_char_span": [
+            12788,
+            12853
+          ],
+          "quoted_text": "q = -33/5 = -6.6.",
+          "quote_trace_char_span": [
+            12836,
+            12853
+          ],
+          "quote_covering_original_token_span": [
+            5799,
+            5812
+          ],
+          "quote_covering_original_token_ids": [
+            2804,
+            284,
+            481,
+            18,
+            18,
+            14,
+            20,
+            284,
+            481,
+            21,
+            13,
+            21,
+            382
+          ],
+          "quote_char_span_within_covering_tokens": [
+            1,
+            18
+          ]
+        },
+        "232": {
+          "paragraph": 232,
+          "observed_paragraph_token_span": [
+            5812,
+            5850
+          ],
+          "observed_paragraph_token_ids": [
+            14190,
+            11,
+            714,
+            6788,
+            582,
+            1730,
+            2804,
+            284,
+            220,
+            18,
+            16,
+            13,
+            2938,
+            594,
+            264,
+            49759,
+            13,
+            13824,
+            11,
+            419,
+            13230,
+            429,
+            1052,
+            374,
+            458,
+            96149,
+            13,
+            1988,
+            419,
+            646,
+            944,
+            387,
+            13,
+            10967,
+            374,
+            279,
+            16523,
+            1939
+          ],
+          "observed_paragraph_token_ids_sha256": "4767021888e4ffa47e7828f3d4d75d45f4587a8cb334069811629f4d5b9340cd",
+          "original_generated_prefix_ids_sha256": "2a83f261be81f9210f4576424a78f8f08eb43a7fc2ea1c0521f23d70b9445e2e",
+          "observed_paragraph_trace_char_span": [
+            12855,
+            13006
+          ],
+          "quoted_text": "Wait, but earlier we found q = 31. That's a contradiction.",
+          "quote_trace_char_span": [
+            12855,
+            12913
+          ],
+          "quote_covering_original_token_span": [
+            5812,
+            5829
+          ],
+          "quote_covering_original_token_ids": [
+            14190,
+            11,
+            714,
+            6788,
+            582,
+            1730,
+            2804,
+            284,
+            220,
+            18,
+            16,
+            13,
+            2938,
+            594,
+            264,
+            49759,
+            13
+          ],
+          "quote_char_span_within_covering_tokens": [
+            0,
+            58
+          ]
+        },
+        "233": {
+          "paragraph": 233,
+          "observed_paragraph_token_span": [
+            5850,
+            5905
+          ],
+          "observed_paragraph_token_ids": [
+            14190,
+            11,
+            3331,
+            389,
+            13,
+            46893,
+            11,
+            979,
+            358,
+            1483,
+            279,
+            48968,
+            1714,
+            11,
+            358,
+            1730,
+            281,
+            28,
+            21,
+            11,
+            2804,
+            28,
+            18,
+            16,
+            11,
+            435,
+            10829,
+            16,
+            13,
+            1988,
+            4092,
+            311,
+            419,
+            1714,
+            11,
+            21828,
+            37906,
+            6696,
+            2804,
+            10829,
+            18,
+            18,
+            14,
+            20,
+            13,
+            2938,
+            594,
+            264,
+            3491,
+            13,
+            15920,
+            825,
+            374,
+            4396,
+            1939
+          ],
+          "observed_paragraph_token_ids_sha256": "a4e16d5a965500eabfa978cae7dbaf59205a1b60bfcaf9237c00a9be09a3c314",
+          "original_generated_prefix_ids_sha256": "45c6028b46662a9799b0a8327b73795b4c3f20e908909aeca48534fdb0883c7e",
+          "observed_paragraph_trace_char_span": [
+            13008,
+            13196
+          ],
+          "quoted_text": "But according to this method, solving equations gives q=-33/5.",
+          "quote_trace_char_span": [
+            13094,
+            13156
+          ],
+          "quote_covering_original_token_span": [
+            5879,
+            5895
+          ],
+          "quote_covering_original_token_ids": [
+            1988,
+            4092,
+            311,
+            419,
+            1714,
+            11,
+            21828,
+            37906,
+            6696,
+            2804,
+            10829,
+            18,
+            18,
+            14,
+            20,
+            13
+          ],
+          "quote_char_span_within_covering_tokens": [
+            1,
+            63
+          ]
+        }
+      },
+      "status": "SCOPED_POLYNOMIAL_CERTIFICATES_OFFLINE",
+      "prior_candidate_paragraph": 150,
+      "earliest_tentative_wrong_coefficient_paragraph": 168,
+      "earliest_asserted_wrong_coefficient_paragraph": 170,
+      "incorrect_q_derived_paragraph": 231,
+      "first_explicit_contradiction_paragraph": 232,
+      "selected_completed_conflict_paragraph": 233,
+      "licensed_scope": {
+        "monic_quotient_observed_paragraph": 158,
+        "degree8_coefficient_observed_paragraph": 167,
+        "problem_degree8_coefficient": 0,
+        "required_a": 3,
+        "license": "Original dividend has no x^8 term. Multiplying the observed monic cubic and sextic yields a-3 at x^8, giving a=3 before paragraph 170.",
+        "degree7_sources_paragraphs": [
+          161,
+          162,
+          163,
+          170
+        ],
+        "actual_coefficient": "b-3a+4",
+        "claimed_coefficient": "a+b",
+        "actual_minus_claimed": "4-4a=-8; b cancels exactly",
+        "witness_a_b": [
+          3,
+          5
+        ],
+        "witness_license": "The exact quotient of the previously observed candidate has x^5 coefficient 3 and x^4 coefficient 5."
+      },
+      "prior_candidate_divisibility_certificate": {
+        "target": {
+          "id": "rank88_prior_candidate",
+          "version": 0,
+          "kind": "justification",
+          "certificate_type": "POLYNOMIAL_DIVISIBILITY",
+          "scope": {
+            "id": "dev_w_rank88",
+            "version": 0,
+            "coefficient_domain": "Q",
+            "domains": {
+              "x": {
+                "kind": "rational"
+              }
+            }
+          },
+          "statement": {
+            "dividend": {
+              "op": "sub",
+              "lhs": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "add",
+                    "args": [
+                      {
+                        "op": "pow",
+                        "base": {
+                          "op": "var",
+                          "name": "x"
+                        },
+                        "exp": 9
+                      },
+                      {
+                        "op": "mul",
+                        "args": [
+                          6,
+                          {
+                            "op": "pow",
+                            "base": {
+                              "op": "var",
+                              "name": "x"
+                            },
+                            "exp": 6
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "op": "mul",
+                    "args": [
+                      31,
+                      {
+                        "op": "pow",
+                        "base": {
+                          "op": "var",
+                          "name": "x"
+                        },
+                        "exp": 3
+                      }
+                    ]
+                  }
+                ]
+              },
+              "rhs": 1
+            },
+            "divisor": {
+              "op": "sub",
+              "lhs": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "sub",
+                    "lhs": {
+                      "op": "pow",
+                      "base": {
+                        "op": "var",
+                        "name": "x"
+                      },
+                      "exp": 3
+                    },
+                    "rhs": {
+                      "op": "mul",
+                      "args": [
+                        3,
+                        {
+                          "op": "pow",
+                          "base": {
+                            "op": "var",
+                            "name": "x"
+                          },
+                          "exp": 2
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "op": "mul",
+                    "args": [
+                      4,
+                      {
+                        "op": "var",
+                        "name": "x"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "rhs": 1
+            }
+          },
+          "required_premises": [],
+          "source_span": [
+            3327,
+            3345
+          ],
+          "observed_prefix_sha256": "eb62ccfaec00d25b73ec42054a951fa91bd82c62b9c05645b22f6acfe267ea2a"
+        },
+        "request": {
+          "binding": {
+            "target": {
+              "id": "rank88_prior_candidate",
+              "version": 0,
+              "sha256": "848812030b12de783e8e0b3f1b23d6a00e0ef7efc02390964650b724c81984d3"
+            },
+            "scope": {
+              "id": "dev_w_rank88",
+              "version": 0,
+              "sha256": "536108d8724e46298a94d818b5ae5a4dfeab853b95bf219b323e59fb99e8c965"
+            },
+            "premises": []
+          },
+          "mode": "verify"
+        },
+        "result": {
+          "status": "VERIFIED",
+          "verdict": "PASS",
+          "truth": true,
+          "reason": "checked_exact_symbolic_statement",
+          "binding": {
+            "target": {
+              "id": "rank88_prior_candidate",
+              "version": 0,
+              "sha256": "848812030b12de783e8e0b3f1b23d6a00e0ef7efc02390964650b724c81984d3"
+            },
+            "scope": {
+              "id": "dev_w_rank88",
+              "version": 0,
+              "sha256": "536108d8724e46298a94d818b5ae5a4dfeab853b95bf219b323e59fb99e8c965"
+            },
+            "premises": []
+          },
+          "witness": {
+            "variables": [
+              "x"
+            ],
+            "coefficient_domain": "Q",
+            "original_denominator_checks": [],
+            "semantics": "formal_polynomial_divisibility",
+            "quotient": {
+              "term_count": 7,
+              "terms": [
+                {
+                  "exponents": [
+                    0
+                  ],
+                  "coefficient": "1"
+                },
+                {
+                  "exponents": [
+                    1
+                  ],
+                  "coefficient": "4"
+                },
+                {
+                  "exponents": [
+                    2
+                  ],
+                  "coefficient": "13"
+                },
+                {
+                  "exponents": [
+                    3
+                  ],
+                  "coefficient": "10"
+                },
+                {
+                  "exponents": [
+                    4
+                  ],
+                  "coefficient": "5"
+                },
+                {
+                  "exponents": [
+                    5
+                  ],
+                  "coefficient": "3"
+                },
+                {
+                  "exponents": [
+                    6
+                  ],
+                  "coefficient": "1"
+                }
+              ],
+              "sha256": "833870bf9d25d1e593fa0c1edd0ce4bcc17e6aced393b3b91157f14b8b17b55d"
+            },
+            "remainder": {
+              "term_count": 0,
+              "terms": [],
+              "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            "quotient_in_coefficient_ring": true
+          },
+          "trace": [
+            {
+              "stage": "snapshot",
+              "premises_bound": 0,
+              "result": "matched"
+            },
+            {
+              "stage": "exact_check",
+              "result": "VERIFIED",
+              "reason": "checked_exact_symbolic_statement"
+            }
+          ],
+          "work_units": 323,
+          "certificate": {
+            "checker_id": "restricted-math-json-v1",
+            "certificate_type": "POLYNOMIAL_DIVISIBILITY",
+            "binding_sha256": "44ca7d9326f57d44e650996d0deec73cbb34d82967058f204ffc6dd024e70731",
+            "request_sha256": "5ed463efe9f04693e8d3a0be2b0419ce324c1afcadd94e0d82c344e73546cbc3",
+            "status": "VERIFIED",
+            "truth": true,
+            "witness_sha256": "c836c891e3a850beb62f8146526a44d00a138776cd5f4357e297a8b93c5399f8",
+            "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+            "sha256": "2b8835b9fd184b01b4c07c8e947fee9ff20da36d4555fde6daed319b2b4fa96c"
+          }
+        }
+      },
+      "wrong_degree7_scoped_certificate": {
+        "target": {
+          "id": "rank88_wrong_x7_coefficient",
+          "version": 0,
+          "kind": "justification",
+          "certificate_type": "POLYNOMIAL_IDENTITY",
+          "scope": {
+            "id": "dev_w_rank88",
+            "version": 0,
+            "coefficient_domain": "Q",
+            "domains": {
+              "a": {
+                "kind": "rational",
+                "values": [
+                  3
+                ]
+              },
+              "b": {
+                "kind": "rational",
+                "values": [
+                  5
+                ]
+              }
+            }
+          },
+          "statement": {
+            "lhs": {
+              "op": "add",
+              "args": [
+                {
+                  "op": "sub",
+                  "lhs": {
+                    "op": "var",
+                    "name": "b"
+                  },
+                  "rhs": {
+                    "op": "mul",
+                    "args": [
+                      3,
+                      {
+                        "op": "var",
+                        "name": "a"
+                      }
+                    ]
+                  }
+                },
+                4
+              ]
+            },
+            "rhs": {
+              "op": "add",
+              "args": [
+                {
+                  "op": "var",
+                  "name": "a"
+                },
+                {
+                  "op": "var",
+                  "name": "b"
+                }
+              ]
+            }
+          },
+          "required_premises": [],
+          "source_span": [
+            4379,
+            4421
+          ],
+          "observed_prefix_sha256": "65c14fb0d2c06334ac95ab909f531043621203b0fc80daa1ad3d81a339655f55"
+        },
+        "request": {
+          "binding": {
+            "target": {
+              "id": "rank88_wrong_x7_coefficient",
+              "version": 0,
+              "sha256": "dbf7b21c118c92cce8de24e81c583475428f840125722f5fa732c29fe37cc99f"
+            },
+            "scope": {
+              "id": "dev_w_rank88",
+              "version": 0,
+              "sha256": "35b2f745b854ea5e4f8272cff6eeb5d8085c4726d3655351541810139b9637f7"
+            },
+            "premises": []
+          },
+          "mode": "verify"
+        },
+        "result": {
+          "status": "INVALID_JUSTIFICATION",
+          "verdict": "PASS",
+          "truth": false,
+          "reason": "checked_exact_symbolic_statement",
+          "binding": {
+            "target": {
+              "id": "rank88_wrong_x7_coefficient",
+              "version": 0,
+              "sha256": "dbf7b21c118c92cce8de24e81c583475428f840125722f5fa732c29fe37cc99f"
+            },
+            "scope": {
+              "id": "dev_w_rank88",
+              "version": 0,
+              "sha256": "35b2f745b854ea5e4f8272cff6eeb5d8085c4726d3655351541810139b9637f7"
+            },
+            "premises": []
+          },
+          "witness": {
+            "variables": [
+              "a",
+              "b"
+            ],
+            "coefficient_domain": "Q",
+            "original_denominator_checks": [],
+            "normalized_difference": {
+              "term_count": 2,
+              "terms": [
+                {
+                  "exponents": [
+                    0,
+                    0
+                  ],
+                  "coefficient": "4"
+                },
+                {
+                  "exponents": [
+                    1,
+                    0
+                  ],
+                  "coefficient": "-4"
+                }
+              ],
+              "sha256": "f5719c0926c7de825ee28f1003a9ce19be61ced37519fe27d4321fe49bec4bd9"
+            },
+            "semantics": "scoped_equality_with_original_definedness",
+            "counterexample": {
+              "assignment": {
+                "a": "3",
+                "b": "5"
+              },
+              "lhs": "0",
+              "rhs": "8"
+            }
+          },
+          "trace": [
+            {
+              "stage": "snapshot",
+              "premises_bound": 0,
+              "result": "matched"
+            },
+            {
+              "stage": "exact_check",
+              "result": "INVALID_JUSTIFICATION",
+              "reason": "checked_exact_symbolic_statement"
+            }
+          ],
+          "work_units": 65,
+          "certificate": {
+            "checker_id": "restricted-math-json-v1",
+            "certificate_type": "POLYNOMIAL_IDENTITY",
+            "binding_sha256": "a62f1ecb50d4bc90a478abf0a75ae557670bfc10d70d9af6b89bb718be738bb4",
+            "request_sha256": "7002ba492755958197f126c1031ec4a3c5eee21649eb8d3a86d22c1fc988ed6e",
+            "status": "INVALID_JUSTIFICATION",
+            "truth": false,
+            "witness_sha256": "d45c88b31915425c31a384e2d423615bb9b31a92a2b9b704edba23a0a718cee2",
+            "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+            "sha256": "1eab272079fff0a950dad9e05328f097aaa9190d1490adb3379d05c0f4e793d6"
+          }
+        }
+      },
+      "scope_limit": "Zero remainder verifies that the observed triple satisfies the given divisibility. No uniqueness or full derivation certificate is inferred.",
+      "authorized_revision": false,
+      "blocked_by": [
+        "manual_exact_object_binding_offline_only",
+        "no_original_RNG_KV_or_live_state"
+      ]
+    }
+  ]
+}

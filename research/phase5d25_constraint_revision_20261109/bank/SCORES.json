@@ -1,0 +1,1335 @@
+{
+  "status": "COMPLETE",
+  "freeze_sha256": "5fb0ffc835f2eb8d1c785b4fa7912b0143560bb5aa2eeae90b40ca9270909819",
+  "first_reference_read_utc": "2026-11-09T10:03:15.473752+00:00",
+  "scoring_seconds": 3.7879475774243474,
+  "bank": "bank",
+  "backend": {
+    "status": "ok",
+    "versions": {
+      "math-verify": "0.9.0",
+      "latex2sympy2_extended": "1.11.0"
+    }
+  },
+  "scope": "Whole-object answer extraction before semantic comparison. All matching raw cases remain in the denominator.",
+  "summaries": [
+    {
+      "evaluation_partition": "native_bank",
+      "arm": "NativeContinue",
+      "trajectories": 32,
+      "distinct_problems": 16,
+      "correct": 16,
+      "unknown": 0,
+      "EOS": 32
+    }
+  ],
+  "scores": [
+    {
+      "path": "bank/native_results/worker_0/D3_E01_20261109/result.json",
+      "sha256": "5ff07158a7e53823285881b17952a039c1cf17885a826040a4922a8ad96bd3e6",
+      "case_id": "D3_E01",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "480b3119942f795edf3e4bbe3e5edd7cb0cfed1d78c29d687739750cec14eec5",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "not_delivered",
+        "correct": false
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E01_20261110/result.json",
+      "sha256": "677b604a6fa775cc27bc8c62069af6987c88675bada3fb326da8158a55f76d87",
+      "case_id": "D3_E01",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "397c0b88518f69a6feddf912bae3e4599a6c51f74b229fdfa84da1dbb51f18d3",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload",
+        "selected_span": [
+          2749,
+          2837
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "not_delivered",
+        "correct": false
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E02_20261109/result.json",
+      "sha256": "8a0bd1d7a5c9a9d58fc914ddaf88f91222ca71a67b6f7c688df457b5a4fd8a5c",
+      "case_id": "D3_E02",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "675d5396781d69d91e76b30efc03de530a4fa0ca36a71abe1e90da87284d2244",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "12"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "terminal_boxed_block",
+        "selected_span": [
+          3851,
+          3869
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": false,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E02_20261110/result.json",
+      "sha256": "7f0793dae89508bb2d6c19bcc38cae98aba51e6e4017ca7542601106bb516a1c",
+      "case_id": "D3_E02",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "73786ceb189c09ba5b28723c24a01b7bf8d844ea6a41e61b82570e56ff2fe3a8",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "16"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          3018,
+          3034
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": false,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E03_20261109/result.json",
+      "sha256": "db4327c9a4c04f95f3686f67a3f33474c7cd9c48839687e041889e6b55d2b994",
+      "case_id": "D3_E03",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "23501d643a879a4df2b4adbe138e122c4e5322655718d1d8b913266a7926353d",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "699"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2587,
+          2604
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E03_20261110/result.json",
+      "sha256": "04927e4c65ec0426ea507591a4276981d93d6283a8a05f9300900086f938f5c8",
+      "case_id": "D3_E03",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "0361630ed012994cc9e585b58e81d43c9777c2e51701fbc72ee0561530e278f4",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "699"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2204,
+          2221
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E04_20261109/result.json",
+      "sha256": "f971337ab407346110805014e5724f1592501d6db9ac247546764af5e5fce198",
+      "case_id": "D3_E04",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "6ee6443c6c12cfb409177f39ca5d663a7c5d8562ab82f5b940fa704683a4b312",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "601"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          3555,
+          3572
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E04_20261110/result.json",
+      "sha256": "7d3668ed1fa665d8f9f3ed90e88217bec6ac6fb417ae3580dbc8d12bb6b87a27",
+      "case_id": "D3_E04",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "3f31ce5fb0b6efcdb64bb980e14b4e2aa8ae414acfca643a1be45b157487f574",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "601"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          3619,
+          3636
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E05_20261109/result.json",
+      "sha256": "869bb311fadba005d39cd4666efbd9445d87da376ff3f6a19aca901529b26434",
+      "case_id": "D3_E05",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "be31f0e70073f0a2d4406aa1305dde73560b9369febcb49617d4ad99bcea7d3c",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "uncertain_final_object"
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "not_delivered",
+        "correct": false
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E05_20261110/result.json",
+      "sha256": "a8e8fb5d56c6ace795bf1c050278bd86f6a4cb8f8e4805e82402ce09e0aa4c6f",
+      "case_id": "D3_E05",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "ab98c73232083db5f3e797816488dd86d2c2a123d25e6310b1a6cbf819be4e6c",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "uncertain_final_object"
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "not_delivered",
+        "correct": false
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E06_20261109/result.json",
+      "sha256": "70267efb3fcc69f5966d8a77fc4164a7b37708e4a3d3cac44575bb86fedb3e11",
+      "case_id": "D3_E06",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "c2fa453f62b6c82cdd19712e802728c63358929db3f0943e80258d7741b1554b",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "415"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2586,
+          2603
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": false,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E06_20261110/result.json",
+      "sha256": "203843e0815d922a96d016b79c146174c3a421762564d6c14fa472dc031aa0b6",
+      "case_id": "D3_E06",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "528c55215e02d2c53b2f371aae62e21433db46a8b33bfb74349a82561f469958",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "alternative_final_objects"
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "not_delivered",
+        "correct": false
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E07_20261109/result.json",
+      "sha256": "c3e1e079aef59e69be20abc3bb87e2fff82d130f028880e839ad5bb8040cd1cb",
+      "case_id": "D3_E07",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "bc6b9d78bcb30ae81eb2bb4861d176269975b339b5d033d0eb4b773754773c81",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "not_delivered",
+        "correct": false
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E07_20261110/result.json",
+      "sha256": "b8fd12398952b34d7a4528031d2a570353e76f633a2324c8581832978db11df7",
+      "case_id": "D3_E07",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v2",
+        "requested_kind": "scalar",
+        "final_response_sha256": "abe1f6b49458f7604d66306a76253b9f87af052224e96be2062b53a3d8e05b9c",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "reason": "single_boxed_rhs_of_exact_terminal_chain",
+        "selected_span": [
+          3645,
+          3656
+        ],
+        "method": "exact_final_chain_boxed_rhs",
+        "kind": "scalar",
+        "components": [
+          "271"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "chain_span": [
+          3625,
+          3657
+        ],
+        "exact_chain_value": "271",
+        "checked_chain_terms": 3,
+        "local_bindings": {
+          "m": {
+            "value": "40",
+            "span": [
+              3592,
+              3602
+            ]
+          },
+          "n": {
+            "value": "231",
+            "span": [
+              3604,
+              3615
+            ]
+          }
+        }
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": false,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E08_20261109/result.json",
+      "sha256": "a90a30c97efc72697a9a5c6c25a699bde0397c81854895af580c1dc2554e9450",
+      "case_id": "D3_E08",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "04e69bacfed2d97892a930dddbf8d5e7be7f9d5f81931921daef085f5d7e17a5",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "\\dfrac{637}{3}"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2271,
+          2299
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": false,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E08_20261110/result.json",
+      "sha256": "69b6b0ab822fbdc5457e22696929ff95783a77be9f9693d85c1a06a277dc5742",
+      "case_id": "D3_E08",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "3583f8cc889c64cd43e3fbfc5d10307583320ab1b4baae494d4aa526f93289c0",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "\\dfrac{287}{3}"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          3114,
+          3142
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": false,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E09_20261109/result.json",
+      "sha256": "c5f74c72b9402d70e57ed204d7bd9fd340b7a8d8adfb19e1cfd5aec9750a0f0b",
+      "case_id": "D3_E09",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "e5f3e502c13352d7de24f018066daab837aafe6e16c3ce8d282e31cdd3326903",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "491"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2071,
+          2088
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E09_20261110/result.json",
+      "sha256": "ae96701b397b0744a3999c8ad49bed941534c70d491e46c6385548755b2672da",
+      "case_id": "D3_E09",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "e2c671264d26c7ca0defcd666d0bff0f654c0d9535f7596d064cad3b134d8ace",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "491"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1845,
+          1862
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E10_20261109/result.json",
+      "sha256": "31a21f02eedc735851751faae315048f187c747b3dc1f97e16d512d9d0ba2db1",
+      "case_id": "D3_E10",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "8ee4c1b13f52252ec82462c122717f21bd26b9b689bfc33832991e827930a099",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "3"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          951,
+          966
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E10_20261110/result.json",
+      "sha256": "9ee7a7a87e0861bb6d538d23842ac9878dafac5c8d6c6c1913bddbfed14bf199",
+      "case_id": "D3_E10",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "4f66eef20e259dd29297e325ad39bbb64babd9cc2e1924d5c99b300709c923b5",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "3"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1157,
+          1172
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E11_20261109/result.json",
+      "sha256": "21cf3dcc4316767f67fb9b45353b4b76996a58c06ed4948e4408b5d8d82ea310",
+      "case_id": "D3_E11",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "f5138aa8979211d86341b2f028fbd859f21bccdb54edb6b96eda24a3ea7c56fc",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "650"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1445,
+          1462
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E11_20261110/result.json",
+      "sha256": "43532297fce454904c5161173bd5b765adcbd4e40b9585fc6f464cb8d7b4315f",
+      "case_id": "D3_E11",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "7bbb38657a5b8855fd24857b3ca7863d2ea48fc9ac9de7da80495df156898a13",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "650"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1342,
+          1359
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E12_20261109/result.json",
+      "sha256": "4398f344ab2f19a4bf2137570bbf15ec08b9477d3c05add128cabe97297b4240",
+      "case_id": "D3_E12",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "1a48af1e24a6d6b292b200a9ab2b26ae62b0dcfc68212d351af43280eb8e5c47",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "61"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2857,
+          2873
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E12_20261110/result.json",
+      "sha256": "7e49a6b442143ee7b43da32d04bc170c02c51a338dfd64c4f9e050b4d17474ff",
+      "case_id": "D3_E12",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "fa96517e68a0f9ca2074cc301348942c26aa882314bc46bb36985dde2add5eaa",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "45"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          4066,
+          4082
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": false,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E13_20261109/result.json",
+      "sha256": "e71bd5ebb0363da0d1b6085efa7574a9661e3bcb1684fccc0d736eb7748d2972",
+      "case_id": "D3_E13",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "b1330e99a3471904199ef0968e32ad04109afba8c0fd12e3746854a465a64371",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "2"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2901,
+          2916
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E13_20261110/result.json",
+      "sha256": "9bf6bbc6c5f3175343a5b64099b0a93e30e98de971381e9069b9bebe0f1582c7",
+      "case_id": "D3_E13",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "a6a468abda9f53ccad6867d86fcafdb0cfced24deec4ae9995c1dcbf5941094c",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "2"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          4234,
+          4249
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E14_20261109/result.json",
+      "sha256": "e6ec08c93ee5b7ed9c526a3085ef4a5071a27119e0317b7df68329cb19954178",
+      "case_id": "D3_E14",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "81f6b1c35f31c9f4cf204172819c0eb121d166df7ae27372161cb226c3afc3b2",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "21"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          3097,
+          3113
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": false,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E14_20261110/result.json",
+      "sha256": "dd7bbbd5de160d0f58043d377e95b73bb9e2bfe016412178f206c8785c1dd287",
+      "case_id": "D3_E14",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "ae21cac22ef666e7c80de91224bd835c380d318a9aafa8c93f3053843ef120ca",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "105"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          3912,
+          3929
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": false,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E15_20261109/result.json",
+      "sha256": "05670e8f01b7ef0660289eb4fafb3b352feb5862dd489ce68e702ac9a88bace8",
+      "case_id": "D3_E15",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "e34adf8dfbe6af5b1cbd2f7c4082f61b5ea4feadef7a02adcf2271bb79fdd378",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2531,
+          2553
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E15_20261110/result.json",
+      "sha256": "f57d658638a95d86a9643d6a308baf1cb8f57c3993d0b18af30fff04d3b88b7b",
+      "case_id": "D3_E15",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "5327fde7484f5c6ee3c99064d93cb8ff14f9f3ea6d14b56df7b32ad338d99774",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2325,
+          2345
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": false,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_1/D3_E16_20261109/result.json",
+      "sha256": "df298e53bd637a09febb1b2717261cd31775c6455a1a346ef9d1bd972cc748e0",
+      "case_id": "D3_E16",
+      "seed": 20261109,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "54c9bf5838c152e8daa6f835404e541ce5ed66f40dd037af654c7b56587872c8",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "36"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2522,
+          2538
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "bank/native_results/worker_0/D3_E16_20261110/result.json",
+      "sha256": "3a3e85d3843060cbcd85b564685983bbf11ef52e56da90869bd1f6e20e7e544a",
+      "case_id": "D3_E16",
+      "seed": 20261110,
+      "arm": "NativeContinue",
+      "evaluation_partition": "native_bank",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "d32629db1494c87f17b4e9332513d549ceef4badc80f2221e4a1732b4c984dbe",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "36"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2683,
+          2699
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "whole_scalar",
+        "candidate_arity": 1,
+        "gold_arity": 1,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    }
+  ]
+}

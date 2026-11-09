@@ -1,0 +1,343 @@
+{
+  "status": "PASS",
+  "identity_retrieval_sha256": "4206d9237dbe86adb644c10c645aa9b2f09eec9c0a8aee8e4a544ae2f3035579",
+  "identity_freeze_sha256": "d3cc55f08f10c315dbc19318a1164be1083bbc4e346be33057f18e64ad41d69c",
+  "retrieval_entries_verified": 39,
+  "frozen_inputs_verified": 19,
+  "original_d2_sources_verified": 4,
+  "identity_gates_passed": 4,
+  "identity_EOS_outputs": 8,
+  "all_EOS_including_control": 10,
+  "matched_continuation_tokens": 12096,
+  "post_proposal_logit_comparisons": 11991,
+  "maximum_post_proposal_logit_difference": 0.0,
+  "paid_work": {
+    "forward_calls": 36274,
+    "forward_input_tokens": 37901,
+    "attention_pairs": 154107146
+  },
+  "paid_work_by_stage": {
+    "AcceptedRefutation_decode": {
+      "forward_calls": 429,
+      "forward_input_tokens": 429,
+      "attention_pairs": 118833
+    },
+    "ScopeRejectedWitness_decode": {
+      "forward_calls": 553,
+      "forward_input_tokens": 553,
+      "attention_pairs": 204610
+    },
+    "checkpoint_schedule_replay": {
+      "forward_calls": 10848,
+      "forward_input_tokens": 11147,
+      "attention_pairs": 22835464
+    },
+    "controlled_checkpoint": {
+      "forward_calls": 12,
+      "forward_input_tokens": 52,
+      "attention_pairs": 1378
+    },
+    "controlled_replay": {
+      "forward_calls": 2,
+      "forward_input_tokens": 42,
+      "attention_pairs": 903
+    },
+    "controlled_verified_bridge": {
+      "forward_calls": 20,
+      "forward_input_tokens": 20,
+      "attention_pairs": 1050
+    },
+    "identity_adopted_decode": {
+      "forward_calls": 11987,
+      "forward_input_tokens": 11987,
+      "attention_pairs": 65104784
+    },
+    "identity_direct_decode": {
+      "forward_calls": 11987,
+      "forward_input_tokens": 11987,
+      "attention_pairs": 65104784
+    },
+    "identity_direct_proposal": {
+      "forward_calls": 105,
+      "forward_input_tokens": 105,
+      "attention_pairs": 282703
+    },
+    "independent_audit_decode": {
+      "forward_calls": 138,
+      "forward_input_tokens": 138,
+      "attention_pairs": 31573
+    },
+    "independent_audit_prefill": {
+      "forward_calls": 6,
+      "forward_input_tokens": 1254,
+      "attention_pairs": 132375
+    },
+    "reflection_proposal": {
+      "forward_calls": 187,
+      "forward_input_tokens": 187,
+      "attention_pairs": 288689
+    }
+  },
+  "identity_gate_case_seconds": 1304.2956475904211,
+  "isolated_identity_audit_seconds": 5.692650323733687,
+  "isolated_identity_audit_generated_tokens": 106,
+  "isolated_identity_audit_work": {
+    "forward_calls": 106,
+    "forward_input_tokens": 980,
+    "attention_pairs": 121297
+  },
+  "sum_worker_seconds": 1982.5627120742574,
+  "sum_GPU_worker_minutes": 33.04271186790429,
+  "parallel_launcher_wall_seconds": 1039.3403647122905,
+  "peak_cuda_allocated_bytes": 11638140928,
+  "cases": [
+    {
+      "case_id": "D2_05",
+      "seed": 20261107,
+      "worker": 0,
+      "source_sha256": "fb912588927acaed2ae05d71d7b8a6294d4bdfef1b58c71c3b0f1fb4f1153faa",
+      "original_prefix_sha256": "7a59e5cfdf49ed75cf7c7551915903cad53143beab0205c9e2fd649fe9598dff",
+      "checkpoint_id": "D2_05_20261107_157",
+      "generated_sha256": "79bd61087675f2bc05c608beee9a23acbc79b6e73095c9e842fe27c0d1fc4f00",
+      "native_outputs_EOS": 2,
+      "matched_continuation_tokens": 4951,
+      "proposal_tokens": 31,
+      "post_proposal_logit_comparisons": 4920,
+      "recorded_gate_flags": {
+        "merge_token_kv_logits_rng_equal": true,
+        "source_kv_logits_rng_unmodified": true,
+        "terminal_token_kv_rng_eos_equal": true,
+        "matches_d2_full_generated_ids": true,
+        "all_sampled_tokens_equal": true,
+        "all_compared_rng_equal": true
+      },
+      "maximum_logit_difference": 0.0,
+      "audit_seed": 1129982776832938432,
+      "audit_prompt_sha256": "740cd8ebe2e817b1e36688dbf402b7ffa5e041e917415496b036abd3390353a9",
+      "audit_input_tokens": 223,
+      "audit_generated_tokens": 53,
+      "audit_paid_work": {
+        "forward_calls": 53,
+        "forward_input_tokens": 275,
+        "attention_pairs": 37950
+      },
+      "audit_wall_seconds": 2.8327553626149893,
+      "event_seconds": 4.599856797605753,
+      "identity_seconds": 536.8192043565214,
+      "setup_paid_work": {
+        "forward_calls": 4536,
+        "forward_input_tokens": 4625,
+        "attention_pairs": 10697625
+      },
+      "peak_allocated_bytes": 11638140928,
+      "paid_work": {
+        "forward_calls": 14489,
+        "forward_input_tokens": 14800,
+        "attention_pairs": 81030525
+      }
+    },
+    {
+      "case_id": "D2_15",
+      "seed": 20261108,
+      "worker": 1,
+      "source_sha256": "83054bb6df5f23dd18cd3dffd3dadf151f76a79381627c2af386bbdb66bb159b",
+      "original_prefix_sha256": "40bb4985cbb2a97869b800e71ad59ee40529c3710b4e453384016c647227e5b2",
+      "checkpoint_id": "D2_15_20261108_129",
+      "generated_sha256": "e5328bd7a2bbb2b7e116fb446d17ae487f07ce8cd08305dcf5acd20636eaceea",
+      "native_outputs_EOS": 2,
+      "matched_continuation_tokens": 3611,
+      "proposal_tokens": 17,
+      "post_proposal_logit_comparisons": 3594,
+      "recorded_gate_flags": {
+        "merge_token_kv_logits_rng_equal": true,
+        "source_kv_logits_rng_unmodified": true,
+        "terminal_token_kv_rng_eos_equal": true,
+        "matches_d2_full_generated_ids": true,
+        "all_sampled_tokens_equal": true,
+        "all_compared_rng_equal": true
+      },
+      "maximum_logit_difference": 0.0,
+      "audit_seed": 911036675360659200,
+      "audit_prompt_sha256": "4bae76c26929f20e2882d14e8ac91d47a30499890986b3e58878dd99a7722163",
+      "audit_input_tokens": 217,
+      "audit_generated_tokens": 7,
+      "audit_paid_work": {
+        "forward_calls": 7,
+        "forward_input_tokens": 223,
+        "attention_pairs": 24976
+      },
+      "audit_wall_seconds": 0.4134636577218771,
+      "event_seconds": 1.5136768715456128,
+      "identity_seconds": 386.7656040415168,
+      "setup_paid_work": {
+        "forward_calls": 4665,
+        "forward_input_tokens": 4732,
+        "attention_pairs": 11198278
+      },
+      "peak_allocated_bytes": 11287757312,
+      "paid_work": {
+        "forward_calls": 11892,
+        "forward_input_tokens": 12175,
+        "attention_pairs": 58424004
+      }
+    },
+    {
+      "case_id": "D2_02",
+      "seed": 20261108,
+      "worker": 0,
+      "source_sha256": "851e6398dfcfe507a63ac7570826c861a80cd5c83b916e134ccc46fa477bb3d7",
+      "original_prefix_sha256": "eee6a666890d8c9ea429ebfbcf34de13a0881d8c3d77f4eebfdffdae53f0ab6f",
+      "checkpoint_id": "D2_02_20261108_11",
+      "generated_sha256": "89019561bd128d8e7ee054d15d21cecdd6b94a8c21251a725de0b5eb8fac7005",
+      "native_outputs_EOS": 2,
+      "matched_continuation_tokens": 1434,
+      "proposal_tokens": 20,
+      "post_proposal_logit_comparisons": 1414,
+      "recorded_gate_flags": {
+        "merge_token_kv_logits_rng_equal": true,
+        "source_kv_logits_rng_unmodified": true,
+        "terminal_token_kv_rng_eos_equal": true,
+        "matches_d2_full_generated_ids": true,
+        "all_sampled_tokens_equal": true,
+        "all_compared_rng_equal": true
+      },
+      "maximum_logit_difference": 0.0,
+      "audit_seed": 278637813166829018,
+      "audit_prompt_sha256": "dea927475996fc833488dac49a8aa116e84134aea360be3f8f5d224fe6f73c28",
+      "audit_input_tokens": 224,
+      "audit_generated_tokens": 25,
+      "audit_paid_work": {
+        "forward_calls": 25,
+        "forward_input_tokens": 248,
+        "attention_pairs": 30876
+      },
+      "audit_wall_seconds": 1.336219858378172,
+      "event_seconds": 2.4107866287231445,
+      "identity_seconds": 155.45303936302662,
+      "setup_paid_work": {
+        "forward_calls": 460,
+        "forward_input_tokens": 524,
+        "attention_pairs": 137550
+      },
+      "peak_allocated_bytes": 8805910016,
+      "paid_work": {
+        "forward_calls": 3351,
+        "forward_input_tokens": 3638,
+        "attention_pairs": 3725132
+      }
+    },
+    {
+      "case_id": "D2_07",
+      "seed": 20261108,
+      "worker": 1,
+      "source_sha256": "a4beddc08d426c7d1a1b09d766a4b0965a05770937131a2ea2e4ff734cf1b0e4",
+      "original_prefix_sha256": "8422b911b54f08509a3eefd95ae3d416b2e1c0c337490812d2933e5b7db543b9",
+      "checkpoint_id": "D2_07_20261108_42",
+      "generated_sha256": "5febd702c08db266c17ac013b1a796a003e8de204fa8da2614e017221fe85fee",
+      "native_outputs_EOS": 2,
+      "matched_continuation_tokens": 2100,
+      "proposal_tokens": 37,
+      "post_proposal_logit_comparisons": 2063,
+      "recorded_gate_flags": {
+        "merge_token_kv_logits_rng_equal": true,
+        "source_kv_logits_rng_unmodified": true,
+        "terminal_token_kv_rng_eos_equal": true,
+        "matches_d2_full_generated_ids": true,
+        "all_sampled_tokens_equal": true,
+        "all_compared_rng_equal": true
+      },
+      "maximum_logit_difference": 0.0,
+      "audit_seed": 332185976564789897,
+      "audit_prompt_sha256": "19fb9ed97e06cbe187a4e15b82a5e5105b59d58a6af7a17d65bf17288c095b9f",
+      "audit_input_tokens": 214,
+      "audit_generated_tokens": 21,
+      "audit_paid_work": {
+        "forward_calls": 21,
+        "forward_input_tokens": 234,
+        "attention_pairs": 27495
+      },
+      "audit_wall_seconds": 1.110211445018649,
+      "event_seconds": 3.068709106184542,
+      "identity_seconds": 225.25779982935637,
+      "setup_paid_work": {
+        "forward_calls": 1187,
+        "forward_input_tokens": 1266,
+        "attention_pairs": 802011
+      },
+      "peak_allocated_bytes": 9340832256,
+      "paid_work": {
+        "forward_calls": 5406,
+        "forward_input_tokens": 5698,
+        "attention_pairs": 10552074
+      }
+    }
+  ],
+  "controlled_action": {
+    "status": "PASS",
+    "controlled_actions_not_natural": true,
+    "out_of_scope_x": -1,
+    "out_of_scope_status": "INVALID_COUNTEREXAMPLE",
+    "out_of_scope_decision": "ADOPT_NATIVE",
+    "unscoped_minus_one_status": "REFUTED_CLAIM",
+    "valid_in_scope_x": 2,
+    "in_scope_status": "REFUTED_CLAIM",
+    "in_scope_decision": "REBASE",
+    "both_terminal_EOS": true,
+    "controlled_rebase_new_KV_and_verified_bridge": true,
+    "unverified_auditor_outputs_used_as_verified_witness": false,
+    "identical_scope_audit_seed": 673733726700791069,
+    "different_scope_audit_prompt_sha256": [
+      "7141cb2fb1eb84bfd1bc7d58cc6f1bc4d2c5c6427acea512f8ef3bdde93368ff",
+      "81dcf8729694dbb5db13599e3a8d8416842c674f2ce7fa4b312b3b1ae7595e61"
+    ],
+    "isolated_audit_seconds": 2.0261252634227276,
+    "isolated_audit_work": {
+      "forward_calls": 38,
+      "forward_input_tokens": 412,
+      "attention_pairs": 42651
+    },
+    "scope_rejected_event_seconds": 3.18615850713104,
+    "scope_valid_event_seconds": 3.3291607555001974,
+    "discarded_native_proposal_tokens": 41,
+    "verified_bridge_tokens": 20,
+    "wall_seconds": 60.72744736727327,
+    "peak_allocated_bytes": 8297789952,
+    "paid_work": {
+      "forward_calls": 1136,
+      "forward_input_tokens": 1590,
+      "attention_pairs": 375411
+    }
+  },
+  "historical_development_source_review": {
+    "status": "SOURCE_AND_CPU_GATE_MATCH",
+    "worker_source_sha256": "712f7de6ebcc4b8514119a3029c27ebedd0a8858f00054f46779eb5128a62fd4",
+    "packet_sha256": "4d6a57e04def4e295b78443f61d5651fa97a47ddcfd687334e607d87b86ab175",
+    "original_raw_line_sha256": "fda402ad8035aa87fa77f39bc670a28ebdd9ce3e0ed3263fee6c3ec44acb899c",
+    "source_generated_prefix_sha256": "45c6028b46662a9799b0a8327b73795b4c3f20e908909aeca48534fdb0883c7e",
+    "reconstructed_full_prefix_sha256": "614636e35145d0a6f3290839c0d91d939a49c1cc668d66310c9d7eeb13ca2d5b",
+    "historical_generated_checkpoint_tokens": 5905,
+    "generic_cut": 5850,
+    "scoped_cut": 4309,
+    "actual_a_source": [
+      5140,
+      5160
+    ],
+    "candidate_source": [
+      3327,
+      3345
+    ],
+    "a_source_paragraph": 210,
+    "pre_fault_derivability": "Original x^8 coefficient is zero and observed paragraph 167 gives a-3.",
+    "generic_context": "Retains paragraph 232 explicit contradiction, original incorrect coefficient, and written a=3.",
+    "scoped_context": "Cuts before paragraph 170; both keep the prior feasible candidate. Only Carry serializes independently checked later a=3.",
+    "scope_limits": [
+      "manually bound historical source",
+      "newly seeded continuation with reconstructed prompt",
+      "same correction text but distinct retained context",
+      "candidate divisibility certificate uses generated-only provenance hash",
+      "no exact historical RNG/KV identity",
+      "no equal-cost claim"
+    ]
+  },
+  "scope": "IDs, requests, RNG seeds, source hashes, verifier certificates, and forward work are independently rechecked. KV/logit/RNG tensor equality uses original runtime receipts because tensors were not serialized. The side audit never supplies the controlled witnesses."
+}

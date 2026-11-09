@@ -1,0 +1,938 @@
+{
+  "status": "PASS",
+  "scope": "GPU controlled injection, not natural accuracy evidence",
+  "assertion": "For every positive integer x, x=1.\n\n",
+  "checkpoint": {
+    "checkpoint_id": "D25_controlled_symbolic_action",
+    "execution_sha256": "9ec4d071c15a2f61529376af5acff8c608b270e6dde25b14df081f3ce070454e",
+    "prefix_sha256": "96ac51a2f4c9424abe5c10245f0848761cfe485876b08a53ebe417396bd3db7e",
+    "prompt_tokens": 41,
+    "generated_tokens": 11,
+    "cache_position": 52,
+    "thinking_open": true,
+    "stop_reason": "RUNNING"
+  },
+  "scope_rejection": {
+    "target": {
+      "id": "controlled_claim",
+      "version": 0,
+      "kind": "claim",
+      "certificate_type": "POLYNOMIAL_IDENTITY",
+      "scope": {
+        "id": "controlled_scope",
+        "version": 0,
+        "coefficient_domain": "Q",
+        "domains": {
+          "x": {
+            "kind": "integer",
+            "lower": 0,
+            "lower_closed": false
+          }
+        }
+      },
+      "statement": {
+        "lhs": {
+          "op": "var",
+          "name": "x"
+        },
+        "rhs": 1
+      },
+      "required_premises": [],
+      "source_span": [
+        1,
+        11
+      ],
+      "observed_prefix_sha256": "96ac51a2f4c9424abe5c10245f0848761cfe485876b08a53ebe417396bd3db7e"
+    },
+    "request": {
+      "binding": {
+        "target": {
+          "id": "controlled_claim",
+          "version": 0,
+          "sha256": "5c294f204cf1360cf7b00d5439d57b571d7e49a46e06fbe1c11d5b75cf65ae22"
+        },
+        "scope": {
+          "id": "controlled_scope",
+          "version": 0,
+          "sha256": "977ff31849dd37011ebf5b96cdb74d3fec99927a1b78c931d0b06049fc88023a"
+        },
+        "premises": []
+      },
+      "mode": "counterexample",
+      "assignment": {
+        "x": -1
+      }
+    },
+    "checker_result": {
+      "status": "INVALID_COUNTEREXAMPLE",
+      "verdict": "FAIL",
+      "truth": null,
+      "reason": "counterexample_outside_scope",
+      "binding": {
+        "target": {
+          "id": "controlled_claim",
+          "version": 0,
+          "sha256": "5c294f204cf1360cf7b00d5439d57b571d7e49a46e06fbe1c11d5b75cf65ae22"
+        },
+        "scope": {
+          "id": "controlled_scope",
+          "version": 0,
+          "sha256": "977ff31849dd37011ebf5b96cdb74d3fec99927a1b78c931d0b06049fc88023a"
+        },
+        "premises": []
+      },
+      "witness": {
+        "assignment": {
+          "x": "-1"
+        },
+        "outside_domains": [
+          "x"
+        ]
+      },
+      "trace": [
+        {
+          "stage": "snapshot",
+          "premises_bound": 0,
+          "result": "matched"
+        },
+        {
+          "stage": "exact_check",
+          "result": "INVALID_COUNTEREXAMPLE",
+          "reason": "counterexample_outside_scope"
+        }
+      ],
+      "work_units": 0,
+      "certificate": {
+        "checker_id": "restricted-math-json-v1",
+        "certificate_type": "POLYNOMIAL_IDENTITY",
+        "binding_sha256": "c1afa5f0c9a069441a29bc68f9c04073058fccef6f743c481f6576b8b5a88e05",
+        "request_sha256": "b3d0da8b3b4ff752be9dc9cce87a357fca3c59e9bec051bc9e20d11dceb5b16a",
+        "status": "INVALID_COUNTEREXAMPLE",
+        "truth": null,
+        "witness_sha256": "00175fc41c4d43bfe41ce5e39ef60173d8c389e9a69e7816b7f1e56910027ea8",
+        "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+        "sha256": "f503a34e2dca180b4c03cc55a391cff3333576364aeeb1b2e5a7dc2099709993"
+      }
+    }
+  },
+  "unscoped_acceptance": {
+    "target": {
+      "id": "controlled_claim",
+      "version": 0,
+      "kind": "claim",
+      "certificate_type": "POLYNOMIAL_IDENTITY",
+      "scope": {
+        "id": "controlled_scope",
+        "version": 0,
+        "coefficient_domain": "Q",
+        "domains": {
+          "x": {
+            "kind": "real"
+          }
+        }
+      },
+      "statement": {
+        "lhs": {
+          "op": "var",
+          "name": "x"
+        },
+        "rhs": 1
+      },
+      "required_premises": [],
+      "source_span": [
+        1,
+        11
+      ],
+      "observed_prefix_sha256": "96ac51a2f4c9424abe5c10245f0848761cfe485876b08a53ebe417396bd3db7e"
+    },
+    "request": {
+      "binding": {
+        "target": {
+          "id": "controlled_claim",
+          "version": 0,
+          "sha256": "4a24a0cd3a2e088bef3a2b74c97552fb72a9e6493fd9eecd95009f6e22d57f35"
+        },
+        "scope": {
+          "id": "controlled_scope",
+          "version": 0,
+          "sha256": "ddc3e5007ab101f7a010440960b66ad3cc58dc129cd2c2062c3823312b8f4b39"
+        },
+        "premises": []
+      },
+      "mode": "counterexample",
+      "assignment": {
+        "x": -1
+      }
+    },
+    "checker_result": {
+      "status": "REFUTED_CLAIM",
+      "verdict": "PASS",
+      "truth": false,
+      "reason": "checked_scoped_counterexample",
+      "binding": {
+        "target": {
+          "id": "controlled_claim",
+          "version": 0,
+          "sha256": "4a24a0cd3a2e088bef3a2b74c97552fb72a9e6493fd9eecd95009f6e22d57f35"
+        },
+        "scope": {
+          "id": "controlled_scope",
+          "version": 0,
+          "sha256": "ddc3e5007ab101f7a010440960b66ad3cc58dc129cd2c2062c3823312b8f4b39"
+        },
+        "premises": []
+      },
+      "witness": {
+        "lhs": "-1",
+        "rhs": "1",
+        "assignment": {
+          "x": "-1"
+        }
+      },
+      "trace": [
+        {
+          "stage": "snapshot",
+          "premises_bound": 0,
+          "result": "matched"
+        },
+        {
+          "stage": "exact_check",
+          "result": "REFUTED_CLAIM",
+          "reason": "checked_scoped_counterexample"
+        }
+      ],
+      "work_units": 4,
+      "certificate": {
+        "checker_id": "restricted-math-json-v1",
+        "certificate_type": "POLYNOMIAL_IDENTITY",
+        "binding_sha256": "c667e93a7e8df1a1a8f737404e66f873e934fc9509d5454d6289b272e365ea1f",
+        "request_sha256": "f331e064f78725574bc46b697b7a8f20a79d768e0774a4cff1a5858756ccf2b3",
+        "status": "REFUTED_CLAIM",
+        "truth": false,
+        "witness_sha256": "f57be4d8ae157659564368eccfbfaedeef5b48760de3d89c5d7fdfd863c4ae48",
+        "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+        "sha256": "dc176283df34ba70b16a52030ba844ef98cae0c70059145cd2b69049941b35fb"
+      }
+    }
+  },
+  "valid_scoped_refutation": {
+    "target": {
+      "id": "controlled_claim",
+      "version": 0,
+      "kind": "claim",
+      "certificate_type": "POLYNOMIAL_IDENTITY",
+      "scope": {
+        "id": "controlled_scope",
+        "version": 0,
+        "coefficient_domain": "Q",
+        "domains": {
+          "x": {
+            "kind": "integer",
+            "lower": 0,
+            "lower_closed": false
+          }
+        }
+      },
+      "statement": {
+        "lhs": {
+          "op": "var",
+          "name": "x"
+        },
+        "rhs": 1
+      },
+      "required_premises": [],
+      "source_span": [
+        1,
+        11
+      ],
+      "observed_prefix_sha256": "96ac51a2f4c9424abe5c10245f0848761cfe485876b08a53ebe417396bd3db7e"
+    },
+    "request": {
+      "binding": {
+        "target": {
+          "id": "controlled_claim",
+          "version": 0,
+          "sha256": "5c294f204cf1360cf7b00d5439d57b571d7e49a46e06fbe1c11d5b75cf65ae22"
+        },
+        "scope": {
+          "id": "controlled_scope",
+          "version": 0,
+          "sha256": "977ff31849dd37011ebf5b96cdb74d3fec99927a1b78c931d0b06049fc88023a"
+        },
+        "premises": []
+      },
+      "mode": "counterexample",
+      "assignment": {
+        "x": 2
+      }
+    },
+    "checker_result": {
+      "status": "REFUTED_CLAIM",
+      "verdict": "PASS",
+      "truth": false,
+      "reason": "checked_scoped_counterexample",
+      "binding": {
+        "target": {
+          "id": "controlled_claim",
+          "version": 0,
+          "sha256": "5c294f204cf1360cf7b00d5439d57b571d7e49a46e06fbe1c11d5b75cf65ae22"
+        },
+        "scope": {
+          "id": "controlled_scope",
+          "version": 0,
+          "sha256": "977ff31849dd37011ebf5b96cdb74d3fec99927a1b78c931d0b06049fc88023a"
+        },
+        "premises": []
+      },
+      "witness": {
+        "lhs": "2",
+        "rhs": "1",
+        "assignment": {
+          "x": "2"
+        }
+      },
+      "trace": [
+        {
+          "stage": "snapshot",
+          "premises_bound": 0,
+          "result": "matched"
+        },
+        {
+          "stage": "exact_check",
+          "result": "REFUTED_CLAIM",
+          "reason": "checked_scoped_counterexample"
+        }
+      ],
+      "work_units": 4,
+      "certificate": {
+        "checker_id": "restricted-math-json-v1",
+        "certificate_type": "POLYNOMIAL_IDENTITY",
+        "binding_sha256": "c1afa5f0c9a069441a29bc68f9c04073058fccef6f743c481f6576b8b5a88e05",
+        "request_sha256": "d6b6fe4a1515269142788bae5de5bcd7bc588541ba93ef1559a719b6785a18b9",
+        "status": "REFUTED_CLAIM",
+        "truth": false,
+        "witness_sha256": "c5cf564763c9105797e190b3b4d85318c6efb2cfb50de929dea58613fa80898f",
+        "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+        "sha256": "a54edc1896f45051118620f16c7c51e6967d1878cedab9fc5cb75208bec61318"
+      }
+    }
+  },
+  "same_audit_seed": true,
+  "different_audit_inputs": true,
+  "different_action_state": true,
+  "scope_rejected_event": {
+    "decision": "ADOPT_NATIVE",
+    "verification": {
+      "status": "INVALID_COUNTEREXAMPLE",
+      "reason": "out_of_scope_controlled_witness"
+    },
+    "permit": null,
+    "native_proposal_ids": [
+      14190,
+      11,
+      429,
+      594,
+      537,
+      830,
+      13,
+      1752,
+      3110,
+      11,
+      856,
+      28,
+      17,
+      374,
+      264,
+      6785,
+      7546,
+      11,
+      714,
+      220,
+      17,
+      145129,
+      16,
+      13,
+      2055,
+      279,
+      5114,
+      330,
+      2461,
+      1449,
+      6785,
+      7546,
+      856,
+      11,
+      856,
+      28,
+      16,
+      1,
+      374,
+      895,
+      382
+    ],
+    "native_proposal_text": "Wait, that's not true. For example, x=2 is a positive integer, but 2≠1. So the statement \"For every positive integer x, x=1\" is false.\n\n",
+    "native_proposal_boundary": "COMPLETED_STEP",
+    "native_proposal_cost": {
+      "wall_seconds": 2.17530139349401,
+      "initial_copy": {
+        "wall_seconds": 0.006289600394666195,
+        "cache_bytes": 7667712,
+        "logits_bytes": 607744,
+        "rng_bytes": 16
+      },
+      "generated_tokens": 41,
+      "forward_calls": 41,
+      "forward_input_tokens": 41
+    },
+    "discarded_native_tokens": 0,
+    "audit": {
+      "status": "UNVERIFIED_PROPOSAL",
+      "stop_reason": "EOS",
+      "text": "{\"op\": \"equal\", \"num\": 1, \"den\": 1}",
+      "generated_ids": [
+        4913,
+        453,
+        788,
+        330,
+        25795,
+        497,
+        330,
+        2413,
+        788,
+        220,
+        16,
+        11,
+        330,
+        5183,
+        788,
+        220,
+        16,
+        92,
+        151645
+      ],
+      "prompt_ids": [
+        151644,
+        872,
+        198,
+        3973,
+        1172,
+        279,
+        35972,
+        2169,
+        323,
+        17221,
+        33922,
+        13,
+        18877,
+        279,
+        821,
+        438,
+        5904,
+        13,
+        3155,
+        537,
+        11625,
+        279,
+        4024,
+        3491,
+        13,
+        362,
+        10981,
+        11298,
+        374,
+        650,
+        21037,
+        13,
+        1416,
+        498,
+        646,
+        2968,
+        264,
+        5546,
+        8687,
+        11,
+        470,
+        264,
+        3175,
+        4718,
+        1633,
+        448,
+        2070,
+        16319,
+        323,
+        4734,
+        7546,
+        2750,
+        476,
+        24438,
+        6171,
+        448,
+        6894,
+        1179,
+        11,
+        1629,
+        11,
+        3371,
+        13,
+        18214,
+        470,
+        61395,
+        624,
+        4913,
+        3087,
+        842,
+        788,
+        330,
+        58607,
+        84969,
+        497,
+        330,
+        15314,
+        788,
+        330,
+        34,
+        35019,
+        95875,
+        497,
+        330,
+        5481,
+        2771,
+        21663,
+        32556,
+        788,
+        7342,
+        330,
+        11849,
+        48836,
+        17,
+        20,
+        21,
+        788,
+        330,
+        24,
+        21,
+        580,
+        20,
+        16,
+        64,
+        17,
+        69,
+        19,
+        66,
+        24,
+        19,
+        17,
+        19,
+        8229,
+        20,
+        66,
+        16,
+        15,
+        17,
+        19,
+        20,
+        69,
+        15,
+        23,
+        19,
+        23,
+        22,
+        21,
+        16,
+        66,
+        1859,
+        19,
+        23,
+        20,
+        23,
+        22,
+        21,
+        65,
+        15,
+        23,
+        64,
+        20,
+        18,
+        68,
+        1371,
+        19,
+        16,
+        22,
+        18,
+        24,
+        21,
+        8940,
+        18,
+        1999,
+        22,
+        68,
+        497,
+        330,
+        1726,
+        76,
+        4909,
+        788,
+        4383,
+        87,
+        374,
+        264,
+        6785,
+        7546,
+        7914,
+        330,
+        5657,
+        788,
+        330,
+        87,
+        28,
+        16,
+        497,
+        330,
+        18616,
+        788,
+        4383,
+        87,
+        92446,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151667,
+        271,
+        151668,
+        271
+      ],
+      "prompt_sha256": "81dcf8729694dbb5db13599e3a8d8416842c674f2ce7fa4b312b3b1ae7595e61",
+      "request_sha256": "f9757f03d852453c9c3dc17ccc4ab7102792478870887f5a27acb740f4772225",
+      "sample_seed": 673733726700791069,
+      "wall_seconds": 1.0104647409170866,
+      "paid_work": {
+        "forward_calls": 19,
+        "forward_input_tokens": 209,
+        "attention_pairs": 21945
+      },
+      "discarded_audit_tokens": 19,
+      "generated_tokens": 19
+    },
+    "detect_seconds": 1.1296942830085754e-06,
+    "verify_seconds": 4.349276423454285e-06,
+    "total_event_seconds": 3.18615850713104,
+    "paid_work": {
+      "forward_calls": 60,
+      "forward_input_tokens": 250,
+      "attention_pairs": 24938
+    }
+  },
+  "scope_valid_event": {
+    "decision": "REBASE",
+    "verification": {
+      "status": "REFUTED_CLAIM",
+      "verified_evidence_sha256": "8a75b66a62d49f7b8e4915a0609e08ea1b3f7548b65816cabb7cc4892836384e"
+    },
+    "permit": {
+      "prefix_sha256": "96ac51a2f4c9424abe5c10245f0848761cfe485876b08a53ebe417396bd3db7e",
+      "native_proposal_sha256": "b5a90045bafda7f424f3cd7784f6d846b38baa4bf0c8e15622d6bf12d88de97f",
+      "event_id": "controlled_claim",
+      "decision": "REBASE",
+      "verified_evidence_sha256": "8a75b66a62d49f7b8e4915a0609e08ea1b3f7548b65816cabb7cc4892836384e"
+    },
+    "native_proposal_ids": [
+      14190,
+      11,
+      429,
+      594,
+      537,
+      830,
+      13,
+      1752,
+      3110,
+      11,
+      856,
+      28,
+      17,
+      374,
+      264,
+      6785,
+      7546,
+      11,
+      714,
+      220,
+      17,
+      145129,
+      16,
+      13,
+      2055,
+      279,
+      5114,
+      330,
+      2461,
+      1449,
+      6785,
+      7546,
+      856,
+      11,
+      856,
+      28,
+      16,
+      1,
+      374,
+      895,
+      382
+    ],
+    "native_proposal_text": "Wait, that's not true. For example, x=2 is a positive integer, but 2≠1. So the statement \"For every positive integer x, x=1\" is false.\n\n",
+    "native_proposal_boundary": "COMPLETED_STEP",
+    "native_proposal_cost": {
+      "wall_seconds": 2.190326233394444,
+      "initial_copy": {
+        "wall_seconds": 0.006318710744380951,
+        "cache_bytes": 7667712,
+        "logits_bytes": 607744,
+        "rng_bytes": 16
+      },
+      "generated_tokens": 41,
+      "forward_calls": 41,
+      "forward_input_tokens": 41
+    },
+    "discarded_native_tokens": 41,
+    "audit": null,
+    "detect_seconds": 1.3299286365509033e-06,
+    "verify_seconds": 0.00015738140791654587,
+    "total_event_seconds": 3.3291607555001974,
+    "paid_work": {
+      "forward_calls": 63,
+      "forward_input_tokens": 103,
+      "attention_pairs": 4946
+    }
+  },
+  "unscoped_audit": {
+    "status": "UNVERIFIED_PROPOSAL",
+    "stop_reason": "EOS",
+    "text": "{\"op\": \"eq\", \"num\": 2, \"den\": 1}",
+    "generated_ids": [
+      4913,
+      453,
+      788,
+      330,
+      11006,
+      497,
+      330,
+      2413,
+      788,
+      220,
+      17,
+      11,
+      330,
+      5183,
+      788,
+      220,
+      16,
+      92,
+      151645
+    ],
+    "prompt_ids": [
+      151644,
+      872,
+      198,
+      3973,
+      1172,
+      279,
+      35972,
+      2169,
+      323,
+      17221,
+      33922,
+      13,
+      18877,
+      279,
+      821,
+      438,
+      5904,
+      13,
+      3155,
+      537,
+      11625,
+      279,
+      4024,
+      3491,
+      13,
+      362,
+      10981,
+      11298,
+      374,
+      650,
+      21037,
+      13,
+      1416,
+      498,
+      646,
+      2968,
+      264,
+      5546,
+      8687,
+      11,
+      470,
+      264,
+      3175,
+      4718,
+      1633,
+      448,
+      2070,
+      16319,
+      323,
+      4734,
+      7546,
+      2750,
+      476,
+      24438,
+      6171,
+      448,
+      6894,
+      1179,
+      11,
+      1629,
+      11,
+      3371,
+      13,
+      18214,
+      470,
+      61395,
+      624,
+      4913,
+      3087,
+      842,
+      788,
+      330,
+      58607,
+      84969,
+      497,
+      330,
+      15314,
+      788,
+      330,
+      34,
+      35019,
+      95875,
+      497,
+      330,
+      5481,
+      2771,
+      21663,
+      32556,
+      788,
+      7342,
+      330,
+      11849,
+      48836,
+      17,
+      20,
+      21,
+      788,
+      330,
+      24,
+      21,
+      580,
+      20,
+      16,
+      64,
+      17,
+      69,
+      19,
+      66,
+      24,
+      19,
+      17,
+      19,
+      8229,
+      20,
+      66,
+      16,
+      15,
+      17,
+      19,
+      20,
+      69,
+      15,
+      23,
+      19,
+      23,
+      22,
+      21,
+      16,
+      66,
+      1859,
+      19,
+      23,
+      20,
+      23,
+      22,
+      21,
+      65,
+      15,
+      23,
+      64,
+      20,
+      18,
+      68,
+      1371,
+      19,
+      16,
+      22,
+      18,
+      24,
+      21,
+      8940,
+      18,
+      1999,
+      22,
+      68,
+      497,
+      330,
+      1726,
+      76,
+      4909,
+      788,
+      10071,
+      330,
+      5657,
+      788,
+      330,
+      87,
+      28,
+      16,
+      497,
+      330,
+      18616,
+      788,
+      4383,
+      87,
+      92446,
+      151645,
+      198,
+      151644,
+      77091,
+      198,
+      151667,
+      271,
+      151668,
+      271
+    ],
+    "prompt_sha256": "7141cb2fb1eb84bfd1bc7d58cc6f1bc4d2c5c6427acea512f8ef3bdde93368ff",
+    "request_sha256": "64855e4e43a057114619c876dc6ca6093e30aebd63cffa8b002923e5ea695f74",
+    "sample_seed": 673733726700791069,
+    "wall_seconds": 1.015660522505641,
+    "paid_work": {
+      "forward_calls": 19,
+      "forward_input_tokens": 203,
+      "attention_pairs": 20706
+    },
+    "discarded_audit_tokens": 19,
+    "generated_tokens": 19
+  },
+  "paid_work": {
+    "forward_calls": 1136,
+    "forward_input_tokens": 1590,
+    "attention_pairs": 375411
+  },
+  "wall_seconds": 60.72744736727327
+}

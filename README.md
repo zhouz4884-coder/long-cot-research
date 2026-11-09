@@ -2,14 +2,15 @@
 
 长思维链研究：以**最终回答正确率、同预算的算法增量和完整成本**为主线，探索局部修订后的有效计算复用与答案交付。
 
-仓库目前公开。工作目录为 `D:\ACL`。更新于 2026-11-07。[GitHub 仓库](https://github.com/zhouz4884-coder/long-cot-research)
+仓库目前公开。工作目录为 `D:\ACL`。更新于 2026-11-09。[GitHub 仓库](https://github.com/zhouz4884-coder/long-cot-research)
 
 ## 从哪里开始
 
 - [Phase 1–5 总索引](docs/phases/INDEX_ZH.md)
 - [当前研究目标](docs/next_phase/CURRENT_RESEARCH_GOAL_20261105_ZH.md)
 - [最新建议审查与下一轮公平对照](research/repository_phase_plan_20261106/ADVISOR_REVIEW_20261106_ZH.md)
-- [最新收尾与下一步判断](research/phase5d2_quarantined_rebase_20261107/D2_CLOSEOUT_ZH.md)
+- [最新收尾与下一步判断](research/phase5d25_constraint_revision_20261109/D3_CLOSEOUT_ZH.md)
+- [Phase5-D2 隔离反思与双前沿收尾](research/phase5d2_quarantined_rebase_20261107/D2_CLOSEOUT_ZH.md)
 - [Phase5-D 第一批设计重构、D0 与原生 D1](research/phase5d_scope_rebase_20261106/STAGE1_CLOSEOUT_ZH.md)
 - [强基线公平性与新题即时/大规模验证](research/phase5d_scope_rebase_20261106/FAIRNESS_AND_FRESH_VALIDATION_ZH.md)
 - [Phase5-C简明报告](docs/phases/Phase5C_单模型自然轨迹验证与收尾_ZH.md)
@@ -30,6 +31,7 @@
 | [Phase 5-C](docs/phases/Phase5C_单模型自然轨迹验证与收尾_ZH.md) | 32不同自然题、7条件、自动候选投影与强读出对照 | 224/224完整；当前原型未过扩大门槛，阶段收尾完成 |
 | [Phase 5-D第一批](docs/phases/Phase5D_方法重构与原生接口准入_ZH.md) | scope/完整支持设计、D0审计、CPU内核与原生D1准入 | D0/D1完整；8EOS/0cap，同调度参考8cp通过；自然修复收益未测 |
 | [Phase 5-D2](research/phase5d2_quarantined_rebase_20261107/D2_CLOSEOUT_ZH.md) | 受限核验、隔离反思、双前沿重建、自然覆盖与同状态配对 | 48/48 EOS，四个 UNKNOWN 对照通过，修复准入 0/4 |
+| [Phase 5-D2.5 与 D3](research/phase5d25_constraint_revision_20261109/D3_CLOSEOUT_ZH.md) | 类型化数学核验、旁路审计、历史回退对照与新题原生验证 | 4/4 实机一致性通过，32 条正式轨迹全部自然 EOS，正式修复准入 0 |
 
 每个Phase统一记录：问题、输入与协议、实际动作、数据结论、失败与猜想、下一门槛、证据路径。后续工作继续新增Phase或阶段内子报告，不改写已冻结的结果。
 
@@ -45,6 +47,7 @@
 | Phase5-C固定历史终局读出 | Forced27/32、Full15、Contract14、同证据Full18、Tail11、Projection13、Restart8；51.486914单卡分钟 | 224/224完整，109触384顶；严格交付评分，非无限长度能力；当前候选不扩大 |
 | Phase5-D第一批 | 原T固定LastBox28/32；CPU30＋600；8原生题/8EOS/0cap；原bulk数值6/8、同调度参考8/8；18.897161单卡分钟 | 新读出审计不改旧分；8/8答案只是Continue，尚无SCOPE-Rebase自然收益 |
 | Phase5-D2 | 24 题 × 2 种子，原生 46/48，五条配对臂均 4/4，330.77 GPU 分钟 | 两条原生失分均为多框读出，完整根集正确。当前自然适配没有获准的修复事件，配对准确率差为 0 |
+| Phase5-D2.5 与 D3 | 历史三臂均答对，承接臂在该例少用 36.1% 的时间。新题原生 16/32，总计 628.95 GPU 分钟 | 正式配对准入 0，准确率增量与等成本修复效果无法估计 |
 
 P0与P0.5使用不同读出协议，不连成跨轮提升曲线。CPU随机模型、形式/代数控制、人工短状态、自然轨迹观察和正式benchmark各自标明，不互相替代。
 
@@ -68,6 +71,8 @@ Phase5-C将自动目标提示/未核验候选投影用于32个不同历史自然
 
 Phase5-D 聚焦完整结论覆盖、作用域与版本绑定、多重支持保护和失效证明文本退役。D2 完成 48 条新题自然轨迹和四题同状态配对。自然步骤抽取缺少可行动的作用域证据，下一门槛是离线验证完整数学对象和证明角色，再用独立新题做同证据配对。[D2 收尾](research/phase5d2_quarantined_rebase_20261107/D2_CLOSEOUT_ZH.md)
 
+D2.5 验证了独立核查下的原生续推一致性。D3 仍未获得可行动的正式事件。下一轮拟在已有失败前缀上测试程序化约束见证和认证答案交付，再冻结独立新题做同证据比较。[D3 收尾](research/phase5d25_constraint_revision_20261109/D3_CLOSEOUT_ZH.md) · [交付审计](research/phase5d25_constraint_revision_20261109/D3_DELIVERY_AUDIT.json)
+
 主要指标是逐数据集accuracy或声明采样协议的pass@1；pass@k另列。完整成本包括核验、解析、被拒候选、注入前缀、prefill、重构与最终输出。NLL、梯度、KV距离和机制标签仅用于诊断。
 
 ## 目录
@@ -84,6 +89,7 @@ research/phase5_prototype_20261106/   算法公式、质量优先原型、真实
 research/phase5b_boundary_20261106/   自然诊断、建议取舍、后台投影、三态完整短试
 research/phase5c_goal_contract_20261106/ 32题七条件完整终局读出、统一评分、阶段收尾
 research/phase5d_scope_rebase_20261106/ 方法重构、D0审计、支持内核、原生接口与后续公平验证
+research/phase5d25_constraint_revision_20261109/ D2.5 与 D3 源码、完整运行、评分和独立复核
 scripts/ reason_transition/ tests/     原研究实现与检查
 experiments/radar20261013/             后续历史路线，当前冻结
 data/ results/ provenance/ recovery/   历史输入、输出和恢复证据

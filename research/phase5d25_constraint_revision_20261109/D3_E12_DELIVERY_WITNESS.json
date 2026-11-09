@@ -1,0 +1,78 @@
+{
+  "status": "CHECKED_EXACT_POSTHOC_WITNESS",
+  "case_id": "D3_E12",
+  "seed": 20261110,
+  "source_path": "bank/native_results/worker_0/D3_E12_20261110/result.json",
+  "source_sha256": "7e49a6b442143ee7b43da32d04bc170c02c51a338dfd64c4f9e050b4d17474ff",
+  "phase": "After formal generation, pairing freeze and scoring; diagnostic only",
+  "original_terms": [
+    1,
+    4,
+    15,
+    2
+  ],
+  "second_differences": [
+    8,
+    -24
+  ],
+  "unique_geometric_ratio": "-3",
+  "exact_parameters": {
+    "arithmetic_first": "1/2",
+    "arithmetic_difference": "5",
+    "geometric_first": "1/2"
+  },
+  "reconstructed_terms": [
+    "1",
+    "4",
+    "15",
+    "2",
+    "61"
+  ],
+  "uniqueness": "The first second difference is nonzero. Their ratio fixes the geometric ratio; then the first two terms fix the arithmetic parameters and first geometric term.",
+  "thinking_commitment_evidence": [
+    {
+      "step": 127,
+      "start": 2818,
+      "end": 2881,
+      "text": "Check Eq2: a_2 + b_2 = (a_1 + d) + (b_1 * r) = (1/2 + 5) + (1/2 * (-3)) = (5.5) + (-1.5) = 4. Correct.\n\n"
+    },
+    {
+      "step": 128,
+      "start": 2881,
+      "end": 2949,
+      "text": "Check Eq3: a_3 + b_3 = (a_1 + 2d) + (b_1 * r^2) = (1/2 + 10) + (1/2 * 9) = 10.5 + 4.5 = 15. Correct.\n\n"
+    },
+    {
+      "step": 129,
+      "start": 2949,
+      "end": 3019,
+      "text": "Check Eq4: a_4 + b_4 = (a_1 + 3d) + (b_1 * r^3) = (1/2 + 15) + (1/2 * (-27)) = 15.5 + (-13.5) = 2. Correct.\n\n"
+    },
+    {
+      "step": 134,
+      "start": 3144,
+      "end": 3167,
+      "text": "Therefore, c_5 = 20.5 + 40.5 = 61. \n\n"
+    },
+    {
+      "step": 145,
+      "start": 3620,
+      "end": 3641,
+      "text": "Therefore, the answer is 61. So, \\boxed{61} is the answer.\n\n"
+    },
+    {
+      "step": 153,
+      "start": 3848,
+      "end": 3858,
+      "text": "**Final Answer**\n\\boxed{61}\n"
+    }
+  ],
+  "frozen_delivered_object": 45,
+  "counterexample_to_final_rendered_transformation": {
+    "antecedent": "(1-b_1)+d+b_1*r=4",
+    "antecedent_lhs": "4",
+    "consequent": "d+b_1*(1-r)=3",
+    "consequent_lhs": "7"
+  },
+  "interpretation": "The recorded thinking validated 61. Final presentation re-derived the answer with an invalid sign in substitution and delivered 45. No official score or intervention changed."
+}

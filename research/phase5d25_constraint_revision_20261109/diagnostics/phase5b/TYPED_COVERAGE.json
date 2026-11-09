@@ -1,0 +1,727 @@
+{
+  "status": "COMPLETE",
+  "bank": "phase5b",
+  "trajectory_count": 19,
+  "distinct_problem_count": 19,
+  "aggregate": {
+    "counts": {
+      "observed_steps": 2499,
+      "steps_with_lexical_or_typed_event": 1279,
+      "extracted_objects": 2353,
+      "objects_without_free_variables": 2265,
+      "actual_checker_executions": 154,
+      "conclusive_math_results": 98,
+      "proved_false_without_action": 13,
+      "certificate_permits_action": 0,
+      "typed_objects_with_statement": 182,
+      "executable_revisions": 0,
+      "symbolic_objects": 88
+    },
+    "kinds": {
+      "UNSUPPORTED": 2068,
+      "EQUATION_TRANSITION": 104,
+      "CLOSED_ARITHMETIC": 89,
+      "APPROX_ARITHMETIC": 6,
+      "EQUATION": 86
+    },
+    "unknown_reasons": {
+      "unsupported_equation_surface": 2024,
+      "unsupported_transition_surface": 103,
+      "chain_limit": 44,
+      "natural_semantics_unbound_after_formal_check": 56,
+      "unresolved_equation_role": 23,
+      "unsupported_precision": 3,
+      "symbol_missing_domain_or_binding": 1,
+      "unsupported_scope_guard": 1
+    },
+    "verdicts": {
+      "UNKNOWN": 2255,
+      "VERIFIED": 77,
+      "FALSE_LITERAL": 12,
+      "ROUNDING_INCOMPATIBLE": 1,
+      "FORMAL_IDENTITY_VERIFIED": 7,
+      "ROUNDING_COMPATIBLE": 1
+    }
+  },
+  "original_scope_unbound": 0,
+  "original_scope_replay_reasons": {},
+  "original_typed_replay_verdicts": {},
+  "frozen_code_sha256": {
+    "symbol_scope.py": "8ba9eed0ec9194dc8dcb55b847cb1a6ec481c8d0c5bacf923722cbbcd941dc0c",
+    "typed_math_events.py": "83454c6c6f829c8771f28fbbfeaf9f03a25635c9aa9e2dffd4ca20bb85f41f5a",
+    "proposal_check.py": "77e412d0615971dc89292e81498fccb8b79682608d2e6a9112429beb30df2ded"
+  },
+  "evaluation_answers_read": false,
+  "additional_gpu_seconds": 0,
+  "cpu_wall_seconds": 5.13222339999993,
+  "historical_boundary": "Outcome-selected Phase5-B development subset. Recorded token IDs; question grounding replayed with an offline template; no original native RNG/KV or action permission.",
+  "scope": "Each checked object is bounded by its observed prefix. Offline mathematical results do not grant live revision without independent source role and a supported plan.",
+  "rows": [
+    {
+      "case_id": "B_001",
+      "seed": 861970936,
+      "source_path": "qwen3_4b_1.jsonl:456",
+      "source_sha256": "ef12b3d67d5d29b9a3099d2d2fe46645c1da93a5263af4bf4c475cdb21d3de1d",
+      "native_stop_reason": "natural_end",
+      "new_tokens": 2620,
+      "seconds": 141.60947365500033,
+      "counts": {
+        "observed_steps": 66,
+        "steps_with_lexical_or_typed_event": 44,
+        "extracted_objects": 71,
+        "objects_without_free_variables": 71,
+        "actual_checker_executions": 4,
+        "conclusive_math_results": 4,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 4,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 62,
+        "EQUATION_TRANSITION": 5,
+        "CLOSED_ARITHMETIC": 4
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 61,
+        "unsupported_transition_surface": 5,
+        "chain_limit": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 67,
+        "VERIFIED": 4
+      }
+    },
+    {
+      "case_id": "B_002",
+      "seed": 846643292,
+      "source_path": "qwen3_4b_0.jsonl:445",
+      "source_sha256": "35ac1cb6ee8b612768f79be5bf89d29d14e498e95684cc4cf7dca66c6511fa2d",
+      "native_stop_reason": "natural_end",
+      "new_tokens": 3135,
+      "seconds": 164.9110375479795,
+      "counts": {
+        "observed_steps": 53,
+        "steps_with_lexical_or_typed_event": 8,
+        "extracted_objects": 22,
+        "objects_without_free_variables": 22,
+        "actual_checker_executions": 12,
+        "conclusive_math_results": 12,
+        "proved_false_without_action": 12,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 12,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 10,
+        "CLOSED_ARITHMETIC": 12
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 9,
+        "chain_limit": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 10,
+        "FALSE_LITERAL": 12
+      }
+    },
+    {
+      "case_id": "B_004",
+      "seed": 1385254594,
+      "source_path": "qwen3_4b_1.jsonl:746",
+      "source_sha256": "8b39df9c2513b948ca372115bd769e0db7c763f71160938e8e8db339c0e46b0d",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 438.47980970004573,
+      "counts": {
+        "observed_steps": 76,
+        "steps_with_lexical_or_typed_event": 43,
+        "extracted_objects": 92,
+        "objects_without_free_variables": 92,
+        "actual_checker_executions": 3,
+        "conclusive_math_results": 3,
+        "proved_false_without_action": 1,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 3,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 89,
+        "CLOSED_ARITHMETIC": 2,
+        "APPROX_ARITHMETIC": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 87,
+        "chain_limit": 2
+      },
+      "verdicts": {
+        "UNKNOWN": 89,
+        "VERIFIED": 2,
+        "ROUNDING_INCOMPATIBLE": 1
+      }
+    },
+    {
+      "case_id": "B_010",
+      "seed": 464176694,
+      "source_path": "qwen3_4b_1.jsonl:418",
+      "source_sha256": "282ced184dbdfd3e1bab40fd3b9011c17276181a183740969ebcb78671c0942f",
+      "native_stop_reason": "natural_end",
+      "new_tokens": 4115,
+      "seconds": 221.5910365176387,
+      "counts": {
+        "observed_steps": 103,
+        "steps_with_lexical_or_typed_event": 27,
+        "extracted_objects": 60,
+        "objects_without_free_variables": 60,
+        "actual_checker_executions": 0,
+        "conclusive_math_results": 0,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 60
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 60
+      },
+      "verdicts": {
+        "UNKNOWN": 60
+      }
+    },
+    {
+      "case_id": "B_012",
+      "seed": 69220370,
+      "source_path": "qwen3_4b_1.jsonl:690",
+      "source_sha256": "edf9c687b270cfedf8ac36cc5badf6d34be6b4a9f304761af4f5c8538c2fc9d1",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 438.1940169869922,
+      "counts": {
+        "observed_steps": 127,
+        "steps_with_lexical_or_typed_event": 50,
+        "extracted_objects": 86,
+        "objects_without_free_variables": 86,
+        "actual_checker_executions": 0,
+        "conclusive_math_results": 0,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 78,
+        "EQUATION_TRANSITION": 8
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 76,
+        "unsupported_transition_surface": 8,
+        "chain_limit": 2
+      },
+      "verdicts": {
+        "UNKNOWN": 86
+      }
+    },
+    {
+      "case_id": "B_023",
+      "seed": 1980554259,
+      "source_path": "qwen3_4b_1.jsonl:602",
+      "source_sha256": "2091ff48713c23a6d7a32ddc96b8d264762ae2c8f5ba1ee8ef27fb260d11fd83",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 440.0904815760441,
+      "counts": {
+        "observed_steps": 205,
+        "steps_with_lexical_or_typed_event": 112,
+        "extracted_objects": 227,
+        "objects_without_free_variables": 177,
+        "actual_checker_executions": 64,
+        "conclusive_math_results": 34,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 83,
+        "symbolic_objects": 50,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 139,
+        "CLOSED_ARITHMETIC": 33,
+        "EQUATION": 50,
+        "EQUATION_TRANSITION": 5
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 137,
+        "natural_semantics_unbound_after_formal_check": 30,
+        "unresolved_equation_role": 19,
+        "chain_limit": 2,
+        "unsupported_transition_surface": 5
+      },
+      "verdicts": {
+        "UNKNOWN": 193,
+        "VERIFIED": 33,
+        "FORMAL_IDENTITY_VERIFIED": 1
+      }
+    },
+    {
+      "case_id": "B_028",
+      "seed": 328346229,
+      "source_path": "qwen3_4b_1.jsonl:568",
+      "source_sha256": "0506c9c81c882e7af2255e6586f4f8575a36575bd81aca21800b8e799c1de7bd",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 445.9807617040351,
+      "counts": {
+        "observed_steps": 115,
+        "steps_with_lexical_or_typed_event": 37,
+        "extracted_objects": 75,
+        "objects_without_free_variables": 75,
+        "actual_checker_executions": 0,
+        "conclusive_math_results": 0,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 74,
+        "EQUATION_TRANSITION": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 74,
+        "unsupported_transition_surface": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 75
+      }
+    },
+    {
+      "case_id": "B_030",
+      "seed": 1572821674,
+      "source_path": "qwen3_4b_0.jsonl:563",
+      "source_sha256": "91ab781f00264807cc3565682d24b77c0cc48fe6549e62960340eefbd54f3835",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 430.9107912168838,
+      "counts": {
+        "observed_steps": 125,
+        "steps_with_lexical_or_typed_event": 21,
+        "extracted_objects": 41,
+        "objects_without_free_variables": 41,
+        "actual_checker_executions": 5,
+        "conclusive_math_results": 5,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 5,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 36,
+        "CLOSED_ARITHMETIC": 5
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 36
+      },
+      "verdicts": {
+        "UNKNOWN": 36,
+        "VERIFIED": 5
+      }
+    },
+    {
+      "case_id": "B_032",
+      "seed": 872315174,
+      "source_path": "qwen3_4b_1.jsonl:248",
+      "source_sha256": "28284da01a1a7588801d230d8d60be0d3b17c92252fd6f5c4c11f48ad030e32b",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 436.0210672561079,
+      "counts": {
+        "observed_steps": 153,
+        "steps_with_lexical_or_typed_event": 106,
+        "extracted_objects": 197,
+        "objects_without_free_variables": 195,
+        "actual_checker_executions": 3,
+        "conclusive_math_results": 3,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 4,
+        "symbolic_objects": 2,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 186,
+        "EQUATION_TRANSITION": 7,
+        "APPROX_ARITHMETIC": 1,
+        "EQUATION": 2,
+        "CLOSED_ARITHMETIC": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 181,
+        "unsupported_transition_surface": 7,
+        "chain_limit": 5,
+        "unsupported_precision": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 194,
+        "FORMAL_IDENTITY_VERIFIED": 2,
+        "VERIFIED": 1
+      }
+    },
+    {
+      "case_id": "B_034",
+      "seed": 584912123,
+      "source_path": "qwen3_4b_0.jsonl:507",
+      "source_sha256": "5cbc53b9eee88e02cea41688a63b24a920604642811a5df84a2f4f1b96484df8",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 432.6990419542417,
+      "counts": {
+        "observed_steps": 76,
+        "steps_with_lexical_or_typed_event": 63,
+        "extracted_objects": 149,
+        "objects_without_free_variables": 149,
+        "actual_checker_executions": 5,
+        "conclusive_math_results": 5,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 5,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 135,
+        "EQUATION_TRANSITION": 9,
+        "CLOSED_ARITHMETIC": 5
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 129,
+        "chain_limit": 6,
+        "unsupported_transition_surface": 9
+      },
+      "verdicts": {
+        "UNKNOWN": 144,
+        "VERIFIED": 5
+      }
+    },
+    {
+      "case_id": "B_038",
+      "seed": 619943749,
+      "source_path": "qwen3_4b_1.jsonl:682",
+      "source_sha256": "65d66fc13991e22f49480eeb0066a8d5ea4e23c23a63903b4537aa7db8438f73",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 438.4063233612105,
+      "counts": {
+        "observed_steps": 92,
+        "steps_with_lexical_or_typed_event": 64,
+        "extracted_objects": 142,
+        "objects_without_free_variables": 142,
+        "actual_checker_executions": 6,
+        "conclusive_math_results": 6,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 7,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 126,
+        "EQUATION_TRANSITION": 9,
+        "CLOSED_ARITHMETIC": 6,
+        "APPROX_ARITHMETIC": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 122,
+        "unsupported_transition_surface": 9,
+        "chain_limit": 4,
+        "unsupported_precision": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 136,
+        "VERIFIED": 6
+      }
+    },
+    {
+      "case_id": "B_039",
+      "seed": 473942240,
+      "source_path": "qwen3_4b_1.jsonl:632",
+      "source_sha256": "bec38f806aef6b2d2f8b7384c2962a094ede791a59180f44c14e7f63d9819b9e",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 437.99983585905284,
+      "counts": {
+        "observed_steps": 122,
+        "steps_with_lexical_or_typed_event": 49,
+        "extracted_objects": 142,
+        "objects_without_free_variables": 142,
+        "actual_checker_executions": 3,
+        "conclusive_math_results": 3,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 3,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 139,
+        "CLOSED_ARITHMETIC": 3
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 137,
+        "chain_limit": 2
+      },
+      "verdicts": {
+        "UNKNOWN": 139,
+        "VERIFIED": 3
+      }
+    },
+    {
+      "case_id": "B_050",
+      "seed": 1083417193,
+      "source_path": "qwen3_4b_1.jsonl:496",
+      "source_sha256": "c915c379aef85eca89218bc0ecc3720fec7c4631b53c1ceeeabd5c14b71a3652",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 438.80216274317354,
+      "counts": {
+        "observed_steps": 124,
+        "steps_with_lexical_or_typed_event": 48,
+        "extracted_objects": 88,
+        "objects_without_free_variables": 85,
+        "actual_checker_executions": 3,
+        "conclusive_math_results": 3,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 3,
+        "symbolic_objects": 3,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 78,
+        "EQUATION": 3,
+        "EQUATION_TRANSITION": 7
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 78,
+        "unsupported_transition_surface": 7
+      },
+      "verdicts": {
+        "UNKNOWN": 85,
+        "FORMAL_IDENTITY_VERIFIED": 3
+      }
+    },
+    {
+      "case_id": "B_055",
+      "seed": 1645701340,
+      "source_path": "qwen3_4b_0.jsonl:787",
+      "source_sha256": "2369fb4733a81820e66886294a2c50b98a7a55e06dd348f94c843eaefbbc98be",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 436.68637904385105,
+      "counts": {
+        "observed_steps": 227,
+        "steps_with_lexical_or_typed_event": 136,
+        "extracted_objects": 216,
+        "objects_without_free_variables": 216,
+        "actual_checker_executions": 6,
+        "conclusive_math_results": 6,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 6,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 210,
+        "CLOSED_ARITHMETIC": 6
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 204,
+        "chain_limit": 6
+      },
+      "verdicts": {
+        "UNKNOWN": 210,
+        "VERIFIED": 6
+      }
+    },
+    {
+      "case_id": "B_057",
+      "seed": 1079832658,
+      "source_path": "qwen3_4b_1.jsonl:714",
+      "source_sha256": "1ba590e3e41850db4ed58ba988fa916aaa7a366f9a8e8544e303024f0e689864",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 438.9413140420802,
+      "counts": {
+        "observed_steps": 71,
+        "steps_with_lexical_or_typed_event": 47,
+        "extracted_objects": 64,
+        "objects_without_free_variables": 63,
+        "actual_checker_executions": 1,
+        "conclusive_math_results": 0,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 1,
+        "symbolic_objects": 1,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 46,
+        "EQUATION_TRANSITION": 17,
+        "EQUATION": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 43,
+        "chain_limit": 3,
+        "unsupported_transition_surface": 17,
+        "natural_semantics_unbound_after_formal_check": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 64
+      }
+    },
+    {
+      "case_id": "B_058",
+      "seed": 2089627987,
+      "source_path": "qwen3_4b_0.jsonl:187",
+      "source_sha256": "b595bd936203ba3db8c41f01969ce51b2c5ce7b197247c5e03c32bdbb5e2bffc",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 428.80754532199353,
+      "counts": {
+        "observed_steps": 183,
+        "steps_with_lexical_or_typed_event": 118,
+        "extracted_objects": 217,
+        "objects_without_free_variables": 214,
+        "actual_checker_executions": 5,
+        "conclusive_math_results": 5,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 9,
+        "symbolic_objects": 3,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 198,
+        "EQUATION_TRANSITION": 11,
+        "CLOSED_ARITHMETIC": 4,
+        "APPROX_ARITHMETIC": 3,
+        "EQUATION": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 190,
+        "symbol_missing_domain_or_binding": 1,
+        "unsupported_transition_surface": 10,
+        "chain_limit": 8,
+        "unsupported_scope_guard": 1,
+        "unresolved_equation_role": 1,
+        "unsupported_precision": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 212,
+        "VERIFIED": 4,
+        "ROUNDING_COMPATIBLE": 1
+      }
+    },
+    {
+      "case_id": "B_062",
+      "seed": 1298787043,
+      "source_path": "qwen3_4b_1.jsonl:314",
+      "source_sha256": "4bf576d429fbc4e879875e2f88f6e60758a92d73d24fc2644fb281741f621cbd",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 438.289568151813,
+      "counts": {
+        "observed_steps": 223,
+        "steps_with_lexical_or_typed_event": 140,
+        "extracted_objects": 227,
+        "typed_objects_with_statement": 25,
+        "symbolic_objects": 21,
+        "actual_checker_executions": 23,
+        "conclusive_math_results": 5,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "objects_without_free_variables": 206,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "EQUATION": 21,
+        "UNSUPPORTED": 202,
+        "CLOSED_ARITHMETIC": 4
+      },
+      "unknown_reasons": {
+        "natural_semantics_unbound_after_formal_check": 18,
+        "unsupported_equation_surface": 200,
+        "unresolved_equation_role": 2,
+        "chain_limit": 2
+      },
+      "verdicts": {
+        "UNKNOWN": 222,
+        "VERIFIED": 4,
+        "FORMAL_IDENTITY_VERIFIED": 1
+      }
+    },
+    {
+      "case_id": "B_078",
+      "seed": 22725199,
+      "source_path": "qwen3_4b_1.jsonl:466",
+      "source_sha256": "42c95f3233ef1d24358836bc3e6cecbd3116c4557e5162cbf9b97114691fb884",
+      "native_stop_reason": "natural_end",
+      "new_tokens": 3163,
+      "seconds": 169.19708433095366,
+      "counts": {
+        "observed_steps": 64,
+        "steps_with_lexical_or_typed_event": 17,
+        "extracted_objects": 28,
+        "objects_without_free_variables": 28,
+        "actual_checker_executions": 0,
+        "conclusive_math_results": 0,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 26,
+        "EQUATION_TRANSITION": 2
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 26,
+        "unsupported_transition_surface": 2
+      },
+      "verdicts": {
+        "UNKNOWN": 28
+      }
+    },
+    {
+      "case_id": "B_088",
+      "seed": 130733411,
+      "source_path": "qwen3_4b_1.jsonl:344",
+      "source_sha256": "fda402ad8035aa87fa77f39bc670a28ebdd9ce3e0ed3263fee6c3ec44acb899c",
+      "native_stop_reason": "limit",
+      "new_tokens": 8192,
+      "seconds": 438.53880811622366,
+      "counts": {
+        "observed_steps": 294,
+        "steps_with_lexical_or_typed_event": 149,
+        "extracted_objects": 209,
+        "objects_without_free_variables": 201,
+        "actual_checker_executions": 11,
+        "conclusive_math_results": 4,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 12,
+        "symbolic_objects": 8,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 174,
+        "CLOSED_ARITHMETIC": 4,
+        "EQUATION": 8,
+        "EQUATION_TRANSITION": 23
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 174,
+        "natural_semantics_unbound_after_formal_check": 7,
+        "unresolved_equation_role": 1,
+        "unsupported_transition_surface": 23
+      },
+      "verdicts": {
+        "UNKNOWN": 205,
+        "VERIFIED": 4
+      }
+    }
+  ]
+}

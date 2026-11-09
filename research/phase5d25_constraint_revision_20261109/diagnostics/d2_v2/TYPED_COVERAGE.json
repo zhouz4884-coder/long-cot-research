@@ -1,0 +1,1780 @@
+{
+  "status": "COMPLETE",
+  "bank": "d2",
+  "trajectory_count": 48,
+  "distinct_problem_count": 24,
+  "aggregate": {
+    "counts": {
+      "observed_steps": 5282,
+      "steps_with_lexical_or_typed_event": 3424,
+      "extracted_objects": 4794,
+      "objects_without_free_variables": 4504,
+      "actual_checker_executions": 633,
+      "conclusive_math_results": 442,
+      "proved_false_without_action": 5,
+      "certificate_permits_action": 0,
+      "typed_objects_with_statement": 709,
+      "executable_revisions": 0,
+      "symbolic_objects": 290,
+      "reliably_bound_symbolic_objects": 59,
+      "scope_authority_conditional": 59
+    },
+    "kinds": {
+      "UNSUPPORTED": 4051,
+      "CLOSED_ARITHMETIC": 333,
+      "EQUATION": 285,
+      "EQUATION_TRANSITION": 35,
+      "APPROX_ARITHMETIC": 80,
+      "RUNNING_SUM_CONTINUATION": 10
+    },
+    "unknown_reasons": {
+      "unsupported_equation_surface": 3956,
+      "chain_limit": 95,
+      "natural_semantics_unbound_after_formal_check": 191,
+      "unresolved_equation_role": 57,
+      "unsupported_transition_surface": 34,
+      "unsupported_scope_guard": 4,
+      "unsupported_precision": 15
+    },
+    "verdicts": {
+      "UNKNOWN": 4352,
+      "VERIFIED": 331,
+      "FORMAL_IDENTITY_VERIFIED": 38,
+      "ROUNDING_COMPATIBLE": 58,
+      "ROUNDING_INCOMPATIBLE": 3,
+      "FALSE_LITERAL": 2,
+      "VERIFIED_RUNNING_SUM": 10
+    }
+  },
+  "original_scope_unbound": 162,
+  "original_scope_replay_reasons": {
+    "BOUND": 42,
+    "symbol_missing_domain_or_binding": 77,
+    "scope_boundary_not_prior_to_target": 3,
+    "unsupported_scope_guard": 37,
+    "unbound_scope_guard": 3
+  },
+  "original_typed_replay_verdicts": {
+    "UNKNOWN": 148,
+    "FORMAL_IDENTITY_VERIFIED": 14
+  },
+  "frozen_code_sha256": {
+    "symbol_scope.py": "8ba9eed0ec9194dc8dcb55b847cb1a6ec481c8d0c5bacf923722cbbcd941dc0c",
+    "typed_math_events.py": "7b0843bd91b7a00d936a0436b0ddfb96258fb09d8c9f4d06f449c03eeadc6754",
+    "proposal_check.py": "c01e8b0236683c014b9ddcee93801fd643f07029e310a685befe6993dbffcf7c"
+  },
+  "evaluation_answers_read": false,
+  "additional_gpu_seconds": 0,
+  "cpu_wall_seconds": 8.012304800000038,
+  "historical_boundary": null,
+  "scope": "Each checked object is bounded by its observed prefix. Offline mathematical results do not grant live revision without independent source role and a supported plan.",
+  "rows": [
+    {
+      "case_id": "D2_01",
+      "seed": 20261107,
+      "source_path": "native_results/worker_0/D2_01_20261107/result.json",
+      "source_sha256": "c40a78e54b4af89640eee5bf3a24375182463f9dfaf26e979c244b7183293256",
+      "native_stop_reason": "EOS",
+      "new_tokens": 1900,
+      "seconds": 101.71315230987966,
+      "counts": {
+        "observed_steps": 33,
+        "steps_with_lexical_or_typed_event": 16,
+        "extracted_objects": 16,
+        "objects_without_free_variables": 16,
+        "actual_checker_executions": 1,
+        "conclusive_math_results": 1,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 1,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 15,
+        "CLOSED_ARITHMETIC": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 14,
+        "chain_limit": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 15,
+        "VERIFIED": 1
+      }
+    },
+    {
+      "case_id": "D2_02",
+      "seed": 20261108,
+      "source_path": "native_results/worker_0/D2_02_20261108/result.json",
+      "source_sha256": "851e6398dfcfe507a63ac7570826c861a80cd5c83b916e134ccc46fa477bb3d7",
+      "native_stop_reason": "EOS",
+      "new_tokens": 1893,
+      "seconds": 100.97574424743652,
+      "counts": {
+        "observed_steps": 33,
+        "steps_with_lexical_or_typed_event": 18,
+        "extracted_objects": 26,
+        "objects_without_free_variables": 23,
+        "actual_checker_executions": 4,
+        "conclusive_math_results": 3,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 5,
+        "symbolic_objects": 3,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 21,
+        "EQUATION": 3,
+        "CLOSED_ARITHMETIC": 2
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 21,
+        "natural_semantics_unbound_after_formal_check": 1,
+        "unresolved_equation_role": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 23,
+        "FORMAL_IDENTITY_VERIFIED": 1,
+        "VERIFIED": 2
+      }
+    },
+    {
+      "case_id": "D2_03",
+      "seed": 20261107,
+      "source_path": "native_results/worker_0/D2_03_20261107/result.json",
+      "source_sha256": "1c71595ed9e1be34634a7a71814497b7e17894a9b00c73207f7f6c7b94d5199a",
+      "native_stop_reason": "EOS",
+      "new_tokens": 2921,
+      "seconds": 155.77460860367864,
+      "counts": {
+        "observed_steps": 44,
+        "steps_with_lexical_or_typed_event": 39,
+        "extracted_objects": 73,
+        "objects_without_free_variables": 69,
+        "actual_checker_executions": 4,
+        "conclusive_math_results": 1,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 5,
+        "symbolic_objects": 4,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 66,
+        "EQUATION": 4,
+        "EQUATION_TRANSITION": 2,
+        "CLOSED_ARITHMETIC": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 64,
+        "natural_semantics_unbound_after_formal_check": 3,
+        "unsupported_transition_surface": 2,
+        "chain_limit": 2,
+        "unresolved_equation_role": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 72,
+        "VERIFIED": 1
+      }
+    },
+    {
+      "case_id": "D2_04",
+      "seed": 20261108,
+      "source_path": "native_results/worker_0/D2_04_20261108/result.json",
+      "source_sha256": "bf4bbed34709f03e35d0874b7688b8be5e8714361261f4c1ecd4529be9ff6b9b",
+      "native_stop_reason": "EOS",
+      "new_tokens": 1634,
+      "seconds": 86.74932005722076,
+      "counts": {
+        "observed_steps": 54,
+        "steps_with_lexical_or_typed_event": 30,
+        "extracted_objects": 36,
+        "objects_without_free_variables": 25,
+        "actual_checker_executions": 13,
+        "conclusive_math_results": 3,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 14,
+        "symbolic_objects": 11,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 22,
+        "EQUATION": 11,
+        "CLOSED_ARITHMETIC": 3
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 22,
+        "natural_semantics_unbound_after_formal_check": 10,
+        "unresolved_equation_role": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 33,
+        "VERIFIED": 3
+      }
+    },
+    {
+      "case_id": "D2_05",
+      "seed": 20261107,
+      "source_path": "native_results/worker_0/D2_05_20261107/result.json",
+      "source_sha256": "fb912588927acaed2ae05d71d7b8a6294d4bdfef1b58c71c3b0f1fb4f1153faa",
+      "native_stop_reason": "EOS",
+      "new_tokens": 9486,
+      "seconds": 504.1730838473886,
+      "counts": {
+        "observed_steps": 293,
+        "steps_with_lexical_or_typed_event": 178,
+        "extracted_objects": 223,
+        "objects_without_free_variables": 221,
+        "actual_checker_executions": 48,
+        "conclusive_math_results": 48,
+        "proved_false_without_action": 1,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 55,
+        "symbolic_objects": 2,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 168,
+        "CLOSED_ARITHMETIC": 29,
+        "APPROX_ARITHMETIC": 26
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 168,
+        "unsupported_scope_guard": 2,
+        "unsupported_precision": 5
+      },
+      "verdicts": {
+        "UNKNOWN": 175,
+        "VERIFIED": 29,
+        "ROUNDING_COMPATIBLE": 18,
+        "ROUNDING_INCOMPATIBLE": 1
+      }
+    },
+    {
+      "case_id": "D2_06",
+      "seed": 20261108,
+      "source_path": "native_results/worker_0/D2_06_20261108/result.json",
+      "source_sha256": "05d2b8e75427dca03a7b0297d0ced4188e83e3123c24f7d616020cdbfbfca3cb",
+      "native_stop_reason": "EOS",
+      "new_tokens": 1923,
+      "seconds": 101.73806161712855,
+      "counts": {
+        "observed_steps": 41,
+        "steps_with_lexical_or_typed_event": 14,
+        "extracted_objects": 20,
+        "objects_without_free_variables": 18,
+        "actual_checker_executions": 3,
+        "conclusive_math_results": 2,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 4,
+        "symbolic_objects": 2,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 15,
+        "CLOSED_ARITHMETIC": 2,
+        "EQUATION": 2,
+        "EQUATION_TRANSITION": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 14,
+        "natural_semantics_unbound_after_formal_check": 1,
+        "unsupported_transition_surface": 1,
+        "unresolved_equation_role": 1,
+        "chain_limit": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 18,
+        "VERIFIED": 2
+      }
+    },
+    {
+      "case_id": "D2_07",
+      "seed": 20261107,
+      "source_path": "native_results/worker_0/D2_07_20261107/result.json",
+      "source_sha256": "e3250eaa403d8931bbefbb1b7f10373387580bd4e54ae9b83670baf2f3f4dcda",
+      "native_stop_reason": "EOS",
+      "new_tokens": 3760,
+      "seconds": 199.30040161777288,
+      "counts": {
+        "observed_steps": 82,
+        "steps_with_lexical_or_typed_event": 50,
+        "extracted_objects": 69,
+        "objects_without_free_variables": 67,
+        "actual_checker_executions": 2,
+        "conclusive_math_results": 1,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 2,
+        "symbolic_objects": 2,
+        "reliably_bound_symbolic_objects": 1,
+        "scope_authority_conditional": 1,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 66,
+        "EQUATION": 2,
+        "EQUATION_TRANSITION": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 65,
+        "natural_semantics_unbound_after_formal_check": 1,
+        "chain_limit": 1,
+        "unsupported_transition_surface": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 68,
+        "FORMAL_IDENTITY_VERIFIED": 1
+      }
+    },
+    {
+      "case_id": "D2_08",
+      "seed": 20261108,
+      "source_path": "native_results/worker_0/D2_08_20261108/result.json",
+      "source_sha256": "2360e7595d45a6147a5fd94a56176888bb8350a8ebe42122428009f1c6864f75",
+      "native_stop_reason": "EOS",
+      "new_tokens": 4462,
+      "seconds": 236.54250282235444,
+      "counts": {
+        "observed_steps": 125,
+        "steps_with_lexical_or_typed_event": 77,
+        "extracted_objects": 109,
+        "typed_objects_with_statement": 42,
+        "symbolic_objects": 23,
+        "reliably_bound_symbolic_objects": 22,
+        "scope_authority_conditional": 22,
+        "actual_checker_executions": 31,
+        "conclusive_math_results": 23,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "objects_without_free_variables": 86,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "EQUATION": 23,
+        "UNSUPPORTED": 66,
+        "CLOSED_ARITHMETIC": 17,
+        "APPROX_ARITHMETIC": 2,
+        "EQUATION_TRANSITION": 1
+      },
+      "unknown_reasons": {
+        "unresolved_equation_role": 11,
+        "natural_semantics_unbound_after_formal_check": 8,
+        "unsupported_equation_surface": 65,
+        "unsupported_transition_surface": 1,
+        "chain_limit": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 86,
+        "FORMAL_IDENTITY_VERIFIED": 4,
+        "VERIFIED": 17,
+        "ROUNDING_COMPATIBLE": 2
+      }
+    },
+    {
+      "case_id": "D2_09",
+      "seed": 20261107,
+      "source_path": "native_results/worker_0/D2_09_20261107/result.json",
+      "source_sha256": "192b0aae8377ccd041207d5407313db60a015ffc31b312c8f1ea52e01c2f918a",
+      "native_stop_reason": "EOS",
+      "new_tokens": 4120,
+      "seconds": 218.30493820086122,
+      "counts": {
+        "observed_steps": 72,
+        "steps_with_lexical_or_typed_event": 42,
+        "extracted_objects": 69,
+        "objects_without_free_variables": 68,
+        "actual_checker_executions": 1,
+        "conclusive_math_results": 0,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 1,
+        "symbolic_objects": 1,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 68,
+        "EQUATION": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 64,
+        "chain_limit": 4,
+        "natural_semantics_unbound_after_formal_check": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 69
+      }
+    },
+    {
+      "case_id": "D2_10",
+      "seed": 20261108,
+      "source_path": "native_results/worker_0/D2_10_20261108/result.json",
+      "source_sha256": "89c35669b4c0731acc2bde45cddcc5a4924cbf95694b1eab485c5531ebba199b",
+      "native_stop_reason": "EOS",
+      "new_tokens": 6895,
+      "seconds": 365.5069503271952,
+      "counts": {
+        "observed_steps": 188,
+        "steps_with_lexical_or_typed_event": 122,
+        "extracted_objects": 147,
+        "typed_objects_with_statement": 40,
+        "symbolic_objects": 39,
+        "actual_checker_executions": 40,
+        "conclusive_math_results": 3,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "objects_without_free_variables": 108,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "EQUATION": 39,
+        "UNSUPPORTED": 107,
+        "CLOSED_ARITHMETIC": 1
+      },
+      "unknown_reasons": {
+        "natural_semantics_unbound_after_formal_check": 37,
+        "unsupported_equation_surface": 107
+      },
+      "verdicts": {
+        "UNKNOWN": 144,
+        "FORMAL_IDENTITY_VERIFIED": 2,
+        "VERIFIED": 1
+      }
+    },
+    {
+      "case_id": "D2_11",
+      "seed": 20261107,
+      "source_path": "native_results/worker_0/D2_11_20261107/result.json",
+      "source_sha256": "db21374624bb0341e47713295fd0ed94103cae20a2dcacb60f01bf7f456ceda0",
+      "native_stop_reason": "EOS",
+      "new_tokens": 7955,
+      "seconds": 421.5029371343553,
+      "counts": {
+        "observed_steps": 209,
+        "steps_with_lexical_or_typed_event": 143,
+        "extracted_objects": 234,
+        "objects_without_free_variables": 176,
+        "actual_checker_executions": 56,
+        "conclusive_math_results": 13,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 63,
+        "symbolic_objects": 58,
+        "reliably_bound_symbolic_objects": 4,
+        "scope_authority_conditional": 4,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 169,
+        "EQUATION": 58,
+        "CLOSED_ARITHMETIC": 5,
+        "EQUATION_TRANSITION": 2
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 168,
+        "natural_semantics_unbound_after_formal_check": 43,
+        "unresolved_equation_role": 7,
+        "chain_limit": 1,
+        "unsupported_transition_surface": 2
+      },
+      "verdicts": {
+        "UNKNOWN": 221,
+        "VERIFIED": 5,
+        "FORMAL_IDENTITY_VERIFIED": 8
+      }
+    },
+    {
+      "case_id": "D2_12",
+      "seed": 20261108,
+      "source_path": "native_results/worker_0/D2_12_20261108/result.json",
+      "source_sha256": "ea300a743d8e19f54e23344caf4617efb8ac0ca929d53d1fdda3ecb5bfb1c026",
+      "native_stop_reason": "EOS",
+      "new_tokens": 13975,
+      "seconds": 741.8070981390774,
+      "counts": {
+        "observed_steps": 410,
+        "steps_with_lexical_or_typed_event": 281,
+        "extracted_objects": 449,
+        "objects_without_free_variables": 444,
+        "actual_checker_executions": 13,
+        "conclusive_math_results": 11,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 15,
+        "symbolic_objects": 5,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 425,
+        "CLOSED_ARITHMETIC": 7,
+        "EQUATION": 4,
+        "EQUATION_TRANSITION": 9,
+        "APPROX_ARITHMETIC": 4
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 420,
+        "unsupported_transition_surface": 9,
+        "chain_limit": 5,
+        "unsupported_precision": 1,
+        "natural_semantics_unbound_after_formal_check": 2,
+        "unsupported_scope_guard": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 438,
+        "VERIFIED": 7,
+        "FORMAL_IDENTITY_VERIFIED": 2,
+        "ROUNDING_COMPATIBLE": 2
+      }
+    },
+    {
+      "case_id": "D2_13",
+      "seed": 20261107,
+      "source_path": "native_results/worker_0/D2_13_20261107/result.json",
+      "source_sha256": "b99df61cd85a2af66ad85e1d0b97312b84ebdb0f066937274324166e3e1f6d38",
+      "native_stop_reason": "EOS",
+      "new_tokens": 4220,
+      "seconds": 224.4555045319721,
+      "counts": {
+        "observed_steps": 80,
+        "steps_with_lexical_or_typed_event": 53,
+        "extracted_objects": 66,
+        "objects_without_free_variables": 61,
+        "actual_checker_executions": 10,
+        "conclusive_math_results": 10,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 15,
+        "symbolic_objects": 5,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 47,
+        "EQUATION": 5,
+        "CLOSED_ARITHMETIC": 10,
+        "EQUATION_TRANSITION": 4
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 42,
+        "chain_limit": 5,
+        "unresolved_equation_role": 5,
+        "unsupported_transition_surface": 4
+      },
+      "verdicts": {
+        "UNKNOWN": 56,
+        "VERIFIED": 10
+      }
+    },
+    {
+      "case_id": "D2_14",
+      "seed": 20261108,
+      "source_path": "native_results/worker_0/D2_14_20261108/result.json",
+      "source_sha256": "c61c41164e99b7717b29eeae1df89a229cbdc76b6edc6a6e605bb1f8c32f75e2",
+      "native_stop_reason": "EOS",
+      "new_tokens": 5813,
+      "seconds": 308.9655258562416,
+      "counts": {
+        "observed_steps": 105,
+        "steps_with_lexical_or_typed_event": 70,
+        "extracted_objects": 120,
+        "typed_objects_with_statement": 28,
+        "objects_without_free_variables": 120,
+        "actual_checker_executions": 28,
+        "conclusive_math_results": 28,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "CLOSED_ARITHMETIC": 28,
+        "UNSUPPORTED": 92
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 92
+      },
+      "verdicts": {
+        "VERIFIED": 28,
+        "UNKNOWN": 92
+      }
+    },
+    {
+      "case_id": "D2_15",
+      "seed": 20261107,
+      "source_path": "native_results/worker_0/D2_15_20261107/result.json",
+      "source_sha256": "c5c77ebd78b1d5db4003d640b7559f2ac62d70331864df9476ee312c2061b7d0",
+      "native_stop_reason": "EOS",
+      "new_tokens": 7406,
+      "seconds": 393.339672007598,
+      "counts": {
+        "observed_steps": 142,
+        "steps_with_lexical_or_typed_event": 110,
+        "extracted_objects": 157,
+        "objects_without_free_variables": 156,
+        "actual_checker_executions": 15,
+        "conclusive_math_results": 15,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 20,
+        "symbolic_objects": 1,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 137,
+        "CLOSED_ARITHMETIC": 11,
+        "APPROX_ARITHMETIC": 8,
+        "EQUATION": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 135,
+        "chain_limit": 2,
+        "unsupported_precision": 4,
+        "unresolved_equation_role": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 142,
+        "VERIFIED": 11,
+        "ROUNDING_COMPATIBLE": 4
+      }
+    },
+    {
+      "case_id": "D2_16",
+      "seed": 20261108,
+      "source_path": "native_results/worker_0/D2_16_20261108/result.json",
+      "source_sha256": "7b2f530cb39b690aca417325e3ad0b88caa0bdb1e98e2f92b6aa9a54709dd6ec",
+      "native_stop_reason": "EOS",
+      "new_tokens": 14019,
+      "seconds": 745.4860430350527,
+      "counts": {
+        "observed_steps": 220,
+        "steps_with_lexical_or_typed_event": 179,
+        "extracted_objects": 188,
+        "objects_without_free_variables": 188,
+        "actual_checker_executions": 0,
+        "conclusive_math_results": 0,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 188
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 187,
+        "chain_limit": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 188
+      }
+    },
+    {
+      "case_id": "D2_17",
+      "seed": 20261107,
+      "source_path": "native_results/worker_0/D2_17_20261107/result.json",
+      "source_sha256": "f028679e2f2a08689eb064df0cff9ae88069346f5cc885f9a1eae5a78bff623d",
+      "native_stop_reason": "EOS",
+      "new_tokens": 4048,
+      "seconds": 215.08655852638185,
+      "counts": {
+        "observed_steps": 110,
+        "steps_with_lexical_or_typed_event": 62,
+        "extracted_objects": 72,
+        "objects_without_free_variables": 72,
+        "actual_checker_executions": 21,
+        "conclusive_math_results": 21,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 21,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 51,
+        "CLOSED_ARITHMETIC": 21
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 51
+      },
+      "verdicts": {
+        "UNKNOWN": 51,
+        "VERIFIED": 21
+      }
+    },
+    {
+      "case_id": "D2_18",
+      "seed": 20261108,
+      "source_path": "native_results/worker_0/D2_18_20261108/result.json",
+      "source_sha256": "cce0af8210a04f877ee7ec1a50506ada7b7769ee104a43d931e6b66c24763c8b",
+      "native_stop_reason": "EOS",
+      "new_tokens": 6987,
+      "seconds": 371.40187189448625,
+      "counts": {
+        "observed_steps": 114,
+        "steps_with_lexical_or_typed_event": 68,
+        "extracted_objects": 70,
+        "objects_without_free_variables": 70,
+        "actual_checker_executions": 12,
+        "conclusive_math_results": 12,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 12,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 58,
+        "CLOSED_ARITHMETIC": 12
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 52,
+        "chain_limit": 6
+      },
+      "verdicts": {
+        "UNKNOWN": 58,
+        "VERIFIED": 12
+      }
+    },
+    {
+      "case_id": "D2_19",
+      "seed": 20261107,
+      "source_path": "native_results/worker_0/D2_19_20261107/result.json",
+      "source_sha256": "93a11fa53ed3255aead9168dba225aa23d3347986de800bedbf91948b09daf3d",
+      "native_stop_reason": "EOS",
+      "new_tokens": 7556,
+      "seconds": 401.77124501857907,
+      "counts": {
+        "observed_steps": 130,
+        "steps_with_lexical_or_typed_event": 67,
+        "extracted_objects": 70,
+        "objects_without_free_variables": 70,
+        "actual_checker_executions": 2,
+        "conclusive_math_results": 2,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 2,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 68,
+        "CLOSED_ARITHMETIC": 2
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 66,
+        "chain_limit": 2
+      },
+      "verdicts": {
+        "UNKNOWN": 68,
+        "VERIFIED": 2
+      }
+    },
+    {
+      "case_id": "D2_20",
+      "seed": 20261108,
+      "source_path": "native_results/worker_0/D2_20_20261108/result.json",
+      "source_sha256": "d430b3126610b79eb11d132393404cfd8115367ed50178756326bf6c14addba6",
+      "native_stop_reason": "EOS",
+      "new_tokens": 1865,
+      "seconds": 99.1021098215133,
+      "counts": {
+        "observed_steps": 24,
+        "steps_with_lexical_or_typed_event": 18,
+        "extracted_objects": 18,
+        "objects_without_free_variables": 18,
+        "actual_checker_executions": 0,
+        "conclusive_math_results": 0,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 18
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 18
+      },
+      "verdicts": {
+        "UNKNOWN": 18
+      }
+    },
+    {
+      "case_id": "D2_21",
+      "seed": 20261107,
+      "source_path": "native_results/worker_0/D2_21_20261107/result.json",
+      "source_sha256": "7701c13ea63b82db11718374151b76dd48aa1e4b2b577e5644b770bfd82a22a6",
+      "native_stop_reason": "EOS",
+      "new_tokens": 3143,
+      "seconds": 167.12402484286577,
+      "counts": {
+        "observed_steps": 53,
+        "steps_with_lexical_or_typed_event": 26,
+        "extracted_objects": 28,
+        "objects_without_free_variables": 28,
+        "actual_checker_executions": 5,
+        "conclusive_math_results": 5,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 5,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 23,
+        "CLOSED_ARITHMETIC": 5
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 23
+      },
+      "verdicts": {
+        "UNKNOWN": 23,
+        "VERIFIED": 5
+      }
+    },
+    {
+      "case_id": "D2_22",
+      "seed": 20261108,
+      "source_path": "native_results/worker_0/D2_22_20261108/result.json",
+      "source_sha256": "80e17f5938711c05971eb4692bb89776639f28f66c094aabfe4fb72d6d34b86a",
+      "native_stop_reason": "EOS",
+      "new_tokens": 4123,
+      "seconds": 220.05769173800945,
+      "counts": {
+        "observed_steps": 76,
+        "steps_with_lexical_or_typed_event": 56,
+        "extracted_objects": 74,
+        "objects_without_free_variables": 74,
+        "actual_checker_executions": 0,
+        "conclusive_math_results": 0,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 74
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 71,
+        "chain_limit": 3
+      },
+      "verdicts": {
+        "UNKNOWN": 74
+      }
+    },
+    {
+      "case_id": "D2_23",
+      "seed": 20261107,
+      "source_path": "native_results/worker_0/D2_23_20261107/result.json",
+      "source_sha256": "4ae7c921d4e930b7a2d9cf1bd6feef00e8f3b446f11376acdd78c03cb5d4186d",
+      "native_stop_reason": "EOS",
+      "new_tokens": 7749,
+      "seconds": 414.58746687695384,
+      "counts": {
+        "observed_steps": 155,
+        "steps_with_lexical_or_typed_event": 87,
+        "extracted_objects": 125,
+        "objects_without_free_variables": 114,
+        "actual_checker_executions": 24,
+        "conclusive_math_results": 14,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 24,
+        "symbolic_objects": 11,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 97,
+        "CLOSED_ARITHMETIC": 12,
+        "APPROX_ARITHMETIC": 1,
+        "EQUATION_TRANSITION": 5,
+        "EQUATION": 10
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 96,
+        "unsupported_transition_surface": 4,
+        "natural_semantics_unbound_after_formal_check": 10,
+        "chain_limit": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 111,
+        "VERIFIED": 12,
+        "ROUNDING_COMPATIBLE": 1,
+        "FORMAL_IDENTITY_VERIFIED": 1
+      }
+    },
+    {
+      "case_id": "D2_24",
+      "seed": 20261108,
+      "source_path": "native_results/worker_0/D2_24_20261108/result.json",
+      "source_sha256": "4f9b45d6a18529f8f07accade7526541532fd5ddedbe75bc1bd55371fad03839",
+      "native_stop_reason": "EOS",
+      "new_tokens": 2651,
+      "seconds": 140.8044363623485,
+      "counts": {
+        "observed_steps": 30,
+        "steps_with_lexical_or_typed_event": 22,
+        "extracted_objects": 32,
+        "objects_without_free_variables": 32,
+        "actual_checker_executions": 2,
+        "conclusive_math_results": 2,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 2,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 30,
+        "CLOSED_ARITHMETIC": 2
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 30
+      },
+      "verdicts": {
+        "UNKNOWN": 30,
+        "VERIFIED": 2
+      }
+    },
+    {
+      "case_id": "D2_01",
+      "seed": 20261108,
+      "source_path": "native_results/worker_1/D2_01_20261108/result.json",
+      "source_sha256": "1e1ccd1e960e13ec8e5a8446b83799b5d23ee737f1361b73a2fb1b9af408cac4",
+      "native_stop_reason": "EOS",
+      "new_tokens": 2219,
+      "seconds": 118.20295636728406,
+      "counts": {
+        "observed_steps": 57,
+        "steps_with_lexical_or_typed_event": 19,
+        "extracted_objects": 24,
+        "objects_without_free_variables": 24,
+        "actual_checker_executions": 4,
+        "conclusive_math_results": 4,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 4,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 20,
+        "CLOSED_ARITHMETIC": 4
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 20
+      },
+      "verdicts": {
+        "UNKNOWN": 20,
+        "VERIFIED": 4
+      }
+    },
+    {
+      "case_id": "D2_02",
+      "seed": 20261107,
+      "source_path": "native_results/worker_1/D2_02_20261107/result.json",
+      "source_sha256": "bf424476664ac612872812af2a187f8f2149eec2fbcb6001f2c2187e9507e612",
+      "native_stop_reason": "EOS",
+      "new_tokens": 2719,
+      "seconds": 144.5965130124241,
+      "counts": {
+        "observed_steps": 33,
+        "steps_with_lexical_or_typed_event": 16,
+        "extracted_objects": 20,
+        "objects_without_free_variables": 19,
+        "actual_checker_executions": 0,
+        "conclusive_math_results": 0,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 1,
+        "symbolic_objects": 1,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 19,
+        "EQUATION": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 18,
+        "unresolved_equation_role": 1,
+        "chain_limit": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 20
+      }
+    },
+    {
+      "case_id": "D2_03",
+      "seed": 20261108,
+      "source_path": "native_results/worker_1/D2_03_20261108/result.json",
+      "source_sha256": "150c55a3dbfaf086d07bec5f5879f95c7dd1a0987300feaece8da3652df8ef5f",
+      "native_stop_reason": "EOS",
+      "new_tokens": 2211,
+      "seconds": 117.34911241941154,
+      "counts": {
+        "observed_steps": 18,
+        "steps_with_lexical_or_typed_event": 18,
+        "extracted_objects": 37,
+        "objects_without_free_variables": 37,
+        "actual_checker_executions": 0,
+        "conclusive_math_results": 0,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 37
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 33,
+        "chain_limit": 4
+      },
+      "verdicts": {
+        "UNKNOWN": 37
+      }
+    },
+    {
+      "case_id": "D2_04",
+      "seed": 20261107,
+      "source_path": "native_results/worker_1/D2_04_20261107/result.json",
+      "source_sha256": "62469563ef41f98267fa6f13aa4f0df8d6f2a72a18333d1c1514af15e73d6c4c",
+      "native_stop_reason": "EOS",
+      "new_tokens": 1697,
+      "seconds": 89.9550705300644,
+      "counts": {
+        "observed_steps": 50,
+        "steps_with_lexical_or_typed_event": 30,
+        "extracted_objects": 45,
+        "typed_objects_with_statement": 14,
+        "symbolic_objects": 13,
+        "actual_checker_executions": 14,
+        "conclusive_math_results": 1,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "objects_without_free_variables": 32,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "EQUATION": 13,
+        "UNSUPPORTED": 31,
+        "CLOSED_ARITHMETIC": 1
+      },
+      "unknown_reasons": {
+        "natural_semantics_unbound_after_formal_check": 13,
+        "unsupported_equation_surface": 31
+      },
+      "verdicts": {
+        "UNKNOWN": 44,
+        "VERIFIED": 1
+      }
+    },
+    {
+      "case_id": "D2_05",
+      "seed": 20261108,
+      "source_path": "native_results/worker_1/D2_05_20261108/result.json",
+      "source_sha256": "31c73edf1e22462aad15c51acac6f879a87f44a6ef7dfcda8360325a151a0fdd",
+      "native_stop_reason": "EOS",
+      "new_tokens": 12823,
+      "seconds": 683.2260217787698,
+      "counts": {
+        "observed_steps": 259,
+        "steps_with_lexical_or_typed_event": 175,
+        "extracted_objects": 239,
+        "objects_without_free_variables": 237,
+        "actual_checker_executions": 37,
+        "conclusive_math_results": 36,
+        "proved_false_without_action": 2,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 41,
+        "symbolic_objects": 2,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 198,
+        "CLOSED_ARITHMETIC": 23,
+        "APPROX_ARITHMETIC": 15,
+        "EQUATION": 1,
+        "RUNNING_SUM_CONTINUATION": 2
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 195,
+        "chain_limit": 3,
+        "natural_semantics_unbound_after_formal_check": 1,
+        "unsupported_precision": 3,
+        "unsupported_scope_guard": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 203,
+        "VERIFIED": 22,
+        "ROUNDING_COMPATIBLE": 10,
+        "FALSE_LITERAL": 1,
+        "ROUNDING_INCOMPATIBLE": 1,
+        "VERIFIED_RUNNING_SUM": 2
+      }
+    },
+    {
+      "case_id": "D2_06",
+      "seed": 20261107,
+      "source_path": "native_results/worker_1/D2_06_20261107/result.json",
+      "source_sha256": "fba1fe693e1699906bfa77cbfd8912f41e067edae9031a8064fb743bb7c50415",
+      "native_stop_reason": "EOS",
+      "new_tokens": 2875,
+      "seconds": 153.06547374464571,
+      "counts": {
+        "observed_steps": 25,
+        "steps_with_lexical_or_typed_event": 17,
+        "extracted_objects": 25,
+        "objects_without_free_variables": 25,
+        "actual_checker_executions": 3,
+        "conclusive_math_results": 3,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 3,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 21,
+        "CLOSED_ARITHMETIC": 3,
+        "EQUATION_TRANSITION": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 19,
+        "unsupported_transition_surface": 1,
+        "chain_limit": 2
+      },
+      "verdicts": {
+        "UNKNOWN": 22,
+        "VERIFIED": 3
+      }
+    },
+    {
+      "case_id": "D2_07",
+      "seed": 20261108,
+      "source_path": "native_results/worker_1/D2_07_20261108/result.json",
+      "source_sha256": "a4beddc08d426c7d1a1b09d766a4b0965a05770937131a2ea2e4ff734cf1b0e4",
+      "native_stop_reason": "EOS",
+      "new_tokens": 3286,
+      "seconds": 174.9219649368897,
+      "counts": {
+        "observed_steps": 82,
+        "steps_with_lexical_or_typed_event": 48,
+        "extracted_objects": 61,
+        "objects_without_free_variables": 49,
+        "actual_checker_executions": 16,
+        "conclusive_math_results": 9,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 19,
+        "symbolic_objects": 12,
+        "reliably_bound_symbolic_objects": 10,
+        "scope_authority_conditional": 10,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 42,
+        "EQUATION": 12,
+        "CLOSED_ARITHMETIC": 7
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 41,
+        "natural_semantics_unbound_after_formal_check": 7,
+        "unresolved_equation_role": 3,
+        "chain_limit": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 52,
+        "FORMAL_IDENTITY_VERIFIED": 2,
+        "VERIFIED": 7
+      }
+    },
+    {
+      "case_id": "D2_08",
+      "seed": 20261107,
+      "source_path": "native_results/worker_1/D2_08_20261107/result.json",
+      "source_sha256": "1f07e862d160910594037ce164d5fd07aeabdad4662bd6ea44acc53fbde2d172",
+      "native_stop_reason": "EOS",
+      "new_tokens": 3860,
+      "seconds": 204.986810432747,
+      "counts": {
+        "observed_steps": 122,
+        "steps_with_lexical_or_typed_event": 71,
+        "extracted_objects": 97,
+        "typed_objects_with_statement": 38,
+        "symbolic_objects": 23,
+        "reliably_bound_symbolic_objects": 22,
+        "scope_authority_conditional": 22,
+        "actual_checker_executions": 28,
+        "conclusive_math_results": 18,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "objects_without_free_variables": 74,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "EQUATION": 23,
+        "UNSUPPORTED": 58,
+        "CLOSED_ARITHMETIC": 15,
+        "EQUATION_TRANSITION": 1
+      },
+      "unknown_reasons": {
+        "unresolved_equation_role": 10,
+        "natural_semantics_unbound_after_formal_check": 10,
+        "unsupported_equation_surface": 58,
+        "unsupported_transition_surface": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 79,
+        "FORMAL_IDENTITY_VERIFIED": 3,
+        "VERIFIED": 15
+      }
+    },
+    {
+      "case_id": "D2_09",
+      "seed": 20261108,
+      "source_path": "native_results/worker_1/D2_09_20261108/result.json",
+      "source_sha256": "03e3645e0f288627f70ed8d0c3b93d763c53ebbc4ea11b1d9cf8ff6c589a1006",
+      "native_stop_reason": "EOS",
+      "new_tokens": 3585,
+      "seconds": 190.66597161255777,
+      "counts": {
+        "observed_steps": 43,
+        "steps_with_lexical_or_typed_event": 35,
+        "extracted_objects": 58,
+        "objects_without_free_variables": 58,
+        "actual_checker_executions": 0,
+        "conclusive_math_results": 0,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 58
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 53,
+        "chain_limit": 5
+      },
+      "verdicts": {
+        "UNKNOWN": 58
+      }
+    },
+    {
+      "case_id": "D2_10",
+      "seed": 20261107,
+      "source_path": "native_results/worker_1/D2_10_20261107/result.json",
+      "source_sha256": "0a79a70cab28ba9616563381f1d84ea0156e6c3e3a96e5d588a010f261df32de",
+      "native_stop_reason": "EOS",
+      "new_tokens": 5661,
+      "seconds": 301.01806928403676,
+      "counts": {
+        "observed_steps": 164,
+        "steps_with_lexical_or_typed_event": 113,
+        "extracted_objects": 179,
+        "typed_objects_with_statement": 28,
+        "symbolic_objects": 24,
+        "actual_checker_executions": 28,
+        "conclusive_math_results": 6,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "objects_without_free_variables": 155,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "EQUATION": 24,
+        "UNSUPPORTED": 150,
+        "CLOSED_ARITHMETIC": 4,
+        "EQUATION_TRANSITION": 1
+      },
+      "unknown_reasons": {
+        "natural_semantics_unbound_after_formal_check": 22,
+        "unsupported_equation_surface": 150,
+        "unsupported_transition_surface": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 173,
+        "VERIFIED": 4,
+        "FORMAL_IDENTITY_VERIFIED": 2
+      }
+    },
+    {
+      "case_id": "D2_11",
+      "seed": 20261108,
+      "source_path": "native_results/worker_1/D2_11_20261108/result.json",
+      "source_sha256": "7369f6f8aa9b2ca6048769c91e30f3eaeca8684ce8d43780e9c0c458a8fe5da4",
+      "native_stop_reason": "EOS",
+      "new_tokens": 7318,
+      "seconds": 389.9774231305346,
+      "counts": {
+        "observed_steps": 164,
+        "steps_with_lexical_or_typed_event": 120,
+        "extracted_objects": 214,
+        "objects_without_free_variables": 188,
+        "actual_checker_executions": 26,
+        "conclusive_math_results": 13,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 32,
+        "symbolic_objects": 26,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 182,
+        "EQUATION": 26,
+        "CLOSED_ARITHMETIC": 6
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 180,
+        "natural_semantics_unbound_after_formal_check": 13,
+        "unresolved_equation_role": 6,
+        "chain_limit": 2
+      },
+      "verdicts": {
+        "UNKNOWN": 201,
+        "VERIFIED": 6,
+        "FORMAL_IDENTITY_VERIFIED": 7
+      }
+    },
+    {
+      "case_id": "D2_12",
+      "seed": 20261107,
+      "source_path": "native_results/worker_1/D2_12_20261107/result.json",
+      "source_sha256": "388085eabc0978a360f6ab4e838171a65953c547b3a9218d403eeb1f7768e47c",
+      "native_stop_reason": "EOS",
+      "new_tokens": 10515,
+      "seconds": 560.1518809776753,
+      "counts": {
+        "observed_steps": 299,
+        "steps_with_lexical_or_typed_event": 179,
+        "extracted_objects": 284,
+        "objects_without_free_variables": 279,
+        "actual_checker_executions": 10,
+        "conclusive_math_results": 10,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 10,
+        "symbolic_objects": 5,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 270,
+        "EQUATION": 5,
+        "EQUATION_TRANSITION": 4,
+        "CLOSED_ARITHMETIC": 5
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 264,
+        "chain_limit": 6,
+        "unsupported_transition_surface": 4
+      },
+      "verdicts": {
+        "UNKNOWN": 274,
+        "FORMAL_IDENTITY_VERIFIED": 5,
+        "VERIFIED": 5
+      }
+    },
+    {
+      "case_id": "D2_13",
+      "seed": 20261108,
+      "source_path": "native_results/worker_1/D2_13_20261108/result.json",
+      "source_sha256": "7abb334b659e309b7fe84ccebc200a642590c134b2a741f34f3a6a61f1d5bf7f",
+      "native_stop_reason": "EOS",
+      "new_tokens": 4312,
+      "seconds": 228.85232720617205,
+      "counts": {
+        "observed_steps": 89,
+        "steps_with_lexical_or_typed_event": 63,
+        "extracted_objects": 85,
+        "objects_without_free_variables": 76,
+        "actual_checker_executions": 5,
+        "conclusive_math_results": 5,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 14,
+        "symbolic_objects": 9,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 70,
+        "EQUATION": 9,
+        "EQUATION_TRANSITION": 1,
+        "CLOSED_ARITHMETIC": 5
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 68,
+        "chain_limit": 2,
+        "unresolved_equation_role": 9,
+        "unsupported_transition_surface": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 80,
+        "VERIFIED": 5
+      }
+    },
+    {
+      "case_id": "D2_14",
+      "seed": 20261107,
+      "source_path": "native_results/worker_1/D2_14_20261107/result.json",
+      "source_sha256": "cecd5000e8dd6efc3a4e93cd4f46987289fbc30b23b6d7a3f920ec7fd4feec18",
+      "native_stop_reason": "EOS",
+      "new_tokens": 4872,
+      "seconds": 258.69808835349977,
+      "counts": {
+        "observed_steps": 101,
+        "steps_with_lexical_or_typed_event": 69,
+        "extracted_objects": 87,
+        "objects_without_free_variables": 86,
+        "actual_checker_executions": 16,
+        "conclusive_math_results": 15,
+        "proved_false_without_action": 2,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 16,
+        "symbolic_objects": 1,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 71,
+        "CLOSED_ARITHMETIC": 10,
+        "EQUATION": 1,
+        "APPROX_ARITHMETIC": 5
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 71,
+        "natural_semantics_unbound_after_formal_check": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 72,
+        "VERIFIED": 9,
+        "ROUNDING_COMPATIBLE": 4,
+        "FALSE_LITERAL": 1,
+        "ROUNDING_INCOMPATIBLE": 1
+      }
+    },
+    {
+      "case_id": "D2_15",
+      "seed": 20261108,
+      "source_path": "native_results/worker_1/D2_15_20261108/result.json",
+      "source_sha256": "83054bb6df5f23dd18cd3dffd3dadf151f76a79381627c2af386bbdb66bb159b",
+      "native_stop_reason": "EOS",
+      "new_tokens": 8275,
+      "seconds": 438.7163563380018,
+      "counts": {
+        "observed_steps": 205,
+        "steps_with_lexical_or_typed_event": 148,
+        "extracted_objects": 210,
+        "objects_without_free_variables": 210,
+        "actual_checker_executions": 39,
+        "conclusive_math_results": 39,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 41,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 168,
+        "CLOSED_ARITHMETIC": 14,
+        "APPROX_ARITHMETIC": 19,
+        "RUNNING_SUM_CONTINUATION": 8,
+        "EQUATION_TRANSITION": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 163,
+        "chain_limit": 5,
+        "unsupported_precision": 2,
+        "unsupported_transition_surface": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 171,
+        "VERIFIED": 14,
+        "ROUNDING_COMPATIBLE": 17,
+        "VERIFIED_RUNNING_SUM": 8
+      }
+    },
+    {
+      "case_id": "D2_16",
+      "seed": 20261107,
+      "source_path": "native_results/worker_1/D2_16_20261107/result.json",
+      "source_sha256": "f5efef57217016967942bee93fba5a72d94f5aa7e4b788af72ef1f522e16f432",
+      "native_stop_reason": "EOS",
+      "new_tokens": 2234,
+      "seconds": 118.20820355601609,
+      "counts": {
+        "observed_steps": 29,
+        "steps_with_lexical_or_typed_event": 19,
+        "extracted_objects": 22,
+        "objects_without_free_variables": 22,
+        "actual_checker_executions": 4,
+        "conclusive_math_results": 4,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 4,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 18,
+        "CLOSED_ARITHMETIC": 4
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 18
+      },
+      "verdicts": {
+        "UNKNOWN": 18,
+        "VERIFIED": 4
+      }
+    },
+    {
+      "case_id": "D2_17",
+      "seed": 20261108,
+      "source_path": "native_results/worker_1/D2_17_20261108/result.json",
+      "source_sha256": "f4bedabece7678cf4c44e7a43be3ab3e113d2cb48bc54ea18c6645f6a8bbf684",
+      "native_stop_reason": "EOS",
+      "new_tokens": 4479,
+      "seconds": 237.31145630404353,
+      "counts": {
+        "observed_steps": 107,
+        "steps_with_lexical_or_typed_event": 60,
+        "extracted_objects": 71,
+        "typed_objects_with_statement": 16,
+        "objects_without_free_variables": 71,
+        "actual_checker_executions": 16,
+        "conclusive_math_results": 16,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "CLOSED_ARITHMETIC": 16,
+        "UNSUPPORTED": 55
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 55
+      },
+      "verdicts": {
+        "VERIFIED": 16,
+        "UNKNOWN": 55
+      }
+    },
+    {
+      "case_id": "D2_18",
+      "seed": 20261107,
+      "source_path": "native_results/worker_1/D2_18_20261107/result.json",
+      "source_sha256": "f09d34feaaab6c1ec3693a0ddf8250a152874cf1bf9abcac4a8082e5c736a33e",
+      "native_stop_reason": "EOS",
+      "new_tokens": 6510,
+      "seconds": 344.8697112388909,
+      "counts": {
+        "observed_steps": 144,
+        "steps_with_lexical_or_typed_event": 90,
+        "extracted_objects": 118,
+        "objects_without_free_variables": 118,
+        "actual_checker_executions": 19,
+        "conclusive_math_results": 19,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 19,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 99,
+        "CLOSED_ARITHMETIC": 19
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 92,
+        "chain_limit": 7
+      },
+      "verdicts": {
+        "UNKNOWN": 99,
+        "VERIFIED": 19
+      }
+    },
+    {
+      "case_id": "D2_19",
+      "seed": 20261108,
+      "source_path": "native_results/worker_1/D2_19_20261108/result.json",
+      "source_sha256": "ed856be478aa77fd6d2ff7f1435d0c8ccea45c0d1bb56fe3a740506befbf6ce0",
+      "native_stop_reason": "EOS",
+      "new_tokens": 6097,
+      "seconds": 323.5129995048046,
+      "counts": {
+        "observed_steps": 74,
+        "steps_with_lexical_or_typed_event": 47,
+        "extracted_objects": 70,
+        "objects_without_free_variables": 70,
+        "actual_checker_executions": 8,
+        "conclusive_math_results": 8,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 8,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 62,
+        "CLOSED_ARITHMETIC": 8
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 60,
+        "chain_limit": 2
+      },
+      "verdicts": {
+        "UNKNOWN": 62,
+        "VERIFIED": 8
+      }
+    },
+    {
+      "case_id": "D2_20",
+      "seed": 20261107,
+      "source_path": "native_results/worker_1/D2_20_20261107/result.json",
+      "source_sha256": "82a131a556618f071ecf7da86b35c922a298a89b9e1f6a31161dc93620216cf6",
+      "native_stop_reason": "EOS",
+      "new_tokens": 1389,
+      "seconds": 73.50269989669323,
+      "counts": {
+        "observed_steps": 15,
+        "steps_with_lexical_or_typed_event": 13,
+        "extracted_objects": 15,
+        "objects_without_free_variables": 15,
+        "actual_checker_executions": 0,
+        "conclusive_math_results": 0,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 15
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 15
+      },
+      "verdicts": {
+        "UNKNOWN": 15
+      }
+    },
+    {
+      "case_id": "D2_21",
+      "seed": 20261108,
+      "source_path": "native_results/worker_1/D2_21_20261108/result.json",
+      "source_sha256": "e8281881aa654c84aff3926d58859f8166d88409c8991e289ce98a5cf20f204c",
+      "native_stop_reason": "EOS",
+      "new_tokens": 2580,
+      "seconds": 136.78153833560646,
+      "counts": {
+        "observed_steps": 38,
+        "steps_with_lexical_or_typed_event": 16,
+        "extracted_objects": 16,
+        "objects_without_free_variables": 16,
+        "actual_checker_executions": 2,
+        "conclusive_math_results": 2,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 2,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 14,
+        "CLOSED_ARITHMETIC": 2
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 14
+      },
+      "verdicts": {
+        "UNKNOWN": 14,
+        "VERIFIED": 2
+      }
+    },
+    {
+      "case_id": "D2_22",
+      "seed": 20261107,
+      "source_path": "native_results/worker_1/D2_22_20261107/result.json",
+      "source_sha256": "df69f8730f9cfd88baad15d4e7a506007eb4a701417714f9fb1da563e9dddbcd",
+      "native_stop_reason": "EOS",
+      "new_tokens": 8292,
+      "seconds": 438.8661122061312,
+      "counts": {
+        "observed_steps": 139,
+        "steps_with_lexical_or_typed_event": 117,
+        "extracted_objects": 167,
+        "objects_without_free_variables": 167,
+        "actual_checker_executions": 1,
+        "conclusive_math_results": 1,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 1,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 166,
+        "CLOSED_ARITHMETIC": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 148,
+        "chain_limit": 18
+      },
+      "verdicts": {
+        "UNKNOWN": 166,
+        "VERIFIED": 1
+      }
+    },
+    {
+      "case_id": "D2_23",
+      "seed": 20261108,
+      "source_path": "native_results/worker_1/D2_23_20261108/result.json",
+      "source_sha256": "172c5e334c15fba6bb3213dcecf9dc170bb2d4fb2827cedb9aeacd0f76106a49",
+      "native_stop_reason": "EOS",
+      "new_tokens": 6232,
+      "seconds": 330.41417273692787,
+      "counts": {
+        "observed_steps": 127,
+        "steps_with_lexical_or_typed_event": 82,
+        "extracted_objects": 123,
+        "objects_without_free_variables": 116,
+        "actual_checker_executions": 21,
+        "conclusive_math_results": 14,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 21,
+        "symbolic_objects": 7,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 101,
+        "CLOSED_ARITHMETIC": 14,
+        "EQUATION": 7,
+        "EQUATION_TRANSITION": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 100,
+        "natural_semantics_unbound_after_formal_check": 7,
+        "unsupported_transition_surface": 1,
+        "chain_limit": 1
+      },
+      "verdicts": {
+        "UNKNOWN": 109,
+        "VERIFIED": 14
+      }
+    },
+    {
+      "case_id": "D2_24",
+      "seed": 20261107,
+      "source_path": "native_results/worker_1/D2_24_20261107/result.json",
+      "source_sha256": "b415c5a8f17adbe5b44437706b7f4d28f76c23db4f9e520866aabc5dfd0dd516",
+      "native_stop_reason": "EOS",
+      "new_tokens": 3911,
+      "seconds": 207.05559260211885,
+      "counts": {
+        "observed_steps": 75,
+        "steps_with_lexical_or_typed_event": 31,
+        "extracted_objects": 36,
+        "objects_without_free_variables": 36,
+        "actual_checker_executions": 1,
+        "conclusive_math_results": 1,
+        "proved_false_without_action": 0,
+        "certificate_permits_action": 0,
+        "typed_objects_with_statement": 1,
+        "executable_revisions": 0
+      },
+      "kinds": {
+        "UNSUPPORTED": 35,
+        "CLOSED_ARITHMETIC": 1
+      },
+      "unknown_reasons": {
+        "unsupported_equation_surface": 35
+      },
+      "verdicts": {
+        "UNKNOWN": 35,
+        "VERIFIED": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,1536 @@
+{
+  "status": "COMPLETE_POST_GOLD_DIAGNOSTIC",
+  "read_only_with_respect_to_frozen_inputs": true,
+  "additional_gpu_seconds": 0,
+  "frozen_scoring_summary": [
+    {
+      "evaluation_partition": "native_bank",
+      "arm": "NativeContinue",
+      "trajectories": 32,
+      "distinct_problems": 16,
+      "correct": 16,
+      "unknown": 0,
+      "EOS": 32
+    }
+  ],
+  "frozen_method_files_verified": 18,
+  "inputs_sha256": {
+    "D3_METHOD_FREEZE.json": "507f2bc9ffac5acb061991cc20d7e950931c58360ce272dd8f17d56ef200f664",
+    "D3_DATA_FREEZE.json": "fcb7720df07e82a1f8e8eb8993607f4451972e4c32a477c2afe0525ef3ad2507",
+    "D3_PAIRING_PROTOCOL.json": "7cfa11b0f2990e8ffbfd4e85a55671f616c2fba69db4802a8218bcfdb8248fda",
+    "BANK_RETRIEVAL.json": "ee1b7ae44753d1c8c0dd68d8817aed4823a942b3a9ac66c09e925683825624f5",
+    "quality/D3_PAIR_SELECTION.json": "b882272d38ff45a10f3168eb73eb6343c5583f08fe775d12a662601cb582aa8f",
+    "diagnostics/bank/TYPED_COVERAGE.json": "0f94b0ddd3625dba2d7f11c1ee272b2b539f00f9c3f672d2c6b8e2e5c9a4e0cf",
+    "diagnostics/bank/TYPED_EVENT_REPLAY.jsonl": "555e561274f391c5dc3b5952ea45ed72787d921b09719d367e3ab78869f0df88",
+    "bank/GRADE_FREEZE.json": "5fb0ffc835f2eb8d1c785b4fa7912b0143560bb5aa2eeae90b40ca9270909819",
+    "bank/SCORE_RECEIPT.json": "98eaf5734298fe0bc42b8e92d39fed1922f404519a7b7990c49be2577ae48687",
+    "bank/SCORES.json": "6c7b1aa85354e1a6d0ce7dfc72ebb55499ff2f16c5d115691cd0fe886f521150",
+    "prepared_data/bank/visible.jsonl": "54dd3be09ec7b952e4ca6ade399eebba9ac58cff4b61bfc4b8e0e083bad619fc",
+    "prepared_data/bank/eval_only.jsonl": "58c81f05b5ede1dbc4746ea4148ed48e91db0a31d19e165559dd419299e934a3"
+  },
+  "raw_trajectory_sha256": {
+    "bank/native_results/worker_0/D3_E01_20261109/result.json": "5ff07158a7e53823285881b17952a039c1cf17885a826040a4922a8ad96bd3e6",
+    "bank/native_results/worker_1/D3_E01_20261110/result.json": "677b604a6fa775cc27bc8c62069af6987c88675bada3fb326da8158a55f76d87",
+    "bank/native_results/worker_1/D3_E02_20261109/result.json": "8a0bd1d7a5c9a9d58fc914ddaf88f91222ca71a67b6f7c688df457b5a4fd8a5c",
+    "bank/native_results/worker_0/D3_E02_20261110/result.json": "7f0793dae89508bb2d6c19bcc38cae98aba51e6e4017ca7542601106bb516a1c",
+    "bank/native_results/worker_0/D3_E03_20261109/result.json": "db4327c9a4c04f95f3686f67a3f33474c7cd9c48839687e041889e6b55d2b994",
+    "bank/native_results/worker_1/D3_E03_20261110/result.json": "04927e4c65ec0426ea507591a4276981d93d6283a8a05f9300900086f938f5c8",
+    "bank/native_results/worker_1/D3_E04_20261109/result.json": "f971337ab407346110805014e5724f1592501d6db9ac247546764af5e5fce198",
+    "bank/native_results/worker_0/D3_E04_20261110/result.json": "7d3668ed1fa665d8f9f3ed90e88217bec6ac6fb417ae3580dbc8d12bb6b87a27",
+    "bank/native_results/worker_0/D3_E05_20261109/result.json": "869bb311fadba005d39cd4666efbd9445d87da376ff3f6a19aca901529b26434",
+    "bank/native_results/worker_1/D3_E05_20261110/result.json": "a8e8fb5d56c6ace795bf1c050278bd86f6a4cb8f8e4805e82402ce09e0aa4c6f",
+    "bank/native_results/worker_1/D3_E06_20261109/result.json": "70267efb3fcc69f5966d8a77fc4164a7b37708e4a3d3cac44575bb86fedb3e11",
+    "bank/native_results/worker_0/D3_E06_20261110/result.json": "203843e0815d922a96d016b79c146174c3a421762564d6c14fa472dc031aa0b6",
+    "bank/native_results/worker_0/D3_E07_20261109/result.json": "c3e1e079aef59e69be20abc3bb87e2fff82d130f028880e839ad5bb8040cd1cb",
+    "bank/native_results/worker_1/D3_E07_20261110/result.json": "b8fd12398952b34d7a4528031d2a570353e76f633a2324c8581832978db11df7",
+    "bank/native_results/worker_1/D3_E08_20261109/result.json": "a90a30c97efc72697a9a5c6c25a699bde0397c81854895af580c1dc2554e9450",
+    "bank/native_results/worker_0/D3_E08_20261110/result.json": "69b6b0ab822fbdc5457e22696929ff95783a77be9f9693d85c1a06a277dc5742",
+    "bank/native_results/worker_0/D3_E09_20261109/result.json": "c5f74c72b9402d70e57ed204d7bd9fd340b7a8d8adfb19e1cfd5aec9750a0f0b",
+    "bank/native_results/worker_1/D3_E09_20261110/result.json": "ae96701b397b0744a3999c8ad49bed941534c70d491e46c6385548755b2672da",
+    "bank/native_results/worker_1/D3_E10_20261109/result.json": "31a21f02eedc735851751faae315048f187c747b3dc1f97e16d512d9d0ba2db1",
+    "bank/native_results/worker_0/D3_E10_20261110/result.json": "9ee7a7a87e0861bb6d538d23842ac9878dafac5c8d6c6c1913bddbfed14bf199",
+    "bank/native_results/worker_0/D3_E11_20261109/result.json": "21cf3dcc4316767f67fb9b45353b4b76996a58c06ed4948e4408b5d8d82ea310",
+    "bank/native_results/worker_1/D3_E11_20261110/result.json": "43532297fce454904c5161173bd5b765adcbd4e40b9585fc6f464cb8d7b4315f",
+    "bank/native_results/worker_1/D3_E12_20261109/result.json": "4398f344ab2f19a4bf2137570bbf15ec08b9477d3c05add128cabe97297b4240",
+    "bank/native_results/worker_0/D3_E12_20261110/result.json": "7e49a6b442143ee7b43da32d04bc170c02c51a338dfd64c4f9e050b4d17474ff",
+    "bank/native_results/worker_0/D3_E13_20261109/result.json": "e71bd5ebb0363da0d1b6085efa7574a9661e3bcb1684fccc0d736eb7748d2972",
+    "bank/native_results/worker_1/D3_E13_20261110/result.json": "9bf6bbc6c5f3175343a5b64099b0a93e30e98de971381e9069b9bebe0f1582c7",
+    "bank/native_results/worker_1/D3_E14_20261109/result.json": "e6ec08c93ee5b7ed9c526a3085ef4a5071a27119e0317b7df68329cb19954178",
+    "bank/native_results/worker_0/D3_E14_20261110/result.json": "dd7bbbd5de160d0f58043d377e95b73bb9e2bfe016412178f206c8785c1dd287",
+    "bank/native_results/worker_0/D3_E15_20261109/result.json": "05670e8f01b7ef0660289eb4fafb3b352feb5862dd489ce68e702ac9a88bace8",
+    "bank/native_results/worker_1/D3_E15_20261110/result.json": "f57d658638a95d86a9643d6a308baf1cb8f57c3993d0b18af30fff04d3b88b7b",
+    "bank/native_results/worker_1/D3_E16_20261109/result.json": "df298e53bd637a09febb1b2717261cd31775c6455a1a346ef9d1bd972cc748e0",
+    "bank/native_results/worker_0/D3_E16_20261110/result.json": "3a3e85d3843060cbcd85b564685983bbf11ef52e56da90869bd1f6e20e7e544a"
+  },
+  "actual_tokenizer_assets_sha256": {
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+  },
+  "independent_target_replay": [
+    {
+      "case_id": "D3_E10",
+      "seed": 20261110,
+      "step": 50,
+      "source_path": "bank/native_results/worker_0/D3_E10_20261110/result.json",
+      "source_sha256": "9ee7a7a87e0861bb6d538d23842ac9878dafac5c8d6c6c1913bddbfed14bf199",
+      "reproduced_event": {
+        "event_id": "e_4bc79aa967791bb6247dfb2680f9d5c5ea596be3",
+        "kind": "EQUATION_TRANSITION",
+        "role": "transition_candidate",
+        "raw": "x + y = 0 => y = -x",
+        "normalized": [
+          "x+y",
+          "0",
+          "IMPLIES",
+          "y",
+          "-x"
+        ],
+        "variables": [
+          "x",
+          "y"
+        ],
+        "source": {
+          "step": 50,
+          "token_span": [
+            2408,
+            2420
+          ],
+          "char_span": [
+            0,
+            19
+          ],
+          "text_sha256": "82378b127d5fa130af948eea215685224b7f301a4b17ddfd8a769a090d27053d",
+          "observed_prefix_sha256": "b7f2d4133a34d87ad215c442c370aca144755fa9c6f61706cf07f4860c985dc2"
+        },
+        "dependencies": [],
+        "eligibility": "REQUIRES_SCOPE",
+        "statement": {
+          "antecedent": {
+            "lhs": {
+              "args": [
+                {
+                  "name": "x",
+                  "op": "var"
+                },
+                {
+                  "name": "y",
+                  "op": "var"
+                }
+              ],
+              "op": "add"
+            },
+            "rhs": 0
+          },
+          "consequent": {
+            "lhs": {
+              "name": "y",
+              "op": "var"
+            },
+            "rhs": {
+              "arg": {
+                "name": "x",
+                "op": "var"
+              },
+              "op": "neg"
+            }
+          },
+          "direction": "IMPLIES"
+        }
+      },
+      "raw_step_text": "x + y = 0 => y = -x\n\n",
+      "scope_status": "UNBOUND",
+      "scope_reason": "symbol_missing_domain_or_binding",
+      "unresolved_symbols": [
+        "x",
+        "y"
+      ],
+      "visible_bindings": {
+        "x": null,
+        "y": null
+      },
+      "problem_qualification": "UNBOUND_PROBLEM",
+      "scope_notes": [
+        [
+          0,
+          "no_explicit_problem_domain_declaration"
+        ]
+      ],
+      "scope_frame_ids": [
+        [
+          "s_48fbe3e25d553adf1c942a9a53cf7c23",
+          "MAINLINE",
+          null
+        ]
+      ],
+      "observer_rng_sha256": "7cbf3e563541d56cb671c381187dc7b5391eaba667aadc14ec6c908f947b620a",
+      "frozen_formal_status": "FORMAL_IDENTITY_VERIFIED",
+      "frozen_role_action": "NONE",
+      "frozen_correct": true,
+      "decoded_observed_steps": 51
+    },
+    {
+      "case_id": "D3_E12",
+      "seed": 20261109,
+      "step": 95,
+      "source_path": "bank/native_results/worker_1/D3_E12_20261109/result.json",
+      "source_sha256": "4398f344ab2f19a4bf2137570bbf15ec08b9477d3c05add128cabe97297b4240",
+      "reproduced_event": {
+        "event_id": "e_07bec68bdc9bbbc554418fa508b6a78d5ad34e01",
+        "kind": "EQUATION_TRANSITION",
+        "role": "transition_candidate",
+        "raw": "r + 2 = -1 => r = -3",
+        "normalized": [
+          "r+2",
+          "-1",
+          "IMPLIES",
+          "r",
+          "-3"
+        ],
+        "variables": [
+          "r"
+        ],
+        "source": {
+          "step": 95,
+          "token_span": [
+            2230,
+            2243
+          ],
+          "char_span": [
+            0,
+            20
+          ],
+          "text_sha256": "fb2b79c14bfc1d690141aa4796d378599a0f3158eb785b41fd2b5236cc12ac9a",
+          "observed_prefix_sha256": "9dd66093558097f8d7cb34ae3306875b8dc7ae42d0b7396267fd20ff8ea1a30e"
+        },
+        "dependencies": [],
+        "eligibility": "REQUIRES_SCOPE",
+        "statement": {
+          "antecedent": {
+            "lhs": {
+              "args": [
+                {
+                  "name": "r",
+                  "op": "var"
+                },
+                2
+              ],
+              "op": "add"
+            },
+            "rhs": {
+              "arg": 1,
+              "op": "neg"
+            }
+          },
+          "consequent": {
+            "lhs": {
+              "name": "r",
+              "op": "var"
+            },
+            "rhs": {
+              "arg": 3,
+              "op": "neg"
+            }
+          },
+          "direction": "IMPLIES"
+        }
+      },
+      "raw_step_text": "r + 2 = -1 => r = -3.\n\n",
+      "scope_status": "UNBOUND",
+      "scope_reason": "symbol_missing_domain_or_binding",
+      "unresolved_symbols": [
+        "r"
+      ],
+      "visible_bindings": {
+        "r": null
+      },
+      "problem_qualification": "UNBOUND_PROBLEM",
+      "scope_notes": [
+        [
+          0,
+          "no_explicit_problem_domain_declaration"
+        ]
+      ],
+      "scope_frame_ids": [
+        [
+          "s_4471b237859ef82b52835eaf520c5f9c",
+          "MAINLINE",
+          null
+        ]
+      ],
+      "observer_rng_sha256": "7aad03614dadd128bf1c5f475eac63a33835d5352b18123190cf086e6a29249c",
+      "frozen_formal_status": "FORMAL_IDENTITY_VERIFIED",
+      "frozen_role_action": "NONE",
+      "frozen_correct": true,
+      "decoded_observed_steps": 96
+    }
+  ],
+  "frozen_pair_gate": "NO_ELIGIBLE_TARGET",
+  "frozen_paired_cases": 0,
+  "typed_counts": {
+    "observed_steps": 10070,
+    "steps_with_lexical_or_typed_event": 6024,
+    "extracted_objects": 9710,
+    "objects_without_free_variables": 9523,
+    "actual_checker_executions": 628,
+    "conclusive_math_results": 522,
+    "proved_false_without_action": 10,
+    "certificate_permits_action": 0,
+    "typed_objects_with_statement": 685,
+    "symbolic_objects": 187,
+    "executable_revisions": 0
+  },
+  "typed_kinds": {
+    "UNSUPPORTED": 8792,
+    "EQUATION_TRANSITION": 222,
+    "CLOSED_ARITHMETIC": 475,
+    "EQUATION": 185,
+    "APPROX_ARITHMETIC": 23,
+    "RUNNING_SUM_CONTINUATION": 13
+  },
+  "symbolic_scope_reasons": {
+    "symbol_missing_domain_or_binding": 61,
+    "ambiguous_case_sibling": 65,
+    "unsupported_scope_guard": 55,
+    "scope_boundary_not_prior_to_target": 1,
+    "scope_nesting_limit": 5
+  },
+  "transition_empty_statement_count": 220,
+  "overlapping_transition_surface_flags": {
+    "multiple_arrows": 102,
+    "inequality_surface_after_removing_arrows": 43,
+    "radical_trig_or_factorial_marker": 26
+  },
+  "all_checked_false_without_action": [
+    {
+      "case_id": "D3_E07",
+      "seed": 20261109,
+      "step": 143,
+      "event_id": "e_c1bd70eb51c1e10b78416fb854148410d5bd2371",
+      "event_source": {
+        "step": 143,
+        "token_span": [
+          13504,
+          13558
+        ],
+        "char_span": [
+          11,
+          84
+        ],
+        "text_sha256": "f9376c9fa0dcd58a26e6974ecad12a7ac17a328aa092a046f1649c9ee7a46625",
+        "observed_prefix_sha256": "9c77a4ba2a10d94e25e8487c08c1bfac3c8ee6473baf8ae53818da88d84fa2db"
+      },
+      "raw": "the probability is 4320 / 10395 = 288 / 693 = 96 / 231 = 32 / 77 ≈ 0.4155",
+      "normalized": [
+        "32/77",
+        "0.4155"
+      ],
+      "status": "ROUNDING_INCOMPATIBLE",
+      "action": "NONE",
+      "witness": {
+        "exact": "32/77",
+        "printed": "831/2000",
+        "absolute_difference": "13/154000",
+        "tolerance": "1/20000",
+        "decimal_places": 4
+      }
+    },
+    {
+      "case_id": "D3_E08",
+      "seed": 20261110,
+      "step": 249,
+      "event_id": "e_fb44028f06195d6d2ce9e6b9301053fb18a07bf1",
+      "event_source": {
+        "step": 249,
+        "token_span": [
+          13562,
+          13614
+        ],
+        "char_span": [
+          11,
+          77
+        ],
+        "text_sha256": "e24a9db85c82f2fc8621008f33d2013bf12ddb9097bf156c45a972b4786cfc05",
+        "observed_prefix_sha256": "b84f88457794d3982f686f944dfd84b2ca57caf745a7ba00343efd019a6575a2"
+      },
+      "raw": "the total sum is 25*(4/3) + 300/9 = 100/3 + 100/3 = 200/3 ≈ 66.666",
+      "normalized": [
+        "200/3",
+        "66.666"
+      ],
+      "status": "ROUNDING_INCOMPATIBLE",
+      "action": "NONE",
+      "witness": {
+        "exact": "200/3",
+        "printed": "33333/500",
+        "absolute_difference": "1/1500",
+        "tolerance": "1/2000",
+        "decimal_places": 3
+      }
+    },
+    {
+      "case_id": "D3_E08",
+      "seed": 20261110,
+      "step": 255,
+      "event_id": "e_e4612cbad65e052ab37c7fee10657d6e5ca4773e",
+      "event_source": {
+        "step": 255,
+        "token_span": [
+          13734,
+          13786
+        ],
+        "char_span": [
+          0,
+          64
+        ],
+        "text_sha256": "179fc64aa3dca9d52a4cda11d8db38fec72d97ab7cdd7d0b69277333e1b08267",
+        "observed_prefix_sha256": "ee5cb870a3a1683586eaeb698282162e80394c425ddad4bddda7ba29784a8c05"
+      },
+      "raw": "Compute 29 + 200/3: 29 is 87/3, so 87/3 + 200/3 = 287/3 ≈ 95.666",
+      "normalized": [
+        "287/3",
+        "95.666"
+      ],
+      "status": "ROUNDING_INCOMPATIBLE",
+      "action": "NONE",
+      "witness": {
+        "exact": "287/3",
+        "printed": "47833/500",
+        "absolute_difference": "1/1500",
+        "tolerance": "1/2000",
+        "decimal_places": 3
+      }
+    },
+    {
+      "case_id": "D3_E01",
+      "seed": 20261110,
+      "step": 731,
+      "event_id": "e_166d55247d9b330481c938cfa65c046a336adb78",
+      "event_source": {
+        "step": 731,
+        "token_span": [
+          26369,
+          26388
+        ],
+        "char_span": [
+          0,
+          18
+        ],
+        "text_sha256": "c7ad1f2469e367f5fdac16a3351ccff6e7035762f7998d777c3897a151380511",
+        "observed_prefix_sha256": "03d3876f1e92d2046abbffa20c74baf5e496f9b2640e8679f69dd06c73a2c6a4"
+      },
+      "raw": "50625/484 ≈ 104.57",
+      "normalized": [
+        "50625/484",
+        "104.57"
+      ],
+      "status": "ROUNDING_INCOMPATIBLE",
+      "action": "NONE",
+      "witness": {
+        "exact": "50625/484",
+        "printed": "10457/100",
+        "absolute_difference": "82/3025",
+        "tolerance": "1/200",
+        "decimal_places": 2
+      }
+    },
+    {
+      "case_id": "D3_E01",
+      "seed": 20261110,
+      "step": 735,
+      "event_id": "e_448404760fc5590022f319359108e29c57f3b105",
+      "event_source": {
+        "step": 735,
+        "token_span": [
+          26445,
+          26504
+        ],
+        "char_span": [
+          6,
+          76
+        ],
+        "text_sha256": "2ba4691111d46cd605462dcc4014377311f2c4106ddfaacdef7c69a9d244ddb0",
+        "observed_prefix_sha256": "9577739650a859a3d99a791cbfa795ad1d9c4ae4ffc135c839ca1af025fbe625"
+      },
+      "raw": "AP = (DA² - DB²)/DA = (685.71 - 104.57)/26.18 ≈ 581.14 / 26.18 ≈ 22.18",
+      "normalized": [
+        "581.14/26.18",
+        "22.18"
+      ],
+      "status": "ROUNDING_INCOMPATIBLE",
+      "action": "NONE",
+      "witness": {
+        "exact": "4151/187",
+        "printed": "1109/50",
+        "absolute_difference": "167/9350",
+        "tolerance": "1/200",
+        "decimal_places": 2
+      }
+    },
+    {
+      "case_id": "D3_E01",
+      "seed": 20261110,
+      "step": 739,
+      "event_id": "e_4b58098662d10e62ec574e0f9e5c8ab9be5a40ec",
+      "event_source": {
+        "step": 739,
+        "token_span": [
+          26651,
+          26710
+        ],
+        "char_span": [
+          0,
+          74
+        ],
+        "text_sha256": "7807aaa172a59151753037c67f5d1219ebf3ad32bacfc5ed5d301681f29b368f",
+        "observed_prefix_sha256": "528b4f35eb273efa322483c79a8914452fcaf33589c45f9b69625113c68ac552"
+      },
+      "raw": "But if DA ≈ 26.18, and 29057/50 ≈ 581.14, then AP ≈ 581.14 / 26.18 ≈ 22.18",
+      "normalized": [
+        "581.14/26.18",
+        "22.18"
+      ],
+      "status": "ROUNDING_INCOMPATIBLE",
+      "action": "NONE",
+      "witness": {
+        "exact": "4151/187",
+        "printed": "1109/50",
+        "absolute_difference": "167/9350",
+        "tolerance": "1/200",
+        "decimal_places": 2
+      }
+    },
+    {
+      "case_id": "D3_E08",
+      "seed": 20261109,
+      "step": 589,
+      "event_id": "e_3fe98e6f99e0ca6ffce83a8496e58b3e867d1911",
+      "event_source": {
+        "step": 589,
+        "token_span": [
+          25523,
+          25609
+        ],
+        "char_span": [
+          0,
+          136
+        ],
+        "text_sha256": "c4eb764f4dcf1b7c2d91147912fb08f5a396e0484a70da05f85465af850b77f8",
+        "observed_prefix_sha256": "49c57918436986d71173988969c55a8d7900a8da8cb0f95f0976e04e98642c93"
+      },
+      "raw": "But if the actual p is 7/10, then it would be 300 * 7/10 = 210, leading to E[R] = 28 + 1 + 100/3 + 210 = 28 + 1 + 33.333 + 210 = 272.333",
+      "normalized": [
+        "28+1+100/3+210",
+        "28+1+33.333+210"
+      ],
+      "status": "FALSE_LITERAL",
+      "action": "NONE",
+      "witness": {
+        "lhs": "817/3",
+        "rhs": "272333/1000",
+        "assignment": {},
+        "semantics": "scoped_point_statement"
+      }
+    },
+    {
+      "case_id": "D3_E08",
+      "seed": 20261109,
+      "step": 677,
+      "event_id": "e_b9bca63b38bb72e63678d7f77c8c67d63c6f8bde",
+      "event_source": {
+        "step": 677,
+        "token_span": [
+          28194,
+          28273
+        ],
+        "char_span": [
+          0,
+          142
+        ],
+        "text_sha256": "f92f9adb007d5ce41018200887bdd139cafb08d601f62142277cf6ea31bad6f1",
+        "observed_prefix_sha256": "91f8062ba50671692c99f332723ac6fb4e0c1706bc57f61ea79d5fdad406693d"
+      },
+      "raw": "Now, if we assume that p = 1/2, then the total expected number of regions is 29 + 100/3 + 300 * 1/2 = 29 + 100/3 + 150 = 179 + 100/3 = 212.333",
+      "normalized": [
+        "179+100/3",
+        "212.333"
+      ],
+      "status": "FALSE_LITERAL",
+      "action": "NONE",
+      "witness": {
+        "lhs": "637/3",
+        "rhs": "212333/1000",
+        "assignment": {},
+        "semantics": "scoped_point_statement"
+      }
+    },
+    {
+      "case_id": "D3_E08",
+      "seed": 20261109,
+      "step": 786,
+      "event_id": "e_898e462a46663b04fb6eec280204de01c9d0ca4d",
+      "event_source": {
+        "step": 786,
+        "token_span": [
+          31891,
+          31932
+        ],
+        "char_span": [
+          6,
+          51
+        ],
+        "text_sha256": "27077ea29c54f363cc4006f25f15d0a56260aeaf6f2297dae54992027dd9e3e2",
+        "observed_prefix_sha256": "4fe83b8d8374aab6eaeb9f30c8dcc1b0b04fcac32b0f545f0f139b276f823701"
+      },
+      "raw": "E[R] = 1 + 3 + 25/9 = 4 + 25/9 = 61/9 ≈ 6.777",
+      "normalized": [
+        "61/9",
+        "6.777"
+      ],
+      "status": "ROUNDING_INCOMPATIBLE",
+      "action": "NONE",
+      "witness": {
+        "exact": "61/9",
+        "printed": "6777/1000",
+        "absolute_difference": "7/9000",
+        "tolerance": "1/2000",
+        "decimal_places": 3
+      }
+    },
+    {
+      "case_id": "D3_E16",
+      "seed": 20261109,
+      "step": 134,
+      "event_id": "e_9df4bfe394c1085b3a6cff8989f00900b6391858",
+      "event_source": {
+        "step": 134,
+        "token_span": [
+          3381,
+          3402
+        ],
+        "char_span": [
+          0,
+          31
+        ],
+        "text_sha256": "2e1798358e434d9e44c7d638992e4833bf3c0d65bb3efd2372bdbcf0a860913d",
+        "observed_prefix_sha256": "6ffdad4ea7a7bd54036d1469aefb8dde9eb15822b0a105cab71ebeb23d1543c6"
+      },
+      "raw": "For 5: floor(1/3) +1=0 +1=1 (0)",
+      "normalized": [
+        "0+1",
+        "1*(0)"
+      ],
+      "status": "FALSE_LITERAL",
+      "action": "NONE",
+      "witness": {
+        "lhs": "1",
+        "rhs": "0",
+        "assignment": {},
+        "semantics": "scoped_point_statement"
+      }
+    }
+  ],
+  "endpoint_readout_diagnostic_counts": {
+    "UNDELIVERED_TERMINAL_MATCH": 4,
+    "UNDELIVERED_TERMINAL_MISMATCH": 2,
+    "EXTRACTED_VALUE_MISMATCH": 10
+  },
+  "frozen_noncorrect_output_readout": [
+    {
+      "case_id": "D3_E01",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_0/D3_E01_20261109/result.json",
+      "source_sha256": "5ff07158a7e53823285881b17952a039c1cf17885a826040a4922a8ad96bd3e6",
+      "final_response_sha256": "480b3119942f795edf3e4bbe3e5edd7cb0cfed1d78c29d687739750cec14eec5",
+      "stratum": "aime_2024",
+      "frozen_selection_status": "ambiguous",
+      "frozen_selection_reason": "boxed_objects_do_not_consume_final_payload",
+      "frozen_grade_status": "not_delivered",
+      "selected_equals_inspected_terminal_box": null,
+      "terminal_box_char_span": [
+        2650,
+        2661
+      ],
+      "terminal_box_literal": "113",
+      "terminal_box_rational": "113",
+      "reference_literal": "113",
+      "literal_terminal_match": true,
+      "diagnostic_class": "UNDELIVERED_TERMINAL_MATCH",
+      "frozen_label_spans": [],
+      "uncertainty_word_spans": [],
+      "alternative_word_spans": []
+    },
+    {
+      "case_id": "D3_E01",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_1/D3_E01_20261110/result.json",
+      "source_sha256": "677b604a6fa775cc27bc8c62069af6987c88675bada3fb326da8158a55f76d87",
+      "final_response_sha256": "397c0b88518f69a6feddf912bae3e4599a6c51f74b229fdfa84da1dbb51f18d3",
+      "stratum": "aime_2024",
+      "frozen_selection_status": "ambiguous",
+      "frozen_selection_reason": "boxed_objects_do_not_consume_final_payload",
+      "frozen_grade_status": "not_delivered",
+      "selected_equals_inspected_terminal_box": null,
+      "terminal_box_char_span": [
+        2822,
+        2834
+      ],
+      "terminal_box_literal": "1159",
+      "terminal_box_rational": "1159",
+      "reference_literal": "113",
+      "literal_terminal_match": false,
+      "diagnostic_class": "UNDELIVERED_TERMINAL_MISMATCH",
+      "frozen_label_spans": [
+        [
+          2722,
+          2749
+        ]
+      ],
+      "uncertainty_word_spans": [],
+      "alternative_word_spans": [
+        [
+          "or",
+          2081,
+          2083
+        ]
+      ]
+    },
+    {
+      "case_id": "D3_E02",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_1/D3_E02_20261109/result.json",
+      "source_sha256": "8a0bd1d7a5c9a9d58fc914ddaf88f91222ca71a67b6f7c688df457b5a4fd8a5c",
+      "final_response_sha256": "675d5396781d69d91e76b30efc03de530a4fa0ca36a71abe1e90da87284d2244",
+      "stratum": "aime_2024",
+      "frozen_selection_status": "ok",
+      "frozen_selection_reason": null,
+      "frozen_grade_status": "ok",
+      "selected_equals_inspected_terminal_box": true,
+      "terminal_box_char_span": [
+        3856,
+        3866
+      ],
+      "terminal_box_literal": "12",
+      "terminal_box_rational": "12",
+      "reference_literal": "385",
+      "literal_terminal_match": false,
+      "diagnostic_class": "EXTRACTED_VALUE_MISMATCH",
+      "frozen_label_spans": [],
+      "uncertainty_word_spans": [],
+      "alternative_word_spans": []
+    },
+    {
+      "case_id": "D3_E02",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_0/D3_E02_20261110/result.json",
+      "source_sha256": "7f0793dae89508bb2d6c19bcc38cae98aba51e6e4017ca7542601106bb516a1c",
+      "final_response_sha256": "73786ceb189c09ba5b28723c24a01b7bf8d844ea6a41e61b82570e56ff2fe3a8",
+      "stratum": "aime_2024",
+      "frozen_selection_status": "ok",
+      "frozen_selection_reason": null,
+      "frozen_grade_status": "ok",
+      "selected_equals_inspected_terminal_box": true,
+      "terminal_box_char_span": [
+        3021,
+        3031
+      ],
+      "terminal_box_literal": "16",
+      "terminal_box_rational": "16",
+      "reference_literal": "385",
+      "literal_terminal_match": false,
+      "diagnostic_class": "EXTRACTED_VALUE_MISMATCH",
+      "frozen_label_spans": [
+        [
+          2999,
+          3018
+        ]
+      ],
+      "uncertainty_word_spans": [],
+      "alternative_word_spans": []
+    },
+    {
+      "case_id": "D3_E05",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_0/D3_E05_20261109/result.json",
+      "source_sha256": "869bb311fadba005d39cd4666efbd9445d87da376ff3f6a19aca901529b26434",
+      "final_response_sha256": "be31f0e70073f0a2d4406aa1305dde73560b9369febcb49617d4ad99bcea7d3c",
+      "stratum": "aime_2025",
+      "frozen_selection_status": "ambiguous",
+      "frozen_selection_reason": "uncertain_final_object",
+      "frozen_grade_status": "not_delivered",
+      "selected_equals_inspected_terminal_box": null,
+      "terminal_box_char_span": [
+        2801,
+        2812
+      ],
+      "terminal_box_literal": "149",
+      "terminal_box_rational": "149",
+      "reference_literal": "149",
+      "literal_terminal_match": true,
+      "diagnostic_class": "UNDELIVERED_TERMINAL_MATCH",
+      "frozen_label_spans": [],
+      "uncertainty_word_spans": [
+        [
+          "either",
+          1914,
+          1920
+        ]
+      ],
+      "alternative_word_spans": [
+        [
+          "or",
+          1944,
+          1946
+        ]
+      ]
+    },
+    {
+      "case_id": "D3_E05",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_1/D3_E05_20261110/result.json",
+      "source_sha256": "a8e8fb5d56c6ace795bf1c050278bd86f6a4cb8f8e4805e82402ce09e0aa4c6f",
+      "final_response_sha256": "ab98c73232083db5f3e797816488dd86d2c2a123d25e6310b1a6cbf819be4e6c",
+      "stratum": "aime_2025",
+      "frozen_selection_status": "ambiguous",
+      "frozen_selection_reason": "uncertain_final_object",
+      "frozen_grade_status": "not_delivered",
+      "selected_equals_inspected_terminal_box": null,
+      "terminal_box_char_span": [
+        3079,
+        3090
+      ],
+      "terminal_box_literal": "149",
+      "terminal_box_rational": "149",
+      "reference_literal": "149",
+      "literal_terminal_match": true,
+      "diagnostic_class": "UNDELIVERED_TERMINAL_MATCH",
+      "frozen_label_spans": [],
+      "uncertainty_word_spans": [
+        [
+          "either",
+          2022,
+          2028
+        ]
+      ],
+      "alternative_word_spans": [
+        [
+          "or",
+          2051,
+          2053
+        ]
+      ]
+    },
+    {
+      "case_id": "D3_E06",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_1/D3_E06_20261109/result.json",
+      "source_sha256": "70267efb3fcc69f5966d8a77fc4164a7b37708e4a3d3cac44575bb86fedb3e11",
+      "final_response_sha256": "c2fa453f62b6c82cdd19712e802728c63358929db3f0943e80258d7741b1554b",
+      "stratum": "aime_2025",
+      "frozen_selection_status": "ok",
+      "frozen_selection_reason": null,
+      "frozen_grade_status": "ok",
+      "selected_equals_inspected_terminal_box": true,
+      "terminal_box_char_span": [
+        2589,
+        2600
+      ],
+      "terminal_box_literal": "415",
+      "terminal_box_rational": "415",
+      "reference_literal": "610",
+      "literal_terminal_match": false,
+      "diagnostic_class": "EXTRACTED_VALUE_MISMATCH",
+      "frozen_label_spans": [
+        [
+          2432,
+          2453
+        ]
+      ],
+      "uncertainty_word_spans": [
+        [
+          "Either",
+          1095,
+          1101
+        ]
+      ],
+      "alternative_word_spans": [
+        [
+          "Or",
+          1269,
+          1271
+        ]
+      ]
+    },
+    {
+      "case_id": "D3_E06",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_0/D3_E06_20261110/result.json",
+      "source_sha256": "203843e0815d922a96d016b79c146174c3a421762564d6c14fa472dc031aa0b6",
+      "final_response_sha256": "528c55215e02d2c53b2f371aae62e21433db46a8b33bfb74349a82561f469958",
+      "stratum": "aime_2025",
+      "frozen_selection_status": "ambiguous",
+      "frozen_selection_reason": "alternative_final_objects",
+      "frozen_grade_status": "not_delivered",
+      "selected_equals_inspected_terminal_box": null,
+      "terminal_box_char_span": [
+        2847,
+        2858
+      ],
+      "terminal_box_literal": "610",
+      "terminal_box_rational": "610",
+      "reference_literal": "610",
+      "literal_terminal_match": true,
+      "diagnostic_class": "UNDELIVERED_TERMINAL_MATCH",
+      "frozen_label_spans": [],
+      "uncertainty_word_spans": [],
+      "alternative_word_spans": [
+        [
+          "or",
+          1818,
+          1820
+        ]
+      ]
+    },
+    {
+      "case_id": "D3_E07",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_0/D3_E07_20261109/result.json",
+      "source_sha256": "c3e1e079aef59e69be20abc3bb87e2fff82d130f028880e839ad5bb8040cd1cb",
+      "final_response_sha256": "bc6b9d78bcb30ae81eb2bb4861d176269975b339b5d033d0eb4b773754773c81",
+      "stratum": "aime_2025",
+      "frozen_selection_status": "ambiguous",
+      "frozen_selection_reason": "boxed_objects_do_not_consume_final_payload",
+      "frozen_grade_status": "not_delivered",
+      "selected_equals_inspected_terminal_box": null,
+      "terminal_box_char_span": [
+        3891,
+        3901
+      ],
+      "terminal_box_literal": "41",
+      "terminal_box_rational": "41",
+      "reference_literal": "821",
+      "literal_terminal_match": false,
+      "diagnostic_class": "UNDELIVERED_TERMINAL_MISMATCH",
+      "frozen_label_spans": [],
+      "uncertainty_word_spans": [],
+      "alternative_word_spans": []
+    },
+    {
+      "case_id": "D3_E07",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_1/D3_E07_20261110/result.json",
+      "source_sha256": "b8fd12398952b34d7a4528031d2a570353e76f633a2324c8581832978db11df7",
+      "final_response_sha256": "abe1f6b49458f7604d66306a76253b9f87af052224e96be2062b53a3d8e05b9c",
+      "stratum": "aime_2025",
+      "frozen_selection_status": "ok",
+      "frozen_selection_reason": "single_boxed_rhs_of_exact_terminal_chain",
+      "frozen_grade_status": "ok",
+      "selected_equals_inspected_terminal_box": true,
+      "terminal_box_char_span": [
+        3645,
+        3656
+      ],
+      "terminal_box_literal": "271",
+      "terminal_box_rational": "271",
+      "reference_literal": "821",
+      "literal_terminal_match": false,
+      "diagnostic_class": "EXTRACTED_VALUE_MISMATCH",
+      "frozen_label_spans": [
+        [
+          3477,
+          3504
+        ]
+      ],
+      "uncertainty_word_spans": [],
+      "alternative_word_spans": []
+    },
+    {
+      "case_id": "D3_E08",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_1/D3_E08_20261109/result.json",
+      "source_sha256": "a90a30c97efc72697a9a5c6c25a699bde0397c81854895af580c1dc2554e9450",
+      "final_response_sha256": "04e69bacfed2d97892a930dddbf8d5e7be7f9d5f81931921daef085f5d7e17a5",
+      "stratum": "aime_2025",
+      "frozen_selection_status": "ok",
+      "frozen_selection_reason": null,
+      "frozen_grade_status": "ok",
+      "selected_equals_inspected_terminal_box": true,
+      "terminal_box_char_span": [
+        2274,
+        2296
+      ],
+      "terminal_box_literal": "\\dfrac{637}{3}",
+      "terminal_box_rational": "637/3",
+      "reference_literal": "204",
+      "literal_terminal_match": false,
+      "diagnostic_class": "EXTRACTED_VALUE_MISMATCH",
+      "frozen_label_spans": [
+        [
+          2252,
+          2271
+        ]
+      ],
+      "uncertainty_word_spans": [],
+      "alternative_word_spans": []
+    },
+    {
+      "case_id": "D3_E08",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_0/D3_E08_20261110/result.json",
+      "source_sha256": "69b6b0ab822fbdc5457e22696929ff95783a77be9f9693d85c1a06a277dc5742",
+      "final_response_sha256": "3583f8cc889c64cd43e3fbfc5d10307583320ab1b4baae494d4aa526f93289c0",
+      "stratum": "aime_2025",
+      "frozen_selection_status": "ok",
+      "frozen_selection_reason": null,
+      "frozen_grade_status": "ok",
+      "selected_equals_inspected_terminal_box": true,
+      "terminal_box_char_span": [
+        3117,
+        3139
+      ],
+      "terminal_box_literal": "\\dfrac{287}{3}",
+      "terminal_box_rational": "287/3",
+      "reference_literal": "204",
+      "literal_terminal_match": false,
+      "diagnostic_class": "EXTRACTED_VALUE_MISMATCH",
+      "frozen_label_spans": [
+        [
+          3091,
+          3114
+        ]
+      ],
+      "uncertainty_word_spans": [],
+      "alternative_word_spans": [
+        [
+          "or",
+          796,
+          798
+        ],
+        [
+          "or",
+          1293,
+          1295
+        ]
+      ]
+    },
+    {
+      "case_id": "D3_E12",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_0/D3_E12_20261110/result.json",
+      "source_sha256": "7e49a6b442143ee7b43da32d04bc170c02c51a338dfd64c4f9e050b4d17474ff",
+      "final_response_sha256": "fa96517e68a0f9ca2074cc301348942c26aa882314bc46bb36985dde2add5eaa",
+      "stratum": "olympiad_Algebra",
+      "frozen_selection_status": "ok",
+      "frozen_selection_reason": null,
+      "frozen_grade_status": "ok",
+      "selected_equals_inspected_terminal_box": true,
+      "terminal_box_char_span": [
+        4069,
+        4079
+      ],
+      "terminal_box_literal": "45",
+      "terminal_box_rational": "45",
+      "reference_literal": "61",
+      "literal_terminal_match": false,
+      "diagnostic_class": "EXTRACTED_VALUE_MISMATCH",
+      "frozen_label_spans": [
+        [
+          4046,
+          4066
+        ]
+      ],
+      "uncertainty_word_spans": [],
+      "alternative_word_spans": [
+        [
+          "or",
+          2030,
+          2032
+        ],
+        [
+          "or",
+          2137,
+          2139
+        ]
+      ]
+    },
+    {
+      "case_id": "D3_E14",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_1/D3_E14_20261109/result.json",
+      "source_sha256": "e6ec08c93ee5b7ed9c526a3085ef4a5071a27119e0317b7df68329cb19954178",
+      "final_response_sha256": "81f6b1c35f31c9f4cf204172819c0eb121d166df7ae27372161cb226c3afc3b2",
+      "stratum": "olympiad_Number Theory",
+      "frozen_selection_status": "ok",
+      "frozen_selection_reason": null,
+      "frozen_grade_status": "ok",
+      "selected_equals_inspected_terminal_box": true,
+      "terminal_box_char_span": [
+        3100,
+        3110
+      ],
+      "terminal_box_literal": "21",
+      "terminal_box_rational": "21",
+      "reference_literal": "23",
+      "literal_terminal_match": false,
+      "diagnostic_class": "EXTRACTED_VALUE_MISMATCH",
+      "frozen_label_spans": [
+        [
+          3078,
+          3097
+        ]
+      ],
+      "uncertainty_word_spans": [],
+      "alternative_word_spans": []
+    },
+    {
+      "case_id": "D3_E14",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_0/D3_E14_20261110/result.json",
+      "source_sha256": "dd7bbbd5de160d0f58043d377e95b73bb9e2bfe016412178f206c8785c1dd287",
+      "final_response_sha256": "ae21cac22ef666e7c80de91224bd835c380d318a9aafa8c93f3053843ef120ca",
+      "stratum": "olympiad_Number Theory",
+      "frozen_selection_status": "ok",
+      "frozen_selection_reason": null,
+      "frozen_grade_status": "ok",
+      "selected_equals_inspected_terminal_box": true,
+      "terminal_box_char_span": [
+        3915,
+        3926
+      ],
+      "terminal_box_literal": "105",
+      "terminal_box_rational": "105",
+      "reference_literal": "23",
+      "literal_terminal_match": false,
+      "diagnostic_class": "EXTRACTED_VALUE_MISMATCH",
+      "frozen_label_spans": [
+        [
+          3893,
+          3912
+        ]
+      ],
+      "uncertainty_word_spans": [],
+      "alternative_word_spans": [
+        [
+          "or",
+          436,
+          438
+        ],
+        [
+          "or",
+          1826,
+          1828
+        ],
+        [
+          "or",
+          2663,
+          2665
+        ]
+      ]
+    },
+    {
+      "case_id": "D3_E15",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_1/D3_E15_20261110/result.json",
+      "source_sha256": "f57d658638a95d86a9643d6a308baf1cb8f57c3993d0b18af30fff04d3b88b7b",
+      "final_response_sha256": "5327fde7484f5c6ee3c99064d93cb8ff14f9f3ea6d14b56df7b32ad338d99774",
+      "stratum": "olympiad_Number Theory",
+      "frozen_selection_status": "ok",
+      "frozen_selection_reason": null,
+      "frozen_grade_status": "ok",
+      "selected_equals_inspected_terminal_box": true,
+      "terminal_box_char_span": [
+        2328,
+        2342
+      ],
+      "terminal_box_literal": "303369",
+      "terminal_box_rational": "303369",
+      "reference_literal": "10112369",
+      "literal_terminal_match": false,
+      "diagnostic_class": "EXTRACTED_VALUE_MISMATCH",
+      "frozen_label_spans": [
+        [
+          2166,
+          2189
+        ]
+      ],
+      "uncertainty_word_spans": [],
+      "alternative_word_spans": [
+        [
+          "or",
+          325,
+          327
+        ]
+      ]
+    }
+  ],
+  "manual_mechanism_sample": [
+    {
+      "case_id": "D3_E02",
+      "seed": 20261110,
+      "diagnosis": "unsupported_periodic_root_count_and_final_arithmetic_inconsistency",
+      "steps": [
+        550,
+        552,
+        553
+      ],
+      "source_path": "bank/native_results/worker_0/D3_E02_20261110/result.json",
+      "source_sha256": "7f0793dae89508bb2d6c19bcc38cae98aba51e6e4017ca7542601106bb516a1c",
+      "observed_evidence": [
+        {
+          "step": 550,
+          "token_span": [
+            27668,
+            27716
+          ],
+          "text_sha256": "e18b70302df9bacc5612d6fb72670caa19bae418e729a99ec5a5b74ac0f2de79"
+        },
+        {
+          "step": 552,
+          "token_span": [
+            27722,
+            27749
+          ],
+          "text_sha256": "09de6a4fc5cafe588fe72d533f6df2d3e34ef645b300f0b8c13165555aeef202"
+        },
+        {
+          "step": 553,
+          "token_span": [
+            27749,
+            27759
+          ],
+          "text_sha256": "d2e552e9b9aabee43ea0964f0d0a61087198844613e791b8638e9b116a190d6b"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E06",
+      "seed": 20261109,
+      "diagnosis": "incomplete_residue_partition",
+      "steps": [],
+      "source_path": "bank/native_results/worker_1/D3_E06_20261109/result.json",
+      "source_sha256": "70267efb3fcc69f5966d8a77fc4164a7b37708e4a3d3cac44575bb86fedb3e11",
+      "observed_evidence": []
+    },
+    {
+      "case_id": "D3_E07",
+      "seed": 20261110,
+      "diagnosis": "incorrect_pairing_event_count",
+      "steps": [
+        162,
+        163,
+        165
+      ],
+      "source_path": "bank/native_results/worker_1/D3_E07_20261110/result.json",
+      "source_sha256": "b8fd12398952b34d7a4528031d2a570353e76f633a2324c8581832978db11df7",
+      "observed_evidence": [
+        {
+          "step": 162,
+          "token_span": [
+            13076,
+            13271
+          ],
+          "text_sha256": "987b23e6c33cf4e3a1d9db442df04ae3e3b9a87e4624daa551aae2fabdafbf18"
+        },
+        {
+          "step": 163,
+          "token_span": [
+            13271,
+            13307
+          ],
+          "text_sha256": "e7a0cfc6120a5700299ccacd8c3e745a4ceefef695d3197321f68fd1db777c97"
+        },
+        {
+          "step": 165,
+          "token_span": [
+            13319,
+            13330
+          ],
+          "text_sha256": "aa30c93f21594763b2987542bfedd4611820f3ec2918da4271c2908c0ad6d4ca"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E08",
+      "seed": 20261109,
+      "diagnosis": "incorrect_geometric_probability_model",
+      "steps": [
+        589,
+        677,
+        814,
+        815
+      ],
+      "source_path": "bank/native_results/worker_1/D3_E08_20261109/result.json",
+      "source_sha256": "a90a30c97efc72697a9a5c6c25a699bde0397c81854895af580c1dc2554e9450",
+      "observed_evidence": [
+        {
+          "step": 589,
+          "token_span": [
+            25523,
+            25609
+          ],
+          "text_sha256": "c4eb764f4dcf1b7c2d91147912fb08f5a396e0484a70da05f85465af850b77f8"
+        },
+        {
+          "step": 677,
+          "token_span": [
+            28194,
+            28273
+          ],
+          "text_sha256": "f92f9adb007d5ce41018200887bdd139cafb08d601f62142277cf6ea31bad6f1"
+        },
+        {
+          "step": 814,
+          "token_span": [
+            32709,
+            32742
+          ],
+          "text_sha256": "8b59660a7164c4eb3cd67866c25e808e19fdccb0ef585f4e50b07414829c1bb9"
+        },
+        {
+          "step": 815,
+          "token_span": [
+            32742,
+            32789
+          ],
+          "text_sha256": "d8e1f7e9d036267a9818eae1c87e20c00966b2b0cff1f83d26b00ac07f039c24"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E08",
+      "seed": 20261110,
+      "diagnosis": "incorrect_geometric_probability_model",
+      "steps": [
+        249,
+        255
+      ],
+      "source_path": "bank/native_results/worker_0/D3_E08_20261110/result.json",
+      "source_sha256": "69b6b0ab822fbdc5457e22696929ff95783a77be9f9693d85c1a06a277dc5742",
+      "observed_evidence": [
+        {
+          "step": 249,
+          "token_span": [
+            13562,
+            13614
+          ],
+          "text_sha256": "e24a9db85c82f2fc8621008f33d2013bf12ddb9097bf156c45a972b4786cfc05"
+        },
+        {
+          "step": 255,
+          "token_span": [
+            13734,
+            13786
+          ],
+          "text_sha256": "179fc64aa3dca9d52a4cda11d8db38fec72d97ab7cdd7d0b69277333e1b08267"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E12",
+      "seed": 20261110,
+      "diagnosis": "correct_thinking_then_wrong_final_rederivation",
+      "steps": [
+        43,
+        121,
+        152,
+        153
+      ],
+      "source_path": "bank/native_results/worker_0/D3_E12_20261110/result.json",
+      "source_sha256": "7e49a6b442143ee7b43da32d04bc170c02c51a338dfd64c4f9e050b4d17474ff",
+      "observed_evidence": [
+        {
+          "step": 43,
+          "token_span": [
+            1198,
+            1225
+          ],
+          "text_sha256": "141bc69eee8253715c1df05ec6b08f7be22bec0a3a9f866bbd8ecd3b46423499"
+        },
+        {
+          "step": 121,
+          "token_span": [
+            2654,
+            2704
+          ],
+          "text_sha256": "3b4dd6a658da109480810fb7c6265ede5195284901a430648b9014a0cc2a0d48"
+        },
+        {
+          "step": 152,
+          "token_span": [
+            3823,
+            3848
+          ],
+          "text_sha256": "b2336dbe46c539069d77efb8504aae7674aaa4420091e208c718df82a2a4c4d9"
+        },
+        {
+          "step": 153,
+          "token_span": [
+            3848,
+            3858
+          ],
+          "text_sha256": "d03e4f8eaf5e60921f7c0ba9e21daba2da65bdcecffe84d5b5b715ef0062c1e0"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E14",
+      "seed": 20261110,
+      "diagnosis": "false_lcm_divisibility_implication",
+      "steps": [
+        474,
+        475
+      ],
+      "source_path": "bank/native_results/worker_0/D3_E14_20261110/result.json",
+      "source_sha256": "dd7bbbd5de160d0f58043d377e95b73bb9e2bfe016412178f206c8785c1dd287",
+      "observed_evidence": [
+        {
+          "step": 474,
+          "token_span": [
+            26957,
+            27071
+          ],
+          "text_sha256": "4af256dbc47ba59267860dea6d95024a75a32d730cc4fbb03719d8c24d4f1833"
+        },
+        {
+          "step": 475,
+          "token_span": [
+            27071,
+            27182
+          ],
+          "text_sha256": "bdf01125e8074302857c4976da51942ca76776664ceb01880302f49ae613d60a"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E15",
+      "seed": 20261110,
+      "diagnosis": "valid_larger_constructive_witness_discarded",
+      "steps": [
+        451,
+        455,
+        476,
+        477
+      ],
+      "source_path": "bank/native_results/worker_1/D3_E15_20261110/result.json",
+      "source_sha256": "f57d658638a95d86a9643d6a308baf1cb8f57c3993d0b18af30fff04d3b88b7b",
+      "observed_evidence": [
+        {
+          "step": 451,
+          "token_span": [
+            24165,
+            24192
+          ],
+          "text_sha256": "368651d5da856186a1a6dfd8a1012329c8d92c9c7ad526edd97ff8f15ca8fd3a"
+        },
+        {
+          "step": 455,
+          "token_span": [
+            24241,
+            24258
+          ],
+          "text_sha256": "8dcae9fa67a4d4807525de73086a92ac9e85cb619f3531f4c361283d611d7774"
+        },
+        {
+          "step": 476,
+          "token_span": [
+            24891,
+            24915
+          ],
+          "text_sha256": "78070d38c391ae73495ea5bb47fb74b978a6e9c5c1e5cfd75eb25b52007a11d6"
+        },
+        {
+          "step": 477,
+          "token_span": [
+            24915,
+            24935
+          ],
+          "text_sha256": "7aba34bd2620d3478503cabed1a6b711d0c52f082e65a787f59e5cb8de327c75"
+        }
+      ]
+    }
+  ],
+  "independent_exact_witnesses": {
+    "D3_E06": {
+      "method": "Exact dynamic programming of coin minima; greedy quotient decomposition for every n=1..1000",
+      "greedy_optimal_count": 610,
+      "omitted_remainder_example": {
+        "n": 45,
+        "remainder_mod_25": 20,
+        "greedy": 3,
+        "minimum": 3
+      }
+    },
+    "D3_E07": {
+      "method": "Enumerate all recursive pairings and select lexicographically maximal two-letter word",
+      "all": 10395,
+      "contains_G": 1920,
+      "G_is_first": 1800,
+      "G_is_second": 120,
+      "probability": "128/693"
+    },
+    "D3_E08": {
+      "method": "36 ordered pairs of equally probable unordered quadrant pairs; crossing probability 1/2 for shared quadrants and alternating-pair indicator for disjoint quadrants",
+      "crossing_probability": "17/36",
+      "diameter_crossings_per_chord": "4/3",
+      "expected_regions": "204"
+    },
+    "D3_E12": {
+      "method": "Exact substitute a1=b1=1/2 and r=-3 in all four required c_n plus c5",
+      "thinking_d_5": [
+        "1",
+        "4",
+        "15",
+        "2",
+        "61"
+      ],
+      "presented_d_1": [
+        "1",
+        "0",
+        "7",
+        "-10",
+        "45"
+      ],
+      "thinking_correct_steps": [
+        121,
+        152,
+        153
+      ]
+    },
+    "D3_E14": {
+      "method": "Enumerate complete prime-exponent ranges for divisors of lcm(1..30); count divisibility by S",
+      "divisors_examined": 7680,
+      "qualifying_divisors": 23,
+      "removed_pair_to_actual_failed_divisibility_set": {
+        "(16, 18)": [
+          16
+        ],
+        "(11, 22)": [
+          11,
+          22
+        ],
+        "(13, 26)": [
+          13,
+          26
+        ]
+      }
+    },
+    "D3_E15": {
+      "method": "Enumerate every valid digit extension from nonzero first digit until the next level is empty",
+      "valid_counts_by_length": [
+        9,
+        90,
+        165,
+        295,
+        153,
+        82,
+        25,
+        3,
+        0
+      ],
+      "maximum": "10112369",
+      "larger_witness_already_in_thinking": "1011235",
+      "witness_verified": true,
+      "witness_step": 451
+    }
+  },
+  "boundary": "Manual terminal scalar comparison is a post-Gold diagnostic, not a replacement scorer or accuracy. Mechanism sample is descriptive and outcome-aware. Target replay was limited to each observed prefix."
+}

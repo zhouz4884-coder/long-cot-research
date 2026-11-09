@@ -1,0 +1,38 @@
+{
+  "status": "CPU_VERIFIED_SCORER_FROZEN_FOR_FORMAL_BANK",
+  "created_utc": "2026-11-09T06:12:28.112184+00:00",
+  "version": "phase5d25_complete_answer_v2",
+  "source_sha256": "4ffa8e3ab61028e0aaa29d57fae496601ab906374b954b1b1c1d72d5e89229e1",
+  "v1_source_sha256": "ed5f67d54633b2d83ff0f67fee3a96ba95ac6e194db69f91f6f54c7f470b63a1",
+  "v1_freeze_sha256": "50431df1e2ea43e8ad15767fa5324083112193ccb80eba0f4fa59e46dbe35527",
+  "v2_tests_sha256": "f406c48da2dafc4e6d97d7e4815620c91a2945867654d1f3225944983c5f43b4",
+  "v1_tests_sha256": "c5f5ba4e2e2dfcfb14463d5d03311b9bc7773e1cbfd1cc064c48395ce0f5bc43",
+  "test_command": "python -m unittest -v test_complete_answer test_complete_answer_v2",
+  "test_passed": 30,
+  "test_failed": 0,
+  "test_skipped": 0,
+  "test_output": "test_conflicting_repeats_do_not_choose_a_winner (test_complete_answer.ExtractionTest.test_conflicting_repeats_do_not_choose_a_winner) ... ok\ntest_different_gold_cannot_change_selection (test_complete_answer.ExtractionTest.test_different_gold_cannot_change_selection) ... ok\ntest_disjoint_midtrace_or_incomplete_payload_never_delivers (test_complete_answer.ExtractionTest.test_disjoint_midtrace_or_incomplete_payload_never_delivers) ... ok\ntest_equivalent_rational_repetitions_and_equality_chain (test_complete_answer.ExtractionTest.test_equivalent_rational_repetitions_and_equality_chain) ... ok\ntest_explicit_inline_answer_after_heading (test_complete_answer.ExtractionTest.test_explicit_inline_answer_after_heading) ... ok\ntest_explicit_solution_set_and_or (test_complete_answer.ExtractionTest.test_explicit_solution_set_and_or) ... ok\ntest_factorial_and_percent_remain_math (test_complete_answer.ExtractionTest.test_factorial_and_percent_remain_math) ... ok\ntest_mixed_interval_and_vector_shape (test_complete_answer.ExtractionTest.test_mixed_interval_and_vector_shape) ... ok\ntest_nested_delimiters_and_negative_values (test_complete_answer.ExtractionTest.test_nested_delimiters_and_negative_values) ... ok\ntest_non_eos_or_open_thinking_is_uncommitted (test_complete_answer.ExtractionTest.test_non_eos_or_open_thinking_is_uncommitted) ... ok\ntest_open_pair_requires_kind (test_complete_answer.ExtractionTest.test_open_pair_requires_kind) ... ok\ntest_quad_is_a_visible_set_separator (test_complete_answer.ExtractionTest.test_quad_is_a_visible_set_separator) ... ok\ntest_set_metadata_does_not_override_uncertain_alternatives (test_complete_answer.ExtractionTest.test_set_metadata_does_not_override_uncertain_alternatives) ... ok\ntest_single_box_and_exact_source (test_complete_answer.ExtractionTest.test_single_box_and_exact_source) ... ok\ntest_terminal_conclusion_inside_a_step (test_complete_answer.ExtractionTest.test_terminal_conclusion_inside_a_step) ... ok\ntest_two_boxes_inside_tuple_are_ordered (test_complete_answer.ExtractionTest.test_two_boxes_inside_tuple_are_ordered) ... ok\ntest_types_do_not_follow_list_punctuation_alone (test_complete_answer.ExtractionTest.test_types_do_not_follow_list_punctuation_alone) ... ok\ntest_units_outside_wrappers_and_inside_box (test_complete_answer.ExtractionTest.test_units_outside_wrappers_and_inside_box) ... ok\ntest_unlabeled_terminal_box (test_complete_answer.ExtractionTest.test_unlabeled_terminal_box) ... ok\ntest_historical_failures_replayed_with_frozen_bytes (test_complete_answer.GradingTest.test_historical_failures_replayed_with_frozen_bytes) ... ok\ntest_mathematical_and_type_controls (test_complete_answer.GradingTest.test_mathematical_and_type_controls) ... ok\ntest_an_unrelated_named_display_does_not_become_a_competing_scalar (test_complete_answer_v2.ExactFinalChainTest.test_an_unrelated_named_display_does_not_become_a_competing_scalar) ... ok\ntest_bracket_display_and_real_final_anchor (test_complete_answer_v2.ExactFinalChainTest.test_bracket_display_and_real_final_anchor) ... ok\ntest_exact_closed_chains (test_complete_answer_v2.ExactFinalChainTest.test_exact_closed_chains) ... ok\ntest_gold_only_affects_grade (test_complete_answer_v2.ExactFinalChainTest.test_gold_only_affects_grade) ... ok\ntest_intermediate_or_prior_competing_answer_remains_unselected (test_complete_answer_v2.ExactFinalChainTest.test_intermediate_or_prior_competing_answer_remains_unselected) ... ok\ntest_local_assignments_and_source_spans (test_complete_answer_v2.ExactFinalChainTest.test_local_assignments_and_source_spans) ... ok\ntest_reject_wrong_malformed_unproved_and_alternative_chains (test_complete_answer_v2.ExactFinalChainTest.test_reject_wrong_malformed_unproved_and_alternative_chains) ... ok\ntest_uncommitted_unchanged (test_complete_answer_v2.ExactFinalChainTest.test_uncommitted_unchanged) ... ok\ntest_v1_output_is_preserved_for_every_nonrecovery_path (test_complete_answer_v2.ExactFinalChainTest.test_v1_output_is_preserved_for_every_nonrecovery_path) ... ok\n\n----------------------------------------------------------------------\nRan 30 tests in 4.416s\n\nOK\n",
+  "calibration_replay_sha256": "a6aa7f6d69bed3afa0d11a6d34507439771772b571cbe6751543182a40e29110",
+  "v1_calibration_results_sha256": "f4adc253b1afa39556cf37d23d68cfe2940dfd6ae9f3a103a71bbd2ee21998ec",
+  "calibration_v1_official": {
+    "correct": 4,
+    "total": 8
+  },
+  "calibration_v2_posthoc": {
+    "correct": 6,
+    "total": 8
+  },
+  "recovered_cases": [
+    "D3_P01",
+    "D3_P04"
+  ],
+  "backend_versions": {
+    "math-verify": "0.9.0",
+    "latex2sympy2_extended": "1.11.0",
+    "sympy": "1.14.0",
+    "antlr4-python3-runtime": "4.13.2"
+  },
+  "formal_eval_accessed": false,
+  "new_gpu_seconds": 0,
+  "wall_seconds": 6.479
+}

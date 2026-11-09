@@ -1,0 +1,199 @@
+{
+  "status": "FROZEN",
+  "selection_salt": "longcot_d3_hard_disjoint_banks_20261109_v1",
+  "source_artifacts": {
+    "aime24.parquet": {
+      "dataset": "HuggingFaceH4/aime_2024",
+      "revision": "2fe88a2f1091d5048c0f36abc874fb997b3dd99a",
+      "filename": "data/train-00000-of-00001.parquet",
+      "sha256": "26139847601a5037c237d5928b195e7260ca8074cf4f264b794af42847f79ccf",
+      "rows": 30,
+      "source_url": "https://huggingface.co/datasets/HuggingFaceH4/aime_2024"
+    },
+    "aime25i.jsonl": {
+      "dataset": "opencompass/AIME2025",
+      "revision": "a6ad95f611d72cf628a80b58bd0432ef6638f958",
+      "filename": "aime2025-I.jsonl",
+      "sha256": "b91b3c96f05d9635d2a0692b124ebe023c1ff59cb19c074275e6c4b349d0659e",
+      "rows": 15,
+      "source_url": "https://huggingface.co/datasets/opencompass/AIME2025"
+    },
+    "aime25ii.jsonl": {
+      "dataset": "opencompass/AIME2025",
+      "revision": "a6ad95f611d72cf628a80b58bd0432ef6638f958",
+      "filename": "aime2025-II.jsonl",
+      "sha256": "16a2dcfbbf9db1b11f8a69a3ba5e4cac73e3641b19a37e2307e9c12240bbed5e",
+      "rows": 15,
+      "source_url": "https://huggingface.co/datasets/opencompass/AIME2025"
+    },
+    "olympiad.parquet": {
+      "dataset": "Hothan/OlympiadBench",
+      "revision": "91184b52131e7fc9455fef848035173aea8cc01a",
+      "filename": "OlympiadBench/OE_TO_maths_en_COMP/OE_TO_maths_en_COMP.parquet",
+      "sha256": "7c17ca2662b3ea77cddcb66a64b04ad9b53d3d32fa372d444a4884739eb1638d",
+      "rows": 674,
+      "source_url": "https://huggingface.co/datasets/Hothan/OlympiadBench"
+    }
+  },
+  "historical_exclusion_sha256": {
+    "data/math500_source.jsonl": "35dc41080a3680858b27fa7e0533d2d547825316fc5dafe5d316f4ccc5a06132",
+    "research/phase5d2_quarantined_rebase_20261107/d2_visible.jsonl": "fb5a28ae5b43936c01f0b5346a59de1021e256c800ad851a3a70c8f8a66016bc",
+    "research/phase5d_scope_rebase_20261106/native_visible.jsonl": "53b17bdec3891eae7133884a4e34bfb4041c88e3dc927d6fe3f27c4c02911d95"
+  },
+  "historical_questions_seen": 532,
+  "exclusions": {
+    "requires_external_context_or_image": 6,
+    "outside_structured_numeric_algebra_number_theory_stratum": 398
+  },
+  "banks": {
+    "precheck": {
+      "count": 8,
+      "seeds": [
+        20261109
+      ],
+      "visible_sha256": "0396197606b484d0ac449db7a0b6235646eaa01a780c06a9989f896b84177591",
+      "eval_only_sha256": "cb06a100f0bf1e9bbce0d6b374755b9028e60a4a8a5b4440301a6abab9043701",
+      "selected_ids": [
+        [
+          "D3_P01",
+          "66",
+          "aime_2024"
+        ],
+        [
+          "D3_P02",
+          "64",
+          "aime_2024"
+        ],
+        [
+          "D3_P03",
+          "aime25i.jsonl:05",
+          "aime_2025"
+        ],
+        [
+          "D3_P04",
+          "aime25i.jsonl:09",
+          "aime_2025"
+        ],
+        [
+          "D3_P05",
+          "2241",
+          "olympiad_Algebra"
+        ],
+        [
+          "D3_P06",
+          "2986",
+          "olympiad_Algebra"
+        ],
+        [
+          "D3_P07",
+          "2662",
+          "olympiad_Number Theory"
+        ],
+        [
+          "D3_P08",
+          "2801",
+          "olympiad_Number Theory"
+        ]
+      ]
+    },
+    "bank": {
+      "count": 16,
+      "seeds": [
+        20261109,
+        20261110
+      ],
+      "visible_sha256": "54dd3be09ec7b952e4ca6ade399eebba9ac58cff4b61bfc4b8e0e083bad619fc",
+      "eval_only_sha256": "58c81f05b5ede1dbc4746ea4148ed48e91db0a31d19e165559dd419299e934a3",
+      "selected_ids": [
+        [
+          "D3_E01",
+          "61",
+          "aime_2024"
+        ],
+        [
+          "D3_E02",
+          "63",
+          "aime_2024"
+        ],
+        [
+          "D3_E03",
+          "87",
+          "aime_2024"
+        ],
+        [
+          "D3_E04",
+          "77",
+          "aime_2024"
+        ],
+        [
+          "D3_E05",
+          "aime25ii.jsonl:09",
+          "aime_2025"
+        ],
+        [
+          "D3_E06",
+          "aime25ii.jsonl:08",
+          "aime_2025"
+        ],
+        [
+          "D3_E07",
+          "aime25i.jsonl:07",
+          "aime_2025"
+        ],
+        [
+          "D3_E08",
+          "aime25i.jsonl:13",
+          "aime_2025"
+        ],
+        [
+          "D3_E09",
+          "2675",
+          "olympiad_Algebra"
+        ],
+        [
+          "D3_E10",
+          "2963",
+          "olympiad_Algebra"
+        ],
+        [
+          "D3_E11",
+          "2658",
+          "olympiad_Algebra"
+        ],
+        [
+          "D3_E12",
+          "2918",
+          "olympiad_Algebra"
+        ],
+        [
+          "D3_E13",
+          "1798",
+          "olympiad_Number Theory"
+        ],
+        [
+          "D3_E14",
+          "2850",
+          "olympiad_Number Theory"
+        ],
+        [
+          "D3_E15",
+          "2663",
+          "olympiad_Number Theory"
+        ],
+        [
+          "D3_E16",
+          "2723",
+          "olympiad_Number Theory"
+        ]
+      ]
+    }
+  },
+  "eligible_candidates_by_stratum": {
+    "aime_2024": 28,
+    "aime_2025": 28,
+    "olympiad_Number Theory": 97,
+    "olympiad_Algebra": 177
+  },
+  "selection_basis": "Metadata only, English text AIME and single numeric algebra/number theory OlympiadBench. Hash rank and disjoint splits fixed before any new model outcome. Exclusion is exact or lexical near-duplicate, not semantic equivalence.",
+  "runtime": "Frozen Qwen3-4B FP16 SDPA, native thinking and original D2 sampling through natural EOS or actual context capacity."
+}

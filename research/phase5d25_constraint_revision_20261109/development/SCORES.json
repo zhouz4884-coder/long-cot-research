@@ -1,0 +1,181 @@
+{
+  "status": "COMPLETE",
+  "freeze_sha256": "1e36099ca4145a6e720f9ae43786b48d22e87ebdc6cb279c4349697e30d274c2",
+  "first_reference_read_utc": "2026-11-09T05:27:28.392697+00:00",
+  "scoring_seconds": 0.6983672762289643,
+  "bank": "development",
+  "backend": {
+    "status": "ok",
+    "versions": {
+      "math-verify": "0.9.0",
+      "latex2sympy2_extended": "1.11.0"
+    }
+  },
+  "scope": "Whole-object answer extraction before semantic comparison. All matching raw cases remain in the denominator.",
+  "summaries": [
+    {
+      "evaluation_partition": "historical_development",
+      "arm": "GenericRewind",
+      "trajectories": 1,
+      "distinct_problems": 1,
+      "correct": 1,
+      "unknown": 0,
+      "EOS": 1
+    },
+    {
+      "evaluation_partition": "historical_development",
+      "arm": "ScopedRebaseCarry",
+      "trajectories": 1,
+      "distinct_problems": 1,
+      "correct": 1,
+      "unknown": 0,
+      "EOS": 1
+    },
+    {
+      "evaluation_partition": "historical_development",
+      "arm": "ScopedRebaseNoCarry",
+      "trajectories": 1,
+      "distinct_problems": 1,
+      "correct": 1,
+      "unknown": 0,
+      "EOS": 1
+    }
+  ],
+  "scores": [
+    {
+      "path": "development/development_results/worker_0/rank88/GenericRewind.json",
+      "sha256": "64e3791ca4a8fae1b1fde533d5571bd1e671a6fc95d6f8a20ef0c66411eafefe",
+      "case_id": "Phase5B_rank88",
+      "seed": 20261109,
+      "arm": "GenericRewind",
+      "evaluation_partition": "historical_development",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "tuple",
+        "final_response_sha256": "679a9e6df14da6efbffc17d757908cfe65b315f57ecf1d516a092194c98b5bb2",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "tuple",
+        "components": [
+          "6",
+          "31",
+          "-1"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2985,
+          3010
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "ordered_components",
+        "candidate_arity": 3,
+        "gold_arity": 3,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "development/development_results/worker_0/rank88/ScopedRebaseNoCarry.json",
+      "sha256": "986338ec88804e29bc070f7003403ed745133a24436b2a784ed1a9b97f179568",
+      "case_id": "Phase5B_rank88",
+      "seed": 20261109,
+      "arm": "ScopedRebaseNoCarry",
+      "evaluation_partition": "historical_development",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "tuple",
+        "final_response_sha256": "a17bd14ada145b6694d53c2066952cd2bf19921fcc0c71525b1dd1bbe4fe6711",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "tuple",
+        "components": [
+          "6",
+          "31",
+          "-1"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2271,
+          2296
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "ordered_components",
+        "candidate_arity": 3,
+        "gold_arity": 3,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    },
+    {
+      "path": "development/development_results/worker_0/rank88/ScopedRebaseCarry.json",
+      "sha256": "24045e2ae8f246707bf04ff862dd23b1001b7d6754c57adbeba521353a75f0ea",
+      "case_id": "Phase5B_rank88",
+      "seed": 20261109,
+      "arm": "ScopedRebaseCarry",
+      "evaluation_partition": "historical_development",
+      "selection": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "tuple",
+        "final_response_sha256": "e8cde53581f8246fb4cb374aa8e34efe012d4163bb004f8cb5a6ef1f280c26f8",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "tuple",
+        "components": [
+          "6",
+          "31",
+          "-1"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2822,
+          2847
+        ]
+      },
+      "grade": {
+        "scorer_version": "phase5d25_complete_answer_v1",
+        "backend_versions": {
+          "math-verify": "0.9.0",
+          "latex2sympy2_extended": "1.11.0"
+        },
+        "status": "ok",
+        "correct": true,
+        "comparison": "ordered_components",
+        "candidate_arity": 3,
+        "gold_arity": 3,
+        "candidate_unit": null,
+        "gold_unit": null
+      },
+      "EOS": true,
+      "stop_reason": "EOS"
+    }
+  ]
+}

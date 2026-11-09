@@ -1,0 +1,273 @@
+{
+  "status": "READY",
+  "source_prefix_sha256": "614636e35145d0a6f3290839c0d91d939a49c1cc668d66310c9d7eeb13ca2d5b",
+  "math": {
+    "x8_affine_constant_a_b": [
+      -3,
+      1,
+      0
+    ],
+    "x7_affine_constant_a_b": [
+      4,
+      -3,
+      1
+    ],
+    "derived_a": 3,
+    "difference_from_claim_at_derived_a": -8,
+    "verified_feasibility": {
+      "status": "VERIFIED",
+      "verdict": "PASS",
+      "truth": true,
+      "reason": "checked_exact_symbolic_statement",
+      "binding": {
+        "target": {
+          "id": "rank88_feasible_triple",
+          "version": 0,
+          "sha256": "0589e05605e6f1daacef53ec521c34e17c8d365f528d40bcbfc6b298fc7420f8"
+        },
+        "scope": {
+          "id": "rank88_Qx",
+          "version": 0,
+          "sha256": "3dd494066c8a9d0faae932a99d21c58509be34f60727321ed40dc7746f8fd68d"
+        },
+        "premises": []
+      },
+      "witness": {
+        "variables": [
+          "x"
+        ],
+        "coefficient_domain": "Q",
+        "original_denominator_checks": [],
+        "semantics": "formal_polynomial_divisibility",
+        "quotient": {
+          "term_count": 7,
+          "terms": [
+            {
+              "exponents": [
+                0
+              ],
+              "coefficient": "1"
+            },
+            {
+              "exponents": [
+                1
+              ],
+              "coefficient": "4"
+            },
+            {
+              "exponents": [
+                2
+              ],
+              "coefficient": "13"
+            },
+            {
+              "exponents": [
+                3
+              ],
+              "coefficient": "10"
+            },
+            {
+              "exponents": [
+                4
+              ],
+              "coefficient": "5"
+            },
+            {
+              "exponents": [
+                5
+              ],
+              "coefficient": "3"
+            },
+            {
+              "exponents": [
+                6
+              ],
+              "coefficient": "1"
+            }
+          ],
+          "sha256": "833870bf9d25d1e593fa0c1edd0ce4bcc17e6aced393b3b91157f14b8b17b55d"
+        },
+        "remainder": {
+          "term_count": 0,
+          "terms": [],
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "quotient_in_coefficient_ring": true
+      },
+      "trace": [
+        {
+          "stage": "snapshot",
+          "premises_bound": 0,
+          "result": "matched"
+        },
+        {
+          "stage": "exact_check",
+          "result": "VERIFIED",
+          "reason": "checked_exact_symbolic_statement"
+        }
+      ],
+      "work_units": 310,
+      "certificate": {
+        "checker_id": "restricted-math-json-v1",
+        "certificate_type": "POLYNOMIAL_DIVISIBILITY",
+        "binding_sha256": "b4f9fa244b9e2831b16392e09550ccd13ad36a2b8ed15b1b12cb881d95568102",
+        "request_sha256": "d3b37ffbd5dadea756f2291050a7d9944b2cfa6186e78aedb6a0adcd4c285c76",
+        "status": "VERIFIED",
+        "truth": true,
+        "witness_sha256": "c836c891e3a850beb62f8146526a44d00a138776cd5f4357e297a8b93c5399f8",
+        "limits_sha256": "e42b687894a19b3329128a387a18d0048b5a869a94b763e4efff4c7929d324bf",
+        "sha256": "56d96c773ffe9d7940ec6c8114fee95736df6a29170151c1e550c2a60b359c8d"
+      }
+    },
+    "feasibility_target": {
+      "id": "rank88_feasible_triple",
+      "version": 0,
+      "kind": "claim",
+      "scope": {
+        "id": "rank88_Qx",
+        "version": 0,
+        "coefficient_domain": "Q",
+        "domains": {
+          "x": {
+            "kind": "rational"
+          }
+        }
+      },
+      "certificate_type": "POLYNOMIAL_DIVISIBILITY",
+      "statement": {
+        "dividend": {
+          "op": "add",
+          "args": [
+            -1,
+            {
+              "op": "mul",
+              "args": [
+                31,
+                {
+                  "op": "pow",
+                  "base": {
+                    "op": "var",
+                    "name": "x"
+                  },
+                  "exp": 3
+                }
+              ]
+            },
+            {
+              "op": "mul",
+              "args": [
+                6,
+                {
+                  "op": "pow",
+                  "base": {
+                    "op": "var",
+                    "name": "x"
+                  },
+                  "exp": 6
+                }
+              ]
+            },
+            {
+              "op": "pow",
+              "base": {
+                "op": "var",
+                "name": "x"
+              },
+              "exp": 9
+            }
+          ]
+        },
+        "divisor": {
+          "op": "add",
+          "args": [
+            -1,
+            {
+              "op": "mul",
+              "args": [
+                4,
+                {
+                  "op": "var",
+                  "name": "x"
+                }
+              ]
+            },
+            {
+              "op": "mul",
+              "args": [
+                -3,
+                {
+                  "op": "pow",
+                  "base": {
+                    "op": "var",
+                    "name": "x"
+                  },
+                  "exp": 2
+                }
+              ]
+            },
+            {
+              "op": "pow",
+              "base": {
+                "op": "var",
+                "name": "x"
+              },
+              "exp": 3
+            }
+          ]
+        }
+      },
+      "required_premises": [],
+      "source_span": [
+        3327,
+        3345
+      ],
+      "observed_prefix_sha256": "45c6028b46662a9799b0a8327b73795b4c3f20e908909aeca48534fdb0883c7e"
+    },
+    "feasibility_request": {
+      "binding": {
+        "target": {
+          "id": "rank88_feasible_triple",
+          "version": 0,
+          "sha256": "0589e05605e6f1daacef53ec521c34e17c8d365f528d40bcbfc6b298fc7420f8"
+        },
+        "scope": {
+          "id": "rank88_Qx",
+          "version": 0,
+          "sha256": "3dd494066c8a9d0faae932a99d21c58509be34f60727321ed40dc7746f8fd68d"
+        },
+        "premises": []
+      },
+      "mode": "verify"
+    }
+  },
+  "common_checked_message": "\n\nRecheck the displayed polynomial product using the original divisor. Its x^7 coefficient is b - 3*a + 4. Continue solving the original problem.\n\n",
+  "generic_cut": 5850,
+  "arms": {
+    "ScopedRebaseNoCarry": {
+      "cut": 4309,
+      "carried_claims": [],
+      "invalidated_text_spans": [
+        [
+          4379,
+          4421
+        ]
+      ],
+      "lost_support": [],
+      "bridge_text": ""
+    },
+    "ScopedRebaseCarry": {
+      "cut": 4309,
+      "carried_claims": [
+        "a_from_x8"
+      ],
+      "invalidated_text_spans": [
+        [
+          4379,
+          4421
+        ]
+      ],
+      "lost_support": [],
+      "bridge_text": "\n\nVerified scoped evidence for this continuation. Use the stated premises and scopes.\n[{\"claim_id\":\"a_from_x8\",\"subject\":\"a\",\"value\":\"3\",\"scope_id\":\"rank88_quotient\",\"scope_revision\":0,\"domain\":\"rational\",\"assumptions\":[\"a and b are coefficients of the displayed quotient x^6+a*x^5+b*x^4+... .\",\"The original target has zero x^8 coefficient. Product coefficient x^8=a-3 fixes a=3.\"],\"claim_version\":0,\"proof_id\":\"licensed_a_from_x8\",\"certificate_id\":\"03650082865a8e5b715b27cba2608902280eed72f409cef94abc683ed1c3ab99\",\"certificate_binding\":\"df3457a8a27283c8470ab5494d7ae4a40f876e110d67fcd86003f439962db42e\",\"checker_id\":\"exact-rational-v1\",\"premise_ids\":[],\"premise_certificate_ids\":[],\"expression\":\"3\",\"trusted_source\":null,\"constraint_id\":\"exact_x8_comparison\",\"claim_span\":[5140,5160],\"proof_span\":[5140,5160],\"claim_source_sha256\":\"1351b462d283572f72f027411cf4d5094c4a0b87d32e866d34d25e5dbac43077\",\"proof_source_sha256\":\"1351b462d283572f72f027411cf4d5094c4a0b87d32e866d34d25e5dbac43077\"}]\n\n"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "status": "FROZEN_BEFORE_APPROVED_ORDINARY_SLOT_EXECUTION",
+  "scope": "Three approved immutable theorem slots only. No archived candidate body or known complete competition proof.",
+  "target_cases": [
+    "p104",
+    "p113",
+    "p41"
+  ],
+  "actions_by_case": {
+    "p104": [
+      {
+        "id": "exact_library",
+        "proof_body_sha256": "a4bdce4a8d53514299801fcd496ef743e72a3082a00dee886bf8b1323dc322a3"
+      },
+      {
+        "id": "apply_library",
+        "proof_body_sha256": "f56a3478dec8737c465b0c980e8b4b2ebfd225fab6227614bbdeedbf7f6720cb"
+      },
+      {
+        "id": "ordinary_grind",
+        "proof_body_sha256": "3026fac023c67598797c8c7da4ac6cf653f832b2c9de761d3922fb85ea086b1c"
+      },
+      {
+        "id": "ordinary_omega",
+        "proof_body_sha256": "304b4a90a76a1cbe4c112e074b30e75181f54df43d60f883597457844293b341"
+      },
+      {
+        "id": "ordinary_norm_num",
+        "proof_body_sha256": "7c64df8336d5a348b5f037e1d91facb19224fdef00e798d5c48c07a184602a59"
+      },
+      {
+        "id": "signature_fermat_cast",
+        "proof_body_sha256": "8cd8eb5b2e240fa4af4a1d331b71bc0c229fe4c5c5b2923e79da23850f65d3bd"
+      },
+      {
+        "id": "plain_whole_slot",
+        "proof_body_sha256": "04a65975a14a2dce5d94bc5cbea57c09e6336504207a15cce4a0f72776722079"
+      }
+    ],
+    "p113": [
+      {
+        "id": "exact_library",
+        "proof_body_sha256": "a4bdce4a8d53514299801fcd496ef743e72a3082a00dee886bf8b1323dc322a3"
+      },
+      {
+        "id": "apply_library",
+        "proof_body_sha256": "f56a3478dec8737c465b0c980e8b4b2ebfd225fab6227614bbdeedbf7f6720cb"
+      },
+      {
+        "id": "ordinary_grind",
+        "proof_body_sha256": "3026fac023c67598797c8c7da4ac6cf653f832b2c9de761d3922fb85ea086b1c"
+      },
+      {
+        "id": "ordinary_omega",
+        "proof_body_sha256": "304b4a90a76a1cbe4c112e074b30e75181f54df43d60f883597457844293b341"
+      },
+      {
+        "id": "ordinary_norm_num",
+        "proof_body_sha256": "7c64df8336d5a348b5f037e1d91facb19224fdef00e798d5c48c07a184602a59"
+      },
+      {
+        "id": "ordinary_induction_pow_grind",
+        "proof_body_sha256": "f79320720f03aed35b824559bdc9e392f3d60d1222a081d19b73e9c05665ed2d"
+      },
+      {
+        "id": "plain_whole_slot",
+        "proof_body_sha256": "3d803a0211d11ca7026ee30dbc8c355fa37a6127b6d55f488a9ff8d00af54307"
+      }
+    ],
+    "p41": [
+      {
+        "id": "exact_library",
+        "proof_body_sha256": "a4bdce4a8d53514299801fcd496ef743e72a3082a00dee886bf8b1323dc322a3"
+      },
+      {
+        "id": "apply_library",
+        "proof_body_sha256": "f56a3478dec8737c465b0c980e8b4b2ebfd225fab6227614bbdeedbf7f6720cb"
+      },
+      {
+        "id": "ordinary_grind",
+        "proof_body_sha256": "3026fac023c67598797c8c7da4ac6cf653f832b2c9de761d3922fb85ea086b1c"
+      },
+      {
+        "id": "ordinary_omega",
+        "proof_body_sha256": "304b4a90a76a1cbe4c112e074b30e75181f54df43d60f883597457844293b341"
+      },
+      {
+        "id": "ordinary_norm_num",
+        "proof_body_sha256": "7c64df8336d5a348b5f037e1d91facb19224fdef00e798d5c48c07a184602a59"
+      },
+      {
+        "id": "ordinary_induction_pow_grind",
+        "proof_body_sha256": "f79320720f03aed35b824559bdc9e392f3d60d1222a081d19b73e9c05665ed2d"
+      },
+      {
+        "id": "signature_pow_difference",
+        "proof_body_sha256": "26e8e54c33af1e52c9b7ff7982c80829fb2f1d2cae80ef217fbe1095c7ee3696"
+      },
+      {
+        "id": "plain_whole_slot",
+        "proof_body_sha256": "a939b14055b964acc6f8c5ed13f04dc5e792654e4d3f4fb1c5f7c3f8b2f8a70c"
+      }
+    ]
+  },
+  "policy": "Same exact imported context and immutable theorem header. Submit allowlisted proof bodies independently with strict warnings and named axiom checks. Changes outside the target proof slot are forbidden except checker options and a named closure query.",
+  "cap": "200000 Lean heartbeats per declaration and 120 seconds per diagnostic request. No external solver, native_decide, imports or authorized axiom changes.",
+  "measurement": "Retain every resident proof attempt and a separate cold full proof for the identical plain whole-slot body. Record runtime readback and resident startup/diagnostics/shutdown separately. No speedup claim from shared-host wall observations.",
+  "source_boundary": "Body derivation uses only reviewed target signatures, Mathlib public generic lemma signatures and ordinary mathematics. No archive replay or accepted upstream body used."
+}

@@ -1,0 +1,52 @@
+{
+  "status": "FROZEN_STATIC_SOURCE_REVIEW_BEFORE_D42_EDITS",
+  "d42_input_freeze_sha256": "34a2df3d6c8fcbd2a06d296a5f97f6a4ce53151b9d74bc990a76f72a55ed0823",
+  "d41_ledger_sha256": "3a5246d126060ee58cc2c1158b66e429066b4f6e2225dc25c8056ba616d78349",
+  "decision_rule": [
+    "Use only a frozen unresolved-cohort check invocation with the same visible original import list and exact matching source, attempt, log and source-line receipts.",
+    "Prefer admission-free target proof bodies and a first reported type/application error with a single localized proof-expression correction suggested by the exact reported types and local context.",
+    "Fix three distinct target IDs for contrast: same-line function-application co-report, a disjoint later branch with multiple residuals, and a disjoint later arithmetic subgoal. Never replace selected rows based on new compilation.",
+    "Within the observed p104 same-expression repeat at Qwen Typed steps 04 and 05, choose the earlier step. Preserve the manual static admissibility decision, source-member tie-break and explicit allowlist for deterministic replay."
+  ],
+  "selection_scope": "Targeted archive controls, conditional on already observed messages and reviewer feasibility. No representative frequency estimate, no syntax/type causality inferred from order, no safety approval, and no Lean execution in this audit.",
+  "fixed_cases": [
+    {
+      "state_id": "p104_bad.state0",
+      "source_member": "data/llm_calls/p104_monolithic_toolsrcq_v0/typed/step04.check.lean",
+      "source_sha256": "f896b57a1a81241db56778a0d5b548bf2fe0901157c1c57c063de7b42a8d95fa",
+      "reported_line": 8,
+      "original_expression": "ZMod.pow_card p a",
+      "review_hypothesis": "The two same-line messages might share a single malformed application. Try a correctly typed ZMod argument with any necessary local Fact confined to the nested proof of h. Untouched following casts and rewrites may expose new errors.",
+      "contrast": "SAME_EXPRESSION_TWO_REPORTED_ERRORS"
+    },
+    {
+      "state_id": "p113_bad.state0",
+      "source_member": "data/llm_calls/p113_monolithic_patchsrcq_v0/typed/step06.check.lean",
+      "source_sha256": "eb6c84a33a1e02bd0375bb6e11ef80297ce581cda2a23c99b00670e944a55768",
+      "reported_line": 11,
+      "original_expression": "exact hk lt_rfl",
+      "review_hypothesis": "The proof of 0 > 0 cannot be applied as a function. Try contradiction elimination from hk in that branch. The successor branch and later modular identities are untouched.",
+      "contrast": "SEPARATE_BRANCH_AND_LATER_GOALS"
+    },
+    {
+      "state_id": "p41_bad.state0",
+      "source_member": "data/llm_calls/p41_monolithic_rwsrc_v0/typed/step04.check.lean",
+      "source_sha256": "b8ed70782b522a30cc0b8b14ada46c14124b39286a632ef9cdea7ad58839610c",
+      "reported_line": 18,
+      "original_expression": "Nat.pow_le_pow_right (by norm_num : 0 < 10) hm",
+      "review_hypothesis": "Use Nat.zero_le m where the candidate supplies hm : 1 ≤ m. The later ring equality remains a separate source obligation and might require a separate edit.",
+      "contrast": "SEPARATE_ARITHMETIC_GOAL"
+    }
+  ],
+  "separate_prior_control": {
+    "state_id": "p14_bad.state0",
+    "freeze_path": "research/phase5d40_proof_authoring_20261110/cases_p14_one_line_edit_freeze.json",
+    "runtime_path": "research/phase5d40_proof_authoring_20261110/cases_p14_one_line_edit_runtime.json",
+    "role": "Previous auditor-selected one-line deletion. Excluded from three fresh archival controls and their denominator."
+  },
+  "excluded_static_alternatives": [
+    {"case": "p113 Qwen Typed step02", "reason": "Pre-existing sorry in helper and sorry_using in target. Its analogous type problem is available in admission-free Patch step06."},
+    {"case": "p139 Qwen Typed step02", "reason": "First report is in an admitted helper statement and the target has a separate projection/rcases issue."},
+    {"case": "p117 Qwen Rewrite step03", "reason": "First report is a tactic failure with a later heartbeat timeout, a different first-error class from this small primary comparison."}
+  ]
+}

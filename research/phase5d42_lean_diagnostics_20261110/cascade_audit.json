@@ -1,0 +1,268 @@
+{
+  "status": "REPRODUCED_ARCHIVED_DIAGNOSTIC_ORDER_ONLY",
+  "input_freeze_sha256": "34a2df3d6c8fcbd2a06d296a5f97f6a4ce53151b9d74bc990a76f72a55ed0823",
+  "selection_freeze_sha256": "df7342e4bcb80e4b479979795c01c23c402411b0c96e095924602b8b4450ffae",
+  "ledger_sha256": "3a5246d126060ee58cc2c1158b66e429066b4f6e2225dc25c8056ba616d78349",
+  "raw_verified_frozen_candidates": 115,
+  "independent_frozen_target_count": 10,
+  "frozen_invocations_by_state": {
+    "p104_bad.state0": 8,
+    "p108_bad.state0": 7,
+    "p113_bad.state0": 14,
+    "p115_bad.state0": 9,
+    "p117_bad.state0": 12,
+    "p135_bad.state0": 13,
+    "p136_bad.state0": 24,
+    "p139_bad.state0": 9,
+    "p14_bad.state0": 2,
+    "p41_bad.state0": 17
+  },
+  "cohort_check_counts": {
+    "unresolved": {
+      "checks": 440,
+      "checks_with_error": 417,
+      "first_report_line_not_earliest": 68,
+      "multi_error_checks": 304,
+      "multi_error_same_line_only": 10,
+      "report_lines_not_nondecreasing": 97,
+      "same_import_multi_error_checks": 291,
+      "same_import_multi_error_first_type_or_tactic": 115
+    },
+    "solved_controls": {
+      "checks": 577,
+      "checks_with_error": 491,
+      "first_report_line_not_earliest": 47,
+      "multi_error_checks": 288,
+      "multi_error_same_line_only": 45,
+      "report_lines_not_nondecreasing": 62,
+      "same_import_multi_error_checks": 282,
+      "same_import_multi_error_first_type_or_tactic": 116
+    }
+  },
+  "selected_primary_cases": [
+    {
+      "state_id": "p104_bad.state0",
+      "target_id": "induction_pprime_pdvdapowpma",
+      "model": "qwen/qwen3.6-flash",
+      "mode": "typed",
+      "attempt_sha256": "eec6a7058e9e191ac93a60f8b9d6b3cc590be404e639eea5c70e6c7c9d4c9bac",
+      "source_member": "data/llm_calls/p104_monolithic_toolsrcq_v0/typed/step04.check.lean",
+      "source_sha256": "f896b57a1a81241db56778a0d5b548bf2fe0901157c1c57c063de7b42a8d95fa",
+      "compiler_log_sha256": "225a39b2857832e1b8bf13506b8b809781ab9a239b77dd6666ebdb329d826cf7",
+      "import_list_comparison": "SAME_IMPORT_LIST",
+      "first_reported_error_category": "TYPE_APPLICATION_OR_CALC",
+      "first_reported_error_line": 8,
+      "ordered_error_categories": [
+        "TYPE_APPLICATION_OR_CALC",
+        "TYPE_APPLICATION_OR_CALC"
+      ],
+      "attempt_member": "data/llm_calls/p104_monolithic_toolsrcq_v0/typed/step04.json",
+      "check_member": "data/llm_calls/p104_monolithic_toolsrcq_v0/typed/step04.check.elab.json",
+      "checked_imports": [
+        "Architect",
+        "Mathlib"
+      ],
+      "original_visible_imports": [
+        "Architect",
+        "Mathlib"
+      ],
+      "first_reported_source_line": "  have h : ((a : ZMod p) ^ p = (a : ZMod p)) := ZMod.pow_card p a",
+      "lexical_admission_detected": false,
+      "contrast": "SAME_EXPRESSION_TWO_REPORTED_ERRORS",
+      "review_hypothesis": "The two same-line messages might share a single malformed application. Try a correctly typed ZMod argument with any necessary local Fact confined to the nested proof of h. Untouched following casts and rewrites may expose new errors.",
+      "ordered_errors": [
+        {
+          "severity": "error",
+          "line": 8,
+          "raw_column": 48,
+          "source_line_bound": true,
+          "lexical_owner": {
+            "name": "p104_target",
+            "line": 7
+          },
+          "source_line_sha256": "40b705ddd01e3bf37c6e12852efb7de5e899fbf55405963291f9c6de23fb8778",
+          "headline": "Function expected at",
+          "message_sha256": "45adbdc72ea3c06e7a3fd323162144c594214501b7d2be50b35c504dcc506bd5",
+          "category": "TYPE_APPLICATION_OR_CALC"
+        },
+        {
+          "severity": "error",
+          "line": 8,
+          "raw_column": 62,
+          "source_line_bound": true,
+          "lexical_owner": {
+            "name": "p104_target",
+            "line": 7
+          },
+          "source_line_sha256": "40b705ddd01e3bf37c6e12852efb7de5e899fbf55405963291f9c6de23fb8778",
+          "headline": "Application type mismatch: The argument",
+          "message_sha256": "48a0c21aa7dec5e351c645ecd4213075ac32cb85b52968c21f2a67dbef94f1af",
+          "category": "TYPE_APPLICATION_OR_CALC"
+        }
+      ]
+    },
+    {
+      "state_id": "p113_bad.state0",
+      "target_id": "numbertheory_3pow2pownm1mod2pownp3eq2pownp2",
+      "model": "qwen/qwen3.6-flash",
+      "mode": "patch",
+      "attempt_sha256": "d05d61a9c2533e086f966302f7c02b8b9da6b75a9978fdda0880b30bbccb5380",
+      "source_member": "data/llm_calls/p113_monolithic_patchsrcq_v0/typed/step06.check.lean",
+      "source_sha256": "eb6c84a33a1e02bd0375bb6e11ef80297ce581cda2a23c99b00670e944a55768",
+      "compiler_log_sha256": "29385069d131983d90cbe388edbf3a2e222ec1a723839110214f43f5240c4e4d",
+      "import_list_comparison": "SAME_IMPORT_LIST",
+      "first_reported_error_category": "TYPE_APPLICATION_OR_CALC",
+      "first_reported_error_line": 11,
+      "ordered_error_categories": [
+        "TYPE_APPLICATION_OR_CALC",
+        "TACTIC_PROOF_STEP_FAILURE",
+        "GOALS_OR_CASES",
+        "TACTIC_PROOF_STEP_FAILURE"
+      ],
+      "attempt_member": "data/llm_calls/p113_monolithic_patchsrcq_v0/typed/step06.json",
+      "check_member": "data/llm_calls/p113_monolithic_patchsrcq_v0/typed/step06.check.elab.json",
+      "checked_imports": [
+        "Architect",
+        "Mathlib"
+      ],
+      "original_visible_imports": [
+        "Architect",
+        "Mathlib"
+      ],
+      "first_reported_source_line": "    | zero => exfalso; exact hk lt_rfl",
+      "lexical_admission_detected": false,
+      "contrast": "SEPARATE_BRANCH_AND_LATER_GOALS",
+      "review_hypothesis": "The proof of 0 > 0 cannot be applied as a function. Try contradiction elimination from hk in that branch. The successor branch and later modular identities are untouched.",
+      "ordered_errors": [
+        {
+          "severity": "error",
+          "line": 11,
+          "raw_column": 29,
+          "source_line_bound": true,
+          "lexical_owner": {
+            "name": "p113_target",
+            "line": 7
+          },
+          "source_line_sha256": "e523bef7f0734e5458c991c4b41efe0892a49f2c4d2897ab0c7cd6a426a31db3",
+          "headline": "Function expected at",
+          "message_sha256": "bc681b05e10a8a192090d1bbccefb3c63a05d1bc8cbd28d4b73cc4d7df11ee4d",
+          "category": "TYPE_APPLICATION_OR_CALC"
+        },
+        {
+          "severity": "error",
+          "line": 16,
+          "raw_column": 12,
+          "source_line_bound": true,
+          "lexical_owner": {
+            "name": "p113_target",
+            "line": 7
+          },
+          "source_line_sha256": "8c8b0358d42f9a1f3c345640e5025ae829b408bc579a24e12cd6db1f19d35720",
+          "headline": "Tactic `rewrite` failed: Did not find an occurrence of the pattern",
+          "message_sha256": "8c62ed15b0ace39860891f1a2b748f9c5ca6913dd34f0dfd04c2ce8a1757d27f",
+          "category": "TACTIC_PROOF_STEP_FAILURE"
+        },
+        {
+          "severity": "error",
+          "line": 34,
+          "raw_column": 66,
+          "source_line_bound": true,
+          "lexical_owner": {
+            "name": "p113_target",
+            "line": 7
+          },
+          "source_line_sha256": "77e1285031d0bf7dc8eb88b9a4d24ac9848c9ec367abc6212909de8ff88bc546",
+          "headline": "unsolved goals",
+          "message_sha256": "fa43b1d3e063c9577f617df1369ac738767f2228487a0dff7de053937a49800d",
+          "category": "GOALS_OR_CASES"
+        },
+        {
+          "severity": "error",
+          "line": 41,
+          "raw_column": 6,
+          "source_line_bound": true,
+          "lexical_owner": {
+            "name": "p113_target",
+            "line": 7
+          },
+          "source_line_sha256": "a863523b13788e3f8b8770d634ed29593436e703d7d8c1780533dd8e4595fa63",
+          "headline": "omega could not prove the goal:",
+          "message_sha256": "77ad0183f557f4555ef321c39703f94bd6d5ff25b33140b920a9742ea7da92c3",
+          "category": "TACTIC_PROOF_STEP_FAILURE"
+        }
+      ]
+    },
+    {
+      "state_id": "p41_bad.state0",
+      "target_id": "induction_divisibility_9div10tonm1",
+      "model": "deepseek/deepseek-v4-flash",
+      "mode": "rewrite",
+      "attempt_sha256": "c210eaba6db1718872deeb06d064b30afb4f17e63b7741593b11d2a52804d57d",
+      "source_member": "data/llm_calls/p41_monolithic_rwsrc_v0/typed/step04.check.lean",
+      "source_sha256": "b8ed70782b522a30cc0b8b14ada46c14124b39286a632ef9cdea7ad58839610c",
+      "compiler_log_sha256": "176692bef3934ebd98ce8464f972a9f3475b5e5bb9de24d8347b2c39bad44f99",
+      "import_list_comparison": "SAME_IMPORT_LIST",
+      "first_reported_error_category": "TYPE_APPLICATION_OR_CALC",
+      "first_reported_error_line": 18,
+      "ordered_error_categories": [
+        "TYPE_APPLICATION_OR_CALC",
+        "GOALS_OR_CASES"
+      ],
+      "attempt_member": "data/llm_calls/p41_monolithic_rwsrc_v0/typed/step04.json",
+      "check_member": "data/llm_calls/p41_monolithic_rwsrc_v0/typed/step04.check.elab.json",
+      "checked_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "original_visible_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "first_reported_source_line": "        _ ≤ 10 ^ m := Nat.pow_le_pow_right (by norm_num : 0 < 10) hm",
+      "lexical_admission_detected": false,
+      "contrast": "SEPARATE_ARITHMETIC_GOAL",
+      "review_hypothesis": "Use Nat.zero_le m where the candidate supplies hm : 1 ≤ m. The later ring equality remains a separate source obligation and might require a separate edit.",
+      "ordered_errors": [
+        {
+          "severity": "error",
+          "line": 18,
+          "raw_column": 66,
+          "source_line_bound": true,
+          "lexical_owner": {
+            "name": "p41_target",
+            "line": 9
+          },
+          "source_line_sha256": "e4133e49a1772eee0df3bc15985f60cab61d9e8d29b517228a1dc6a520c53698",
+          "headline": "Application type mismatch: The argument",
+          "message_sha256": "43580e46abc3bb347dd6765f288c55d51f37ff1525d4f77bd3314b0b66c7e184",
+          "category": "TYPE_APPLICATION_OR_CALC"
+        },
+        {
+          "severity": "error",
+          "line": 44,
+          "raw_column": 32,
+          "source_line_bound": true,
+          "lexical_owner": {
+            "name": "p41_target",
+            "line": 9
+          },
+          "source_line_sha256": "acd0a0ccb5ec8a05328a7769688583ab49db64ee7993bd6a5ffc86560dcd6c87",
+          "headline": "unsolved goals",
+          "message_sha256": "bf75b5ec8e3579ac20ab8bd61eeb1e68a639f117010b3617901995c217f78821",
+          "category": "GOALS_OR_CASES"
+        }
+      ]
+    }
+  ],
+  "prior_control": {
+    "state_id": "p14_bad.state0",
+    "freeze_path": "research/phase5d40_proof_authoring_20261110/cases_p14_one_line_edit_freeze.json",
+    "runtime_path": "research/phase5d40_proof_authoring_20261110/cases_p14_one_line_edit_runtime.json",
+    "role": "Previous auditor-selected one-line deletion. Excluded from three fresh archival controls and their denominator."
+  },
+  "interpretation": "Author array order and lexical source line differ. Neither determines causal error dependency. The three nominated archived modules were not executed or modified by this audit."
+}

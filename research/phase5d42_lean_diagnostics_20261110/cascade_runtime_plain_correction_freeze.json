@@ -1,0 +1,27 @@
+{
+  "status": "FROZEN_SINGLE_P113_IMPLEMENTATION_CORRECTION",
+  "original_matrix_sha256": "333a58de1ff690aa7a11deaaaeaa503dcf827904cd3605caa188d85f485e3eb4",
+  "approved_source_receipt_sha256": "35b92fe363277eccfff22ab75825f65857bad0dcda766fee1e1a9664b348db28",
+  "original_source_sha256": "5634543c11128b31719a64d24614965728d71602ab60b4a5f8fa15080c6c5646",
+  "corrected_source_sha256": "c2f2c85f68985d02aa6356e4d32a6977535ecced0d4cb63727c6a319bec14cc8",
+  "corrected_body_sha256": "ab1fa2633e6d2988b5842a57d73ae2480d9c7f4063349c8ea994f5ff4e413cf1",
+  "edits": {
+    "old_byte_span": [
+      532,
+      673
+    ],
+    "replacement_byte_span": [
+      532,
+      532
+    ],
+    "old": "change (3 : ℕ) ^ ((2 : ℕ) ^ ((k + 1) + 1)) =\n        1 + (2 : ℕ) ^ ((k + 1) + 3) * (2 * (t + 2 ^ (k + 1) * (2 * t + 1) ^ 2) + 1)\n      ",
+    "new": "",
+    "reconstructed_exact": true
+  },
+  "target_header_sha256": "ad6bc0659c372fd4af3450bcd876bcbb77338b6b970901934800a985bbb4cdcf",
+  "imports": [
+    "Architect",
+    "Mathlib"
+  ],
+  "reason": "Remove only the type-equivalent change rejected by strict unusedTactic lint."
+}

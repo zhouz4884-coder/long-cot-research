@@ -1,0 +1,85 @@
+{
+  "status": "FROZEN_BEFORE_TRUSTED_SYNTHETIC_RUN",
+  "scope": "Trusted synthetic only. No archive source execution.",
+  "baseline": "ad202e572534c8e7376d9fba7f8191fb7b3012d6",
+  "imports": [
+    "Architect",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.LinearCombination"
+  ],
+  "target": "d42_cascade : True",
+  "source_hashes": {
+    "broken": "a7c68687c1f8157e84a7fc93451909c6a1750d2ec156193fa4e136848f0636e6",
+    "unrelated_edit": "72eb308f861d6771f4036a6666d5a743b83c96e580f3897ca98f69c8dec25e08",
+    "root_edit": "0cc0d9d9c2c9f23509ddf969a42531d20e5341989c2cf117ba964bb77eac49e6",
+    "standard_tactic": "1541bccbf9e50f56a40a2225fa807f56fa45e7843caede5cc739f37a9b84a993"
+  },
+  "edits": {
+    "unrelated_edit": {
+      "old_byte_span": [
+        237,
+        238
+      ],
+      "replacement_byte_span": [
+        237,
+        238
+      ],
+      "old": "3",
+      "new": "4",
+      "reconstructed_exact": true
+    },
+    "root_edit": {
+      "old_byte_span": [
+        252,
+        255
+      ],
+      "replacement_byte_span": [
+        252,
+        256
+      ],
+      "old": "Nat",
+      "new": "True",
+      "reconstructed_exact": true
+    },
+    "standard_tactic": {
+      "old_byte_span": [
+        213,
+        292
+      ],
+      "replacement_byte_span": [
+        213,
+        220
+      ],
+      "old": "let _padding : Nat := 123\n  have hβ : Nat := /- 🧪 -/ True.intro\n  exact hβ",
+      "new": "trivial",
+      "reconstructed_exact": true
+    }
+  },
+  "expectation": {
+    "broken": {
+      "errors": 2,
+      "accepted": false
+    },
+    "unrelated_edit": {
+      "errors": 2,
+      "accepted": false
+    },
+    "root_edit": {
+      "errors": 0,
+      "accepted": true
+    },
+    "standard_tactic": {
+      "errors": 0,
+      "accepted": true
+    }
+  },
+  "unicode_control": "The first failing line contains hβ and supplementary-plane 🧪 before the failing expression; raw CLI scalar and LSP UTF-16 columns must convert to the same byte anchor.",
+  "comparisons": [
+    "Cold author runtime full compile",
+    "Existing resident Lean full-version barrier",
+    "Ordinary complete proof via trivial"
+  ],
+  "cost_scope": "Count per invocation/request and keep environment readback, resident startup/import warmup, shutdown and proof-generation work separate."
+}

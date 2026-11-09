@@ -1,0 +1,337 @@
+{
+  "status": "COMPLETE_P14_CAUSAL_CONTROL",
+  "scope": "Previously reviewed historical p14, separate from new selected cases. Exact original and local edits were executed under the same author imports. Timing is observed CPU wall, not comparative production latency.",
+  "freeze_sha256": "c92271a235904b54cec81f226104b70b494fe75c44fe67dfbae5b88ec8a188c0",
+  "version": "Lean (version 4.31.0, x86_64-w64-windows-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+  "material_preparation_seconds": 1.7500541000044905,
+  "resident_startup_seconds": 1.7430847999930847,
+  "prelude": {
+    "status": "KERNEL_ACCEPTED",
+    "axioms": {},
+    "source_sha256": "94c59fe564158e3d682c833f4a6eba1182ad1d276aee758de639210143091baa",
+    "document_version": 1,
+    "elapsed_seconds": 8.522082599985879,
+    "matching_publications": 3,
+    "messages": [
+      {
+        "severity": 3,
+        "message": "Nat.add_zero (n : ℕ) : n + 0 = n",
+        "line": 7
+      }
+    ]
+  },
+  "resident": {
+    "archived_exact": {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "85df13c04b2d38bacfb4faa15b0f5322564f38f8a9167931428066c883722335",
+      "document_version": 2,
+      "elapsed_seconds": 0.22065000000293367,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+          "line": 11
+        },
+        {
+          "severity": 3,
+          "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+          "line": 27
+        }
+      ],
+      "errors_in_emitted_order": [
+        {
+          "category": "INTRO_NO_BINDER",
+          "line": 11,
+          "source_line_sha256": "6b30f50e6277cab5771248544185c00ca5bb1f139f850f62b1ab128cf51ccc52",
+          "message_sha256": "96469c136b190740c54cfa6939c06b337c8665d65495bdb4bd619aebfa427a09",
+          "message": "Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n"
+        }
+      ],
+      "emitted_target_axiom_diagnostics": [
+        "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]"
+      ]
+    },
+    "neutral_binder_rename": {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "b37f6102eb3d1fe7181aa3a29dff61570a44d330f6052d91f2df9ea5e2c6836c",
+      "document_version": 3,
+      "elapsed_seconds": 0.21748530000331812,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+          "line": 11
+        },
+        {
+          "severity": 3,
+          "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+          "line": 27
+        }
+      ],
+      "errors_in_emitted_order": [
+        {
+          "category": "INTRO_NO_BINDER",
+          "line": 11,
+          "source_line_sha256": "62d70ff214319a430b8959a1574be3fe9cb667f7c0db6532819a4b29a7ab9deb",
+          "message_sha256": "96469c136b190740c54cfa6939c06b337c8665d65495bdb4bd619aebfa427a09",
+          "message": "Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n"
+        }
+      ],
+      "emitted_target_axiom_diagnostics": [
+        "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]"
+      ]
+    },
+    "replace_intro_with_skip": {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "589f1116c52bfbaea954703b9763154118f36a8f272f5c3fd7c16e10d5236369",
+      "document_version": 4,
+      "elapsed_seconds": 0.3751094000035664,
+      "matching_publications": 5,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "unsolved goals\nk : ℕ\nih : 11 ∣ 10 ^ k - (-1) ^ k\n⊢ 10 ^ k * 10 = 10 * 10 ^ k",
+          "line": 18
+        },
+        {
+          "severity": 1,
+          "message": "Unknown identifier `dvd_add`",
+          "line": 22
+        },
+        {
+          "severity": 1,
+          "message": "No goals to be solved",
+          "line": 23
+        },
+        {
+          "severity": 3,
+          "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx, Quot.sound]",
+          "line": 27
+        }
+      ],
+      "errors_in_emitted_order": [
+        {
+          "category": "UNSOLVED_GOALS",
+          "line": 18,
+          "source_line_sha256": "13fa8f81609cd3f245da5a142f7775a6d85adf7519f010e72ccfb1401fad8bad",
+          "message_sha256": "4602a53e67ba243702e7f7f7be20e9b0e3f981854700c4db39a280ea2bdf4e27",
+          "message": "unsolved goals\nk : ℕ\nih : 11 ∣ 10 ^ k - (-1) ^ k\n⊢ 10 ^ k * 10 = 10 * 10 ^ k"
+        },
+        {
+          "category": "MISSING_NAME",
+          "line": 22,
+          "source_line_sha256": "573c4045b044a065e6e1418df632f762bb581fab31aa4a57e4db3e778e40bdc5",
+          "message_sha256": "a4928ca3016b948da6b96ee09e1f95ac3b8f9726c8e5b80eb182f25647dede74",
+          "message": "Unknown identifier `dvd_add`"
+        },
+        {
+          "category": "ALREADY_CLOSED_GOAL",
+          "line": 23,
+          "source_line_sha256": "f209e5f534c0e162418b38064777aeebdda9231cbd27fd0f9c6fa9260f6127fe",
+          "message_sha256": "75b3350d4fff4645b0d31f509e793f0e694cf0f87102aa811f9c2ea8ff8519cb",
+          "message": "No goals to be solved"
+        }
+      ],
+      "emitted_target_axiom_diagnostics": [
+        "'P14Bad.p14_target' depends on axioms: [propext, sorryAx, Quot.sound]"
+      ]
+    },
+    "skip_and_commutativity": {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "b4a2eecd344b481dd5e410517ecfe7ece92a9990f8354b603b3a93bef1ed909b",
+      "document_version": 5,
+      "elapsed_seconds": 0.21089970000321046,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "Unknown identifier `dvd_add`",
+          "line": 22
+        },
+        {
+          "severity": 1,
+          "message": "No goals to be solved",
+          "line": 23
+        },
+        {
+          "severity": 3,
+          "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx, Quot.sound]",
+          "line": 27
+        }
+      ],
+      "errors_in_emitted_order": [
+        {
+          "category": "MISSING_NAME",
+          "line": 22,
+          "source_line_sha256": "573c4045b044a065e6e1418df632f762bb581fab31aa4a57e4db3e778e40bdc5",
+          "message_sha256": "a4928ca3016b948da6b96ee09e1f95ac3b8f9726c8e5b80eb182f25647dede74",
+          "message": "Unknown identifier `dvd_add`"
+        },
+        {
+          "category": "ALREADY_CLOSED_GOAL",
+          "line": 23,
+          "source_line_sha256": "f209e5f534c0e162418b38064777aeebdda9231cbd27fd0f9c6fa9260f6127fe",
+          "message_sha256": "75b3350d4fff4645b0d31f509e793f0e694cf0f87102aa811f9c2ea8ff8519cb",
+          "message": "No goals to be solved"
+        }
+      ],
+      "emitted_target_axiom_diagnostics": [
+        "'P14Bad.p14_target' depends on axioms: [propext, sorryAx, Quot.sound]"
+      ]
+    },
+    "ordinary_local_witness_patch": {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "P14Bad.p14_target": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "048348cac536f34425eda15fb1026dcf5d706be3ac8e05c701de6d1dac4a77e5",
+      "document_version": 6,
+      "elapsed_seconds": 0.22105459999875166,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 2,
+          "message": "'skip' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 11
+        },
+        {
+          "severity": 3,
+          "message": "'P14Bad.p14_target' depends on axioms: [propext, Quot.sound]",
+          "line": 28
+        }
+      ],
+      "errors_in_emitted_order": [],
+      "emitted_target_axiom_diagnostics": [
+        "'P14Bad.p14_target' depends on axioms: [propext, Quot.sound]"
+      ]
+    },
+    "whole_exact_query": {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "3b50cac42fefb1e8ca08fc8344b1b9514d5cba5a99c8f9d9a9be4784f5aa37cc",
+      "document_version": 7,
+      "elapsed_seconds": 1.0503442000044743,
+      "matching_publications": 3,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "`exact?` could not close the goal. Try `apply?` to see partial suggestions.",
+          "line": 11
+        },
+        {
+          "severity": 3,
+          "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+          "line": 14
+        }
+      ],
+      "errors_in_emitted_order": [
+        {
+          "category": "OTHER_LEAN_ERROR",
+          "line": 11,
+          "source_line_sha256": "16f7e325d9075428f05d3e5c8ec5d799438f044644f3ff42d3694258988c69cc",
+          "message_sha256": "ae554e132e3fcc168d6f7e4e2327df72a06cfa73af082c7cb0f8cf828b7042c5",
+          "message": "`exact?` could not close the goal. Try `apply?` to see partial suggestions."
+        }
+      ],
+      "emitted_target_axiom_diagnostics": [
+        "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]"
+      ]
+    },
+    "ordinary_whole_induction": {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "P14Bad.p14_target": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "6ca7971bf7e10e1977dc3fa6ee6c3fe33e97b231fc62a2051bac159960598732",
+      "document_version": 8,
+      "elapsed_seconds": 0.2150439999968512,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'P14Bad.p14_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 14
+        }
+      ],
+      "errors_in_emitted_order": [],
+      "emitted_target_axiom_diagnostics": [
+        "'P14Bad.p14_target' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    }
+  },
+  "resident_shutdown_seconds": 0.08576560000074096,
+  "cold": {
+    "archived_exact": {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "85df13c04b2d38bacfb4faa15b0f5322564f38f8a9167931428066c883722335",
+      "elapsed_seconds": 8.441385999991326,
+      "exit_code": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+          "line": 11
+        },
+        {
+          "severity": 3,
+          "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+          "line": 27
+        }
+      ],
+      "stderr": "",
+      "errors_in_emitted_order": [
+        {
+          "category": "INTRO_NO_BINDER",
+          "line": 11,
+          "source_line_sha256": "6b30f50e6277cab5771248544185c00ca5bb1f139f850f62b1ab128cf51ccc52",
+          "message_sha256": "96469c136b190740c54cfa6939c06b337c8665d65495bdb4bd619aebfa427a09",
+          "message": "Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n"
+        }
+      ],
+      "emitted_target_axiom_diagnostics": [
+        "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]"
+      ]
+    },
+    "ordinary_whole_induction": {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "P14Bad.p14_target": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "6ca7971bf7e10e1977dc3fa6ee6c3fe33e97b231fc62a2051bac159960598732",
+      "elapsed_seconds": 8.188801500000409,
+      "exit_code": 0,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'P14Bad.p14_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 14
+        }
+      ],
+      "stderr": "",
+      "errors_in_emitted_order": [],
+      "emitted_target_axiom_diagnostics": [
+        "'P14Bad.p14_target' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    }
+  },
+  "new_model_tokens": 0,
+  "gpu_seconds": 0
+}

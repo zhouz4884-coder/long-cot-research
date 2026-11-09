@@ -1,0 +1,1049 @@
+{
+  "status": "PASS_TRUSTED_CASCADE",
+  "checks": {
+    "both_real_errors_in_each_original": true,
+    "unrelated_edit_preserves_both_reported_errors_and_start_anchors": true,
+    "one_type_edit_removes_both_errors_and_closes_original_target": true,
+    "ordinary_direct_tactic_closes_original_target": true,
+    "utf8_starts_agree_across_both_transports": true,
+    "all_error_starts_exactly_bound": true,
+    "returning_to_broken_version_recovers_both_errors": true
+  },
+  "scope": "Trusted artificial dependency cascade and negative edit control. No archive code, model or GPU.",
+  "environment": {
+    "d39_smoke_sha256": "ca19818e10f7246a3f2259eb0f2341c33a47a9d55645c4aa8c325ceb7c17e2ff",
+    "d39_resident_source_sha256": "774e55f75f0bacbcbaa7d9ac5090dcfd353ab41f215429383e3ef83027b97a9d",
+    "lean": "Lean (version 4.31.0, x86_64-w64-windows-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+    "lake": "Lake version 5.0.0-src+68218e8 (Lean version 4.31.0)",
+    "lean_sha256": "9b216deb50d37c32c829d1efaaa5bafd5560417d382df35a815489e31a31593f",
+    "lake_sha256": "a5be0113af1c08ba678c1fad07594e1c5de6b871fe0c4144da2998488eba88a1",
+    "cwd": "outputs/d39_blueprintrepair_954edd3/BlueprintRepair",
+    "source": {
+      "url": "https://github.com/Karifannaa/BlueprintRepair.git",
+      "commit": "954edd366a0d1474ecfebe418d4cac14aaf8c6bf",
+      "tree": "50e8742e40899598024074816933e06b7e992cae",
+      "subtree": "BlueprintRepair",
+      "subtree_git_sha1": "dcbd16eb1acb227965f3ec346254465c6b499c21",
+      "verified_materialized_blobs": 939,
+      "archive_sha256": "d1a81a9e9d7a6e461aefa966fda06fc5a3b40381899ac80e5d2b462b9f9ea850",
+      "archive_bytes": 1710080
+    },
+    "package_commits": {
+      "mathlib": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+      "LeanArchitect": "f38c848196b0467e7b9dcc3d129a866b4051c23c",
+      "plausible": "63045536fe95024e6c18fc7b48e03f506701c5bc",
+      "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "importGraph": "5c7542ed018c78194f1e2b903eaf6a792b74c03d",
+      "proofwidgets": "24b0d9dc081c5423f8eec7e866c441e5184f29d9",
+      "aesop": "e3cb2f741431ce31bf73549fb52316a57368b06f",
+      "Qq": "f46324995fca5f0483b742e4eb4daec7f4ee50d2",
+      "batteries": "fa08db58b30eb033edcdab331bba000827f9f785",
+      "Cli": "92564e5770e4d09f2d86dfbf8ada1e9c715b384c"
+    },
+    "built_imports": {
+      ".lake/packages/mathlib/.lake/build/lib/lean/Mathlib.olean": {
+        "bytes": 755136,
+        "sha256": "45522115b8ff55410b8bcf3f48c8872302eacce07dec01c09ffe2c6f64062807"
+      },
+      ".lake/packages/LeanArchitect/.lake/build/lib/lean/Architect.olean": {
+        "bytes": 2312,
+        "sha256": "12b11d43c4b54412560a49d9d20a1583a09724721d69f40915f2bea2aea9df64"
+      }
+    },
+    "cache": {
+      "packed_count": 8542,
+      "packed_bytes": 432264798,
+      "sha256_ordered_path_size_hash_lines": "101959261c0f56313baaf01dd6f1f826fed480ae1c1a5c0d665754a0bc70e58a"
+    }
+  },
+  "preparation_seconds": 5.875525099996594,
+  "imports": [
+    "Architect",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.LinearCombination"
+  ],
+  "freeze_sha256": "9b79998b38f773b1f563ab9fd9a8819af05aac48c173867e1eb7519a7305b714",
+  "sources": {
+    "broken": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\n\ntheorem d42_cascade : True := by\n  let _padding : Nat := 123\n  have hβ : Nat := /- 🧪 -/ True.intro\n  exact hβ\n\n#print axioms d42_cascade\n",
+    "unrelated_edit": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\n\ntheorem d42_cascade : True := by\n  let _padding : Nat := 124\n  have hβ : Nat := /- 🧪 -/ True.intro\n  exact hβ\n\n#print axioms d42_cascade\n",
+    "root_edit": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\n\ntheorem d42_cascade : True := by\n  let _padding : Nat := 123\n  have hβ : True := /- 🧪 -/ True.intro\n  exact hβ\n\n#print axioms d42_cascade\n",
+    "standard_tactic": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\n\ntheorem d42_cascade : True := by\n  trivial\n\n#print axioms d42_cascade\n"
+  },
+  "edits": {
+    "unrelated_edit": {
+      "old_byte_span": [
+        237,
+        238
+      ],
+      "replacement_byte_span": [
+        237,
+        238
+      ],
+      "old": "3",
+      "new": "4",
+      "reconstructed_exact": true
+    },
+    "root_edit": {
+      "old_byte_span": [
+        252,
+        255
+      ],
+      "replacement_byte_span": [
+        252,
+        256
+      ],
+      "old": "Nat",
+      "new": "True",
+      "reconstructed_exact": true
+    },
+    "standard_tactic": {
+      "old_byte_span": [
+        213,
+        292
+      ],
+      "replacement_byte_span": [
+        213,
+        220
+      ],
+      "old": "let _padding : Nat := 123\n  have hβ : Nat := /- 🧪 -/ True.intro\n  exact hβ",
+      "new": "trivial",
+      "reconstructed_exact": true
+    }
+  },
+  "resident_startup_seconds": 1.6416723000002094,
+  "resident_warmup": {
+    "status": "KERNEL_ACCEPTED",
+    "axioms": {},
+    "source_sha256": "bf61d486128a749004a64e5b7dd428778a9e2fb8b2628b487333e9a17132e2e6",
+    "source_bytes": 197,
+    "diagnostics_in_reporting_order": [
+      {
+        "reported_index": 1,
+        "severity": 3,
+        "message": "True.intro : True",
+        "kind": null,
+        "category": null,
+        "anchor": {
+          "protocol_coordinates": "lsp_utf16",
+          "raw_start": {
+            "character": 0,
+            "line": 8
+          },
+          "raw_end": {
+            "character": 6,
+            "line": 8
+          },
+          "start": {
+            "line_1_based": 9,
+            "scalar_column_0_based": 0,
+            "utf8_byte_offset": 178,
+            "line_sha256_without_newline": "a113ade59261ee5b8d017b325e6cc393c7eb34df0b3c94b8f8f5a6cc32cc082a"
+          },
+          "end": {
+            "line_1_based": 9,
+            "scalar_column_0_based": 6,
+            "utf8_byte_offset": 184,
+            "line_sha256_without_newline": "a113ade59261ee5b8d017b325e6cc393c7eb34df0b3c94b8f8f5a6cc32cc082a"
+          },
+          "anchored_source": "#check"
+        },
+        "reported_lsp_range": {
+          "end": {
+            "character": 6,
+            "line": 8
+          },
+          "start": {
+            "character": 0,
+            "line": 8
+          }
+        }
+      }
+    ],
+    "error_count": 0,
+    "error_report_indices": [],
+    "error_indices_sorted_by_source": [],
+    "all_error_starts_bound": true,
+    "document_version": 1,
+    "matching_publications": 3,
+    "elapsed_seconds": 8.517183800009661
+  },
+  "resident_shutdown_seconds": 0.05876189999980852,
+  "resident": {
+    "broken": {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "a7c68687c1f8157e84a7fc93451909c6a1750d2ec156193fa4e136848f0636e6",
+      "source_bytes": 320,
+      "diagnostics_in_reporting_order": [
+        {
+          "reported_index": 1,
+          "severity": 1,
+          "message": "Type mismatch\n  True.intro\nhas type\n  True\nof sort `Prop` but is expected to have type\n  ℕ\nof sort `Type`",
+          "kind": null,
+          "category": "TYPE_MISMATCH",
+          "anchor": {
+            "protocol_coordinates": "lsp_utf16",
+            "raw_start": {
+              "character": 28,
+              "line": 10
+            },
+            "raw_end": {
+              "character": 38,
+              "line": 10
+            },
+            "start": {
+              "line_1_based": 11,
+              "scalar_column_0_based": 27,
+              "utf8_byte_offset": 270,
+              "line_sha256_without_newline": "d7cfb2b43ced6dc1d171a4563a22321237ddef8485def6b473128a173e0b1192"
+            },
+            "end": {
+              "line_1_based": 11,
+              "scalar_column_0_based": 37,
+              "utf8_byte_offset": 280,
+              "line_sha256_without_newline": "d7cfb2b43ced6dc1d171a4563a22321237ddef8485def6b473128a173e0b1192"
+            },
+            "anchored_source": "True.intro"
+          },
+          "reported_lsp_range": {
+            "end": {
+              "character": 38,
+              "line": 10
+            },
+            "start": {
+              "character": 28,
+              "line": 10
+            }
+          }
+        },
+        {
+          "reported_index": 2,
+          "severity": 1,
+          "message": "Type mismatch\n  hβ\nhas type\n  ℕ\nof sort `Type` but is expected to have type\n  True\nof sort `Prop`",
+          "kind": null,
+          "category": "TYPE_MISMATCH",
+          "anchor": {
+            "protocol_coordinates": "lsp_utf16",
+            "raw_start": {
+              "character": 2,
+              "line": 11
+            },
+            "raw_end": {
+              "character": 10,
+              "line": 11
+            },
+            "start": {
+              "line_1_based": 12,
+              "scalar_column_0_based": 2,
+              "utf8_byte_offset": 283,
+              "line_sha256_without_newline": "c12bc5577a4c5c5c21704aef23e849c414321884667fbdf77fcb9f9059fd3988"
+            },
+            "end": {
+              "line_1_based": 12,
+              "scalar_column_0_based": 10,
+              "utf8_byte_offset": 292,
+              "line_sha256_without_newline": "c12bc5577a4c5c5c21704aef23e849c414321884667fbdf77fcb9f9059fd3988"
+            },
+            "anchored_source": "exact hβ"
+          },
+          "reported_lsp_range": {
+            "end": {
+              "character": 10,
+              "line": 11
+            },
+            "start": {
+              "character": 2,
+              "line": 11
+            }
+          }
+        },
+        {
+          "reported_index": 3,
+          "severity": 3,
+          "message": "'d42_cascade' depends on axioms: [sorryAx]",
+          "kind": null,
+          "category": null,
+          "anchor": {
+            "protocol_coordinates": "lsp_utf16",
+            "raw_start": {
+              "character": 0,
+              "line": 13
+            },
+            "raw_end": {
+              "character": 6,
+              "line": 13
+            },
+            "start": {
+              "line_1_based": 14,
+              "scalar_column_0_based": 0,
+              "utf8_byte_offset": 294,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "end": {
+              "line_1_based": 14,
+              "scalar_column_0_based": 6,
+              "utf8_byte_offset": 300,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "anchored_source": "#print"
+          },
+          "reported_lsp_range": {
+            "end": {
+              "character": 6,
+              "line": 13
+            },
+            "start": {
+              "character": 0,
+              "line": 13
+            }
+          }
+        }
+      ],
+      "error_count": 2,
+      "error_report_indices": [
+        1,
+        2
+      ],
+      "error_indices_sorted_by_source": [
+        1,
+        2
+      ],
+      "all_error_starts_bound": true,
+      "document_version": 2,
+      "matching_publications": 1,
+      "elapsed_seconds": 0.2239594999991823
+    },
+    "unrelated_edit": {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "72eb308f861d6771f4036a6666d5a743b83c96e580f3897ca98f69c8dec25e08",
+      "source_bytes": 320,
+      "diagnostics_in_reporting_order": [
+        {
+          "reported_index": 1,
+          "severity": 1,
+          "message": "Type mismatch\n  True.intro\nhas type\n  True\nof sort `Prop` but is expected to have type\n  ℕ\nof sort `Type`",
+          "kind": null,
+          "category": "TYPE_MISMATCH",
+          "anchor": {
+            "protocol_coordinates": "lsp_utf16",
+            "raw_start": {
+              "character": 28,
+              "line": 10
+            },
+            "raw_end": {
+              "character": 38,
+              "line": 10
+            },
+            "start": {
+              "line_1_based": 11,
+              "scalar_column_0_based": 27,
+              "utf8_byte_offset": 270,
+              "line_sha256_without_newline": "d7cfb2b43ced6dc1d171a4563a22321237ddef8485def6b473128a173e0b1192"
+            },
+            "end": {
+              "line_1_based": 11,
+              "scalar_column_0_based": 37,
+              "utf8_byte_offset": 280,
+              "line_sha256_without_newline": "d7cfb2b43ced6dc1d171a4563a22321237ddef8485def6b473128a173e0b1192"
+            },
+            "anchored_source": "True.intro"
+          },
+          "reported_lsp_range": {
+            "end": {
+              "character": 38,
+              "line": 10
+            },
+            "start": {
+              "character": 28,
+              "line": 10
+            }
+          }
+        },
+        {
+          "reported_index": 2,
+          "severity": 1,
+          "message": "Type mismatch\n  hβ\nhas type\n  ℕ\nof sort `Type` but is expected to have type\n  True\nof sort `Prop`",
+          "kind": null,
+          "category": "TYPE_MISMATCH",
+          "anchor": {
+            "protocol_coordinates": "lsp_utf16",
+            "raw_start": {
+              "character": 2,
+              "line": 11
+            },
+            "raw_end": {
+              "character": 10,
+              "line": 11
+            },
+            "start": {
+              "line_1_based": 12,
+              "scalar_column_0_based": 2,
+              "utf8_byte_offset": 283,
+              "line_sha256_without_newline": "c12bc5577a4c5c5c21704aef23e849c414321884667fbdf77fcb9f9059fd3988"
+            },
+            "end": {
+              "line_1_based": 12,
+              "scalar_column_0_based": 10,
+              "utf8_byte_offset": 292,
+              "line_sha256_without_newline": "c12bc5577a4c5c5c21704aef23e849c414321884667fbdf77fcb9f9059fd3988"
+            },
+            "anchored_source": "exact hβ"
+          },
+          "reported_lsp_range": {
+            "end": {
+              "character": 10,
+              "line": 11
+            },
+            "start": {
+              "character": 2,
+              "line": 11
+            }
+          }
+        },
+        {
+          "reported_index": 3,
+          "severity": 3,
+          "message": "'d42_cascade' depends on axioms: [sorryAx]",
+          "kind": null,
+          "category": null,
+          "anchor": {
+            "protocol_coordinates": "lsp_utf16",
+            "raw_start": {
+              "character": 0,
+              "line": 13
+            },
+            "raw_end": {
+              "character": 6,
+              "line": 13
+            },
+            "start": {
+              "line_1_based": 14,
+              "scalar_column_0_based": 0,
+              "utf8_byte_offset": 294,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "end": {
+              "line_1_based": 14,
+              "scalar_column_0_based": 6,
+              "utf8_byte_offset": 300,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "anchored_source": "#print"
+          },
+          "reported_lsp_range": {
+            "end": {
+              "character": 6,
+              "line": 13
+            },
+            "start": {
+              "character": 0,
+              "line": 13
+            }
+          }
+        }
+      ],
+      "error_count": 2,
+      "error_report_indices": [
+        1,
+        2
+      ],
+      "error_indices_sorted_by_source": [
+        1,
+        2
+      ],
+      "all_error_starts_bound": true,
+      "document_version": 3,
+      "matching_publications": 1,
+      "elapsed_seconds": 0.2094881999946665
+    },
+    "root_edit": {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "d42_cascade": []
+      },
+      "source_sha256": "0cc0d9d9c2c9f23509ddf969a42531d20e5341989c2cf117ba964bb77eac49e6",
+      "source_bytes": 321,
+      "diagnostics_in_reporting_order": [
+        {
+          "reported_index": 1,
+          "severity": 3,
+          "message": "'d42_cascade' does not depend on any axioms",
+          "kind": null,
+          "category": null,
+          "anchor": {
+            "protocol_coordinates": "lsp_utf16",
+            "raw_start": {
+              "character": 0,
+              "line": 13
+            },
+            "raw_end": {
+              "character": 6,
+              "line": 13
+            },
+            "start": {
+              "line_1_based": 14,
+              "scalar_column_0_based": 0,
+              "utf8_byte_offset": 295,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "end": {
+              "line_1_based": 14,
+              "scalar_column_0_based": 6,
+              "utf8_byte_offset": 301,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "anchored_source": "#print"
+          },
+          "reported_lsp_range": {
+            "end": {
+              "character": 6,
+              "line": 13
+            },
+            "start": {
+              "character": 0,
+              "line": 13
+            }
+          }
+        }
+      ],
+      "error_count": 0,
+      "error_report_indices": [],
+      "error_indices_sorted_by_source": [],
+      "all_error_starts_bound": true,
+      "document_version": 4,
+      "matching_publications": 1,
+      "elapsed_seconds": 0.20366450000437908
+    },
+    "standard_tactic": {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "d42_cascade": []
+      },
+      "source_sha256": "1541bccbf9e50f56a40a2225fa807f56fa45e7843caede5cc739f37a9b84a993",
+      "source_bytes": 248,
+      "diagnostics_in_reporting_order": [
+        {
+          "reported_index": 1,
+          "severity": 3,
+          "message": "'d42_cascade' does not depend on any axioms",
+          "kind": null,
+          "category": null,
+          "anchor": {
+            "protocol_coordinates": "lsp_utf16",
+            "raw_start": {
+              "character": 0,
+              "line": 11
+            },
+            "raw_end": {
+              "character": 6,
+              "line": 11
+            },
+            "start": {
+              "line_1_based": 12,
+              "scalar_column_0_based": 0,
+              "utf8_byte_offset": 222,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "end": {
+              "line_1_based": 12,
+              "scalar_column_0_based": 6,
+              "utf8_byte_offset": 228,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "anchored_source": "#print"
+          },
+          "reported_lsp_range": {
+            "end": {
+              "character": 6,
+              "line": 11
+            },
+            "start": {
+              "character": 0,
+              "line": 11
+            }
+          }
+        }
+      ],
+      "error_count": 0,
+      "error_report_indices": [],
+      "error_indices_sorted_by_source": [],
+      "all_error_starts_bound": true,
+      "document_version": 5,
+      "matching_publications": 1,
+      "elapsed_seconds": 0.2037393000064185
+    }
+  },
+  "resident_return_to_broken": {
+    "status": "REJECTED",
+    "axioms": {},
+    "source_sha256": "a7c68687c1f8157e84a7fc93451909c6a1750d2ec156193fa4e136848f0636e6",
+    "source_bytes": 320,
+    "diagnostics_in_reporting_order": [
+      {
+        "reported_index": 1,
+        "severity": 1,
+        "message": "Type mismatch\n  True.intro\nhas type\n  True\nof sort `Prop` but is expected to have type\n  ℕ\nof sort `Type`",
+        "kind": null,
+        "category": "TYPE_MISMATCH",
+        "anchor": {
+          "protocol_coordinates": "lsp_utf16",
+          "raw_start": {
+            "character": 28,
+            "line": 10
+          },
+          "raw_end": {
+            "character": 38,
+            "line": 10
+          },
+          "start": {
+            "line_1_based": 11,
+            "scalar_column_0_based": 27,
+            "utf8_byte_offset": 270,
+            "line_sha256_without_newline": "d7cfb2b43ced6dc1d171a4563a22321237ddef8485def6b473128a173e0b1192"
+          },
+          "end": {
+            "line_1_based": 11,
+            "scalar_column_0_based": 37,
+            "utf8_byte_offset": 280,
+            "line_sha256_without_newline": "d7cfb2b43ced6dc1d171a4563a22321237ddef8485def6b473128a173e0b1192"
+          },
+          "anchored_source": "True.intro"
+        },
+        "reported_lsp_range": {
+          "end": {
+            "character": 38,
+            "line": 10
+          },
+          "start": {
+            "character": 28,
+            "line": 10
+          }
+        }
+      },
+      {
+        "reported_index": 2,
+        "severity": 1,
+        "message": "Type mismatch\n  hβ\nhas type\n  ℕ\nof sort `Type` but is expected to have type\n  True\nof sort `Prop`",
+        "kind": null,
+        "category": "TYPE_MISMATCH",
+        "anchor": {
+          "protocol_coordinates": "lsp_utf16",
+          "raw_start": {
+            "character": 2,
+            "line": 11
+          },
+          "raw_end": {
+            "character": 10,
+            "line": 11
+          },
+          "start": {
+            "line_1_based": 12,
+            "scalar_column_0_based": 2,
+            "utf8_byte_offset": 283,
+            "line_sha256_without_newline": "c12bc5577a4c5c5c21704aef23e849c414321884667fbdf77fcb9f9059fd3988"
+          },
+          "end": {
+            "line_1_based": 12,
+            "scalar_column_0_based": 10,
+            "utf8_byte_offset": 292,
+            "line_sha256_without_newline": "c12bc5577a4c5c5c21704aef23e849c414321884667fbdf77fcb9f9059fd3988"
+          },
+          "anchored_source": "exact hβ"
+        },
+        "reported_lsp_range": {
+          "end": {
+            "character": 10,
+            "line": 11
+          },
+          "start": {
+            "character": 2,
+            "line": 11
+          }
+        }
+      },
+      {
+        "reported_index": 3,
+        "severity": 3,
+        "message": "'d42_cascade' depends on axioms: [sorryAx]",
+        "kind": null,
+        "category": null,
+        "anchor": {
+          "protocol_coordinates": "lsp_utf16",
+          "raw_start": {
+            "character": 0,
+            "line": 13
+          },
+          "raw_end": {
+            "character": 6,
+            "line": 13
+          },
+          "start": {
+            "line_1_based": 14,
+            "scalar_column_0_based": 0,
+            "utf8_byte_offset": 294,
+            "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+          },
+          "end": {
+            "line_1_based": 14,
+            "scalar_column_0_based": 6,
+            "utf8_byte_offset": 300,
+            "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+          },
+          "anchored_source": "#print"
+        },
+        "reported_lsp_range": {
+          "end": {
+            "character": 6,
+            "line": 13
+          },
+          "start": {
+            "character": 0,
+            "line": 13
+          }
+        }
+      }
+    ],
+    "error_count": 2,
+    "error_report_indices": [
+      1,
+      2
+    ],
+    "error_indices_sorted_by_source": [
+      1,
+      2
+    ],
+    "all_error_starts_bound": true,
+    "document_version": 6,
+    "matching_publications": 1,
+    "elapsed_seconds": 0.21528270000999328
+  },
+  "cold": {
+    "broken": {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "a7c68687c1f8157e84a7fc93451909c6a1750d2ec156193fa4e136848f0636e6",
+      "source_bytes": 320,
+      "diagnostics_in_reporting_order": [
+        {
+          "reported_index": 1,
+          "severity": 1,
+          "message": "Type mismatch\n  True.intro\nhas type\n  True\nof sort `Prop` but is expected to have type\n  ℕ\nof sort `Type`",
+          "kind": "[anonymous]",
+          "category": "TYPE_MISMATCH",
+          "anchor": {
+            "protocol_coordinates": "cli_scalar",
+            "raw_start": {
+              "column": 27,
+              "line": 11
+            },
+            "raw_end": {
+              "column": 37,
+              "line": 11
+            },
+            "start": {
+              "line_1_based": 11,
+              "scalar_column_0_based": 27,
+              "utf8_byte_offset": 270,
+              "line_sha256_without_newline": "d7cfb2b43ced6dc1d171a4563a22321237ddef8485def6b473128a173e0b1192"
+            },
+            "end": {
+              "line_1_based": 11,
+              "scalar_column_0_based": 37,
+              "utf8_byte_offset": 280,
+              "line_sha256_without_newline": "d7cfb2b43ced6dc1d171a4563a22321237ddef8485def6b473128a173e0b1192"
+            },
+            "anchored_source": "True.intro"
+          }
+        },
+        {
+          "reported_index": 2,
+          "severity": 1,
+          "message": "Type mismatch\n  hβ\nhas type\n  ℕ\nof sort `Type` but is expected to have type\n  True\nof sort `Prop`",
+          "kind": "[anonymous]",
+          "category": "TYPE_MISMATCH",
+          "anchor": {
+            "protocol_coordinates": "cli_scalar",
+            "raw_start": {
+              "column": 2,
+              "line": 12
+            },
+            "raw_end": {
+              "column": 10,
+              "line": 12
+            },
+            "start": {
+              "line_1_based": 12,
+              "scalar_column_0_based": 2,
+              "utf8_byte_offset": 283,
+              "line_sha256_without_newline": "c12bc5577a4c5c5c21704aef23e849c414321884667fbdf77fcb9f9059fd3988"
+            },
+            "end": {
+              "line_1_based": 12,
+              "scalar_column_0_based": 10,
+              "utf8_byte_offset": 292,
+              "line_sha256_without_newline": "c12bc5577a4c5c5c21704aef23e849c414321884667fbdf77fcb9f9059fd3988"
+            },
+            "anchored_source": "exact hβ"
+          }
+        },
+        {
+          "reported_index": 3,
+          "severity": 3,
+          "message": "'d42_cascade' depends on axioms: [sorryAx]",
+          "kind": "[anonymous]",
+          "category": null,
+          "anchor": {
+            "protocol_coordinates": "cli_scalar",
+            "raw_start": {
+              "column": 0,
+              "line": 14
+            },
+            "raw_end": {
+              "column": 6,
+              "line": 14
+            },
+            "start": {
+              "line_1_based": 14,
+              "scalar_column_0_based": 0,
+              "utf8_byte_offset": 294,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "end": {
+              "line_1_based": 14,
+              "scalar_column_0_based": 6,
+              "utf8_byte_offset": 300,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "anchored_source": "#print"
+          }
+        }
+      ],
+      "error_count": 2,
+      "error_report_indices": [
+        1,
+        2
+      ],
+      "error_indices_sorted_by_source": [
+        1,
+        2
+      ],
+      "all_error_starts_bound": true,
+      "exit_code": 1,
+      "elapsed_seconds": 7.249651199992513,
+      "stderr": ""
+    },
+    "unrelated_edit": {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "72eb308f861d6771f4036a6666d5a743b83c96e580f3897ca98f69c8dec25e08",
+      "source_bytes": 320,
+      "diagnostics_in_reporting_order": [
+        {
+          "reported_index": 1,
+          "severity": 1,
+          "message": "Type mismatch\n  True.intro\nhas type\n  True\nof sort `Prop` but is expected to have type\n  ℕ\nof sort `Type`",
+          "kind": "[anonymous]",
+          "category": "TYPE_MISMATCH",
+          "anchor": {
+            "protocol_coordinates": "cli_scalar",
+            "raw_start": {
+              "column": 27,
+              "line": 11
+            },
+            "raw_end": {
+              "column": 37,
+              "line": 11
+            },
+            "start": {
+              "line_1_based": 11,
+              "scalar_column_0_based": 27,
+              "utf8_byte_offset": 270,
+              "line_sha256_without_newline": "d7cfb2b43ced6dc1d171a4563a22321237ddef8485def6b473128a173e0b1192"
+            },
+            "end": {
+              "line_1_based": 11,
+              "scalar_column_0_based": 37,
+              "utf8_byte_offset": 280,
+              "line_sha256_without_newline": "d7cfb2b43ced6dc1d171a4563a22321237ddef8485def6b473128a173e0b1192"
+            },
+            "anchored_source": "True.intro"
+          }
+        },
+        {
+          "reported_index": 2,
+          "severity": 1,
+          "message": "Type mismatch\n  hβ\nhas type\n  ℕ\nof sort `Type` but is expected to have type\n  True\nof sort `Prop`",
+          "kind": "[anonymous]",
+          "category": "TYPE_MISMATCH",
+          "anchor": {
+            "protocol_coordinates": "cli_scalar",
+            "raw_start": {
+              "column": 2,
+              "line": 12
+            },
+            "raw_end": {
+              "column": 10,
+              "line": 12
+            },
+            "start": {
+              "line_1_based": 12,
+              "scalar_column_0_based": 2,
+              "utf8_byte_offset": 283,
+              "line_sha256_without_newline": "c12bc5577a4c5c5c21704aef23e849c414321884667fbdf77fcb9f9059fd3988"
+            },
+            "end": {
+              "line_1_based": 12,
+              "scalar_column_0_based": 10,
+              "utf8_byte_offset": 292,
+              "line_sha256_without_newline": "c12bc5577a4c5c5c21704aef23e849c414321884667fbdf77fcb9f9059fd3988"
+            },
+            "anchored_source": "exact hβ"
+          }
+        },
+        {
+          "reported_index": 3,
+          "severity": 3,
+          "message": "'d42_cascade' depends on axioms: [sorryAx]",
+          "kind": "[anonymous]",
+          "category": null,
+          "anchor": {
+            "protocol_coordinates": "cli_scalar",
+            "raw_start": {
+              "column": 0,
+              "line": 14
+            },
+            "raw_end": {
+              "column": 6,
+              "line": 14
+            },
+            "start": {
+              "line_1_based": 14,
+              "scalar_column_0_based": 0,
+              "utf8_byte_offset": 294,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "end": {
+              "line_1_based": 14,
+              "scalar_column_0_based": 6,
+              "utf8_byte_offset": 300,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "anchored_source": "#print"
+          }
+        }
+      ],
+      "error_count": 2,
+      "error_report_indices": [
+        1,
+        2
+      ],
+      "error_indices_sorted_by_source": [
+        1,
+        2
+      ],
+      "all_error_starts_bound": true,
+      "exit_code": 1,
+      "elapsed_seconds": 7.336732399999164,
+      "stderr": ""
+    },
+    "root_edit": {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "d42_cascade": []
+      },
+      "source_sha256": "0cc0d9d9c2c9f23509ddf969a42531d20e5341989c2cf117ba964bb77eac49e6",
+      "source_bytes": 321,
+      "diagnostics_in_reporting_order": [
+        {
+          "reported_index": 1,
+          "severity": 3,
+          "message": "'d42_cascade' does not depend on any axioms",
+          "kind": "[anonymous]",
+          "category": null,
+          "anchor": {
+            "protocol_coordinates": "cli_scalar",
+            "raw_start": {
+              "column": 0,
+              "line": 14
+            },
+            "raw_end": {
+              "column": 6,
+              "line": 14
+            },
+            "start": {
+              "line_1_based": 14,
+              "scalar_column_0_based": 0,
+              "utf8_byte_offset": 295,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "end": {
+              "line_1_based": 14,
+              "scalar_column_0_based": 6,
+              "utf8_byte_offset": 301,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "anchored_source": "#print"
+          }
+        }
+      ],
+      "error_count": 0,
+      "error_report_indices": [],
+      "error_indices_sorted_by_source": [],
+      "all_error_starts_bound": true,
+      "exit_code": 0,
+      "elapsed_seconds": 7.359909699996933,
+      "stderr": ""
+    },
+    "standard_tactic": {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "d42_cascade": []
+      },
+      "source_sha256": "1541bccbf9e50f56a40a2225fa807f56fa45e7843caede5cc739f37a9b84a993",
+      "source_bytes": 248,
+      "diagnostics_in_reporting_order": [
+        {
+          "reported_index": 1,
+          "severity": 3,
+          "message": "'d42_cascade' does not depend on any axioms",
+          "kind": "[anonymous]",
+          "category": null,
+          "anchor": {
+            "protocol_coordinates": "cli_scalar",
+            "raw_start": {
+              "column": 0,
+              "line": 12
+            },
+            "raw_end": {
+              "column": 6,
+              "line": 12
+            },
+            "start": {
+              "line_1_based": 12,
+              "scalar_column_0_based": 0,
+              "utf8_byte_offset": 222,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "end": {
+              "line_1_based": 12,
+              "scalar_column_0_based": 6,
+              "utf8_byte_offset": 228,
+              "line_sha256_without_newline": "8be9fa7c6534c338698d376c8fc418b26bdf1673abaaa9de400fb514cbcd46fb"
+            },
+            "anchored_source": "#print"
+          }
+        }
+      ],
+      "error_count": 0,
+      "error_report_indices": [],
+      "error_indices_sorted_by_source": [],
+      "all_error_starts_bound": true,
+      "exit_code": 0,
+      "elapsed_seconds": 7.321630800011917,
+      "stderr": ""
+    }
+  }
+}

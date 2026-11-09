@@ -1,0 +1,352 @@
+{
+  "status": "THREE_EXACT_ARCHIVED_NEGATIVES_AND_EDIT_CONTROLS_SOURCE_REVIEWED",
+  "baseline": "ad202e572534c8e7376d9fba7f8191fb7b3012d6",
+  "inventory_sha256": "d2605672b6843ef6466cd1a56253ee5230e40bad4832e74643af02f670cfb5a7",
+  "ledger_sha256": "3a5246d126060ee58cc2c1158b66e429066b4f6e2225dc25c8056ba616d78349",
+  "d42_input_freeze_sha256": "34a2df3d6c8fcbd2a06d296a5f97f6a4ce53151b9d74bc990a76f72a55ed0823",
+  "source_selection_sha256": "df7342e4bcb80e4b479979795c01c23c402411b0c96e095924602b8b4450ffae",
+  "author_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "archive_sha256": {
+    "deepseek/deepseek-v4-flash": "6acd6a2571ec420e61b05d2ed2d18da4422b6420a7b6d6feb98802030959500e",
+    "qwen/qwen3.6-flash": "8a7a7e6ed192129a754f94ea85089978fc44f136fc11df01a1d676bf5b93ccb7"
+  },
+  "cases": {
+    "p104": {
+      "state_id": "p104_bad.state0",
+      "target_id": "induction_pprime_pdvdapowpma",
+      "target": "P104Bad.p104_target",
+      "model_in_archive": "qwen/qwen3.6-flash",
+      "mode_in_archive": "typed",
+      "initial_scope": {
+        "source_sha256": "775e7b620c16318386278803e4e4a7257f9cb69cd72d765e05169fe97c7ad13e",
+        "initial_step_sha256": "9a27c52441b2d567328abc852a63dcbb8ff5b86ab73b2721cda23abda6ecd1a0",
+        "initial_prompt_sha256": "0e19b68527597bbf7e0be50032e02e03034b2516780ab989621eb0b17483f027",
+        "episode_sha256": "7a18afaa476e715e9630c2e5a7fbb3f787d5842282686c629fced827a876bfe1"
+      },
+      "exact_imports": [
+        "Architect",
+        "Mathlib"
+      ],
+      "immutable_target_header": "theorem p104_target (p a : ℕ) (h₀ : 0 < a) (h₁ : Nat.Prime p) : p ∣ (a^p - a)",
+      "immutable_target_header_sha256": "daef5e2237ae326a93e548d63ae58a5a4211fa8aa02d152700b13a0617b0bd9c",
+      "helpers": [],
+      "archive_source_member": "data/llm_calls/p104_monolithic_toolsrcq_v0/typed/step04.check.lean",
+      "archive_candidate_sha256": "f896b57a1a81241db56778a0d5b548bf2fe0901157c1c57c063de7b42a8d95fa",
+      "archive_module_sha256": "00cf88524e588707088a53fd8e3c8b50e7fdd5fb89fe19db0294e311f72f1adb",
+      "archive_attempt_sha256": "eec6a7058e9e191ac93a60f8b9d6b3cc590be404e639eea5c70e6c7c9d4c9bac",
+      "archive_diagnostics_sha256": "225a39b2857832e1b8bf13506b8b809781ab9a239b77dd6666ebdb329d826cf7",
+      "author_errors": [
+        {
+          "line": 8,
+          "column": 48,
+          "category": "TYPE_APPLICATION_OR_CALC",
+          "message_sha256": "45adbdc72ea3c06e7a3fd323162144c594214501b7d2be50b35c504dcc506bd5"
+        },
+        {
+          "line": 8,
+          "column": 62,
+          "category": "TYPE_APPLICATION_OR_CALC",
+          "message_sha256": "48a0c21aa7dec5e351c645ecd4213075ac32cb85b52968c21f2a67dbef94f1af"
+        }
+      ],
+      "author_target_axioms": [
+        "propext",
+        "sorryAx"
+      ],
+      "original_error_lines": [
+        8,
+        8
+      ],
+      "original_error_classes": [
+        "TYPE_APPLICATION_OR_CALC",
+        "TYPE_APPLICATION_OR_CALC"
+      ],
+      "localized_edit": {
+        "original_line": 8,
+        "old_text": "  have h : ((a : ZMod p) ^ p = (a : ZMod p)) := ZMod.pow_card p a",
+        "new_text": "  have h : ((a : ZMod p) ^ p = (a : ZMod p)) := by\n    letI : Fact (Nat.Prime p) := ⟨h₁⟩\n    exact ZMod.pow_card (a : ZMod p)",
+        "old_span_utf8": [
+          178,
+          243
+        ],
+        "new_span_utf8": [
+          178,
+          309
+        ],
+        "byte_delta": 66,
+        "line_delta": 2,
+        "mapped_unchanged_lines": "Before the original repair line: same. After it: add line_delta."
+      },
+      "offline_diagnostics": {
+        "filename": "p104_author_diagnostics.offline.json",
+        "sha256": "5af5b65407b3ef08a27763338c15bf9ab0e17f39490af68ce55f3f2e18fa7ceb"
+      },
+      "target_slot": {
+        "filename": "p104_target_slot.lean",
+        "source_sha256": "99bfbce076dc731069a6e1ce4fabde673aa87be0f3568e3076cbb8e4cfa90868",
+        "immutable_prefix_sha256": "eb1d2bd4c40d3bf9f465eb1dcd4daeead3c1dfef83eca1832ac6a40c82ce7c68",
+        "marker": "  d42_slot"
+      },
+      "variants": {
+        "original": {
+          "filename": "p104_original.lean",
+          "source_sha256": "f896b57a1a81241db56778a0d5b548bf2fe0901157c1c57c063de7b42a8d95fa",
+          "bytes": 402
+        },
+        "noop": {
+          "filename": "p104_noop.lean",
+          "source_sha256": "f896b57a1a81241db56778a0d5b548bf2fe0901157c1c57c063de7b42a8d95fa",
+          "bytes": 402
+        },
+        "placebo": {
+          "filename": "p104_placebo.lean",
+          "source_sha256": "6e5dfd299c5d6409f95ed85f3ae8cbd5a6bd9011a58f7970429aa56a8c35f07f",
+          "bytes": 468
+        },
+        "edited": {
+          "filename": "p104_edited.lean",
+          "source_sha256": "06f18e06a30d82106a35a8c5c6337d4c9fd52f2e6f7cc25cd100e38a092b5190",
+          "bytes": 468
+        }
+      }
+    },
+    "p113": {
+      "state_id": "p113_bad.state0",
+      "target_id": "numbertheory_3pow2pownm1mod2pownp3eq2pownp2",
+      "target": "P113Bad.p113_target",
+      "model_in_archive": "qwen/qwen3.6-flash",
+      "mode_in_archive": "patch",
+      "initial_scope": {
+        "source_sha256": "24623c77d2831d5a02f854589da8df7d4135c29d1d92002d82aef04ea61a7850",
+        "initial_step_sha256": "5f8c0e71b5a2955b085483a858b892be4fab9206dcee34578e7c53b902686f2a",
+        "initial_prompt_sha256": "4a42ceaf628fe6663924f1f2389734b198f922b2185c9ea97b8e6da80d7408cc",
+        "episode_sha256": "429ab373b7f39fdcb42d9fc36c58185971521f013487733c9883af6dc82ceeb1"
+      },
+      "exact_imports": [
+        "Architect",
+        "Mathlib"
+      ],
+      "immutable_target_header": "theorem p113_target (n : ℕ) (h₀ : 0 < n) : (3^(2^n) - 1) % (2^(n + 3)) = 2^(n + 2)",
+      "immutable_target_header_sha256": "ad6bc0659c372fd4af3450bcd876bcbb77338b6b970901934800a985bbb4cdcf",
+      "helpers": [],
+      "archive_source_member": "data/llm_calls/p113_monolithic_patchsrcq_v0/typed/step06.check.lean",
+      "archive_candidate_sha256": "eb6c84a33a1e02bd0375bb6e11ef80297ce581cda2a23c99b00670e944a55768",
+      "archive_module_sha256": "34bf898df5be401bfba406206b1758da3edbaf719a26eb0306250ec3c10a67ad",
+      "archive_attempt_sha256": "d05d61a9c2533e086f966302f7c02b8b9da6b75a9978fdda0880b30bbccb5380",
+      "archive_diagnostics_sha256": "29385069d131983d90cbe388edbf3a2e222ec1a723839110214f43f5240c4e4d",
+      "author_errors": [
+        {
+          "line": 11,
+          "column": 29,
+          "category": "TYPE_APPLICATION_OR_CALC",
+          "message_sha256": "bc681b05e10a8a192090d1bbccefb3c63a05d1bc8cbd28d4b73cc4d7df11ee4d"
+        },
+        {
+          "line": 16,
+          "column": 12,
+          "category": "TACTIC_PROOF_STEP_FAILURE",
+          "message_sha256": "8c62ed15b0ace39860891f1a2b748f9c5ca6913dd34f0dfd04c2ce8a1757d27f"
+        },
+        {
+          "line": 34,
+          "column": 66,
+          "category": "GOALS_OR_CASES",
+          "message_sha256": "fa43b1d3e063c9577f617df1369ac738767f2228487a0dff7de053937a49800d"
+        },
+        {
+          "line": 41,
+          "column": 6,
+          "category": "TACTIC_PROOF_STEP_FAILURE",
+          "message_sha256": "77ad0183f557f4555ef321c39703f94bd6d5ff25b33140b920a9742ea7da92c3"
+        }
+      ],
+      "author_target_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "original_error_lines": [
+        11,
+        16,
+        34,
+        41
+      ],
+      "original_error_classes": [
+        "TYPE_APPLICATION_OR_CALC",
+        "TACTIC_PROOF_STEP_FAILURE",
+        "GOALS_OR_CASES",
+        "TACTIC_PROOF_STEP_FAILURE"
+      ],
+      "localized_edit": {
+        "original_line": 11,
+        "old_text": "    | zero => exfalso; exact hk lt_rfl",
+        "new_text": "    | zero => exfalso; exact Nat.lt_irrefl 0 hk",
+        "old_span_utf8": [
+          296,
+          334
+        ],
+        "new_span_utf8": [
+          296,
+          343
+        ],
+        "byte_delta": 9,
+        "line_delta": 0,
+        "mapped_unchanged_lines": "Before the original repair line: same. After it: add line_delta."
+      },
+      "offline_diagnostics": {
+        "filename": "p113_author_diagnostics.offline.json",
+        "sha256": "00f4cc66c3fa46fc3b0fb4817e308f4da03c7ebdee7337558ab36075da485e4c"
+      },
+      "target_slot": {
+        "filename": "p113_target_slot.lean",
+        "source_sha256": "1d1bde7d9be7cfcf8a2b88c498bc60bc6ba92959155a0cf300ded01edfceef45",
+        "immutable_prefix_sha256": "066004a38182fcb89637df913e2d7261776adf2a0a296a20c2ed45e3da9c6220",
+        "marker": "  d42_slot"
+      },
+      "variants": {
+        "original": {
+          "filename": "p113_original.lean",
+          "source_sha256": "eb6c84a33a1e02bd0375bb6e11ef80297ce581cda2a23c99b00670e944a55768",
+          "bytes": 1683
+        },
+        "noop": {
+          "filename": "p113_noop.lean",
+          "source_sha256": "eb6c84a33a1e02bd0375bb6e11ef80297ce581cda2a23c99b00670e944a55768",
+          "bytes": 1683
+        },
+        "placebo": {
+          "filename": "p113_placebo.lean",
+          "source_sha256": "dd213679a077259632cd9c62fb732ad0498f56b0dce4468ab7f6a32cc68a0b2b",
+          "bytes": 1692
+        },
+        "edited": {
+          "filename": "p113_edited.lean",
+          "source_sha256": "aca5eaf2bf22b5f4491bc13e7d73f6768410178f3f9994013d08de854d0baf60",
+          "bytes": 1692
+        }
+      }
+    },
+    "p41": {
+      "state_id": "p41_bad.state0",
+      "target_id": "induction_divisibility_9div10tonm1",
+      "target": "P41Bad.p41_target",
+      "model_in_archive": "deepseek/deepseek-v4-flash",
+      "mode_in_archive": "rewrite",
+      "initial_scope": {
+        "source_sha256": "47a30179a6a3b64b91fe32c411e5dcab0f9114c814ff0615f3a41eca403ded5d",
+        "initial_step_sha256": "f32cefd72119a3dba9d1b8d9bdb697f36a692219e33f4c87e675564c3a40d3ca",
+        "initial_prompt_sha256": "2c2c20daca9bef1bea31a23d7ad5918a2cecccdf3ea8ee9cf8903b2c973c6b14",
+        "episode_sha256": "12142d7afd315cca302dd482367f63248d723a6c6123846c2c016a2824bff138"
+      },
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "immutable_target_header": "theorem p41_target (n : ℕ) (h₀ : 0 < n) : 9 ∣ 10 ^ n - 1",
+      "immutable_target_header_sha256": "0e191f1246556b140e514270c7d06c9739e20fe2c5f998b2e008f0b5eeac27e6",
+      "helpers": [],
+      "archive_source_member": "data/llm_calls/p41_monolithic_rwsrc_v0/typed/step04.check.lean",
+      "archive_candidate_sha256": "b8ed70782b522a30cc0b8b14ada46c14124b39286a632ef9cdea7ad58839610c",
+      "archive_module_sha256": "bacb7d946e90d2d4cdfd4ef7176f7e39635ec983affd3dd6abd669221281877b",
+      "archive_attempt_sha256": "c210eaba6db1718872deeb06d064b30afb4f17e63b7741593b11d2a52804d57d",
+      "archive_diagnostics_sha256": "176692bef3934ebd98ce8464f972a9f3475b5e5bb9de24d8347b2c39bad44f99",
+      "author_errors": [
+        {
+          "line": 18,
+          "column": 66,
+          "category": "TYPE_APPLICATION_OR_CALC",
+          "message_sha256": "43580e46abc3bb347dd6765f288c55d51f37ff1525d4f77bd3314b0b66c7e184"
+        },
+        {
+          "line": 44,
+          "column": 32,
+          "category": "GOALS_OR_CASES",
+          "message_sha256": "bf75b5ec8e3579ac20ab8bd61eeb1e68a639f117010b3617901995c217f78821"
+        }
+      ],
+      "author_target_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "original_error_lines": [
+        18,
+        44
+      ],
+      "original_error_classes": [
+        "TYPE_APPLICATION_OR_CALC",
+        "GOALS_OR_CASES"
+      ],
+      "localized_edit": {
+        "original_line": 18,
+        "old_text": "        _ ≤ 10 ^ m := Nat.pow_le_pow_right (by norm_num : 0 < 10) hm",
+        "new_text": "        _ ≤ 10 ^ m := Nat.pow_le_pow_right (by norm_num : 0 < 10) (Nat.zero_le m)",
+        "old_span_utf8": [
+          434,
+          504
+        ],
+        "new_span_utf8": [
+          434,
+          517
+        ],
+        "byte_delta": 13,
+        "line_delta": 0,
+        "mapped_unchanged_lines": "Before the original repair line: same. After it: add line_delta."
+      },
+      "offline_diagnostics": {
+        "filename": "p41_author_diagnostics.offline.json",
+        "sha256": "e1a2d81fbab96f44132e3798f5999c7ca8ce5aada9e495f383b874dec4e694d4"
+      },
+      "target_slot": {
+        "filename": "p41_target_slot.lean",
+        "source_sha256": "cecb5d0ede55657797d598d863165e5c9a9b0675c4414f472b3d17e350ed8841",
+        "immutable_prefix_sha256": "0bd573be9e5bfaf643d5c479375ec6e0450a7fac1d3a746480e0abba884fbeeb",
+        "marker": "  d42_slot"
+      },
+      "variants": {
+        "original": {
+          "filename": "p41_original.lean",
+          "source_sha256": "b8ed70782b522a30cc0b8b14ada46c14124b39286a632ef9cdea7ad58839610c",
+          "bytes": 1676
+        },
+        "noop": {
+          "filename": "p41_noop.lean",
+          "source_sha256": "b8ed70782b522a30cc0b8b14ada46c14124b39286a632ef9cdea7ad58839610c",
+          "bytes": 1676
+        },
+        "placebo": {
+          "filename": "p41_placebo.lean",
+          "source_sha256": "e7f0302787203ea8def3ff566c4d68226e8f82f20ab14207dfd28a42f1199a3e",
+          "bytes": 1689
+        },
+        "edited": {
+          "filename": "p41_edited.lean",
+          "source_sha256": "2d7b3409427f0b748a437efe0074347036bd81e4565a02edaedf31608d2fe4ff",
+          "bytes": 1689
+        }
+      }
+    }
+  },
+  "variants": {
+    "original": "Exact archive bytes",
+    "noop": "Byte-identical independent repeat",
+    "placebo": "Same positive byte and line delta as edit using trailing spaces and blank lines",
+    "edited": "One reviewed contiguous first-site proof-line replacement"
+  },
+  "prior_control": {
+    "state_id": "p14_bad.state0",
+    "freeze_path": "research/phase5d40_proof_authoring_20261110/cases_p14_one_line_edit_freeze.json",
+    "runtime_path": "research/phase5d40_proof_authoring_20261110/cases_p14_one_line_edit_runtime.json",
+    "role": "Previous auditor-selected one-line deletion. Excluded from three fresh archival controls and their denominator."
+  },
+  "known_proofs_read_or_emitted": false,
+  "local_execution_performed_by_prepare": false
+}

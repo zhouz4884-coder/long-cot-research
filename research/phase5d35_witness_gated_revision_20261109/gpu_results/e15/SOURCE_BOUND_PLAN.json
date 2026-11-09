@@ -1,0 +1,221 @@
+{
+  "status": "READY",
+  "plan": {
+    "incumbent": 303369,
+    "witness": 1011235,
+    "verdict": {
+      "checker": "d35-witness-arbitration-v1",
+      "contract_id": "wc_3f10685ed6ac55447c76db25989e9feeeb9f5101",
+      "question_sha256": "f005e50e39007c6a7bbb989434b36f69ba3475ff68e56335664a11582985dcdb",
+      "target_id": "goal_c38e9b7066c143465bbf2a5bb7c5b52f858ef0435b01229edadc88d3d783c860",
+      "claim_id": "obs_eacc48b423eeb06db571ba6fdccf22daf9d4916b976ff0b757c2be9278378b17",
+      "claim_type": "MAXIMALITY_CLAIM",
+      "observed_prefix_sha256": "f68c69ec382b4b4439938b3cdf5391b3f48e6baa1a32750e40a0fc1370ec68eb",
+      "status": "DOMINATED_CANDIDATE",
+      "action": "RETRACT_EXTREMUM_ONLY",
+      "reason": "strictly_larger_feasible_integer",
+      "witness": {
+        "source": "OBSERVED_CANDIDATE",
+        "candidate_id": "obs_54e5df6a2cd8aaa1fa202c318d741064ab3c59334c59d5a84ef824b9ca676517",
+        "value": 1011235
+      },
+      "mathematical": {
+        "status": "DOMINATED_CANDIDATE",
+        "reason": "strictly_larger_feasible_integer",
+        "proof_scope": "ORIGINAL_OBJECTIVE_FALSIFICATION",
+        "certified_value": null,
+        "witness": 1011235,
+        "evidence": {
+          "digits": [
+            1,
+            0,
+            1,
+            1,
+            2,
+            3,
+            5
+          ]
+        },
+        "checker_version": "wgr-witness-contract-v1",
+        "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+        "paid_check_count": 6,
+        "work": {
+          "used": 6,
+          "by_operation": {
+            "digit_candidate": 1,
+            "digit_recurrence": 5
+          },
+          "trace_sha256": "aab6dc584315f2d16534bf592a8a6bd33c51a561503e55f3454b6ecf957083b1"
+        },
+        "certificate_sha256": "c9f88f020d37a23622f197a18b3b42b0af9cc1f47756acb5ef348ae4d2ecdd1b",
+        "incumbent_feasibility": {
+          "status": "FEASIBLE_ONLY",
+          "reason": "digit_feasibility",
+          "proof_scope": "FULL_ORIGINAL_CONSTRAINTS",
+          "certified_value": null,
+          "witness": 303369,
+          "evidence": {
+            "digits": [
+              3,
+              0,
+              3,
+              3,
+              6,
+              9
+            ]
+          },
+          "checker_version": "wgr-witness-contract-v1",
+          "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+          "paid_check_count": 5,
+          "work": {
+            "used": 5,
+            "by_operation": {
+              "digit_candidate": 1,
+              "digit_recurrence": 4
+            },
+            "trace_sha256": "6c0a127a71d892078fc6aae9fd50e07f6a90d0c997d84d8b4dd411361af5a638"
+          },
+          "certificate_sha256": "bf846f960fccf06c2b90c9b6f5cb85eb2c488b31d65ad5cc11dcc3f923f7f411"
+        }
+      },
+      "released_value": null,
+      "certificate_sha256": "3207d8632a1d44d2e267366de1a0db242dae78de6cf1af8db73c5e7d141e7716",
+      "verification_wall_seconds": 0.19248951319605112
+    },
+    "incumbent_id": "obs_eacc48b423eeb06db571ba6fdccf22daf9d4916b976ff0b757c2be9278378b17",
+    "witness_id": "obs_54e5df6a2cd8aaa1fa202c318d741064ab3c59334c59d5a84ef824b9ca676517",
+    "generic_cut": 24454,
+    "scope_cut": 19747,
+    "observed_tokens": 24532,
+    "scope_cut_discards_witness_source": true,
+    "semantic_frontier": [
+      "obs_1a1fc7cf760113479371fbfab25cea99856de09e5060f81094dea0324a881348",
+      "obs_eacc48b423eeb06db571ba6fdccf22daf9d4916b976ff0b757c2be9278378b17"
+    ],
+    "text_frontier_offsets": [
+      19873,
+      20297,
+      24275,
+      24457
+    ],
+    "refuted_comparisons": [
+      {
+        "contract_id": "wc_3f10685ed6ac55447c76db25989e9feeeb9f5101",
+        "target_id": "goal_c38e9b7066c143465bbf2a5bb7c5b52f858ef0435b01229edadc88d3d783c860",
+        "observed_prefix_sha256": "f68c69ec382b4b4439938b3cdf5391b3f48e6baa1a32750e40a0fc1370ec68eb",
+        "left": 1011235,
+        "right": 303369,
+        "relation": "<",
+        "source_span": {
+          "char_span": [
+            53584,
+            53662
+          ],
+          "token_span": [
+            19873,
+            19902
+          ],
+          "token_sha256": "193c2a2b37817a0aed07ff78281d283139b58b91e2365a9eb814a6fde3aa2cf5",
+          "text": " Therefore, the seven-digit number is 1011235. But that's smaller than 303369."
+        },
+        "paragraph_span": {
+          "char_span": [
+            53227,
+            53662
+          ],
+          "token_span": [
+            19747,
+            19902
+          ],
+          "token_sha256": "aa665f79caac2e6158fd9b8810e86deba374420b780b00058c411d2ff3d2fdc6",
+          "text": "For example, let's try to build a seven-digit number. Let's start with first two digits 1 and 0. Third digit ≥ 1 + 0 = 1. Let's take third digit 1. Fourth digit ≥ 0 + 1 = 1. Let's take fourth digit 1. Fifth digit ≥ 1 + 1 = 2. Let's take fifth digit 2. Sixth digit ≥ 1 + 2 = 3. Let's take sixth digit 3. Seventh digit ≥ 2 + 3 = 5. Let's take seventh digit 5. Therefore, the seven-digit number is 1011235. But that's smaller than 303369."
+        },
+        "left_span": {
+          "char_span": [
+            53622,
+            53629
+          ],
+          "token_span": [
+            19881,
+            19888
+          ],
+          "token_sha256": "5e16a90eda3ef1df8c2e497d49c88352a47b9f2ea6d0106e799de4232053271e",
+          "text": "1011235"
+        },
+        "right_span": {
+          "char_span": [
+            53655,
+            53661
+          ],
+          "token_span": [
+            19895,
+            19901
+          ],
+          "token_sha256": "b46aad60231827dd323629d3cb67824e8e59b59ab4da9ce27b82b4912047c385",
+          "text": "303369"
+        }
+      },
+      {
+        "contract_id": "wc_3f10685ed6ac55447c76db25989e9feeeb9f5101",
+        "target_id": "goal_c38e9b7066c143465bbf2a5bb7c5b52f858ef0435b01229edadc88d3d783c860",
+        "observed_prefix_sha256": "f68c69ec382b4b4439938b3cdf5391b3f48e6baa1a32750e40a0fc1370ec68eb",
+        "left": 1011235,
+        "right": 303369,
+        "relation": "<",
+        "source_span": {
+          "char_span": [
+            65792,
+            65855
+          ],
+          "token_span": [
+            24275,
+            24303
+          ],
+          "token_sha256": "896d3817eae0dad9855be4a88014d79d00717ac960d8595e45de6bccd8152563",
+          "text": " So, the number 1011235 is valid. But it's smaller than 303369."
+        },
+        "paragraph_span": {
+          "char_span": [
+            65759,
+            65855
+          ],
+          "token_span": [
+            24258,
+            24303
+          ],
+          "token_sha256": "fd6afdedcd988bb2ef73e436679e17d6c68d0b8cc36d00664df2b0e7a17377dc",
+          "text": "Seventh digit 5 ≥ 2 + 3 = 5. Yes. So, the number 1011235 is valid. But it's smaller than 303369."
+        },
+        "left_span": {
+          "char_span": [
+            65808,
+            65815
+          ],
+          "token_span": [
+            24280,
+            24287
+          ],
+          "token_sha256": "5e16a90eda3ef1df8c2e497d49c88352a47b9f2ea6d0106e799de4232053271e",
+          "text": "1011235"
+        },
+        "right_span": {
+          "char_span": [
+            65848,
+            65854
+          ],
+          "token_span": [
+            24296,
+            24302
+          ],
+          "token_sha256": "b46aad60231827dd323629d3cb67824e8e59b59ab4da9ce27b82b4912047c385",
+          "text": "303369"
+        }
+      }
+    ],
+    "shared_witness_message": "\n\nA candidate already observed in the reasoning, 1011235, satisfies the original digit rule and is greater than 303369. This refutes the claim that 303369 is greatest. Treat 1011235 only as a feasible lower bound. Continue solving the original problem, justify the greatest value and provide the final boxed answer.\n\n",
+    "carry_scope": "feasible lower bound only"
+  },
+  "observed_records": 17,
+  "extract_seconds": 5.332667094655335,
+  "planning_seconds": 12.270954766310751
+}

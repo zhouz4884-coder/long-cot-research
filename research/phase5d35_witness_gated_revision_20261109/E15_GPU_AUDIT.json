@@ -1,0 +1,241 @@
+{
+  "status": "PASS",
+  "case": "e15",
+  "scope": "Single historical development trajectory and fixed RNG. No independent test performance.",
+  "baseline_exact_generated_id_match": true,
+  "ledger_validated": true,
+  "actual_authorized_action": "RETRACT_EXTREMUM_ONLY",
+  "historical_gold_after_close": "10112369",
+  "scores": [
+    {
+      "arm": "NativeContinue",
+      "correct": false,
+      "readout": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "5327fde7484f5c6ee3c99064d93cb8ff14f9f3ea6d14b56df7b32ad338d99774",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2325,
+          2345
+        ]
+      },
+      "exact_delivered_value": "303369",
+      "natural_EOS": true,
+      "paid_gpu_inputs_after_cut": 1118,
+      "sampled_continuation_tokens": 1119,
+      "bridge_tokens": 0,
+      "actual_seconds_after_cut": 59.439106134697795,
+      "standalone_shared_replay_through_cut": {
+        "work": {
+          "forward_calls": 24533,
+          "forward_input_tokens": 24589,
+          "attention_pairs": 302321755
+        },
+        "wall_seconds": 1277.050890121609
+      },
+      "delivery_mode": "natural_native"
+    },
+    {
+      "arm": "WitnessOnlyPrompt",
+      "correct": true,
+      "readout": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "5001131628054cb1c1256b09f95b472a0266d89e7edf6bd4c3b6e1296f2d372b",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2268,
+          2290
+        ]
+      },
+      "exact_delivered_value": "10112369",
+      "natural_EOS": true,
+      "paid_gpu_inputs_after_cut": 10412,
+      "sampled_continuation_tokens": 10329,
+      "bridge_tokens": 84,
+      "actual_seconds_after_cut": 553.5422966741025,
+      "standalone_shared_replay_through_cut": {
+        "work": {
+          "forward_calls": 24533,
+          "forward_input_tokens": 24589,
+          "attention_pairs": 302321755
+        },
+        "wall_seconds": 1277.0509076826274
+      },
+      "delivery_mode": "natural_native"
+    },
+    {
+      "arm": "GenericRewind",
+      "correct": true,
+      "readout": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "cd111b0655274d0576172033dddfbf7ac830d44e7a1e0a2b5a923b866cb59f0b",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2512,
+          2534
+        ]
+      },
+      "exact_delivered_value": "10112369",
+      "natural_EOS": true,
+      "paid_gpu_inputs_after_cut": 9785,
+      "sampled_continuation_tokens": 9702,
+      "bridge_tokens": 84,
+      "actual_seconds_after_cut": 521.4574879538268,
+      "standalone_shared_replay_through_cut": {
+        "work": {
+          "forward_calls": 24455,
+          "forward_input_tokens": 24511,
+          "attention_pairs": 300406816
+        },
+        "wall_seconds": 1272.9703713199124
+      },
+      "delivery_mode": "natural_native"
+    },
+    {
+      "arm": "SCOPE-RebaseCarry",
+      "correct": true,
+      "readout": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "caf6448bede93191ed6e487c894a1591dd0af2d674c9b08cd38c6d7f8d810619",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2085,
+          2107
+        ]
+      },
+      "exact_delivered_value": "10112369",
+      "natural_EOS": true,
+      "paid_gpu_inputs_after_cut": 12280,
+      "sampled_continuation_tokens": 12197,
+      "bridge_tokens": 84,
+      "actual_seconds_after_cut": 654.110476186499,
+      "standalone_shared_replay_through_cut": {
+        "work": {
+          "forward_calls": 19748,
+          "forward_input_tokens": 19804,
+          "attention_pairs": 196109110
+        },
+        "wall_seconds": 1028.2423393214121
+      },
+      "delivery_mode": "natural_native"
+    },
+    {
+      "arm": "BoundedSearch",
+      "correct": true,
+      "readout": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "3906a84476391fccec09b2cd8537268ea71bcab6d9d1acecc465e9163df4de70",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "whole_final_object",
+        "selected_span": [
+          0,
+          16
+        ]
+      },
+      "exact_delivered_value": "10112369",
+      "natural_EOS": null,
+      "paid_gpu_inputs_after_cut": 0,
+      "sampled_continuation_tokens": null,
+      "bridge_tokens": null,
+      "actual_seconds_after_cut": null,
+      "standalone_shared_replay_through_cut": null,
+      "delivery_mode": "direct_tool"
+    }
+  ],
+  "paid_study": {
+    "status": "COMPLETE",
+    "case_id": "D3_E15",
+    "mode": "e15",
+    "arms": [
+      {
+        "arm": "SCOPE-RebaseCarry",
+        "stop_reason": "EOS",
+        "sampled_continuation_tokens": 12197,
+        "elapsed_seconds": 654.110476186499
+      },
+      {
+        "arm": "GenericRewind",
+        "stop_reason": "EOS",
+        "sampled_continuation_tokens": 9702,
+        "elapsed_seconds": 521.4574879538268
+      },
+      {
+        "arm": "NativeContinue",
+        "stop_reason": "EOS",
+        "sampled_continuation_tokens": 1119,
+        "elapsed_seconds": 59.439106134697795
+      },
+      {
+        "arm": "WitnessOnlyPrompt",
+        "stop_reason": "EOS",
+        "sampled_continuation_tokens": 10329,
+        "elapsed_seconds": 553.5422966741025
+      }
+    ],
+    "standalone_replay_equivalents_are_not_rebilled": true,
+    "actual_shared_replay_work": {
+      "forward_calls": 24533,
+      "forward_input_tokens": 24589,
+      "attention_pairs": 302321755
+    },
+    "actual_shared_replay_seconds": 1277.0509076826274,
+    "actual_paid_work": {
+      "forward_calls": 58128,
+      "forward_input_tokens": 58184,
+      "attention_pairs": 1246985124
+    },
+    "elapsed_seconds": 3078.297607032582,
+    "peak_allocated_bytes": 18989438976
+  },
+  "worker_wall_seconds_including_model_load_approx": 3097.938326358795,
+  "tool_and_replay_costs_in_raw_arm_records": true
+}

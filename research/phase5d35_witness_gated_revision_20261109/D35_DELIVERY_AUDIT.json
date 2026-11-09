@@ -1,0 +1,242 @@
+{
+  "status": "COMPLETE_DEVELOPMENT_INDEPENDENT_GATE_NOT_MET",
+  "baseline_commit": "4dfdb426aa63f350b4311f670c635f8777f42eb8",
+  "frozen_d3_tree_unchanged": true,
+  "d3_formal_correct": [
+    16,
+    32
+  ],
+  "unit_tests_passed": 34,
+  "offline_selected": {
+    "compilation": {
+      "selected_development": [
+        5,
+        5
+      ],
+      "historical_formal_problem_bank": [
+        4,
+        16
+      ],
+      "matched_source_ids": [
+        "D3_E06",
+        "D3_E12",
+        "D3_E14",
+        "D3_E15"
+      ]
+    },
+    "automatic_triggers": 5,
+    "legal_actions": 5,
+    "adverse_controls": [
+      29,
+      29
+    ]
+  },
+  "cases": {
+    "E12": {
+      "scopes": "One selected historical development checkpoint with fixed RNG",
+      "retrieval_hash_members": 13,
+      "native_exact_id_reproduction": true,
+      "authorized_action": "VETO_DRAFT_AND_DELIVER_CERTIFIED",
+      "model_eos": 2,
+      "paid_work": {
+        "forward_calls": 6913,
+        "forward_input_tokens": 7059,
+        "attention_pairs": 22854270
+      },
+      "shared_replay_paid_once": {
+        "forward_calls": 3849,
+        "forward_input_tokens": 3995,
+        "attention_pairs": 7982010
+      },
+      "study_seconds_after_model_load": 362.11075910460204,
+      "worker_wall_seconds_approx": 383.83947920799255,
+      "final_answer_comparison": [
+        {
+          "arm": "NativeContinue",
+          "exact_delivered_value": "45",
+          "correct": false,
+          "natural_EOS": true,
+          "paid_gpu_inputs_after_cut": 2064,
+          "bridge_tokens": 0
+        },
+        {
+          "arm": "SameEvidencePrompt",
+          "exact_delivered_value": "61",
+          "correct": true,
+          "natural_EOS": true,
+          "paid_gpu_inputs_after_cut": 1000,
+          "bridge_tokens": 48
+        },
+        {
+          "arm": "LastThoughtAnswer",
+          "exact_delivered_value": null,
+          "correct": false,
+          "natural_EOS": null,
+          "paid_gpu_inputs_after_cut": null,
+          "bridge_tokens": null
+        },
+        {
+          "arm": "DirectVerifier",
+          "exact_delivered_value": "61",
+          "correct": true,
+          "natural_EOS": null,
+          "paid_gpu_inputs_after_cut": 0,
+          "bridge_tokens": null
+        },
+        {
+          "arm": "WitnessGatedCommit",
+          "exact_delivered_value": "61",
+          "correct": true,
+          "natural_EOS": null,
+          "paid_gpu_inputs_after_cut": null,
+          "bridge_tokens": null
+        }
+      ],
+      "direct_tool": {
+        "first_search_operations": 9,
+        "replay_verified": true,
+        "cpu_seconds_including_replay": 0.0012592505663633347,
+        "model_inputs": 0
+      },
+      "last_thought_terminal_box_cpu_recount": {
+        "method": "LastThoughtAnswerTerminalBox",
+        "scope": "Gold-blind lexical readout of the last complete integer box at native think-close",
+        "native_source_sha256": "39d267eb094200d799119301e071319f4068dd71be7ef4437cf865556d108fbf",
+        "thought_sha256": "52110df1450a708b920e9090e4d7094da62903fc2248b217732a9e252434bfad",
+        "think_close_token_index": 3858,
+        "source_text": "\\boxed{61}\n",
+        "value": 61,
+        "correct": true,
+        "standalone_source_work_through_think_close": {
+          "forward_calls": 11,
+          "forward_input_tokens": 11,
+          "attention_pairs": 44011
+        },
+        "readout_CPU_seconds": 0.0009425000025657937,
+        "initial_whole_thought_extractor_status": "unparsed",
+        "initial_whole_thought_extractor_reason": "thinking_not_separated"
+      },
+      "rejected_native_draft_tokens": 2054
+    },
+    "E15": {
+      "scopes": "One selected historical development checkpoint with fixed RNG",
+      "retrieval_hash_members": 15,
+      "native_exact_id_reproduction": true,
+      "authorized_action": "RETRACT_EXTREMUM_ONLY",
+      "model_eos": 4,
+      "paid_work": {
+        "forward_calls": 58128,
+        "forward_input_tokens": 58184,
+        "attention_pairs": 1246985124
+      },
+      "shared_replay_paid_once": {
+        "forward_calls": 24533,
+        "forward_input_tokens": 24589,
+        "attention_pairs": 302321755
+      },
+      "study_seconds_after_model_load": 3078.297607032582,
+      "worker_wall_seconds_approx": 3097.938326358795,
+      "final_answer_comparison": [
+        {
+          "arm": "NativeContinue",
+          "exact_delivered_value": "303369",
+          "correct": false,
+          "natural_EOS": true,
+          "paid_gpu_inputs_after_cut": 1118,
+          "bridge_tokens": 0
+        },
+        {
+          "arm": "WitnessOnlyPrompt",
+          "exact_delivered_value": "10112369",
+          "correct": true,
+          "natural_EOS": true,
+          "paid_gpu_inputs_after_cut": 10412,
+          "bridge_tokens": 84
+        },
+        {
+          "arm": "GenericRewind",
+          "exact_delivered_value": "10112369",
+          "correct": true,
+          "natural_EOS": true,
+          "paid_gpu_inputs_after_cut": 9785,
+          "bridge_tokens": 84
+        },
+        {
+          "arm": "SCOPE-RebaseCarry",
+          "exact_delivered_value": "10112369",
+          "correct": true,
+          "natural_EOS": true,
+          "paid_gpu_inputs_after_cut": 12280,
+          "bridge_tokens": 84
+        },
+        {
+          "arm": "BoundedSearch",
+          "exact_delivered_value": "10112369",
+          "correct": true,
+          "natural_EOS": null,
+          "paid_gpu_inputs_after_cut": 0,
+          "bridge_tokens": null
+        }
+      ],
+      "direct_tool": {
+        "first_search_operations": 8229,
+        "replay_verified": true,
+        "cpu_seconds_including_replay": 0.1036099037155509,
+        "model_inputs": 0
+      },
+      "recognized_stale_maximality_after_bridge": {
+        "NativeContinue": 1,
+        "WitnessOnlyPrompt": 0,
+        "GenericRewind": 0,
+        "SCOPE-RebaseCarry": 0
+      },
+      "native_correct_harm_denominator": 0,
+      "cuts_and_cue": {
+        "scope": 19747,
+        "generic": 24454,
+        "native": 24532,
+        "cue_tokens_for_each_intervention": 84,
+        "same_cue_token_ids_independently_checked": true,
+        "cue_released_global_optimum": false,
+        "carry_only_effect_isolated": false
+      }
+    }
+  },
+  "worker_wall_single_gpu_minutes_approx": 58.0296300927798,
+  "independent_raw_recount": {
+    "e12": {
+      "retrieval_hash_members": 13,
+      "native_ids_equal": true,
+      "direct_value": 61
+    },
+    "e15": {
+      "retrieval_hash_members": 15,
+      "frozen_input_hash_members": 23,
+      "native_ids_equal": true,
+      "same_cue_tokens_across_interventions": 84,
+      "forward_rows": 58128,
+      "forward_inputs": 58184,
+      "attention_pairs": 1246985124,
+      "direct_value_by_independent_digit_enumeration": 10112369
+    }
+  },
+  "independent_confirmation": {
+    "status": "NOT_LAUNCHED_FROZEN_GATE_NOT_MET",
+    "direct_tool_complete_certificates_on_selected_contracts": 5,
+    "extra_correct_e15_scope_vs_same_cue": 0,
+    "independent_test_scores_created": 0,
+    "reason": "The five historical development contracts have complete direct solutions. Same-evidence interventions tie E15 scope rebase and simple terminal-box readout ties E12 certified delivery. No repeated incremental correctness versus strong controls."
+  },
+  "evidence_sha256": {
+    "INHERITED_D3_AUDIT.json": "b94ecd8f7ef89277fc747d9fdfdbab50a23c9668330e7cdaca10a44a0df52920",
+    "OFFLINE_DEVELOPMENT_AUDIT.json": "8e4bc105f4aef7d944511f0a5f05d53f04781a5a9d7ecc505bd4a9c1a8c0224e",
+    "DEV_GPU_PREFLIGHT_INDEPENDENT.json": "6697951cce67335b22a8912e53a47132c58aa8c1ec58997f58ad7fe09ab78fdf",
+    "D35_PROTOCOL_ZH.md": "ee4826356d309c58f115cb3d4f91139941bb556ce34b0576b234be9906256f50",
+    "E12_GPU_AUDIT.json": "060ba4b25a4aeb202e6827a1dc61eb33f5fc921b1a5a404f3033740cf687c12e",
+    "E12_DELIVERY_BASELINES.json": "b92ffcb46dc47a5b4c844729ac9dfddb9eb7719006a6145be3d159879428f570",
+    "E12_RETRIEVAL.json": "1395592da179c0f2be240993d350db8ae300cbc8b50b8de93356a4d44461accc",
+    "E15_GPU_AUDIT.json": "fe147bd0d9b786adc8069558c6f014f2948167237863d4f254b9bc52c595fa11",
+    "E15_RETRIEVAL.json": "138c50d701c2f9faa3884bf915843635ee6c41b192afbb00bfbdbe3ef025612e",
+    "E15_RECURRENCE_AUDIT.json": "922e0cdff081b19ea84de40d68a8051bedd6cbd02e81489e3e4e862dd97be40b"
+  }
+}

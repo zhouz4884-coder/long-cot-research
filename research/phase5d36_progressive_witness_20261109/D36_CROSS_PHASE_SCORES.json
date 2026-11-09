@@ -1,0 +1,652 @@
+{
+  "status": "COMPLETE_HISTORICAL_DIAGNOSTIC",
+  "first_reference_read_utc": "2026-11-09T14:44:35.567642+00:00",
+  "frozen_observation_sha256": "48bd573fe5b6c02566202fa9352ed89409c46d69aef6c7aee96ece1934a2f2f9",
+  "grading_backend": {
+    "status": "ok",
+    "versions": {
+      "math-verify": "0.9.0",
+      "latex2sympy2_extended": "1.11.0"
+    }
+  },
+  "additional_gpu_seconds": 0,
+  "official_d3_final_correct": 16,
+  "trajectories": 32,
+  "distinct_problems": 16,
+  "matrices": {
+    "official_frozen_final": {
+      "thinking_correct_final_correct": 16,
+      "thinking_correct_final_wrong": 5,
+      "thinking_correct_final_missing_or_unknown": 0,
+      "thinking_wrong_final_correct": 0,
+      "thinking_wrong_final_wrong": 11,
+      "thinking_wrong_final_missing_or_unknown": 0,
+      "thinking_missing_or_unknown_final_correct": 0,
+      "thinking_missing_or_unknown_final_wrong": 0,
+      "thinking_missing_or_unknown_final_missing_or_unknown": 0
+    },
+    "target_final_diagnostic": {
+      "thinking_correct_final_correct": 20,
+      "thinking_correct_final_wrong": 1,
+      "thinking_correct_final_missing_or_unknown": 0,
+      "thinking_wrong_final_correct": 0,
+      "thinking_wrong_final_wrong": 10,
+      "thinking_wrong_final_missing_or_unknown": 1,
+      "thinking_missing_or_unknown_final_correct": 0,
+      "thinking_missing_or_unknown_final_wrong": 0,
+      "thinking_missing_or_unknown_final_missing_or_unknown": 0
+    }
+  },
+  "conditional_on_different_target": {
+    "comparable_different_complete_candidate_trajectories": 1,
+    "different_candidate_problem_clusters": 1,
+    "official_final_wrong_numerator": 1,
+    "official_final_correct_numerator": 0,
+    "target_final_wrong_numerator": 1,
+    "target_final_correct_numerator": 0,
+    "target_final_unknown_numerator": 0
+  },
+  "arm_descriptive_comparison": {
+    "blind_thought_only_correct": {
+      "correct": 21,
+      "rescued_native_wrong": 5,
+      "harmed_native_correct": 0,
+      "problem_clusters": {
+        "+1": 3,
+        "+0": 12,
+        "+2": 1
+      }
+    },
+    "blind_thought_else_native_correct": {
+      "correct": 21,
+      "rescued_native_wrong": 5,
+      "harmed_native_correct": 0,
+      "problem_clusters": {
+        "+1": 3,
+        "+0": 12,
+        "+2": 1
+      }
+    },
+    "certified_gate_correct": {
+      "correct": 17,
+      "rescued_native_wrong": 1,
+      "harmed_native_correct": 0,
+      "problem_clusters": {
+        "+0": 15,
+        "+1": 1
+      }
+    }
+  },
+  "target_comparison_counts": {
+    "SAME": 28,
+    "UNCOMPARABLE": 1,
+    "SAME_OMITTED_UNIT": 2,
+    "DIFFERENT_VALUE": 1
+  },
+  "scoped_numeric_reuse_trajectories": 2,
+  "numeric_literal_summary": {
+    "thinking": {
+      "parsed_relations": 126,
+      "by_scope": {
+        "ASSERTED_EXACT": 119,
+        "CONDITIONAL_OR_UNCERTAIN": 6,
+        "QUESTION_OR_UNCERTAIN": 1
+      },
+      "trajectories_with_parsed_relation": 17,
+      "trajectories_with_asserted_false_relation": 4,
+      "problems_with_asserted_false_relation": 4,
+      "asserted_false_relations": 27,
+      "other_scope_false_relations": 2,
+      "e15_observed_conflict_sources": [
+        {
+          "start": 53589,
+          "end": 53654,
+          "source": "the seven-digit number is 1011235. But that's smaller than 303369",
+          "left": "1011235",
+          "operator": "<",
+          "right": "303369",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "BOUNDED_ADJACENT_COREFERENCE"
+        },
+        {
+          "start": 63115,
+          "end": 63145,
+          "source": "1011235 is smaller than 303369",
+          "left": "1011235",
+          "operator": "<",
+          "right": "303369",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        }
+      ]
+    },
+    "final": {
+      "parsed_relations": 87,
+      "by_scope": {
+        "ASSERTED_EXACT": 87
+      },
+      "trajectories_with_parsed_relation": 19,
+      "trajectories_with_asserted_false_relation": 0,
+      "problems_with_asserted_false_relation": 0,
+      "asserted_false_relations": 0,
+      "other_scope_false_relations": 0,
+      "e15_observed_conflict_sources": []
+    }
+  },
+  "per_problem": {
+    "D3_E01": [
+      {
+        "case_id": "D3_E01",
+        "seed": 20261109,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ambiguous",
+        "target_comparison": "SAME",
+        "strict_comparison": "UNCOMPARABLE",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      },
+      {
+        "case_id": "D3_E01",
+        "seed": 20261110,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": false,
+        "target_final_correct": null,
+        "frozen_final_status": "ambiguous",
+        "target_comparison": "UNCOMPARABLE",
+        "strict_comparison": "UNCOMPARABLE",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": false,
+        "blind_thought_else_native_correct": false
+      }
+    ],
+    "D3_E02": [
+      {
+        "case_id": "D3_E02",
+        "seed": 20261109,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": false,
+        "target_final_correct": false,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": false,
+        "blind_thought_else_native_correct": false
+      },
+      {
+        "case_id": "D3_E02",
+        "seed": 20261110,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": false,
+        "target_final_correct": false,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": false,
+        "blind_thought_else_native_correct": false
+      }
+    ],
+    "D3_E03": [
+      {
+        "case_id": "D3_E03",
+        "seed": 20261109,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      },
+      {
+        "case_id": "D3_E03",
+        "seed": 20261110,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      }
+    ],
+    "D3_E04": [
+      {
+        "case_id": "D3_E04",
+        "seed": 20261109,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      },
+      {
+        "case_id": "D3_E04",
+        "seed": 20261110,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      }
+    ],
+    "D3_E05": [
+      {
+        "case_id": "D3_E05",
+        "seed": 20261109,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ambiguous",
+        "target_comparison": "SAME",
+        "strict_comparison": "UNCOMPARABLE",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      },
+      {
+        "case_id": "D3_E05",
+        "seed": 20261110,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ambiguous",
+        "target_comparison": "SAME",
+        "strict_comparison": "UNCOMPARABLE",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      }
+    ],
+    "D3_E06": [
+      {
+        "case_id": "D3_E06",
+        "seed": 20261109,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": false,
+        "target_final_correct": false,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": false,
+        "blind_thought_else_native_correct": false
+      },
+      {
+        "case_id": "D3_E06",
+        "seed": 20261110,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ambiguous",
+        "target_comparison": "SAME",
+        "strict_comparison": "UNCOMPARABLE",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      }
+    ],
+    "D3_E07": [
+      {
+        "case_id": "D3_E07",
+        "seed": 20261109,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": false,
+        "target_final_correct": false,
+        "frozen_final_status": "ambiguous",
+        "target_comparison": "SAME",
+        "strict_comparison": "UNCOMPARABLE",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": false,
+        "blind_thought_else_native_correct": false
+      },
+      {
+        "case_id": "D3_E07",
+        "seed": 20261110,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": false,
+        "target_final_correct": false,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": false,
+        "blind_thought_else_native_correct": false
+      }
+    ],
+    "D3_E08": [
+      {
+        "case_id": "D3_E08",
+        "seed": 20261109,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": false,
+        "target_final_correct": false,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": false,
+        "blind_thought_else_native_correct": false
+      },
+      {
+        "case_id": "D3_E08",
+        "seed": 20261110,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": false,
+        "target_final_correct": false,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": false,
+        "blind_thought_else_native_correct": false
+      }
+    ],
+    "D3_E09": [
+      {
+        "case_id": "D3_E09",
+        "seed": 20261109,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      },
+      {
+        "case_id": "D3_E09",
+        "seed": 20261110,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      }
+    ],
+    "D3_E10": [
+      {
+        "case_id": "D3_E10",
+        "seed": 20261109,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      },
+      {
+        "case_id": "D3_E10",
+        "seed": 20261110,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      }
+    ],
+    "D3_E11": [
+      {
+        "case_id": "D3_E11",
+        "seed": 20261109,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME_OMITTED_UNIT",
+        "strict_comparison": "SAME_OMITTED_UNIT",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      },
+      {
+        "case_id": "D3_E11",
+        "seed": 20261110,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME_OMITTED_UNIT",
+        "strict_comparison": "SAME_OMITTED_UNIT",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      }
+    ],
+    "D3_E12": [
+      {
+        "case_id": "D3_E12",
+        "seed": 20261109,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      },
+      {
+        "case_id": "D3_E12",
+        "seed": 20261110,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": false,
+        "frozen_final_status": "ok",
+        "target_comparison": "DIFFERENT_VALUE",
+        "strict_comparison": "DIFFERENT_VALUE",
+        "gate_action": "VETO_DRAFT_AND_DELIVER_CERTIFIED",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      }
+    ],
+    "D3_E13": [
+      {
+        "case_id": "D3_E13",
+        "seed": 20261109,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      },
+      {
+        "case_id": "D3_E13",
+        "seed": 20261110,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      }
+    ],
+    "D3_E14": [
+      {
+        "case_id": "D3_E14",
+        "seed": 20261109,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": false,
+        "target_final_correct": false,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": false,
+        "blind_thought_else_native_correct": false
+      },
+      {
+        "case_id": "D3_E14",
+        "seed": 20261110,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": false,
+        "target_final_correct": false,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": false,
+        "blind_thought_else_native_correct": false
+      }
+    ],
+    "D3_E15": [
+      {
+        "case_id": "D3_E15",
+        "seed": 20261109,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      },
+      {
+        "case_id": "D3_E15",
+        "seed": 20261110,
+        "official_final_correct": false,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": false,
+        "target_final_correct": false,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": false,
+        "blind_thought_only_correct": false,
+        "blind_thought_else_native_correct": false
+      }
+    ],
+    "D3_E16": [
+      {
+        "case_id": "D3_E16",
+        "seed": 20261109,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      },
+      {
+        "case_id": "D3_E16",
+        "seed": 20261110,
+        "official_final_correct": true,
+        "thinking_status": "EXPLICIT_COMMIT",
+        "thinking_correct": true,
+        "target_final_correct": true,
+        "frozen_final_status": "ok",
+        "target_comparison": "SAME",
+        "strict_comparison": "SAME",
+        "gate_action": "RETAIN_NATIVE",
+        "certified_gate_correct": true,
+        "blind_thought_only_correct": true,
+        "blind_thought_else_native_correct": true
+      }
+    ]
+  }
+}

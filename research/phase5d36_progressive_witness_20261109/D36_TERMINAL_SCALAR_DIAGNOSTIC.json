@@ -1,0 +1,58 @@
+{
+  "scope": "Exploratory E15 endpoint only. Rule written after seeing late F2 refusals; integer extraction ignores the answer key. No change to F2, live gate, raw outputs or capacity failures. It tests final scalar rendering, not proof correctness.",
+  "rows": [
+    {
+      "checkpoint": "early",
+      "replicate": "historical",
+      "arm": "NumericWitness",
+      "raw_file": "gpu_results/early/historical/NumericWitness.json",
+      "raw_sha256": "3ff308558bae4102e9824b089224fdee1619efa3fbe01fd95b160f150848c91b",
+      "frozen_f2_reason": "unresolved_earlier_final_delivery",
+      "terminal_integer": 10112369,
+      "terminal_box_char_span": [
+        2516,
+        2532
+      ],
+      "integer_matches_reference": true
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261111",
+      "arm": "ProgressiveWitness",
+      "raw_file": "gpu_results/early/s20261111/ProgressiveWitness.json",
+      "raw_sha256": "d1e71e6d1b4d04672ca110fb86bd9a2e229522c18fb5fec074bda91cf8a71d9d",
+      "frozen_f2_reason": null,
+      "terminal_integer": null,
+      "terminal_box_char_span": null,
+      "integer_matches_reference": false
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "historical",
+      "arm": "ProgressiveWitness",
+      "raw_file": "gpu_results/late/historical/ProgressiveWitness.json",
+      "raw_sha256": "abab66a60e9be070ccb905d4e2b86ff28965d54a2cfd4fab101216069dfce8d5",
+      "frozen_f2_reason": "alternative_final_objects",
+      "terminal_integer": 10112369,
+      "terminal_box_char_span": [
+        2405,
+        2421
+      ],
+      "integer_matches_reference": true
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261112",
+      "arm": "NumericWitness",
+      "raw_file": "gpu_results/late/s20261112/NumericWitness.json",
+      "raw_sha256": "16bdc321963996e9bba4ede6c5ce69596b9c5a9f6bbf20def40aa3f54feb6d9b",
+      "frozen_f2_reason": "boxed_objects_do_not_consume_final_payload",
+      "terminal_integer": 10112369,
+      "terminal_box_char_span": [
+        2133,
+        2149
+      ],
+      "integer_matches_reference": true
+    }
+  ]
+}

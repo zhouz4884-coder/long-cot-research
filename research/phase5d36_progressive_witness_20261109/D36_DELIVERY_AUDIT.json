@@ -1,0 +1,580 @@
+{
+  "status": "COMPLETE_DEVELOPMENT_MATRIX",
+  "problem_count": 1,
+  "paired_checkpoint_seed_groups": 6,
+  "paid_arm_count": 48,
+  "arm_summary": {
+    "NativeContinue": {
+      "denominator": 6,
+      "correct": 0,
+      "eos": 6,
+      "technical_cap": 0,
+      "paid_inputs_after_cut": 23083,
+      "seconds_after_cut": 1230.2746985498816,
+      "point_calls": 0,
+      "point_ops": 0,
+      "vetoes": 0,
+      "feedback_appended": 0,
+      "new_valid_bounds": 0,
+      "positive_bound_scope": "Feasibility only in E15 point-access experiments."
+    },
+    "NeutralReminder": {
+      "denominator": 6,
+      "correct": 2,
+      "eos": 6,
+      "technical_cap": 0,
+      "paid_inputs_after_cut": 42418,
+      "seconds_after_cut": 2258.019549626857,
+      "point_calls": 0,
+      "point_ops": 0,
+      "vetoes": 0,
+      "feedback_appended": 0,
+      "new_valid_bounds": 0,
+      "positive_bound_scope": "Feasibility only in E15 point-access experiments."
+    },
+    "ClaimOnly": {
+      "denominator": 6,
+      "correct": 0,
+      "eos": 6,
+      "technical_cap": 0,
+      "paid_inputs_after_cut": 22107,
+      "seconds_after_cut": 1174.8115113470703,
+      "point_calls": 0,
+      "point_ops": 0,
+      "vetoes": 0,
+      "feedback_appended": 0,
+      "new_valid_bounds": 0,
+      "positive_bound_scope": "Feasibility only in E15 point-access experiments."
+    },
+    "NumericWitness": {
+      "denominator": 6,
+      "correct": 1,
+      "eos": 6,
+      "technical_cap": 0,
+      "paid_inputs_after_cut": 56961,
+      "seconds_after_cut": 3023.519335636869,
+      "point_calls": 0,
+      "point_ops": 0,
+      "vetoes": 0,
+      "feedback_appended": 0,
+      "new_valid_bounds": 0,
+      "positive_bound_scope": "Feasibility only in E15 point-access experiments."
+    },
+    "VerifiedWitness": {
+      "denominator": 6,
+      "correct": 4,
+      "eos": 5,
+      "technical_cap": 1,
+      "paid_inputs_after_cut": 73894,
+      "seconds_after_cut": 3917.6685023810714,
+      "point_calls": 12,
+      "point_ops": 66,
+      "vetoes": 0,
+      "feedback_appended": 0,
+      "new_valid_bounds": 0,
+      "positive_bound_scope": "Feasibility only in E15 point-access experiments."
+    },
+    "ProgressiveWitness": {
+      "denominator": 6,
+      "correct": 3,
+      "eos": 6,
+      "technical_cap": 0,
+      "paid_inputs_after_cut": 64152,
+      "seconds_after_cut": 3492.4058495676145,
+      "point_calls": 25,
+      "point_ops": 150,
+      "vetoes": 2,
+      "feedback_appended": 14,
+      "new_valid_bounds": 12,
+      "positive_bound_scope": "Feasibility only in E15 point-access experiments."
+    },
+    "EveryStepAudit": {
+      "denominator": 6,
+      "correct": 4,
+      "eos": 6,
+      "technical_cap": 0,
+      "paid_inputs_after_cut": 61747,
+      "seconds_after_cut": 3373.510479396209,
+      "point_calls": 47,
+      "point_ops": 277,
+      "vetoes": 0,
+      "feedback_appended": 24,
+      "new_valid_bounds": 28,
+      "positive_bound_scope": "Feasibility only in E15 point-access experiments."
+    },
+    "InvalidWitnessControl": {
+      "denominator": 6,
+      "correct": 2,
+      "eos": 6,
+      "technical_cap": 0,
+      "paid_inputs_after_cut": 42418,
+      "seconds_after_cut": 2261.8030596282333,
+      "point_calls": 0,
+      "point_ops": 0,
+      "vetoes": 0,
+      "feedback_appended": 0,
+      "new_valid_bounds": 0,
+      "positive_bound_scope": "Feasibility only in E15 point-access experiments."
+    }
+  },
+  "matched_contrasts": {
+    "ClaimOnly_vs_NeutralReminder": {
+      "pairs": [
+        {
+          "checkpoint": "early",
+          "replicate": "historical",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": 185,
+          "attention_pairs_delta": 4729525,
+          "seconds_after_cut_delta": 9.563861609436572,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "early",
+          "replicate": "s20261111",
+          "correctness_delta": -1,
+          "gpu_inputs_delta": -11986,
+          "attention_pairs_delta": -382431309,
+          "seconds_after_cut_delta": -639.6958862710744,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "early",
+          "replicate": "s20261112",
+          "correctness_delta": -1,
+          "gpu_inputs_delta": -7641,
+          "attention_pairs_delta": -231476454,
+          "seconds_after_cut_delta": -407.3232795018703,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "historical",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": -593,
+          "attention_pairs_delta": -15849111,
+          "seconds_after_cut_delta": -31.152735873125494,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "s20261111",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": 45,
+          "attention_pairs_delta": 1160640,
+          "seconds_after_cut_delta": 2.253134566359222,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "s20261112",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": -321,
+          "attention_pairs_delta": -8225625,
+          "seconds_after_cut_delta": -16.853132809512317,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        }
+      ],
+      "rescues": 0,
+      "harms": 2,
+      "baseline_correct_denominator": 2,
+      "ties_correctness": 4
+    },
+    "NumericWitness_vs_NeutralReminder": {
+      "pairs": [
+        {
+          "checkpoint": "early",
+          "replicate": "historical",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": 9041,
+          "attention_pairs_delta": 271166713,
+          "seconds_after_cut_delta": 483.1752957627177,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "early",
+          "replicate": "s20261111",
+          "correctness_delta": -1,
+          "gpu_inputs_delta": -3457,
+          "attention_pairs_delta": -125043147,
+          "seconds_after_cut_delta": -184.1490279380232,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "early",
+          "replicate": "s20261112",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": -2979,
+          "attention_pairs_delta": -97189875,
+          "seconds_after_cut_delta": -160.0484798308462,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "historical",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": -873,
+          "attention_pairs_delta": -23210451,
+          "seconds_after_cut_delta": -45.73752808943391,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "s20261111",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": 191,
+          "attention_pairs_delta": 4940215,
+          "seconds_after_cut_delta": 9.994389366358519,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "s20261112",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": 12620,
+          "attention_pairs_delta": 405045210,
+          "seconds_after_cut_delta": 662.2651367392391,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        }
+      ],
+      "rescues": 0,
+      "harms": 1,
+      "baseline_correct_denominator": 2,
+      "ties_correctness": 5
+    },
+    "VerifiedWitness_vs_NumericWitness": {
+      "pairs": [
+        {
+          "checkpoint": "early",
+          "replicate": "historical",
+          "correctness_delta": 1,
+          "gpu_inputs_delta": 1467,
+          "attention_pairs_delta": 51707349,
+          "seconds_after_cut_delta": 81.71390924789011,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "early",
+          "replicate": "s20261111",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": -8184,
+          "attention_pairs_delta": -248388492,
+          "seconds_after_cut_delta": -436.4379075849429,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "early",
+          "replicate": "s20261112",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": 2759,
+          "attention_pairs_delta": 89708885,
+          "seconds_after_cut_delta": 147.71511612366885,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "historical",
+          "correctness_delta": 1,
+          "gpu_inputs_delta": 8404,
+          "attention_pairs_delta": 255082410,
+          "seconds_after_cut_delta": 441.7350541912019,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "s20261111",
+          "correctness_delta": 1,
+          "gpu_inputs_delta": 9933,
+          "attention_pairs_delta": 307197891,
+          "seconds_after_cut_delta": 523.0764789916575,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "s20261112",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": 2554,
+          "attention_pairs_delta": 101349105,
+          "seconds_after_cut_delta": 136.34651577472687,
+          "trial_feedback_appended": 0,
+          "trial_terminal_vetoes": 0
+        }
+      ],
+      "rescues": 3,
+      "harms": 0,
+      "baseline_correct_denominator": 1,
+      "ties_correctness": 3
+    },
+    "ProgressiveWitness_vs_VerifiedWitness": {
+      "pairs": [
+        {
+          "checkpoint": "early",
+          "replicate": "historical",
+          "correctness_delta": -1,
+          "gpu_inputs_delta": -3493,
+          "attention_pairs_delta": -119579362,
+          "seconds_after_cut_delta": -174.02925150748342,
+          "trial_feedback_appended": 2,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "early",
+          "replicate": "s20261111",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": -222,
+          "attention_pairs_delta": -6483212,
+          "seconds_after_cut_delta": -6.082200576551259,
+          "trial_feedback_appended": 2,
+          "trial_terminal_vetoes": 2
+        },
+        {
+          "checkpoint": "early",
+          "replicate": "s20261112",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": -2221,
+          "attention_pairs_delta": -72813264,
+          "seconds_after_cut_delta": -105.6939211813733,
+          "trial_feedback_appended": 2,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "historical",
+          "correctness_delta": -1,
+          "gpu_inputs_delta": 3257,
+          "attention_pairs_delta": 117848031,
+          "seconds_after_cut_delta": 203.01137538533658,
+          "trial_feedback_appended": 3,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "s20261111",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": 285,
+          "attention_pairs_delta": 10270260,
+          "seconds_after_cut_delta": 33.17492472566664,
+          "trial_feedback_appended": 3,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "s20261112",
+          "correctness_delta": 1,
+          "gpu_inputs_delta": -7348,
+          "attention_pairs_delta": -273973854,
+          "seconds_after_cut_delta": -375.6435796590522,
+          "trial_feedback_appended": 2,
+          "trial_terminal_vetoes": 0
+        }
+      ],
+      "rescues": 1,
+      "harms": 2,
+      "baseline_correct_denominator": 4,
+      "ties_correctness": 3
+    },
+    "EveryStepAudit_vs_ProgressiveWitness": {
+      "pairs": [
+        {
+          "checkpoint": "early",
+          "replicate": "historical",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": 208,
+          "attention_pairs_delta": 6779032,
+          "seconds_after_cut_delta": 13.246903765946627,
+          "trial_feedback_appended": 4,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "early",
+          "replicate": "s20261111",
+          "correctness_delta": 1,
+          "gpu_inputs_delta": 5660,
+          "attention_pairs_delta": 164062857,
+          "seconds_after_cut_delta": 319.7344153523445,
+          "trial_feedback_appended": 4,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "early",
+          "replicate": "s20261112",
+          "correctness_delta": -1,
+          "gpu_inputs_delta": 385,
+          "attention_pairs_delta": 12268410,
+          "seconds_after_cut_delta": 22.42122797295451,
+          "trial_feedback_appended": 4,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "historical",
+          "correctness_delta": 1,
+          "gpu_inputs_delta": -4649,
+          "attention_pairs_delta": -164979063,
+          "seconds_after_cut_delta": -256.5713831698522,
+          "trial_feedback_appended": 4,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "s20261111",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": -4289,
+          "attention_pairs_delta": -145971826,
+          "seconds_after_cut_delta": -234.47625450231135,
+          "trial_feedback_appended": 4,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "s20261112",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": 280,
+          "attention_pairs_delta": 9450420,
+          "seconds_after_cut_delta": 16.74972040951252,
+          "trial_feedback_appended": 4,
+          "trial_terminal_vetoes": 0
+        }
+      ],
+      "rescues": 2,
+      "harms": 1,
+      "baseline_correct_denominator": 3,
+      "ties_correctness": 3
+    },
+    "ProgressiveWitness_vs_NativeContinue": {
+      "pairs": [
+        {
+          "checkpoint": "early",
+          "replicate": "historical",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": 6780,
+          "attention_pairs_delta": 197281050,
+          "seconds_after_cut_delta": 374.950642763637,
+          "trial_feedback_appended": 2,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "early",
+          "replicate": "s20261111",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": -594,
+          "attention_pairs_delta": -16320566,
+          "seconds_after_cut_delta": -24.96892548073083,
+          "trial_feedback_appended": 2,
+          "trial_terminal_vetoes": 2
+        },
+        {
+          "checkpoint": "early",
+          "replicate": "s20261112",
+          "correctness_delta": 1,
+          "gpu_inputs_delta": 5124,
+          "attention_pairs_delta": 149167326,
+          "seconds_after_cut_delta": 285.6874679205939,
+          "trial_feedback_appended": 2,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "historical",
+          "correctness_delta": 0,
+          "gpu_inputs_delta": 12104,
+          "attention_pairs_delta": 384416988,
+          "seconds_after_cut_delta": 667.8709000581875,
+          "trial_feedback_appended": 3,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "s20261111",
+          "correctness_delta": 1,
+          "gpu_inputs_delta": 10137,
+          "attention_pairs_delta": 315362070,
+          "seconds_after_cut_delta": 551.9251451548189,
+          "trial_feedback_appended": 3,
+          "trial_terminal_vetoes": 0
+        },
+        {
+          "checkpoint": "late",
+          "replicate": "s20261112",
+          "correctness_delta": 1,
+          "gpu_inputs_delta": 7518,
+          "attention_pairs_delta": 224431095,
+          "seconds_after_cut_delta": 406.6659206012264,
+          "trial_feedback_appended": 2,
+          "trial_terminal_vetoes": 0
+        }
+      ],
+      "rescues": 3,
+      "harms": 0,
+      "baseline_correct_denominator": 0,
+      "ties_correctness": 3
+    }
+  },
+  "bounded_tools_only_k": 16,
+  "tools_only_same_prefix_best_feasible": {
+    "early": 10112369,
+    "late": 10112369
+  },
+  "tools_only_scalar_matches_reference": {
+    "early": true,
+    "late": true
+  },
+  "tools_only_has_global_certificate": false,
+  "unrestricted_solver_exact_and_correct": true,
+  "independent_confirmation_gate": "NOT_ADMITTED_STRONG_LOCAL_POINT_BASELINE_ALREADY_SOLVES_E15",
+  "independent_new_problem_scores": 0,
+  "clock_accounting": {
+    "early": {
+      "scope": "Elapsed clocks measured around GPU/CPU work. Not GPU kernel busy time. Resident allocation includes pause.",
+      "user_pause_seconds": 3601.283873796463,
+      "gross_shared_replay_seconds": 4646.415298180655,
+      "pause_adjusted_shared_replay_seconds": 1045.1314243841916,
+      "gross_study_seconds": 18399.692365000024,
+      "pause_adjusted_study_seconds": 14798.408491203561,
+      "gross_worker_seconds": 18421.266846179962,
+      "pause_adjusted_worker_seconds": 14819.9829723835
+    },
+    "late": {
+      "scope": "Elapsed clocks measured around GPU/CPU work. Not GPU kernel busy time. Resident allocation includes pause.",
+      "user_pause_seconds": 3601.2331368923187,
+      "gross_shared_replay_seconds": 4863.199087546207,
+      "pause_adjusted_shared_replay_seconds": 1261.9659506538883,
+      "gross_study_seconds": 11864.964155794121,
+      "pause_adjusted_study_seconds": 8263.731018901803,
+      "gross_worker_seconds": 11888.182532548904,
+      "pause_adjusted_worker_seconds": 8286.949395656586
+    }
+  },
+  "evidence_sha256": {
+    "D36_EXPERIMENT_FREEZE.json": "d4dbfc3e0fb29b02c2c134fc3a2277e3ff6b2dcbf9470035987368668c9bad25",
+    "D36_CPU_DIAGNOSIS_ZH.md": "dcee564696ab3def5ca33948e09dcb5a5bb6398b501aee79b49a49780934a80b",
+    "D36_CROSS_PHASE_OBSERVATIONS.json": "48bd573fe5b6c02566202fa9352ed89409c46d69aef6c7aee96ece1934a2f2f9",
+    "D36_CROSS_PHASE_SCORES.json": "66c2b4b41d8f0c198f1c9390c2e363dd7f042a22f8c09706bcf71a6de8cb4b68",
+    "D36_NUMERIC_CONTEXT_REVIEW.json": "b497e89e33fece598946f13cc5dc4706487257cba0ea60553a76a49db9b307fc",
+    "D36_CLOCK_INTERVALS.json": "e8584098938207063cb6a6439e5cf38e2b2a0e5d76becaf4d4287cbb7493333e",
+    "D36_POINT_BASELINES.json": "7985d8fece1998245b00789e30eacc16fd12fb9cb2fb781c555b78a6a27e6c03",
+    "D36_DIRECT_SOLVER_COMPARISON.json": "922f9427127a6fdad5dbb1e1971fdd33cc84af035f772f8b998a68884b250f9e",
+    "D36_SOURCE_REFERENCE.json": "774461501e185462fc03f2e71de3e8ed8662fffd7a0eabeea47ac66da1d27eac",
+    "EARLY_GPU_AUDIT.json": "47ed5e084aa46101dce2c1c03f3ad4b066ed06302ad82249ddcecdbb7f750642",
+    "EARLY_RETRIEVAL.json": "a513dd297e0f6c87e619d560a905a13526afc3f7af42c0ab6f6d559c2c39c073",
+    "LATE_GPU_AUDIT.json": "354286f1dac3aca1167e17710f9e2ba6dc7a9166905f838e77e1e9741a165670",
+    "LATE_RETRIEVAL.json": "63f1f6011fb25ac284808d225e480e4373dfa2fe10be89223fec803ac72c570a"
+  }
+}

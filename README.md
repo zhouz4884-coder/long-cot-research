@@ -2,13 +2,14 @@
 
 长思维链研究：以**最终回答正确率、同预算的算法增量和完整成本**为主线，探索局部修订后的有效计算复用与答案交付。
 
-仓库目前公开。工作目录为 `D:\ACL`。更新于 2026-11-09。[GitHub 仓库](https://github.com/zhouz4884-coder/long-cot-research)
+仓库目前公开。工作目录为 `D:\ACL`。更新于 2026-11-10。[GitHub 仓库](https://github.com/zhouz4884-coder/long-cot-research)
 
 ## 从哪里开始
 
 - [Phase 1–5 总索引](docs/phases/INDEX_ZH.md)
 - [当前研究目标](docs/next_phase/CURRENT_RESEARCH_GOAL_20261105_ZH.md)
 - [最新建议审查与下一轮公平对照](research/repository_phase_plan_20261106/ADVISOR_REVIEW_20261106_ZH.md)
+- [Phase 5-D3.6 证据棘轮研究收尾](research/phase5d36_progressive_witness_20261109/D36_CLOSEOUT_ZH.md)
 - [Phase 5-D3.5 见证门控修订收尾](research/phase5d35_witness_gated_revision_20261109/D35_CLOSEOUT_ZH.md)
 - [Phase 5-D3 收尾与下一步判断](research/phase5d25_constraint_revision_20261109/D3_CLOSEOUT_ZH.md)
 - [Phase5-D2 隔离反思与双前沿收尾](research/phase5d2_quarantined_rebase_20261107/D2_CLOSEOUT_ZH.md)
@@ -34,6 +35,7 @@
 | [Phase 5-D2](research/phase5d2_quarantined_rebase_20261107/D2_CLOSEOUT_ZH.md) | 受限核验、隔离反思、双前沿重建、自然覆盖与同状态配对 | 48/48 EOS，四个 UNKNOWN 对照通过，修复准入 0/4 |
 | [Phase 5-D2.5 与 D3](research/phase5d25_constraint_revision_20261109/D3_CLOSEOUT_ZH.md) | 类型化数学核验、旁路审计、历史回退对照与新题原生验证 | 4/4 实机一致性通过，32 条正式轨迹全部自然 EOS，正式修复准入 0 |
 | [Phase 5-D3.5](research/phase5d35_witness_gated_revision_20261109/D35_CLOSEOUT_ZH.md) | 有界见证、终局一致性保护、同证据回退 | E12/E15 开发实机闭环完成。直接工具均答对，回退未显示额外正确率收益 |
+| [Phase 5-D3.6](research/phase5d36_progressive_witness_20261109/D36_CLOSEOUT_ZH.md) | 零 GPU 全集诊断、可信点验证、同提示的事件棘轮对照 | 48/48 条件完成，47 个自然 EOS。棘轮 3/6，一次性认证提示和逐候选审核均 4/6，未过独立扩测门槛 |
 
 每个Phase统一记录：问题、输入与协议、实际动作、数据结论、失败与猜想、下一门槛、证据路径。后续工作继续新增Phase或阶段内子报告，不改写已冻结的结果。
 
@@ -51,6 +53,7 @@
 | Phase5-D2 | 24 题 × 2 种子，原生 46/48，五条配对臂均 4/4，330.77 GPU 分钟 | 两条原生失分均为多框读出，完整根集正确。当前自然适配没有获准的修复事件，配对准确率差为 0 |
 | Phase5-D2.5 与 D3 | 历史三臂均答对，承接臂在该例少用 36.1% 的时间。新题原生 16/32，总计 628.95 GPU 分钟 | 正式配对准入 0，准确率增量与等成本修复效果无法估计 |
 | Phase5-D3.5 | 选定历史 E12/E15 的原生错误均可修正。直接工具两题均答对。E15 三个干预模型臂都答对，实机合计约 58.03 单卡分钟 | 已完成开发闭环。回退未胜同证据强基线，独立扩测未启动 |
+| Phase5-D3.6 | 32 条历史轨迹只有一次确认的值漂移。E15 棘轮阻止一次错误交付路径，但冻结质量低于同提示强基线 | 同一历史题的六个配对单元。有限点工具也给出正确值，完整程序独立证明最优，独立扩测未启动 |
 
 P0与P0.5使用不同读出协议，不连成跨轮提升曲线。CPU随机模型、形式/代数控制、人工短状态、自然轨迹观察和正式benchmark各自标明，不互相替代。
 
@@ -94,6 +97,7 @@ research/phase5c_goal_contract_20261106/ 32题七条件完整终局读出、统�
 research/phase5d_scope_rebase_20261106/ 方法重构、D0审计、支持内核、原生接口与后续公平验证
 research/phase5d25_constraint_revision_20261109/ D2.5 与 D3 源码、完整运行、评分和独立复核
 research/phase5d35_witness_gated_revision_20261109/ D3.5 协议、见证内核、开发轨迹及实机审计
+research/phase5d36_progressive_witness_20261109/ D3.6 全集诊断、点核验状态机、双检查点原始记录与收尾
 scripts/ reason_transition/ tests/     原研究实现与检查
 experiments/radar20261013/             后续历史路线，当前冻结
 data/ results/ provenance/ recovery/   历史输入、输出和恢复证据

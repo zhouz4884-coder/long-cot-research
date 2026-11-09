@@ -1,0 +1,1410 @@
+{
+  "status": "READY",
+  "observed_comparison": {
+    "contract_id": "wc_3f10685ed6ac55447c76db25989e9feeeb9f5101",
+    "target_id": "goal_c38e9b7066c143465bbf2a5bb7c5b52f858ef0435b01229edadc88d3d783c860",
+    "observed_prefix_sha256": "f68c69ec382b4b4439938b3cdf5391b3f48e6baa1a32750e40a0fc1370ec68eb",
+    "left": 1011235,
+    "right": 303369,
+    "relation": "<",
+    "source_span": {
+      "char_span": [
+        53584,
+        53662
+      ],
+      "token_span": [
+        19873,
+        19902
+      ],
+      "token_sha256": "193c2a2b37817a0aed07ff78281d283139b58b91e2365a9eb814a6fde3aa2cf5",
+      "text": " Therefore, the seven-digit number is 1011235. But that's smaller than 303369."
+    },
+    "paragraph_span": {
+      "char_span": [
+        53227,
+        53662
+      ],
+      "token_span": [
+        19747,
+        19902
+      ],
+      "token_sha256": "aa665f79caac2e6158fd9b8810e86deba374420b780b00058c411d2ff3d2fdc6",
+      "text": "For example, let's try to build a seven-digit number. Let's start with first two digits 1 and 0. Third digit ≥ 1 + 0 = 1. Let's take third digit 1. Fourth digit ≥ 0 + 1 = 1. Let's take fourth digit 1. Fifth digit ≥ 1 + 1 = 2. Let's take fifth digit 2. Sixth digit ≥ 1 + 2 = 3. Let's take sixth digit 3. Seventh digit ≥ 2 + 3 = 5. Let's take seventh digit 5. Therefore, the seven-digit number is 1011235. But that's smaller than 303369."
+    },
+    "left_span": {
+      "char_span": [
+        53622,
+        53629
+      ],
+      "token_span": [
+        19881,
+        19888
+      ],
+      "token_sha256": "5e16a90eda3ef1df8c2e497d49c88352a47b9f2ea6d0106e799de4232053271e",
+      "text": "1011235"
+    },
+    "right_span": {
+      "char_span": [
+        53655,
+        53661
+      ],
+      "token_span": [
+        19895,
+        19901
+      ],
+      "token_sha256": "b46aad60231827dd323629d3cb67824e8e59b59ab4da9ce27b82b4912047c385",
+      "text": "303369"
+    }
+  },
+  "question_sha256": "f005e50e39007c6a7bbb989434b36f69ba3475ff68e56335664a11582985dcdb",
+  "contract_id": "wc_3f10685ed6ac55447c76db25989e9feeeb9f5101",
+  "checkpoint_step": 464,
+  "historical_rng_sha256": "32a1a4995ce94026503fabe9c92db5fe2682455b01dfce4301ee4fb7927aba3c",
+  "initial_cues": {
+    "NativeContinue": "",
+    "NeutralReminder": "\n\nReview the current search for the maximum. Check whether a larger valid candidate exists. Continue solving the original problem, justify the greatest valid value, and give the final boxed answer.\n\n",
+    "ClaimOnly": "\n\nReview the current search for the maximum. The prior comparison does not establish 303369 as greatest. Continue solving the original problem, justify the greatest valid value, and give the final boxed answer.\n\n",
+    "NumericWitness": "\n\nReview the current search for the maximum. Exact numerical comparison gives 1011235 > 303369. This comparison alone does not check feasibility. Continue solving the original problem, justify the greatest valid value, and give the final boxed answer.\n\n",
+    "VerifiedWitness": "\n\nReview the current search for the maximum. A point check confirms 1011235 satisfies the original digit rule, and 1011235 > 303369. It is a feasible lower bound. Continue solving the original problem, justify the greatest valid value, and give the final boxed answer.\n\n",
+    "ProgressiveWitness": "\n\nReview the current search for the maximum. A point check confirms 1011235 satisfies the original digit rule, and 1011235 > 303369. It is a feasible lower bound. Continue solving the original problem, justify the greatest valid value, and give the final boxed answer.\n\n",
+    "EveryStepAudit": "\n\nReview the current search for the maximum. A point check confirms 1011235 satisfies the original digit rule, and 1011235 > 303369. It is a feasible lower bound. Continue solving the original problem, justify the greatest valid value, and give the final boxed answer.\n\n",
+    "InvalidWitnessControl": "\n\nReview the current search for the maximum. Check whether a larger valid candidate exists. Continue solving the original problem, justify the greatest valid value, and give the final boxed answer.\n\n"
+  },
+  "initial_cue_token_ids": {
+    "NativeContinue": [],
+    "NeutralReminder": [
+      271,
+      19432,
+      279,
+      1482,
+      2711,
+      369,
+      279,
+      7192,
+      13,
+      4248,
+      3425,
+      264,
+      8131,
+      2697,
+      9144,
+      6724,
+      13,
+      15003,
+      21828,
+      279,
+      4024,
+      3491,
+      11,
+      9357,
+      279,
+      12196,
+      2697,
+      897,
+      11,
+      323,
+      2968,
+      279,
+      1590,
+      73664,
+      4226,
+      382
+    ],
+    "ClaimOnly": [
+      271,
+      19432,
+      279,
+      1482,
+      2711,
+      369,
+      279,
+      7192,
+      13,
+      576,
+      4867,
+      12313,
+      1558,
+      537,
+      5695,
+      220,
+      18,
+      15,
+      18,
+      18,
+      21,
+      24,
+      438,
+      12196,
+      13,
+      15003,
+      21828,
+      279,
+      4024,
+      3491,
+      11,
+      9357,
+      279,
+      12196,
+      2697,
+      897,
+      11,
+      323,
+      2968,
+      279,
+      1590,
+      73664,
+      4226,
+      382
+    ],
+    "NumericWitness": [
+      271,
+      19432,
+      279,
+      1482,
+      2711,
+      369,
+      279,
+      7192,
+      13,
+      74480,
+      34776,
+      12313,
+      6696,
+      220,
+      16,
+      15,
+      16,
+      16,
+      17,
+      18,
+      20,
+      861,
+      220,
+      18,
+      15,
+      18,
+      18,
+      21,
+      24,
+      13,
+      1096,
+      12313,
+      7484,
+      1558,
+      537,
+      1779,
+      68443,
+      13,
+      15003,
+      21828,
+      279,
+      4024,
+      3491,
+      11,
+      9357,
+      279,
+      12196,
+      2697,
+      897,
+      11,
+      323,
+      2968,
+      279,
+      1590,
+      73664,
+      4226,
+      382
+    ],
+    "VerifiedWitness": [
+      271,
+      19432,
+      279,
+      1482,
+      2711,
+      369,
+      279,
+      7192,
+      13,
+      362,
+      1459,
+      1779,
+      42396,
+      220,
+      16,
+      15,
+      16,
+      16,
+      17,
+      18,
+      20,
+      67901,
+      279,
+      4024,
+      15723,
+      5912,
+      11,
+      323,
+      220,
+      16,
+      15,
+      16,
+      16,
+      17,
+      18,
+      20,
+      861,
+      220,
+      18,
+      15,
+      18,
+      18,
+      21,
+      24,
+      13,
+      1084,
+      374,
+      264,
+      42203,
+      4722,
+      6822,
+      13,
+      15003,
+      21828,
+      279,
+      4024,
+      3491,
+      11,
+      9357,
+      279,
+      12196,
+      2697,
+      897,
+      11,
+      323,
+      2968,
+      279,
+      1590,
+      73664,
+      4226,
+      382
+    ],
+    "ProgressiveWitness": [
+      271,
+      19432,
+      279,
+      1482,
+      2711,
+      369,
+      279,
+      7192,
+      13,
+      362,
+      1459,
+      1779,
+      42396,
+      220,
+      16,
+      15,
+      16,
+      16,
+      17,
+      18,
+      20,
+      67901,
+      279,
+      4024,
+      15723,
+      5912,
+      11,
+      323,
+      220,
+      16,
+      15,
+      16,
+      16,
+      17,
+      18,
+      20,
+      861,
+      220,
+      18,
+      15,
+      18,
+      18,
+      21,
+      24,
+      13,
+      1084,
+      374,
+      264,
+      42203,
+      4722,
+      6822,
+      13,
+      15003,
+      21828,
+      279,
+      4024,
+      3491,
+      11,
+      9357,
+      279,
+      12196,
+      2697,
+      897,
+      11,
+      323,
+      2968,
+      279,
+      1590,
+      73664,
+      4226,
+      382
+    ],
+    "EveryStepAudit": [
+      271,
+      19432,
+      279,
+      1482,
+      2711,
+      369,
+      279,
+      7192,
+      13,
+      362,
+      1459,
+      1779,
+      42396,
+      220,
+      16,
+      15,
+      16,
+      16,
+      17,
+      18,
+      20,
+      67901,
+      279,
+      4024,
+      15723,
+      5912,
+      11,
+      323,
+      220,
+      16,
+      15,
+      16,
+      16,
+      17,
+      18,
+      20,
+      861,
+      220,
+      18,
+      15,
+      18,
+      18,
+      21,
+      24,
+      13,
+      1084,
+      374,
+      264,
+      42203,
+      4722,
+      6822,
+      13,
+      15003,
+      21828,
+      279,
+      4024,
+      3491,
+      11,
+      9357,
+      279,
+      12196,
+      2697,
+      897,
+      11,
+      323,
+      2968,
+      279,
+      1590,
+      73664,
+      4226,
+      382
+    ],
+    "InvalidWitnessControl": [
+      271,
+      19432,
+      279,
+      1482,
+      2711,
+      369,
+      279,
+      7192,
+      13,
+      4248,
+      3425,
+      264,
+      8131,
+      2697,
+      9144,
+      6724,
+      13,
+      15003,
+      21828,
+      279,
+      4024,
+      3491,
+      11,
+      9357,
+      279,
+      12196,
+      2697,
+      897,
+      11,
+      323,
+      2968,
+      279,
+      1590,
+      73664,
+      4226,
+      382
+    ]
+  },
+  "shared_replay": {
+    "wall_seconds": 4863.199087546207,
+    "work": {
+      "forward_calls": 24533,
+      "forward_input_tokens": 24589,
+      "attention_pairs": 302321755
+    }
+  },
+  "replay_state_diagnostics": {
+    "observed_prefix_sha256": "f68c69ec382b4b4439938b3cdf5391b3f48e6baa1a32750e40a0fc1370ec68eb",
+    "cache_sequence_length": 24589,
+    "next_logits_sha256_fp32": "e2f1e533ccb0a590cdab147fce33d734bdb218f84199ee826943a4be49ebca08",
+    "next_logits_numel": 151936,
+    "kv_layers": [
+      {
+        "layer": 0,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "87913730bf57ac6ffdefab67804525a841a3424fa0114e933e9ccda8e0380d09"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "4f5ae142e57ba34564e8e1e018680d0bb550d3ac7e1ce755aa4df05c64507618"
+          }
+        ]
+      },
+      {
+        "layer": 1,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "7e63a086f4865b9faf5d7152d4089ab37c87cd0e399d6c0225c50c4611a994bc"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "2c236ea259beb5c24d5b6b80f0ff4ffdda8e0811ce1677e2229dbd464d0e3465"
+          }
+        ]
+      },
+      {
+        "layer": 2,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "998e9083225919421abfd974c50454464d27ca33988faabb96d6e548c1f2f6dc"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "a84338ffec83c12bca0d6e0bd55fafb3e849b9c9b69a78b7c65f306151f372a0"
+          }
+        ]
+      },
+      {
+        "layer": 3,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "1e22d5e0f1c12893bbed277d67bc53f503da0fbc4cc78a42b35c5cc451ea4aa7"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "a714c47ebf49c278913a7d016ef357fee084545e9325483bcb728a54305544c5"
+          }
+        ]
+      },
+      {
+        "layer": 4,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "cfcf3d7fa55d33d48194db8f8305b463dc895e539c454b2d0193e2caa92d6c13"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "c3ed8d9a95929512309a4e9d4f0001ad65b542a6a6c7c127681c6c8cd38734b4"
+          }
+        ]
+      },
+      {
+        "layer": 5,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "f5b66193435d7e62a21b8cd4459a7d80b87e58d42b209f64b9d2c2450d1f6a8c"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "0ac6029575d73380ccef8e76694fe725d1c2fb2af8a9667e9d8a3560ad492361"
+          }
+        ]
+      },
+      {
+        "layer": 6,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "8626fae8b522681d9f4dfc56df32821cea02d294bae55e2b44c7b5f693a2a128"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "56fa15cfeff0d48d63a90f7e07400678171dec656c2b5c27fed661b00acb47ab"
+          }
+        ]
+      },
+      {
+        "layer": 7,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "7b923217b1e534c758966a7e7c42e49180392b9cf89918d20fb807bf3447a000"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "71fe00d10d951218b91335efe5f576685bf8b55b52e5b8aa8b8864f50b5a18e9"
+          }
+        ]
+      },
+      {
+        "layer": 8,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "3df762df4f8544b9397ca8a0540ced01a360dd97666427c2ee7ac52bb8882dd9"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "4fa3745258667288a63a1374a194bc18bd30e28166cdfac7a726165cbd1616e0"
+          }
+        ]
+      },
+      {
+        "layer": 9,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "662405183ac06790f50117e64ffe2f5eacf234fccf5101b041594df1da1326ab"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "d94336d49b2174c387f321b3ba67d5e6643b77587238fb23c497e2ca86f95dab"
+          }
+        ]
+      },
+      {
+        "layer": 10,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "fdb6e0609e6b23cfb0c3fa489f6c18895e60fd22f906794d7c2a1909d3925ee1"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "3c3bf7931975968530ae7c6b3f94dc2ad6036e2e66e00c5c04bcf0bac5a5884e"
+          }
+        ]
+      },
+      {
+        "layer": 11,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "d8ec19e778dec374f37c3da7a49f9da19e654d8cdc348a0089e26db3dababa53"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "53cf85616e164cde1e881d859827fb5a419947ef0432653cf7a271740b8f33cf"
+          }
+        ]
+      },
+      {
+        "layer": 12,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "e62ab224547ca498c8cd6c7c01d4ed3bca9dfbc7009b76ffe9e372ed32a1a34f"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "c4e89672bae1f57278839651b7da74c4cb06fc353271634cf3838d0d85305183"
+          }
+        ]
+      },
+      {
+        "layer": 13,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "5ea03dc0d05f1e66bbd099264ce91fd5220b95a4ebf3e0c5cc09dd578ed76983"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "25808df50a6e3fb322f40e07563ae209efb84504a370838f1deed2062da509d1"
+          }
+        ]
+      },
+      {
+        "layer": 14,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "d1f93f8bb3c585ffe73700e048609f56b34853fdf4c02e1e64c49370e5e4d020"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "7dda7f63c14ac7c875a20ecf747f7cfe33a5f1960dd7e2ab87b3a2520431fc55"
+          }
+        ]
+      },
+      {
+        "layer": 15,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "57c5a08ba0d8010b438f504a8a0a283ba49f925571a9aacff6f8be86ba6ea405"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "b4be93ca6fbaeac6ea9dbce808cf07b4dd69d382b789e7eefb9eb3365b291112"
+          }
+        ]
+      },
+      {
+        "layer": 16,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "031cfe2c310496ff0801ad0696777f2aba7e75a14a5dee38e56c71e8c564ae31"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "fd4c963a93b864927c9caa677a2f7b4ec003e6b51517bc69fcea0ac8cbf94ca7"
+          }
+        ]
+      },
+      {
+        "layer": 17,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "e9b6ff63623063c79f4ac686a29fd9be6a47949a52726d108748f58d37275969"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "2c18aad35d6cc4d504649196196799ce1850cb19a2c1fdfe69c5e49deb5b98bd"
+          }
+        ]
+      },
+      {
+        "layer": 18,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "477c4ba72e25d1dd859b29b3a99bd8804ca4922e05aa5a85bb4fc6490523c685"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "ce629b14d8265d8b0f32e52af6daf403650dfddb94603eaefc48d5b1b2ca7703"
+          }
+        ]
+      },
+      {
+        "layer": 19,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "5b73e0bddff1658ccdbabdb9ff285279b6eca3e57a0142c35671a2c8468de477"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "7eee7f59ed073f9eb99b4432ce9ea38b047519243f761d758c3eecaa3ea99ef7"
+          }
+        ]
+      },
+      {
+        "layer": 20,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "84706ce4f76f63b02f070445e47362ba61aa8ff7385799bdee162e9286012e7a"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "cd3e0b3c1bcf678d73eaaf058e2dcb0b272b916511d6362cabd07a9c61d3236d"
+          }
+        ]
+      },
+      {
+        "layer": 21,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "a355ba988ed47a65893908c3f5da754acef5441c5d705a8cdcfc64807aa44f76"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "778bf25c76f90a17de4d8caea566854a89e97df2768056918f5367f1d0cd8577"
+          }
+        ]
+      },
+      {
+        "layer": 22,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "538825230f1db555b04a3ea8615579c87f7acf72da28accf8ac11adbe5100778"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "de951d1933360a67eefccdb824fd28bd7a6bff44ca62c67991917ffb7ed15d4b"
+          }
+        ]
+      },
+      {
+        "layer": 23,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "1a1cf1c844f1e322587d2d4d2ee7cb2699a8454030b62decb3d9a6878b4a7727"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "89f9e234dc2fa0d0f6d0c48c325b173ec4cee072c38b31bc7fc98168e60ce480"
+          }
+        ]
+      },
+      {
+        "layer": 24,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "dc65d3274f6d4d331d9e6ecf62f8797951235033c532695fa3137d96853d0090"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "ea807eb039d31d8c1a8536d9960586e229748c822a4f5e2564d877703d48e2f7"
+          }
+        ]
+      },
+      {
+        "layer": 25,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "65fed70026d468b73cdcbae4e3622060dd783f3ed620d111f0e1783c6467d388"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "b60a0b709f4279b7a9f608b39ad41e5bab3aa3e4509d24b73fea28dc61430256"
+          }
+        ]
+      },
+      {
+        "layer": 26,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "d8182b23d6f8187fe5dd59630d26aec1b3707b5fe65f57743d477a8e2790913e"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "b97b885853475f2ea751000628518f951fb8e03f38c3fecb2785e198dfbad8bc"
+          }
+        ]
+      },
+      {
+        "layer": 27,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "7abf6c4b8c400f000460bdf4219b4ccaa497a163b49e4d4d1e55747edbced05a"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "55c528120c6b95e39102eb04a8331881fbd66dd668deb81143cab84940808a79"
+          }
+        ]
+      },
+      {
+        "layer": 28,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "0b8b8499e1cdd4ffb12b4da155b5a2f105b1a6214e769763c8f928e8f0b0a494"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "6208900ec15abc1470a2eb5b20874bd2241527f1c9ae2562e445481c6a1aadbb"
+          }
+        ]
+      },
+      {
+        "layer": 29,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "de7edd5cb54974424ae91ef1ee2cc74162c9d77ddf141eb0642164cd89dbcf32"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "693cbda8b8213a83dc69b4c0b4f4adbaf09bb3458afd70480a5ac2ff1500ab4c"
+          }
+        ]
+      },
+      {
+        "layer": 30,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "cc6fec4793593c1ec141fc283ffb782ecf533842431bca444236d039c2f44112"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "896570e19aeac5562fa40f5aaffcd289ca64e742e78d4d50aaad387e352a3291"
+          }
+        ]
+      },
+      {
+        "layer": 31,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "0ce2308a4356e7f714373df553af0626f7bee15da8a2409bb81487fe6a961fb8"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "8156f46a576d9eea1cd4352004b61c80f9363cc0fb8598105fb72d654dadc47b"
+          }
+        ]
+      },
+      {
+        "layer": 32,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "a5e923c8e9e95d8e942c28b1db45ccfebaf064f6467805b621b186bf757a949a"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "354b40d103f9a492ce12a6b018fb685a86d64c33f69d7293a7f5eb9759dfa1cf"
+          }
+        ]
+      },
+      {
+        "layer": 33,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "9d4779d95dfc8088a9b822c7895275674a692834b7571eee318202d4e72dd1f1"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "5aaf41c9c02d8121c119343632e573596db6f757b942d48b0116eb2bd5adbda8"
+          }
+        ]
+      },
+      {
+        "layer": 34,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "b650c77ea1d24142d74eff8e0efb4e493ee1ead31fd6986f416ee6c73a0c74cd"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "bbf1cf94f1d1bf94782ef23af3cdcfaa61cd96a1e44a5f15cf1dd835dbce0d82"
+          }
+        ]
+      },
+      {
+        "layer": 35,
+        "kv": [
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "75446f4eaf4436a706f7db65c3cf6035ac7b302320ea8ff2f4671877545dc425"
+          },
+          {
+            "shape": [
+              1,
+              8,
+              24589,
+              128
+            ],
+            "dtype": "torch.float16",
+            "sha256": "0b0ccb86086053986e62d445262358d12cc141b0021ad9b8597afd49dfa56480"
+          }
+        ]
+      }
+    ],
+    "diagnostic_wall_seconds": 8.142350477166474,
+    "qualification": "Measured replay state; historical D3 did not export per-checkpoint KV/logit bytes."
+  },
+  "point_budget": {
+    "point_budget": 16,
+    "work_budget": 1024,
+    "feedback_budget": 4
+  },
+  "arms": [
+    "NativeContinue",
+    "NeutralReminder",
+    "ClaimOnly",
+    "NumericWitness",
+    "VerifiedWitness",
+    "ProgressiveWitness",
+    "EveryStepAudit",
+    "InvalidWitnessControl"
+  ],
+  "no_original_future_gold_or_solver": true
+}

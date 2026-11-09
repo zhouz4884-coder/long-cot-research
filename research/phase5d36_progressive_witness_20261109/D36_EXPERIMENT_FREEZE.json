@@ -1,0 +1,27 @@
+{
+  "protocol": "d36-observed-point-ratchet-v1",
+  "baseline_commit": "3067767577275cd5e2a28b8053acee6d407d6f1c",
+  "source_trajectory": "D3_E15_20261110",
+  "checkpoints": {
+    "early": {"step": 316, "retained_generated_tokens": 19902},
+    "late": {"step": 464, "retained_generated_tokens": 24532}
+  },
+  "replicates": [
+    {"id": "historical", "seed": null},
+    {"id": "s20261111", "seed": 20261111},
+    {"id": "s20261112", "seed": 20261112}
+  ],
+  "point_budgets": [0, 4, 8, 16, 32],
+  "primary_point_budget": 16,
+  "arithmetic_work_budget": 1024,
+  "feedback_budget": 4,
+  "terminal_repair_attempts": 1,
+  "arms": [
+    "NativeContinue", "NeutralReminder", "ClaimOnly", "NumericWitness",
+    "VerifiedWitness", "ProgressiveWitness", "EveryStepAudit", "InvalidWitnessControl"
+  ],
+  "generation_stop": "Natural EOS or actual model context capacity; no scientific output token or wall-time cap.",
+  "primary_comparison": "ProgressiveWitness versus identical-initial-prompt VerifiedWitness, paired by checkpoint and continuation RNG. One historical development question, not six independent problems.",
+  "paired_budget_scope": "Same finite verifier-access capability and max budget. Actual cost per policy measured independently. Additional budgets evaluated offline unless specifically run with live feedback.",
+  "independent_release": "Require sound actual event handling and replicated net quality benefit or same quality with lower total deployment work versus the strongest equal-information baseline; qualify feasibility of new independently sourced tasks separately. No large matrix at development stage."
+}

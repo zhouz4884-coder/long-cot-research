@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "tokenizer_source": "https://modelscope.cn/models/Qwen/Qwen3-4B",
+  "tokenizer_revision": "2c54d5a09e7e92d4f5126b92a5a457448c9593e6",
+  "tokenizer_files_verified": 6,
+  "tokenizer_asset_mode": "downloaded_and_verified",
+  "stable_report_sha256": {
+    "D36_CROSS_PHASE_OBSERVATIONS.json": "7a6f17fe0bfa859ca93cb4b2fc92bfc759fe2d44749bc95d076814e693240cd9",
+    "D36_CROSS_PHASE_SCORES.json": "3d383a1f5049b35ce8110aa5074c7f4e38f4d808e63ff28d80527056b532c42f",
+    "D36_NUMERIC_CONTEXT_REVIEW.json": "8fbd238244f4c48f5e010d1d2447fd3f0dad819e51321bce7137cf7d6809fd93"
+  },
+  "synthetic_reverse_feasibility_control": {
+    "scope": "Synthetic, already-completed source only. The correct fixture value is not an online cue.",
+    "case_id": "D3_E15",
+    "thinking_objective": [
+      "1011235"
+    ],
+    "final_objective": [
+      "10112369"
+    ],
+    "comparison": "DIFFERENT_VALUE",
+    "thinking_candidate_certificate": {
+      "checker": "d35-witness-arbitration-v1",
+      "contract_id": "wc_3f10685ed6ac55447c76db25989e9feeeb9f5101",
+      "question_sha256": "f005e50e39007c6a7bbb989434b36f69ba3475ff68e56335664a11582985dcdb",
+      "target_id": "goal_c38e9b7066c143465bbf2a5bb7c5b52f858ef0435b01229edadc88d3d783c860",
+      "claim_id": "obs_1eb39b8421156d4e47d5a05be4e666cbc4b0c5e96269d50ec38c1c7c74d2420e",
+      "claim_type": "FEASIBLE_CANDIDATE",
+      "observed_prefix_sha256": "1caa29bfb9b674b5fb1232cbb0178c4ed4f94cd19ef20b6674f22fae947bd66e",
+      "status": "FEASIBLE_ONLY",
+      "action": "RETAIN_FEASIBLE",
+      "reason": "digit_feasibility",
+      "witness": null,
+      "mathematical": {
+        "status": "FEASIBLE_ONLY",
+        "reason": "digit_feasibility",
+        "proof_scope": "FULL_ORIGINAL_CONSTRAINTS",
+        "certified_value": null,
+        "witness": 1011235,
+        "evidence": {
+          "digits": [
+            1,
+            0,
+            1,
+            1,
+            2,
+            3,
+            5
+          ]
+        },
+        "checker_version": "wgr-witness-contract-v1",
+        "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+        "paid_check_count": 6,
+        "work": {
+          "used": 6,
+          "by_operation": {
+            "digit_candidate": 1,
+            "digit_recurrence": 5
+          },
+          "trace_sha256": "aab6dc584315f2d16534bf592a8a6bd33c51a561503e55f3454b6ecf957083b1"
+        },
+        "certificate_sha256": "588cc8a7aba0317cc9503d95c54aabdf86eebdd31db56b1f7a7ae71de21ad196"
+      },
+      "released_value": null,
+      "certificate_sha256": "016dd6e98d705f93465196a6a1f7c9cfb7a350f553c425d33aaf4ca297746884",
+      "verification_wall_seconds": 0.00016139999934239313
+    },
+    "gate_action": "RETAIN_NATIVE",
+    "gate_reason": "no_replayable_full_objective_certificate_for_observed_value"
+  },
+  "additional_gpu_seconds": 0
+}

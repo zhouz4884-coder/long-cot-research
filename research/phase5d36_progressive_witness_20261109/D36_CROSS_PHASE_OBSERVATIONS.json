@@ -1,0 +1,5693 @@
+{
+  "status": "FROZEN_BEFORE_REFERENCE",
+  "frozen_utc": "2026-11-09T14:44:21.534978+00:00",
+  "baseline_commit": "3067767577275cd5e2a28b8053acee6d407d6f1c",
+  "scoring_reference_opened": false,
+  "historical_score_receipt_opened": false,
+  "source_sha256": {
+    "research/phase5d36_progressive_witness_20261109/audit_d3_cross_phase.py": "a339eb3f746d7f4df55b6abce8192145ec1c606e1caab060c3e26ca408006146",
+    "research/phase5d36_progressive_witness_20261109/numeric_contradiction.py": "d3585bcdd1574ba9c8b8d2eaca51948c42701bf9d2b3a1d6588d9b3cdb674883",
+    "research/phase5d25_constraint_revision_20261109/complete_answer.py": "ed5f67d54633b2d83ff0f67fee3a96ba95ac6e194db69f91f6f54c7f470b63a1",
+    "research/phase5d25_constraint_revision_20261109/complete_answer_v2.py": "4ffa8e3ab61028e0aaa29d57fae496601ab906374b954b1b1c1d72d5e89229e1",
+    "research/phase5d35_witness_gated_revision_20261109/candidate_archive.py": "b3a358f0db7fb71af410e9a3bc0880e2845911241a25823c7d8e2cbdedbd0928",
+    "research/phase5d35_witness_gated_revision_20261109/goal_claim_detector.py": "cb49ea8eb93e7c578aa7bfce2ca7e571d491da42839d7c473c4344af6852647c",
+    "research/phase5d35_witness_gated_revision_20261109/witness_contract.py": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+    "research/phase5d35_witness_gated_revision_20261109/witness_verifier.py": "fb73aac0947b944df0f0870a83ec09a3369646e8dcdbb260ddbe03bde51c4ad4"
+  },
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "visible_question_sha256": "54dd3be09ec7b952e4ca6ade399eebba9ac58cff4b61bfc4b8e0e083bad619fc",
+  "additional_gpu_seconds": 0,
+  "e15_feasibility_controls": {
+    "10112358": {
+      "status": "FEASIBLE_ONLY",
+      "reason": "digit_feasibility",
+      "proof_scope": "FULL_ORIGINAL_CONSTRAINTS",
+      "certified_value": null,
+      "witness": 10112358,
+      "evidence": {
+        "digits": [
+          1,
+          0,
+          1,
+          1,
+          2,
+          3,
+          5,
+          8
+        ]
+      },
+      "checker_version": "wgr-witness-contract-v1",
+      "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+      "paid_check_count": 7,
+      "work": {
+        "used": 7,
+        "by_operation": {
+          "digit_candidate": 1,
+          "digit_recurrence": 6
+        },
+        "trace_sha256": "e27a5c8cf64758f6ff2d4ae35c77a5649188aada80d8e23047ac3ba295c2517b"
+      },
+      "certificate_sha256": "5eac99ce410ff53a4b74c02ded165c205a0c8fc883c6921a955f1194b61167ce"
+    },
+    "10112357": {
+      "status": "INVALID_CANDIDATE",
+      "reason": "digit_feasibility",
+      "proof_scope": "FULL_ORIGINAL_CONSTRAINTS",
+      "certified_value": null,
+      "witness": 10112357,
+      "evidence": {
+        "digits": [
+          1,
+          0,
+          1,
+          1,
+          2,
+          3,
+          5,
+          7
+        ],
+        "violated_index": 7
+      },
+      "checker_version": "wgr-witness-contract-v1",
+      "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+      "paid_check_count": 7,
+      "work": {
+        "used": 7,
+        "by_operation": {
+          "digit_candidate": 1,
+          "digit_recurrence": 6
+        },
+        "trace_sha256": "58641c3588513712e025fc5436b3812fec4ce80a015a38406a2366e727c281e3"
+      },
+      "certificate_sha256": "3ec59d898e05889cf4e9c7d78c9ce92b7589005fe2e95ef45eedb5ef3f8d1f65"
+    }
+  },
+  "trajectories": [
+    {
+      "case_id": "D3_E01",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_0/D3_E01_20261109/result.json",
+      "source_sha256": "5ff07158a7e53823285881b17952a039c1cf17885a826040a4922a8ad96bd3e6",
+      "think_close_generated_index": 15580,
+      "think_text_sha256": "3239d13debdc260a600db199ca390d42e6a2c94e521e0614a2426c494f50af2f",
+      "final_text_sha256": "480b3119942f795edf3e4bbe3e5edd7cb0cfed1d78c29d687739750cec14eec5",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "$m + n$.",
+        "requested_normalized": "m+n.",
+        "question_sha256": "6c7d2070f985c4e7be6467b4bf365f372d64e3b314183113880bb2e4a07f32c2"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "b1325aea91f10793e26e90b23f40dc97319527e9e307012f8eda3f14c631edf8",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "113"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            29
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          37136,
+          37165
+        ],
+        "source": "\n**Final Answer**\n\\boxed{113}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "480b3119942f795edf3e4bbe3e5edd7cb0cfed1d78c29d687739750cec14eec5",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "target_final": {
+        "status": "TENTATIVE_COMPLETE",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "de6e39e126c12e5b27a1b438cd1010b315669f9e02146d64b693a0e62b25241f",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "113"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "whole_final_object",
+          "selected_span": [
+            0,
+            11
+          ]
+        },
+        "selection_method": "terminal_unanchored_box",
+        "char_span": [
+          2650,
+          2661
+        ],
+        "source": "\\boxed{113}"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "UNCOMPARABLE",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 18799,
+          "end": 18818,
+          "source": "4536 - 3297 = 1239.",
+          "left": "1239",
+          "operator": "=",
+          "right": "1239",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 19315,
+          "end": 19329,
+          "source": "1521 / 3 = 507",
+          "left": "507",
+          "operator": "=",
+          "right": "507",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 19331,
+          "end": 19346,
+          "source": "4314 / 3 = 1438",
+          "left": "1438",
+          "operator": "=",
+          "right": "1438",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 19348,
+          "end": 19362,
+          "source": "1239 / 3 = 413",
+          "left": "413",
+          "operator": "=",
+          "right": "413",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 26076,
+          "end": 26091,
+          "source": "(9/2)^2 = 81/4.",
+          "left": "81/4",
+          "operator": "=",
+          "right": "81/4",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 26942,
+          "end": 26960,
+          "source": "(25/6)^2 = 625/36.",
+          "left": "625/36",
+          "operator": "=",
+          "right": "625/36",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 35324,
+          "end": 35359,
+          "source": "325/22 = (325 * 13)/286 = 4225/286.",
+          "left": "325/22",
+          "operator": "=",
+          "right": "325/22",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 35324,
+          "end": 35359,
+          "source": "325/22 = (325 * 13)/286 = 4225/286.",
+          "left": "325/22",
+          "operator": "=",
+          "right": "325/22",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 2457,
+          "end": 2515,
+          "source": "$$\n\\frac{2200}{286} = \\frac{1100}{143} = \\frac{100}{13}\n$$",
+          "left": "100/13",
+          "operator": "=",
+          "right": "100/13",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2457,
+          "end": 2515,
+          "source": "$$\n\\frac{2200}{286} = \\frac{1100}{143} = \\frac{100}{13}\n$$",
+          "left": "100/13",
+          "operator": "=",
+          "right": "100/13",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E01",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_1/D3_E01_20261110/result.json",
+      "source_sha256": "677b604a6fa775cc27bc8c62069af6987c88675bada3fb326da8158a55f76d87",
+      "think_close_generated_index": 29160,
+      "think_text_sha256": "cb877e8b2146c7d95b2a19b6802acd5c17cd9112e4303440851565c50ef656cc",
+      "final_text_sha256": "397c0b88518f69a6feddf912bae3e4599a6c51f74b229fdfa84da1dbb51f18d3",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "$m + n$.",
+        "requested_normalized": "m+n.",
+        "question_sha256": "6c7d2070f985c4e7be6467b4bf365f372d64e3b314183113880bb2e4a07f32c2"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "a09457e6774f643c5bacf24e40fbb01a0172be4a7a40f74e247bad44c66d53d2",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "1159"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            30
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          75068,
+          75098
+        ],
+        "source": "\n**Final Answer**\n\\boxed{1159}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "397c0b88518f69a6feddf912bae3e4599a6c51f74b229fdfa84da1dbb51f18d3",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload",
+        "selected_span": [
+          2749,
+          2837
+        ]
+      },
+      "target_final": {
+        "status": "MALFORMED_TARGET_CANDIDATE",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "fc3d536b9ee0d789546bea0aed92e84ab3364783da9eec8ef87a57d1bec8b25e",
+          "selection_uses_gold": false,
+          "status": "ambiguous",
+          "reason": "boxed_objects_do_not_consume_final_payload",
+          "selected_span": [
+            27,
+            115
+          ]
+        },
+        "selection_method": "malformed_explicit_final_section",
+        "char_span": [
+          2722,
+          2837
+        ],
+        "source": "\n### Step 5: Final Answer\n\n$$\nAP = \\frac{1109}{50} \\Rightarrow m = 1109, n = 50 \\Rightarrow m + n = \\boxed{1159}\n$$"
+      },
+      "target_comparison": "UNCOMPARABLE",
+      "strict_comparison": "UNCOMPARABLE",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 14163,
+          "end": 14240,
+          "source": "361/100 + (2016/25)*(4/4) = 361/100 + 8064/100 = (361 + 8064)/100 = 8425/100.",
+          "left": "337/4",
+          "operator": "=",
+          "right": "337/4",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 14163,
+          "end": 14240,
+          "source": "361/100 + (2016/25)*(4/4) = 361/100 + 8064/100 = (361 + 8064)/100 = 8425/100.",
+          "left": "337/4",
+          "operator": "=",
+          "right": "337/4",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 14163,
+          "end": 14240,
+          "source": "361/100 + (2016/25)*(4/4) = 361/100 + 8064/100 = (361 + 8064)/100 = 8425/100.",
+          "left": "337/4",
+          "operator": "=",
+          "right": "337/4",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 14242,
+          "end": 14257,
+          "source": "25/4 = 625/100.",
+          "left": "25/4",
+          "operator": "=",
+          "right": "25/4",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 28022,
+          "end": 28043,
+          "source": "17350 + 40000 = 57350",
+          "left": "57350",
+          "operator": "=",
+          "right": "57350",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 48729,
+          "end": 48745,
+          "source": "130 * 14 = 1820.",
+          "left": "1820",
+          "operator": "=",
+          "right": "1820",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 48747,
+          "end": 48766,
+          "source": "3250 * 56 = 182000.",
+          "left": "182000",
+          "operator": "=",
+          "right": "182000",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 49513,
+          "end": 49546,
+          "source": "50625/484 = (50625 * 50) / 24200.",
+          "left": "50625/484",
+          "operator": "=",
+          "right": "50625/484",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 49548,
+          "end": 49581,
+          "source": "29057/50 = (29057 * 484) / 24200.",
+          "left": "29057/50",
+          "operator": "=",
+          "right": "29057/50",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 54592,
+          "end": 54650,
+          "source": "50625 * 15 / (22^2 * 4 * 11) = (225^2 * 15) / (22^2 * 44).",
+          "left": "759375/21296",
+          "operator": "=",
+          "right": "759375/21296",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 59622,
+          "end": 59640,
+          "source": "29057/50 = 581.14.",
+          "left": "29057/50",
+          "operator": "=",
+          "right": "29057/50",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 66192,
+          "end": 66218,
+          "source": "29057 * 285 = 29057 * 285.",
+          "left": "8281245",
+          "operator": "=",
+          "right": "8281245",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 67757,
+          "end": 67775,
+          "source": "29057/50 = 581.14.",
+          "left": "29057/50",
+          "operator": "=",
+          "right": "29057/50",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 68575,
+          "end": 68593,
+          "source": "1109 * 26 = 28834.",
+          "left": "28834",
+          "operator": "=",
+          "right": "28834",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 68595,
+          "end": 68615,
+          "source": "29057 - 28834 = 223.",
+          "left": "223",
+          "operator": "=",
+          "right": "223",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 68620,
+          "end": 68647,
+          "source": "29057/1109 = 26 + 223/1109.",
+          "left": "29057/1109",
+          "operator": "=",
+          "right": "29057/1109",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 71413,
+          "end": 71436,
+          "source": "(225/22)^2 = 50625/484.",
+          "left": "50625/484",
+          "operator": "=",
+          "right": "50625/484",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 71442,
+          "end": 71506,
+          "source": "1936/225 - 50625/484 = (1936 * 484 - 50625 * 225) / (225 * 484).",
+          "left": "-10453601/108900",
+          "operator": "=",
+          "right": "-10453601/108900",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 2628,
+          "end": 2655,
+          "source": "$ 22.18 = \\frac{1109}{50} $",
+          "left": "1109/50",
+          "operator": "=",
+          "right": "1109/50",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E02",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_1/D3_E02_20261109/result.json",
+      "source_sha256": "8a0bd1d7a5c9a9d58fc914ddaf88f91222ca71a67b6f7c688df457b5a4fd8a5c",
+      "think_close_generated_index": 18763,
+      "think_text_sha256": "bf91cbf75c0cb6eac287727724b4d13eb152633d6bb6d545e75ade918e81ec10",
+      "final_text_sha256": "675d5396781d69d91e76b30efc03de530a4fa0ca36a71abe1e90da87284d2244",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the number of intersections of the graphs of \\[y=4 g(f(\\sin (2 \\pi x))) \\quad\\text{ and }\\quad x=4 g(f(\\cos (3 \\pi y))).\\]",
+        "requested_normalized": "the number of intersections of the graphs of \\[y=4 g(f(\\sin (2 \\pi x))) \\text and x=4 g(f(\\cos (3 \\pi y))).\\]",
+        "question_sha256": "d965cc0c83096dce50f756ecdd29990c906370987a63d3a8d0fd03d875ac6b3b"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "58ec3ade3ddcf49f4e75bc1346082de45480d7bd3a98ec3554b22f2e825e6d17",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "12"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            28
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          51346,
+          51374
+        ],
+        "source": "\n**Final Answer**\n\\boxed{12}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "675d5396781d69d91e76b30efc03de530a4fa0ca36a71abe1e90da87284d2244",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "12"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "terminal_boxed_block",
+        "selected_span": [
+          3851,
+          3869
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "675d5396781d69d91e76b30efc03de530a4fa0ca36a71abe1e90da87284d2244",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "12"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "terminal_boxed_block",
+          "selected_span": [
+            3851,
+            3869
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": []
+    },
+    {
+      "case_id": "D3_E02",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_0/D3_E02_20261110/result.json",
+      "source_sha256": "7f0793dae89508bb2d6c19bcc38cae98aba51e6e4017ca7542601106bb516a1c",
+      "think_close_generated_index": 27759,
+      "think_text_sha256": "8ff6ea4149e6013702b78dd549670e8be26715037a45f62778b237c09d95ec6e",
+      "final_text_sha256": "73786ceb189c09ba5b28723c24a01b7bf8d844ea6a41e61b82570e56ff2fe3a8",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the number of intersections of the graphs of \\[y=4 g(f(\\sin (2 \\pi x))) \\quad\\text{ and }\\quad x=4 g(f(\\cos (3 \\pi y))).\\]",
+        "requested_normalized": "the number of intersections of the graphs of \\[y=4 g(f(\\sin (2 \\pi x))) \\text and x=4 g(f(\\cos (3 \\pi y))).\\]",
+        "question_sha256": "d965cc0c83096dce50f756ecdd29990c906370987a63d3a8d0fd03d875ac6b3b"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "fdae11335858f5f5b0e011ef173895e985c6cdbbb30c11892237a3e33a86d5e1",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "16"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            28
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          70060,
+          70088
+        ],
+        "source": "\n**Final Answer**\n\\boxed{16}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "73786ceb189c09ba5b28723c24a01b7bf8d844ea6a41e61b82570e56ff2fe3a8",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "16"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          3018,
+          3034
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "73786ceb189c09ba5b28723c24a01b7bf8d844ea6a41e61b82570e56ff2fe3a8",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "16"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            3018,
+            3034
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": []
+    },
+    {
+      "case_id": "D3_E03",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_0/D3_E03_20261109/result.json",
+      "source_sha256": "db4327c9a4c04f95f3686f67a3f33474c7cd9c48839687e041889e6b55d2b994",
+      "think_close_generated_index": 20243,
+      "think_text_sha256": "a961d1e9e3cf3e07f085c8c7876c0d2986011671c7d8d6fce0369cb5433b16c4",
+      "final_text_sha256": "23501d643a879a4df2b4adbe138e122c4e5322655718d1d8b913266a7926353d",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "$Q+R$.",
+        "requested_normalized": "q+r.",
+        "question_sha256": "10c80ba48d1803c48df550827e6e2c3b4b8ef3e0aba30c507798eabf30aeea2e"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "bd1a96ffeecbb741a68b7b409735c22dd60224e44ba4e9eaf441417a5d78fe63",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "699"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            29
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          52069,
+          52098
+        ],
+        "source": "\n**Final Answer**\n\\boxed{699}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "23501d643a879a4df2b4adbe138e122c4e5322655718d1d8b913266a7926353d",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "699"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2587,
+          2604
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "23501d643a879a4df2b4adbe138e122c4e5322655718d1d8b913266a7926353d",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "699"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            2587,
+            2604
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 46904,
+          "end": 46926,
+          "source": "5684 is less than 5694",
+          "left": "5684",
+          "operator": "<",
+          "right": "5694",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 2151,
+          "end": 2172,
+          "source": "$ 1694 \\div 7 = 242 $",
+          "left": "242",
+          "operator": "=",
+          "right": "242",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2203,
+          "end": 2224,
+          "source": "$ 5194 \\div 7 = 742 $",
+          "left": "742",
+          "operator": "=",
+          "right": "742",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2254,
+          "end": 2275,
+          "source": "$ 5614 \\div 7 = 802 $",
+          "left": "802",
+          "operator": "=",
+          "right": "802",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2306,
+          "end": 2327,
+          "source": "$ 5691 \\div 7 = 813 $",
+          "left": "813",
+          "operator": "=",
+          "right": "813",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E03",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_1/D3_E03_20261110/result.json",
+      "source_sha256": "04927e4c65ec0426ea507591a4276981d93d6283a8a05f9300900086f938f5c8",
+      "think_close_generated_index": 7151,
+      "think_text_sha256": "b586310b12dfed07eff7f334649bf055d199a7c59a375905808504f5a22d2724",
+      "final_text_sha256": "0361630ed012994cc9e585b58e81d43c9777c2e51701fbc72ee0561530e278f4",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "$Q+R$.",
+        "requested_normalized": "q+r.",
+        "question_sha256": "10c80ba48d1803c48df550827e6e2c3b4b8ef3e0aba30c507798eabf30aeea2e"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "bd1a96ffeecbb741a68b7b409735c22dd60224e44ba4e9eaf441417a5d78fe63",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "699"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            29
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          18087,
+          18116
+        ],
+        "source": "\n**Final Answer**\n\\boxed{699}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "0361630ed012994cc9e585b58e81d43c9777c2e51701fbc72ee0561530e278f4",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "699"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2204,
+          2221
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "0361630ed012994cc9e585b58e81d43c9777c2e51701fbc72ee0561530e278f4",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "699"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            2204,
+            2221
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": [
+        {
+          "start": 1798,
+          "end": 1819,
+          "source": "$ 1694 \\div 7 = 242 $",
+          "left": "242",
+          "operator": "=",
+          "right": "242",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 1848,
+          "end": 1869,
+          "source": "$ 5194 \\div 7 = 742 $",
+          "left": "742",
+          "operator": "=",
+          "right": "742",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 1898,
+          "end": 1919,
+          "source": "$ 5614 \\div 7 = 802 $",
+          "left": "802",
+          "operator": "=",
+          "right": "802",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 1948,
+          "end": 1969,
+          "source": "$ 5691 \\div 7 = 813 $",
+          "left": "813",
+          "operator": "=",
+          "right": "813",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E04",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_1/D3_E04_20261109/result.json",
+      "source_sha256": "f971337ab407346110805014e5724f1592501d6db9ac247546764af5e5fce198",
+      "think_close_generated_index": 15287,
+      "think_text_sha256": "608e39711a00308474a7d65a7e7b648dcfe659a713348f23bcaaa933a4ceef3a",
+      "final_text_sha256": "6ee6443c6c12cfb409177f39ca5d663a7c5d8562ab82f5b940fa704683a4b312",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the number of triples of nonnegative integers \\((a,b,c)\\) satisfying \\(a + b + c = 300\\) and\n\\begin{equation*}\na^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6,000,000.\n\\end{equation*}",
+        "requested_normalized": "the number of triples of nonnegative integers (a,b,c) satisfying a+b+c = 300 and \\beginequation*a^2b+a^2c+b^2a+b^2c+c^2a+c^2b = 6,000,000. \\endequation*",
+        "question_sha256": "89a3d7b0f4c73a63119f6c1a2bec8ed68f39a8f5d4a3e5ebb12d89eb8b47e857"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "86f231597096048ca8241ba2ce844c5c82592557c6ae943f8deb45325cecea8c",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "601"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            29
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          41775,
+          41804
+        ],
+        "source": "\n**Final Answer**\n\\boxed{601}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "6ee6443c6c12cfb409177f39ca5d663a7c5d8562ab82f5b940fa704683a4b312",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "601"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          3555,
+          3572
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "6ee6443c6c12cfb409177f39ca5d663a7c5d8562ab82f5b940fa704683a4b312",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "601"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            3555,
+            3572
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": [
+        {
+          "start": 2550,
+          "end": 2574,
+          "source": "$$\n3 \\times 201 = 603\n$$",
+          "left": "603",
+          "operator": "=",
+          "right": "603",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E04",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_0/D3_E04_20261110/result.json",
+      "source_sha256": "7d3668ed1fa665d8f9f3ed90e88217bec6ac6fb417ae3580dbc8d12bb6b87a27",
+      "think_close_generated_index": 16920,
+      "think_text_sha256": "d064a1119d6b5a72878fd4275727ff65f984d006abe72e540b545ef212e8b570",
+      "final_text_sha256": "3f31ce5fb0b6efcdb64bb980e14b4e2aa8ae414acfca643a1be45b157487f574",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the number of triples of nonnegative integers \\((a,b,c)\\) satisfying \\(a + b + c = 300\\) and\n\\begin{equation*}\na^2b + a^2c + b^2a + b^2c + c^2a + c^2b = 6,000,000.\n\\end{equation*}",
+        "requested_normalized": "the number of triples of nonnegative integers (a,b,c) satisfying a+b+c = 300 and \\beginequation*a^2b+a^2c+b^2a+b^2c+c^2a+c^2b = 6,000,000. \\endequation*",
+        "question_sha256": "89a3d7b0f4c73a63119f6c1a2bec8ed68f39a8f5d4a3e5ebb12d89eb8b47e857"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "86f231597096048ca8241ba2ce844c5c82592557c6ae943f8deb45325cecea8c",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "601"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            29
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          44279,
+          44308
+        ],
+        "source": "\n**Final Answer**\n\\boxed{601}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "3f31ce5fb0b6efcdb64bb980e14b4e2aa8ae414acfca643a1be45b157487f574",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "601"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          3619,
+          3636
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "3f31ce5fb0b6efcdb64bb980e14b4e2aa8ae414acfca643a1be45b157487f574",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "601"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            3619,
+            3636
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 37615,
+          "end": 37651,
+          "source": "3*201 - 3*1 + 1 = 603 - 3 + 1 = 601.",
+          "left": "601",
+          "operator": "=",
+          "right": "601",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 37615,
+          "end": 37651,
+          "source": "3*201 - 3*1 + 1 = 603 - 3 + 1 = 601.",
+          "left": "601",
+          "operator": "=",
+          "right": "601",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 3071,
+          "end": 3095,
+          "source": "$$\n3 \\times 201 = 603\n$$",
+          "left": "603",
+          "operator": "=",
+          "right": "603",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3402,
+          "end": 3421,
+          "source": "$$\n603 - 3 = 600\n$$",
+          "left": "600",
+          "operator": "=",
+          "right": "600",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3575,
+          "end": 3594,
+          "source": "$$\n600 + 1 = 601\n$$",
+          "left": "601",
+          "operator": "=",
+          "right": "601",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E05",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_0/D3_E05_20261109/result.json",
+      "source_sha256": "869bb311fadba005d39cd4666efbd9445d87da376ff3f6a19aca901529b26434",
+      "think_close_generated_index": 8993,
+      "think_text_sha256": "5089df4954261a37960a2d2764141c0db9e38740ad1081eab0a24666438576c5",
+      "final_text_sha256": "be31f0e70073f0a2d4406aa1305dde73560b9369febcb49617d4ad99bcea7d3c",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "$ n + t $.",
+        "requested_normalized": "n+t .",
+        "question_sha256": "656d1b5d0105f71eb14aced1dfa5b1eaa8d9a087cc8e434da877ad2c01870de5"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "c569c5a7d13072ee9fbdf2e347bf58fb903395db3bef8e17e66dbcd94d68b1c2",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "149"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            29
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          23267,
+          23296
+        ],
+        "source": "\n**Final Answer**\n\\boxed{149}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "be31f0e70073f0a2d4406aa1305dde73560b9369febcb49617d4ad99bcea7d3c",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "uncertain_final_object"
+      },
+      "target_final": {
+        "status": "TENTATIVE_COMPLETE",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "4ad6096c112644b390995b951349f9ffe95e929398c72def45d161e520788014",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "149"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "whole_final_object",
+          "selected_span": [
+            0,
+            11
+          ]
+        },
+        "selection_method": "terminal_unanchored_box",
+        "char_span": [
+          2801,
+          2812
+        ],
+        "source": "\\boxed{149}"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "UNCOMPARABLE",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 7996,
+          "end": 8006,
+          "source": "5 + 5 = 10",
+          "left": "10",
+          "operator": "=",
+          "right": "10",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 8008,
+          "end": 8021,
+          "source": "60 + 60 = 120",
+          "left": "120",
+          "operator": "=",
+          "right": "120",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        }
+      ],
+      "final_numeric_relations": []
+    },
+    {
+      "case_id": "D3_E05",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_1/D3_E05_20261110/result.json",
+      "source_sha256": "a8e8fb5d56c6ace795bf1c050278bd86f6a4cb8f8e4805e82402ce09e0aa4c6f",
+      "think_close_generated_index": 13848,
+      "think_text_sha256": "dcde98772b2c68974f8901cbe60659c205aad1c0efba170daba0291baa79a078",
+      "final_text_sha256": "ab98c73232083db5f3e797816488dd86d2c2a123d25e6310b1a6cbf819be4e6c",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "$ n + t $.",
+        "requested_normalized": "n+t .",
+        "question_sha256": "656d1b5d0105f71eb14aced1dfa5b1eaa8d9a087cc8e434da877ad2c01870de5"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "c569c5a7d13072ee9fbdf2e347bf58fb903395db3bef8e17e66dbcd94d68b1c2",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "149"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            29
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          36888,
+          36917
+        ],
+        "source": "\n**Final Answer**\n\\boxed{149}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "ab98c73232083db5f3e797816488dd86d2c2a123d25e6310b1a6cbf819be4e6c",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "uncertain_final_object"
+      },
+      "target_final": {
+        "status": "TENTATIVE_COMPLETE",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "4ad6096c112644b390995b951349f9ffe95e929398c72def45d161e520788014",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "149"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "whole_final_object",
+          "selected_span": [
+            0,
+            11
+          ]
+        },
+        "selection_method": "terminal_unanchored_box",
+        "char_span": [
+          3079,
+          3090
+        ],
+        "source": "\\boxed{149}"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "UNCOMPARABLE",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 36358,
+          "end": 36398,
+          "source": "2*5 + 1*9 + 12*10 = 10 + 9 + 120 = 139. ",
+          "left": "139",
+          "operator": "=",
+          "right": "139",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 36358,
+          "end": 36398,
+          "source": "2*5 + 1*9 + 12*10 = 10 + 9 + 120 = 139. ",
+          "left": "139",
+          "operator": "=",
+          "right": "139",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 1443,
+          "end": 1462,
+          "source": "$ 2 \\times 5 = 10 $",
+          "left": "10",
+          "operator": "=",
+          "right": "10",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 1568,
+          "end": 1588,
+          "source": "$ 6 \\times 10 = 60 $",
+          "left": "60",
+          "operator": "=",
+          "right": "60",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E06",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_1/D3_E06_20261109/result.json",
+      "source_sha256": "70267efb3fcc69f5966d8a77fc4164a7b37708e4a3d3cac44575bb86fedb3e11",
+      "think_close_generated_index": 28517,
+      "think_text_sha256": "3dad2a3d1f2385d3f5e599ae03e5f72c27a07e0f5b9b1f0b4b14ecb3a1308fdf",
+      "final_text_sha256": "c2fa453f62b6c82cdd19712e802728c63358929db3f0943e80258d7741b1554b",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the number of values of $ N $ between 1 and 1000 inclusive for which the greedy algorithm succeeds.",
+        "requested_normalized": "the number of values of n between 1 and 1000 inclusive for which the greedy algorithm succeeds.",
+        "question_sha256": "dac11627201ea0d253903fcee1537661ca88b83499fea9d02a7d596af79550ab"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "150dbb563c3bd34bf9834ca344ce9c36f8b01c41f8077501a33a79488d81a5f4",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "415"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            29
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          75348,
+          75377
+        ],
+        "source": "\n**Final Answer**\n\\boxed{415}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "c2fa453f62b6c82cdd19712e802728c63358929db3f0943e80258d7741b1554b",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "415"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2586,
+          2603
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "c2fa453f62b6c82cdd19712e802728c63358929db3f0943e80258d7741b1554b",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "415"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            2586,
+            2603
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 5035,
+          "end": 5054,
+          "source": "10 is larger than 5",
+          "left": "10",
+          "operator": ">",
+          "right": "5",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 29512,
+          "end": 29530,
+          "source": "25 is less than 50",
+          "left": "25",
+          "operator": "<",
+          "right": "50",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 70652,
+          "end": 70698,
+          "source": "40 + 4*39 + 5*39 = 40 + 9*39 = 40 + 351 = 391.",
+          "left": "391",
+          "operator": "=",
+          "right": "391",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 70652,
+          "end": 70698,
+          "source": "40 + 4*39 + 5*39 = 40 + 9*39 = 40 + 351 = 391.",
+          "left": "391",
+          "operator": "=",
+          "right": "391",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 70652,
+          "end": 70698,
+          "source": "40 + 4*39 + 5*39 = 40 + 9*39 = 40 + 351 = 391.",
+          "left": "391",
+          "operator": "=",
+          "right": "391",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 2151,
+          "end": 2173,
+          "source": "$ 39 \\times 10 = 390 $",
+          "left": "390",
+          "operator": "=",
+          "right": "390",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E06",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_0/D3_E06_20261110/result.json",
+      "source_sha256": "203843e0815d922a96d016b79c146174c3a421762564d6c14fa472dc031aa0b6",
+      "think_close_generated_index": 20368,
+      "think_text_sha256": "d24d79597fa0eb75cd7148b0740c14356be571ce9d9be1efdc25a24d954f042e",
+      "final_text_sha256": "528c55215e02d2c53b2f371aae62e21433db46a8b33bfb74349a82561f469958",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the number of values of $ N $ between 1 and 1000 inclusive for which the greedy algorithm succeeds.",
+        "requested_normalized": "the number of values of n between 1 and 1000 inclusive for which the greedy algorithm succeeds.",
+        "question_sha256": "dac11627201ea0d253903fcee1537661ca88b83499fea9d02a7d596af79550ab"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "a42008b28d0bd9213e4fd053bb0aab586cd0f4b9b7d01f544d2d5833548f84f6",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "610"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            29
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          53907,
+          53936
+        ],
+        "source": "\n**Final Answer**\n\\boxed{610}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "528c55215e02d2c53b2f371aae62e21433db46a8b33bfb74349a82561f469958",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "alternative_final_objects"
+      },
+      "target_final": {
+        "status": "TENTATIVE_COMPLETE",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "088f40968d1d194305f31ea64fd72e7f5f507f03b2e6fe766a1d5ddad8eaa4e1",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "610"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "whole_final_object",
+          "selected_span": [
+            0,
+            11
+          ]
+        },
+        "selection_method": "terminal_unanchored_box",
+        "char_span": [
+          2847,
+          2858
+        ],
+        "source": "\\boxed{610}"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "UNCOMPARABLE",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 2168,
+          "end": 2187,
+          "source": "10 is larger than 1",
+          "left": "10",
+          "operator": ">",
+          "right": "1",
+          "exact_truth": true,
+          "scope": "CONDITIONAL_OR_UNCERTAIN",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 5097,
+          "end": 5117,
+          "source": "25 is larger than 10",
+          "left": "25",
+          "operator": ">",
+          "right": "10",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 18506,
+          "end": 18521,
+          "source": "-1 + 2 - 7 = -6",
+          "left": "-6",
+          "operator": "=",
+          "right": "-6",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 44688,
+          "end": 44747,
+          "source": "40 + 4*39 + 5*39 + 5*39 = 40 + (4 + 5 + 5)*39 = 40 + 14*39.",
+          "left": "586",
+          "operator": "=",
+          "right": "586",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 44688,
+          "end": 44747,
+          "source": "40 + 4*39 + 5*39 + 5*39 = 40 + (4 + 5 + 5)*39 = 40 + 14*39.",
+          "left": "586",
+          "operator": "=",
+          "right": "586",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 49869,
+          "end": 49886,
+          "source": "1000 - 390 = 610.",
+          "left": "610",
+          "operator": "=",
+          "right": "610",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 2449,
+          "end": 2467,
+          "source": "$ 1000 / 25 = 40 $",
+          "left": "40",
+          "operator": "=",
+          "right": "40",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2482,
+          "end": 2504,
+          "source": "$ 15 \\times 40 = 600 $",
+          "left": "600",
+          "operator": "=",
+          "right": "600",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2721,
+          "end": 2741,
+          "source": "$$\n600 - 14 = 586\n$$",
+          "left": "586",
+          "operator": "=",
+          "right": "586",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E07",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_0/D3_E07_20261109/result.json",
+      "source_sha256": "c3e1e079aef59e69be20abc3bb87e2fff82d130f028880e839ad5bb8040cd1cb",
+      "think_close_generated_index": 20665,
+      "think_text_sha256": "67566e4cce64f630e984db072a352756b0287160c51849e4948b93d939c44ef5",
+      "final_text_sha256": "bc6b9d78bcb30ae81eb2bb4861d176269975b339b5d033d0eb4b773754773c81",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "$m+n$.",
+        "requested_normalized": "m+n.",
+        "question_sha256": "70629b6e7c5db3e713f2672a9355856d2fc7b17285add34b1f7fd1d289c9e173"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "ac4863e3c606bb8812beaebaa707ecea4fb8e5bfaff02eee6e701a4b9d81b3bf",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "41"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            28
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          72478,
+          72506
+        ],
+        "source": "\n**Final Answer**\n\\boxed{41}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "bc6b9d78bcb30ae81eb2bb4861d176269975b339b5d033d0eb4b773754773c81",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "target_final": {
+        "status": "TENTATIVE_COMPLETE",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "c3ff7555c0cb069d767cabf5170d42f659b981220908379defb895a269b754d1",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "41"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "whole_final_object",
+          "selected_span": [
+            0,
+            10
+          ]
+        },
+        "selection_method": "terminal_unanchored_box",
+        "char_span": [
+          3891,
+          3901
+        ],
+        "source": "\\boxed{41}"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "UNCOMPARABLE",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 63776,
+          "end": 63791,
+          "source": "120 + 240 = 360",
+          "left": "360",
+          "operator": "=",
+          "right": "360",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 63793,
+          "end": 63808,
+          "source": "360 + 360 = 720",
+          "left": "720",
+          "operator": "=",
+          "right": "720",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 63810,
+          "end": 63826,
+          "source": "720 + 480 = 1200",
+          "left": "1200",
+          "operator": "=",
+          "right": "1200",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 63828,
+          "end": 63845,
+          "source": "1200 + 600 = 1800",
+          "left": "1800",
+          "operator": "=",
+          "right": "1800",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 63847,
+          "end": 63865,
+          "source": "1800 + 720 = 2520.",
+          "left": "2520",
+          "operator": "=",
+          "right": "2520",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 2930,
+          "end": 2954,
+          "source": "$$\n5 \\cdot 360 = 1800\n$$",
+          "left": "1800",
+          "operator": "=",
+          "right": "1800",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3693,
+          "end": 3732,
+          "source": "$$\n\\frac{2520}{10395} = \\frac{8}{33}\n$$",
+          "left": "8/33",
+          "operator": "=",
+          "right": "8/33",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E07",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_1/D3_E07_20261110/result.json",
+      "source_sha256": "b8fd12398952b34d7a4528031d2a570353e76f633a2324c8581832978db11df7",
+      "think_close_generated_index": 13330,
+      "think_text_sha256": "d05a99893a7cbf4069da7d1945ce484940b730534c49780cc1a67447a4b1d4e8",
+      "final_text_sha256": "abe1f6b49458f7604d66306a76253b9f87af052224e96be2062b53a3d8e05b9c",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "$m+n$.",
+        "requested_normalized": "m+n.",
+        "question_sha256": "70629b6e7c5db3e713f2672a9355856d2fc7b17285add34b1f7fd1d289c9e173"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "05e46d3eff2ea2bd62c28b0d79dfd2beb0194027baecc748b07d7747beacd6ca",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "271"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            29
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          51235,
+          51264
+        ],
+        "source": "\n**Final Answer**\n\\boxed{271}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v2",
+        "requested_kind": "scalar",
+        "final_response_sha256": "abe1f6b49458f7604d66306a76253b9f87af052224e96be2062b53a3d8e05b9c",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "reason": "single_boxed_rhs_of_exact_terminal_chain",
+        "selected_span": [
+          3645,
+          3656
+        ],
+        "method": "exact_final_chain_boxed_rhs",
+        "kind": "scalar",
+        "components": [
+          "271"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "chain_span": [
+          3625,
+          3657
+        ],
+        "exact_chain_value": "271",
+        "checked_chain_terms": 3,
+        "local_bindings": {
+          "m": {
+            "value": "40",
+            "span": [
+              3592,
+              3602
+            ]
+          },
+          "n": {
+            "value": "231",
+            "span": [
+              3604,
+              3615
+            ]
+          }
+        }
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v2",
+          "requested_kind": "scalar",
+          "final_response_sha256": "abe1f6b49458f7604d66306a76253b9f87af052224e96be2062b53a3d8e05b9c",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "reason": "single_boxed_rhs_of_exact_terminal_chain",
+          "selected_span": [
+            3645,
+            3656
+          ],
+          "method": "exact_final_chain_boxed_rhs",
+          "kind": "scalar",
+          "components": [
+            "271"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "chain_span": [
+            3625,
+            3657
+          ],
+          "exact_chain_value": "271",
+          "checked_chain_terms": 3,
+          "local_bindings": {
+            "m": {
+              "value": "40",
+              "span": [
+                3592,
+                3602
+              ]
+            },
+            "n": {
+              "value": "231",
+              "span": [
+                3604,
+                3615
+              ]
+            }
+          }
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": [
+        {
+          "start": 2897,
+          "end": 2921,
+          "source": "$$\n15 \\times 24 = 360\n$$",
+          "left": "360",
+          "operator": "=",
+          "right": "360",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E08",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_1/D3_E08_20261109/result.json",
+      "source_sha256": "a90a30c97efc72697a9a5c6c25a699bde0397c81854895af580c1dc2554e9450",
+      "think_close_generated_index": 33545,
+      "think_text_sha256": "fcd26fb7e4c95dc091f54c4b0b8bfa0ce715763b5aea2ea3fba80c6048d0b3d7",
+      "final_text_sha256": "04e69bacfed2d97892a930dddbf8d5e7be7f9d5f81931921daef085f5d7e17a5",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the expected number of regions into which these 27 line segments divide the disk.",
+        "requested_normalized": "the expected number of regions into which these 27 line segments divide the disk.",
+        "question_sha256": "12f6b189436fb26a05fb496fe738000647c1cb210b7c9f446b3338be418ff094"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "3ed939e4eaec89e4363bdf676b0535593f02314518c4b92297a53255a524e78d",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "\\dfrac{637}{3}"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            40
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          117384,
+          117424
+        ],
+        "source": "\n**Final Answer**\n\\boxed{\\dfrac{637}{3}}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "04e69bacfed2d97892a930dddbf8d5e7be7f9d5f81931921daef085f5d7e17a5",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "\\dfrac{637}{3}"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2271,
+          2299
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "04e69bacfed2d97892a930dddbf8d5e7be7f9d5f81931921daef085f5d7e17a5",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "\\dfrac{637}{3}"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            2271,
+            2299
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": [
+        {
+          "start": 1506,
+          "end": 1549,
+          "source": "$$\n25 \\times \\frac{4}{3} = \\frac{100}{3}\n$$",
+          "left": "100/3",
+          "operator": "=",
+          "right": "100/3",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E08",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_0/D3_E08_20261110/result.json",
+      "source_sha256": "69b6b0ab822fbdc5457e22696929ff95783a77be9f9693d85c1a06a277dc5742",
+      "think_close_generated_index": 19861,
+      "think_text_sha256": "40295bf4b8f4e32eaba7e0bca459a2c74519f965f9cd2615cbc1e73c13efcec7",
+      "final_text_sha256": "3583f8cc889c64cd43e3fbfc5d10307583320ab1b4baae494d4aa526f93289c0",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the expected number of regions into which these 27 line segments divide the disk.",
+        "requested_normalized": "the expected number of regions into which these 27 line segments divide the disk.",
+        "question_sha256": "12f6b189436fb26a05fb496fe738000647c1cb210b7c9f446b3338be418ff094"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "711b365309d15ca3ad3fb05ce3fb5ee63b11bf80b65471a4aadf52e9489fea2a",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "\\dfrac{287}{3}"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            40
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          78191,
+          78231
+        ],
+        "source": "\n**Final Answer**\n\\boxed{\\dfrac{287}{3}}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "3583f8cc889c64cd43e3fbfc5d10307583320ab1b4baae494d4aa526f93289c0",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "\\dfrac{287}{3}"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          3114,
+          3142
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "3583f8cc889c64cd43e3fbfc5d10307583320ab1b4baae494d4aa526f93289c0",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "\\dfrac{287}{3}"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            3114,
+            3142
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 60742,
+          "end": 60762,
+          "source": "3 is equal to 95.666",
+          "left": "3",
+          "operator": "=",
+          "right": "47833/500",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 71608,
+          "end": 71628,
+          "source": "3 is equal to 95.666",
+          "left": "3",
+          "operator": "=",
+          "right": "47833/500",
+          "exact_truth": false,
+          "scope": "CONDITIONAL_OR_UNCERTAIN",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 1994,
+          "end": 2041,
+          "source": "$$\n  25 \\times \\frac{4}{3} = \\frac{100}{3}\n  $$",
+          "left": "100/3",
+          "operator": "=",
+          "right": "100/3",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2444,
+          "end": 2492,
+          "source": "$$\n  300 \\times \\frac{1}{9} = \\frac{100}{3}\n  $$",
+          "left": "100/3",
+          "operator": "=",
+          "right": "100/3",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E09",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_0/D3_E09_20261109/result.json",
+      "source_sha256": "c5f74c72b9402d70e57ed204d7bd9fd340b7a8d8adfb19e1cfd5aec9750a0f0b",
+      "think_close_generated_index": 8817,
+      "think_text_sha256": "b318c49da78b7630fffdb6e51a703429ec06c38191ab44051c2e3bb303711e94",
+      "final_text_sha256": "e5f3e502c13352d7de24f018066daab837aafe6e16c3ce8d282e31cdd3326903",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the least value of $n$ such that $a_{n}>100 T$.",
+        "requested_normalized": "the least value of n such that an>100 t.",
+        "question_sha256": "23c320bc9c489bd94c5503ad5b70bd509e0fefacafe6aa65d03891c205ee3138"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "a1ea50a62f96d2132440b13a19fce85e7a560efb64dd5e78b92d4ba43773a80f",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "491"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            29
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          20983,
+          21012
+        ],
+        "source": "\n**Final Answer**\n\\boxed{491}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "e5f3e502c13352d7de24f018066daab837aafe6e16c3ce8d282e31cdd3326903",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "491"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2071,
+          2088
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "e5f3e502c13352d7de24f018066daab837aafe6e16c3ce8d282e31cdd3326903",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "491"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            2071,
+            2088
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": []
+    },
+    {
+      "case_id": "D3_E09",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_1/D3_E09_20261110/result.json",
+      "source_sha256": "ae96701b397b0744a3999c8ad49bed941534c70d491e46c6385548755b2672da",
+      "think_close_generated_index": 9848,
+      "think_text_sha256": "61003252b4448afc801583de4680fa5d19b2deb4970ec780d7713b6b6f51520a",
+      "final_text_sha256": "e2c671264d26c7ca0defcd666d0bff0f654c0d9535f7596d064cad3b134d8ace",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the least value of $n$ such that $a_{n}>100 T$.",
+        "requested_normalized": "the least value of n such that an>100 t.",
+        "question_sha256": "23c320bc9c489bd94c5503ad5b70bd509e0fefacafe6aa65d03891c205ee3138"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "a1ea50a62f96d2132440b13a19fce85e7a560efb64dd5e78b92d4ba43773a80f",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "491"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            29
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          24923,
+          24952
+        ],
+        "source": "\n**Final Answer**\n\\boxed{491}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "e2c671264d26c7ca0defcd666d0bff0f654c0d9535f7596d064cad3b134d8ace",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "491"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1845,
+          1862
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "e2c671264d26c7ca0defcd666d0bff0f654c0d9535f7596d064cad3b134d8ace",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "491"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            1845,
+            1862
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 9136,
+          "end": 9189,
+          "source": "34 * 7350 = 34*(7000 + 350) = 238000 + 11900 = 249900",
+          "left": "249900",
+          "operator": "=",
+          "right": "249900",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 9136,
+          "end": 9189,
+          "source": "34 * 7350 = 34*(7000 + 350) = 238000 + 11900 = 249900",
+          "left": "249900",
+          "operator": "=",
+          "right": "249900",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 9136,
+          "end": 9189,
+          "source": "34 * 7350 = 34*(7000 + 350) = 238000 + 11900 = 249900",
+          "left": "249900",
+          "operator": "=",
+          "right": "249900",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 12408,
+          "end": 12424,
+          "source": "2 is at least 35",
+          "left": "2",
+          "operator": ">=",
+          "right": "35",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 12972,
+          "end": 12990,
+          "source": "35 * 7000 = 245000",
+          "left": "245000",
+          "operator": "=",
+          "right": "245000",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 13027,
+          "end": 13042,
+          "source": "35 * 141 = 4935",
+          "left": "4935",
+          "operator": "=",
+          "right": "4935",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 13047,
+          "end": 13099,
+          "source": "35 * 7141 = 35*(7000 + 141) = 245000 + 4935 = 249935",
+          "left": "249935",
+          "operator": "=",
+          "right": "249935",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 13047,
+          "end": 13099,
+          "source": "35 * 7141 = 35*(7000 + 141) = 245000 + 4935 = 249935",
+          "left": "249935",
+          "operator": "=",
+          "right": "249935",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 13047,
+          "end": 13099,
+          "source": "35 * 7141 = 35*(7000 + 141) = 245000 + 4935 = 249935",
+          "left": "249935",
+          "operator": "=",
+          "right": "249935",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        }
+      ],
+      "final_numeric_relations": []
+    },
+    {
+      "case_id": "D3_E10",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_1/D3_E10_20261109/result.json",
+      "source_sha256": "31a21f02eedc735851751faae315048f187c747b3dc1f97e16d512d9d0ba2db1",
+      "think_close_generated_index": 1867,
+      "think_text_sha256": "795fa91a972f553d7e0ff726a473353beb208fb53fd8e611f871d31e5a7e8b5b",
+      "final_text_sha256": "8ee4c1b13f52252ec82462c122717f21bd26b9b689bfc33832991e827930a099",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the real value of $x$ for which there exists a solution to the system of equations\n\n$$\n\\begin{aligned}\nx+y & =0 \\\\\nx^{3}-y^{3} & =54+T .\n\\end{aligned}\n$$",
+        "requested_normalized": "the real value of x for which there exists a solution to the system of equations \\beginaligned x+y & =0 \\\\ x^3-y^3 & =54+t . \\endaligned",
+        "question_sha256": "d6a12290531d7e4c36959899f5a89da39091de5b4b8aae1380cd8d208640063e"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "149234de7aa363f729275fc16779f0655d8c400eb3ef1ac5686d2b5ffedb3ca5",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "3"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "whole_final_object",
+          "selected_span": [
+            0,
+            9
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          5467,
+          5522
+        ],
+        "source": "\n**Final Answer**\nThe real value of $ x $ is \\boxed{3}."
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "8ee4c1b13f52252ec82462c122717f21bd26b9b689bfc33832991e827930a099",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "3"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          951,
+          966
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "8ee4c1b13f52252ec82462c122717f21bd26b9b689bfc33832991e827930a099",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "3"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            951,
+            966
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": []
+    },
+    {
+      "case_id": "D3_E10",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_0/D3_E10_20261110/result.json",
+      "source_sha256": "9ee7a7a87e0861bb6d538d23842ac9878dafac5c8d6c6c1913bddbfed14bf199",
+      "think_close_generated_index": 3439,
+      "think_text_sha256": "6cba46abbcd974e23eda336d3c6caf5e6fb98508f887f32d6c1c652b68674e66",
+      "final_text_sha256": "4f66eef20e259dd29297e325ad39bbb64babd9cc2e1924d5c99b300709c923b5",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the real value of $x$ for which there exists a solution to the system of equations\n\n$$\n\\begin{aligned}\nx+y & =0 \\\\\nx^{3}-y^{3} & =54+T .\n\\end{aligned}\n$$",
+        "requested_normalized": "the real value of x for which there exists a solution to the system of equations \\beginaligned x+y & =0 \\\\ x^3-y^3 & =54+t . \\endaligned",
+        "question_sha256": "d6a12290531d7e4c36959899f5a89da39091de5b4b8aae1380cd8d208640063e"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "149234de7aa363f729275fc16779f0655d8c400eb3ef1ac5686d2b5ffedb3ca5",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "3"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "whole_final_object",
+          "selected_span": [
+            0,
+            9
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          10087,
+          10142
+        ],
+        "source": "\n**Final Answer**\nThe real value of $ x $ is \\boxed{3}."
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "4f66eef20e259dd29297e325ad39bbb64babd9cc2e1924d5c99b300709c923b5",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "3"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1157,
+          1172
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "4f66eef20e259dd29297e325ad39bbb64babd9cc2e1924d5c99b300709c923b5",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "3"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            1157,
+            1172
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": []
+    },
+    {
+      "case_id": "D3_E11",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_0/D3_E11_20261109/result.json",
+      "source_sha256": "21cf3dcc4316767f67fb9b45353b4b76996a58c06ed4948e4408b5d8d82ea310",
+      "think_close_generated_index": 1783,
+      "think_text_sha256": "de4292e891c9ef5e6f56ae3593019b0ceb43afb96dc8c02f8b5fc997a763344a",
+      "final_text_sha256": "f5138aa8979211d86341b2f028fbd859f21bccdb54edb6b96eda24a3ea7c56fc",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the distance (in miles) that the plane travels.",
+        "requested_normalized": "the distance that the plane travels.",
+        "question_sha256": "bee99ea5552b1a4b3283915f476bb853a74e67315af64d714a74863e86136628"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "67c848b88370a9afbd2b920b195b73e8bad88de0e3b64351421b0683ef78341a",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "650"
+          ],
+          "unit": "mi",
+          "closure": null,
+          "vector_shape": null,
+          "method": "whole_final_object",
+          "selected_span": [
+            0,
+            17
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          5361,
+          5436
+        ],
+        "source": "\n**Final Answer**\nThe distance that the plane travels is \\boxed{650} miles."
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "f5138aa8979211d86341b2f028fbd859f21bccdb54edb6b96eda24a3ea7c56fc",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "650"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1445,
+          1462
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "f5138aa8979211d86341b2f028fbd859f21bccdb54edb6b96eda24a3ea7c56fc",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "650"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            1445,
+            1462
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME_OMITTED_UNIT",
+      "strict_comparison": "SAME_OMITTED_UNIT",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": []
+    },
+    {
+      "case_id": "D3_E11",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_1/D3_E11_20261110/result.json",
+      "source_sha256": "43532297fce454904c5161173bd5b765adcbd4e40b9585fc6f464cb8d7b4315f",
+      "think_close_generated_index": 1296,
+      "think_text_sha256": "a2561fdab66da51752aeb425f6ccf4bbc818efe78d7ea3cb4eef77493aeaddf9",
+      "final_text_sha256": "7bbb38657a5b8855fd24857b3ca7863d2ea48fc9ac9de7da80495df156898a13",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the distance (in miles) that the plane travels.",
+        "requested_normalized": "the distance that the plane travels.",
+        "question_sha256": "bee99ea5552b1a4b3283915f476bb853a74e67315af64d714a74863e86136628"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "67c848b88370a9afbd2b920b195b73e8bad88de0e3b64351421b0683ef78341a",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "650"
+          ],
+          "unit": "mi",
+          "closure": null,
+          "vector_shape": null,
+          "method": "whole_final_object",
+          "selected_span": [
+            0,
+            17
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          4583,
+          4658
+        ],
+        "source": "\n**Final Answer**\nThe distance that the plane travels is \\boxed{650} miles."
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "7bbb38657a5b8855fd24857b3ca7863d2ea48fc9ac9de7da80495df156898a13",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "650"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1342,
+          1359
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "7bbb38657a5b8855fd24857b3ca7863d2ea48fc9ac9de7da80495df156898a13",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "650"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            1342,
+            1359
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME_OMITTED_UNIT",
+      "strict_comparison": "SAME_OMITTED_UNIT",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": []
+    },
+    {
+      "case_id": "D3_E12",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_1/D3_E12_20261109/result.json",
+      "source_sha256": "4398f344ab2f19a4bf2137570bbf15ec08b9477d3c05add128cabe97297b4240",
+      "think_close_generated_index": 3795,
+      "think_text_sha256": "7bd7b26e7809ba084119113e7338cd9144ff2396677af45610cab2d843dadd64",
+      "final_text_sha256": "1a48af1e24a6d6b292b200a9ab2b26ae62b0dcfc68212d351af43280eb8e5c47",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "",
+        "requested_normalized": "",
+        "question_sha256": "cc6fae59337098413557f98d618019ff86d5bf63937d1ffa4d1abc27ef37f9d9"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "5bf965466eab071b3c0cb4d3f378cf381951b35878e7270b639d26b36ba08f6a",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "61"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            28
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          8435,
+          8463
+        ],
+        "source": "\n**Final Answer**\n\\boxed{61}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "1a48af1e24a6d6b292b200a9ab2b26ae62b0dcfc68212d351af43280eb8e5c47",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "61"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2857,
+          2873
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "1a48af1e24a6d6b292b200a9ab2b26ae62b0dcfc68212d351af43280eb8e5c47",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "61"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            2857,
+            2873
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": []
+    },
+    {
+      "case_id": "D3_E12",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_0/D3_E12_20261110/result.json",
+      "source_sha256": "7e49a6b442143ee7b43da32d04bc170c02c51a338dfd64c4f9e050b4d17474ff",
+      "think_close_generated_index": 3858,
+      "think_text_sha256": "4a3036e05320d7f2ea9f91aab54df6ed037bc4c3f68219a0fce59b6bf27ea5dd",
+      "final_text_sha256": "fa96517e68a0f9ca2074cc301348942c26aa882314bc46bb36985dde2add5eaa",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "",
+        "requested_normalized": "",
+        "question_sha256": "cc6fae59337098413557f98d618019ff86d5bf63937d1ffa4d1abc27ef37f9d9"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "5bf965466eab071b3c0cb4d3f378cf381951b35878e7270b639d26b36ba08f6a",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "61"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            28
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          8761,
+          8789
+        ],
+        "source": "\n**Final Answer**\n\\boxed{61}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "fa96517e68a0f9ca2074cc301348942c26aa882314bc46bb36985dde2add5eaa",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "45"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          4066,
+          4082
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "fa96517e68a0f9ca2074cc301348942c26aa882314bc46bb36985dde2add5eaa",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "45"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            4066,
+            4082
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "DIFFERENT_VALUE",
+      "strict_comparison": "DIFFERENT_VALUE",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "checker": "d35-witness-arbitration-v1",
+        "contract_id": "wc_a123f4904e51f447de4f5eedb5396e1dde5ea6c2",
+        "question_sha256": "cc6fae59337098413557f98d618019ff86d5bf63937d1ffa4d1abc27ef37f9d9",
+        "target_id": "goal_f2a5343594b98ca41203ddebb66c9e8b767651356617a3df12c666577632d83b",
+        "claim_id": "obs_2c998b65915f49abd49626cc2d0b50b7965eccb2d83825beb0dbb9757f48c9bf",
+        "claim_type": "FINAL_ANSWER_REVISION",
+        "observed_prefix_sha256": "0b23592bab0a9d07ca86fc426c8e369f8a2321e0a70d8a7ef0c5edda4a525b30",
+        "status": "FINAL_ANSWER_CONFLICT",
+        "action": "VETO_DRAFT_AND_DELIVER_CERTIFIED",
+        "reason": "checked_unique_answer",
+        "witness": {
+          "source": "OBSERVED_CANDIDATE",
+          "candidate_id": "obs_947d3c6325787ca9dede1eac602ef9f70f3273cf28005f925a4da7a9dec2f88b",
+          "value": 61
+        },
+        "mathematical": {
+          "status": "CERTIFIED_EXACT",
+          "reason": "unique_sequence_parameters_and_target",
+          "proof_scope": "FULL_OBJECTIVE",
+          "certified_value": 61,
+          "witness": {
+            "a1": {
+              "den": 2,
+              "num": 1,
+              "op": "rat"
+            },
+            "answer": 61,
+            "b1": {
+              "den": 2,
+              "num": 1,
+              "op": "rat"
+            },
+            "d": 5,
+            "r": -3
+          },
+          "evidence": {
+            "constraints": [
+              {
+                "index": 1,
+                "expected": 1,
+                "actual": 1
+              },
+              {
+                "index": 2,
+                "expected": 4,
+                "actual": 4
+              },
+              {
+                "index": 3,
+                "expected": 15,
+                "actual": 15
+              },
+              {
+                "index": 4,
+                "expected": 2,
+                "actual": 2
+              }
+            ],
+            "uniqueness": {
+              "first_second_difference": 8,
+              "second_second_difference": -24,
+              "rule": "nonzero_second_difference_fixes_common_ratio"
+            }
+          },
+          "checker_version": "wgr-witness-contract-v1",
+          "checker_sha256": "9b3cbcbf75127667f0b96c5f6652170458eba58d72abc74eee1aef5c8dcb29e4",
+          "paid_check_count": 7,
+          "work": {
+            "used": 7,
+            "by_operation": {
+              "sequence_constraint": 4,
+              "sequence_target": 1,
+              "sequence_second_difference": 1,
+              "sequence_unique_parameters": 1
+            },
+            "trace_sha256": "43df09a05ce9ab3a3caf8fadf203cdb8c90ed088cbc4ba775ccaf7534ad98442"
+          },
+          "certificate_sha256": "14f729f3779ceb5064b19d415cb3a645deadb186c97b553139ebc185cc00d220"
+        },
+        "released_value": 61,
+        "certificate_sha256": "c50c6097ae14b3ba26ea6d20a164ca768b35e37f58a85e4ea9fff28b75bd84f6",
+        "verification_wall_seconds": 0.0019392999965930358
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 5728,
+          "end": 5753,
+          "source": "(-3 - 1)^2 = (-4)^2 = 16.",
+          "left": "16",
+          "operator": "=",
+          "right": "16",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 5728,
+          "end": 5753,
+          "source": "(-3 - 1)^2 = (-4)^2 = 16.",
+          "left": "16",
+          "operator": "=",
+          "right": "16",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 2792,
+          "end": 2843,
+          "source": "$$\n(-3)^3 + (-3)^2 - 3 = -27 + 9 - 3 = -21 \\ne 0\n$$",
+          "left": "-21",
+          "operator": "=",
+          "right": "-21",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2792,
+          "end": 2843,
+          "source": "$$\n(-3)^3 + (-3)^2 - 3 = -27 + 9 - 3 = -21 \\ne 0\n$$",
+          "left": "-21",
+          "operator": "=",
+          "right": "-21",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2792,
+          "end": 2843,
+          "source": "$$\n(-3)^3 + (-3)^2 - 3 = -27 + 9 - 3 = -21 \\ne 0\n$$",
+          "left": "-21",
+          "operator": "!=",
+          "right": "0",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2862,
+          "end": 2911,
+          "source": "$$\n(-2)^3 + (-2)^2 - 3 = -8 + 4 - 3 = -7 \\ne 0\n$$",
+          "left": "-7",
+          "operator": "=",
+          "right": "-7",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2862,
+          "end": 2911,
+          "source": "$$\n(-2)^3 + (-2)^2 - 3 = -8 + 4 - 3 = -7 \\ne 0\n$$",
+          "left": "-7",
+          "operator": "=",
+          "right": "-7",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2862,
+          "end": 2911,
+          "source": "$$\n(-2)^3 + (-2)^2 - 3 = -8 + 4 - 3 = -7 \\ne 0\n$$",
+          "left": "-7",
+          "operator": "!=",
+          "right": "0",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2930,
+          "end": 2979,
+          "source": "$$\n(-1)^3 + (-1)^2 - 3 = -1 + 1 - 3 = -3 \\ne 0\n$$",
+          "left": "-3",
+          "operator": "=",
+          "right": "-3",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2930,
+          "end": 2979,
+          "source": "$$\n(-1)^3 + (-1)^2 - 3 = -1 + 1 - 3 = -3 \\ne 0\n$$",
+          "left": "-3",
+          "operator": "=",
+          "right": "-3",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2930,
+          "end": 2979,
+          "source": "$$\n(-1)^3 + (-1)^2 - 3 = -1 + 1 - 3 = -3 \\ne 0\n$$",
+          "left": "-3",
+          "operator": "!=",
+          "right": "0",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2997,
+          "end": 3023,
+          "source": "$$\n1 + 1 - 3 = -1 \\ne 0\n$$",
+          "left": "-1",
+          "operator": "=",
+          "right": "-1",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2997,
+          "end": 3023,
+          "source": "$$\n1 + 1 - 3 = -1 \\ne 0\n$$",
+          "left": "-1",
+          "operator": "!=",
+          "right": "0",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3041,
+          "end": 3066,
+          "source": "$$\n8 + 4 - 3 = 9 \\ne 0\n$$",
+          "left": "9",
+          "operator": "=",
+          "right": "9",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3041,
+          "end": 3066,
+          "source": "$$\n8 + 4 - 3 = 9 \\ne 0\n$$",
+          "left": "9",
+          "operator": "!=",
+          "right": "0",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3084,
+          "end": 3111,
+          "source": "$$\n27 + 9 - 3 = 33 \\ne 0\n$$",
+          "left": "33",
+          "operator": "=",
+          "right": "33",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3084,
+          "end": 3111,
+          "source": "$$\n27 + 9 - 3 = 33 \\ne 0\n$$",
+          "left": "33",
+          "operator": "!=",
+          "right": "0",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3136,
+          "end": 3187,
+          "source": "$$\n(-3)^3 + (-3)^2 - 3 = -27 + 9 - 3 = -21 \\ne 0\n$$",
+          "left": "-21",
+          "operator": "=",
+          "right": "-21",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3136,
+          "end": 3187,
+          "source": "$$\n(-3)^3 + (-3)^2 - 3 = -27 + 9 - 3 = -21 \\ne 0\n$$",
+          "left": "-21",
+          "operator": "=",
+          "right": "-21",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3136,
+          "end": 3187,
+          "source": "$$\n(-3)^3 + (-3)^2 - 3 = -27 + 9 - 3 = -21 \\ne 0\n$$",
+          "left": "-21",
+          "operator": "!=",
+          "right": "0",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E13",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_0/D3_E13_20261109/result.json",
+      "source_sha256": "e71bd5ebb0363da0d1b6085efa7574a9661e3bcb1684fccc0d736eb7748d2972",
+      "think_close_generated_index": 17338,
+      "think_text_sha256": "b1eea4c959356d01e4dfeafbbcba403a4f89b1fcff1ee9ce371a1d0fb1f6952c",
+      "final_text_sha256": "b1330e99a3471904199ef0968e32ad04109afba8c0fd12e3746854a465a64371",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "all integers $n \\geqslant 1$ for which there exists a pair of positive integers $(a, b)$ such that no cube of a prime divides $a^{2}+b+3$ and\n\n$$\n\\frac{a b+3 b+8}{a^{2}+b+3}=n\n$$",
+        "requested_normalized": "all integers n \\geqslant 1 for which there exists a pair of positive integers (a, b) such that no cube of a prime divides a^2+b+3 and \\fraca b+3 b+8a^2+b+3=n",
+        "question_sha256": "1cc6cc3340f614f83cdbc0c05d64ecce96243d0d3bf362cfb71d96b3f07361a9"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "f4df8624fb1380d4dddd51da73e4eaa1de4f4f084c6b355a26ba18f47c97d56f",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "2"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            27
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          40828,
+          40855
+        ],
+        "source": "\n**Final Answer**\n\\boxed{2}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "b1330e99a3471904199ef0968e32ad04109afba8c0fd12e3746854a465a64371",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "2"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2901,
+          2916
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "b1330e99a3471904199ef0968e32ad04109afba8c0fd12e3746854a465a64371",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "2"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            2901,
+            2916
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [
+        {
+          "surface_role": "n",
+          "span": [
+            7681,
+            7687
+          ],
+          "source": " n = 2"
+        },
+        {
+          "surface_role": "b",
+          "span": [
+            15112,
+            15117
+          ],
+          "source": "b = 2"
+        },
+        {
+          "surface_role": "d",
+          "span": [
+            20603,
+            20608
+          ],
+          "source": "d = 2"
+        },
+        {
+          "surface_role": "a",
+          "span": [
+            22079,
+            22084
+          ],
+          "source": "a = 2"
+        }
+      ],
+      "distinct_named_contexts_for_final_literal": [
+        {
+          "surface_role": "n",
+          "span": [
+            1826,
+            1832
+          ],
+          "source": " n = 2"
+        },
+        {
+          "surface_role": "a",
+          "span": [
+            2099,
+            2105
+          ],
+          "source": " a = 2"
+        }
+      ],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": []
+    },
+    {
+      "case_id": "D3_E13",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_1/D3_E13_20261110/result.json",
+      "source_sha256": "9bf6bbc6c5f3175343a5b64099b0a93e30e98de971381e9069b9bebe0f1582c7",
+      "think_close_generated_index": 14650,
+      "think_text_sha256": "b7d1d5691022789d01b69a0bceab2378eb26359af6bdd8891fbf6a0c1bd51728",
+      "final_text_sha256": "a6a468abda9f53ccad6867d86fcafdb0cfced24deec4ae9995c1dcbf5941094c",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "all integers $n \\geqslant 1$ for which there exists a pair of positive integers $(a, b)$ such that no cube of a prime divides $a^{2}+b+3$ and\n\n$$\n\\frac{a b+3 b+8}{a^{2}+b+3}=n\n$$",
+        "requested_normalized": "all integers n \\geqslant 1 for which there exists a pair of positive integers (a, b) such that no cube of a prime divides a^2+b+3 and \\fraca b+3 b+8a^2+b+3=n",
+        "question_sha256": "1cc6cc3340f614f83cdbc0c05d64ecce96243d0d3bf362cfb71d96b3f07361a9"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "f4df8624fb1380d4dddd51da73e4eaa1de4f4f084c6b355a26ba18f47c97d56f",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "2"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            27
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          33807,
+          33834
+        ],
+        "source": "\n**Final Answer**\n\\boxed{2}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "a6a468abda9f53ccad6867d86fcafdb0cfced24deec4ae9995c1dcbf5941094c",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "2"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          4234,
+          4249
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "a6a468abda9f53ccad6867d86fcafdb0cfced24deec4ae9995c1dcbf5941094c",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "2"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            4234,
+            4249
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [
+        {
+          "surface_role": "a",
+          "span": [
+            4980,
+            4983
+          ],
+          "source": "a=2"
+        },
+        {
+          "surface_role": "b",
+          "span": [
+            5744,
+            5750
+          ],
+          "source": " b = 2"
+        },
+        {
+          "surface_role": "n",
+          "span": [
+            6634,
+            6638
+          ],
+          "source": " n=2"
+        }
+      ],
+      "distinct_named_contexts_for_final_literal": [
+        {
+          "surface_role": "n",
+          "span": [
+            1458,
+            1464
+          ],
+          "source": " n = 2"
+        },
+        {
+          "surface_role": "b",
+          "span": [
+            1697,
+            1702
+          ],
+          "source": "b = 2"
+        },
+        {
+          "surface_role": "a",
+          "span": [
+            2155,
+            2161
+          ],
+          "source": " a = 2"
+        }
+      ],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": []
+    },
+    {
+      "case_id": "D3_E14",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_1/D3_E14_20261109/result.json",
+      "source_sha256": "e6ec08c93ee5b7ed9c526a3085ef4a5071a27119e0317b7df68329cb19954178",
+      "think_close_generated_index": 14090,
+      "think_text_sha256": "15979279f6c54ceefabbd5c8d26f7ea42d223f37576a175a142c2cdb94905218",
+      "final_text_sha256": "81f6b1c35f31c9f4cf204172819c0eb121d166df7ae27372161cb226c3afc3b2",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the number of positive integer divisors of $k$ that are divisible by exactly 28 of the numbers in the set $\\mathcal{S}$.",
+        "requested_normalized": "the number of positive integer divisors of k that are divisible by exactly 28 of the numbers in the set \\mathcals.",
+        "question_sha256": "63c65a5773e2ab224d265919edd647c6e968b18ecc089e4fa846cd3173cf2d73"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "7748d8edab630274293786ce54240403b934339f5577062e22cab0c688188889",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "21"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            28
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          43211,
+          43239
+        ],
+        "source": "\n**Final Answer**\n\\boxed{21}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "81f6b1c35f31c9f4cf204172819c0eb121d166df7ae27372161cb226c3afc3b2",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "21"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          3097,
+          3113
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "81f6b1c35f31c9f4cf204172819c0eb121d166df7ae27372161cb226c3afc3b2",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "21"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            3097,
+            3113
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [],
+      "final_numeric_relations": [
+        {
+          "start": 533,
+          "end": 545,
+          "source": "$ 2^4 = 16 $",
+          "left": "16",
+          "operator": "=",
+          "right": "16",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 553,
+          "end": 570,
+          "source": "$ 2^5 = 32 > 30 $",
+          "left": "32",
+          "operator": "=",
+          "right": "32",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 553,
+          "end": 570,
+          "source": "$ 2^5 = 32 > 30 $",
+          "left": "32",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 574,
+          "end": 586,
+          "source": "$ 3^3 = 27 $",
+          "left": "27",
+          "operator": "=",
+          "right": "27",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 589,
+          "end": 601,
+          "source": "$ 5^2 = 25 $",
+          "left": "25",
+          "operator": "=",
+          "right": "25",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2251,
+          "end": 2263,
+          "source": "$ 16 = 2^4 $",
+          "left": "16",
+          "operator": "=",
+          "right": "16",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2271,
+          "end": 2288,
+          "source": "$ 2^5 = 32 > 30 $",
+          "left": "32",
+          "operator": "=",
+          "right": "32",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2271,
+          "end": 2288,
+          "source": "$ 2^5 = 32 > 30 $",
+          "left": "32",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2292,
+          "end": 2304,
+          "source": "$ 25 = 5^2 $",
+          "left": "25",
+          "operator": "=",
+          "right": "25",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2312,
+          "end": 2330,
+          "source": "$ 5^3 = 125 > 30 $",
+          "left": "125",
+          "operator": "=",
+          "right": "125",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2312,
+          "end": 2330,
+          "source": "$ 5^3 = 125 > 30 $",
+          "left": "125",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2334,
+          "end": 2346,
+          "source": "$ 27 = 3^3 $",
+          "left": "27",
+          "operator": "=",
+          "right": "27",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2354,
+          "end": 2371,
+          "source": "$ 3^4 = 81 > 30 $",
+          "left": "81",
+          "operator": "=",
+          "right": "81",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2354,
+          "end": 2371,
+          "source": "$ 3^4 = 81 > 30 $",
+          "left": "81",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E14",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_0/D3_E14_20261110/result.json",
+      "source_sha256": "dd7bbbd5de160d0f58043d377e95b73bb9e2bfe016412178f206c8785c1dd287",
+      "think_close_generated_index": 27207,
+      "think_text_sha256": "4ddb20b86c32bfe497f6e1299a56198e3a12fd327b8afc7dd1edd3f9c810ac8a",
+      "final_text_sha256": "ae21cac22ef666e7c80de91224bd835c380d318a9aafa8c93f3053843ef120ca",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the number of positive integer divisors of $k$ that are divisible by exactly 28 of the numbers in the set $\\mathcal{S}$.",
+        "requested_normalized": "the number of positive integer divisors of k that are divisible by exactly 28 of the numbers in the set \\mathcals.",
+        "question_sha256": "63c65a5773e2ab224d265919edd647c6e968b18ecc089e4fa846cd3173cf2d73"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "43d476b63648120b5552a9fb75ccbdd7a2c89abb71b547207a63a47374450942",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "105"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            29
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          82238,
+          82267
+        ],
+        "source": "\n**Final Answer**\n\\boxed{105}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "ae21cac22ef666e7c80de91224bd835c380d318a9aafa8c93f3053843ef120ca",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "105"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          3912,
+          3929
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "ae21cac22ef666e7c80de91224bd835c380d318a9aafa8c93f3053843ef120ca",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "105"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            3912,
+            3929
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 27558,
+          "end": 27572,
+          "source": "- 2*2 = 4 ≤ 30",
+          "left": "-4",
+          "operator": "=",
+          "right": "4",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27558,
+          "end": 27572,
+          "source": "- 2*2 = 4 ≤ 30",
+          "left": "4",
+          "operator": "<=",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27574,
+          "end": 27588,
+          "source": "- 2*3 = 6 ≤ 30",
+          "left": "-6",
+          "operator": "=",
+          "right": "6",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27574,
+          "end": 27588,
+          "source": "- 2*3 = 6 ≤ 30",
+          "left": "6",
+          "operator": "<=",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27590,
+          "end": 27605,
+          "source": "- 2*5 = 10 ≤ 30",
+          "left": "-10",
+          "operator": "=",
+          "right": "10",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27590,
+          "end": 27605,
+          "source": "- 2*5 = 10 ≤ 30",
+          "left": "10",
+          "operator": "<=",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27607,
+          "end": 27622,
+          "source": "- 2*7 = 14 ≤ 30",
+          "left": "-14",
+          "operator": "=",
+          "right": "14",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27607,
+          "end": 27622,
+          "source": "- 2*7 = 14 ≤ 30",
+          "left": "14",
+          "operator": "<=",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27624,
+          "end": 27640,
+          "source": "- 2*11 = 22 ≤ 30",
+          "left": "-22",
+          "operator": "=",
+          "right": "22",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27624,
+          "end": 27640,
+          "source": "- 2*11 = 22 ≤ 30",
+          "left": "22",
+          "operator": "<=",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27642,
+          "end": 27658,
+          "source": "- 2*13 = 26 ≤ 30",
+          "left": "-26",
+          "operator": "=",
+          "right": "26",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27642,
+          "end": 27658,
+          "source": "- 2*13 = 26 ≤ 30",
+          "left": "26",
+          "operator": "<=",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27660,
+          "end": 27676,
+          "source": "- 2*17 = 34 > 30",
+          "left": "-34",
+          "operator": "=",
+          "right": "34",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27660,
+          "end": 27676,
+          "source": "- 2*17 = 34 > 30",
+          "left": "34",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27678,
+          "end": 27694,
+          "source": "- 2*19 = 38 > 30",
+          "left": "-38",
+          "operator": "=",
+          "right": "38",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27678,
+          "end": 27694,
+          "source": "- 2*19 = 38 > 30",
+          "left": "38",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27696,
+          "end": 27712,
+          "source": "- 2*23 = 46 > 30",
+          "left": "-46",
+          "operator": "=",
+          "right": "46",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27696,
+          "end": 27712,
+          "source": "- 2*23 = 46 > 30",
+          "left": "46",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27714,
+          "end": 27730,
+          "source": "- 2*29 = 58 > 30",
+          "left": "-58",
+          "operator": "=",
+          "right": "58",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 27714,
+          "end": 27730,
+          "source": "- 2*29 = 58 > 30",
+          "left": "58",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 60918,
+          "end": 60925,
+          "source": "+5 = 28",
+          "left": "5",
+          "operator": "=",
+          "right": "28",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 60927,
+          "end": 60934,
+          "source": "+4 = 32",
+          "left": "4",
+          "operator": "=",
+          "right": "32",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 60936,
+          "end": 60943,
+          "source": "+3 = 35",
+          "left": "3",
+          "operator": "=",
+          "right": "35",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 60945,
+          "end": 60952,
+          "source": "+3 = 38",
+          "left": "3",
+          "operator": "=",
+          "right": "38",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 60954,
+          "end": 60961,
+          "source": "+2 = 40",
+          "left": "2",
+          "operator": "=",
+          "right": "40",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 60963,
+          "end": 60970,
+          "source": "+2 = 42",
+          "left": "2",
+          "operator": "=",
+          "right": "42",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 60972,
+          "end": 60979,
+          "source": "+2 = 44",
+          "left": "2",
+          "operator": "=",
+          "right": "44",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 60981,
+          "end": 60988,
+          "source": "+2 = 46",
+          "left": "2",
+          "operator": "=",
+          "right": "46",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 60990,
+          "end": 60997,
+          "source": "+1 = 47",
+          "left": "1",
+          "operator": "=",
+          "right": "47",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 60999,
+          "end": 61006,
+          "source": "+1 = 48",
+          "left": "1",
+          "operator": "=",
+          "right": "48",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 61008,
+          "end": 61015,
+          "source": "+1 = 49",
+          "left": "1",
+          "operator": "=",
+          "right": "49",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 61017,
+          "end": 61024,
+          "source": "+1 = 50",
+          "left": "1",
+          "operator": "=",
+          "right": "50",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 61026,
+          "end": 61034,
+          "source": "+1 = 51.",
+          "left": "1",
+          "operator": "=",
+          "right": "51",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 581,
+          "end": 591,
+          "source": "$2^4 = 16$",
+          "left": "16",
+          "operator": "=",
+          "right": "16",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 594,
+          "end": 604,
+          "source": "$3^3 = 27$",
+          "left": "27",
+          "operator": "=",
+          "right": "27",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 607,
+          "end": 617,
+          "source": "$5^2 = 25$",
+          "left": "25",
+          "operator": "=",
+          "right": "25",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 620,
+          "end": 629,
+          "source": "$7^1 = 7$",
+          "left": "7",
+          "operator": "=",
+          "right": "7",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 632,
+          "end": 643,
+          "source": "$11^1 = 11$",
+          "left": "11",
+          "operator": "=",
+          "right": "11",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 646,
+          "end": 657,
+          "source": "$13^1 = 13$",
+          "left": "13",
+          "operator": "=",
+          "right": "13",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 660,
+          "end": 671,
+          "source": "$17^1 = 17$",
+          "left": "17",
+          "operator": "=",
+          "right": "17",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 674,
+          "end": 685,
+          "source": "$19^1 = 19$",
+          "left": "19",
+          "operator": "=",
+          "right": "19",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 688,
+          "end": 699,
+          "source": "$23^1 = 23$",
+          "left": "23",
+          "operator": "=",
+          "right": "23",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 702,
+          "end": 713,
+          "source": "$29^1 = 29$",
+          "left": "29",
+          "operator": "=",
+          "right": "29",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2118,
+          "end": 2141,
+          "source": "$2 \\times 17 = 34 > 30$",
+          "left": "34",
+          "operator": "=",
+          "right": "34",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2118,
+          "end": 2141,
+          "source": "$2 \\times 17 = 34 > 30$",
+          "left": "34",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2148,
+          "end": 2171,
+          "source": "$2 \\times 19 = 38 > 30$",
+          "left": "38",
+          "operator": "=",
+          "right": "38",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2148,
+          "end": 2171,
+          "source": "$2 \\times 19 = 38 > 30$",
+          "left": "38",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2178,
+          "end": 2201,
+          "source": "$2 \\times 23 = 46 > 30$",
+          "left": "46",
+          "operator": "=",
+          "right": "46",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2178,
+          "end": 2201,
+          "source": "$2 \\times 23 = 46 > 30$",
+          "left": "46",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2208,
+          "end": 2231,
+          "source": "$2 \\times 29 = 58 > 30$",
+          "left": "58",
+          "operator": "=",
+          "right": "58",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 2208,
+          "end": 2231,
+          "source": "$2 \\times 29 = 58 > 30$",
+          "left": "58",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3419,
+          "end": 3442,
+          "source": "$2 \\times 16 = 32 > 30$",
+          "left": "32",
+          "operator": "=",
+          "right": "32",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3419,
+          "end": 3442,
+          "source": "$2 \\times 16 = 32 > 30$",
+          "left": "32",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3445,
+          "end": 3468,
+          "source": "$2 \\times 17 = 34 > 30$",
+          "left": "34",
+          "operator": "=",
+          "right": "34",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3445,
+          "end": 3468,
+          "source": "$2 \\times 17 = 34 > 30$",
+          "left": "34",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3477,
+          "end": 3500,
+          "source": "$2 \\times 30 = 60 > 30$",
+          "left": "60",
+          "operator": "=",
+          "right": "60",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 3477,
+          "end": 3500,
+          "source": "$2 \\times 30 = 60 > 30$",
+          "left": "60",
+          "operator": ">",
+          "right": "30",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E15",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_0/D3_E15_20261109/result.json",
+      "source_sha256": "05670e8f01b7ef0660289eb4fafb3b352feb5862dd489ce68e702ac9a88bace8",
+      "think_close_generated_index": 15251,
+      "think_text_sha256": "277cf124c6b1468541a8d53b7b5486679439c608e723d896e061ce1ccc094084",
+      "final_text_sha256": "e34adf8dfbe6af5b1cbd2f7c4082f61b5ea4feadef7a02adcf2271bb79fdd378",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the greatest fibbish number.",
+        "requested_normalized": "the greatest fibbish number.",
+        "question_sha256": "f005e50e39007c6a7bbb989434b36f69ba3475ff68e56335664a11582985dcdb"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "3906a84476391fccec09b2cd8537268ea71bcab6d9d1acecc465e9163df4de70",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "10112369"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "whole_final_object",
+          "selected_span": [
+            0,
+            16
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          45482,
+          45548
+        ],
+        "source": "\n**Final Answer**\nThe greatest fibbish number is \\boxed{10112369}."
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "e34adf8dfbe6af5b1cbd2f7c4082f61b5ea4feadef7a02adcf2271bb79fdd378",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2531,
+          2553
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "e34adf8dfbe6af5b1cbd2f7c4082f61b5ea4feadef7a02adcf2271bb79fdd378",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "10112369"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            2531,
+            2553
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 376,
+          "end": 391,
+          "source": "3 is equal to 3",
+          "left": "3",
+          "operator": "=",
+          "right": "3",
+          "exact_truth": true,
+          "scope": "CONDITIONAL_OR_UNCERTAIN",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 658,
+          "end": 674,
+          "source": "4 is less than 5",
+          "left": "4",
+          "operator": "<",
+          "right": "5",
+          "exact_truth": true,
+          "scope": "CONDITIONAL_OR_UNCERTAIN",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 16098,
+          "end": 16130,
+          "source": "10112369 is larger than 10112358",
+          "left": "10112369",
+          "operator": ">",
+          "right": "10112358",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        }
+      ],
+      "final_numeric_relations": []
+    },
+    {
+      "case_id": "D3_E15",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_1/D3_E15_20261110/result.json",
+      "source_sha256": "f57d658638a95d86a9643d6a308baf1cb8f57c3993d0b18af30fff04d3b88b7b",
+      "think_close_generated_index": 24935,
+      "think_text_sha256": "79825272d88b4a1fd9561307ad9d75ce82c9b79320bd620e90ec6b7e9ee2032e",
+      "final_text_sha256": "5327fde7484f5c6ee3c99064d93cb8ff14f9f3ea6d14b56df7b32ad338d99774",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the greatest fibbish number.",
+        "requested_normalized": "the greatest fibbish number.",
+        "question_sha256": "f005e50e39007c6a7bbb989434b36f69ba3475ff68e56335664a11582985dcdb"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "29e953d916a16f7567e91a3427010f7e7378648f9f4041fd01035e4c1e5b06b7",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "303369"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "whole_final_object",
+          "selected_span": [
+            0,
+            14
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          67723,
+          67787
+        ],
+        "source": "\n**Final Answer**\nThe greatest fibbish number is \\boxed{303369}."
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "5327fde7484f5c6ee3c99064d93cb8ff14f9f3ea6d14b56df7b32ad338d99774",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2325,
+          2345
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "5327fde7484f5c6ee3c99064d93cb8ff14f9f3ea6d14b56df7b32ad338d99774",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "303369"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            2325,
+            2345
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 3845,
+          "end": 3865,
+          "source": "279 is less than 189",
+          "left": "279",
+          "operator": "<",
+          "right": "189",
+          "exact_truth": false,
+          "scope": "QUESTION_OR_UNCERTAIN",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 4223,
+          "end": 4245,
+          "source": "369 is larger than 279",
+          "left": "369",
+          "operator": ">",
+          "right": "279",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 4350,
+          "end": 4370,
+          "source": "359 is less than 369",
+          "left": "359",
+          "operator": "<",
+          "right": "369",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 4512,
+          "end": 4534,
+          "source": "459 is larger than 369",
+          "left": "459",
+          "operator": ">",
+          "right": "369",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 4674,
+          "end": 4694,
+          "source": "449 is less than 459",
+          "left": "449",
+          "operator": "<",
+          "right": "459",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 5087,
+          "end": 5109,
+          "source": "549 is larger than 459",
+          "left": "549",
+          "operator": ">",
+          "right": "459",
+          "exact_truth": true,
+          "scope": "CONDITIONAL_OR_UNCERTAIN",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 6506,
+          "end": 6528,
+          "source": "639 is larger than 549",
+          "left": "639",
+          "operator": ">",
+          "right": "549",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 6597,
+          "end": 6617,
+          "source": "628 is less than 639",
+          "left": "628",
+          "operator": "<",
+          "right": "639",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 7068,
+          "end": 7090,
+          "source": "729 is larger than 639",
+          "left": "729",
+          "operator": ">",
+          "right": "639",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 7510,
+          "end": 7532,
+          "source": "819 is larger than 729",
+          "left": "819",
+          "operator": ">",
+          "right": "729",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 7601,
+          "end": 7621,
+          "source": "808 is less than 819",
+          "left": "808",
+          "operator": "<",
+          "right": "819",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 8006,
+          "end": 8028,
+          "source": "909 is larger than 819",
+          "left": "909",
+          "operator": ">",
+          "right": "819",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 21482,
+          "end": 21508,
+          "source": "40459 is larger than 40449",
+          "left": "40459",
+          "operator": ">",
+          "right": "40449",
+          "exact_truth": true,
+          "scope": "CONDITIONAL_OR_UNCERTAIN",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 32387,
+          "end": 32448,
+          "source": "the five-digit number is 10145. But that's smaller than 40459",
+          "left": "10145",
+          "operator": "<",
+          "right": "40459",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "BOUNDED_ADJACENT_COREFERENCE"
+        },
+        {
+          "start": 39994,
+          "end": 40021,
+          "source": "303369 is larger than 40459",
+          "left": "303369",
+          "operator": ">",
+          "right": "40459",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 53589,
+          "end": 53654,
+          "source": "the seven-digit number is 1011235. But that's smaller than 303369",
+          "left": "1011235",
+          "operator": "<",
+          "right": "303369",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "BOUNDED_ADJACENT_COREFERENCE"
+        },
+        {
+          "start": 63115,
+          "end": 63145,
+          "source": "1011235 is smaller than 303369",
+          "left": "1011235",
+          "operator": "<",
+          "right": "303369",
+          "exact_truth": false,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 883,
+          "end": 896,
+          "source": "$ 9 + 0 = 9 $",
+          "left": "9",
+          "operator": "=",
+          "right": "9",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        },
+        {
+          "start": 902,
+          "end": 914,
+          "source": "$ 9 \\geq 9 $",
+          "left": "9",
+          "operator": ">=",
+          "right": "9",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E16",
+      "seed": 20261109,
+      "source_path": "bank/native_results/worker_1/D3_E16_20261109/result.json",
+      "source_sha256": "df298e53bd637a09febb1b2717261cd31775c6455a1a346ef9d1bd972cc748e0",
+      "think_close_generated_index": 4564,
+      "think_text_sha256": "17797edc727938b0d840c670fa46b14b498d3cc92016e06876f01033946d7637",
+      "final_text_sha256": "54c9bf5838c152e8daa6f835404e541ce5ed66f40dd037af654c7b56587872c8",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the number of positive perfect cubes that are divisors of $(T+10) !$.",
+        "requested_normalized": "the number of positive perfect cubes that are divisors of (t+10) !.",
+        "question_sha256": "2cbe71a3ea2e5fb29f81e288cda1512af6c918b76fb10c9eabebed2d90d71c80"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "146fe077f0fec49b1a1d1ae15d88a1a809363fc17bca8abb938dcf4d9d352231",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "36"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            28
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          11677,
+          11705
+        ],
+        "source": "\n**Final Answer**\n\\boxed{36}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "54c9bf5838c152e8daa6f835404e541ce5ed66f40dd037af654c7b56587872c8",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "36"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2522,
+          2538
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "54c9bf5838c152e8daa6f835404e541ce5ed66f40dd037af654c7b56587872c8",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "36"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            2522,
+            2538
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 3267,
+          "end": 3285,
+          "source": "3 is larger than 2",
+          "left": "3",
+          "operator": ">",
+          "right": "2",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 3696,
+          "end": 3707,
+          "source": "18 * 2 = 36",
+          "left": "36",
+          "operator": "=",
+          "right": "36",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 2431,
+          "end": 2497,
+          "source": "$$\n6 \\times 3 \\times 2 \\times 1 \\times 1 \\times 1 \\times 1 = 36\n$$",
+          "left": "36",
+          "operator": "=",
+          "right": "36",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    },
+    {
+      "case_id": "D3_E16",
+      "seed": 20261110,
+      "source_path": "bank/native_results/worker_0/D3_E16_20261110/result.json",
+      "source_sha256": "3a3e85d3843060cbcd85b564685983bbf11ef52e56da90869bd1f6e20e7e544a",
+      "think_close_generated_index": 5321,
+      "think_text_sha256": "827b273ecb7799ed19743813079f623b33a3e993e29d42846e64ff203613a7a8",
+      "final_text_sha256": "d32629db1494c87f17b4e9332513d549ceef4badc80f2221e4a1732b4c984dbe",
+      "target": {
+        "answer_kind": "scalar",
+        "requested_surface": "the number of positive perfect cubes that are divisors of $(T+10) !$.",
+        "requested_normalized": "the number of positive perfect cubes that are divisors of (t+10) !.",
+        "question_sha256": "2cbe71a3ea2e5fb29f81e288cda1512af6c918b76fb10c9eabebed2d90d71c80"
+      },
+      "thinking": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "146fe077f0fec49b1a1d1ae15d88a1a809363fc17bca8abb938dcf4d9d352231",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "36"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            18,
+            28
+          ]
+        },
+        "selection_method": "explicit_final_section",
+        "char_span": [
+          12876,
+          12904
+        ],
+        "source": "\n**Final Answer**\n\\boxed{36}"
+      },
+      "frozen_final": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "d32629db1494c87f17b4e9332513d549ceef4badc80f2221e4a1732b4c984dbe",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "36"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2683,
+          2699
+        ]
+      },
+      "target_final": {
+        "status": "EXPLICIT_COMMIT",
+        "selection": {
+          "version": "phase5d25_complete_answer_v1",
+          "requested_kind": "scalar",
+          "final_response_sha256": "d32629db1494c87f17b4e9332513d549ceef4badc80f2221e4a1732b4c984dbe",
+          "selection_uses_gold": false,
+          "status": "ok",
+          "kind": "scalar",
+          "components": [
+            "36"
+          ],
+          "unit": null,
+          "closure": null,
+          "vector_shape": null,
+          "method": "explicit_terminal_answer",
+          "selected_span": [
+            2683,
+            2699
+          ]
+        },
+        "selection_method": "frozen_v2"
+      },
+      "target_comparison": "SAME",
+      "strict_comparison": "SAME",
+      "distinct_named_contexts_for_thinking_literal": [],
+      "distinct_named_contexts_for_final_literal": [],
+      "gate": {
+        "action": "RETAIN_NATIVE",
+        "reason": "no_comparable_different_object"
+      },
+      "thinking_numeric_relations": [
+        {
+          "start": 3777,
+          "end": 3795,
+          "source": "3 is larger than 2",
+          "left": "3",
+          "operator": ">",
+          "right": "2",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "EXPLICIT_NUMERIC_PROSE"
+        },
+        {
+          "start": 7269,
+          "end": 7282,
+          "source": "2^0 * 3^0 = 1",
+          "left": "1",
+          "operator": "=",
+          "right": "1",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 7284,
+          "end": 7298,
+          "source": "2^0 * 3^3 = 27",
+          "left": "27",
+          "operator": "=",
+          "right": "27",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 7300,
+          "end": 7313,
+          "source": "2^3 * 3^0 = 8",
+          "left": "8",
+          "operator": "=",
+          "right": "8",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 7315,
+          "end": 7335,
+          "source": "2^3 * 3^3 = 8*27=216",
+          "left": "216",
+          "operator": "=",
+          "right": "216",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 7315,
+          "end": 7335,
+          "source": "2^3 * 3^3 = 8*27=216",
+          "left": "216",
+          "operator": "=",
+          "right": "216",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 7337,
+          "end": 7351,
+          "source": "2^6 * 3^0 = 64",
+          "left": "64",
+          "operator": "=",
+          "right": "64",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 7353,
+          "end": 7376,
+          "source": "2^6 * 3^3 = 64*27= 1728",
+          "left": "1728",
+          "operator": "=",
+          "right": "1728",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        },
+        {
+          "start": 7353,
+          "end": 7376,
+          "source": "2^6 * 3^3 = 64*27= 1728",
+          "left": "1728",
+          "operator": "=",
+          "right": "1728",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_NUMERIC_LINE"
+        }
+      ],
+      "final_numeric_relations": [
+        {
+          "start": 2492,
+          "end": 2558,
+          "source": "$$\n6 \\times 3 \\times 2 \\times 1 \\times 1 \\times 1 \\times 1 = 36\n$$",
+          "left": "36",
+          "operator": "=",
+          "right": "36",
+          "exact_truth": true,
+          "scope": "ASSERTED_EXACT",
+          "extraction": "WHOLE_DELIMITED_RELATION"
+        }
+      ]
+    }
+  ]
+}

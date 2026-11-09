@@ -1,0 +1,1383 @@
+{
+  "status": "PINNED_ADDITIONAL_DRAWS_VERIFIED_METADATA_ONLY",
+  "source": {
+    "repo_id": "suryadv/qwen3-8b-aime-2009-2024-16x",
+    "revision": "c34143c92856d9b90fdb9c808c7e66070dcab9a1",
+    "public_resolve_base": "https://huggingface.co/datasets/suryadv/qwen3-8b-aime-2009-2024-16x/resolve/c34143c92856d9b90fdb9c808c7e66070dcab9a1/",
+    "source_directory": "outputs/d44_aime_source_20261110",
+    "publication_manifest": {
+      "path": "PUBLICATION_MANIFEST.json",
+      "size": 3941,
+      "sha256": "f1b27b3528a8f6d8b23db46d394bade22067bdbae973d87f9bb5182746f86453"
+    },
+    "publication_contract_sha256": "185daff44fc19ac2102b42bf480de11a7651bae7eb6253fff8ea9d030ac58e61",
+    "eval_policy": {
+      "path": "eval_policy.json",
+      "sha256": "a58428cbaeff2641f866829b2e3ca4a4a7d181bf5edf17f5a0b5511a4f4fc096",
+      "size": 2884
+    }
+  },
+  "draws": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "shards": [
+    {
+      "path": "data/draw-04.parquet",
+      "sha256": "5313e32b22364e2c45f173316e7ad57dee08c78cd690f3ca22e0971e941f2578",
+      "size": 4471093,
+      "footer_rows": 480,
+      "row_groups": 1,
+      "metadata_verified_rows": 480,
+      "selected_identity_matches": 32
+    },
+    {
+      "path": "data/draw-05.parquet",
+      "sha256": "6890476dbb83b59586d182d0bbd1ea57f4c691d9ce4dcef68e9d1a9ec613246c",
+      "size": 4457162,
+      "footer_rows": 480,
+      "row_groups": 1,
+      "metadata_verified_rows": 480,
+      "selected_identity_matches": 32
+    },
+    {
+      "path": "data/draw-06.parquet",
+      "sha256": "846dc518e717cb6f6ab79502d6b0aa3ed9a9ec13428a3bf24692bb1e4c031bec",
+      "size": 4373123,
+      "footer_rows": 480,
+      "row_groups": 1,
+      "metadata_verified_rows": 480,
+      "selected_identity_matches": 32
+    },
+    {
+      "path": "data/draw-07.parquet",
+      "sha256": "8dcbd7c485f1c1b39828a54f0ac04feed117fcf73e51b629bd4cc271c87f4983",
+      "size": 4373909,
+      "footer_rows": 480,
+      "row_groups": 1,
+      "metadata_verified_rows": 480,
+      "selected_identity_matches": 32
+    }
+  ],
+  "downloaded_parquet_bytes": 17675287,
+  "full_source_rows_verified": 1920,
+  "projection_columns_used": [
+    "problem_id",
+    "eval_index",
+    "year",
+    "part",
+    "problem_number",
+    "sample_id",
+    "draw_index",
+    "seed",
+    "response_sha256",
+    "rendered_prompt_sha256",
+    "source_record_sha256",
+    "model_id",
+    "model_revision",
+    "generation_parameters_json",
+    "contract_sha256"
+  ],
+  "trace_parquet_schema": [
+    {
+      "field": "sample_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "eval_index",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "draw_index",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "seed",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "problem_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "year",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "part",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "contest",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "problem_number",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "problem",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "has_asy",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "field": "prompt",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "messages_json",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "rendered_prompt",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "response",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "gold_answer_raw",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "gold_answer_canonical",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "accepted_answer_integers",
+      "type": "list<element: int64>",
+      "nullable": true
+    },
+    {
+      "field": "extracted_answer_raw",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "extracted_answer_integer",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "is_scorable",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "field": "is_correct",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "field": "matched_gold_integer",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "decision_reason",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "complete_box_found",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "field": "cap_hit",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "field": "finish_reason",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "stop_condition",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "stop_token_id",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "input_tokens",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "output_tokens",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "effective_max_new_tokens",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "field": "model_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "model_revision",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "generation_parameters_json",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "scorer_version",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "scorer_trace_json",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "source_kind",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "source_dataset",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "source_revision",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "source_url",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "source_record_sha256",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "rendered_prompt_sha256",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "response_sha256",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "field": "contract_sha256",
+      "type": "string",
+      "nullable": true
+    }
+  ],
+  "model": {
+    "id": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "dtype": "bfloat16"
+  },
+  "generation_contract": {
+    "parameters": {
+      "enable_thinking": true,
+      "min_p": 0.0,
+      "temperature": 0.6,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "seed_formula": "1234 + 480 * draw_index + eval_index",
+    "context_budget": 32768,
+    "stop_policy": {
+      "accepted_token_ids": [
+        151643,
+        151645
+      ],
+      "accepted_tokens": [
+        "<|endoftext|>",
+        "<|im_end|>"
+      ],
+      "include_stop_token_in_response": false
+    }
+  },
+  "cohort_identity": {
+    "d43_cohort_sha256": "1eb07b5bcc988124ed0b79af779b6a08a20e3621b736a590f928df1790d8a01d",
+    "reference_draw00": {
+      "path": "data/draw-00.parquet",
+      "sha256": "5da6ef58914d22c60659e7e21266f4530021993014d8af6cebe1a640d137c787",
+      "size": 4317872
+    },
+    "selected_question_count": 32,
+    "selected_draw_count": 128,
+    "matching_keys": [
+      "problem_id",
+      "eval_index",
+      "year",
+      "part",
+      "problem_number",
+      "rendered_prompt_sha256",
+      "source_record_sha256"
+    ],
+    "rows": [
+      {
+        "problem_id": "2013-II-11",
+        "eval_index": 355,
+        "rendered_prompt_sha256": "52ecc70d284114d3e1bd19ab77d291273d8cdb8e5341b2d36642ed11bd3bfd50",
+        "source_record_sha256": "eb97e984c47202a6ab8c2ccb81db9f6269b5c3737f1e3caf62bcac8363a79516",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2013-II-11:draw-04",
+            "seed": 3509,
+            "response_sha256": "c6cbc79916865e1bb9d9faaa8b18e7a21c3a0b8c080e1024152bda65d6b552ee"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2013-II-11:draw-05",
+            "seed": 3989,
+            "response_sha256": "da28bea4c47d19f5f4fbe61997d56cc8966481e367a613cdfa33cac4d6f735ca"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2013-II-11:draw-06",
+            "seed": 4469,
+            "response_sha256": "04142cdada1442e3bf822c4c9a0805cc99c31ea1e2ef3653ecd3efe9f4314de7"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2013-II-11:draw-07",
+            "seed": 4949,
+            "response_sha256": "784f1b93e4bf995a161980ea08c47911fd31982403cf011fda34080e0673e4c6"
+          }
+        ]
+      },
+      {
+        "problem_id": "2017-I-3",
+        "eval_index": 212,
+        "rendered_prompt_sha256": "10ea9bce25f33c335543b704edda4b87b8a147fcffa2cc738d11fb0d0f1b62ba",
+        "source_record_sha256": "e2a21633653688da732a04b62c149215504c5e3b701c07de9312d800cf624519",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2017-I-3:draw-04",
+            "seed": 3366,
+            "response_sha256": "ec3777403b48d3d1f2e26a167b02d9de76e0b91777d3b23d851255abaa604fb8"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2017-I-3:draw-05",
+            "seed": 3846,
+            "response_sha256": "55b579764e4bd3661d360a0271e3aaea33c0df8c15a8e784caf63f059f665eb7"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2017-I-3:draw-06",
+            "seed": 4326,
+            "response_sha256": "604f39fbef1357f1e835b56ba7083d824fb7c7ce9c6ca7ab4980df6a4b52a2cf"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2017-I-3:draw-07",
+            "seed": 4806,
+            "response_sha256": "bf97aed0b89d02a6788cc171973001c52e4dd5c0207f03e14eef7caffd8ebd2b"
+          }
+        ]
+      },
+      {
+        "problem_id": "2019-II-11",
+        "eval_index": 175,
+        "rendered_prompt_sha256": "a8c11eb2338f144f1dcb3514aa691c10d7ec556caaf0d1eb766ccb5299e6ea36",
+        "source_record_sha256": "07100e807324a627c864f821174e9434a31a5089adcb8d26644010da199c42a3",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2019-II-11:draw-04",
+            "seed": 3329,
+            "response_sha256": "c86a13f58bd4130a7646f5cb3b3e5df1f7aa3516fa6909ea1368fd7e908ff486"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2019-II-11:draw-05",
+            "seed": 3809,
+            "response_sha256": "f69d70555cc51e14002e65295f609b5b295d2b217b95323696fd8656e8f98682"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2019-II-11:draw-06",
+            "seed": 4289,
+            "response_sha256": "d6b18bf3efc02df261b66558747b9aec697a0bcd5273f6bd81ad6e7b2548d8e1"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2019-II-11:draw-07",
+            "seed": 4769,
+            "response_sha256": "a285aeba2f8f53cf20883f42755e238f4fb62cda6cac40ee75f1dc23cfc2a014"
+          }
+        ]
+      },
+      {
+        "problem_id": "2017-I-6",
+        "eval_index": 215,
+        "rendered_prompt_sha256": "eafe947df8701570cf07bb66ecdd9a21de8f9523a62df6c420156ef1b548f515",
+        "source_record_sha256": "b1d47e114d3ffa05669460c66f2d4a0e4e11b5a943a75963fc8046697c49f5a5",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2017-I-6:draw-04",
+            "seed": 3369,
+            "response_sha256": "b9751b1bfea117843817d7b4b66fcde09e065b45439e8602f521dc6cfa7b523a"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2017-I-6:draw-05",
+            "seed": 3849,
+            "response_sha256": "ad3fc10af26c80f79eb9e38788ad1da2f5aa7283f6c82768826300325f6125af"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2017-I-6:draw-06",
+            "seed": 4329,
+            "response_sha256": "bb915168c249047a50114387d1ca00d80aaa9641b2ed8e9d1b3efbbde863fbce"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2017-I-6:draw-07",
+            "seed": 4809,
+            "response_sha256": "948aeca5012bf1e1acb5f46204571d52a367929be9a21b4d1b44234d3fcf8934"
+          }
+        ]
+      },
+      {
+        "problem_id": "2019-I-1",
+        "eval_index": 150,
+        "rendered_prompt_sha256": "06fa72597487d43a714548f435ac1448e51e4f68068484795e23db44fab7bdad",
+        "source_record_sha256": "9992bb7c2f2cd811ddbbd4cbe9e77cd9032e8493c31b2600401baac2e1a7a374",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2019-I-1:draw-04",
+            "seed": 3304,
+            "response_sha256": "5a5ea339291b68e1a72376f1532adf4352df0f902e2ebe1798e2890c3c0a9af3"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2019-I-1:draw-05",
+            "seed": 3784,
+            "response_sha256": "530ef03c5674fb490edf507e98243d9c4ab40d29a2d1461c3a792bbb4474ff05"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2019-I-1:draw-06",
+            "seed": 4264,
+            "response_sha256": "ab6c4975e29bc75a200d591721db61d6c7a39d37d636f67083a35f7b44cb4939"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2019-I-1:draw-07",
+            "seed": 4744,
+            "response_sha256": "9741f12f7f53ff754a24a74e12a859157d984f04241500b7c6feba1bdf034531"
+          }
+        ]
+      },
+      {
+        "problem_id": "2021-II-2",
+        "eval_index": 106,
+        "rendered_prompt_sha256": "0b0a750faf9416ceb632a9d9285c303bef529d4bd23787db82e44dec831f36b3",
+        "source_record_sha256": "38c5cde0754a3311b15bf9237753f485204f0a480dfd21d53f013f71510392ee",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2021-II-2:draw-04",
+            "seed": 3260,
+            "response_sha256": "a9275b5d48fc772ab6b089aa6ea61b921086f5b3bf2f2b79d5c56f922f0f8190"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2021-II-2:draw-05",
+            "seed": 3740,
+            "response_sha256": "bb8d46c83c8e736427653be61b7e37adedc0b74af38f3c4f1a944cd415c97c38"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2021-II-2:draw-06",
+            "seed": 4220,
+            "response_sha256": "9c9ad8a8f2d7db3080dae2341f348068743456d2d2043fdc7eb3d098e2c32406"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2021-II-2:draw-07",
+            "seed": 4700,
+            "response_sha256": "72d8eeeb1a1cd441a6878b6d816e96d95b434842d73d74ea71e1caf72402a2d9"
+          }
+        ]
+      },
+      {
+        "problem_id": "2011-I-1",
+        "eval_index": 390,
+        "rendered_prompt_sha256": "e54e626f007736bdaab5091d7f186a5eb90a451b426fc49ef4d637c11356e1b3",
+        "source_record_sha256": "96c526fababf08cd593fb65034a3735d62f0962da15c748517575a6130997a67",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2011-I-1:draw-04",
+            "seed": 3544,
+            "response_sha256": "d93b444d1dcbf0eff9fde2acd775cb28d5c7d140e27b50273f6abd36cd7d0194"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2011-I-1:draw-05",
+            "seed": 4024,
+            "response_sha256": "a1bddbbd978cfd1c9f0c8f13c8098b474429d3c3909d07af3e65bdc3d86efd5f"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2011-I-1:draw-06",
+            "seed": 4504,
+            "response_sha256": "99f97e04918d6a6ed4f4207a5419639ca7413b1a8c7682783cecd90fb1ef019c"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2011-I-1:draw-07",
+            "seed": 4984,
+            "response_sha256": "1e9e0d62b16da06982c19b03ff501cdfffbdfe0d64dfd793bcc866b93bead261"
+          }
+        ]
+      },
+      {
+        "problem_id": "2017-II-4",
+        "eval_index": 228,
+        "rendered_prompt_sha256": "0436ffb8d7ab283a3e3c50b4af0fdd6d814bae8dbfcf571c3531c61ac91b271b",
+        "source_record_sha256": "da5e654a1b77e62f5f45d1d105a5a339efe95513ce6fe06d82b4bbf5af04b505",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2017-II-4:draw-04",
+            "seed": 3382,
+            "response_sha256": "0a5091fc96ad2f3875386a03ff9c382fbf1f9b2909106817b04aaa2acdfb3eae"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2017-II-4:draw-05",
+            "seed": 3862,
+            "response_sha256": "a10ca5a3e404993b4dc425a59c67341d96ce8d84185986e2735425e5ddc534c2"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2017-II-4:draw-06",
+            "seed": 4342,
+            "response_sha256": "ffa8cf287042e7a11669e7fe2049c708909e3a7705e095303be8a4a0deec0045"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2017-II-4:draw-07",
+            "seed": 4822,
+            "response_sha256": "e383a8462030629706c8475f26b80b8507c9b93f340f773bc522653bcbc43d7c"
+          }
+        ]
+      },
+      {
+        "problem_id": "2010-II-4",
+        "eval_index": 438,
+        "rendered_prompt_sha256": "d8ea11496bd0abd7aa0d77510e63577d66c40d2f29dcaed32dcfed20d979ec86",
+        "source_record_sha256": "05f018dd4ec3993dd18b348948fe8f2b0f2f7969630d1acc4171afa7d4e8a5f2",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2010-II-4:draw-04",
+            "seed": 3592,
+            "response_sha256": "b8fa31927ba2d768c9b2a29cc598a29a2b0c4d5e746ab43d7ded30a2057f12a7"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2010-II-4:draw-05",
+            "seed": 4072,
+            "response_sha256": "c62b6f609f62261cae3df6c39934650f57efa8e79fe4063bb8f5b561f26a8c5f"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2010-II-4:draw-06",
+            "seed": 4552,
+            "response_sha256": "028fa18be445b86a3891ee35422724cc0eb6955f0d6d0e678df6acf544fcbc78"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2010-II-4:draw-07",
+            "seed": 5032,
+            "response_sha256": "8df95d2c23e3101c926022c0cc835bb9f87fae98c92c55cb623612232df8cf77"
+          }
+        ]
+      },
+      {
+        "problem_id": "2017-I-10",
+        "eval_index": 219,
+        "rendered_prompt_sha256": "4b1bfb893840df8be3cfb3c69bcee983b7384a04d5636e5ca2da795669360cbf",
+        "source_record_sha256": "fff568d02fb2f0460e7de79ef7fb8437ea573a513ab6e0a65f797eb7f5a08744",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2017-I-10:draw-04",
+            "seed": 3373,
+            "response_sha256": "7b2204ebac5cfb5c6139b5d428df0b69e25868a1460bf56de75a71b13ed65e17"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2017-I-10:draw-05",
+            "seed": 3853,
+            "response_sha256": "39560cac24a930550ba51169076f24579679b26a2fc84968c20e67bf4c3db1a9"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2017-I-10:draw-06",
+            "seed": 4333,
+            "response_sha256": "0dfcbddd2c6435deb00206fa874476c1e0ffe3daddb9c858906939b25088ea48"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2017-I-10:draw-07",
+            "seed": 4813,
+            "response_sha256": "29f28d0760adf48af73bca3143fb73037907226afa4939abb121eeb84fe20eea"
+          }
+        ]
+      },
+      {
+        "problem_id": "2014-I-13",
+        "eval_index": 312,
+        "rendered_prompt_sha256": "c873a09a029bf4dd6a850bf17993dd71a6edb5398927239af9e8da14a0830cee",
+        "source_record_sha256": "ec457ee5325c9a0501a91994e41eff64ff67520bd947ef1f0371b232ee31c765",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2014-I-13:draw-04",
+            "seed": 3466,
+            "response_sha256": "bb1c44d5c0d88361febd2c2b1370d6ab9ee320a563a61068c2d2b2febaffb5c1"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2014-I-13:draw-05",
+            "seed": 3946,
+            "response_sha256": "3d0b0afe2a1dc1c779fae5050b060a02a45e57f00cdac8af38c9a1be8e3c85d0"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2014-I-13:draw-06",
+            "seed": 4426,
+            "response_sha256": "6cca6817a06e19358a66bbba7758df4b515c9c090b6941172bd2a49fe2db78d4"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2014-I-13:draw-07",
+            "seed": 4906,
+            "response_sha256": "7ac36ce1a1ed65e60f86b69721934df2d1a474317809da6a21b50c5f5756c115"
+          }
+        ]
+      },
+      {
+        "problem_id": "2012-I-13",
+        "eval_index": 372,
+        "rendered_prompt_sha256": "950e085859fa8910ca5a5059f4259faba8492b9594275be8a3589bfff1fd1c9b",
+        "source_record_sha256": "28c767ec2339ab4bed0d75eb5b0fcdc690ef3eda00695e6bbdba39e964096df8",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2012-I-13:draw-04",
+            "seed": 3526,
+            "response_sha256": "eb6aa055dd5c9e2e1fb0dd04fc44f3a7ca740f8eb9157623ad84b74c6a3ff974"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2012-I-13:draw-05",
+            "seed": 4006,
+            "response_sha256": "57af0a7379f30da3f47b51bac54e0c636f649648f5bc7df80fb04f340c5b5110"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2012-I-13:draw-06",
+            "seed": 4486,
+            "response_sha256": "3ab5074a340ed325ab2d130c505f2babd750e646f7a4b60cff0bfbac2f10280d"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2012-I-13:draw-07",
+            "seed": 4966,
+            "response_sha256": "aaf8aa0779dc08ca2e9f781c94ec5511a4806d18f7b75abdf08a74a4aec73747"
+          }
+        ]
+      },
+      {
+        "problem_id": "2012-I-4",
+        "eval_index": 363,
+        "rendered_prompt_sha256": "3d5f651b09c2f418f5e6c92f0d9a2f45438f64f07da126e29b214dc73263a3aa",
+        "source_record_sha256": "f83c436e48f347cdb5cf0e2b3a3fc3a89c2ea055b20b545017d3f4d2698392a7",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2012-I-4:draw-04",
+            "seed": 3517,
+            "response_sha256": "256dac9cfa8cc436a703807573eb5072fa9648f3db5fcd29879194c1dfdc7580"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2012-I-4:draw-05",
+            "seed": 3997,
+            "response_sha256": "4af90d762651b9473258d5c854116e0da0aa8dfe6fafc918de7b3347cf412dcf"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2012-I-4:draw-06",
+            "seed": 4477,
+            "response_sha256": "1ae9c7e908b5fe9eadb030a42a8cdb7763ee0efa2fa186f3ba149e213bbdc470"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2012-I-4:draw-07",
+            "seed": 4957,
+            "response_sha256": "e4bb182d7f0ad1465badb70162ac60bdf85d9fe0665629f736827e122e44046a"
+          }
+        ]
+      },
+      {
+        "problem_id": "2018-II-14",
+        "eval_index": 208,
+        "rendered_prompt_sha256": "d15095b5fcd6f56e91d28baf08fb29259f459d0acbfe011afefb4b785e6fa3d9",
+        "source_record_sha256": "3317cb07d4bce1636d61f17546571c5409e1f765220b9f1f3fd3096473c4b877",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2018-II-14:draw-04",
+            "seed": 3362,
+            "response_sha256": "ab7b37726f6c4c48558e5e5ee94f8e81f89162b1cb254e7485053da15f7871a0"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2018-II-14:draw-05",
+            "seed": 3842,
+            "response_sha256": "5013cece360647eef12d059d4134c9b142955a8c12a170d80e569634b9011dac"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2018-II-14:draw-06",
+            "seed": 4322,
+            "response_sha256": "debbae3c1397fa85e869449d5169d5b5b10dc9121c6f844f5560ce182e45d7bc"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2018-II-14:draw-07",
+            "seed": 4802,
+            "response_sha256": "3ea648718954f9d1aed0f95d901f307e3acb1b2f6a5e58dda42e6f8935970eab"
+          }
+        ]
+      },
+      {
+        "problem_id": "2014-I-11",
+        "eval_index": 310,
+        "rendered_prompt_sha256": "c9b0b1d7ec03757ee721b14cd18488f4ca4a5d3652f841fa8a0f47f1ad631d43",
+        "source_record_sha256": "eb188ea694e9feac3b84a2b8d0cf3226a42ce6070cb143777d2f4574c22042f5",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2014-I-11:draw-04",
+            "seed": 3464,
+            "response_sha256": "b85d17922f988e1a93b30ea8afceb9e57aacf050f0ac29106b94813828b9e960"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2014-I-11:draw-05",
+            "seed": 3944,
+            "response_sha256": "00acbf0e03cc237b2d9d67836c99f4a96333143d7862ed3b1420407e66913d4b"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2014-I-11:draw-06",
+            "seed": 4424,
+            "response_sha256": "8293655135b86c718d0a6e4019354e83e9c519e05052bbc578dd2670563bf936"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2014-I-11:draw-07",
+            "seed": 4904,
+            "response_sha256": "977e74e0b4b9f76495ae4ccb64fe4a8c922e86feecb27e9456a1955dd342f48e"
+          }
+        ]
+      },
+      {
+        "problem_id": "2018-II-6",
+        "eval_index": 200,
+        "rendered_prompt_sha256": "d80c071ae5246e6b2c172c97c4b24782a9aee662a82486b38042a9af8320fbe9",
+        "source_record_sha256": "42b37f5853f2fa44e1b64203ba7b3a4359f26fd693a4bc07067ccd1737bd1dad",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2018-II-6:draw-04",
+            "seed": 3354,
+            "response_sha256": "919d71fa1a4f1369a25d0f9485ed0b15558e9d7c7da350c6a81b6604547eb568"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2018-II-6:draw-05",
+            "seed": 3834,
+            "response_sha256": "9c85df74e0a21f88a1b73b2cdf18fb53b48f753e088004d70e14314b9741ea65"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2018-II-6:draw-06",
+            "seed": 4314,
+            "response_sha256": "5b302657badad78ff332da4fa5775a1adfbf3521f39f9d54d206049a55fd6252"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2018-II-6:draw-07",
+            "seed": 4794,
+            "response_sha256": "9ca1229d00144825855250de28c472f26499331fe567acc58443f97eae144536"
+          }
+        ]
+      },
+      {
+        "problem_id": "2023-II-4",
+        "eval_index": 48,
+        "rendered_prompt_sha256": "639d72ba800bb660e0598c27aea71ea81f20ad3ced215ba4792ca54226a50269",
+        "source_record_sha256": "ed34c8a3b9f3423f8128fc603c05ddc488c5589d94006b430d92925d4231d092",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2023-II-4:draw-04",
+            "seed": 3202,
+            "response_sha256": "a9d1c4da130848dcfbc6a92f7e6979179a79b939390bdfbbfd7244c22ce94db6"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2023-II-4:draw-05",
+            "seed": 3682,
+            "response_sha256": "262c1729d7d7d0139524ad2c260d99c86d2da4004a4fb66c0140446b882440cb"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2023-II-4:draw-06",
+            "seed": 4162,
+            "response_sha256": "54bbe6d9f30d6b50463721f950d3164cba3f96740fdfde9ee1af4e396d115119"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2023-II-4:draw-07",
+            "seed": 4642,
+            "response_sha256": "c94fc6c614aa498c0182f8d2a479a73f7e3dd830d050eef5004843da9630d206"
+          }
+        ]
+      },
+      {
+        "problem_id": "2018-I-7",
+        "eval_index": 186,
+        "rendered_prompt_sha256": "0891452cc84d7908479b0fa78fd24f03deabfa16614a92dbab3852aa104ca200",
+        "source_record_sha256": "b953076b56e1ca2c4ace0d37e858bc964d243e23f22afd06c1c1875b53783c59",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2018-I-7:draw-04",
+            "seed": 3340,
+            "response_sha256": "239e36b9d0ebdd50146ad9e028815dabb32ffa3700af0918bd8e29ae7ba53c90"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2018-I-7:draw-05",
+            "seed": 3820,
+            "response_sha256": "c88453e317d29553e9ab2334ca04f34fccff04d3c552af943c9b82d0b1776853"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2018-I-7:draw-06",
+            "seed": 4300,
+            "response_sha256": "84ce10a17f93dfa07848dd73e55ddc69eb9d0b7ed9e4d4d137bad7d7492f2ad7"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2018-I-7:draw-07",
+            "seed": 4780,
+            "response_sha256": "2e1997bea5ee51b7dd3b7044bc2866416b0761046862abb8d8e0c15d1ff9a8c7"
+          }
+        ]
+      },
+      {
+        "problem_id": "2013-II-3",
+        "eval_index": 347,
+        "rendered_prompt_sha256": "c356a4c96878667b17a1b4bb7ed5994324b2e2436c3765a31ab103fa81cdb584",
+        "source_record_sha256": "943d8e23eaa7823fbd056f4acb19b196adab1c93661712127e63aea650f84c7e",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2013-II-3:draw-04",
+            "seed": 3501,
+            "response_sha256": "002ddfb33a256632f885d0bd187cf2ef1a882d657cf5abe9039484c3f1bc1ccb"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2013-II-3:draw-05",
+            "seed": 3981,
+            "response_sha256": "981aa04634bd7c08023a9a4223d2c94bd129f747a71b5fc3035541570d8cacf8"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2013-II-3:draw-06",
+            "seed": 4461,
+            "response_sha256": "ca26669e31e8b0c97634d16454c7c73db96b812337dd61052c4c69e0b76be3fa"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2013-II-3:draw-07",
+            "seed": 4941,
+            "response_sha256": "8042d0239ed0b6bafa2f48f81b1d34d5dd1787f6ca0452a69b51f6fb80aa7cd1"
+          }
+        ]
+      },
+      {
+        "problem_id": "2009-II-12",
+        "eval_index": 476,
+        "rendered_prompt_sha256": "d501507fe00c8df13a53846829b2bf8ab8a2e3158121c0acf3f601a123670b01",
+        "source_record_sha256": "5cca41a7143e75aae6786e4c547640a009760f9ee50eaaf1245102d44364bb03",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2009-II-12:draw-04",
+            "seed": 3630,
+            "response_sha256": "8c0f9e09b8e8d7b419afa4d31c0ad4cea5c18f9812686d71af86c40ff310c2b0"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2009-II-12:draw-05",
+            "seed": 4110,
+            "response_sha256": "6f8a1a3084ea0fc6a95b833458d5c7aa0b8c9a918852fbfc7e95a3621cf10592"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2009-II-12:draw-06",
+            "seed": 4590,
+            "response_sha256": "b00b65e003984bb146278f5ada62f157086883704c8e7fe9be44e4e24b347115"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2009-II-12:draw-07",
+            "seed": 5070,
+            "response_sha256": "006c93895c5291113810b0597030d7849a47c5ecc1de561a6cba5e25fa91ad2a"
+          }
+        ]
+      },
+      {
+        "problem_id": "2021-I-3",
+        "eval_index": 92,
+        "rendered_prompt_sha256": "be5181e0308f93b2e875ae9a7981a018c5ae6e4ebd541aa0e98b97d7b78397ab",
+        "source_record_sha256": "08319afc86d2be6bf3f1afd86debaecdd117b85d3463fcee3d283c6fa26ab614",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2021-I-3:draw-04",
+            "seed": 3246,
+            "response_sha256": "2823682a51734a9dc65e760fd07d924f44daef103ea8be699b7442df007cce83"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2021-I-3:draw-05",
+            "seed": 3726,
+            "response_sha256": "4c483a930fc49d45735a2b52cf0123b28eb3d7f245cc75e939f6bd61b78f24fc"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2021-I-3:draw-06",
+            "seed": 4206,
+            "response_sha256": "3c8233f9e296046bf50bbec8eef0f8e341cae5e3f8e26af376584c725438ebed"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2021-I-3:draw-07",
+            "seed": 4686,
+            "response_sha256": "0f7ce22b772a82834ede52521082c1512375a898d43dc1d4d7a37894dcf088c9"
+          }
+        ]
+      },
+      {
+        "problem_id": "2023-II-9",
+        "eval_index": 53,
+        "rendered_prompt_sha256": "2ca9ddef3cb19c7df57554fe49a7dcdd51ccaf407d496ee03f5591da5b6db46a",
+        "source_record_sha256": "e383fea41e3527d1ec1a5e6fa8e20de3f5f82ba279f9e734fb191b5f144904cd",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2023-II-9:draw-04",
+            "seed": 3207,
+            "response_sha256": "c1f82367658bc7f472363edc4c179d8c1e262eb9719c8e44908e45514e0a7bcd"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2023-II-9:draw-05",
+            "seed": 3687,
+            "response_sha256": "82b8d03fb8e482138567b75af340e8fcadd7483fa26fe27fc929e5539b5301a6"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2023-II-9:draw-06",
+            "seed": 4167,
+            "response_sha256": "f32d7c8d4c974cef6cb55a64c4dcc237133e434ca8c43673fafd1daa6df7e044"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2023-II-9:draw-07",
+            "seed": 4647,
+            "response_sha256": "1b049751e1c83f84b6ec6954bd6616cb108d0d919479760d4e59fa78cf8385dd"
+          }
+        ]
+      },
+      {
+        "problem_id": "2011-II-14",
+        "eval_index": 418,
+        "rendered_prompt_sha256": "9b5537f12c8d238ddd233f40d9dbe1ddb68089e1aa626329cc91acf17de8dd5a",
+        "source_record_sha256": "0263585ee6d4c7c4ad8012d01b110b8692ee452b7342d47ff9961cde94e0c460",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2011-II-14:draw-04",
+            "seed": 3572,
+            "response_sha256": "2b38b2640c131799d99fa26142fc251d39e6871196401ba7009f00e674a74f32"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2011-II-14:draw-05",
+            "seed": 4052,
+            "response_sha256": "010a3aca62ef51b5df38387e726d22bad34e8d9f11f7fe4116d95005d22953b4"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2011-II-14:draw-06",
+            "seed": 4532,
+            "response_sha256": "35f07594307a362af9b7fe614b2e201b4f196cdfc633ea05f653c3a0042ae14f"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2011-II-14:draw-07",
+            "seed": 5012,
+            "response_sha256": "e1c4b28afa21f82fe542cae3cfd325ce23a0ef686f7f79702710183c3073fc78"
+          }
+        ]
+      },
+      {
+        "problem_id": "2016-II-9",
+        "eval_index": 263,
+        "rendered_prompt_sha256": "ac433fd9d6dbaceafbbedb14cb9b56eaca3a07006676f98385693647f1002fdc",
+        "source_record_sha256": "0737ec3f5a15e12434c5d744beb426603f883ad667092a462d1b2e132dc31a62",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2016-II-9:draw-04",
+            "seed": 3417,
+            "response_sha256": "e601488dabd083f94a5b4db7e4a1b0bffa3448dbc4af352022c002222d4b0fc1"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2016-II-9:draw-05",
+            "seed": 3897,
+            "response_sha256": "7b1db2b9221450f77836470cb659312202b11b66cd83c9ad83ba271197f3e0b5"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2016-II-9:draw-06",
+            "seed": 4377,
+            "response_sha256": "4e680207e0cce44c297cce48cd27ddddd92b80df79432f4e06062adf3df3d062"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2016-II-9:draw-07",
+            "seed": 4857,
+            "response_sha256": "b09e50535c047e3ddd9d85a1316608a1cc80c792b0728d4f98bf740d8f6ceaee"
+          }
+        ]
+      },
+      {
+        "problem_id": "2023-II-2",
+        "eval_index": 46,
+        "rendered_prompt_sha256": "a8c42954517d0c5be2df753a7379b4fb8fbaec22f543366527a734983592beb9",
+        "source_record_sha256": "cac604470687ba76905dd9f577dd91caf010474baa7c69a6248c069eaafca203",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2023-II-2:draw-04",
+            "seed": 3200,
+            "response_sha256": "57aa746010eda8b6ab0efacbefbdd1c0c35bfe644b4a891b8dcc8d682fff88ec"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2023-II-2:draw-05",
+            "seed": 3680,
+            "response_sha256": "da4a2c278028fc72b39f3c0b14289178f0a578a4271986922252bb9d1f0cee87"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2023-II-2:draw-06",
+            "seed": 4160,
+            "response_sha256": "d7808289b38147d903954de3bf85634fde9abedbdf0b825bbe77661f7ec2f6ae"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2023-II-2:draw-07",
+            "seed": 4640,
+            "response_sha256": "81b3b958fc3bdbec12d56069d84dfaf49e5a2b6b608f0d3bb78f3277c88b84fa"
+          }
+        ]
+      },
+      {
+        "problem_id": "2023-I-12",
+        "eval_index": 41,
+        "rendered_prompt_sha256": "1b88ec89d5851b1916f2d1d64739ddeb4daccc2fe4630451f3f405b3d2afc967",
+        "source_record_sha256": "6a7228fc6e2b9a76b991051433b1944452e0a486574f6b40ad401d517d7c4311",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2023-I-12:draw-04",
+            "seed": 3195,
+            "response_sha256": "7676982b14bdb3b726712c4eedc37f8ebb2bb696321ba2867fd332f0e1759ab5"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2023-I-12:draw-05",
+            "seed": 3675,
+            "response_sha256": "0bbf512656012fcadc836f85b381e860c49e7987dea0a69d5280ac752b54a827"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2023-I-12:draw-06",
+            "seed": 4155,
+            "response_sha256": "586476a1301f6bccdb51fab5ea061c1e3391606a39df7e48781d0cd70e884a07"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2023-I-12:draw-07",
+            "seed": 4635,
+            "response_sha256": "2a25eeb272c10c58260a9964421e90e50a123d76da58c2ce7375ae23e637906a"
+          }
+        ]
+      },
+      {
+        "problem_id": "2022-II-6",
+        "eval_index": 80,
+        "rendered_prompt_sha256": "e6a448c4ba7f5ad9aa9e8da88002cc3c11a59ae9f5bd6168f86510cb49eee1c8",
+        "source_record_sha256": "ab3cc38cb41b90e47973cc153cacd84f1a149f5fd3b106859c171e44c09e6645",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2022-II-6:draw-04",
+            "seed": 3234,
+            "response_sha256": "90059cb2870233c11102412abe38957352bf4698fc228ba32e33f159afc09357"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2022-II-6:draw-05",
+            "seed": 3714,
+            "response_sha256": "0a8ed47c9d3da9cc698bb5cb5d1419e2023df44a76d9bd2a0cc3f077798c4d77"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2022-II-6:draw-06",
+            "seed": 4194,
+            "response_sha256": "89a02a80547aa2410adf3bf3d27cd37cf6485da005286ec5357c5136783fea46"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2022-II-6:draw-07",
+            "seed": 4674,
+            "response_sha256": "40b6bdb2c55798eeccac874e866257c93c31d7b49d85c113ff24d8543af7a754"
+          }
+        ]
+      },
+      {
+        "problem_id": "2019-II-4",
+        "eval_index": 168,
+        "rendered_prompt_sha256": "5e28c9e955db057c396928c5a36080cec39764c2b05ba9eaaa1deeb76f05dac4",
+        "source_record_sha256": "0af15012a7ba8dc311f0f6219bff3c04cd5ffb7dae2e6c40c9df732903a3c6e4",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2019-II-4:draw-04",
+            "seed": 3322,
+            "response_sha256": "97fe941612f2a09981701607263ac2f333ce23a36aa30d84bb2c10039bdb3c0a"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2019-II-4:draw-05",
+            "seed": 3802,
+            "response_sha256": "30b6dd19b6e810a5d3a9fe6a04ec06d93e99e30dbbdf269ab5556ca6af77f6f5"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2019-II-4:draw-06",
+            "seed": 4282,
+            "response_sha256": "5e807e0b6349212d1d9af4d586f9974707ef72b79f6449a705e0bd43dc47e0ee"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2019-II-4:draw-07",
+            "seed": 4762,
+            "response_sha256": "4b7786f9d7d1e74523c641a9bc9b568b85c1bb4d0399428fe1b201ff7edc5353"
+          }
+        ]
+      },
+      {
+        "problem_id": "2011-II-8",
+        "eval_index": 412,
+        "rendered_prompt_sha256": "5fd4f7bc51420bb2cedd60893b4467dd96b4685c04c9882dd2d870baa4535793",
+        "source_record_sha256": "6cd0cc09e5ea2149aed1412f7b54a607cfdce21e9336a2499434fa183895b7ed",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2011-II-8:draw-04",
+            "seed": 3566,
+            "response_sha256": "8397c1d7b32cea7cf956ea10125888775deea40256a19c29ee6598b163921fce"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2011-II-8:draw-05",
+            "seed": 4046,
+            "response_sha256": "651469c91bf88cec1e289c52704e1da567247da38adecc2f0c26b8c9b68094fb"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2011-II-8:draw-06",
+            "seed": 4526,
+            "response_sha256": "d6384d3c77e64fb2fc5d5a9e9baae583c9a467010cd68173c2b7966b38a8da91"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2011-II-8:draw-07",
+            "seed": 5006,
+            "response_sha256": "0d0748e61d914c58181c324933305ab2a0a0cdd8458c9d36b0335798ece63938"
+          }
+        ]
+      },
+      {
+        "problem_id": "2014-I-7",
+        "eval_index": 306,
+        "rendered_prompt_sha256": "3b07cf0eea4a38f01d60e1015fb5d17eb459c92de92f551412b03598dc8adf05",
+        "source_record_sha256": "543952fa141038443ca4a4dea12b45d012f8c7b522297d8996a89cfb17d442c9",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2014-I-7:draw-04",
+            "seed": 3460,
+            "response_sha256": "5b6dbda9d98189d06d3e6acfcd0b06636da38d4221cda9fc354eb23b9f262e21"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2014-I-7:draw-05",
+            "seed": 3940,
+            "response_sha256": "cfd5600037c497f916f3be86b0dc677d78fb4a0ba41a73c9f123755a769fa014"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2014-I-7:draw-06",
+            "seed": 4420,
+            "response_sha256": "5c2a91b58143d711ff81b33f5bb6da4ce56a73a42e39ecf3b036714719c157b6"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2014-I-7:draw-07",
+            "seed": 4900,
+            "response_sha256": "66bcbbd8d992a2d0856ef946a7fc8d2a33e0dff28e1b65c1e4d552550a5eaefc"
+          }
+        ]
+      },
+      {
+        "problem_id": "2016-II-13",
+        "eval_index": 267,
+        "rendered_prompt_sha256": "1006ed9985ce3eac5549b2f1fda2d5fa65afda800a9cca199e5763b8fa674cec",
+        "source_record_sha256": "2a25d95902b3436a11f1f79928e9d59364975b70f1b0df51232018ebe3724654",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2016-II-13:draw-04",
+            "seed": 3421,
+            "response_sha256": "7b9b3a45554cc66a5d8105bdfe9bc3c8d75b031c22c2838e503e249004dfdd8f"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2016-II-13:draw-05",
+            "seed": 3901,
+            "response_sha256": "c12c94662492b8231f0e69a0e1d086cc799520c87b5a83011b261f03bd685251"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2016-II-13:draw-06",
+            "seed": 4381,
+            "response_sha256": "66366fb656ca13c29b0bbc950d55e22b71f4f51b7e9f335a1f9f0f9c403503f4"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2016-II-13:draw-07",
+            "seed": 4861,
+            "response_sha256": "2e58fbad324be38c26827cc573f5d8667aa6ec9991baed60556878f68c8cf913"
+          }
+        ]
+      },
+      {
+        "problem_id": "2021-II-1",
+        "eval_index": 105,
+        "rendered_prompt_sha256": "a20c4c8d699ae78466a8ad643a7e52ed58e7b8cf1de243a554b8e599bb30da74",
+        "source_record_sha256": "584ce227e92f8a89e98cb9a5b6d7e0b33528f8adc7dad7b166b52d7dc4f2e30b",
+        "samples": [
+          {
+            "draw_index": 4,
+            "sample_id": "2021-II-1:draw-04",
+            "seed": 3259,
+            "response_sha256": "472d06d3c864e238f33a6380f77e54b4f6d9583e7b12ebb832d0a52a56ea0d67"
+          },
+          {
+            "draw_index": 5,
+            "sample_id": "2021-II-1:draw-05",
+            "seed": 3739,
+            "response_sha256": "bf465d0071ab5d3d4e34dfd847111ef4d2c59a70dfe497c8a4b7d54c27a4566e"
+          },
+          {
+            "draw_index": 6,
+            "sample_id": "2021-II-1:draw-06",
+            "seed": 4219,
+            "response_sha256": "7e0beeafc1c6f5f06e48f0cdc29478e96e84c8b905b8baa20d3b75377a943a22"
+          },
+          {
+            "draw_index": 7,
+            "sample_id": "2021-II-1:draw-07",
+            "seed": 4699,
+            "response_sha256": "33a412d694fe854e5887114ebf839cac72a6628e2fba9a066b647722b4fb9207"
+          }
+        ]
+      }
+    ]
+  },
+  "scope": "Four pinned new shards. No responses, extraction values, gold, or correctness columns were read. No subject selection or scoring."
+}

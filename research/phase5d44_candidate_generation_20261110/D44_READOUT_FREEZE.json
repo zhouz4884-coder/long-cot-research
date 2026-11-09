@@ -1,0 +1,4833 @@
+{
+  "status": "D44_NEW_DRAW_READOUTS_FROZEN_WITHOUT_GOLD",
+  "cohort_freeze_sha256": "1eb07b5bcc988124ed0b79af779b6a08a20e3621b736a590f928df1790d8a01d",
+  "acquisition_freeze_sha256": "8ea18cc90beb20262a4eee18d73277c7682de3a330ff4f7c3933e6cc89928aef",
+  "source_receipt_sha256": "a526cf3e145ade811f6464f5bd5e4e9b8d4c94d51dee96a836dacb002504f56b",
+  "blind_input_sha256": "45d484f6e01dba2fb25623b43a12efca8c04b405103e236e3f7d53cae8a4937c",
+  "extractor_sha256": "7289666129fc31310bbc2bda7e2b089385055fc68d6c1d2b71975e7ce0ddae50",
+  "author_parser_sha256": "c6b10ee5a5667a21df095f9ef87a04c2499cf8dbe56cff11f3bf9836d8262256",
+  "intake_code_sha256": "1a7827863444987d38e52fe7d4a6bbc9af9ebe3631ea80aabfce832c7670f119",
+  "draws": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "cost": {
+    "materialization_wall_ns": 431098000,
+    "wall_ns": 56559400,
+    "cpu_ns": 62500000
+  },
+  "termination_counts": {
+    "LENGTH_CAP": 17,
+    "NATIVE_STOP": 111
+  },
+  "thinking_readout_counts": {
+    "NO_EXPLICIT_TERMINAL_OBJECT": 15,
+    "EXPLICIT_INTEGER": 110,
+    "BOX_FAILS_INTEGER_FORMAT": 3
+  },
+  "final_readout_counts": {
+    "NO_FINAL_CHANNEL": 15,
+    "EXPLICIT_INTEGER": 109,
+    "BOX_FAILS_INTEGER_FORMAT": 2,
+    "NO_COMPLETE_BOX": 2
+  },
+  "rows": [
+    {
+      "problem_id": "2023-I-12",
+      "sample_id": "2023-I-12:draw-04",
+      "draw_index": 4,
+      "seed": 3195,
+      "response_sha256": "7676982b14bdb3b726712c4eedc37f8ebb2bb696321ba2867fd332f0e1759ab5",
+      "input_tokens": 141,
+      "output_tokens": 32627,
+      "effective_max_new_tokens": 32627,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2023-II-2",
+      "sample_id": "2023-II-2:draw-04",
+      "draw_index": 4,
+      "seed": 3200,
+      "response_sha256": "57aa746010eda8b6ab0efacbefbdd1c0c35bfe644b4a891b8dcc8d682fff88ec",
+      "input_tokens": 89,
+      "output_tokens": 27208,
+      "effective_max_new_tokens": 32679,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 585,
+        "scope_status": "TERMINAL_BOX_UNANCHORED",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          61446,
+          61457
+        ],
+        "source_excerpt_sha256": "43caaf82b1f92e1941d66ab712cdd50d2a85bcff38d3f5cf1aa00ac48fb1b144"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 585,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          63336,
+          63347
+        ],
+        "source_excerpt_sha256": "43caaf82b1f92e1941d66ab712cdd50d2a85bcff38d3f5cf1aa00ac48fb1b144"
+      },
+      "author_whole_response_candidate": 585
+    },
+    {
+      "problem_id": "2023-II-4",
+      "sample_id": "2023-II-4:draw-04",
+      "draw_index": 4,
+      "seed": 3202,
+      "response_sha256": "a9d1c4da130848dcfbc6a92f7e6979179a79b939390bdfbbfd7244c22ce94db6",
+      "input_tokens": 113,
+      "output_tokens": 9978,
+      "effective_max_new_tokens": 32655,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 273,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          23007,
+          23018
+        ],
+        "source_excerpt_sha256": "bffea66513316bcd25928b7fe09710e768f72a32d88c78c6fe7f8032665f14c4"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 273,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          25249,
+          25260
+        ],
+        "source_excerpt_sha256": "bffea66513316bcd25928b7fe09710e768f72a32d88c78c6fe7f8032665f14c4"
+      },
+      "author_whole_response_candidate": 273
+    },
+    {
+      "problem_id": "2023-II-9",
+      "sample_id": "2023-II-9:draw-04",
+      "draw_index": 4,
+      "seed": 3207,
+      "response_sha256": "c1f82367658bc7f472363edc4c179d8c1e262eb9719c8e44908e45514e0a7bcd",
+      "input_tokens": 194,
+      "output_tokens": 32574,
+      "effective_max_new_tokens": 32574,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2022-II-6",
+      "sample_id": "2022-II-6:draw-04",
+      "draw_index": 4,
+      "seed": 3234,
+      "response_sha256": "90059cb2870233c11102412abe38957352bf4698fc228ba32e33f159afc09357",
+      "input_tokens": 169,
+      "output_tokens": 26867,
+      "effective_max_new_tokens": 32599,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 841,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          74226,
+          74237
+        ],
+        "source_excerpt_sha256": "fcd4e843e2a85f7ff2f874fa70b4e70708d4608d0dbbb98167f213d98202c6e2"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 841,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          76781,
+          76792
+        ],
+        "source_excerpt_sha256": "fcd4e843e2a85f7ff2f874fa70b4e70708d4608d0dbbb98167f213d98202c6e2"
+      },
+      "author_whole_response_candidate": 841
+    },
+    {
+      "problem_id": "2021-I-3",
+      "sample_id": "2021-I-3:draw-04",
+      "draw_index": 4,
+      "seed": 3246,
+      "response_sha256": "2823682a51734a9dc65e760fd07d924f44daef103ea8be699b7442df007cce83",
+      "input_tokens": 55,
+      "output_tokens": 16113,
+      "effective_max_new_tokens": 32713,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 50,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          35081,
+          35091
+        ],
+        "source_excerpt_sha256": "bf10ee540ecb41652a30bc9f95c812c62ea9328478835374f4b86295d51ad645"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 50,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          37692,
+          37702
+        ],
+        "source_excerpt_sha256": "bf10ee540ecb41652a30bc9f95c812c62ea9328478835374f4b86295d51ad645"
+      },
+      "author_whole_response_candidate": 50
+    },
+    {
+      "problem_id": "2021-II-1",
+      "sample_id": "2021-II-1:draw-04",
+      "draw_index": 4,
+      "seed": 3259,
+      "response_sha256": "472d06d3c864e238f33a6380f77e54b4f6d9583e7b12ebb832d0a52a56ea0d67",
+      "input_tokens": 72,
+      "output_tokens": 3936,
+      "effective_max_new_tokens": 32696,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 550,
+        "scope_status": "TERMINAL_BOX_UNANCHORED",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          8247,
+          8258
+        ],
+        "source_excerpt_sha256": "1df134f4946efe1e95ff870608b17fbadb4aeece37ad42952b21e0d4ca9d47d9"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 550,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          10295,
+          10306
+        ],
+        "source_excerpt_sha256": "1df134f4946efe1e95ff870608b17fbadb4aeece37ad42952b21e0d4ca9d47d9"
+      },
+      "author_whole_response_candidate": 550
+    },
+    {
+      "problem_id": "2021-II-2",
+      "sample_id": "2021-II-2:draw-04",
+      "draw_index": 4,
+      "seed": 3260,
+      "response_sha256": "a9275b5d48fc772ab6b089aa6ea61b921086f5b3bf2f2b79d5c56f922f0f8190",
+      "input_tokens": 423,
+      "output_tokens": 17062,
+      "effective_max_new_tokens": 32345,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 336,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          36162,
+          36173
+        ],
+        "source_excerpt_sha256": "d1aac082f78a077dc5c4fe62575d16be2b8d3eba349e60cd7bd9e1ab263be19c"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 336,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          39749,
+          39760
+        ],
+        "source_excerpt_sha256": "d1aac082f78a077dc5c4fe62575d16be2b8d3eba349e60cd7bd9e1ab263be19c"
+      },
+      "author_whole_response_candidate": 336
+    },
+    {
+      "problem_id": "2019-I-1",
+      "sample_id": "2019-I-1:draw-04",
+      "draw_index": 4,
+      "seed": 3304,
+      "response_sha256": "5a5ea339291b68e1a72376f1532adf4352df0f902e2ebe1798e2890c3c0a9af3",
+      "input_tokens": 89,
+      "output_tokens": 13105,
+      "effective_max_new_tokens": 32679,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 342,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          34187,
+          34198
+        ],
+        "source_excerpt_sha256": "07fed9c7a16b8f8088775b4b2e275d906fc6b7acb765f9405c2f2fd1ac8749e2"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 342,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          36399,
+          36410
+        ],
+        "source_excerpt_sha256": "07fed9c7a16b8f8088775b4b2e275d906fc6b7acb765f9405c2f2fd1ac8749e2"
+      },
+      "author_whole_response_candidate": 342
+    },
+    {
+      "problem_id": "2019-II-4",
+      "sample_id": "2019-II-4:draw-04",
+      "draw_index": 4,
+      "seed": 3322,
+      "response_sha256": "97fe941612f2a09981701607263ac2f333ce23a36aa30d84bb2c10039bdb3c0a",
+      "input_tokens": 82,
+      "output_tokens": 22259,
+      "effective_max_new_tokens": 32686,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 187,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          53251,
+          53262
+        ],
+        "source_excerpt_sha256": "a9a90f98031e9d931ce73a87afe64ee63c5f5881498b0359a1f0a11430322a4f"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 187,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          56671,
+          56682
+        ],
+        "source_excerpt_sha256": "a9a90f98031e9d931ce73a87afe64ee63c5f5881498b0359a1f0a11430322a4f"
+      },
+      "author_whole_response_candidate": 187
+    },
+    {
+      "problem_id": "2019-II-11",
+      "sample_id": "2019-II-11:draw-04",
+      "draw_index": 4,
+      "seed": 3329,
+      "response_sha256": "c86a13f58bd4130a7646f5cb3b3e5df1f7aa3516fa6909ea1368fd7e908ff486",
+      "input_tokens": 151,
+      "output_tokens": 15534,
+      "effective_max_new_tokens": 32617,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 11,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          31567,
+          31577
+        ],
+        "source_excerpt_sha256": "bc1e6d1b708b573effaef586984cc1cdccf9bfbfcd305aa4c2efd057abc3208d"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 11,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          35636,
+          35646
+        ],
+        "source_excerpt_sha256": "bc1e6d1b708b573effaef586984cc1cdccf9bfbfcd305aa4c2efd057abc3208d"
+      },
+      "author_whole_response_candidate": 11
+    },
+    {
+      "problem_id": "2018-I-7",
+      "sample_id": "2018-I-7:draw-04",
+      "draw_index": 4,
+      "seed": 3340,
+      "response_sha256": "239e36b9d0ebdd50146ad9e028815dabb32ffa3700af0918bd8e29ae7ba53c90",
+      "input_tokens": 84,
+      "output_tokens": 30871,
+      "effective_max_new_tokens": 32684,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 52,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          94043,
+          94053
+        ],
+        "source_excerpt_sha256": "11c879753c7bdabbfea9fa580baa0f98dfb52984d65365aee10442aac99c8510"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 52,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          96665,
+          96675
+        ],
+        "source_excerpt_sha256": "11c879753c7bdabbfea9fa580baa0f98dfb52984d65365aee10442aac99c8510"
+      },
+      "author_whole_response_candidate": 52
+    },
+    {
+      "problem_id": "2018-II-6",
+      "sample_id": "2018-II-6:draw-04",
+      "draw_index": 4,
+      "seed": 3354,
+      "response_sha256": "919d71fa1a4f1369a25d0f9485ed0b15558e9d7c7da350c6a81b6604547eb568",
+      "input_tokens": 131,
+      "output_tokens": 7203,
+      "effective_max_new_tokens": 32637,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 37,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          17266,
+          17276
+        ],
+        "source_excerpt_sha256": "4ff7b5d5d7e460dbb6e0f3a00135e07ef7bb1c786e4f3bdee65b515a061010c4"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 37,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          19717,
+          19727
+        ],
+        "source_excerpt_sha256": "4ff7b5d5d7e460dbb6e0f3a00135e07ef7bb1c786e4f3bdee65b515a061010c4"
+      },
+      "author_whole_response_candidate": 37
+    },
+    {
+      "problem_id": "2018-II-14",
+      "sample_id": "2018-II-14:draw-04",
+      "draw_index": 4,
+      "seed": 3362,
+      "response_sha256": "ab7b37726f6c4c48558e5e5ee94f8e81f89162b1cb254e7485053da15f7871a0",
+      "input_tokens": 177,
+      "output_tokens": 32591,
+      "effective_max_new_tokens": 32591,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2017-I-3",
+      "sample_id": "2017-I-3:draw-04",
+      "draw_index": 4,
+      "seed": 3366,
+      "response_sha256": "ec3777403b48d3d1f2e26a167b02d9de76e0b91777d3b23d851255abaa604fb8",
+      "input_tokens": 88,
+      "output_tokens": 11091,
+      "effective_max_new_tokens": 32680,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 69,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          23901,
+          23911
+        ],
+        "source_excerpt_sha256": "c3eb3b520fad0ff8d64054f1a548aca3758b392dfff0e39ca2deebe890cb3751"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 69,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          25746,
+          25756
+        ],
+        "source_excerpt_sha256": "c3eb3b520fad0ff8d64054f1a548aca3758b392dfff0e39ca2deebe890cb3751"
+      },
+      "author_whole_response_candidate": 69
+    },
+    {
+      "problem_id": "2017-I-6",
+      "sample_id": "2017-I-6:draw-04",
+      "draw_index": 4,
+      "seed": 3369,
+      "response_sha256": "b9751b1bfea117843817d7b4b66fcde09e065b45439e8602f521dc6cfa7b523a",
+      "input_tokens": 104,
+      "output_tokens": 7422,
+      "effective_max_new_tokens": 32664,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 48,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          19998,
+          20008
+        ],
+        "source_excerpt_sha256": "f256c443cc6f391b3685bdcc6e41516e952061b1f0179580bd4fceb5d5dd9156"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 48,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          23478,
+          23488
+        ],
+        "source_excerpt_sha256": "f256c443cc6f391b3685bdcc6e41516e952061b1f0179580bd4fceb5d5dd9156"
+      },
+      "author_whole_response_candidate": 48
+    },
+    {
+      "problem_id": "2017-I-10",
+      "sample_id": "2017-I-10:draw-04",
+      "draw_index": 4,
+      "seed": 3373,
+      "response_sha256": "7b2204ebac5cfb5c6139b5d428df0b69e25868a1460bf56de75a71b13ed65e17",
+      "input_tokens": 156,
+      "output_tokens": 18168,
+      "effective_max_new_tokens": 32612,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 56,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          41929,
+          41939
+        ],
+        "source_excerpt_sha256": "21ceea40a02433e1603b7e354520b033c88ac55319641a8f1b6ea1635bdc06bb"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 56,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          44659,
+          44669
+        ],
+        "source_excerpt_sha256": "21ceea40a02433e1603b7e354520b033c88ac55319641a8f1b6ea1635bdc06bb"
+      },
+      "author_whole_response_candidate": 56
+    },
+    {
+      "problem_id": "2017-II-4",
+      "sample_id": "2017-II-4:draw-04",
+      "draw_index": 4,
+      "seed": 3382,
+      "response_sha256": "0a5091fc96ad2f3875386a03ff9c382fbf1f9b2909106817b04aaa2acdfb3eae",
+      "input_tokens": 56,
+      "output_tokens": 13325,
+      "effective_max_new_tokens": 32712,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 222,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          38507,
+          38518
+        ],
+        "source_excerpt_sha256": "11b3302d0b7a083180cac1338ba8237726594105776e0766c443ae73439b4a16"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 222,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          40829,
+          40840
+        ],
+        "source_excerpt_sha256": "11b3302d0b7a083180cac1338ba8237726594105776e0766c443ae73439b4a16"
+      },
+      "author_whole_response_candidate": 222
+    },
+    {
+      "problem_id": "2016-II-9",
+      "sample_id": "2016-II-9:draw-04",
+      "draw_index": 4,
+      "seed": 3417,
+      "response_sha256": "e601488dabd083f94a5b4db7e4a1b0bffa3448dbc4af352022c002222d4b0fc1",
+      "input_tokens": 117,
+      "output_tokens": 11529,
+      "effective_max_new_tokens": 32651,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 262,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          23349,
+          23360
+        ],
+        "source_excerpt_sha256": "2be0396483b847886d76abf6fc37f1e242a198138484958315bba3fe73f9a9ac"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 262,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          25382,
+          25393
+        ],
+        "source_excerpt_sha256": "2be0396483b847886d76abf6fc37f1e242a198138484958315bba3fe73f9a9ac"
+      },
+      "author_whole_response_candidate": 262
+    },
+    {
+      "problem_id": "2016-II-13",
+      "sample_id": "2016-II-13:draw-04",
+      "draw_index": 4,
+      "seed": 3421,
+      "response_sha256": "7b9b3a45554cc66a5d8105bdfe9bc3c8d75b031c22c2838e503e249004dfdd8f",
+      "input_tokens": 153,
+      "output_tokens": 28697,
+      "effective_max_new_tokens": 32615,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 371,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          78560,
+          78571
+        ],
+        "source_excerpt_sha256": "97562cb7012defa9b1f6336b2c709990409f453bfd02a026a8e3f72ae2c7eb00"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 371,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          80971,
+          80982
+        ],
+        "source_excerpt_sha256": "97562cb7012defa9b1f6336b2c709990409f453bfd02a026a8e3f72ae2c7eb00"
+      },
+      "author_whole_response_candidate": 371
+    },
+    {
+      "problem_id": "2014-I-7",
+      "sample_id": "2014-I-7:draw-04",
+      "draw_index": 4,
+      "seed": 3460,
+      "response_sha256": "5b6dbda9d98189d06d3e6acfcd0b06636da38d4221cda9fc354eb23b9f262e21",
+      "input_tokens": 170,
+      "output_tokens": 12416,
+      "effective_max_new_tokens": 32598,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 100,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          28371,
+          28382
+        ],
+        "source_excerpt_sha256": "6cb37e4b7b73ec3cf12743e036c0f547731b0ef3893b66ccae9ba765a5a2e1f2"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 100,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          31792,
+          31803
+        ],
+        "source_excerpt_sha256": "6cb37e4b7b73ec3cf12743e036c0f547731b0ef3893b66ccae9ba765a5a2e1f2"
+      },
+      "author_whole_response_candidate": 100
+    },
+    {
+      "problem_id": "2014-I-11",
+      "sample_id": "2014-I-11:draw-04",
+      "draw_index": 4,
+      "seed": 3464,
+      "response_sha256": "b85d17922f988e1a93b30ea8afceb9e57aacf050f0ac29106b94813828b9e960",
+      "input_tokens": 137,
+      "output_tokens": 14426,
+      "effective_max_new_tokens": 32631,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 391,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          38769,
+          38780
+        ],
+        "source_excerpt_sha256": "2e769b47bd601d57d471b53cccec02da24dd3320d11c8735e5b5aef38728d237"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 391,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          41285,
+          41296
+        ],
+        "source_excerpt_sha256": "2e769b47bd601d57d471b53cccec02da24dd3320d11c8735e5b5aef38728d237"
+      },
+      "author_whole_response_candidate": 391
+    },
+    {
+      "problem_id": "2014-I-13",
+      "sample_id": "2014-I-13:draw-04",
+      "draw_index": 4,
+      "seed": 3466,
+      "response_sha256": "bb1c44d5c0d88361febd2c2b1370d6ab9ee320a563a61068c2d2b2febaffb5c1",
+      "input_tokens": 524,
+      "output_tokens": 21466,
+      "effective_max_new_tokens": 32244,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 850,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          55320,
+          55331
+        ],
+        "source_excerpt_sha256": "48bfb843b02c9987f406993ad34d0b58b74fe2ba88c643ddf4adf9513e24640e"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 850,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          57757,
+          57768
+        ],
+        "source_excerpt_sha256": "48bfb843b02c9987f406993ad34d0b58b74fe2ba88c643ddf4adf9513e24640e"
+      },
+      "author_whole_response_candidate": 850
+    },
+    {
+      "problem_id": "2013-II-3",
+      "sample_id": "2013-II-3:draw-04",
+      "draw_index": 4,
+      "seed": 3501,
+      "response_sha256": "002ddfb33a256632f885d0bd187cf2ef1a882d657cf5abe9039484c3f1bc1ccb",
+      "input_tokens": 168,
+      "output_tokens": 6864,
+      "effective_max_new_tokens": 32600,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 350,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          16554,
+          16565
+        ],
+        "source_excerpt_sha256": "16f91701629d14bc08607ce320b1205a5b094217d15d5b9778704552774432cf"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 350,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          18460,
+          18471
+        ],
+        "source_excerpt_sha256": "16f91701629d14bc08607ce320b1205a5b094217d15d5b9778704552774432cf"
+      },
+      "author_whole_response_candidate": 350
+    },
+    {
+      "problem_id": "2013-II-11",
+      "sample_id": "2013-II-11:draw-04",
+      "draw_index": 4,
+      "seed": 3509,
+      "response_sha256": "c6cbc79916865e1bb9d9faaa8b18e7a21c3a0b8c080e1024152bda65d6b552ee",
+      "input_tokens": 107,
+      "output_tokens": 27476,
+      "effective_max_new_tokens": 32661,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 259,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          75356,
+          75367
+        ],
+        "source_excerpt_sha256": "79df6bbdb0029316c5b27982022f4179a9a5e676b1ee0e49cf532ecab4bd1e96"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 259,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          79458,
+          79469
+        ],
+        "source_excerpt_sha256": "79df6bbdb0029316c5b27982022f4179a9a5e676b1ee0e49cf532ecab4bd1e96"
+      },
+      "author_whole_response_candidate": 259
+    },
+    {
+      "problem_id": "2012-I-4",
+      "sample_id": "2012-I-4:draw-04",
+      "draw_index": 4,
+      "seed": 3517,
+      "response_sha256": "256dac9cfa8cc436a703807573eb5072fa9648f3db5fcd29879194c1dfdc7580",
+      "input_tokens": 211,
+      "output_tokens": 32557,
+      "effective_max_new_tokens": 32557,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2012-I-13",
+      "sample_id": "2012-I-13:draw-04",
+      "draw_index": 4,
+      "seed": 3526,
+      "response_sha256": "eb6aa055dd5c9e2e1fb0dd04fc44f3a7ca740f8eb9157623ad84b74c6a3ff974",
+      "input_tokens": 137,
+      "output_tokens": 31290,
+      "effective_max_new_tokens": 32631,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 41,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          70672,
+          70682
+        ],
+        "source_excerpt_sha256": "c3ff7555c0cb069d767cabf5170d42f659b981220908379defb895a269b754d1"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 41,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          73770,
+          73780
+        ],
+        "source_excerpt_sha256": "c3ff7555c0cb069d767cabf5170d42f659b981220908379defb895a269b754d1"
+      },
+      "author_whole_response_candidate": 41
+    },
+    {
+      "problem_id": "2011-I-1",
+      "sample_id": "2011-I-1:draw-04",
+      "draw_index": 4,
+      "seed": 3544,
+      "response_sha256": "d93b444d1dcbf0eff9fde2acd775cb28d5c7d140e27b50273f6abd36cd7d0194",
+      "input_tokens": 176,
+      "output_tokens": 4255,
+      "effective_max_new_tokens": 32592,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 85,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          7416,
+          7426
+        ],
+        "source_excerpt_sha256": "1a9c0cf4e24bd7eccdec797e34b31f93dd9a340cc91ddb24770719f84e5c2d12"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 85,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          10172,
+          10182
+        ],
+        "source_excerpt_sha256": "1a9c0cf4e24bd7eccdec797e34b31f93dd9a340cc91ddb24770719f84e5c2d12"
+      },
+      "author_whole_response_candidate": 85
+    },
+    {
+      "problem_id": "2011-II-8",
+      "sample_id": "2011-II-8:draw-04",
+      "draw_index": 4,
+      "seed": 3566,
+      "response_sha256": "8397c1d7b32cea7cf956ea10125888775deea40256a19c29ee6598b163921fce",
+      "input_tokens": 142,
+      "output_tokens": 13164,
+      "effective_max_new_tokens": 32626,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 452,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          31866,
+          31877
+        ],
+        "source_excerpt_sha256": "8af99862566df33d454a886fcc955f43a65a0a23eebb79b70b370c889d9ca8cd"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 452,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          35408,
+          35419
+        ],
+        "source_excerpt_sha256": "8af99862566df33d454a886fcc955f43a65a0a23eebb79b70b370c889d9ca8cd"
+      },
+      "author_whole_response_candidate": 452
+    },
+    {
+      "problem_id": "2011-II-14",
+      "sample_id": "2011-II-14:draw-04",
+      "draw_index": 4,
+      "seed": 3572,
+      "response_sha256": "2b38b2640c131799d99fa26142fc251d39e6871196401ba7009f00e674a74f32",
+      "input_tokens": 133,
+      "output_tokens": 11433,
+      "effective_max_new_tokens": 32635,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 440,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          34529,
+          34540
+        ],
+        "source_excerpt_sha256": "8cd9b77d722ac9119d0557e3682641e2a772915cf1eef21e794659221e3bb168"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 440,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          38151,
+          38162
+        ],
+        "source_excerpt_sha256": "8cd9b77d722ac9119d0557e3682641e2a772915cf1eef21e794659221e3bb168"
+      },
+      "author_whole_response_candidate": 440
+    },
+    {
+      "problem_id": "2010-II-4",
+      "sample_id": "2010-II-4:draw-04",
+      "draw_index": 4,
+      "seed": 3592,
+      "response_sha256": "b8fa31927ba2d768c9b2a29cc598a29a2b0c4d5e746ab43d7ded30a2057f12a7",
+      "input_tokens": 133,
+      "output_tokens": 6482,
+      "effective_max_new_tokens": 32635,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 52,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          16060,
+          16070
+        ],
+        "source_excerpt_sha256": "11c879753c7bdabbfea9fa580baa0f98dfb52984d65365aee10442aac99c8510"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 52,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          18817,
+          18827
+        ],
+        "source_excerpt_sha256": "11c879753c7bdabbfea9fa580baa0f98dfb52984d65365aee10442aac99c8510"
+      },
+      "author_whole_response_candidate": 52
+    },
+    {
+      "problem_id": "2009-II-12",
+      "sample_id": "2009-II-12:draw-04",
+      "draw_index": 4,
+      "seed": 3630,
+      "response_sha256": "8c0f9e09b8e8d7b419afa4d31c0ad4cea5c18f9812686d71af86c40ff310c2b0",
+      "input_tokens": 114,
+      "output_tokens": 23885,
+      "effective_max_new_tokens": 32654,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 669,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          67215,
+          67226
+        ],
+        "source_excerpt_sha256": "717d013955c24f57394cac817bf28da5bac69a69cd368bb8c8a8082ec3fe79fb"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 669,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          70583,
+          70594
+        ],
+        "source_excerpt_sha256": "717d013955c24f57394cac817bf28da5bac69a69cd368bb8c8a8082ec3fe79fb"
+      },
+      "author_whole_response_candidate": 669
+    },
+    {
+      "problem_id": "2023-I-12",
+      "sample_id": "2023-I-12:draw-05",
+      "draw_index": 5,
+      "seed": 3675,
+      "response_sha256": "0bbf512656012fcadc836f85b381e860c49e7987dea0a69d5280ac752b54a827",
+      "input_tokens": 141,
+      "output_tokens": 16943,
+      "effective_max_new_tokens": 32627,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 75,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          35800,
+          35810
+        ],
+        "source_excerpt_sha256": "36aa69413b6a5bcca07ae6394ce3e3240799cca391fd4ddf17460c1c30c06f64"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 75,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          40569,
+          40579
+        ],
+        "source_excerpt_sha256": "36aa69413b6a5bcca07ae6394ce3e3240799cca391fd4ddf17460c1c30c06f64"
+      },
+      "author_whole_response_candidate": 75
+    },
+    {
+      "problem_id": "2023-II-2",
+      "sample_id": "2023-II-2:draw-05",
+      "draw_index": 5,
+      "seed": 3680,
+      "response_sha256": "da4a2c278028fc72b39f3c0b14289178f0a578a4271986922252bb9d1f0cee87",
+      "input_tokens": 89,
+      "output_tokens": 13931,
+      "effective_max_new_tokens": 32679,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 585,
+        "scope_status": "TERMINAL_BOX_UNANCHORED",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          33191,
+          33202
+        ],
+        "source_excerpt_sha256": "43caaf82b1f92e1941d66ab712cdd50d2a85bcff38d3f5cf1aa00ac48fb1b144"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 585,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          35624,
+          35635
+        ],
+        "source_excerpt_sha256": "43caaf82b1f92e1941d66ab712cdd50d2a85bcff38d3f5cf1aa00ac48fb1b144"
+      },
+      "author_whole_response_candidate": 585
+    },
+    {
+      "problem_id": "2023-II-4",
+      "sample_id": "2023-II-4:draw-05",
+      "draw_index": 5,
+      "seed": 3682,
+      "response_sha256": "262c1729d7d7d0139524ad2c260d99c86d2da4004a4fb66c0140446b882440cb",
+      "input_tokens": 113,
+      "output_tokens": 11152,
+      "effective_max_new_tokens": 32655,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 273,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          27389,
+          27400
+        ],
+        "source_excerpt_sha256": "bffea66513316bcd25928b7fe09710e768f72a32d88c78c6fe7f8032665f14c4"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 273,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          29663,
+          29674
+        ],
+        "source_excerpt_sha256": "bffea66513316bcd25928b7fe09710e768f72a32d88c78c6fe7f8032665f14c4"
+      },
+      "author_whole_response_candidate": 273
+    },
+    {
+      "problem_id": "2023-II-9",
+      "sample_id": "2023-II-9:draw-05",
+      "draw_index": 5,
+      "seed": 3687,
+      "response_sha256": "82b8d03fb8e482138567b75af340e8fcadd7483fa26fe27fc929e5539b5301a6",
+      "input_tokens": 194,
+      "output_tokens": 32574,
+      "effective_max_new_tokens": 32574,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2022-II-6",
+      "sample_id": "2022-II-6:draw-05",
+      "draw_index": 5,
+      "seed": 3714,
+      "response_sha256": "0a8ed47c9d3da9cc698bb5cb5d1419e2023df44a76d9bd2a0cc3f077798c4d77",
+      "input_tokens": 169,
+      "output_tokens": 17756,
+      "effective_max_new_tokens": 32599,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 841,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          48941,
+          48952
+        ],
+        "source_excerpt_sha256": "fcd4e843e2a85f7ff2f874fa70b4e70708d4608d0dbbb98167f213d98202c6e2"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 841,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          51945,
+          51956
+        ],
+        "source_excerpt_sha256": "fcd4e843e2a85f7ff2f874fa70b4e70708d4608d0dbbb98167f213d98202c6e2"
+      },
+      "author_whole_response_candidate": 841
+    },
+    {
+      "problem_id": "2021-I-3",
+      "sample_id": "2021-I-3:draw-05",
+      "draw_index": 5,
+      "seed": 3726,
+      "response_sha256": "4c483a930fc49d45735a2b52cf0123b28eb3d7f245cc75e939f6bd61b78f24fc",
+      "input_tokens": 55,
+      "output_tokens": 17844,
+      "effective_max_new_tokens": 32713,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 50,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          39539,
+          39549
+        ],
+        "source_excerpt_sha256": "bf10ee540ecb41652a30bc9f95c812c62ea9328478835374f4b86295d51ad645"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 50,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          42120,
+          42130
+        ],
+        "source_excerpt_sha256": "bf10ee540ecb41652a30bc9f95c812c62ea9328478835374f4b86295d51ad645"
+      },
+      "author_whole_response_candidate": 50
+    },
+    {
+      "problem_id": "2021-II-1",
+      "sample_id": "2021-II-1:draw-05",
+      "draw_index": 5,
+      "seed": 3739,
+      "response_sha256": "bf465d0071ab5d3d4e34dfd847111ef4d2c59a70dfe497c8a4b7d54c27a4566e",
+      "input_tokens": 72,
+      "output_tokens": 5198,
+      "effective_max_new_tokens": 32696,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 550,
+        "scope_status": "TERMINAL_BOX_UNANCHORED",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          10779,
+          10790
+        ],
+        "source_excerpt_sha256": "1df134f4946efe1e95ff870608b17fbadb4aeece37ad42952b21e0d4ca9d47d9"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 550,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          13088,
+          13099
+        ],
+        "source_excerpt_sha256": "1df134f4946efe1e95ff870608b17fbadb4aeece37ad42952b21e0d4ca9d47d9"
+      },
+      "author_whole_response_candidate": 550
+    },
+    {
+      "problem_id": "2021-II-2",
+      "sample_id": "2021-II-2:draw-05",
+      "draw_index": 5,
+      "seed": 3740,
+      "response_sha256": "bb8d46c83c8e736427653be61b7e37adedc0b74af38f3c4f1a944cd415c97c38",
+      "input_tokens": 423,
+      "output_tokens": 12701,
+      "effective_max_new_tokens": 32345,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 336,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          27256,
+          27267
+        ],
+        "source_excerpt_sha256": "d1aac082f78a077dc5c4fe62575d16be2b8d3eba349e60cd7bd9e1ab263be19c"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 336,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          31595,
+          31606
+        ],
+        "source_excerpt_sha256": "d1aac082f78a077dc5c4fe62575d16be2b8d3eba349e60cd7bd9e1ab263be19c"
+      },
+      "author_whole_response_candidate": 336
+    },
+    {
+      "problem_id": "2019-I-1",
+      "sample_id": "2019-I-1:draw-05",
+      "draw_index": 5,
+      "seed": 3784,
+      "response_sha256": "530ef03c5674fb490edf507e98243d9c4ab40d29a2d1461c3a792bbb4474ff05",
+      "input_tokens": 89,
+      "output_tokens": 19379,
+      "effective_max_new_tokens": 32679,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 342,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          49216,
+          49227
+        ],
+        "source_excerpt_sha256": "07fed9c7a16b8f8088775b4b2e275d906fc6b7acb765f9405c2f2fd1ac8749e2"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 342,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          51087,
+          51098
+        ],
+        "source_excerpt_sha256": "07fed9c7a16b8f8088775b4b2e275d906fc6b7acb765f9405c2f2fd1ac8749e2"
+      },
+      "author_whole_response_candidate": 342
+    },
+    {
+      "problem_id": "2019-II-4",
+      "sample_id": "2019-II-4:draw-05",
+      "draw_index": 5,
+      "seed": 3802,
+      "response_sha256": "30b6dd19b6e810a5d3a9fe6a04ec06d93e99e30dbbdf269ab5556ca6af77f6f5",
+      "input_tokens": 82,
+      "output_tokens": 29903,
+      "effective_max_new_tokens": 32686,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 187,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          55932,
+          55943
+        ],
+        "source_excerpt_sha256": "a9a90f98031e9d931ce73a87afe64ee63c5f5881498b0359a1f0a11430322a4f"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 187,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          58529,
+          58540
+        ],
+        "source_excerpt_sha256": "a9a90f98031e9d931ce73a87afe64ee63c5f5881498b0359a1f0a11430322a4f"
+      },
+      "author_whole_response_candidate": 187
+    },
+    {
+      "problem_id": "2019-II-11",
+      "sample_id": "2019-II-11:draw-05",
+      "draw_index": 5,
+      "seed": 3809,
+      "response_sha256": "f69d70555cc51e14002e65295f609b5b295d2b217b95323696fd8656e8f98682",
+      "input_tokens": 151,
+      "output_tokens": 30339,
+      "effective_max_new_tokens": 32617,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 11,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          61011,
+          61021
+        ],
+        "source_excerpt_sha256": "bc1e6d1b708b573effaef586984cc1cdccf9bfbfcd305aa4c2efd057abc3208d"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 11,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          66068,
+          66078
+        ],
+        "source_excerpt_sha256": "bc1e6d1b708b573effaef586984cc1cdccf9bfbfcd305aa4c2efd057abc3208d"
+      },
+      "author_whole_response_candidate": 11
+    },
+    {
+      "problem_id": "2018-I-7",
+      "sample_id": "2018-I-7:draw-05",
+      "draw_index": 5,
+      "seed": 3820,
+      "response_sha256": "c88453e317d29553e9ab2334ca04f34fccff04d3c552af943c9b82d0b1776853",
+      "input_tokens": 84,
+      "output_tokens": 32684,
+      "effective_max_new_tokens": 32684,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2018-II-6",
+      "sample_id": "2018-II-6:draw-05",
+      "draw_index": 5,
+      "seed": 3834,
+      "response_sha256": "9c85df74e0a21f88a1b73b2cdf18fb53b48f753e088004d70e14314b9741ea65",
+      "input_tokens": 131,
+      "output_tokens": 7604,
+      "effective_max_new_tokens": 32637,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 37,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          17517,
+          17527
+        ],
+        "source_excerpt_sha256": "4ff7b5d5d7e460dbb6e0f3a00135e07ef7bb1c786e4f3bdee65b515a061010c4"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 37,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          20033,
+          20043
+        ],
+        "source_excerpt_sha256": "4ff7b5d5d7e460dbb6e0f3a00135e07ef7bb1c786e4f3bdee65b515a061010c4"
+      },
+      "author_whole_response_candidate": 37
+    },
+    {
+      "problem_id": "2018-II-14",
+      "sample_id": "2018-II-14:draw-05",
+      "draw_index": 5,
+      "seed": 3842,
+      "response_sha256": "5013cece360647eef12d059d4134c9b142955a8c12a170d80e569634b9011dac",
+      "input_tokens": 177,
+      "output_tokens": 32591,
+      "effective_max_new_tokens": 32591,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2017-I-3",
+      "sample_id": "2017-I-3:draw-05",
+      "draw_index": 5,
+      "seed": 3846,
+      "response_sha256": "55b579764e4bd3661d360a0271e3aaea33c0df8c15a8e784caf63f059f665eb7",
+      "input_tokens": 88,
+      "output_tokens": 11138,
+      "effective_max_new_tokens": 32680,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 69,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          23870,
+          23880
+        ],
+        "source_excerpt_sha256": "c3eb3b520fad0ff8d64054f1a548aca3758b392dfff0e39ca2deebe890cb3751"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 69,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          25629,
+          25639
+        ],
+        "source_excerpt_sha256": "c3eb3b520fad0ff8d64054f1a548aca3758b392dfff0e39ca2deebe890cb3751"
+      },
+      "author_whole_response_candidate": 69
+    },
+    {
+      "problem_id": "2017-I-6",
+      "sample_id": "2017-I-6:draw-05",
+      "draw_index": 5,
+      "seed": 3849,
+      "response_sha256": "ad3fc10af26c80f79eb9e38788ad1da2f5aa7283f6c82768826300325f6125af",
+      "input_tokens": 104,
+      "output_tokens": 8751,
+      "effective_max_new_tokens": 32664,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 48,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          25734,
+          25744
+        ],
+        "source_excerpt_sha256": "f256c443cc6f391b3685bdcc6e41516e952061b1f0179580bd4fceb5d5dd9156"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 48,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          29035,
+          29045
+        ],
+        "source_excerpt_sha256": "f256c443cc6f391b3685bdcc6e41516e952061b1f0179580bd4fceb5d5dd9156"
+      },
+      "author_whole_response_candidate": 48
+    },
+    {
+      "problem_id": "2017-I-10",
+      "sample_id": "2017-I-10:draw-05",
+      "draw_index": 5,
+      "seed": 3853,
+      "response_sha256": "39560cac24a930550ba51169076f24579679b26a2fc84968c20e67bf4c3db1a9",
+      "input_tokens": 156,
+      "output_tokens": 25951,
+      "effective_max_new_tokens": 32612,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 56,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          58464,
+          58474
+        ],
+        "source_excerpt_sha256": "21ceea40a02433e1603b7e354520b033c88ac55319641a8f1b6ea1635bdc06bb"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 56,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          61213,
+          61223
+        ],
+        "source_excerpt_sha256": "21ceea40a02433e1603b7e354520b033c88ac55319641a8f1b6ea1635bdc06bb"
+      },
+      "author_whole_response_candidate": 56
+    },
+    {
+      "problem_id": "2017-II-4",
+      "sample_id": "2017-II-4:draw-05",
+      "draw_index": 5,
+      "seed": 3862,
+      "response_sha256": "a10ca5a3e404993b4dc425a59c67341d96ce8d84185986e2735425e5ddc534c2",
+      "input_tokens": 56,
+      "output_tokens": 10188,
+      "effective_max_new_tokens": 32712,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 222,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          28258,
+          28269
+        ],
+        "source_excerpt_sha256": "11b3302d0b7a083180cac1338ba8237726594105776e0766c443ae73439b4a16"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 222,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          30932,
+          30943
+        ],
+        "source_excerpt_sha256": "11b3302d0b7a083180cac1338ba8237726594105776e0766c443ae73439b4a16"
+      },
+      "author_whole_response_candidate": 222
+    },
+    {
+      "problem_id": "2016-II-9",
+      "sample_id": "2016-II-9:draw-05",
+      "draw_index": 5,
+      "seed": 3897,
+      "response_sha256": "7b1db2b9221450f77836470cb659312202b11b66cd83c9ad83ba271197f3e0b5",
+      "input_tokens": 117,
+      "output_tokens": 10542,
+      "effective_max_new_tokens": 32651,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 262,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          20777,
+          20788
+        ],
+        "source_excerpt_sha256": "2be0396483b847886d76abf6fc37f1e242a198138484958315bba3fe73f9a9ac"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 262,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          22900,
+          22911
+        ],
+        "source_excerpt_sha256": "2be0396483b847886d76abf6fc37f1e242a198138484958315bba3fe73f9a9ac"
+      },
+      "author_whole_response_candidate": 262
+    },
+    {
+      "problem_id": "2016-II-13",
+      "sample_id": "2016-II-13:draw-05",
+      "draw_index": 5,
+      "seed": 3901,
+      "response_sha256": "c12c94662492b8231f0e69a0e1d086cc799520c87b5a83011b261f03bd685251",
+      "input_tokens": 153,
+      "output_tokens": 24095,
+      "effective_max_new_tokens": 32615,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 14,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          66623,
+          66633
+        ],
+        "source_excerpt_sha256": "0ffb4709485c70801a29426d824c81e4a54f77b5297cdee6c63ac0ca4ea1c787"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 14,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          69111,
+          69121
+        ],
+        "source_excerpt_sha256": "0ffb4709485c70801a29426d824c81e4a54f77b5297cdee6c63ac0ca4ea1c787"
+      },
+      "author_whole_response_candidate": 14
+    },
+    {
+      "problem_id": "2014-I-7",
+      "sample_id": "2014-I-7:draw-05",
+      "draw_index": 5,
+      "seed": 3940,
+      "response_sha256": "cfd5600037c497f916f3be86b0dc677d78fb4a0ba41a73c9f123755a769fa014",
+      "input_tokens": 170,
+      "output_tokens": 11906,
+      "effective_max_new_tokens": 32598,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 100,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          26820,
+          26831
+        ],
+        "source_excerpt_sha256": "6cb37e4b7b73ec3cf12743e036c0f547731b0ef3893b66ccae9ba765a5a2e1f2"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 100,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          30338,
+          30349
+        ],
+        "source_excerpt_sha256": "6cb37e4b7b73ec3cf12743e036c0f547731b0ef3893b66ccae9ba765a5a2e1f2"
+      },
+      "author_whole_response_candidate": 100
+    },
+    {
+      "problem_id": "2014-I-11",
+      "sample_id": "2014-I-11:draw-05",
+      "draw_index": 5,
+      "seed": 3944,
+      "response_sha256": "00acbf0e03cc237b2d9d67836c99f4a96333143d7862ed3b1420407e66913d4b",
+      "input_tokens": 137,
+      "output_tokens": 16273,
+      "effective_max_new_tokens": 32631,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 391,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          41679,
+          41690
+        ],
+        "source_excerpt_sha256": "2e769b47bd601d57d471b53cccec02da24dd3320d11c8735e5b5aef38728d237"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 391,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          43972,
+          43983
+        ],
+        "source_excerpt_sha256": "2e769b47bd601d57d471b53cccec02da24dd3320d11c8735e5b5aef38728d237"
+      },
+      "author_whole_response_candidate": 391
+    },
+    {
+      "problem_id": "2014-I-13",
+      "sample_id": "2014-I-13:draw-05",
+      "draw_index": 5,
+      "seed": 3946,
+      "response_sha256": "3d0b0afe2a1dc1c779fae5050b060a02a45e57f00cdac8af38c9a1be8e3c85d0",
+      "input_tokens": 524,
+      "output_tokens": 32244,
+      "effective_max_new_tokens": 32244,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2013-II-3",
+      "sample_id": "2013-II-3:draw-05",
+      "draw_index": 5,
+      "seed": 3981,
+      "response_sha256": "981aa04634bd7c08023a9a4223d2c94bd129f747a71b5fc3035541570d8cacf8",
+      "input_tokens": 168,
+      "output_tokens": 7122,
+      "effective_max_new_tokens": 32600,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 350,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          18121,
+          18132
+        ],
+        "source_excerpt_sha256": "16f91701629d14bc08607ce320b1205a5b094217d15d5b9778704552774432cf"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 350,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          19991,
+          20002
+        ],
+        "source_excerpt_sha256": "16f91701629d14bc08607ce320b1205a5b094217d15d5b9778704552774432cf"
+      },
+      "author_whole_response_candidate": 350
+    },
+    {
+      "problem_id": "2013-II-11",
+      "sample_id": "2013-II-11:draw-05",
+      "draw_index": 5,
+      "seed": 3989,
+      "response_sha256": "da28bea4c47d19f5f4fbe61997d56cc8966481e367a613cdfa33cac4d6f735ca",
+      "input_tokens": 107,
+      "output_tokens": 20037,
+      "effective_max_new_tokens": 32661,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 399,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          54901,
+          54912
+        ],
+        "source_excerpt_sha256": "ad8a1eb5df96f08dfa7551cf11468b46a4c2a37f9b405e3e9f7da7c549774946"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 399,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          59207,
+          59218
+        ],
+        "source_excerpt_sha256": "ad8a1eb5df96f08dfa7551cf11468b46a4c2a37f9b405e3e9f7da7c549774946"
+      },
+      "author_whole_response_candidate": 399
+    },
+    {
+      "problem_id": "2012-I-4",
+      "sample_id": "2012-I-4:draw-05",
+      "draw_index": 5,
+      "seed": 3997,
+      "response_sha256": "4af90d762651b9473258d5c854116e0da0aa8dfe6fafc918de7b3347cf412dcf",
+      "input_tokens": 211,
+      "output_tokens": 32557,
+      "effective_max_new_tokens": 32557,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2012-I-13",
+      "sample_id": "2012-I-13:draw-05",
+      "draw_index": 5,
+      "seed": 4006,
+      "response_sha256": "57af0a7379f30da3f47b51bac54e0c636f649648f5bc7df80fb04f340c5b5110",
+      "input_tokens": 137,
+      "output_tokens": 28305,
+      "effective_max_new_tokens": 32631,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 41,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          62560,
+          62570
+        ],
+        "source_excerpt_sha256": "c3ff7555c0cb069d767cabf5170d42f659b981220908379defb895a269b754d1"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 41,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          64885,
+          64895
+        ],
+        "source_excerpt_sha256": "c3ff7555c0cb069d767cabf5170d42f659b981220908379defb895a269b754d1"
+      },
+      "author_whole_response_candidate": 41
+    },
+    {
+      "problem_id": "2011-I-1",
+      "sample_id": "2011-I-1:draw-05",
+      "draw_index": 5,
+      "seed": 4024,
+      "response_sha256": "a1bddbbd978cfd1c9f0c8f13c8098b474429d3c3909d07af3e65bdc3d86efd5f",
+      "input_tokens": 176,
+      "output_tokens": 4253,
+      "effective_max_new_tokens": 32592,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 85,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          7570,
+          7580
+        ],
+        "source_excerpt_sha256": "1a9c0cf4e24bd7eccdec797e34b31f93dd9a340cc91ddb24770719f84e5c2d12"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 85,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          10236,
+          10246
+        ],
+        "source_excerpt_sha256": "1a9c0cf4e24bd7eccdec797e34b31f93dd9a340cc91ddb24770719f84e5c2d12"
+      },
+      "author_whole_response_candidate": 85
+    },
+    {
+      "problem_id": "2011-II-8",
+      "sample_id": "2011-II-8:draw-05",
+      "draw_index": 5,
+      "seed": 4046,
+      "response_sha256": "651469c91bf88cec1e289c52704e1da567247da38adecc2f0c26b8c9b68094fb",
+      "input_tokens": 142,
+      "output_tokens": 11593,
+      "effective_max_new_tokens": 32626,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 784,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          28176,
+          28187
+        ],
+        "source_excerpt_sha256": "c9b498fc172d8471539417b86c8b9a04d3103637eb7c33644480e99a0a27f7af"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 784,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          31809,
+          31820
+        ],
+        "source_excerpt_sha256": "c9b498fc172d8471539417b86c8b9a04d3103637eb7c33644480e99a0a27f7af"
+      },
+      "author_whole_response_candidate": 784
+    },
+    {
+      "problem_id": "2011-II-14",
+      "sample_id": "2011-II-14:draw-05",
+      "draw_index": 5,
+      "seed": 4052,
+      "response_sha256": "010a3aca62ef51b5df38387e726d22bad34e8d9f11f7fe4116d95005d22953b4",
+      "input_tokens": 133,
+      "output_tokens": 11543,
+      "effective_max_new_tokens": 32635,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 440,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          37482,
+          37493
+        ],
+        "source_excerpt_sha256": "8cd9b77d722ac9119d0557e3682641e2a772915cf1eef21e794659221e3bb168"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 440,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          40569,
+          40580
+        ],
+        "source_excerpt_sha256": "8cd9b77d722ac9119d0557e3682641e2a772915cf1eef21e794659221e3bb168"
+      },
+      "author_whole_response_candidate": 440
+    },
+    {
+      "problem_id": "2010-II-4",
+      "sample_id": "2010-II-4:draw-05",
+      "draw_index": 5,
+      "seed": 4072,
+      "response_sha256": "c62b6f609f62261cae3df6c39934650f57efa8e79fe4063bb8f5b561f26a8c5f",
+      "input_tokens": 133,
+      "output_tokens": 6871,
+      "effective_max_new_tokens": 32635,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 52,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          16012,
+          16022
+        ],
+        "source_excerpt_sha256": "11c879753c7bdabbfea9fa580baa0f98dfb52984d65365aee10442aac99c8510"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 52,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          19018,
+          19028
+        ],
+        "source_excerpt_sha256": "11c879753c7bdabbfea9fa580baa0f98dfb52984d65365aee10442aac99c8510"
+      },
+      "author_whole_response_candidate": 52
+    },
+    {
+      "problem_id": "2009-II-12",
+      "sample_id": "2009-II-12:draw-05",
+      "draw_index": 5,
+      "seed": 4110,
+      "response_sha256": "6f8a1a3084ea0fc6a95b833458d5c7aa0b8c9a918852fbfc7e95a3621cf10592",
+      "input_tokens": 114,
+      "output_tokens": 26077,
+      "effective_max_new_tokens": 32654,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "BOX_FAILS_INTEGER_FORMAT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false,
+        "char_span_in_response": [
+          70045,
+          70057
+        ],
+        "source_excerpt_sha256": "459bf8a211ff20bca8bd8a79baa9c3dcd949ed973e00918a4d060e1f175a99b9"
+      },
+      "final": {
+        "status": "BOX_FAILS_INTEGER_FORMAT",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false,
+        "char_span_in_response": [
+          74645,
+          74657
+        ],
+        "source_excerpt_sha256": "459bf8a211ff20bca8bd8a79baa9c3dcd949ed973e00918a4d060e1f175a99b9"
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2023-I-12",
+      "sample_id": "2023-I-12:draw-06",
+      "draw_index": 6,
+      "seed": 4155,
+      "response_sha256": "586476a1301f6bccdb51fab5ea061c1e3391606a39df7e48781d0cd70e884a07",
+      "input_tokens": 141,
+      "output_tokens": 13974,
+      "effective_max_new_tokens": 32627,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 75,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          30887,
+          30897
+        ],
+        "source_excerpt_sha256": "36aa69413b6a5bcca07ae6394ce3e3240799cca391fd4ddf17460c1c30c06f64"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 75,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          33785,
+          33795
+        ],
+        "source_excerpt_sha256": "36aa69413b6a5bcca07ae6394ce3e3240799cca391fd4ddf17460c1c30c06f64"
+      },
+      "author_whole_response_candidate": 75
+    },
+    {
+      "problem_id": "2023-II-2",
+      "sample_id": "2023-II-2:draw-06",
+      "draw_index": 6,
+      "seed": 4160,
+      "response_sha256": "d7808289b38147d903954de3bf85634fde9abedbdf0b825bbe77661f7ec2f6ae",
+      "input_tokens": 89,
+      "output_tokens": 17996,
+      "effective_max_new_tokens": 32679,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 585,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          40211,
+          40222
+        ],
+        "source_excerpt_sha256": "43caaf82b1f92e1941d66ab712cdd50d2a85bcff38d3f5cf1aa00ac48fb1b144"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 585,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          42523,
+          42534
+        ],
+        "source_excerpt_sha256": "43caaf82b1f92e1941d66ab712cdd50d2a85bcff38d3f5cf1aa00ac48fb1b144"
+      },
+      "author_whole_response_candidate": 585
+    },
+    {
+      "problem_id": "2023-II-4",
+      "sample_id": "2023-II-4:draw-06",
+      "draw_index": 6,
+      "seed": 4162,
+      "response_sha256": "54bbe6d9f30d6b50463721f950d3164cba3f96740fdfde9ee1af4e396d115119",
+      "input_tokens": 113,
+      "output_tokens": 13180,
+      "effective_max_new_tokens": 32655,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 273,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          31020,
+          31031
+        ],
+        "source_excerpt_sha256": "bffea66513316bcd25928b7fe09710e768f72a32d88c78c6fe7f8032665f14c4"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 273,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          33605,
+          33616
+        ],
+        "source_excerpt_sha256": "bffea66513316bcd25928b7fe09710e768f72a32d88c78c6fe7f8032665f14c4"
+      },
+      "author_whole_response_candidate": 273
+    },
+    {
+      "problem_id": "2023-II-9",
+      "sample_id": "2023-II-9:draw-06",
+      "draw_index": 6,
+      "seed": 4167,
+      "response_sha256": "f32d7c8d4c974cef6cb55a64c4dcc237133e434ca8c43673fafd1daa6df7e044",
+      "input_tokens": 194,
+      "output_tokens": 16336,
+      "effective_max_new_tokens": 32574,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 33,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          40185,
+          40195
+        ],
+        "source_excerpt_sha256": "f3962f438bc930a0d141d479a752825c7c0248add527a7cb30602ee83cb7133b"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 33,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          42706,
+          42716
+        ],
+        "source_excerpt_sha256": "f3962f438bc930a0d141d479a752825c7c0248add527a7cb30602ee83cb7133b"
+      },
+      "author_whole_response_candidate": 33
+    },
+    {
+      "problem_id": "2022-II-6",
+      "sample_id": "2022-II-6:draw-06",
+      "draw_index": 6,
+      "seed": 4194,
+      "response_sha256": "89a02a80547aa2410adf3bf3d27cd37cf6485da005286ec5357c5136783fea46",
+      "input_tokens": 169,
+      "output_tokens": 14919,
+      "effective_max_new_tokens": 32599,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 841,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          41470,
+          41481
+        ],
+        "source_excerpt_sha256": "fcd4e843e2a85f7ff2f874fa70b4e70708d4608d0dbbb98167f213d98202c6e2"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 841,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          43978,
+          43989
+        ],
+        "source_excerpt_sha256": "fcd4e843e2a85f7ff2f874fa70b4e70708d4608d0dbbb98167f213d98202c6e2"
+      },
+      "author_whole_response_candidate": 841
+    },
+    {
+      "problem_id": "2021-I-3",
+      "sample_id": "2021-I-3:draw-06",
+      "draw_index": 6,
+      "seed": 4206,
+      "response_sha256": "3c8233f9e296046bf50bbec8eef0f8e341cae5e3f8e26af376584c725438ebed",
+      "input_tokens": 55,
+      "output_tokens": 17554,
+      "effective_max_new_tokens": 32713,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 50,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          39305,
+          39315
+        ],
+        "source_excerpt_sha256": "bf10ee540ecb41652a30bc9f95c812c62ea9328478835374f4b86295d51ad645"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 50,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          41994,
+          42004
+        ],
+        "source_excerpt_sha256": "bf10ee540ecb41652a30bc9f95c812c62ea9328478835374f4b86295d51ad645"
+      },
+      "author_whole_response_candidate": 50
+    },
+    {
+      "problem_id": "2021-II-1",
+      "sample_id": "2021-II-1:draw-06",
+      "draw_index": 6,
+      "seed": 4219,
+      "response_sha256": "7e0beeafc1c6f5f06e48f0cdc29478e96e84c8b905b8baa20d3b75377a943a22",
+      "input_tokens": 72,
+      "output_tokens": 5367,
+      "effective_max_new_tokens": 32696,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 550,
+        "scope_status": "TERMINAL_BOX_UNANCHORED",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          11939,
+          11950
+        ],
+        "source_excerpt_sha256": "1df134f4946efe1e95ff870608b17fbadb4aeece37ad42952b21e0d4ca9d47d9"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 550,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          14044,
+          14055
+        ],
+        "source_excerpt_sha256": "1df134f4946efe1e95ff870608b17fbadb4aeece37ad42952b21e0d4ca9d47d9"
+      },
+      "author_whole_response_candidate": 550
+    },
+    {
+      "problem_id": "2021-II-2",
+      "sample_id": "2021-II-2:draw-06",
+      "draw_index": 6,
+      "seed": 4220,
+      "response_sha256": "9c9ad8a8f2d7db3080dae2341f348068743456d2d2043fdc7eb3d098e2c32406",
+      "input_tokens": 423,
+      "output_tokens": 13374,
+      "effective_max_new_tokens": 32345,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 336,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          32237,
+          32248
+        ],
+        "source_excerpt_sha256": "d1aac082f78a077dc5c4fe62575d16be2b8d3eba349e60cd7bd9e1ab263be19c"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 336,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          36339,
+          36350
+        ],
+        "source_excerpt_sha256": "d1aac082f78a077dc5c4fe62575d16be2b8d3eba349e60cd7bd9e1ab263be19c"
+      },
+      "author_whole_response_candidate": 336
+    },
+    {
+      "problem_id": "2019-I-1",
+      "sample_id": "2019-I-1:draw-06",
+      "draw_index": 6,
+      "seed": 4264,
+      "response_sha256": "ab6c4975e29bc75a200d591721db61d6c7a39d37d636f67083a35f7b44cb4939",
+      "input_tokens": 89,
+      "output_tokens": 15283,
+      "effective_max_new_tokens": 32679,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 342,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          41068,
+          41079
+        ],
+        "source_excerpt_sha256": "07fed9c7a16b8f8088775b4b2e275d906fc6b7acb765f9405c2f2fd1ac8749e2"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 342,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          43208,
+          43219
+        ],
+        "source_excerpt_sha256": "07fed9c7a16b8f8088775b4b2e275d906fc6b7acb765f9405c2f2fd1ac8749e2"
+      },
+      "author_whole_response_candidate": 342
+    },
+    {
+      "problem_id": "2019-II-4",
+      "sample_id": "2019-II-4:draw-06",
+      "draw_index": 6,
+      "seed": 4282,
+      "response_sha256": "5e807e0b6349212d1d9af4d586f9974707ef72b79f6449a705e0bd43dc47e0ee",
+      "input_tokens": 82,
+      "output_tokens": 21753,
+      "effective_max_new_tokens": 32686,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 187,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          42245,
+          42256
+        ],
+        "source_excerpt_sha256": "a9a90f98031e9d931ce73a87afe64ee63c5f5881498b0359a1f0a11430322a4f"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 187,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          44404,
+          44415
+        ],
+        "source_excerpt_sha256": "a9a90f98031e9d931ce73a87afe64ee63c5f5881498b0359a1f0a11430322a4f"
+      },
+      "author_whole_response_candidate": 187
+    },
+    {
+      "problem_id": "2019-II-11",
+      "sample_id": "2019-II-11:draw-06",
+      "draw_index": 6,
+      "seed": 4289,
+      "response_sha256": "d6b18bf3efc02df261b66558747b9aec697a0bcd5273f6bd81ad6e7b2548d8e1",
+      "input_tokens": 151,
+      "output_tokens": 15917,
+      "effective_max_new_tokens": 32617,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 11,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          31494,
+          31504
+        ],
+        "source_excerpt_sha256": "bc1e6d1b708b573effaef586984cc1cdccf9bfbfcd305aa4c2efd057abc3208d"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 11,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          35806,
+          35816
+        ],
+        "source_excerpt_sha256": "bc1e6d1b708b573effaef586984cc1cdccf9bfbfcd305aa4c2efd057abc3208d"
+      },
+      "author_whole_response_candidate": 11
+    },
+    {
+      "problem_id": "2018-I-7",
+      "sample_id": "2018-I-7:draw-06",
+      "draw_index": 6,
+      "seed": 4300,
+      "response_sha256": "84ce10a17f93dfa07848dd73e55ddc69eb9d0b7ed9e4d4d137bad7d7492f2ad7",
+      "input_tokens": 84,
+      "output_tokens": 32684,
+      "effective_max_new_tokens": 32684,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2018-II-6",
+      "sample_id": "2018-II-6:draw-06",
+      "draw_index": 6,
+      "seed": 4314,
+      "response_sha256": "5b302657badad78ff332da4fa5775a1adfbf3521f39f9d54d206049a55fd6252",
+      "input_tokens": 131,
+      "output_tokens": 6383,
+      "effective_max_new_tokens": 32637,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 37,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          14558,
+          14568
+        ],
+        "source_excerpt_sha256": "4ff7b5d5d7e460dbb6e0f3a00135e07ef7bb1c786e4f3bdee65b515a061010c4"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 37,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          16980,
+          16990
+        ],
+        "source_excerpt_sha256": "4ff7b5d5d7e460dbb6e0f3a00135e07ef7bb1c786e4f3bdee65b515a061010c4"
+      },
+      "author_whole_response_candidate": 37
+    },
+    {
+      "problem_id": "2018-II-14",
+      "sample_id": "2018-II-14:draw-06",
+      "draw_index": 6,
+      "seed": 4322,
+      "response_sha256": "debbae3c1397fa85e869449d5169d5b5b10dc9121c6f844f5560ce182e45d7bc",
+      "input_tokens": 177,
+      "output_tokens": 32591,
+      "effective_max_new_tokens": 32591,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2017-I-3",
+      "sample_id": "2017-I-3:draw-06",
+      "draw_index": 6,
+      "seed": 4326,
+      "response_sha256": "604f39fbef1357f1e835b56ba7083d824fb7c7ce9c6ca7ab4980df6a4b52a2cf",
+      "input_tokens": 88,
+      "output_tokens": 8767,
+      "effective_max_new_tokens": 32680,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 69,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          17941,
+          17951
+        ],
+        "source_excerpt_sha256": "c3eb3b520fad0ff8d64054f1a548aca3758b392dfff0e39ca2deebe890cb3751"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 69,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          19845,
+          19855
+        ],
+        "source_excerpt_sha256": "c3eb3b520fad0ff8d64054f1a548aca3758b392dfff0e39ca2deebe890cb3751"
+      },
+      "author_whole_response_candidate": 69
+    },
+    {
+      "problem_id": "2017-I-6",
+      "sample_id": "2017-I-6:draw-06",
+      "draw_index": 6,
+      "seed": 4329,
+      "response_sha256": "bb915168c249047a50114387d1ca00d80aaa9641b2ed8e9d1b3efbbde863fbce",
+      "input_tokens": 104,
+      "output_tokens": 15697,
+      "effective_max_new_tokens": 32664,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 48,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          46834,
+          46844
+        ],
+        "source_excerpt_sha256": "f256c443cc6f391b3685bdcc6e41516e952061b1f0179580bd4fceb5d5dd9156"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 48,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          51015,
+          51025
+        ],
+        "source_excerpt_sha256": "f256c443cc6f391b3685bdcc6e41516e952061b1f0179580bd4fceb5d5dd9156"
+      },
+      "author_whole_response_candidate": 48
+    },
+    {
+      "problem_id": "2017-I-10",
+      "sample_id": "2017-I-10:draw-06",
+      "draw_index": 6,
+      "seed": 4333,
+      "response_sha256": "0dfcbddd2c6435deb00206fa874476c1e0ffe3daddb9c858906939b25088ea48",
+      "input_tokens": 156,
+      "output_tokens": 15942,
+      "effective_max_new_tokens": 32612,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 56,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          39426,
+          39436
+        ],
+        "source_excerpt_sha256": "21ceea40a02433e1603b7e354520b033c88ac55319641a8f1b6ea1635bdc06bb"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 56,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          42730,
+          42740
+        ],
+        "source_excerpt_sha256": "21ceea40a02433e1603b7e354520b033c88ac55319641a8f1b6ea1635bdc06bb"
+      },
+      "author_whole_response_candidate": 56
+    },
+    {
+      "problem_id": "2017-II-4",
+      "sample_id": "2017-II-4:draw-06",
+      "draw_index": 6,
+      "seed": 4342,
+      "response_sha256": "ffa8cf287042e7a11669e7fe2049c708909e3a7705e095303be8a4a0deec0045",
+      "input_tokens": 56,
+      "output_tokens": 9503,
+      "effective_max_new_tokens": 32712,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 222,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          25638,
+          25649
+        ],
+        "source_excerpt_sha256": "11b3302d0b7a083180cac1338ba8237726594105776e0766c443ae73439b4a16"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 222,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          28752,
+          28763
+        ],
+        "source_excerpt_sha256": "11b3302d0b7a083180cac1338ba8237726594105776e0766c443ae73439b4a16"
+      },
+      "author_whole_response_candidate": 222
+    },
+    {
+      "problem_id": "2016-II-9",
+      "sample_id": "2016-II-9:draw-06",
+      "draw_index": 6,
+      "seed": 4377,
+      "response_sha256": "4e680207e0cce44c297cce48cd27ddddd92b80df79432f4e06062adf3df3d062",
+      "input_tokens": 117,
+      "output_tokens": 7291,
+      "effective_max_new_tokens": 32651,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 262,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          14010,
+          14021
+        ],
+        "source_excerpt_sha256": "2be0396483b847886d76abf6fc37f1e242a198138484958315bba3fe73f9a9ac"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 262,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          16476,
+          16487
+        ],
+        "source_excerpt_sha256": "2be0396483b847886d76abf6fc37f1e242a198138484958315bba3fe73f9a9ac"
+      },
+      "author_whole_response_candidate": 262
+    },
+    {
+      "problem_id": "2016-II-13",
+      "sample_id": "2016-II-13:draw-06",
+      "draw_index": 6,
+      "seed": 4381,
+      "response_sha256": "66366fb656ca13c29b0bbc950d55e22b71f4f51b7e9f335a1f9f0f9c403503f4",
+      "input_tokens": 153,
+      "output_tokens": 21381,
+      "effective_max_new_tokens": 32615,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 369,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          52513,
+          52524
+        ],
+        "source_excerpt_sha256": "cd5875bceb5f12f98459a00800ea08f5b4f56a53a6ac14ff316142aed8f40487"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 369,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          56353,
+          56364
+        ],
+        "source_excerpt_sha256": "cd5875bceb5f12f98459a00800ea08f5b4f56a53a6ac14ff316142aed8f40487"
+      },
+      "author_whole_response_candidate": 369
+    },
+    {
+      "problem_id": "2014-I-7",
+      "sample_id": "2014-I-7:draw-06",
+      "draw_index": 6,
+      "seed": 4420,
+      "response_sha256": "5c2a91b58143d711ff81b33f5bb6da4ce56a73a42e39ecf3b036714719c157b6",
+      "input_tokens": 170,
+      "output_tokens": 15693,
+      "effective_max_new_tokens": 32598,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 100,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          36771,
+          36782
+        ],
+        "source_excerpt_sha256": "6cb37e4b7b73ec3cf12743e036c0f547731b0ef3893b66ccae9ba765a5a2e1f2"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 100,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          39682,
+          39693
+        ],
+        "source_excerpt_sha256": "6cb37e4b7b73ec3cf12743e036c0f547731b0ef3893b66ccae9ba765a5a2e1f2"
+      },
+      "author_whole_response_candidate": 100
+    },
+    {
+      "problem_id": "2014-I-11",
+      "sample_id": "2014-I-11:draw-06",
+      "draw_index": 6,
+      "seed": 4424,
+      "response_sha256": "8293655135b86c718d0a6e4019354e83e9c519e05052bbc578dd2670563bf936",
+      "input_tokens": 137,
+      "output_tokens": 18232,
+      "effective_max_new_tokens": 32631,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 391,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          51245,
+          51256
+        ],
+        "source_excerpt_sha256": "2e769b47bd601d57d471b53cccec02da24dd3320d11c8735e5b5aef38728d237"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 391,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          54182,
+          54193
+        ],
+        "source_excerpt_sha256": "2e769b47bd601d57d471b53cccec02da24dd3320d11c8735e5b5aef38728d237"
+      },
+      "author_whole_response_candidate": 391
+    },
+    {
+      "problem_id": "2014-I-13",
+      "sample_id": "2014-I-13:draw-06",
+      "draw_index": 6,
+      "seed": 4426,
+      "response_sha256": "6cca6817a06e19358a66bbba7758df4b515c9c090b6941172bd2a49fe2db78d4",
+      "input_tokens": 524,
+      "output_tokens": 24909,
+      "effective_max_new_tokens": 32244,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 850,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          65393,
+          65404
+        ],
+        "source_excerpt_sha256": "48bfb843b02c9987f406993ad34d0b58b74fe2ba88c643ddf4adf9513e24640e"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 850,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          68277,
+          68288
+        ],
+        "source_excerpt_sha256": "48bfb843b02c9987f406993ad34d0b58b74fe2ba88c643ddf4adf9513e24640e"
+      },
+      "author_whole_response_candidate": 850
+    },
+    {
+      "problem_id": "2013-II-3",
+      "sample_id": "2013-II-3:draw-06",
+      "draw_index": 6,
+      "seed": 4461,
+      "response_sha256": "ca26669e31e8b0c97634d16454c7c73db96b812337dd61052c4c69e0b76be3fa",
+      "input_tokens": 168,
+      "output_tokens": 5567,
+      "effective_max_new_tokens": 32600,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 350,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          13641,
+          13652
+        ],
+        "source_excerpt_sha256": "16f91701629d14bc08607ce320b1205a5b094217d15d5b9778704552774432cf"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 350,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          15374,
+          15385
+        ],
+        "source_excerpt_sha256": "16f91701629d14bc08607ce320b1205a5b094217d15d5b9778704552774432cf"
+      },
+      "author_whole_response_candidate": 350
+    },
+    {
+      "problem_id": "2013-II-11",
+      "sample_id": "2013-II-11:draw-06",
+      "draw_index": 6,
+      "seed": 4469,
+      "response_sha256": "04142cdada1442e3bf822c4c9a0805cc99c31ea1e2ef3653ecd3efe9f4314de7",
+      "input_tokens": 107,
+      "output_tokens": 21062,
+      "effective_max_new_tokens": 32661,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 399,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          60424,
+          60435
+        ],
+        "source_excerpt_sha256": "ad8a1eb5df96f08dfa7551cf11468b46a4c2a37f9b405e3e9f7da7c549774946"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 399,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          63600,
+          63611
+        ],
+        "source_excerpt_sha256": "ad8a1eb5df96f08dfa7551cf11468b46a4c2a37f9b405e3e9f7da7c549774946"
+      },
+      "author_whole_response_candidate": 399
+    },
+    {
+      "problem_id": "2012-I-4",
+      "sample_id": "2012-I-4:draw-06",
+      "draw_index": 6,
+      "seed": 4477,
+      "response_sha256": "1ae9c7e908b5fe9eadb030a42a8cdb7763ee0efa2fa186f3ba149e213bbdc470",
+      "input_tokens": 211,
+      "output_tokens": 32557,
+      "effective_max_new_tokens": 32557,
+      "termination": "LENGTH_CAP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "BOX_FAILS_INTEGER_FORMAT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false,
+        "char_span_in_response": [
+          95708,
+          95720
+        ],
+        "source_excerpt_sha256": "f2414f49871d1e6858968031225f124923f357cb0b699629318854b4ef4834cc"
+      },
+      "final": {
+        "status": "NO_COMPLETE_BOX",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2012-I-13",
+      "sample_id": "2012-I-13:draw-06",
+      "draw_index": 6,
+      "seed": 4486,
+      "response_sha256": "3ab5074a340ed325ab2d130c505f2babd750e646f7a4b60cff0bfbac2f10280d",
+      "input_tokens": 137,
+      "output_tokens": 15026,
+      "effective_max_new_tokens": 32631,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 41,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          37402,
+          37412
+        ],
+        "source_excerpt_sha256": "c3ff7555c0cb069d767cabf5170d42f659b981220908379defb895a269b754d1"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 41,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          39991,
+          40001
+        ],
+        "source_excerpt_sha256": "c3ff7555c0cb069d767cabf5170d42f659b981220908379defb895a269b754d1"
+      },
+      "author_whole_response_candidate": 41
+    },
+    {
+      "problem_id": "2011-I-1",
+      "sample_id": "2011-I-1:draw-06",
+      "draw_index": 6,
+      "seed": 4504,
+      "response_sha256": "99f97e04918d6a6ed4f4207a5419639ca7413b1a8c7682783cecd90fb1ef019c",
+      "input_tokens": 176,
+      "output_tokens": 4440,
+      "effective_max_new_tokens": 32592,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 85,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          8162,
+          8172
+        ],
+        "source_excerpt_sha256": "1a9c0cf4e24bd7eccdec797e34b31f93dd9a340cc91ddb24770719f84e5c2d12"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 85,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          10848,
+          10858
+        ],
+        "source_excerpt_sha256": "1a9c0cf4e24bd7eccdec797e34b31f93dd9a340cc91ddb24770719f84e5c2d12"
+      },
+      "author_whole_response_candidate": 85
+    },
+    {
+      "problem_id": "2011-II-8",
+      "sample_id": "2011-II-8:draw-06",
+      "draw_index": 6,
+      "seed": 4526,
+      "response_sha256": "d6384d3c77e64fb2fc5d5a9e9baae583c9a467010cd68173c2b7966b38a8da91",
+      "input_tokens": 142,
+      "output_tokens": 13871,
+      "effective_max_new_tokens": 32626,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 784,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          32971,
+          32982
+        ],
+        "source_excerpt_sha256": "c9b498fc172d8471539417b86c8b9a04d3103637eb7c33644480e99a0a27f7af"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 784,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          36254,
+          36265
+        ],
+        "source_excerpt_sha256": "c9b498fc172d8471539417b86c8b9a04d3103637eb7c33644480e99a0a27f7af"
+      },
+      "author_whole_response_candidate": 784
+    },
+    {
+      "problem_id": "2011-II-14",
+      "sample_id": "2011-II-14:draw-06",
+      "draw_index": 6,
+      "seed": 4532,
+      "response_sha256": "35f07594307a362af9b7fe614b2e201b4f196cdfc633ea05f653c3a0042ae14f",
+      "input_tokens": 133,
+      "output_tokens": 12409,
+      "effective_max_new_tokens": 32635,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 440,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          38606,
+          38617
+        ],
+        "source_excerpt_sha256": "8cd9b77d722ac9119d0557e3682641e2a772915cf1eef21e794659221e3bb168"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 440,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          41374,
+          41385
+        ],
+        "source_excerpt_sha256": "8cd9b77d722ac9119d0557e3682641e2a772915cf1eef21e794659221e3bb168"
+      },
+      "author_whole_response_candidate": 440
+    },
+    {
+      "problem_id": "2010-II-4",
+      "sample_id": "2010-II-4:draw-06",
+      "draw_index": 6,
+      "seed": 4552,
+      "response_sha256": "028fa18be445b86a3891ee35422724cc0eb6955f0d6d0e678df6acf544fcbc78",
+      "input_tokens": 133,
+      "output_tokens": 5784,
+      "effective_max_new_tokens": 32635,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 52,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          14377,
+          14387
+        ],
+        "source_excerpt_sha256": "11c879753c7bdabbfea9fa580baa0f98dfb52984d65365aee10442aac99c8510"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 52,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          17222,
+          17232
+        ],
+        "source_excerpt_sha256": "11c879753c7bdabbfea9fa580baa0f98dfb52984d65365aee10442aac99c8510"
+      },
+      "author_whole_response_candidate": 52
+    },
+    {
+      "problem_id": "2009-II-12",
+      "sample_id": "2009-II-12:draw-06",
+      "draw_index": 6,
+      "seed": 4590,
+      "response_sha256": "b00b65e003984bb146278f5ada62f157086883704c8e7fe9be44e4e24b347115",
+      "input_tokens": 114,
+      "output_tokens": 26652,
+      "effective_max_new_tokens": 32654,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "BOX_FAILS_INTEGER_FORMAT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false,
+        "char_span_in_response": [
+          71621,
+          71633
+        ],
+        "source_excerpt_sha256": "459bf8a211ff20bca8bd8a79baa9c3dcd949ed973e00918a4d060e1f175a99b9"
+      },
+      "final": {
+        "status": "BOX_FAILS_INTEGER_FORMAT",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false,
+        "char_span_in_response": [
+          75367,
+          75379
+        ],
+        "source_excerpt_sha256": "459bf8a211ff20bca8bd8a79baa9c3dcd949ed973e00918a4d060e1f175a99b9"
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2023-I-12",
+      "sample_id": "2023-I-12:draw-07",
+      "draw_index": 7,
+      "seed": 4635,
+      "response_sha256": "2a25eeb272c10c58260a9964421e90e50a123d76da58c2ce7375ae23e637906a",
+      "input_tokens": 141,
+      "output_tokens": 15748,
+      "effective_max_new_tokens": 32627,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 75,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          35463,
+          35473
+        ],
+        "source_excerpt_sha256": "36aa69413b6a5bcca07ae6394ce3e3240799cca391fd4ddf17460c1c30c06f64"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 75,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          38637,
+          38647
+        ],
+        "source_excerpt_sha256": "36aa69413b6a5bcca07ae6394ce3e3240799cca391fd4ddf17460c1c30c06f64"
+      },
+      "author_whole_response_candidate": 75
+    },
+    {
+      "problem_id": "2023-II-2",
+      "sample_id": "2023-II-2:draw-07",
+      "draw_index": 7,
+      "seed": 4640,
+      "response_sha256": "81b3b958fc3bdbec12d56069d84dfaf49e5a2b6b608f0d3bb78f3277c88b84fa",
+      "input_tokens": 89,
+      "output_tokens": 19631,
+      "effective_max_new_tokens": 32679,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 585,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          41709,
+          41720
+        ],
+        "source_excerpt_sha256": "43caaf82b1f92e1941d66ab712cdd50d2a85bcff38d3f5cf1aa00ac48fb1b144"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 585,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          43834,
+          43845
+        ],
+        "source_excerpt_sha256": "43caaf82b1f92e1941d66ab712cdd50d2a85bcff38d3f5cf1aa00ac48fb1b144"
+      },
+      "author_whole_response_candidate": 585
+    },
+    {
+      "problem_id": "2023-II-4",
+      "sample_id": "2023-II-4:draw-07",
+      "draw_index": 7,
+      "seed": 4642,
+      "response_sha256": "c94fc6c614aa498c0182f8d2a479a73f7e3dd830d050eef5004843da9630d206",
+      "input_tokens": 113,
+      "output_tokens": 7971,
+      "effective_max_new_tokens": 32655,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 273,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          16751,
+          16762
+        ],
+        "source_excerpt_sha256": "bffea66513316bcd25928b7fe09710e768f72a32d88c78c6fe7f8032665f14c4"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 273,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          20184,
+          20195
+        ],
+        "source_excerpt_sha256": "bffea66513316bcd25928b7fe09710e768f72a32d88c78c6fe7f8032665f14c4"
+      },
+      "author_whole_response_candidate": 273
+    },
+    {
+      "problem_id": "2023-II-9",
+      "sample_id": "2023-II-9:draw-07",
+      "draw_index": 7,
+      "seed": 4647,
+      "response_sha256": "1b049751e1c83f84b6ec6954bd6616cb108d0d919479760d4e59fa78cf8385dd",
+      "input_tokens": 194,
+      "output_tokens": 29168,
+      "effective_max_new_tokens": 32574,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 33,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          78442,
+          78452
+        ],
+        "source_excerpt_sha256": "f3962f438bc930a0d141d479a752825c7c0248add527a7cb30602ee83cb7133b"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 33,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          82524,
+          82534
+        ],
+        "source_excerpt_sha256": "f3962f438bc930a0d141d479a752825c7c0248add527a7cb30602ee83cb7133b"
+      },
+      "author_whole_response_candidate": 33
+    },
+    {
+      "problem_id": "2022-II-6",
+      "sample_id": "2022-II-6:draw-07",
+      "draw_index": 7,
+      "seed": 4674,
+      "response_sha256": "40b6bdb2c55798eeccac874e866257c93c31d7b49d85c113ff24d8543af7a754",
+      "input_tokens": 169,
+      "output_tokens": 21205,
+      "effective_max_new_tokens": 32599,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 841,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          63507,
+          63518
+        ],
+        "source_excerpt_sha256": "fcd4e843e2a85f7ff2f874fa70b4e70708d4608d0dbbb98167f213d98202c6e2"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 841,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          66209,
+          66220
+        ],
+        "source_excerpt_sha256": "fcd4e843e2a85f7ff2f874fa70b4e70708d4608d0dbbb98167f213d98202c6e2"
+      },
+      "author_whole_response_candidate": 841
+    },
+    {
+      "problem_id": "2021-I-3",
+      "sample_id": "2021-I-3:draw-07",
+      "draw_index": 7,
+      "seed": 4686,
+      "response_sha256": "0f7ce22b772a82834ede52521082c1512375a898d43dc1d4d7a37894dcf088c9",
+      "input_tokens": 55,
+      "output_tokens": 14536,
+      "effective_max_new_tokens": 32713,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 50,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          32038,
+          32048
+        ],
+        "source_excerpt_sha256": "bf10ee540ecb41652a30bc9f95c812c62ea9328478835374f4b86295d51ad645"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 50,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          34880,
+          34890
+        ],
+        "source_excerpt_sha256": "bf10ee540ecb41652a30bc9f95c812c62ea9328478835374f4b86295d51ad645"
+      },
+      "author_whole_response_candidate": 50
+    },
+    {
+      "problem_id": "2021-II-1",
+      "sample_id": "2021-II-1:draw-07",
+      "draw_index": 7,
+      "seed": 4699,
+      "response_sha256": "33a412d694fe854e5887114ebf839cac72a6628e2fba9a066b647722b4fb9207",
+      "input_tokens": 72,
+      "output_tokens": 32696,
+      "effective_max_new_tokens": 32696,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2021-II-2",
+      "sample_id": "2021-II-2:draw-07",
+      "draw_index": 7,
+      "seed": 4700,
+      "response_sha256": "72d8eeeb1a1cd441a6878b6d816e96d95b434842d73d74ea71e1caf72402a2d9",
+      "input_tokens": 423,
+      "output_tokens": 14708,
+      "effective_max_new_tokens": 32345,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 336,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          33290,
+          33301
+        ],
+        "source_excerpt_sha256": "d1aac082f78a077dc5c4fe62575d16be2b8d3eba349e60cd7bd9e1ab263be19c"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 336,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          37663,
+          37674
+        ],
+        "source_excerpt_sha256": "d1aac082f78a077dc5c4fe62575d16be2b8d3eba349e60cd7bd9e1ab263be19c"
+      },
+      "author_whole_response_candidate": 336
+    },
+    {
+      "problem_id": "2019-I-1",
+      "sample_id": "2019-I-1:draw-07",
+      "draw_index": 7,
+      "seed": 4744,
+      "response_sha256": "9741f12f7f53ff754a24a74e12a859157d984f04241500b7c6feba1bdf034531",
+      "input_tokens": 89,
+      "output_tokens": 26137,
+      "effective_max_new_tokens": 32679,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 342,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          68228,
+          68239
+        ],
+        "source_excerpt_sha256": "07fed9c7a16b8f8088775b4b2e275d906fc6b7acb765f9405c2f2fd1ac8749e2"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 342,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          70605,
+          70616
+        ],
+        "source_excerpt_sha256": "07fed9c7a16b8f8088775b4b2e275d906fc6b7acb765f9405c2f2fd1ac8749e2"
+      },
+      "author_whole_response_candidate": 342
+    },
+    {
+      "problem_id": "2019-II-4",
+      "sample_id": "2019-II-4:draw-07",
+      "draw_index": 7,
+      "seed": 4762,
+      "response_sha256": "4b7786f9d7d1e74523c641a9bc9b568b85c1bb4d0399428fe1b201ff7edc5353",
+      "input_tokens": 82,
+      "output_tokens": 32686,
+      "effective_max_new_tokens": 32686,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2019-II-11",
+      "sample_id": "2019-II-11:draw-07",
+      "draw_index": 7,
+      "seed": 4769,
+      "response_sha256": "a285aeba2f8f53cf20883f42755e238f4fb62cda6cac40ee75f1dc23cfc2a014",
+      "input_tokens": 151,
+      "output_tokens": 14489,
+      "effective_max_new_tokens": 32617,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 11,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          29829,
+          29839
+        ],
+        "source_excerpt_sha256": "bc1e6d1b708b573effaef586984cc1cdccf9bfbfcd305aa4c2efd057abc3208d"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 11,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          34869,
+          34879
+        ],
+        "source_excerpt_sha256": "bc1e6d1b708b573effaef586984cc1cdccf9bfbfcd305aa4c2efd057abc3208d"
+      },
+      "author_whole_response_candidate": 11
+    },
+    {
+      "problem_id": "2018-I-7",
+      "sample_id": "2018-I-7:draw-07",
+      "draw_index": 7,
+      "seed": 4780,
+      "response_sha256": "2e1997bea5ee51b7dd3b7044bc2866416b0761046862abb8d8e0c15d1ff9a8c7",
+      "input_tokens": 84,
+      "output_tokens": 22919,
+      "effective_max_new_tokens": 32684,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 52,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          71510,
+          71520
+        ],
+        "source_excerpt_sha256": "11c879753c7bdabbfea9fa580baa0f98dfb52984d65365aee10442aac99c8510"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 52,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          74141,
+          74151
+        ],
+        "source_excerpt_sha256": "11c879753c7bdabbfea9fa580baa0f98dfb52984d65365aee10442aac99c8510"
+      },
+      "author_whole_response_candidate": 52
+    },
+    {
+      "problem_id": "2018-II-6",
+      "sample_id": "2018-II-6:draw-07",
+      "draw_index": 7,
+      "seed": 4794,
+      "response_sha256": "9ca1229d00144825855250de28c472f26499331fe567acc58443f97eae144536",
+      "input_tokens": 131,
+      "output_tokens": 7706,
+      "effective_max_new_tokens": 32637,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 37,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          18886,
+          18896
+        ],
+        "source_excerpt_sha256": "4ff7b5d5d7e460dbb6e0f3a00135e07ef7bb1c786e4f3bdee65b515a061010c4"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 37,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          21377,
+          21387
+        ],
+        "source_excerpt_sha256": "4ff7b5d5d7e460dbb6e0f3a00135e07ef7bb1c786e4f3bdee65b515a061010c4"
+      },
+      "author_whole_response_candidate": 37
+    },
+    {
+      "problem_id": "2018-II-14",
+      "sample_id": "2018-II-14:draw-07",
+      "draw_index": 7,
+      "seed": 4802,
+      "response_sha256": "3ea648718954f9d1aed0f95d901f307e3acb1b2f6a5e58dda42e6f8935970eab",
+      "input_tokens": 177,
+      "output_tokens": 32591,
+      "effective_max_new_tokens": 32591,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    },
+    {
+      "problem_id": "2017-I-3",
+      "sample_id": "2017-I-3:draw-07",
+      "draw_index": 7,
+      "seed": 4806,
+      "response_sha256": "bf97aed0b89d02a6788cc171973001c52e4dd5c0207f03e14eef7caffd8ebd2b",
+      "input_tokens": 88,
+      "output_tokens": 8934,
+      "effective_max_new_tokens": 32680,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 69,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          16405,
+          16415
+        ],
+        "source_excerpt_sha256": "c3eb3b520fad0ff8d64054f1a548aca3758b392dfff0e39ca2deebe890cb3751"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 69,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          19629,
+          19639
+        ],
+        "source_excerpt_sha256": "c3eb3b520fad0ff8d64054f1a548aca3758b392dfff0e39ca2deebe890cb3751"
+      },
+      "author_whole_response_candidate": 69
+    },
+    {
+      "problem_id": "2017-I-6",
+      "sample_id": "2017-I-6:draw-07",
+      "draw_index": 7,
+      "seed": 4809,
+      "response_sha256": "948aeca5012bf1e1acb5f46204571d52a367929be9a21b4d1b44234d3fcf8934",
+      "input_tokens": 104,
+      "output_tokens": 9165,
+      "effective_max_new_tokens": 32664,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 48,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          27642,
+          27652
+        ],
+        "source_excerpt_sha256": "f256c443cc6f391b3685bdcc6e41516e952061b1f0179580bd4fceb5d5dd9156"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 48,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          31047,
+          31057
+        ],
+        "source_excerpt_sha256": "f256c443cc6f391b3685bdcc6e41516e952061b1f0179580bd4fceb5d5dd9156"
+      },
+      "author_whole_response_candidate": 48
+    },
+    {
+      "problem_id": "2017-I-10",
+      "sample_id": "2017-I-10:draw-07",
+      "draw_index": 7,
+      "seed": 4813,
+      "response_sha256": "29f28d0760adf48af73bca3143fb73037907226afa4939abb121eeb84fe20eea",
+      "input_tokens": 156,
+      "output_tokens": 12230,
+      "effective_max_new_tokens": 32612,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 56,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          30549,
+          30559
+        ],
+        "source_excerpt_sha256": "21ceea40a02433e1603b7e354520b033c88ac55319641a8f1b6ea1635bdc06bb"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 56,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          32954,
+          32964
+        ],
+        "source_excerpt_sha256": "21ceea40a02433e1603b7e354520b033c88ac55319641a8f1b6ea1635bdc06bb"
+      },
+      "author_whole_response_candidate": 56
+    },
+    {
+      "problem_id": "2017-II-4",
+      "sample_id": "2017-II-4:draw-07",
+      "draw_index": 7,
+      "seed": 4822,
+      "response_sha256": "e383a8462030629706c8475f26b80b8507c9b93f340f773bc522653bcbc43d7c",
+      "input_tokens": 56,
+      "output_tokens": 12215,
+      "effective_max_new_tokens": 32712,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 222,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          32851,
+          32862
+        ],
+        "source_excerpt_sha256": "11b3302d0b7a083180cac1338ba8237726594105776e0766c443ae73439b4a16"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 222,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          35882,
+          35893
+        ],
+        "source_excerpt_sha256": "11b3302d0b7a083180cac1338ba8237726594105776e0766c443ae73439b4a16"
+      },
+      "author_whole_response_candidate": 222
+    },
+    {
+      "problem_id": "2016-II-9",
+      "sample_id": "2016-II-9:draw-07",
+      "draw_index": 7,
+      "seed": 4857,
+      "response_sha256": "b09e50535c047e3ddd9d85a1316608a1cc80c792b0728d4f98bf740d8f6ceaee",
+      "input_tokens": 117,
+      "output_tokens": 19444,
+      "effective_max_new_tokens": 32651,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 262,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          37696,
+          37707
+        ],
+        "source_excerpt_sha256": "2be0396483b847886d76abf6fc37f1e242a198138484958315bba3fe73f9a9ac"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 262,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          39592,
+          39603
+        ],
+        "source_excerpt_sha256": "2be0396483b847886d76abf6fc37f1e242a198138484958315bba3fe73f9a9ac"
+      },
+      "author_whole_response_candidate": 262
+    },
+    {
+      "problem_id": "2016-II-13",
+      "sample_id": "2016-II-13:draw-07",
+      "draw_index": 7,
+      "seed": 4861,
+      "response_sha256": "2e58fbad324be38c26827cc573f5d8667aa6ec9991baed60556878f68c8cf913",
+      "input_tokens": 153,
+      "output_tokens": 20359,
+      "effective_max_new_tokens": 32615,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 371,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          46503,
+          46514
+        ],
+        "source_excerpt_sha256": "97562cb7012defa9b1f6336b2c709990409f453bfd02a026a8e3f72ae2c7eb00"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 371,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          48880,
+          48891
+        ],
+        "source_excerpt_sha256": "97562cb7012defa9b1f6336b2c709990409f453bfd02a026a8e3f72ae2c7eb00"
+      },
+      "author_whole_response_candidate": 371
+    },
+    {
+      "problem_id": "2014-I-7",
+      "sample_id": "2014-I-7:draw-07",
+      "draw_index": 7,
+      "seed": 4900,
+      "response_sha256": "66bcbbd8d992a2d0856ef946a7fc8d2a33e0dff28e1b65c1e4d552550a5eaefc",
+      "input_tokens": 170,
+      "output_tokens": 8094,
+      "effective_max_new_tokens": 32598,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 100,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          17562,
+          17573
+        ],
+        "source_excerpt_sha256": "6cb37e4b7b73ec3cf12743e036c0f547731b0ef3893b66ccae9ba765a5a2e1f2"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 100,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          20711,
+          20722
+        ],
+        "source_excerpt_sha256": "6cb37e4b7b73ec3cf12743e036c0f547731b0ef3893b66ccae9ba765a5a2e1f2"
+      },
+      "author_whole_response_candidate": 100
+    },
+    {
+      "problem_id": "2014-I-11",
+      "sample_id": "2014-I-11:draw-07",
+      "draw_index": 7,
+      "seed": 4904,
+      "response_sha256": "977e74e0b4b9f76495ae4ccb64fe4a8c922e86feecb27e9456a1955dd342f48e",
+      "input_tokens": 137,
+      "output_tokens": 14699,
+      "effective_max_new_tokens": 32631,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 391,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          43370,
+          43381
+        ],
+        "source_excerpt_sha256": "2e769b47bd601d57d471b53cccec02da24dd3320d11c8735e5b5aef38728d237"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 391,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          46442,
+          46453
+        ],
+        "source_excerpt_sha256": "2e769b47bd601d57d471b53cccec02da24dd3320d11c8735e5b5aef38728d237"
+      },
+      "author_whole_response_candidate": 391
+    },
+    {
+      "problem_id": "2014-I-13",
+      "sample_id": "2014-I-13:draw-07",
+      "draw_index": 7,
+      "seed": 4906,
+      "response_sha256": "7ac36ce1a1ed65e60f86b69721934df2d1a474317809da6a21b50c5f5756c115",
+      "input_tokens": 524,
+      "output_tokens": 24591,
+      "effective_max_new_tokens": 32244,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 850,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          61505,
+          61516
+        ],
+        "source_excerpt_sha256": "48bfb843b02c9987f406993ad34d0b58b74fe2ba88c643ddf4adf9513e24640e"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 850,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          64622,
+          64633
+        ],
+        "source_excerpt_sha256": "48bfb843b02c9987f406993ad34d0b58b74fe2ba88c643ddf4adf9513e24640e"
+      },
+      "author_whole_response_candidate": 850
+    },
+    {
+      "problem_id": "2013-II-3",
+      "sample_id": "2013-II-3:draw-07",
+      "draw_index": 7,
+      "seed": 4941,
+      "response_sha256": "8042d0239ed0b6bafa2f48f81b1d34d5dd1787f6ca0452a69b51f6fb80aa7cd1",
+      "input_tokens": 168,
+      "output_tokens": 7588,
+      "effective_max_new_tokens": 32600,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 350,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          19197,
+          19208
+        ],
+        "source_excerpt_sha256": "16f91701629d14bc08607ce320b1205a5b094217d15d5b9778704552774432cf"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 350,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          21005,
+          21016
+        ],
+        "source_excerpt_sha256": "16f91701629d14bc08607ce320b1205a5b094217d15d5b9778704552774432cf"
+      },
+      "author_whole_response_candidate": 350
+    },
+    {
+      "problem_id": "2013-II-11",
+      "sample_id": "2013-II-11:draw-07",
+      "draw_index": 7,
+      "seed": 4949,
+      "response_sha256": "784f1b93e4bf995a161980ea08c47911fd31982403cf011fda34080e0673e4c6",
+      "input_tokens": 107,
+      "output_tokens": 22516,
+      "effective_max_new_tokens": 32661,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 399,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          66601,
+          66612
+        ],
+        "source_excerpt_sha256": "ad8a1eb5df96f08dfa7551cf11468b46a4c2a37f9b405e3e9f7da7c549774946"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 399,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          69646,
+          69657
+        ],
+        "source_excerpt_sha256": "ad8a1eb5df96f08dfa7551cf11468b46a4c2a37f9b405e3e9f7da7c549774946"
+      },
+      "author_whole_response_candidate": 399
+    },
+    {
+      "problem_id": "2012-I-4",
+      "sample_id": "2012-I-4:draw-07",
+      "draw_index": 7,
+      "seed": 4957,
+      "response_sha256": "e4bb182d7f0ad1465badb70162ac60bdf85d9fe0665629f736827e122e44046a",
+      "input_tokens": 211,
+      "output_tokens": 32557,
+      "effective_max_new_tokens": 32557,
+      "termination": "LENGTH_CAP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 40,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          89947,
+          89957
+        ],
+        "source_excerpt_sha256": "42c73e6471ca1a9a2b1ea0c2a49df9f36d0f8a343824c70a7c9bb04703a6be04"
+      },
+      "final": {
+        "status": "NO_COMPLETE_BOX",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": 40
+    },
+    {
+      "problem_id": "2012-I-13",
+      "sample_id": "2012-I-13:draw-07",
+      "draw_index": 7,
+      "seed": 4966,
+      "response_sha256": "aaf8aa0779dc08ca2e9f781c94ec5511a4806d18f7b75abdf08a74a4aec73747",
+      "input_tokens": 137,
+      "output_tokens": 20130,
+      "effective_max_new_tokens": 32631,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 41,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          45701,
+          45711
+        ],
+        "source_excerpt_sha256": "c3ff7555c0cb069d767cabf5170d42f659b981220908379defb895a269b754d1"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 41,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          47626,
+          47636
+        ],
+        "source_excerpt_sha256": "c3ff7555c0cb069d767cabf5170d42f659b981220908379defb895a269b754d1"
+      },
+      "author_whole_response_candidate": 41
+    },
+    {
+      "problem_id": "2011-I-1",
+      "sample_id": "2011-I-1:draw-07",
+      "draw_index": 7,
+      "seed": 4984,
+      "response_sha256": "1e9e0d62b16da06982c19b03ff501cdfffbdfe0d64dfd793bcc866b93bead261",
+      "input_tokens": 176,
+      "output_tokens": 3496,
+      "effective_max_new_tokens": 32592,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 85,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          5898,
+          5908
+        ],
+        "source_excerpt_sha256": "1a9c0cf4e24bd7eccdec797e34b31f93dd9a340cc91ddb24770719f84e5c2d12"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 85,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          8593,
+          8603
+        ],
+        "source_excerpt_sha256": "1a9c0cf4e24bd7eccdec797e34b31f93dd9a340cc91ddb24770719f84e5c2d12"
+      },
+      "author_whole_response_candidate": 85
+    },
+    {
+      "problem_id": "2011-II-8",
+      "sample_id": "2011-II-8:draw-07",
+      "draw_index": 7,
+      "seed": 5006,
+      "response_sha256": "0d0748e61d914c58181c324933305ab2a0a0cdd8458c9d36b0335798ece63938",
+      "input_tokens": 142,
+      "output_tokens": 16417,
+      "effective_max_new_tokens": 32626,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 784,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          36790,
+          36801
+        ],
+        "source_excerpt_sha256": "c9b498fc172d8471539417b86c8b9a04d3103637eb7c33644480e99a0a27f7af"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 784,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          40868,
+          40879
+        ],
+        "source_excerpt_sha256": "c9b498fc172d8471539417b86c8b9a04d3103637eb7c33644480e99a0a27f7af"
+      },
+      "author_whole_response_candidate": 784
+    },
+    {
+      "problem_id": "2011-II-14",
+      "sample_id": "2011-II-14:draw-07",
+      "draw_index": 7,
+      "seed": 5012,
+      "response_sha256": "e1c4b28afa21f82fe542cae3cfd325ce23a0ef686f7f79702710183c3073fc78",
+      "input_tokens": 133,
+      "output_tokens": 15002,
+      "effective_max_new_tokens": 32635,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 440,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          50543,
+          50554
+        ],
+        "source_excerpt_sha256": "8cd9b77d722ac9119d0557e3682641e2a772915cf1eef21e794659221e3bb168"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 440,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          52660,
+          52671
+        ],
+        "source_excerpt_sha256": "8cd9b77d722ac9119d0557e3682641e2a772915cf1eef21e794659221e3bb168"
+      },
+      "author_whole_response_candidate": 440
+    },
+    {
+      "problem_id": "2010-II-4",
+      "sample_id": "2010-II-4:draw-07",
+      "draw_index": 7,
+      "seed": 5032,
+      "response_sha256": "8df95d2c23e3101c926022c0cc835bb9f87fae98c92c55cb623612232df8cf77",
+      "input_tokens": 133,
+      "output_tokens": 7216,
+      "effective_max_new_tokens": 32635,
+      "termination": "NATIVE_STOP",
+      "boundary": "CLOSED_THINKING",
+      "thinking": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "thinking",
+        "value": 52,
+        "scope_status": "GENERIC_TARGET_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "terminal_thinking_box",
+        "char_span_in_response": [
+          17778,
+          17788
+        ],
+        "source_excerpt_sha256": "11c879753c7bdabbfea9fa580baa0f98dfb52984d65365aee10442aac99c8510"
+      },
+      "final": {
+        "status": "EXPLICIT_INTEGER",
+        "segment": "final",
+        "value": 52,
+        "scope_status": "DELIVERY_CLAIM",
+        "complete_explicit_candidate": true,
+        "extraction_method": "last_complete_box_in_final",
+        "char_span_in_response": [
+          20710,
+          20720
+        ],
+        "source_excerpt_sha256": "11c879753c7bdabbfea9fa580baa0f98dfb52984d65365aee10442aac99c8510"
+      },
+      "author_whole_response_candidate": 52
+    },
+    {
+      "problem_id": "2009-II-12",
+      "sample_id": "2009-II-12:draw-07",
+      "draw_index": 7,
+      "seed": 5070,
+      "response_sha256": "006c93895c5291113810b0597030d7849a47c5ecc1de561a6cba5e25fa91ad2a",
+      "input_tokens": 114,
+      "output_tokens": 32654,
+      "effective_max_new_tokens": 32654,
+      "termination": "LENGTH_CAP",
+      "boundary": "UNTERMINATED_THINKING",
+      "thinking": {
+        "status": "NO_EXPLICIT_TERMINAL_OBJECT",
+        "segment": "thinking",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "final": {
+        "status": "NO_FINAL_CHANNEL",
+        "segment": "final",
+        "value": null,
+        "scope_status": "UNBOUND",
+        "complete_explicit_candidate": false
+      },
+      "author_whole_response_candidate": null
+    }
+  ]
+}

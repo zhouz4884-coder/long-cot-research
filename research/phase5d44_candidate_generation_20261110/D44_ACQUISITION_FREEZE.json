@@ -1,0 +1,59 @@
+{
+  "status": "REPLICATION_RULES_FROZEN_BEFORE_NEW_DRAW_CONTENT_OR_SCORE",
+  "baseline_commit": "bfe5a55945a03046d8d9935f74e84db044da89ad",
+  "source_revision": "c34143c92856d9b90fdb9c808c7e66070dcab9a1",
+  "upstream_manifest_sha256": "f1b27b3528a8f6d8b23db46d394bade22067bdbae973d87f9bb5182746f86453",
+  "upstream_generation_contract_sha256": "185daff44fc19ac2102b42bf480de11a7651bae7eb6253fff8ea9d030ac58e61",
+  "d43_cohort_sha256": "1eb07b5bcc988124ed0b79af779b6a08a20e3621b736a590f928df1790d8a01d",
+  "d43_readout_sha256": "26b79c767fda4d49b2b25e84f1a71b7012d5dbbc607840b3673540ff28fb0661",
+  "d43_extractor_sha256": "7289666129fc31310bbc2bda7e2b089385055fc68d6c1d2b71975e7ce0ddae50",
+  "d43_scored_historical_sha256": "20b126cf8a6760ed477300703615436939787bfb8dc1658bc0d54fa11dafc7f4",
+  "fixed_questions": 32,
+  "historical_draws": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "replication_draws": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "reserved_unopened_draws": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "replication_expected_shards": [
+    {
+      "path": "data/draw-04.parquet",
+      "sha256": "5313e32b22364e2c45f173316e7ad57dee08c78cd690f3ca22e0971e941f2578",
+      "size": 4471093
+    },
+    {
+      "path": "data/draw-05.parquet",
+      "sha256": "6890476dbb83b59586d182d0bbd1ea57f4c691d9ce4dcef68e9d1a9ec613246c",
+      "size": 4457162
+    },
+    {
+      "path": "data/draw-06.parquet",
+      "sha256": "846dc518e717cb6f6ab79502d6b0aa3ed9a9ec13428a3bf24692bb1e4c031bec",
+      "size": 4373123
+    },
+    {
+      "path": "data/draw-07.parquet",
+      "sha256": "8dcbd7c485f1c1b39828a54f0ac04feed117fcf73e51b629bd4cc271c87f4983",
+      "size": 4373909
+    }
+  ],
+  "replication_expected_rows": 128,
+  "primary_readout": "native-stop final channel strict boxed integer per frozen D4.3 extractor",
+  "explicit_disclosure": "Old D43 outcome and the three coverage misses are already known. New draw readouts and scores are separated."
+}

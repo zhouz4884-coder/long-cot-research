@@ -23,6 +23,7 @@
 | [Phase 5-D4.1 Lean 范围预筛](../../research/phase5d41_lean_scope_20261110/D41_CLOSEOUT_ZH.md) | 全组归档诊断、历史缺名复验、原导入配对和假拒绝控制 | 4,283 条诊断。两种等待设置均保留通过集合，实际配对无稳定成本收益 | CPU 预筛未通过模型准入 |
 | [Phase 5-D4.2 级联诊断](../../research/phase5d42_lean_diagnostics_20261110/D42_CLOSEOUT_ZH.md) | 115 份冻结候选、三个精确原稿、匹配编辑和完整 CPU 基线 | 冷进程与驻留核验区分消失、残留及新露出的错误 | 当前级联策略未通过模型准入 |
 | [Phase 5-D4.3 反证与终局选答](../../research/phase5d43_answer_refutation_20261110/D43_CLOSEOUT_ZH.md) | 32 道独立 AIME、128 条原生轨迹、候选盲审与同池有界反证 | 首抽 26/32，多数票、普通复核、反证同为 29/32，固定池覆盖 29/32 | 当前选答未通过独立扩测准入。后续转向生成支持与触顶诊断 |
+| [Phase 5-D4.4 候选缺失与生成修复](../../research/phase5d44_candidate_generation_20261110/D44_REPLICATION_AND_DESIGN_ZH.md) | 同一 32 题独立补抽、复发机制与 8 道实时新题协议 | 原四抽、补四抽与合并八抽均覆盖 29/32 | 归档对照完成，实时小试按预注册推进 |
 
 ## 状态与阅读规则
 

@@ -9,6 +9,7 @@
 - [Phase 1–5 总索引](docs/phases/INDEX_ZH.md)
 - [当前研究目标](docs/next_phase/CURRENT_RESEARCH_GOAL_20261105_ZH.md)
 - [最新建议审查与下一轮公平对照](research/repository_phase_plan_20261106/ADVISOR_REVIEW_20261106_ZH.md)
+- [Phase 5-D4.4 补抽与实时生成修复](research/phase5d44_candidate_generation_20261110/D44_REPLICATION_AND_DESIGN_ZH.md)
 - [Phase 5-D4.3 自然长链反证与终局选答](research/phase5d43_answer_refutation_20261110/D43_CLOSEOUT_ZH.md)
 - [Phase 5-D4.2 同源最小修正与级联诊断](research/phase5d42_lean_diagnostics_20261110/D42_CLOSEOUT_ZH.md)
 - [Phase 5-D4.1 引理可达性与预筛准入](research/phase5d41_lean_scope_20261110/D41_CLOSEOUT_ZH.md)
@@ -50,6 +51,7 @@
 | [Phase 5-D4.1](research/phase5d41_lean_scope_20261110/D41_CLOSEOUT_ZH.md) | 引理可达性、实际历史缺名与查询加完整核验成本 | 31 个目标的诊断对齐，两种等待设置下配对完整成本无稳定下降。预筛未达模型准入 |
 | [Phase 5-D4.2](research/phase5d42_lean_diagnostics_20261110/D42_CLOSEOUT_ZH.md) | 115 份冻结候选、三个同源历史失败、等量编辑和完整 CPU 对照 | 区分同处诊断消失、下游残留和新露出的错误。级联策略未达模型准入 |
 | [Phase 5-D4.3](research/phase5d43_answer_refutation_20261110/D43_CLOSEOUT_ZH.md) | 32 道独立 AIME、128 条原生轨迹、同池选答与原题反证 | 首抽 26/32，四抽多数票、普通复核和作用域反证均 29/32。当前选答未达独立扩测门槛 |
+| [Phase 5-D4.4](research/phase5d44_candidate_generation_20261110/D44_REPLICATION_AND_DESIGN_ZH.md) | 同合同补四抽、盲态错误前缀审计、8 道独立新题四臂协议 | 补四抽与合并八抽覆盖均为 29/32。实时小试按冻结协议推进 |
 
 每个Phase统一记录：问题、输入与协议、实际动作、数据结论、失败与猜想、下一门槛、证据路径。后续工作继续新增Phase或阶段内子报告，不改写已冻结的结果。
 
@@ -126,6 +128,7 @@ research/phase5d40_proof_authoring_20261110/ D4.0 证明支持账本、同版失
 research/phase5d41_lean_scope_20261110/ D4.1 引理可达性、误拦截、配对成本和试验准入
 research/phase5d42_lean_diagnostics_20261110/ D4.2 同源最小修正、诊断级联、冷与驻留对照
 research/phase5d43_answer_refutation_20261110/ D4.3 固定候选池、原题必要条件、同权限正确率和成本
+research/phase5d44_candidate_generation_20261110/ D4.4 同合同补抽、前缀准入与实时生成小试
 scripts/ reason_transition/ tests/     原研究实现与检查
 experiments/radar20261013/             后续历史路线，当前冻结
 data/ results/ provenance/ recovery/   历史输入、输出和恢复证据

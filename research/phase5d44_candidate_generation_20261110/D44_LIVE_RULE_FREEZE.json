@@ -1,0 +1,26 @@
+{
+  "status": "FROZEN_BEFORE_FRESH_NATIVE_GENERATION",
+  "independent_questions": 8,
+  "model": "Qwen3-4B",
+  "model_manifest_sha256": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+  "backend": "Transformers 4.55.2, torch 2.8.0+cu128, FP16, SDPA, batch 1",
+  "sampling": {"temperature": 0.6, "top_k": 20, "top_p": 0.95},
+  "hard_context_capacity": 40960,
+  "scientific_output_token_limit": null,
+  "arms": ["native", "generic", "typed", "restart"],
+  "primary_readout": "D43 final-only strict boxed integer after native EOS with an observed closing thinking delimiter. Context-cap and malformed text never count correct",
+  "target_rule": "Review exact question semantics. A definition that happens to use an extremal phrase without an extremal requested object is an ineligible scope control, kept in the fixed eight-question denominator",
+  "observation_rule": "Open native thinking only, after at least 256 generated tokens, inspect regularly and at a generated closing brace, without access to future tokens. First complete declared boxed integer that violates an independently reviewed necessary condition, at most once per case. Unknown, plain cap, tentative statement and a satisfying number do not trigger",
+  "typed_action": "Continue from the exact checkpoint and same RNG with a cue derived from the original question and the reviewed necessary condition. No new answer, source completion, post-checkpoint text, or gold. Require actual arithmetic rejection at the observed checkpoint",
+  "generic_action": "Same checkpoint, same RNG, same number of injected tokens as the typed action. Ask to review the reasoning and complete the original problem without disclosing the premise or value constraint. No synthetic close-thinking token",
+  "no_trigger": "Generic and typed each reuse the original native result with no extra generation. Independent restart still runs for every question. No case is removed after observing its trigger or result",
+  "independent_restart": "Same original prompt, same model, same context and sampling configuration. Independent frozen seed. Count its own prefill and entire suffix",
+  "cost_policy": {
+    "vectors": ["paid_model_input_tokens", "causal_attention_position_pairs"],
+    "arm_allocation": "For a triggered branch, charge the native prompt and generated prefix once plus the actual branch resume/replay, cue prefill and generated continuation for that arm. Do not charge the unrelated native suffix or other branches to a method. Charge the original full native inference for all native/no-trigger reuse policies, and the independent full prefill and decode for restart",
+    "experimental_overhead": "Separately count all physically executed forward work, including replay smoke, equality checking and any branch replay. Include elapsed setup, snapshot, tokenizer, trigger arithmetic, prefill, decode, output checks and peak CUDA allocation/reservation in receipts where measured",
+    "equality_test": "All arm trajectories can reach their natural endpoint. To compare paid work, a typed completion has equal-budget credit against comparator b only if it is correct and completes within both actual full-work coordinates of b on that same question. Its endpoint is censored for that comparison when it exceeds either coordinate. Report raw correctness, cost-censored correctness, repairs and harms separately",
+    "strongest_baseline": "Among native/generic/restart, choose largest verified natural-end correctness count. Tie by lower total logical paid model-input tokens, then attention position pairs, then native/generic/restart",
+    "retention_gate": "At least two paired net repairs under the strongest actual comparator's equal-work envelope, with zero unambiguous native-correct to typed-wrong changes. Small-pilot descriptive evidence only"
+  }
+}

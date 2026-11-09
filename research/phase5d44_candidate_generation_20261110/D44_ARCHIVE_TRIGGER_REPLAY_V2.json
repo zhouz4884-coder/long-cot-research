@@ -1,0 +1,801 @@
+{
+  "status": "HISTORICAL_PREFIX_TRIGGER_REPLAY",
+  "scope": "String-prefix observations only; archived native token, RNG and KV state are unavailable.",
+  "sources": {
+    "historical_blind_sha256": "db6383cd22087b91fba9d8bc282b19073a70072978c346f22de8d0781e5bf1da",
+    "replication_blind_sha256": "45d484f6e01dba2fb25623b43a12efca8c04b405103e236e3f7d53cae8a4937c",
+    "approved_prerequisites_sha256": "2b15ea4d9216945031ba719e1351d29148f3cbcac6a5a0a8f516b0374143e6c2",
+    "trigger_sha256": "651695808c9555628a9ffb604a11b7dab0166ac1969253de28dd6403e9d97c46"
+  },
+  "independent_development_problems_triggered": 2,
+  "triggers_by_problem": {
+    "2012-I-4": 4,
+    "2009-II-12": 4
+  },
+  "rows": [
+    {
+      "sample_id": "2023-II-2:draw-00",
+      "problem_id": "2023-II-2",
+      "draw_index": 0,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "21bc87f540b11c70654051d5ceb1f3cf578d8b03e2c8078c02ddaf81bb29ca8f",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2018-II-14:draw-00",
+      "problem_id": "2018-II-14",
+      "draw_index": 0,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "098a6950c9cd9669c5294902fc735a0f7ff340b49c558229d59cd55e92fb39df",
+      "finish_reason": "length",
+      "box_closure_observations": 0,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2017-I-3:draw-00",
+      "problem_id": "2017-I-3",
+      "draw_index": 0,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "9d16a5dee7762211e4134014e65659013ed6eec06faf67b921770961485ba4fc",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2013-II-11:draw-00",
+      "problem_id": "2013-II-11",
+      "draw_index": 0,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "0dd6a7f4c6748326484b2d52f142f0eff9c3d9c062da5b5bd1cb18bd535dccb1",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2012-I-4:draw-00",
+      "problem_id": "2012-I-4",
+      "draw_index": 0,
+      "problem_kind": "FIRST_EVENT",
+      "response_sha256": "f111ec5fe2c8c6bf964da9b8495ad2a730cb6c03c2f508233fc099223200bf4b",
+      "finish_reason": "length",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": {
+        "status": "COMMITTED_INTEGER_REFUTED",
+        "question_sha256": "1c98bfcb7089f17734e172ae543965eeae13cb298a9fafbdda3c90660fd6f0e0",
+        "proof_sha256": "92c0f9ea5598dee9cc82edc2789e58960d4dde6c0848c46419c1d60215b9c613",
+        "review_sha256": "032c38088471de50072476bec1b14ac820a819b695d886371fa2d0f68b8a8e83",
+        "observed_candidate": 48,
+        "predicate_kind": "congruence",
+        "predicate_args": [
+          279,
+          0
+        ],
+        "source_char_span": [
+          94461,
+          94488
+        ],
+        "source_excerpt_sha256": "caa90a16b0648b98b0852d95b08d45f8bc17e96221ca2c9592b1137136c90591",
+        "scope_anchors": [
+          {
+            "source_char_span": [
+              94241,
+              94246
+            ],
+            "source_excerpt_sha256": "cc95377577104a635096871209eb29afcd6b040689cea1d24a8c4163ef1b3a8b"
+          }
+        ],
+        "arithmetic": {
+          "modulus": 279,
+          "expected_residue": 0,
+          "observed_residue": 48
+        },
+        "observation_char_end": 94488,
+        "observed_prefix_sha256": "11c941004d386c5df331b244301767244dbcecffd16cec1b3b719b44805e4ad2"
+      }
+    },
+    {
+      "sample_id": "2009-II-12:draw-00",
+      "problem_id": "2009-II-12",
+      "draw_index": 0,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "2417538e4d8cd0314c513556ee45d7cfb1021b8cd94dceb03ff4f2d2989904d2",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": {
+        "status": "COMMITTED_INTEGER_REFUTED",
+        "question_sha256": "c9b293c2a66449ae4878d13a1bad95ddbbb4d91fb78e17410ffffc07c7b337e9",
+        "proof_sha256": "3955565b429780046633da9d0110af17b82756794e92cbc2c2543db13580ae12",
+        "review_sha256": "202747120e7abaac62421f3b3a3923e0e97210d32ccc67cf8f757d6877a15512",
+        "observed_candidate": 1004,
+        "predicate_kind": "closed_interval",
+        "predicate_args": [
+          669,
+          803
+        ],
+        "source_char_span": [
+          58720,
+          58789
+        ],
+        "source_excerpt_sha256": "38e3009cbddafea96c247976e906cb6d171208b91bae72954400ae9f6bb17165",
+        "scope_anchors": [
+          {
+            "source_char_span": [
+              58708,
+              58748
+            ],
+            "source_excerpt_sha256": "5b498297cfa1e7dd6745096564524434d76e6b38c6517a448fa5a750d5e45474"
+          }
+        ],
+        "arithmetic": {
+          "lo": 669,
+          "hi": 803
+        },
+        "observation_char_end": 58789,
+        "observed_prefix_sha256": "d2f1e37231ce6bdc3eee0f445041bd89a1fd061669f0d8b31e411c932a85b405"
+      }
+    },
+    {
+      "sample_id": "2023-II-2:draw-01",
+      "problem_id": "2023-II-2",
+      "draw_index": 1,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "ce0b6d38e3d8d4ae9a3ca01fa7ac304e4a4cc0dcc8833279af4d3d3c08945001",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2018-II-14:draw-01",
+      "problem_id": "2018-II-14",
+      "draw_index": 1,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "da5da9cf386482dc16d2f2732d088e4df60d9209f2e40dffd4a0c1ef7c33c93c",
+      "finish_reason": "length",
+      "box_closure_observations": 0,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2017-I-3:draw-01",
+      "problem_id": "2017-I-3",
+      "draw_index": 1,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "4b72fa946aa669c05d6400324bdcf17feefc4e48c69364c0e19261b153e8b1df",
+      "finish_reason": "stop",
+      "box_closure_observations": 4,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2013-II-11:draw-01",
+      "problem_id": "2013-II-11",
+      "draw_index": 1,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "734ca74119945f6542ee1d78c2e139ee0012860579a074d249676cb2d40f9d5c",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2012-I-4:draw-01",
+      "problem_id": "2012-I-4",
+      "draw_index": 1,
+      "problem_kind": "FIRST_EVENT",
+      "response_sha256": "d3a8f0f880923085ac4e7c1908998d747d2af5f4b88622f7eb27061056c542ea",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": {
+        "status": "COMMITTED_INTEGER_REFUTED",
+        "question_sha256": "1c98bfcb7089f17734e172ae543965eeae13cb298a9fafbdda3c90660fd6f0e0",
+        "proof_sha256": "92c0f9ea5598dee9cc82edc2789e58960d4dde6c0848c46419c1d60215b9c613",
+        "review_sha256": "032c38088471de50072476bec1b14ac820a819b695d886371fa2d0f68b8a8e83",
+        "observed_candidate": 27,
+        "predicate_kind": "congruence",
+        "predicate_args": [
+          279,
+          0
+        ],
+        "source_char_span": [
+          75339,
+          75366
+        ],
+        "source_excerpt_sha256": "4e0e532655625a8670a62738c06165f041f2eb6babfdbfe3efceaeef6c983ee9",
+        "scope_anchors": [
+          {
+            "source_char_span": [
+              74842,
+              74847
+            ],
+            "source_excerpt_sha256": "cc95377577104a635096871209eb29afcd6b040689cea1d24a8c4163ef1b3a8b"
+          }
+        ],
+        "arithmetic": {
+          "modulus": 279,
+          "expected_residue": 0,
+          "observed_residue": 27
+        },
+        "observation_char_end": 75366,
+        "observed_prefix_sha256": "f210856e477e4dd6dec8024c7a4b24d85ddb8093694525cbb1d84210e523c87a"
+      }
+    },
+    {
+      "sample_id": "2009-II-12:draw-01",
+      "problem_id": "2009-II-12",
+      "draw_index": 1,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "db3341ae5b36f934c38c51f9478bd2276050e1828e319b418cfad7c0a4437cc3",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2023-II-2:draw-02",
+      "problem_id": "2023-II-2",
+      "draw_index": 2,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "183b4d6f56b3a74356e87475dc991c154e2b357c44d0239260908a1503003b9f",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2018-II-14:draw-02",
+      "problem_id": "2018-II-14",
+      "draw_index": 2,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "ecc1da22b8c17b5df3fa7fc57cae4c04d438bfda107bae47b409647f1abf51ea",
+      "finish_reason": "length",
+      "box_closure_observations": 0,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2017-I-3:draw-02",
+      "problem_id": "2017-I-3",
+      "draw_index": 2,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "ca3fe6a68117dc805bc7973b96bd1107ba20e9ac03228bdcba1b349cb027d92e",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2013-II-11:draw-02",
+      "problem_id": "2013-II-11",
+      "draw_index": 2,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "dcba8bea239778b885ecd3ecfd3d7ba2d2b4f0a8224eb6c2580fa9b652d1cf14",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2012-I-4:draw-02",
+      "problem_id": "2012-I-4",
+      "draw_index": 2,
+      "problem_kind": "FIRST_EVENT",
+      "response_sha256": "f0966909e0a32b7b477a24f5dfb8944174b91468541983a3b3fa8c002ac03fb2",
+      "finish_reason": "length",
+      "box_closure_observations": 0,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2009-II-12:draw-02",
+      "problem_id": "2009-II-12",
+      "draw_index": 2,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "f6fde4573e8d9e4e34a5a3a18a70cb85bc362071e753b629d1bbb7873b529d85",
+      "finish_reason": "stop",
+      "box_closure_observations": 2,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2023-II-2:draw-03",
+      "problem_id": "2023-II-2",
+      "draw_index": 3,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "e3676b8117345a5dd7a6a0c44713519f7ca40f2e511d8dcfd9f89d92b6457c3a",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2018-II-14:draw-03",
+      "problem_id": "2018-II-14",
+      "draw_index": 3,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "a8aded0b4416f6d6371424c238729cceda0906d38ebe0d51593e91b1357170ff",
+      "finish_reason": "length",
+      "box_closure_observations": 0,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2017-I-3:draw-03",
+      "problem_id": "2017-I-3",
+      "draw_index": 3,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "3eb7c43359d0814282193cae003b6bbcf57157763261972d0b1ebbf05b0da097",
+      "finish_reason": "stop",
+      "box_closure_observations": 5,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2013-II-11:draw-03",
+      "problem_id": "2013-II-11",
+      "draw_index": 3,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "884a46675033cc66e8b52a44abba5e42ace69b7634f288257d3c09a427be405c",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2012-I-4:draw-03",
+      "problem_id": "2012-I-4",
+      "draw_index": 3,
+      "problem_kind": "FIRST_EVENT",
+      "response_sha256": "b4644e2325b172ead7cfed9f0106b9469e64fa37c553ea41473844a82050c6e7",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": {
+        "status": "COMMITTED_INTEGER_REFUTED",
+        "question_sha256": "1c98bfcb7089f17734e172ae543965eeae13cb298a9fafbdda3c90660fd6f0e0",
+        "proof_sha256": "92c0f9ea5598dee9cc82edc2789e58960d4dde6c0848c46419c1d60215b9c613",
+        "review_sha256": "032c38088471de50072476bec1b14ac820a819b695d886371fa2d0f68b8a8e83",
+        "observed_candidate": 40,
+        "predicate_kind": "congruence",
+        "predicate_args": [
+          279,
+          0
+        ],
+        "source_char_span": [
+          77081,
+          77108
+        ],
+        "source_excerpt_sha256": "c4e3b29b481aebfd9e167558ee873d74607ef290a1c1ae9e4ea86c5dfd23f47f",
+        "scope_anchors": [
+          {
+            "source_char_span": [
+              77009,
+              77014
+            ],
+            "source_excerpt_sha256": "cc95377577104a635096871209eb29afcd6b040689cea1d24a8c4163ef1b3a8b"
+          }
+        ],
+        "arithmetic": {
+          "modulus": 279,
+          "expected_residue": 0,
+          "observed_residue": 40
+        },
+        "observation_char_end": 77108,
+        "observed_prefix_sha256": "4460e5907ad9977518cdbf509ccb43d59c319c9aeba83132045fd3a47b3d76ec"
+      }
+    },
+    {
+      "sample_id": "2009-II-12:draw-03",
+      "problem_id": "2009-II-12",
+      "draw_index": 3,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "b996e29664e9d5d21de78b36274448d0b1b49ac5320e528d299d2e7c95aaec38",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": {
+        "status": "COMMITTED_INTEGER_REFUTED",
+        "question_sha256": "c9b293c2a66449ae4878d13a1bad95ddbbb4d91fb78e17410ffffc07c7b337e9",
+        "proof_sha256": "3955565b429780046633da9d0110af17b82756794e92cbc2c2543db13580ae12",
+        "review_sha256": "202747120e7abaac62421f3b3a3923e0e97210d32ccc67cf8f757d6877a15512",
+        "observed_candidate": 502,
+        "predicate_kind": "closed_interval",
+        "predicate_args": [
+          669,
+          803
+        ],
+        "source_char_span": [
+          59630,
+          59658
+        ],
+        "source_excerpt_sha256": "56f156d0c4dac07a0bb3193403fd987f0467aa6a9d34c81882ca70b0d71b2655",
+        "scope_anchors": [
+          {
+            "source_char_span": [
+              59466,
+              59510
+            ],
+            "source_excerpt_sha256": "c8ff00a2607316dc5f7db66f28f6ce22dc782bb64394662272c0729045cb309d"
+          }
+        ],
+        "arithmetic": {
+          "lo": 669,
+          "hi": 803
+        },
+        "observation_char_end": 59658,
+        "observed_prefix_sha256": "d71ab04ff6b409874a9e63d048d1a992dd142af93468712f8af417fef8033675"
+      }
+    },
+    {
+      "sample_id": "2023-II-2:draw-04",
+      "problem_id": "2023-II-2",
+      "draw_index": 4,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "57aa746010eda8b6ab0efacbefbdd1c0c35bfe644b4a891b8dcc8d682fff88ec",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2018-II-14:draw-04",
+      "problem_id": "2018-II-14",
+      "draw_index": 4,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "ab7b37726f6c4c48558e5e5ee94f8e81f89162b1cb254e7485053da15f7871a0",
+      "finish_reason": "length",
+      "box_closure_observations": 0,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2017-I-3:draw-04",
+      "problem_id": "2017-I-3",
+      "draw_index": 4,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "ec3777403b48d3d1f2e26a167b02d9de76e0b91777d3b23d851255abaa604fb8",
+      "finish_reason": "stop",
+      "box_closure_observations": 5,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2013-II-11:draw-04",
+      "problem_id": "2013-II-11",
+      "draw_index": 4,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "c6cbc79916865e1bb9d9faaa8b18e7a21c3a0b8c080e1024152bda65d6b552ee",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2012-I-4:draw-04",
+      "problem_id": "2012-I-4",
+      "draw_index": 4,
+      "problem_kind": "FIRST_EVENT",
+      "response_sha256": "256dac9cfa8cc436a703807573eb5072fa9648f3db5fcd29879194c1dfdc7580",
+      "finish_reason": "length",
+      "box_closure_observations": 0,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2009-II-12:draw-04",
+      "problem_id": "2009-II-12",
+      "draw_index": 4,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "8c0f9e09b8e8d7b419afa4d31c0ad4cea5c18f9812686d71af86c40ff310c2b0",
+      "finish_reason": "stop",
+      "box_closure_observations": 2,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2023-II-2:draw-05",
+      "problem_id": "2023-II-2",
+      "draw_index": 5,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "da4a2c278028fc72b39f3c0b14289178f0a578a4271986922252bb9d1f0cee87",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2018-II-14:draw-05",
+      "problem_id": "2018-II-14",
+      "draw_index": 5,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "5013cece360647eef12d059d4134c9b142955a8c12a170d80e569634b9011dac",
+      "finish_reason": "length",
+      "box_closure_observations": 0,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2017-I-3:draw-05",
+      "problem_id": "2017-I-3",
+      "draw_index": 5,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "55b579764e4bd3661d360a0271e3aaea33c0df8c15a8e784caf63f059f665eb7",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2013-II-11:draw-05",
+      "problem_id": "2013-II-11",
+      "draw_index": 5,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "da28bea4c47d19f5f4fbe61997d56cc8966481e367a613cdfa33cac4d6f735ca",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2012-I-4:draw-05",
+      "problem_id": "2012-I-4",
+      "draw_index": 5,
+      "problem_kind": "FIRST_EVENT",
+      "response_sha256": "4af90d762651b9473258d5c854116e0da0aa8dfe6fafc918de7b3347cf412dcf",
+      "finish_reason": "length",
+      "box_closure_observations": 0,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2009-II-12:draw-05",
+      "problem_id": "2009-II-12",
+      "draw_index": 5,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "6f8a1a3084ea0fc6a95b833458d5c7aa0b8c9a918852fbfc7e95a3621cf10592",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": {
+        "status": "COMMITTED_INTEGER_REFUTED",
+        "question_sha256": "c9b293c2a66449ae4878d13a1bad95ddbbb4d91fb78e17410ffffc07c7b337e9",
+        "proof_sha256": "3955565b429780046633da9d0110af17b82756794e92cbc2c2543db13580ae12",
+        "review_sha256": "202747120e7abaac62421f3b3a3923e0e97210d32ccc67cf8f757d6877a15512",
+        "observed_candidate": 1004,
+        "predicate_kind": "closed_interval",
+        "predicate_args": [
+          669,
+          803
+        ],
+        "source_char_span": [
+          70021,
+          70050
+        ],
+        "source_excerpt_sha256": "49734b881621d33b25aeb4a9b1783b2331fdff04be8978b593cfaba9addd2fda",
+        "scope_anchors": [
+          {
+            "source_char_span": [
+              70008,
+              70017
+            ],
+            "source_excerpt_sha256": "cbebd285c88194b88c3a0ad402ad93d377fb1d2785948efaa4b45a7d4bf12ec7"
+          }
+        ],
+        "arithmetic": {
+          "lo": 669,
+          "hi": 803
+        },
+        "observation_char_end": 70050,
+        "observed_prefix_sha256": "38289a7f5ad8889079f0dd8b30d29317ca8f05a661650b2aad626f7653a694df"
+      }
+    },
+    {
+      "sample_id": "2023-II-2:draw-06",
+      "problem_id": "2023-II-2",
+      "draw_index": 6,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "d7808289b38147d903954de3bf85634fde9abedbdf0b825bbe77661f7ec2f6ae",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2018-II-14:draw-06",
+      "problem_id": "2018-II-14",
+      "draw_index": 6,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "debbae3c1397fa85e869449d5169d5b5b10dc9121c6f844f5560ce182e45d7bc",
+      "finish_reason": "length",
+      "box_closure_observations": 0,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2017-I-3:draw-06",
+      "problem_id": "2017-I-3",
+      "draw_index": 6,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "604f39fbef1357f1e835b56ba7083d824fb7c7ce9c6ca7ab4980df6a4b52a2cf",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2013-II-11:draw-06",
+      "problem_id": "2013-II-11",
+      "draw_index": 6,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "04142cdada1442e3bf822c4c9a0805cc99c31ea1e2ef3653ecd3efe9f4314de7",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2012-I-4:draw-06",
+      "problem_id": "2012-I-4",
+      "draw_index": 6,
+      "problem_kind": "FIRST_EVENT",
+      "response_sha256": "1ae9c7e908b5fe9eadb030a42a8cdb7763ee0efa2fa186f3ba149e213bbdc470",
+      "finish_reason": "length",
+      "box_closure_observations": 0,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2009-II-12:draw-06",
+      "problem_id": "2009-II-12",
+      "draw_index": 6,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "b00b65e003984bb146278f5ada62f157086883704c8e7fe9be44e4e24b347115",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": {
+        "status": "COMMITTED_INTEGER_REFUTED",
+        "question_sha256": "c9b293c2a66449ae4878d13a1bad95ddbbb4d91fb78e17410ffffc07c7b337e9",
+        "proof_sha256": "3955565b429780046633da9d0110af17b82756794e92cbc2c2543db13580ae12",
+        "review_sha256": "202747120e7abaac62421f3b3a3923e0e97210d32ccc67cf8f757d6877a15512",
+        "observed_candidate": 1004,
+        "predicate_kind": "closed_interval",
+        "predicate_args": [
+          669,
+          803
+        ],
+        "source_char_span": [
+          71597,
+          71626
+        ],
+        "source_excerpt_sha256": "49734b881621d33b25aeb4a9b1783b2331fdff04be8978b593cfaba9addd2fda",
+        "scope_anchors": [
+          {
+            "source_char_span": [
+              71388,
+              71444
+            ],
+            "source_excerpt_sha256": "06c70d9b8c75e5832c37593a5f5ea831ad41e1b5afee364043cf6a538363a640"
+          }
+        ],
+        "arithmetic": {
+          "lo": 669,
+          "hi": 803
+        },
+        "observation_char_end": 71626,
+        "observed_prefix_sha256": "fe18c9cad231cc3b4bdd4529f853f57fb66a9b4ca659f6f7649ccec0f039c271"
+      }
+    },
+    {
+      "sample_id": "2023-II-2:draw-07",
+      "problem_id": "2023-II-2",
+      "draw_index": 7,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "81b3b958fc3bdbec12d56069d84dfaf49e5a2b6b608f0d3bb78f3277c88b84fa",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2018-II-14:draw-07",
+      "problem_id": "2018-II-14",
+      "draw_index": 7,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "3ea648718954f9d1aed0f95d901f307e3acb1b2f6a5e58dda42e6f8935970eab",
+      "finish_reason": "length",
+      "box_closure_observations": 0,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2017-I-3:draw-07",
+      "problem_id": "2017-I-3",
+      "draw_index": 7,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "bf97aed0b89d02a6788cc171973001c52e4dd5c0207f03e14eef7caffd8ebd2b",
+      "finish_reason": "stop",
+      "box_closure_observations": 3,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2013-II-11:draw-07",
+      "problem_id": "2013-II-11",
+      "draw_index": 7,
+      "problem_kind": "SCOPE_CONTROL",
+      "response_sha256": "784f1b93e4bf995a161980ea08c47911fd31982403cf011fda34080e0673e4c6",
+      "finish_reason": "stop",
+      "box_closure_observations": 1,
+      "historical_obligation_available": false,
+      "first_trigger": null
+    },
+    {
+      "sample_id": "2012-I-4:draw-07",
+      "problem_id": "2012-I-4",
+      "draw_index": 7,
+      "problem_kind": "FIRST_EVENT",
+      "response_sha256": "e4bb182d7f0ad1465badb70162ac60bdf85d9fe0665629f736827e122e44046a",
+      "finish_reason": "length",
+      "box_closure_observations": 1,
+      "historical_obligation_available": true,
+      "first_trigger": {
+        "status": "COMMITTED_INTEGER_REFUTED",
+        "question_sha256": "1c98bfcb7089f17734e172ae543965eeae13cb298a9fafbdda3c90660fd6f0e0",
+        "proof_sha256": "92c0f9ea5598dee9cc82edc2789e58960d4dde6c0848c46419c1d60215b9c613",
+        "review_sha256": "032c38088471de50072476bec1b14ac820a819b695d886371fa2d0f68b8a8e83",
+        "observed_candidate": 40,
+        "predicate_kind": "congruence",
+        "predicate_args": [
+          279,
+          0
+        ],
+        "source_char_span": [
+          89923,
+          89950
+        ],
+        "source_excerpt_sha256": "c4e3b29b481aebfd9e167558ee873d74607ef290a1c1ae9e4ea86c5dfd23f47f",
+        "scope_anchors": [
+          {
+            "source_char_span": [
+              89586,
+              89591
+            ],
+            "source_excerpt_sha256": "cc95377577104a635096871209eb29afcd6b040689cea1d24a8c4163ef1b3a8b"
+          }
+        ],
+        "arithmetic": {
+          "modulus": 279,
+          "expected_residue": 0,
+          "observed_residue": 40
+        },
+        "observation_char_end": 89950,
+        "observed_prefix_sha256": "b2e934487ae21ab2505939b566950fb39a3f544e8537b2cf1afbd0039bc213e4"
+      }
+    },
+    {
+      "sample_id": "2009-II-12:draw-07",
+      "problem_id": "2009-II-12",
+      "draw_index": 7,
+      "problem_kind": "EXTREMUM",
+      "response_sha256": "006c93895c5291113810b0597030d7849a47c5ecc1de561a6cba5e25fa91ad2a",
+      "finish_reason": "length",
+      "box_closure_observations": 0,
+      "historical_obligation_available": true,
+      "first_trigger": null
+    }
+  ],
+  "cost": {
+    "wall_ns": 58467200,
+    "cpu_ns": 46875000
+  }
+}

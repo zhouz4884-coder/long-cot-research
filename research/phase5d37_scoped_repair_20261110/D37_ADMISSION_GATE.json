@@ -1,0 +1,25 @@
+{
+  "phase": "D3.7",
+  "baseline_commit": "6e36e197fd4f68da9ebba769f6fe2140fad22f70",
+  "source_audit": {
+    "development": "D3.6 E15 raw only",
+    "expected_arms": 48,
+    "expected_point_events": 451,
+    "policy_measurement": "Replay observed source and old feedback only, no counterfactual model score.",
+    "scope_gate": "Both exact semantic errors must be refused, same-number genuine global final and verified in-task candidate controls must remain eligible. Any additional known wrongful authority or unresolved semantic role with a destructive action must block model pilot. Scope challenge evidence remains separate from deployment guarantees."
+  },
+  "cpu_admission": {
+    "public_task_families": ["MathConstruct IMO Shortlist 2012 C2", "MathConstruct IMO Shortlist 2014 C3"],
+    "upstream_revision": "3e51d847547a6586237ae55b83131b0e31b8476d",
+    "separate_custom_task_families": ["C2 restricted disjoint distinct-sum pairs", "C3 restricted rook-window cover"],
+    "split": "Current solver measurements use development cases only. Freeze independent whole families or structurally distinct tasks only after admission. Different n/k or seed within a family is a within-family split, never cross-family evidence.",
+    "quality_rule": "First independently verified output meets the identical frozen target. Missing or solver-limited output is censored or unknown. Author or generated witnesses confirm satisfiability outside model material.",
+    "cost_rule": "Report monotonic first-verified wall time with startup/construction/solve/validation boundaries and tool settings. Charge local repair and its expansion separately. Use the fastest legal strong solver and local exact repair in the same task scope.",
+    "first_screen_cpu_seconds": 4,
+    "retest_if_needed_cpu_seconds": 30,
+    "pilot_gate": "At least two frozen satisfiable development instances with substantive headroom against both the strongest direct portfolio and the strongest matched local exact repair, and a feasible independent whole-family design. A case with a checked same-target answer from any legal strong baseline inside the short screen is not evidence of missing solver headroom. Retest a screen miss before using it as positive evidence, unless the other legal baseline already settles that case.",
+    "model_payload_allowlist": ["problem and public constraints", "candidate with matched provenance", "trusted point or local predicate interface", "bounded edit protocol"],
+    "model_payload_excluded": ["author construction code", "hidden planted or full solutions", "eval labels", "complete unrestricted solve code"]
+  },
+  "if_pilot_eligible": "Freeze equal-state alternatives, budget and 12–24 independently sourced questions only after a meaningful development pilot. Retain exact local solver, native, prompt, iterative checker and resampling comparisons. Otherwise close this stage at a reported qualification no-go with no model score."
+}

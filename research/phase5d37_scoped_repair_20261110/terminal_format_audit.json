@@ -1,0 +1,563 @@
+{
+  "status": "COMPLETE_DEVELOPMENT_FORMAT_AUDIT",
+  "first_label_read_utc": "2026-11-09T20:09:07.128549+00:00",
+  "observations_sha256": "ace0328b03fdd3eccc9a2c414bda0c6d21160c9d9ac3796d39dbce7c24b8fe38",
+  "additional_gpu_seconds": 0,
+  "fresh_synthetic_confusion": {
+    "frozen_f2": {
+      "TRUE_ACCEPT": 6,
+      "FALSE_ABSTAIN": 12,
+      "TRUE_ABSTAIN": 16,
+      "FALSE_ACCEPT": 2,
+      "WRONG_VALUE_ACCEPT": 0
+    },
+    "supplemented": {
+      "TRUE_ACCEPT": 17,
+      "FALSE_ABSTAIN": 1,
+      "TRUE_ABSTAIN": 16,
+      "FALSE_ACCEPT": 2,
+      "WRONG_VALUE_ACCEPT": 0
+    }
+  },
+  "fresh_synthetic_rows": [
+    {
+      "id": "A01",
+      "category": "plain_commit",
+      "expected_scalar": "73",
+      "reference_scalar": "73",
+      "frozen_f2": "TRUE_ACCEPT",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "73",
+      "new_accept": false,
+      "fallback_reason": "frozen_success_precedes_fallback"
+    },
+    {
+      "id": "A02",
+      "category": "separate_proof_alternatives",
+      "expected_scalar": "44",
+      "reference_scalar": null,
+      "frozen_f2": "FALSE_ABSTAIN",
+      "supplemented": "FALSE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "frozen_reason_outside_fallback_scope"
+    },
+    {
+      "id": "A03",
+      "category": "role_anchored_prefix",
+      "expected_scalar": "72",
+      "reference_scalar": null,
+      "frozen_f2": "FALSE_ABSTAIN",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "72",
+      "new_accept": true,
+      "fallback_reason": "single_consistent_explicit_scalar"
+    },
+    {
+      "id": "A04",
+      "category": "role_anchored_suffix",
+      "expected_scalar": "31",
+      "reference_scalar": null,
+      "frozen_f2": "FALSE_ABSTAIN",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "31",
+      "new_accept": true,
+      "fallback_reason": "single_consistent_explicit_scalar"
+    },
+    {
+      "id": "A05",
+      "category": "exact_fraction",
+      "expected_scalar": "7/12",
+      "reference_scalar": null,
+      "frozen_f2": "FALSE_ABSTAIN",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "7/12",
+      "new_accept": true,
+      "fallback_reason": "single_consistent_explicit_scalar"
+    },
+    {
+      "id": "A06",
+      "category": "equivalent_repeat",
+      "expected_scalar": "24",
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ACCEPT",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "24",
+      "new_accept": false,
+      "fallback_reason": "frozen_success_precedes_fallback"
+    },
+    {
+      "id": "A07",
+      "category": "signed_value",
+      "expected_scalar": "-13",
+      "reference_scalar": null,
+      "frozen_f2": "FALSE_ABSTAIN",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "-13",
+      "new_accept": true,
+      "fallback_reason": "single_consistent_explicit_scalar"
+    },
+    {
+      "id": "A08",
+      "category": "grouped_thousands",
+      "expected_scalar": "11204",
+      "reference_scalar": null,
+      "frozen_f2": "FALSE_ABSTAIN",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "11204",
+      "new_accept": true,
+      "fallback_reason": "single_consistent_explicit_scalar"
+    },
+    {
+      "id": "A09",
+      "category": "generic_explicit_answer",
+      "expected_scalar": "37",
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ACCEPT",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "37",
+      "new_accept": false,
+      "fallback_reason": "frozen_success_precedes_fallback"
+    },
+    {
+      "id": "A10",
+      "category": "mathematical_object_alias",
+      "expected_scalar": "8",
+      "reference_scalar": null,
+      "frozen_f2": "FALSE_ABSTAIN",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "8",
+      "new_accept": true,
+      "fallback_reason": "single_consistent_explicit_scalar"
+    },
+    {
+      "id": "A11",
+      "category": "decimal_exact",
+      "expected_scalar": "1/8",
+      "reference_scalar": null,
+      "frozen_f2": "FALSE_ABSTAIN",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "1/8",
+      "new_accept": true,
+      "fallback_reason": "single_consistent_explicit_scalar"
+    },
+    {
+      "id": "A12",
+      "category": "wrong_but_explicit",
+      "expected_scalar": "90",
+      "reference_scalar": "91",
+      "frozen_f2": "FALSE_ABSTAIN",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "90",
+      "new_accept": true,
+      "fallback_reason": "single_consistent_explicit_scalar"
+    },
+    {
+      "id": "A13",
+      "category": "equal_assertion",
+      "expected_scalar": "61",
+      "reference_scalar": null,
+      "frozen_f2": "FALSE_ABSTAIN",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "61",
+      "new_accept": true,
+      "fallback_reason": "single_consistent_explicit_scalar"
+    },
+    {
+      "id": "A14",
+      "category": "exact_assignment",
+      "expected_scalar": "17",
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ACCEPT",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "17",
+      "new_accept": false,
+      "fallback_reason": "frozen_success_precedes_fallback"
+    },
+    {
+      "id": "A15",
+      "category": "inline_heading",
+      "expected_scalar": "32",
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ACCEPT",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "32",
+      "new_accept": false,
+      "fallback_reason": "frozen_success_precedes_fallback"
+    },
+    {
+      "id": "A16",
+      "category": "negative_rational",
+      "expected_scalar": "-1/4",
+      "reference_scalar": null,
+      "frozen_f2": "FALSE_ABSTAIN",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "-1/4",
+      "new_accept": true,
+      "fallback_reason": "single_consistent_explicit_scalar"
+    },
+    {
+      "id": "A17",
+      "category": "postscript_commit",
+      "expected_scalar": "51",
+      "reference_scalar": null,
+      "frozen_f2": "FALSE_ABSTAIN",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "51",
+      "new_accept": true,
+      "fallback_reason": "single_consistent_explicit_scalar"
+    },
+    {
+      "id": "A18",
+      "category": "repeated_exact_commit",
+      "expected_scalar": "65",
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ACCEPT",
+      "supplemented": "TRUE_ACCEPT",
+      "supplemented_value": "65",
+      "new_accept": false,
+      "fallback_reason": "frozen_success_precedes_fallback"
+    },
+    {
+      "id": "N01",
+      "category": "conflicting_headings",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "frozen_reason_outside_fallback_scope"
+    },
+    {
+      "id": "N02",
+      "category": "prior_explicit_conflict",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "conflicting_explicit_answers"
+    },
+    {
+      "id": "N03",
+      "category": "multiple_boxes_same_scope",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "frozen_reason_outside_fallback_scope"
+    },
+    {
+      "id": "N04",
+      "category": "set_not_scalar",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "frozen_reason_outside_fallback_scope"
+    },
+    {
+      "id": "N05",
+      "category": "markdown_quote",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "missing_or_unsafe_text"
+    },
+    {
+      "id": "N06",
+      "category": "inline_quotation",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "no_explicit_terminal_section"
+    },
+    {
+      "id": "N07",
+      "category": "code_fence",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "frozen_reason_outside_fallback_scope"
+    },
+    {
+      "id": "N08",
+      "category": "subgoal_in_terminal_section",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "qualified_or_quoted_delivery"
+    },
+    {
+      "id": "N09",
+      "category": "local_extremum",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "terminal_subject_or_scope_unbound"
+    },
+    {
+      "id": "N10",
+      "category": "feasible_not_optimal",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "FALSE_ACCEPT",
+      "supplemented": "FALSE_ACCEPT",
+      "supplemented_value": "44",
+      "new_accept": false,
+      "fallback_reason": "frozen_success_precedes_fallback"
+    },
+    {
+      "id": "N11",
+      "category": "conditional",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "FALSE_ACCEPT",
+      "supplemented": "FALSE_ACCEPT",
+      "supplemented_value": "55",
+      "new_accept": false,
+      "fallback_reason": "frozen_success_precedes_fallback"
+    },
+    {
+      "id": "N12",
+      "category": "question_uncommitted",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "qualified_or_quoted_delivery"
+    },
+    {
+      "id": "N13",
+      "category": "capacity",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "no_committed_natural_eos_delivery"
+    },
+    {
+      "id": "N14",
+      "category": "controller_held",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "no_committed_natural_eos_delivery"
+    },
+    {
+      "id": "N15",
+      "category": "unclosed_thinking",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "no_committed_natural_eos_delivery"
+    },
+    {
+      "id": "N16",
+      "category": "unknown_target",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "unknown_or_nonscalar_objective"
+    },
+    {
+      "id": "N17",
+      "category": "prior_unresolved_delivery",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "frozen_reason_outside_fallback_scope"
+    },
+    {
+      "id": "N18",
+      "category": "inline_revision_conflict",
+      "expected_scalar": null,
+      "reference_scalar": null,
+      "frozen_f2": "TRUE_ABSTAIN",
+      "supplemented": "TRUE_ABSTAIN",
+      "supplemented_value": null,
+      "new_accept": false,
+      "fallback_reason": "qualified_or_quoted_delivery"
+    }
+  ],
+  "historical_d36_e15": {
+    "scope": "Retrospective after the observed E15 formatting cases, separate from the frozen D3.6 F2 endpoint.",
+    "by_arm": {
+      "NativeContinue": {
+        "n": 6,
+        "frozen_f2_correct": 0,
+        "supplemented_correct": 0
+      },
+      "NeutralReminder": {
+        "n": 6,
+        "frozen_f2_correct": 2,
+        "supplemented_correct": 2
+      },
+      "ClaimOnly": {
+        "n": 6,
+        "frozen_f2_correct": 0,
+        "supplemented_correct": 0
+      },
+      "NumericWitness": {
+        "n": 6,
+        "frozen_f2_correct": 1,
+        "supplemented_correct": 2
+      },
+      "VerifiedWitness": {
+        "n": 6,
+        "frozen_f2_correct": 4,
+        "supplemented_correct": 4
+      },
+      "ProgressiveWitness": {
+        "n": 6,
+        "frozen_f2_correct": 3,
+        "supplemented_correct": 4
+      },
+      "EveryStepAudit": {
+        "n": 6,
+        "frozen_f2_correct": 4,
+        "supplemented_correct": 4
+      },
+      "InvalidWitnessControl": {
+        "n": 6,
+        "frozen_f2_correct": 2,
+        "supplemented_correct": 2
+      }
+    },
+    "nonparsed_or_undelivered_rows": [
+      {
+        "checkpoint": "early",
+        "replicate": "historical",
+        "arm": "NumericWitness",
+        "source_sha256": "3ff308558bae4102e9824b089224fdee1619efa3fbe01fd95b160f150848c91b",
+        "EOS": true,
+        "capacity": false,
+        "delivery": "NATIVE_MODEL_DRAFT",
+        "frozen_reason": "unresolved_earlier_final_delivery",
+        "fallback": {
+          "version": "d37_terminal_scalar_fallback_v1",
+          "status": "ABSTAIN",
+          "reason": "missing_or_unsafe_text",
+          "normalized_scalar": null,
+          "box_span": null
+        },
+        "extra_correct": false
+      },
+      {
+        "checkpoint": "early",
+        "replicate": "s20261111",
+        "arm": "ProgressiveWitness",
+        "source_sha256": "d1e71e6d1b4d04672ca110fb86bd9a2e229522c18fb5fec074bda91cf8a71d9d",
+        "EOS": true,
+        "capacity": false,
+        "delivery": "WITHHELD_CERTIFIED_VETO",
+        "frozen_reason": "uncommitted_or_unsupported_scalar_scope",
+        "fallback": {
+          "version": "d37_terminal_scalar_fallback_v1",
+          "status": "ABSTAIN",
+          "reason": "no_committed_natural_eos_delivery",
+          "normalized_scalar": null,
+          "box_span": null
+        },
+        "extra_correct": false
+      },
+      {
+        "checkpoint": "late",
+        "replicate": "historical",
+        "arm": "ProgressiveWitness",
+        "source_sha256": "abab66a60e9be070ccb905d4e2b86ff28965d54a2cfd4fab101216069dfce8d5",
+        "EOS": true,
+        "capacity": false,
+        "delivery": "NATIVE_MODEL_DRAFT",
+        "frozen_reason": "alternative_final_objects",
+        "fallback": {
+          "version": "d37_terminal_scalar_fallback_v1",
+          "status": "FALLBACK_ACCEPT",
+          "reason": "single_consistent_explicit_scalar",
+          "normalized_scalar": "10112369",
+          "box_span": [
+            2405,
+            2421
+          ]
+        },
+        "extra_correct": true
+      },
+      {
+        "checkpoint": "late",
+        "replicate": "s20261112",
+        "arm": "NumericWitness",
+        "source_sha256": "16bdc321963996e9bba4ede6c5ce69596b9c5a9f6bbf20def40aa3f54feb6d9b",
+        "EOS": true,
+        "capacity": false,
+        "delivery": "NATIVE_MODEL_DRAFT",
+        "frozen_reason": "boxed_objects_do_not_consume_final_payload",
+        "fallback": {
+          "version": "d37_terminal_scalar_fallback_v1",
+          "status": "FALLBACK_ACCEPT",
+          "reason": "single_consistent_explicit_scalar",
+          "normalized_scalar": "10112369",
+          "box_span": [
+            2133,
+            2149
+          ]
+        },
+        "extra_correct": true
+      },
+      {
+        "checkpoint": "late",
+        "replicate": "s20261112",
+        "arm": "VerifiedWitness",
+        "source_sha256": "116ee52b72731bab566b15bcc8b6eb1283f91ca141776c981f06128cf1664539",
+        "EOS": false,
+        "capacity": true,
+        "delivery": "NATIVE_MODEL_DRAFT",
+        "frozen_reason": "uncommitted_or_unsupported_scalar_scope",
+        "fallback": {
+          "version": "d37_terminal_scalar_fallback_v1",
+          "status": "ABSTAIN",
+          "reason": "no_committed_natural_eos_delivery",
+          "normalized_scalar": null,
+          "box_span": null
+        },
+        "extra_correct": false
+      }
+    ]
+  }
+}

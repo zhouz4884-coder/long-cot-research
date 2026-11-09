@@ -1,0 +1,772 @@
+{
+  "status": "COMPLETE_SCOPE_ADVERSARIAL_DEVELOPMENT_AUDIT",
+  "first_evaluated_utc": "2026-11-09T20:15:19.255614+00:00",
+  "challenge_sha256": "7bd9b5738f30bd7818c4f4f0597da7617b189eacd76d0f6f55364070dfe07902",
+  "scope_adapter_sha256": "8125b0a55fea11ecc1569e8dca0a71479b5dbcc58e2bffc7d238ceec3a20ed47",
+  "scoped_obligation_sha256": "12dbbb0f29778b7b1bece50aa2dafc2cdaa4ca9282519a4d0eb5b81ff266f284",
+  "point_verifier_sha256": "10ceb50209d81c18364447810c5fb99e38ff30abca536ec13fb21c7fe6daae75",
+  "scope": "Independent synthetic authority and boundary challenge. Old parser probes are eligibility diagnostics, not live generation.",
+  "expected_none": 19,
+  "expected_nonempty": 5,
+  "counts": {
+    "AGREEMENT": 12,
+    "FALSE_AUTHORITY": 12
+  },
+  "false_authority_types": {
+    "REFUTE_GLOBAL_MAXIMUM": 11,
+    "REFUTE_FEASIBILITY_ONLY": 1
+  },
+  "math_controls": {
+    "largest_feasible_three_digit": 909,
+    "998_fits_modulo_ten_third_digit": true,
+    "998_feasible_under_original": false,
+    "172_feasible_under_original": false,
+    "20246_feasible_under_original": true
+  },
+  "cases": [
+    {
+      "id": "P01",
+      "category": "positive",
+      "value": 909,
+      "expected": "REFUTE_GLOBAL_MAXIMUM",
+      "actual": "REFUTE_GLOBAL_MAXIMUM",
+      "result": "AGREEMENT",
+      "actual_role": "CURRENT_MAXIMUM",
+      "same_gate_full_text_authority": "REFUTE_GLOBAL_MAXIMUM",
+      "direct_full_text_role_with_commitment": "CURRENT_MAXIMUM",
+      "direct_clause_role_with_commitment": "CURRENT_MAXIMUM",
+      "clause": " Therefore, 909 is the greatest fibbish number.",
+      "source_span": {
+        "char_span": [
+          41,
+          75
+        ],
+        "text": "909 is the greatest fibbish number"
+      },
+      "point_status": null,
+      "bound_witness_value": 1011235,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": [
+          {
+            "source_span": [
+              41,
+              60
+            ],
+            "source": "909 is the greatest",
+            "role": "MAXIMALITY_CLAIM"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P02",
+      "category": "positive",
+      "value": 909,
+      "expected": "REFUTE_GLOBAL_MAXIMUM",
+      "actual": "REFUTE_GLOBAL_MAXIMUM",
+      "result": "AGREEMENT",
+      "actual_role": "CURRENT_FINAL_MAXIMUM",
+      "same_gate_full_text_authority": "REFUTE_GLOBAL_MAXIMUM",
+      "direct_full_text_role_with_commitment": "CURRENT_FINAL_MAXIMUM",
+      "direct_clause_role_with_commitment": "CURRENT_FINAL_MAXIMUM",
+      "clause": "Final answer: \\boxed{909}\n",
+      "source_span": {
+        "char_span": [
+          14,
+          25
+        ],
+        "text": "\\boxed{909}"
+      },
+      "point_status": null,
+      "bound_witness_value": 1011235,
+      "legacy_emission_probe": {
+        "mode": "published_d36_f2_final_readout",
+        "selection_status": "ok",
+        "same_value_selected": true
+      }
+    },
+    {
+      "id": "P03",
+      "category": "positive",
+      "value": 172,
+      "expected": "REFUTE_FEASIBILITY_ONLY",
+      "actual": "REFUTE_FEASIBILITY_ONLY",
+      "result": "AGREEMENT",
+      "actual_role": "CURRENT_FEASIBLE_CANDIDATE",
+      "same_gate_full_text_authority": "REFUTE_FEASIBILITY_ONLY",
+      "direct_full_text_role_with_commitment": "CURRENT_FEASIBLE_CANDIDATE",
+      "direct_clause_role_with_commitment": "CURRENT_FEASIBLE_CANDIDATE",
+      "clause": "After checking the digits, 172 is a valid fibbish number.",
+      "source_span": {
+        "char_span": [
+          27,
+          56
+        ],
+        "text": "172 is a valid fibbish number"
+      },
+      "point_status": "CERTIFIED_INFEASIBLE",
+      "bound_witness_value": null,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": [
+          {
+            "source_span": [
+              27,
+              56
+            ],
+            "source": "172 is a valid fibbish number",
+            "role": "FEASIBLE_CANDIDATE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P04",
+      "category": "positive",
+      "value": 20246,
+      "expected": "RAISE_FEASIBLE_BOUND_ONLY",
+      "actual": "RAISE_FEASIBLE_BOUND_ONLY",
+      "result": "AGREEMENT",
+      "actual_role": "CURRENT_CONSTRUCTED_CANDIDATE",
+      "same_gate_full_text_authority": "RAISE_FEASIBLE_BOUND_ONLY",
+      "direct_full_text_role_with_commitment": "CURRENT_CONSTRUCTED_CANDIDATE",
+      "direct_clause_role_with_commitment": "CURRENT_CONSTRUCTED_CANDIDATE",
+      "clause": " Therefore, the number is 20246.",
+      "source_span": {
+        "char_span": [
+          24,
+          43
+        ],
+        "text": "the number is 20246"
+      },
+      "point_status": "CERTIFIED_FEASIBLE",
+      "bound_witness_value": null,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": [
+          {
+            "source_span": [
+              24,
+              43
+            ],
+            "source": "the number is 20246",
+            "role": "FEASIBLE_CANDIDATE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P05",
+      "category": "positive",
+      "value": 20246,
+      "expected": "RAISE_FEASIBLE_BOUND_ONLY",
+      "actual": "RAISE_FEASIBLE_BOUND_ONLY",
+      "result": "AGREEMENT",
+      "actual_role": "CHECKPOINT_OPERAND",
+      "same_gate_full_text_authority": "RAISE_FEASIBLE_BOUND_ONLY",
+      "direct_full_text_role_with_commitment": "CHECKPOINT_OPERAND",
+      "direct_clause_role_with_commitment": "CHECKPOINT_OPERAND",
+      "clause": " 20246 is larger than 123.",
+      "source_span": {
+        "char_span": [
+          40,
+          45
+        ],
+        "text": "20246"
+      },
+      "point_status": "CERTIFIED_FEASIBLE",
+      "bound_witness_value": null,
+      "legacy_emission_probe": {
+        "mode": "trusted_checkpoint_operand_fixture"
+      }
+    },
+    {
+      "id": "Q01",
+      "category": "cross_sentence_quote",
+      "value": 909,
+      "expected": "NONE",
+      "actual": "REFUTE_GLOBAL_MAXIMUM",
+      "result": "FALSE_AUTHORITY",
+      "actual_role": "CURRENT_MAXIMUM",
+      "same_gate_full_text_authority": "NONE",
+      "direct_full_text_role_with_commitment": "QUOTED",
+      "direct_clause_role_with_commitment": "CURRENT_MAXIMUM",
+      "clause": " Therefore, 909 is the greatest fibbish number.",
+      "source_span": {
+        "char_span": [
+          82,
+          116
+        ],
+        "text": "909 is the greatest fibbish number"
+      },
+      "point_status": null,
+      "bound_witness_value": 1011235,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": [
+          {
+            "source_span": [
+              82,
+              101
+            ],
+            "source": "909 is the greatest",
+            "role": "MAXIMALITY_CLAIM"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q02",
+      "category": "cross_paragraph_quote",
+      "value": 724,
+      "expected": "NONE",
+      "actual": "REFUTE_GLOBAL_MAXIMUM",
+      "result": "FALSE_AUTHORITY",
+      "actual_role": "CURRENT_MAXIMUM",
+      "same_gate_full_text_authority": "REFUTE_GLOBAL_MAXIMUM",
+      "direct_full_text_role_with_commitment": "CURRENT_MAXIMUM",
+      "direct_clause_role_with_commitment": "CURRENT_MAXIMUM",
+      "clause": "\n> Thus, 724 is the greatest fibbish number.",
+      "source_span": {
+        "char_span": [
+          79,
+          113
+        ],
+        "text": "724 is the greatest fibbish number"
+      },
+      "point_status": null,
+      "bound_witness_value": 1011235,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": [
+          {
+            "source_span": [
+              79,
+              98
+            ],
+            "source": "724 is the greatest",
+            "role": "MAXIMALITY_CLAIM"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q03",
+      "category": "indirect_report",
+      "value": 909,
+      "expected": "NONE",
+      "actual": "REFUTE_GLOBAL_MAXIMUM",
+      "result": "FALSE_AUTHORITY",
+      "actual_role": "CURRENT_MAXIMUM",
+      "same_gate_full_text_authority": "REFUTE_GLOBAL_MAXIMUM",
+      "direct_full_text_role_with_commitment": "CURRENT_MAXIMUM",
+      "direct_clause_role_with_commitment": "CURRENT_MAXIMUM",
+      "clause": "The contestant in the transcript claimed that 909 is the greatest fibbish number.",
+      "source_span": {
+        "char_span": [
+          46,
+          80
+        ],
+        "text": "909 is the greatest fibbish number"
+      },
+      "point_status": null,
+      "bound_witness_value": 1011235,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": [
+          {
+            "source_span": [
+              46,
+              65
+            ],
+            "source": "909 is the greatest",
+            "role": "MAXIMALITY_CLAIM"
+          }
+        ]
+      }
+    },
+    {
+      "id": "H01",
+      "category": "cross_sentence_hypothesis",
+      "value": 724,
+      "expected": "NONE",
+      "actual": "REFUTE_GLOBAL_MAXIMUM",
+      "result": "FALSE_AUTHORITY",
+      "actual_role": "CURRENT_MAXIMUM",
+      "same_gate_full_text_authority": "NONE",
+      "direct_full_text_role_with_commitment": "HYPOTHESIS",
+      "direct_clause_role_with_commitment": "CURRENT_MAXIMUM",
+      "clause": " Therefore, 724 is the greatest fibbish number.",
+      "source_span": {
+        "char_span": [
+          72,
+          106
+        ],
+        "text": "724 is the greatest fibbish number"
+      },
+      "point_status": null,
+      "bound_witness_value": 1011235,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": [
+          {
+            "source_span": [
+              72,
+              91
+            ],
+            "source": "724 is the greatest",
+            "role": "MAXIMALITY_CLAIM"
+          }
+        ]
+      }
+    },
+    {
+      "id": "H02",
+      "category": "trailing_conditional",
+      "value": 909,
+      "expected": "NONE",
+      "actual": "NONE",
+      "result": "AGREEMENT",
+      "actual_role": "UNKNOWN",
+      "same_gate_full_text_authority": "NONE",
+      "direct_full_text_role_with_commitment": "UNKNOWN",
+      "direct_clause_role_with_commitment": "UNKNOWN",
+      "clause": "The greatest fibbish number is 909, provided we are forbidden to use more than three digits.",
+      "source_span": {
+        "char_span": [
+          0,
+          34
+        ],
+        "text": "The greatest fibbish number is 909"
+      },
+      "point_status": null,
+      "bound_witness_value": null,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": []
+      }
+    },
+    {
+      "id": "H03",
+      "category": "trailing_feasibility_condition",
+      "value": 998,
+      "expected": "NONE",
+      "actual": "REFUTE_FEASIBILITY_ONLY",
+      "result": "FALSE_AUTHORITY",
+      "actual_role": "CURRENT_FEASIBLE_CANDIDATE",
+      "same_gate_full_text_authority": "REFUTE_FEASIBILITY_ONLY",
+      "direct_full_text_role_with_commitment": "CURRENT_FEASIBLE_CANDIDATE",
+      "direct_clause_role_with_commitment": "CURRENT_FEASIBLE_CANDIDATE",
+      "clause": "998 is valid if the recurrence keeps only the last digit of each sum.",
+      "source_span": {
+        "char_span": [
+          0,
+          12
+        ],
+        "text": "998 is valid"
+      },
+      "point_status": "CERTIFIED_INFEASIBLE",
+      "bound_witness_value": null,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": [
+          {
+            "source_span": [
+              0,
+              12
+            ],
+            "source": "998 is valid",
+            "role": "FEASIBLE_CANDIDATE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "H04",
+      "category": "explicit_nonendorsement",
+      "value": 909,
+      "expected": "NONE",
+      "actual": "REFUTE_GLOBAL_MAXIMUM",
+      "result": "FALSE_AUTHORITY",
+      "actual_role": "CURRENT_MAXIMUM",
+      "same_gate_full_text_authority": "REFUTE_GLOBAL_MAXIMUM",
+      "direct_full_text_role_with_commitment": "CURRENT_MAXIMUM",
+      "direct_clause_role_with_commitment": "CURRENT_MAXIMUM",
+      "clause": "I do not claim that 909 is the greatest fibbish number.",
+      "source_span": {
+        "char_span": [
+          20,
+          54
+        ],
+        "text": "909 is the greatest fibbish number"
+      },
+      "point_status": null,
+      "bound_witness_value": 1011235,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": []
+      }
+    },
+    {
+      "id": "H05",
+      "category": "uncertain_alternatives",
+      "value": 909,
+      "expected": "NONE",
+      "actual": "REFUTE_GLOBAL_MAXIMUM",
+      "result": "FALSE_AUTHORITY",
+      "actual_role": "CURRENT_MAXIMUM",
+      "same_gate_full_text_authority": "REFUTE_GLOBAL_MAXIMUM",
+      "direct_full_text_role_with_commitment": "CURRENT_MAXIMUM",
+      "direct_clause_role_with_commitment": "CURRENT_MAXIMUM",
+      "clause": "The greatest fibbish number is 909 or perhaps 724.",
+      "source_span": {
+        "char_span": [
+          0,
+          34
+        ],
+        "text": "The greatest fibbish number is 909"
+      },
+      "point_status": null,
+      "bound_witness_value": 1011235,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": [
+          {
+            "source_span": [
+              0,
+              34
+            ],
+            "source": "The greatest fibbish number is 909",
+            "role": "MAXIMALITY_CLAIM"
+          }
+        ]
+      }
+    },
+    {
+      "id": "H06",
+      "category": "question_control",
+      "value": 909,
+      "expected": "NONE",
+      "actual": "NONE",
+      "result": "AGREEMENT",
+      "actual_role": "QUESTION",
+      "same_gate_full_text_authority": "NONE",
+      "direct_full_text_role_with_commitment": "QUESTION",
+      "direct_clause_role_with_commitment": "QUESTION",
+      "clause": "Is 909 the greatest fibbish number?",
+      "source_span": {
+        "char_span": [
+          3,
+          34
+        ],
+        "text": "909 the greatest fibbish number"
+      },
+      "point_status": null,
+      "bound_witness_value": null,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": []
+      }
+    },
+    {
+      "id": "L01",
+      "category": "trailing_length_restriction",
+      "value": 909,
+      "expected": "NONE",
+      "actual": "REFUTE_GLOBAL_MAXIMUM",
+      "result": "FALSE_AUTHORITY",
+      "actual_role": "CURRENT_MAXIMUM",
+      "same_gate_full_text_authority": "REFUTE_GLOBAL_MAXIMUM",
+      "direct_full_text_role_with_commitment": "CURRENT_MAXIMUM",
+      "direct_clause_role_with_commitment": "CURRENT_MAXIMUM",
+      "clause": "The greatest fibbish number that has exactly three digits is 909.",
+      "source_span": {
+        "char_span": [
+          0,
+          64
+        ],
+        "text": "The greatest fibbish number that has exactly three digits is 909"
+      },
+      "point_status": null,
+      "bound_witness_value": 1011235,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": []
+      }
+    },
+    {
+      "id": "L02",
+      "category": "trailing_digit_restriction",
+      "value": 909,
+      "expected": "NONE",
+      "actual": "REFUTE_GLOBAL_MAXIMUM",
+      "result": "FALSE_AUTHORITY",
+      "actual_role": "CURRENT_MAXIMUM",
+      "same_gate_full_text_authority": "REFUTE_GLOBAL_MAXIMUM",
+      "direct_full_text_role_with_commitment": "CURRENT_MAXIMUM",
+      "direct_clause_role_with_commitment": "CURRENT_MAXIMUM",
+      "clause": "909 is the greatest fibbish number restricted to numbers of length three.",
+      "source_span": {
+        "char_span": [
+          0,
+          34
+        ],
+        "text": "909 is the greatest fibbish number"
+      },
+      "point_status": null,
+      "bound_witness_value": 1011235,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": [
+          {
+            "source_span": [
+              0,
+              19
+            ],
+            "source": "909 is the greatest",
+            "role": "MAXIMALITY_CLAIM"
+          }
+        ]
+      }
+    },
+    {
+      "id": "L03",
+      "category": "local_control",
+      "value": 909,
+      "expected": "NONE",
+      "actual": "NONE",
+      "result": "AGREEMENT",
+      "actual_role": "LOCAL_MAXIMUM",
+      "same_gate_full_text_authority": "NONE",
+      "direct_full_text_role_with_commitment": "LOCAL_MAXIMUM",
+      "direct_clause_role_with_commitment": "LOCAL_MAXIMUM",
+      "clause": "For this branch, 909 is the greatest fibbish number.",
+      "source_span": {
+        "char_span": [
+          17,
+          51
+        ],
+        "text": "909 is the greatest fibbish number"
+      },
+      "point_status": null,
+      "bound_witness_value": null,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": [
+          {
+            "source_span": [
+              17,
+              36
+            ],
+            "source": "909 is the greatest",
+            "role": "MAXIMALITY_CLAIM"
+          }
+        ]
+      }
+    },
+    {
+      "id": "F01",
+      "category": "final_feasible_only",
+      "value": 125,
+      "expected": "NONE",
+      "actual": "REFUTE_GLOBAL_MAXIMUM",
+      "result": "FALSE_AUTHORITY",
+      "actual_role": "CURRENT_FINAL_MAXIMUM",
+      "same_gate_full_text_authority": "REFUTE_GLOBAL_MAXIMUM",
+      "direct_full_text_role_with_commitment": "CURRENT_FINAL_MAXIMUM",
+      "direct_clause_role_with_commitment": "CURRENT_FINAL_MAXIMUM",
+      "clause": "\\boxed{125}",
+      "source_span": {
+        "char_span": [
+          54,
+          65
+        ],
+        "text": "\\boxed{125}"
+      },
+      "point_status": null,
+      "bound_witness_value": 1011235,
+      "legacy_emission_probe": {
+        "mode": "published_d36_f2_final_readout",
+        "selection_status": "ok",
+        "same_value_selected": true
+      }
+    },
+    {
+      "id": "F02",
+      "category": "final_quoted_answer",
+      "value": 125,
+      "expected": "NONE",
+      "actual": "REFUTE_GLOBAL_MAXIMUM",
+      "result": "FALSE_AUTHORITY",
+      "actual_role": "CURRENT_FINAL_MAXIMUM",
+      "same_gate_full_text_authority": "NONE",
+      "direct_full_text_role_with_commitment": "QUOTED",
+      "direct_clause_role_with_commitment": "CURRENT_FINAL_MAXIMUM",
+      "clause": " Final answer: \\boxed{125}.",
+      "source_span": {
+        "char_span": [
+          101,
+          112
+        ],
+        "text": "\\boxed{125}"
+      },
+      "point_status": null,
+      "bound_witness_value": 1011235,
+      "legacy_emission_probe": {
+        "mode": "published_d36_f2_final_readout",
+        "selection_status": "ambiguous",
+        "same_value_selected": false
+      }
+    },
+    {
+      "id": "F03",
+      "category": "uncommitted_metadata",
+      "value": 125,
+      "expected": "NONE",
+      "actual": "REFUTE_GLOBAL_MAXIMUM",
+      "result": "FALSE_AUTHORITY",
+      "actual_role": "CURRENT_FINAL_MAXIMUM",
+      "same_gate_full_text_authority": "REFUTE_GLOBAL_MAXIMUM",
+      "direct_full_text_role_with_commitment": "UNCOMMITTED",
+      "direct_clause_role_with_commitment": "UNCOMMITTED",
+      "clause": "The scratch draft has a tentative box \\boxed{125} but has not been submitted.",
+      "source_span": {
+        "char_span": [
+          38,
+          49
+        ],
+        "text": "\\boxed{125}"
+      },
+      "point_status": null,
+      "bound_witness_value": 1011235,
+      "legacy_emission_probe": {
+        "mode": "published_d36_f2_final_readout",
+        "selection_status": "ambiguous",
+        "same_value_selected": false
+      }
+    },
+    {
+      "id": "A01",
+      "category": "unbound_global_phrase",
+      "value": 172,
+      "expected": "NONE",
+      "actual": "NONE",
+      "result": "AGREEMENT",
+      "actual_role": "UNKNOWN",
+      "same_gate_full_text_authority": "NONE",
+      "direct_full_text_role_with_commitment": "UNKNOWN",
+      "direct_clause_role_with_commitment": "UNKNOWN",
+      "clause": "The number is 172, just a trial; the greatest fibbish number has not been determined.",
+      "source_span": {
+        "char_span": [
+          0,
+          17
+        ],
+        "text": "The number is 172"
+      },
+      "point_status": null,
+      "bound_witness_value": null,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": []
+      }
+    },
+    {
+      "id": "A02",
+      "category": "wrong_target_control",
+      "value": 909,
+      "expected": "NONE",
+      "actual": "NONE",
+      "result": "AGREEMENT",
+      "actual_role": "UNKNOWN",
+      "same_gate_full_text_authority": "NONE",
+      "direct_full_text_role_with_commitment": "CURRENT_MAXIMUM",
+      "direct_clause_role_with_commitment": "CURRENT_MAXIMUM",
+      "clause": "Therefore, 909 is the greatest fibbish number.",
+      "source_span": {
+        "char_span": [
+          11,
+          45
+        ],
+        "text": "909 is the greatest fibbish number"
+      },
+      "point_status": null,
+      "bound_witness_value": null,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": [
+          {
+            "source_span": [
+              11,
+              30
+            ],
+            "source": "909 is the greatest",
+            "role": "MAXIMALITY_CLAIM"
+          }
+        ]
+      }
+    },
+    {
+      "id": "A03",
+      "category": "source_text_mismatch_control",
+      "value": 909,
+      "expected": "NONE",
+      "actual": "NONE",
+      "result": "AGREEMENT",
+      "actual_role": "UNKNOWN",
+      "same_gate_full_text_authority": "NONE",
+      "direct_full_text_role_with_commitment": "CURRENT_MAXIMUM",
+      "direct_clause_role_with_commitment": "CURRENT_MAXIMUM",
+      "clause": "Therefore, 909 is the greatest fibbish number.",
+      "source_span": {
+        "char_span": [
+          11,
+          45
+        ],
+        "text": "synthetically forged"
+      },
+      "point_status": null,
+      "bound_witness_value": null,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": [
+          {
+            "source_span": [
+              11,
+              30
+            ],
+            "source": "909 is the greatest",
+            "role": "MAXIMALITY_CLAIM"
+          }
+        ]
+      }
+    },
+    {
+      "id": "A04",
+      "category": "candidate_value_not_in_source",
+      "value": 724,
+      "expected": "NONE",
+      "actual": "NONE",
+      "result": "AGREEMENT",
+      "actual_role": "UNKNOWN",
+      "same_gate_full_text_authority": "NONE",
+      "direct_full_text_role_with_commitment": "CURRENT_MAXIMUM",
+      "direct_clause_role_with_commitment": "CURRENT_MAXIMUM",
+      "clause": "Therefore, the greatest fibbish number is 909; the separate recorded estimate is 724.",
+      "source_span": {
+        "char_span": [
+          11,
+          45
+        ],
+        "text": "the greatest fibbish number is 909"
+      },
+      "point_status": null,
+      "bound_witness_value": null,
+      "legacy_emission_probe": {
+        "mode": "published_d36_thinking_lexical_adapter",
+        "same_value_candidates": []
+      }
+    }
+  ]
+}

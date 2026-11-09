@@ -1,0 +1,2590 @@
+{
+  "status": "FROZEN_BEFORE_LABELS",
+  "frozen_utc": "2026-11-09T20:08:54.914921+00:00",
+  "challenge_freeze_sha256": "93dd164379c7c58938a9671b6fd2efe2669fba7bf2704840ae49037e9b111c45",
+  "label_file_opened": false,
+  "scoring_reference_opened": false,
+  "source_sha256": {
+    "research/phase5d37_scoped_repair_20261110/terminal_audit.py": "b55dafdc82938d3d7114bf468e9f8eb4670415305e115e42aec637b4ceee6fae",
+    "research/phase5d37_scoped_repair_20261110/terminal_scalar_fallback.py": "b2849ae710097354259dab68e7c5da692dbeeda62244207add16b04c9863f7dd",
+    "research/phase5d25_constraint_revision_20261109/complete_answer.py": "ed5f67d54633b2d83ff0f67fee3a96ba95ac6e194db69f91f6f54c7f470b63a1",
+    "research/phase5d25_constraint_revision_20261109/complete_answer_v2.py": "4ffa8e3ab61028e0aaa29d57fae496601ab906374b954b1b1c1d72d5e89229e1"
+  },
+  "fresh_synthetic_observations": [
+    {
+      "id": "A01",
+      "category": "plain_commit",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "66e953008320df6ae3281928b0d0a4aa7c1bdbf6d19e705a8690c29f8a03ba41",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "73"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "whole_final_object",
+        "selected_span": [
+          0,
+          10
+        ]
+      },
+      "frozen_f2_exact_scalar": "73",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "A02",
+      "category": "separate_proof_alternatives",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "9f22ee1a7f18af56eb31a4edc5609e02b9425bbed68c7286bb6271962d92412d",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "uncertain_final_object"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "frozen_reason_outside_fallback_scope",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "A03",
+      "category": "role_anchored_prefix",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "8757fd47468d0c72a0c9b3738c064cde1cd3c384719e80350467d26665999021",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "FALLBACK_ACCEPT",
+        "reason": "single_consistent_explicit_scalar",
+        "normalized_scalar": "72",
+        "box_span": [
+          43,
+          53
+        ]
+      }
+    },
+    {
+      "id": "A04",
+      "category": "role_anchored_suffix",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "1a69adc1639e51d99f896912512e0a66cd8c2635af9a642789067342302e8776",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload",
+        "selected_span": [
+          16,
+          81
+        ]
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "FALLBACK_ACCEPT",
+        "reason": "single_consistent_explicit_scalar",
+        "normalized_scalar": "31",
+        "box_span": [
+          37,
+          47
+        ]
+      }
+    },
+    {
+      "id": "A05",
+      "category": "exact_fraction",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "2774681c81284d7c2c62e11fc54afb05624c51a35aae6731125b4df0906e8aa7",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "FALLBACK_ACCEPT",
+        "reason": "single_consistent_explicit_scalar",
+        "normalized_scalar": "7/12",
+        "box_span": [
+          51,
+          71
+        ]
+      }
+    },
+    {
+      "id": "A06",
+      "category": "equivalent_repeat",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "577f5c3fe27c0933e391ab2276fe61877b16a3b21279e609cd11a95d8fcc7118",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "24"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          85,
+          95
+        ]
+      },
+      "frozen_f2_exact_scalar": "24",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "A07",
+      "category": "signed_value",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "f6b69fd26ee91f7ac8dd2e17f43bbfd5e3370082ac6f1fb52aead8b3b412d961",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "FALLBACK_ACCEPT",
+        "reason": "single_consistent_explicit_scalar",
+        "normalized_scalar": "-13",
+        "box_span": [
+          56,
+          67
+        ]
+      }
+    },
+    {
+      "id": "A08",
+      "category": "grouped_thousands",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "adfe7a1526e39b39aef05d4e6f45971a1c657254ff92b2df78c88e9ab109a3fe",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "FALLBACK_ACCEPT",
+        "reason": "single_consistent_explicit_scalar",
+        "normalized_scalar": "11204",
+        "box_span": [
+          43,
+          57
+        ]
+      }
+    },
+    {
+      "id": "A09",
+      "category": "generic_explicit_answer",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "5ca467d62e478478cc6b241396b937a871f56ceb3dba46b3b3c1b373dc27e498",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "37"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          34,
+          44
+        ]
+      },
+      "frozen_f2_exact_scalar": "37",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "A10",
+      "category": "mathematical_object_alias",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "d751ff8cad3426256db9e84e97ef8f6df474e9fb7a9fe8235f22d356683d1ab9",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "FALLBACK_ACCEPT",
+        "reason": "single_consistent_explicit_scalar",
+        "normalized_scalar": "8",
+        "box_span": [
+          38,
+          47
+        ]
+      }
+    },
+    {
+      "id": "A11",
+      "category": "decimal_exact",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "6f9320c6fc3ac7a32628e35c8e20845a4c4a5b17935c12c5ee95592e05bb849a",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "FALLBACK_ACCEPT",
+        "reason": "single_consistent_explicit_scalar",
+        "normalized_scalar": "1/8",
+        "box_span": [
+          43,
+          56
+        ]
+      }
+    },
+    {
+      "id": "A12",
+      "category": "wrong_but_explicit",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "a70bd2e435b45785692b0b07d998535e42b19f7774438300e8c4355ea978e56e",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "FALLBACK_ACCEPT",
+        "reason": "single_consistent_explicit_scalar",
+        "normalized_scalar": "90",
+        "box_span": [
+          33,
+          43
+        ]
+      }
+    },
+    {
+      "id": "A13",
+      "category": "equal_assertion",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "aa8bc2bf62037fae944e5375bf228f113ff2546615daa9abfae1d0b26055a317",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "FALLBACK_ACCEPT",
+        "reason": "single_consistent_explicit_scalar",
+        "normalized_scalar": "61",
+        "box_span": [
+          44,
+          54
+        ]
+      }
+    },
+    {
+      "id": "A14",
+      "category": "exact_assignment",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "8a0377e51fb99217fefb03828187bc1e43af7c5993bc984d32c5bbfb49864cd1",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "17"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "terminal_boxed_block",
+        "selected_span": [
+          18,
+          36
+        ]
+      },
+      "frozen_f2_exact_scalar": "17",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "A15",
+      "category": "inline_heading",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "7aeacf431cbab761acd76acfd4aefd1f57d00b15f60e471a75741d180bb59783",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "32"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          14,
+          24
+        ]
+      },
+      "frozen_f2_exact_scalar": "32",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "A16",
+      "category": "negative_rational",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "7139c6880fc1513854d0189bc36e30c60367c0d4ed45dba591a4cfb098ddb8c0",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "FALLBACK_ACCEPT",
+        "reason": "single_consistent_explicit_scalar",
+        "normalized_scalar": "-1/4",
+        "box_span": [
+          43,
+          55
+        ]
+      }
+    },
+    {
+      "id": "A17",
+      "category": "postscript_commit",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "c6adb2c51fcf9738b60a19a9533e0c43cb71164181ffd692ac004a0045e1d43f",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload",
+        "selected_span": [
+          16,
+          105
+        ]
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "FALLBACK_ACCEPT",
+        "reason": "single_consistent_explicit_scalar",
+        "normalized_scalar": "51",
+        "box_span": [
+          68,
+          78
+        ]
+      }
+    },
+    {
+      "id": "A18",
+      "category": "repeated_exact_commit",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "16550246444e2483224329bd1b42921358853f978369f6f92abbfffa5e8cac48",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "65"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          68,
+          78
+        ]
+      },
+      "frozen_f2_exact_scalar": "65",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N01",
+      "category": "conflicting_headings",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "7bda4a0aa382eb56df4110af1870190d7a82ef1e5c7fd47f1861aafc557e30b4",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "different_explicit_final_deliveries"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "frozen_reason_outside_fallback_scope",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N02",
+      "category": "prior_explicit_conflict",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "2f67a0fe0878e5742cd237221a253fdba566c886aac5c912de4031c42868fad5",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload",
+        "selected_span": [
+          20,
+          69
+        ]
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "conflicting_explicit_answers",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N03",
+      "category": "multiple_boxes_same_scope",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "90ac01226314ae93478844c4b79c7f185a27faa0d6e16fd2645c5f7294f8f285",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "uncertain_final_object",
+        "selected_span": [
+          32,
+          64
+        ]
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "frozen_reason_outside_fallback_scope",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N04",
+      "category": "set_not_scalar",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "ddb715c05c304d0cceb7ccfc1fc23304abbd7729f37e251f3453bee29ad17df6",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "public_answer_kind_mismatch",
+        "observed_kind": "set"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "frozen_reason_outside_fallback_scope",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N05",
+      "category": "markdown_quote",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "cdf6c9800b73954bc58fc6a461865669d9f1d0db4f30968155e1dbe9df319219",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "missing_or_unsafe_text",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N06",
+      "category": "inline_quotation",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "40f6de50e332f72f7eaa7057d4a4c68fad280782b89bea0b1d36a49cb3d3dfff",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "no_explicit_terminal_section",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N07",
+      "category": "code_fence",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "46bd4a47264e4a05a19899ba28467df7534562c282093a2d60b6e8295d4dc3ea",
+        "selection_uses_gold": false,
+        "status": "unparsed",
+        "reason": "code_fence_not_final_math"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "frozen_reason_outside_fallback_scope",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N08",
+      "category": "subgoal_in_terminal_section",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "7d79b8bb619194406d84bfdd5c9931da7db2f9f85b7bbb22452ba5e954459e25",
+        "selection_uses_gold": false,
+        "status": "unparsed",
+        "reason": "no_terminal_answer_delivery"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "qualified_or_quoted_delivery",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N09",
+      "category": "local_extremum",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "184d7d2236bdbbc2aed39e6d6cadf5f2b5dbb2afaaa16ef181d642307340d04e",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "terminal_subject_or_scope_unbound",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N10",
+      "category": "feasible_not_optimal",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "863437080bdfae1afe954d99cafdfefdb7585e483e452055941b87b8e8e305d8",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "44"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "terminal_boxed_block",
+        "selected_span": [
+          54,
+          64
+        ]
+      },
+      "frozen_f2_exact_scalar": "44",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N11",
+      "category": "conditional",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "42b84c1fec811f2ae37fd57ba8ce6bc21ef3d8240641bf9d2f4ba7bf52bd0a52",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "55"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "terminal_boxed_block",
+        "selected_span": [
+          59,
+          69
+        ]
+      },
+      "frozen_f2_exact_scalar": "55",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N12",
+      "category": "question_uncommitted",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "54a349047ae9b5b0edba537910e17a14142495da0df090737bc5ba81a0efd20a",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "qualified_or_quoted_delivery",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N13",
+      "category": "capacity",
+      "frozen_f2": {
+        "status": "not_delivered",
+        "reason": "uncommitted_or_unsupported_scalar_scope"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "no_committed_natural_eos_delivery",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N14",
+      "category": "controller_held",
+      "frozen_f2": {
+        "status": "not_delivered",
+        "reason": "uncommitted_or_unsupported_scalar_scope"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "no_committed_natural_eos_delivery",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N15",
+      "category": "unclosed_thinking",
+      "frozen_f2": {
+        "status": "not_delivered",
+        "reason": "uncommitted_or_unsupported_scalar_scope"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "no_committed_natural_eos_delivery",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N16",
+      "category": "unknown_target",
+      "frozen_f2": {
+        "status": "not_delivered",
+        "reason": "uncommitted_or_unsupported_scalar_scope"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "unknown_or_nonscalar_objective",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N17",
+      "category": "prior_unresolved_delivery",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "80e7b7ad6fc50f2587bb45e154af288143b3a37848235c416a41a729e24ecb9d",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "uncertain_final_object",
+        "selected_span": [
+          22,
+          118
+        ]
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "frozen_reason_outside_fallback_scope",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "id": "N18",
+      "category": "inline_revision_conflict",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "1e021d5355e5c1580ba80317869d25eeae40348a5325504e7b3df35e5a612032",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload",
+        "selected_span": [
+          34,
+          79
+        ]
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "qualified_or_quoted_delivery",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    }
+  ],
+  "historical_d36_e15_observations": [
+    {
+      "checkpoint": "early",
+      "replicate": "historical",
+      "arm": "NativeContinue",
+      "source_path": "gpu_results/early/historical/NativeContinue.json",
+      "source_sha256": "2974b654af080edcecbfe685939d73c12ec579218952b557dcc38ffb0c43ddad",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "5327fde7484f5c6ee3c99064d93cb8ff14f9f3ea6d14b56df7b32ad338d99774",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2325,
+          2345
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "historical",
+      "arm": "NeutralReminder",
+      "source_path": "gpu_results/early/historical/NeutralReminder.json",
+      "source_sha256": "bd249807960e72e57276639c92e93d920f103ab77e8e3e49726db4b7bab2ea2b",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "7eeaf7502b56ca0f14b415bf9361b7ca3d7a4c9672ac4700ac2053d2c143f84a",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2058,
+          2078
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "historical",
+      "arm": "ClaimOnly",
+      "source_path": "gpu_results/early/historical/ClaimOnly.json",
+      "source_sha256": "9b7e7543a545a31059199821356eae95614b10a16a096ccfd418acdc47a914f5",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "ea0ef99118a68fadfbbc6a38c21e3387e8c712a0e02fdc6c85f774fbe03cca6a",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2114,
+          2134
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "historical",
+      "arm": "NumericWitness",
+      "source_path": "gpu_results/early/historical/NumericWitness.json",
+      "source_sha256": "3ff308558bae4102e9824b089224fdee1619efa3fbe01fd95b160f150848c91b",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "d8324479f8eac25cccb4b92e626e00e4eb2b4ea85a8ba37a873ae9615fb713da",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "unresolved_earlier_final_delivery"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "missing_or_unsafe_text",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "historical",
+      "arm": "VerifiedWitness",
+      "source_path": "gpu_results/early/historical/VerifiedWitness.json",
+      "source_sha256": "08661defe207aa35ac00b2d59a73bc369ee85be2122f52976995dc607dd163fe",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "aaa83cfbfc00db944ba3ac5778d2d7797570710fb0d175ec45b94c0168a64a84",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2942,
+          2964
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "historical",
+      "arm": "ProgressiveWitness",
+      "source_path": "gpu_results/early/historical/ProgressiveWitness.json",
+      "source_sha256": "f68d74c01614f3d199f947c06fc9d35936c8471d8fe1b51674c7e29ba0a68565",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "3be9aa63e5fb5f781edcb58639a0d2616ab2584ded5705de8a4977cab2a40b1e",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "1012369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2455,
+          2476
+        ]
+      },
+      "frozen_f2_exact_scalar": "1012369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "historical",
+      "arm": "EveryStepAudit",
+      "source_path": "gpu_results/early/historical/EveryStepAudit.json",
+      "source_sha256": "f3637ebc0807dc574b58b9d2bac6ed4e16383049c25cdcab3fa135b1ce517128",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "1b078e31337653b23811ecf7f88ce1ba0df11b83c966cdabfa429e7689e442a6",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "1012369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2320,
+          2341
+        ]
+      },
+      "frozen_f2_exact_scalar": "1012369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "historical",
+      "arm": "InvalidWitnessControl",
+      "source_path": "gpu_results/early/historical/InvalidWitnessControl.json",
+      "source_sha256": "5af2d558f0c9998307e4a24a3ed8f54b1c67dceb5018d23e3f9a2f832debf3fb",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "7eeaf7502b56ca0f14b415bf9361b7ca3d7a4c9672ac4700ac2053d2c143f84a",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2058,
+          2078
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261111",
+      "arm": "NativeContinue",
+      "source_path": "gpu_results/early/s20261111/NativeContinue.json",
+      "source_sha256": "0c3066de1045e9a35fcf16a72e44b836fe5d38d313cb84be7992fb3278528088",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "656b54480788841d5c392b25338681052f72302df64589485eeb9eccd4f84a4f",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2107,
+          2127
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261111",
+      "arm": "NeutralReminder",
+      "source_path": "gpu_results/early/s20261111/NeutralReminder.json",
+      "source_sha256": "387beabe3e6f5b20c9a2bc93f00a6214bf325a56068fd19c495b2be8b8681efb",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "d68a80949dabae18f97a903802ae2920d007b496f87942c2648436318cde80f2",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2332,
+          2354
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261111",
+      "arm": "ClaimOnly",
+      "source_path": "gpu_results/early/s20261111/ClaimOnly.json",
+      "source_sha256": "409e1cc762d21cfc9d1d7c90a644f2056f950c71262629e6991da5f691c5cb8a",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "974446928f48d92a70bcdacb54467f98503ab3cc3520307cff8d38df231e093a",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2474,
+          2494
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261111",
+      "arm": "NumericWitness",
+      "source_path": "gpu_results/early/s20261111/NumericWitness.json",
+      "source_sha256": "3859c19a50dd1f1b476c16ab9a94904f7cccbace97d3fc1addad6ea067c72474",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "5fc6dbe8d67751ec0eba6b1abb9a0930405ecbfb7e0465c3dbaa51cee84bee59",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "1012369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          3066,
+          3087
+        ]
+      },
+      "frozen_f2_exact_scalar": "1012369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261111",
+      "arm": "VerifiedWitness",
+      "source_path": "gpu_results/early/s20261111/VerifiedWitness.json",
+      "source_sha256": "aeda03063497952eb6161b036d78c7eae5fbd57a50323f049cfd437e0b92a730",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "c08b46da0ec3f020c07d6e826b3b19862d35880d42bda3ea6b3b8229495df541",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2309,
+          2329
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261111",
+      "arm": "ProgressiveWitness",
+      "source_path": "gpu_results/early/s20261111/ProgressiveWitness.json",
+      "source_sha256": "d1e71e6d1b4d04672ca110fb86bd9a2e229522c18fb5fec074bda91cf8a71d9d",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "WITHHELD_CERTIFIED_VETO",
+      "frozen_f2": {
+        "status": "not_delivered",
+        "reason": "uncommitted_or_unsupported_scalar_scope"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "no_committed_natural_eos_delivery",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261111",
+      "arm": "EveryStepAudit",
+      "source_path": "gpu_results/early/s20261111/EveryStepAudit.json",
+      "source_sha256": "5ab6dcb601b0a2654dcf8617329dd401d1edbd450baef7b355c0e1c005d7b8da",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "02045811a1d19223d40e5a336709c52606b64969f5a6db534c47755bb0282267",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2222,
+          2244
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261111",
+      "arm": "InvalidWitnessControl",
+      "source_path": "gpu_results/early/s20261111/InvalidWitnessControl.json",
+      "source_sha256": "3826b6e877a5b38abc719490f2b2e8739c429a378a917da0f9fce17a6d612a2e",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "d68a80949dabae18f97a903802ae2920d007b496f87942c2648436318cde80f2",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2332,
+          2354
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261112",
+      "arm": "NativeContinue",
+      "source_path": "gpu_results/early/s20261112/NativeContinue.json",
+      "source_sha256": "378414251888693508c5e2f7b34ae4e61f15174162fddf4590e7decc098e5ce4",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "64723c1d26b322aa581e0dc168097e4c4a334500f44ae47e45aaad853b780d05",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2089,
+          2109
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261112",
+      "arm": "NeutralReminder",
+      "source_path": "gpu_results/early/s20261112/NeutralReminder.json",
+      "source_sha256": "705bba91631041a5940ac77f32604218678d9004a59a348043939d2b3df41207",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "b2bd93fa4a436e9f88ed2f44e726e43961194939f27924e16100b795aa069128",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2647,
+          2669
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261112",
+      "arm": "ClaimOnly",
+      "source_path": "gpu_results/early/s20261112/ClaimOnly.json",
+      "source_sha256": "4003363e7acb9f386893a74542e4273eaa74fc0ffe89327013f57a45a66003bb",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "c9e65408828f1929c7de6912db838a9fbbde6ffbd23f5f5335e4c2fa098e1780",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2249,
+          2269
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261112",
+      "arm": "NumericWitness",
+      "source_path": "gpu_results/early/s20261112/NumericWitness.json",
+      "source_sha256": "93057cc496403f3782af257e26760a7007e02900c0e85a72a5f40425f35acf9a",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "c04603be9dde4d35279f67d3febef45b3688662e0a28e548e7f21e4f87db57e1",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1941,
+          1963
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261112",
+      "arm": "VerifiedWitness",
+      "source_path": "gpu_results/early/s20261112/VerifiedWitness.json",
+      "source_sha256": "da651ecf1eb38d60af4cee0ca209acf301a24f043c8494c2919804de75b5ceb0",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "cc4de1148372aa461e0cf983ef6783d0602995bc7f474e782eb35200bd17af10",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2401,
+          2423
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261112",
+      "arm": "ProgressiveWitness",
+      "source_path": "gpu_results/early/s20261112/ProgressiveWitness.json",
+      "source_sha256": "7ae5afc551e8e7cc5356951aa460854b376bedcd81109dfb96703bddb2f2cc42",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "8fb245fb88ceecf945a21106d486429893f08d77d1e3c36ee1760d7eb611453d",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2312,
+          2334
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261112",
+      "arm": "EveryStepAudit",
+      "source_path": "gpu_results/early/s20261112/EveryStepAudit.json",
+      "source_sha256": "428f60601a15649f296f0d6fc3ee04140e7ac11b7a3ef6ffe77466a34acad28c",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "008a53389adb79dc36cd2043eac7bfe838ab3edd7659e03c3f040619e515cd4b",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "1012369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2149,
+          2170
+        ]
+      },
+      "frozen_f2_exact_scalar": "1012369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "early",
+      "replicate": "s20261112",
+      "arm": "InvalidWitnessControl",
+      "source_path": "gpu_results/early/s20261112/InvalidWitnessControl.json",
+      "source_sha256": "c910d12906d1cf2f2eab75979de21f59f98b86d086f94f3941053b23c67e4180",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "b2bd93fa4a436e9f88ed2f44e726e43961194939f27924e16100b795aa069128",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2647,
+          2669
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "historical",
+      "arm": "NativeContinue",
+      "source_path": "gpu_results/late/historical/NativeContinue.json",
+      "source_sha256": "a4438b6e77b452f9cd24cd334bc7fe347c8b5653894ed5e6415439b1bbdd19f8",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "5327fde7484f5c6ee3c99064d93cb8ff14f9f3ea6d14b56df7b32ad338d99774",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2325,
+          2345
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "historical",
+      "arm": "NeutralReminder",
+      "source_path": "gpu_results/late/historical/NeutralReminder.json",
+      "source_sha256": "599adbcc72854b582f7e1a2153fa49df3eec45b049477f209e4c19604da51a43",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "959b59169203f9b94df4cf3ad730b9e7ee32584e45559fdcb228ed082e3a2141",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2169,
+          2189
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "historical",
+      "arm": "ClaimOnly",
+      "source_path": "gpu_results/late/historical/ClaimOnly.json",
+      "source_sha256": "3aac64a6dcf72e3a0e77e976f8ab8f8c52af4b7a3104e4199b6368f810a384a7",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "ec972ff7d5958aefb1ccecf5b0c45e405d04ed72daaa5ec05b7d7a3c7def9b7b",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1822,
+          1842
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "historical",
+      "arm": "NumericWitness",
+      "source_path": "gpu_results/late/historical/NumericWitness.json",
+      "source_sha256": "120744219adff5d060b7500213e1bcfe1100621355c5fea2908f0ad6dac9103d",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "0b171e6b0380c944dee3afdd22648d2900b24f94fd719827e48cc8627a8f485d",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2048,
+          2068
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "historical",
+      "arm": "VerifiedWitness",
+      "source_path": "gpu_results/late/historical/VerifiedWitness.json",
+      "source_sha256": "89d784f60f15483acb4dbb7393e31387e4784747b46834b1df4b73744ace93ac",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "f95c92edfffeb6bcbfde0fcd95f48db62fb8bfe3e9482018f8d59214f6322765",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2833,
+          2855
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "historical",
+      "arm": "ProgressiveWitness",
+      "source_path": "gpu_results/late/historical/ProgressiveWitness.json",
+      "source_sha256": "abab66a60e9be070ccb905d4e2b86ff28965d54a2cfd4fab101216069dfce8d5",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "06e9df03474eac4f83b7b33d8a9712eab9f657240ff77aa88faf1747ed52d02c",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "alternative_final_objects"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "FALLBACK_ACCEPT",
+        "reason": "single_consistent_explicit_scalar",
+        "normalized_scalar": "10112369",
+        "box_span": [
+          2405,
+          2421
+        ]
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "historical",
+      "arm": "EveryStepAudit",
+      "source_path": "gpu_results/late/historical/EveryStepAudit.json",
+      "source_sha256": "0d1b3731e9cc72a06137c143f82e94b3694acba97932d2c3547f740e974bbc30",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "6404a6008d249680c8b2e1c7fb63e9eb4d932d52e56e43206dbdd19a3806b420",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2229,
+          2251
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "historical",
+      "arm": "InvalidWitnessControl",
+      "source_path": "gpu_results/late/historical/InvalidWitnessControl.json",
+      "source_sha256": "09b68422ae39c47bd902cc0f94c4903e24b48bf25c2726e6b51ee8e61b0a063f",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "959b59169203f9b94df4cf3ad730b9e7ee32584e45559fdcb228ed082e3a2141",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2169,
+          2189
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261111",
+      "arm": "NativeContinue",
+      "source_path": "gpu_results/late/s20261111/NativeContinue.json",
+      "source_sha256": "bc9906caa1111d05f5bad14e81fb1f4a7840426df36abfa59cad4e98275fb87a",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "b05a441ec0cf7ae8435939920f3e4d2d58cd480df4792f9a086fc8d72a587d54",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1671,
+          1691
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261111",
+      "arm": "NeutralReminder",
+      "source_path": "gpu_results/late/s20261111/NeutralReminder.json",
+      "source_sha256": "3b76e071d93b55514eaea85b57472c02af9f52bd5d4d71c24f807d3dfbc1930e",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "ec549d2836b3eec997f39d25e4a13a536bb0a5fa321f90a544043eeeeb19a98b",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1681,
+          1701
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261111",
+      "arm": "ClaimOnly",
+      "source_path": "gpu_results/late/s20261111/ClaimOnly.json",
+      "source_sha256": "41ea35f1edcccffb4a1a5521ecb14a534447181ca63509bb5bea191f244aac0a",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "e0ae7f55bc1835ddf3f1d084e8154c1677345b2bc3d06f8bc7663a4582693e1a",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2068,
+          2088
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261111",
+      "arm": "NumericWitness",
+      "source_path": "gpu_results/late/s20261111/NumericWitness.json",
+      "source_sha256": "d2efff469fc69b0828ff8aafa1024395863bf7af81f825d2df49fcf7666562c8",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "9a519c596e20b5b1e4e07981fb392fb7876711c020d882d95b23e5c1891258ba",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1709,
+          1729
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261111",
+      "arm": "VerifiedWitness",
+      "source_path": "gpu_results/late/s20261111/VerifiedWitness.json",
+      "source_sha256": "e96bda7274f34f44deac759e1d47c1789db9afe967dbc3c0b4f158f69b8bcb70",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "a7237cb9af1f049000b7e72c3fa368e4eb66dcffad14119682d3b18f392fa9fe",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1875,
+          1897
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261111",
+      "arm": "ProgressiveWitness",
+      "source_path": "gpu_results/late/s20261111/ProgressiveWitness.json",
+      "source_sha256": "7f75df8f5be0d7a2a7063bf3676f3ce4008613ecdbe597b6e272e23ab0c6d4b1",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "36e9bf1afb4eceb6ccd7e284db6d8e483d8023cafe1ac38784efa5ceeafff323",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "terminal_boxed_block",
+        "selected_span": [
+          2333,
+          2357
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261111",
+      "arm": "EveryStepAudit",
+      "source_path": "gpu_results/late/s20261111/EveryStepAudit.json",
+      "source_sha256": "d5230b3938d29a16fee7e1d05ace96f3cb98ae9d3a880864eaf90cdafb31d4a9",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "7e1d783333e825c8a7acb4a753b0ed7595f71c4ea40adb5be3bc56c9d5da1ee7",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2454,
+          2476
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261111",
+      "arm": "InvalidWitnessControl",
+      "source_path": "gpu_results/late/s20261111/InvalidWitnessControl.json",
+      "source_sha256": "19c2d168d187f05e0ac5dab824891f0ca1358aa4dd4fe4e0bcc3a362ac23e3a2",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "ec549d2836b3eec997f39d25e4a13a536bb0a5fa321f90a544043eeeeb19a98b",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1681,
+          1701
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261112",
+      "arm": "NativeContinue",
+      "source_path": "gpu_results/late/s20261112/NativeContinue.json",
+      "source_sha256": "a37dfd593db537cfb9719857feb04557d8cd30322959ba4b41047c7906b38121",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "eeb5ef5a251bf5191ace04d271b51f1ef657bce1a185476fbe547b96c06abcb0",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2143,
+          2163
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261112",
+      "arm": "NeutralReminder",
+      "source_path": "gpu_results/late/s20261112/NeutralReminder.json",
+      "source_sha256": "2f70a4a80f959b4544f55f1f5fe52de485a5672c9dcf8a51663bf7e71e25a01e",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "5fb3abb5e8834b098db8f9edad6a0a731e54bbdd9fbf00a5dcb20f5eb957bf9e",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2076,
+          2096
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261112",
+      "arm": "ClaimOnly",
+      "source_path": "gpu_results/late/s20261112/ClaimOnly.json",
+      "source_sha256": "0bee4f224277a9b433f2a4cc15e8c906472f783a0541d49df322cc547d4c8725",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "9be6189d97353b07857308816a47b6023b50f7285bfddfce2e340ef8b1c68056",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1857,
+          1877
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261112",
+      "arm": "NumericWitness",
+      "source_path": "gpu_results/late/s20261112/NumericWitness.json",
+      "source_sha256": "16bdc321963996e9bba4ede6c5ce69596b9c5a9f6bbf20def40aa3f54feb6d9b",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "cce1e4838b2113104399ca575209d9170651cf9055124699946af9c4e10f2244",
+        "selection_uses_gold": false,
+        "status": "ambiguous",
+        "reason": "boxed_objects_do_not_consume_final_payload",
+        "selected_span": [
+          2008,
+          2207
+        ]
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "FALLBACK_ACCEPT",
+        "reason": "single_consistent_explicit_scalar",
+        "normalized_scalar": "10112369",
+        "box_span": [
+          2133,
+          2149
+        ]
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261112",
+      "arm": "VerifiedWitness",
+      "source_path": "gpu_results/late/s20261112/VerifiedWitness.json",
+      "source_sha256": "116ee52b72731bab566b15bcc8b6eb1283f91ca141776c981f06128cf1664539",
+      "EOS": false,
+      "capacity": true,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "status": "not_delivered",
+        "reason": "uncommitted_or_unsupported_scalar_scope"
+      },
+      "frozen_f2_exact_scalar": null,
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "ABSTAIN",
+        "reason": "no_committed_natural_eos_delivery",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261112",
+      "arm": "ProgressiveWitness",
+      "source_path": "gpu_results/late/s20261112/ProgressiveWitness.json",
+      "source_sha256": "0c743f03dd98cc43483f3a21bc8d6dc58a3d5a73bafc534db189ef49f1ac6c4f",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "869ecc08ff99aa18c39370926b12ccd8b9aa325ff05b407437224287c2438065",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2738,
+          2760
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261112",
+      "arm": "EveryStepAudit",
+      "source_path": "gpu_results/late/s20261112/EveryStepAudit.json",
+      "source_sha256": "d5baecbeeab72483dc4b95610479afb2849aafa83c3a3b5dd972638b2ac21bb5",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "501ff34a45bf3cc83c4343bf0d837e03b513f56c4338c1d9266effd302acc694",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "10112369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          1953,
+          1975
+        ]
+      },
+      "frozen_f2_exact_scalar": "10112369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    },
+    {
+      "checkpoint": "late",
+      "replicate": "s20261112",
+      "arm": "InvalidWitnessControl",
+      "source_path": "gpu_results/late/s20261112/InvalidWitnessControl.json",
+      "source_sha256": "d0e3c07d3bbae3b5be9d3439313a6283a4bd38526e1c1f23fe77541e6d85769c",
+      "EOS": true,
+      "capacity": false,
+      "delivery": "NATIVE_MODEL_DRAFT",
+      "frozen_f2": {
+        "version": "phase5d25_complete_answer_v1",
+        "requested_kind": "scalar",
+        "final_response_sha256": "5fb3abb5e8834b098db8f9edad6a0a731e54bbdd9fbf00a5dcb20f5eb957bf9e",
+        "selection_uses_gold": false,
+        "status": "ok",
+        "kind": "scalar",
+        "components": [
+          "303369"
+        ],
+        "unit": null,
+        "closure": null,
+        "vector_shape": null,
+        "method": "explicit_terminal_answer",
+        "selected_span": [
+          2076,
+          2096
+        ]
+      },
+      "frozen_f2_exact_scalar": "303369",
+      "fallback": {
+        "version": "d37_terminal_scalar_fallback_v1",
+        "status": "KEEP_FROZEN_F2",
+        "reason": "frozen_success_precedes_fallback",
+        "normalized_scalar": null,
+        "box_span": null
+      }
+    }
+  ]
+}

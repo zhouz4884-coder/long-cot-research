@@ -1,0 +1,166 @@
+{
+  "source_commit": "6e36e197fd4f68da9ebba769f6fe2140fad22f70",
+  "scope": "Purposively selected real development regressions with matching positive controls, not a held-out coverage set. Labels establish claim scope only, not mathematical truth.",
+  "fixtures": [
+    {
+      "id": "outside_problem",
+      "input": "research/phase5d36_progressive_witness_20261109/gpu_results/early/s20261111/ProgressiveWitness.json",
+      "input_sha256": "d1e71e6d1b4d04672ca110fb86bd9a2e229522c18fb5fec074bda91cf8a71d9d",
+      "observed_attempt": "delivered_or_held",
+      "observed_prefix_sha256": "041f237ea8b2ed97d82143e741e18de8d95416fc543122fb240b4ba90f3770e4",
+      "observed_generated_count": 24164,
+      "phase": "thinking",
+      "value": 123456789,
+      "source_span": {
+        "char_span": [
+          65931,
+          65962
+        ],
+        "token_span": [
+          24128,
+          24142
+        ],
+        "token_sha256": "f1f46abe11695a19cd8c570aa1a528802b3e4a78a84297c922fa5ce70bb6c25b",
+        "text": "the maximum number is 123456789"
+      },
+      "context_char_span": [
+        65611,
+        66052
+      ],
+      "context": "erefore, the maximum is 303369.\n\nBut let me check another possibility. What if the number is 123456... no. How about 123456... no. How about 102345... no.\n\nAlternatively, let me think of the number 102345. As before, invalid.\n\nTherefore, I think 303369 is the answer.\n\nHowever, I remember that in some similar problems, the maximum number is 123456789 or something, but here the constraints are stricter. Therefore, 303369 seems plausible.\n\n",
+      "v2_type": "MAXIMALITY_CLAIM",
+      "v2_action": "REPAIR_INFEASIBLE",
+      "v2_obligation": true,
+      "expected_scope": "OUTSIDE_TASK",
+      "eligible_for_current_global_goal_check": false
+    },
+    {
+      "id": "maximum_six_digit",
+      "input": "research/phase5d36_progressive_witness_20261109/gpu_results/early/s20261111/EveryStepAudit.json",
+      "input_sha256": "5ab6dcb601b0a2654dcf8617329dd401d1edbd450baef7b355c0e1c005d7b8da",
+      "observed_attempt": "delivered_or_held",
+      "observed_prefix_sha256": "520b2871be0a3bf49451f2d05037f0030ba4828c7e9e9c88138d2d5d49794454",
+      "observed_generated_count": 20987,
+      "phase": "thinking",
+      "value": 303369,
+      "source_span": {
+        "char_span": [
+          57349,
+          57370
+        ],
+        "token_span": [
+          20974,
+          20983
+        ],
+        "token_sha256": "ff631ca93b68ee599bd895f36cad3f87d897247ae14dfb8d7b0ff5fcb76d890d",
+        "text": "303369 is the maximum"
+      },
+      "context_char_span": [
+        57029,
+        57390
+      ],
+      "context": "git 9. 303369.\n\nAlternatively, first two digits 3 and 0, third digit 3, fourth digit 3, fifth digit 6, sixth digit 9. Same.\n\nIs there a way to get a higher sixth digit? No, because sixth digit is 9.\n\nAlternatively, first two digits 3 and 0, third digit 3, fourth digit 3, fifth digit 6, sixth digit 9. Same.\n\nTherefore, 303369 is the maximum six-digit number.\n\n",
+      "v2_type": "MAXIMALITY_CLAIM",
+      "v2_action": "BLOCK_REGRESSION",
+      "v2_obligation": true,
+      "expected_scope": "LOCAL_MAXIMUM",
+      "eligible_for_current_global_goal_check": false
+    },
+    {
+      "id": "same_number_global_first_draft",
+      "input": "research/phase5d36_progressive_witness_20261109/gpu_results/early/s20261111/ProgressiveWitness.json",
+      "input_sha256": "d1e71e6d1b4d04672ca110fb86bd9a2e229522c18fb5fec074bda91cf8a71d9d",
+      "observed_attempt": "rejected_draft_0",
+      "observed_prefix_sha256": "64a640c356b57c1c19daf2ba0f54b16dc8dddcdc65ca001c0c0acdcdf73663fd",
+      "observed_generated_count": 24941,
+      "phase": "final",
+      "value": 303369,
+      "source_span": {
+        "char_span": [
+          68442,
+          68462
+        ],
+        "token_span": [
+          24927,
+          24940
+        ],
+        "token_sha256": "493c318808e0551e69a83b92d29bd377e27816fdaa4162e638f6c8dfe472e99c",
+        "text": "$$\n\\boxed{303369}\n$$"
+      },
+      "context_char_span": [
+        68122,
+        68472
+      ],
+      "context": " result in **invalid numbers**, as the constraints are not met. For example:\n\n- $ 3033699 $: $ d_6 = 9 $, but $ d_7 = 9 $ fails the condition $ d_7 \\geq d_5 + d_6 = 6 + 9 = 15 $, which is not possible with a single digit.\n\nThus, **303369 is the maximum valid number** under the given conditions.\n\n---\n\n### Final Answer\n\n$$\n\\boxed{303369}\n$$<|im_end|>",
+      "v2_type": "MAXIMALITY_CLAIM",
+      "v2_action": "BLOCK_REGRESSION",
+      "v2_obligation": true,
+      "expected_scope": "CURRENT_FINAL_MAXIMUM",
+      "eligible_for_current_global_goal_check": true
+    },
+    {
+      "id": "current_feasibility",
+      "input": "research/phase5d36_progressive_witness_20261109/gpu_results/late/historical/ProgressiveWitness.json",
+      "input_sha256": "abab66a60e9be070ccb905d4e2b86ff28965d54a2cfd4fab101216069dfce8d5",
+      "observed_attempt": "delivered_or_held",
+      "observed_prefix_sha256": "c212b1c9c0b5e1650eab94e54691d96d6c975db39167985e5cff0b657a2c4301",
+      "observed_generated_count": 25232,
+      "phase": "thinking",
+      "value": 10112358,
+      "source_span": {
+        "char_span": [
+          68256,
+          68273
+        ],
+        "token_span": [
+          25206,
+          25216
+        ],
+        "token_sha256": "14041433c992866ba6190a0ff8726107eb42bf8f6ab58f704b9fbb751d414404",
+        "text": "10112358 is valid"
+      },
+      "context_char_span": [
+        67936,
+        68347
+      ],
+      "context": "58. Check if this is valid.\n\nDigits: 1, 0, 1, 1, 2, 3, 5, 8.\n\nCheck each digit after the first two:\n\nThird digit: 1 ≥ 1 + 0 = 1. Yes.\n\nFourth digit: 1 ≥ 0 + 1 = 1. Yes.\n\nFifth digit: 2 ≥ 1 + 1 = 2. Yes.\n\nSixth digit: 3 ≥ 1 + 2 = 3. Yes.\n\nSeventh digit: 5 ≥ 2 + 3 = 5. Yes.\n\nEighth digit: 8 ≥ 3 + 5 = 8. Yes.\n\nTherefore, 10112358 is valid. This is an eight-digit number, which is larger than the previous ones.\n\n",
+      "v2_type": "FEASIBLE_CANDIDATE",
+      "v2_action": "UPDATE_BOUND",
+      "v2_obligation": true,
+      "expected_scope": "CURRENT_FEASIBLE_CANDIDATE",
+      "eligible_for_current_global_goal_check": true
+    },
+    {
+      "id": "current_final_answer",
+      "input": "research/phase5d36_progressive_witness_20261109/gpu_results/late/s20261111/ProgressiveWitness.json",
+      "input_sha256": "7f75df8f5be0d7a2a7063bf3676f3ce4008613ecdbe597b6e272e23ab0c6d4b1",
+      "observed_attempt": "delivered_or_held",
+      "observed_prefix_sha256": "88a88f2e9cf0c23ee90647b854ffe918681aea1acf831c409dce0d99fd29bdb9",
+      "observed_generated_count": 36122,
+      "phase": "final",
+      "value": 10112369,
+      "source_span": {
+        "char_span": [
+          101455,
+          101479
+        ],
+        "token_span": [
+          36105,
+          36121
+        ],
+        "token_sha256": "c82ae38afbadd36a41d1047db89b11529cda0e1f5a55129340e72686d705c594",
+        "text": "\n\n$$\n\\boxed{10112369}\n$$"
+      },
+      "context_char_span": [
+        101135,
+        101489
+      ],
+      "context": "ies the fibbish condition.\n\n---\n\n### Step 4: Final Verification\n\n- The number is **10112369**\n- It has **8 digits**\n- Each digit after the first two satisfies the required condition\n- No larger number (with more digits or higher digits) can be constructed while satisfying the fibbish condition\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{10112369}\n$$<|im_end|>",
+      "v2_type": "MAXIMALITY_CLAIM",
+      "v2_action": "KEEP_BOUND",
+      "v2_obligation": false,
+      "expected_scope": "CURRENT_FINAL_MAXIMUM",
+      "eligible_for_current_global_goal_check": true
+    }
+  ]
+}

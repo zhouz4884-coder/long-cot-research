@@ -1,0 +1,37 @@
+{
+  "protocol": "d37-pair-packing-cpu-calibration-v1",
+  "d36_baseline": "6e36e197fd4f68da9ebba769f6fe2140fad22f70",
+  "upstream": {
+    "repository": "https://github.com/eth-sri/mathconstruct",
+    "commit": "3e51d847547a6586237ae55b83131b0e31b8476d",
+    "paper": "https://proceedings.mlr.press/v267/balunovic25a.html",
+    "sources": [
+      {"path": "src/math_construct/problems/imo_shortlist/problem_2012_c2.py", "sha256": "157333e43e5ac0eb68af140709b233183facc386e8118d27e1963728fcc2082b"},
+      {"path": "src/math_construct/problems/templates.py", "sha256": "46ff716aecd45ade4c2a5ed754e2b94eebf69596f5a8d099f6e7f71313ff4437"}
+    ]
+  },
+  "official_author_recipe_range": [23, 100],
+  "official_solver_comparison_n": [23, 36, 47, 59, 70, 100],
+  "restricted_cpu_calibration": [
+    {"n": 23, "forbidden_count": 18, "salt": "d37-pair-20261110-a"},
+    {"n": 36, "forbidden_count": 48, "salt": "d37-pair-20261110-b"},
+    {"n": 47, "forbidden_count": 72, "salt": "d37-pair-20261110-c"},
+    {"n": 59, "forbidden_count": 100, "salt": "d37-pair-20261110-d"},
+    {"n": 70, "forbidden_count": 140, "salt": "d37-pair-20261110-e"},
+    {"n": 100, "forbidden_count": 180, "salt": "d37-pair-20261110-f"}
+  ],
+  "restricted_instance_rule": "Among all legal undirected pairs a<b with a+b<=n, forbid the specified count having smallest SHA-256 of ASCII salt:a:b. Keep the same requested size as the original. All six instances retained, including infeasible or unknown outcomes.",
+  "target_rule": "m=floor((2*n-1)/5) in both settings. This is an upper bound inherited by all forbidden-pair restrictions. A verified packing of size m proves the full target.",
+  "local_repair_source": {
+    "selection_salt": "d37-pair-local-20261110",
+    "preserved_size_rule": "Keep up to m-max(2,floor(m/3)) legal pairs from the public recipe, ordered by SHA-256 of ASCII selection_salt:case_id:a:b. Exclude all blocked edges before selecting the fixed support.",
+    "invalid_draft_rule": "Append the lexicographically first blocked public recipe edge if any. Otherwise duplicate the first fixed legal pair. Both the draft and its exact preserved support are shared inputs for local repair. Never tune these controls using solver outcomes."
+  },
+  "methods": ["PublishedRecipe", "TwoPairSwitch", "HiGHSFeasibility", "LocalExactFixed"],
+  "repeat_count": 3,
+  "structural_switch_trial_limit": 4000,
+  "highs_time_limit_seconds": 6,
+  "highs_threads": 1,
+  "timing_scope": "Warm same-process wall time from task object to independently checked candidate, including model encoding and solver work for HiGHS. Package import, source download and separate control work reported outside first-feasible time.",
+  "interpretation": "Calibration only. No model output, GPU run, independent test or proof of lower-bound solver complexity. Test whether a strong deterministic baseline leaves meaningful room at the same target before considering a future family-holdout model study."
+}

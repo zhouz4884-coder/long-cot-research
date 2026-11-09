@@ -1,0 +1,93 @@
+{
+  "status": "REAL_MODEL_REPLAY_AND_MATCHED_BRIDGES_PASS",
+  "scope": "Trusted synthetic boundary and 12-token probes. No benchmark inference or accuracy claim.",
+  "v1_exact_replay": {
+    "status": "PASS",
+    "trusted_scope": "TRUSTED_SMALL_FORCED_BOUNDARY_NOT_HISTORICAL_PREFIX",
+    "source_runner_sha256": "f74c01facd16da97e43189027643b5a687ba141f4914e2b3bf3ef6891ba234ba",
+    "runtime_freeze_sha256": "847eb8cf7bbfc3fcde39bd594978270847bcd8b72aa363e4547b702b958ff520",
+    "retrieval_receipt_sha256": "8f89a1803a3861d97fcf23497231c03c183688234324642018b97da8de0d3568",
+    "raw_summary_sha256": "d02cf4adc166bf168c588cacf85a6a9cb21728a65c79b59035aafa6352188341",
+    "model_manifest_sha256": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+    "capacity": 40960,
+    "backend": "sdpa",
+    "dtype": "FP16",
+    "same_native_restore_and_independent_replay": true,
+    "parity_probe_tokens": 12,
+    "model_load_wall_seconds": 19.431635953485966,
+    "probe_wall_seconds": 3.309448203071952,
+    "paid_work": {
+      "forward_calls": 54,
+      "forward_input_tokens": 112,
+      "attention_pairs": 3084
+    },
+    "peak_allocated_bytes": 8129802752,
+    "peak_reserved_bytes": null,
+    "matched_bridge_probe": null
+  },
+  "v2_exact_replay_and_bridge": {
+    "status": "PASS",
+    "trusted_scope": "TRUSTED_SMALL_FORCED_BOUNDARY_NOT_HISTORICAL_PREFIX",
+    "source_runner_sha256": "fed7eb89fe667d562b71b6b8e570f72be12e0a8cd047e972a8d507bf3ca6bc1d",
+    "runtime_freeze_sha256": "3c91125df8218f64a56918046eb20b29c3a4a3be27218adb948c504f9e28b899",
+    "retrieval_receipt_sha256": "210747775f7e662aeb72a2fe7c9ab6d1545c541f50fd2bf42ee2dbd4c64ff12f",
+    "raw_summary_sha256": "f28c0b6f8b8f44b96757b213eaa005bdeac046d94445b3e81e54750361a375f2",
+    "model_manifest_sha256": "37ff9857bb53edf35d5c80bfa0c078b1cdb8d5e5aa864115d153e237cb854511",
+    "capacity": 40960,
+    "backend": "sdpa",
+    "dtype": "FP16",
+    "same_native_restore_and_independent_replay": true,
+    "parity_probe_tokens": 12,
+    "model_load_wall_seconds": 19.474953154101968,
+    "probe_wall_seconds": 6.741015510633588,
+    "paid_work": {
+      "forward_calls": 120,
+      "forward_input_tokens": 178,
+      "attention_pairs": 6714
+    },
+    "peak_allocated_bytes": 8132899328,
+    "peak_reserved_bytes": 8145338368,
+    "matched_bridge_probe": [
+      {
+        "arm": "GenericReminder",
+        "status": "PASS",
+        "start_logits_exact": true,
+        "start_rng_exact": true,
+        "forced_tokens": 21,
+        "padding_tokens": 0,
+        "forced_work": {
+          "forward_calls": 21,
+          "forward_input_tokens": 21,
+          "attention_pairs": 1029
+        },
+        "sampled_probe_tokens": 12,
+        "probe_work": {
+          "forward_calls": 12,
+          "forward_input_tokens": 12,
+          "attention_pairs": 786
+        },
+        "wall_seconds": 1.719156090170145
+      },
+      {
+        "arm": "TypedObligation",
+        "status": "PASS",
+        "start_logits_exact": true,
+        "start_rng_exact": true,
+        "forced_tokens": 21,
+        "padding_tokens": 0,
+        "forced_work": {
+          "forward_calls": 21,
+          "forward_input_tokens": 21,
+          "attention_pairs": 1029
+        },
+        "sampled_probe_tokens": 12,
+        "probe_work": {
+          "forward_calls": 12,
+          "forward_input_tokens": 12,
+          "attention_pairs": 786
+        },
+        "wall_seconds": 1.721624467521906
+      }
+    ]
+  }
+}

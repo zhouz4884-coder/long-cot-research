@@ -1,0 +1,504 @@
+{
+  "status": "FROZEN_AUTHORED_SCOPE_CONTROLS_BEFORE_EXECUTION",
+  "source_scope_freeze_sha256": "81ef933e9c4e00ad33c984644954f0750f040865ecf7ac74fcd188dab14c927c",
+  "scope": "Trusted authored controls, independent of archived attempts. Positive and negative labels are preregistered expectations.",
+  "cases": [
+    {
+      "id": "fq_visible",
+      "original_import_scope": "p14",
+      "header": "theorem target (n : ℕ) : n + 0 = n",
+      "body": "  exact _root_.Nat.add_zero n",
+      "trusted_prefix": "",
+      "expected_kernel_class": "PROVED",
+      "authorized_preflight": "VISIBLE_OR_FULL_CHECK",
+      "scope_reason": "Root-qualified, exact global reference; normalized declaration key is Nat.add_zero.",
+      "candidate_spelling_examples": [
+        "_root_.Nat.add_zero",
+        "n"
+      ],
+      "paired_control": "fq_missing_mandatory",
+      "decl": "target",
+      "filename": "fq_visible.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "fixture_sha256": "3793c1f6dc0cac6410ebab1b92834f4c10dcee5f8b900be79728adccf0a54fbc",
+      "fixture_bytes": 330,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (n : ℕ) : n + 0 = n := by\n  exact _root_.Nat.add_zero n\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "fq_shadow_safe",
+      "original_import_scope": "p14",
+      "header": "theorem target (n : ℕ) (add_zero : ℕ) : (n + 0 = n) ∧ (add_zero = add_zero)",
+      "body": "  constructor\n  · exact _root_.Nat.add_zero n\n  · rfl",
+      "trusted_prefix": "",
+      "expected_kernel_class": "PROVED",
+      "authorized_preflight": "VISIBLE_OR_FULL_CHECK",
+      "scope_reason": "Local binder add_zero exists, but root-qualified Nat theorem is explicit.",
+      "candidate_spelling_examples": [
+        "add_zero",
+        "_root_.Nat.add_zero"
+      ],
+      "paired_control": "bare_shadow_wrong",
+      "decl": "target",
+      "filename": "fq_shadow_safe.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "fixture_sha256": "475556b832ef2d68f5cada825feaf89a648a969fa855224cdc034888d9940d7c",
+      "fixture_bytes": 401,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (n : ℕ) (add_zero : ℕ) : (n + 0 = n) ∧ (add_zero = add_zero) := by\n  constructor\n  · exact _root_.Nat.add_zero n\n  · rfl\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "bare_shadow_wrong",
+      "original_import_scope": "p14",
+      "header": "theorem target (n : ℕ) (add_zero : ℕ) : (n + 0 = n) ∧ (add_zero = add_zero)",
+      "body": "  constructor\n  · exact add_zero n\n  · rfl",
+      "trusted_prefix": "",
+      "expected_kernel_class": "FUNCTION_OR_TYPE_ERROR",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "The bare spelling resolves to the local natural-number binder, not the global theorem.",
+      "candidate_spelling_examples": [
+        "add_zero",
+        "n"
+      ],
+      "paired_control": "fq_shadow_safe",
+      "decl": "target",
+      "filename": "bare_shadow_wrong.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "fixture_sha256": "1d72482aca8b2342283268e7bcf6072354f3a1dfc75619f854b72916dab7a4df",
+      "fixture_bytes": 390,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (n : ℕ) (add_zero : ℕ) : (n + 0 = n) ∧ (add_zero = add_zero) := by\n  constructor\n  · exact add_zero n\n  · rfl\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "local_hypothesis",
+      "original_import_scope": "p14",
+      "header": "theorem target (n : ℕ) (h : n + 0 = n) : n + 0 = n",
+      "body": "  exact h",
+      "trusted_prefix": "",
+      "expected_kernel_class": "PROVED",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "h is a local hypothesis and is absent from an import-only global name query.",
+      "candidate_spelling_examples": [
+        "h"
+      ],
+      "paired_control": null,
+      "decl": "target",
+      "filename": "local_hypothesis.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "fixture_sha256": "fe086698598cf56c95154e2624447ff54c7776f8f530ecd274a52e2985ec1d89",
+      "fixture_bytes": 326,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (n : ℕ) (h : n + 0 = n) : n + 0 = n := by\n  exact h\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "let_alias",
+      "original_import_scope": "p14",
+      "header": "theorem target (n : ℕ) : n + 0 = n",
+      "body": "  let localZero : n + 0 = n := _root_.Nat.add_zero n\n  exact localZero",
+      "trusted_prefix": "",
+      "expected_kernel_class": "PROVED",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "let-bound proof alias is introduced inside the candidate proof.",
+      "candidate_spelling_examples": [
+        "localZero",
+        "_root_.Nat.add_zero"
+      ],
+      "paired_control": null,
+      "decl": "target",
+      "filename": "let_alias.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "fixture_sha256": "aee2c403d893ba595c95699297bdcc2d01cfdf35976f3deccd2b1aed6a0affca",
+      "fixture_bytes": 371,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (n : ℕ) : n + 0 = n := by\n  let localZero : n + 0 = n := _root_.Nat.add_zero n\n  exact localZero\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "opened_alias",
+      "original_import_scope": "p41",
+      "header": "theorem target (n : ℕ) : n + 0 = n",
+      "body": "  exact scopedZero n",
+      "trusted_prefix": "namespace AliasScope\ntheorem scopedZero (n : ℕ) : n + 0 = n := _root_.Nat.add_zero n\nend AliasScope\nopen AliasScope (scopedZero)\n",
+      "expected_kernel_class": "PROVED",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "Trusted prefix opens a unique declared name, changing unqualified resolution.",
+      "candidate_spelling_examples": [
+        "scopedZero"
+      ],
+      "paired_control": "closed_alias",
+      "decl": "target",
+      "filename": "opened_alias.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "fixture_sha256": "a06d0ecd668be36fcb970ad3101dabf767dcdbdd6a5907b7e068eaf53f495196",
+      "fixture_bytes": 412,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\nnamespace AliasScope\ntheorem scopedZero (n : ℕ) : n + 0 = n := _root_.Nat.add_zero n\nend AliasScope\nopen AliasScope (scopedZero)\ntheorem target (n : ℕ) : n + 0 = n := by\n  exact scopedZero n\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "closed_alias",
+      "original_import_scope": "p41",
+      "header": "theorem target (n : ℕ) : n + 0 = n",
+      "body": "  exact scopedZero n",
+      "trusted_prefix": "namespace AliasScope\ntheorem scopedZero (n : ℕ) : n + 0 = n := _root_.Nat.add_zero n\nend AliasScope\n",
+      "expected_kernel_class": "UNKNOWN_IDENTIFIER",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "The qualified helper exists, but no open command brings its name into scope.",
+      "candidate_spelling_examples": [
+        "scopedZero"
+      ],
+      "paired_control": "opened_alias",
+      "decl": "target",
+      "filename": "closed_alias.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "fixture_sha256": "deae6971d207a43a14d91c805dcbec96e4e0da1e2ac378f558ef0f8857bcacd8",
+      "fixture_bytes": 383,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\nnamespace AliasScope\ntheorem scopedZero (n : ℕ) : n + 0 = n := _root_.Nat.add_zero n\nend AliasScope\ntheorem target (n : ℕ) : n + 0 = n := by\n  exact scopedZero n\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "relative_qualified_alias",
+      "original_import_scope": "p41",
+      "header": "theorem target (n : ℕ) : n + 0 = n",
+      "body": "  exact AliasScope.scopedZero n",
+      "trusted_prefix": "namespace AliasScope\ntheorem scopedZero (n : ℕ) : n + 0 = n := _root_.Nat.add_zero n\nend AliasScope\n",
+      "expected_kernel_class": "PROVED",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "Namespace-relative spelling depends on the trusted declaration prefix.",
+      "candidate_spelling_examples": [
+        "AliasScope.scopedZero"
+      ],
+      "paired_control": "closed_alias",
+      "decl": "target",
+      "filename": "relative_qualified_alias.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "fixture_sha256": "c8866a70648d1a3636b35ceb7a3186e46c34b265c17005f05bb135ec41a2c4ed",
+      "fixture_bytes": 394,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\nnamespace AliasScope\ntheorem scopedZero (n : ℕ) : n + 0 = n := _root_.Nat.add_zero n\nend AliasScope\ntheorem target (n : ℕ) : n + 0 = n := by\n  exact AliasScope.scopedZero n\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "local_notation_alias",
+      "original_import_scope": "p41",
+      "header": "theorem target (n : ℕ) : n + 0 = n",
+      "body": "  exact d41zero n",
+      "trusted_prefix": "local notation \"d41zero\" => _root_.Nat.add_zero\n",
+      "expected_kernel_class": "PROVED",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "Trusted file-local notation expands to Nat.add_zero; spelling is not a declaration key.",
+      "candidate_spelling_examples": [
+        "d41zero"
+      ],
+      "paired_control": null,
+      "decl": "target",
+      "filename": "local_notation_alias.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "fixture_sha256": "85753b0853daf4562a5ad2f58a4fb8f1a0273156f319e471236c6492d8aa1be6",
+      "fixture_bytes": 326,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\nlocal notation \"d41zero\" => _root_.Nat.add_zero\ntheorem target (n : ℕ) : n + 0 = n := by\n  exact d41zero n\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "dot_notation",
+      "original_import_scope": "p41",
+      "header": "theorem target (n : ℕ) : Nat.succ n = Nat.succ n",
+      "body": "  exact Eq.refl n.succ",
+      "trusted_prefix": "",
+      "expected_kernel_class": "PROVED",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "Lean dot syntax depends on local n's type, so a global lookup for n.succ is unsound.",
+      "candidate_spelling_examples": [
+        "Eq.refl",
+        "n.succ"
+      ],
+      "paired_control": null,
+      "decl": "target",
+      "filename": "dot_notation.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "fixture_sha256": "5cb05d94fa6cf226930721248245460a26c7bd02231314803a42642e9bff5bf8",
+      "fixture_bytes": 297,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (n : ℕ) : Nat.succ n = Nat.succ n := by\n  exact Eq.refl n.succ\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "typeclass_present",
+      "original_import_scope": "p41",
+      "header": "theorem target (α : Type) [Inhabited α] : Nonempty α",
+      "body": "  let witness : α := default\n  exact ⟨witness⟩",
+      "trusted_prefix": "",
+      "expected_kernel_class": "PROVED",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "Available projection default requires the implicit local typeclass binder.",
+      "candidate_spelling_examples": [
+        "default",
+        "witness",
+        "Inhabited"
+      ],
+      "paired_control": "typeclass_missing",
+      "decl": "target",
+      "filename": "typeclass_present.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "fixture_sha256": "fd5d3cdd085066693a2ff35719a9d99f41e4c6f0fe714b17de196530d37d5e27",
+      "fixture_bytes": 331,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (α : Type) [Inhabited α] : Nonempty α := by\n  let witness : α := default\n  exact ⟨witness⟩\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "typeclass_missing",
+      "original_import_scope": "p41",
+      "header": "theorem target (α : Type) : Nonempty α",
+      "body": "  exact ⟨(default : α)⟩",
+      "trusted_prefix": "",
+      "expected_kernel_class": "INSTANCE_SYNTHESIS",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "Same global projection exists, but the target has no Inhabited α instance.",
+      "candidate_spelling_examples": [
+        "default"
+      ],
+      "paired_control": "typeclass_present",
+      "decl": "target",
+      "filename": "typeclass_missing.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "fixture_sha256": "2bbddcb2323003f282ef1584c21e0e6663582bb7d93df4c049d773b69dc1116e",
+      "fixture_bytes": 293,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (α : Type) : Nonempty α := by\n  exact ⟨(default : α)⟩\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "wrong_argument",
+      "original_import_scope": "p14",
+      "header": "theorem target (n : ℤ) : n + 0 = n",
+      "body": "  exact _root_.Nat.add_zero n",
+      "trusted_prefix": "",
+      "expected_kernel_class": "FUNCTION_OR_TYPE_ERROR",
+      "authorized_preflight": "VISIBLE_OR_FULL_CHECK",
+      "scope_reason": "The constant is visible, but expects a natural-number argument instead of this integer.",
+      "candidate_spelling_examples": [
+        "_root_.Nat.add_zero",
+        "n"
+      ],
+      "paired_control": null,
+      "decl": "target",
+      "filename": "wrong_argument.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "fixture_sha256": "2dc39ee63f40cfc02e35e2fdf3910b77c5c32cc6b8fe134be0b953aa1f37b571",
+      "fixture_bytes": 330,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (n : ℤ) : n + 0 = n := by\n  exact _root_.Nat.add_zero n\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "fq_missing_mandatory",
+      "original_import_scope": "p14",
+      "header": "theorem target (n : ℕ) : n + 0 = n",
+      "body": "  exact _root_.Nat.d41_scope_no_such_lemma n",
+      "trusted_prefix": "",
+      "expected_kernel_class": "UNKNOWN_IDENTIFIER",
+      "authorized_preflight": "HARD_SKIP_ONLY_IF_EXACT_ENV_ABSENT",
+      "scope_reason": "Explicit mandatory global reference and no fallback, after authoritative exact-key absence.",
+      "candidate_spelling_examples": [
+        "_root_.Nat.d41_scope_no_such_lemma"
+      ],
+      "paired_control": "fq_visible",
+      "decl": "target",
+      "filename": "fq_missing_mandatory.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "fixture_sha256": "9b671f30c878b489ee422091d86c93fc5db9d6776bb7eece9b546f5d50c3b2b5",
+      "fixture_bytes": 345,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (n : ℕ) : n + 0 = n := by\n  exact _root_.Nat.d41_scope_no_such_lemma n\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "fq_missing_fallback",
+      "original_import_scope": "p14",
+      "header": "theorem target (n : ℕ) : n + 0 = n",
+      "body": "  first | exact _root_.Nat.d41_scope_no_such_lemma n | exact _root_.Nat.add_zero n",
+      "trusted_prefix": "",
+      "expected_kernel_class": "PROVED",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "The absent exact name appears in an optional branch; the fallback can still prove the unchanged goal.",
+      "candidate_spelling_examples": [
+        "_root_.Nat.d41_scope_no_such_lemma",
+        "_root_.Nat.add_zero"
+      ],
+      "paired_control": "fq_missing_mandatory",
+      "decl": "target",
+      "filename": "fq_missing_fallback.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "fixture_sha256": "9ce0324329965b4345e289362ff736a82c902bc162ab7ead86f0e690473ffaf4",
+      "fixture_bytes": 383,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (n : ℕ) : n + 0 = n := by\n  first | exact _root_.Nat.d41_scope_no_such_lemma n | exact _root_.Nat.add_zero n\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "notational_syntax_error",
+      "original_import_scope": "p41",
+      "header": "theorem target (n : ℕ) : n + 0 = n",
+      "body": "  have h : n ≡ n [MOD 9] := by rfl\n  exact _root_.Nat.add_zero n",
+      "trusted_prefix": "",
+      "expected_kernel_class": "SYNTAX_ERROR",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "Original p41 narrow imports do not provide this scoped syntax. Parser error is not missing-term evidence.",
+      "candidate_spelling_examples": [
+        "≡",
+        "MOD",
+        "_root_.Nat.add_zero"
+      ],
+      "paired_control": null,
+      "decl": "target",
+      "filename": "notational_syntax_error.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "fixture_sha256": "71c63dbdf2744544e4196d5dda004fb539ea671588447ee3b31b7e91439ee955",
+      "fixture_bytes": 327,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (n : ℕ) : n + 0 = n := by\n  have h : n ≡ n [MOD 9] := by rfl\n  exact _root_.Nat.add_zero n\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "open_goal",
+      "original_import_scope": "p41",
+      "header": "theorem target (n : ℕ) : n = n ∧ n = n",
+      "body": "  constructor\n  · rfl",
+      "trusted_prefix": "",
+      "expected_kernel_class": "UNSOLVED_GOALS",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "The allowed first branch closes while a second proof obligation remains.",
+      "candidate_spelling_examples": [],
+      "paired_control": null,
+      "decl": "target",
+      "filename": "open_goal.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "fixture_sha256": "36abcb0df19fe1cba15a8ee5ab683613a038d35b7c69ce2d8bf0b309e3aa2e4c",
+      "fixture_bytes": 289,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (n : ℕ) : n = n ∧ n = n := by\n  constructor\n  · rfl\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "comment_not_term",
+      "original_import_scope": "p14",
+      "header": "theorem target (n : ℕ) : n + 0 = n",
+      "body": "  -- exact _root_.Nat.d41_scope_no_such_lemma n\n  exact _root_.Nat.add_zero n",
+      "trusted_prefix": "",
+      "expected_kernel_class": "PROVED",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "An identifier-looking comment is never a mandatory proof reference.",
+      "candidate_spelling_examples": [
+        "_root_.Nat.d41_scope_no_such_lemma",
+        "_root_.Nat.add_zero"
+      ],
+      "paired_control": null,
+      "decl": "target",
+      "filename": "comment_not_term.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "fixture_sha256": "575b3b57ef8df82791547d9d13bc9e64190db58199add6f992a5843f61b09249",
+      "fixture_bytes": 378,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target (n : ℕ) : n + 0 = n := by\n  -- exact _root_.Nat.d41_scope_no_such_lemma n\n  exact _root_.Nat.add_zero n\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    },
+    {
+      "id": "string_not_term",
+      "original_import_scope": "p41",
+      "header": "theorem target : (\"_root_.Nat.d41_scope_no_such_lemma\" : String) = \"_root_.Nat.d41_scope_no_such_lemma\"",
+      "body": "  exact Eq.refl (\"_root_.Nat.d41_scope_no_such_lemma\" : String)",
+      "trusted_prefix": "",
+      "expected_kernel_class": "PROVED",
+      "authorized_preflight": "DEFER_TO_LEAN",
+      "scope_reason": "The token-like literal is a string value, not executable name syntax.",
+      "candidate_spelling_examples": [
+        "_root_.Nat.d41_scope_no_such_lemma",
+        "Eq.refl"
+      ],
+      "paired_control": null,
+      "decl": "target",
+      "filename": "string_not_term.lean",
+      "exact_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "fixture_sha256": "f496d536247d0c7e2aea9c4932b6aa70df493a1a4451a5657a4ff1523f4fe3b5",
+      "fixture_bytes": 391,
+      "complete_source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\n\nnamespace D41ScopeCases\n\ntheorem target : (\"_root_.Nat.d41_scope_no_such_lemma\" : String) = \"_root_.Nat.d41_scope_no_such_lemma\" := by\n  exact Eq.refl (\"_root_.Nat.d41_scope_no_such_lemma\" : String)\n\nend D41ScopeCases\n#print axioms D41ScopeCases.target\n"
+    }
+  ],
+  "executed_by_preparation": false,
+  "model_generation": false
+}

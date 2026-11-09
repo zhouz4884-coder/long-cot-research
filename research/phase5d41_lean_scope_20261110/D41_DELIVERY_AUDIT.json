@@ -1,0 +1,150 @@
+{
+  "status": "COMPLETE_NO_GO_SCOPE_PREFILTER_NOT_ADMITTED",
+  "baseline": "94fc3cf7be07c59db3db9bab55c7492712d5c746",
+  "archive": {
+    "independent_targets": 31,
+    "invocations": 1128,
+    "messages": 4283,
+    "errors": 3317
+  },
+  "runtime_component_controls": 102,
+  "resident_paired_default": {
+    "p14": {
+      "direct": {
+        "wall_seconds_each": [
+          0.7799327000102494,
+          0.6395148000010522
+        ],
+        "wall_seconds_mean": 0.7097237500056508
+      },
+      "query_then_full": {
+        "wall_seconds_each": [
+          0.6313708999950904,
+          0.6542807999940123
+        ],
+        "wall_seconds_mean": 0.6428258499945514
+      },
+      "matching_accepted_count": 1,
+      "historical_hard_skips": 0,
+      "synthetic_hard_skips": 2,
+      "false_rejections": 0
+    },
+    "p41": {
+      "direct": {
+        "wall_seconds_each": [
+          0.6286892999924021,
+          0.6593542999908095
+        ],
+        "wall_seconds_mean": 0.6440217999916058
+      },
+      "query_then_full": {
+        "wall_seconds_each": [
+          0.673883300012676,
+          0.6508571000013035
+        ],
+        "wall_seconds_mean": 0.6623702000069898
+      },
+      "matching_accepted_count": 1,
+      "historical_hard_skips": 0,
+      "synthetic_hard_skips": 2,
+      "false_rejections": 0
+    }
+  },
+  "resident_paired_zero_delay": {
+    "p14": {
+      "direct": {
+        "wall_seconds_each": [
+          0.34409309999318793,
+          0.09850579999329057
+        ],
+        "wall_seconds_mean": 0.22129944999323925
+      },
+      "query_then_full": {
+        "wall_seconds_each": [
+          0.11090020000119694,
+          0.10914100000809412
+        ],
+        "wall_seconds_mean": 0.11002060000464553
+      },
+      "matching_accepted_count": 1,
+      "historical_hard_skips": 0,
+      "synthetic_hard_skips": 2,
+      "false_rejections": 0
+    },
+    "p41": {
+      "direct": {
+        "wall_seconds_each": [
+          0.11145539999415632,
+          0.11065450000751298
+        ],
+        "wall_seconds_mean": 0.11105495000083465
+      },
+      "query_then_full": {
+        "wall_seconds_each": [
+          0.2925956000108272,
+          0.11666749999858439
+        ],
+        "wall_seconds_mean": 0.2046315500047058
+      },
+      "matching_accepted_count": 1,
+      "historical_hard_skips": 0,
+      "synthetic_hard_skips": 2,
+      "false_rejections": 0
+    }
+  },
+  "actual_historical_negative_replays": [
+    "p104",
+    "p139"
+  ],
+  "historical_negative_only_costs": {
+    "p104": {
+      "full_failed_check_seconds": 1.249637899993104,
+      "relative_and_root_query_seconds": 0.21591300000727642
+    },
+    "p139": {
+      "full_failed_check_seconds": 0.218250200006878,
+      "relative_and_root_query_seconds": 0.20878410000295844
+    }
+  },
+  "p115_historical_full_replay_deferred": true,
+  "authored_controls": {
+    "total": 19,
+    "expected_matches": 19,
+    "kernel_accepted": 12,
+    "naive_import_only_false_rejections": [
+      "comment_not_term",
+      "dot_notation",
+      "fq_missing_fallback",
+      "let_alias",
+      "local_hypothesis",
+      "local_notation_alias",
+      "opened_alias"
+    ]
+  },
+  "qualifying_independent_historical_targets": 0,
+  "model_tokens": 0,
+  "gpu_seconds": 0,
+  "reason": "Exact scope is useful evidence for candidate diagnosis. Existing Lean lookup plus remaining full checks has no stable measured end-to-end increment here. The negative-only historical supplements do not establish a qualifying proof-search gain; import-only gates can reject well-typed local-context proofs.",
+  "evidence_sha256": {
+    "D41_SCOPE_INPUT_FREEZE.json": "81ef933e9c4e00ad33c984644954f0750f040865ecf7ac74fcd188dab14c927c",
+    "D41_REPLAY_AND_COST_PROTOCOL.json": "cd8c482012f36b12cfa148d32ef2c8795db2d1244ef7be5f6d77a0ff0bf13eac",
+    "D41_PAIRED_QUEUE_FREEZE.json": "d39b238601680711d84461d26104a41da598599bf63230d1f82994b8b8637c17",
+    "D41_RESIDENT_DELAY_SENSITIVITY.json": "59d7be7b7fc028d4331ccff8a47cd58c1d4d9bd0a9cf0cb45617e53dd608c8b7",
+    "D41_RETRIEVAL_CONTROL_FREEZE.json": "49be0bc927d3acb535b826c4e775a14491b09c5c2cb95ba5a56591995d95f83f",
+    "D41_UPPER_FULL_PROOF_FREEZE.json": "b80a9d7a04f32ff51df86c3c51dd5ed632a4610862bbc27b9f1503269af84a37",
+    "diagnostic_freeze.json": "811386f7cdbfbc0cbfacf988528854b2b7b5e63721e81cda54adda6b5f239aa8",
+    "diagnostic_ledger.jsonl": "3a5246d126060ee58cc2c1158b66e429066b4f6e2225dc25c8056ba616d78349",
+    "diagnostic_summary.json": "577ec48ebaa08218d0dc792f3a4c0862213d65a0ac26b8ce1820db82842e9761",
+    "diagnostic_singleton_sites.json": "37bccd213ccd1d03cd762c413f8305706a47fac1f2d9e73653416feeabb85a05",
+    "scope_runtime_freeze.json": "8aea01316de27491f32c915e4ac433485cfefd72089b152c2d7ba733426f3c29",
+    "scope_runtime_results.json": "3cd1ea3d6df285495aff35960910e7950673a4ae3bd4495241674a66c0fca717",
+    "paired_reference_default_results.json": "ece3f570ce5ee2c5951badff006c758eed667cdfab15664983106bd390f319b0",
+    "paired_reference_zero_delay_results.json": "8a1711f243abe53d3841fa656aebf2df265a1a82521dedbb29aa91516e84fd5c",
+    "upper_bound_full_proof_results.json": "c6d3d72892f6b694a04338aa14f85702be480bc1d3ccbaedd6ccda1094d509fc",
+    "scope_cases_controls.json": "5bd1a17503ca3a48adb9ff2cedf53c9736c47fb813700556b7677dadfb2a06bf",
+    "scope_cases_evidence.json": "09a4f5782ed0359920f7d9542271c3744db454a3c58f06bb3e5e9169191faadc",
+    "scope_cases_authored_runtime.json": "1ef3308eab0cd1a5babb8b1d8bce3f8b932f88f20ba9078aea1fa564f697977d",
+    "scope_cases_historical_supplement.json": "2aa6fa45043b01000813f3c70a16a86a64b3da9a023681c3f4dc603ea0a73f38",
+    "scope_cases_historical_runtime.json": "c08fb669e5899d3fc274321e78c73d1c0813d5d51e6ad2bd645cf713e27d65bc"
+  }
+}

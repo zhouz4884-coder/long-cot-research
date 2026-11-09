@@ -9,6 +9,7 @@
 - [Phase 1–5 总索引](docs/phases/INDEX_ZH.md)
 - [当前研究目标](docs/next_phase/CURRENT_RESEARCH_GOAL_20261105_ZH.md)
 - [最新建议审查与下一轮公平对照](research/repository_phase_plan_20261106/ADVISOR_REVIEW_20261106_ZH.md)
+- [Phase 5-D4.1 引理可达性与预筛准入](research/phase5d41_lean_scope_20261110/D41_CLOSEOUT_ZH.md)
 - [Phase 5-D4.0 新引理与子目标构造准入](research/phase5d40_proof_authoring_20261110/D40_CLOSEOUT_ZH.md)
 - [Phase 5-D3.9 真实轨迹中的释放机会复核](research/phase5d39_blueprint_trace_20261110/D39_CLOSEOUT_ZH.md)
 - [Phase 5-D3.8 形式证明最小释放准入收尾](research/phase5d38_proof_release_20261110/D38_CLOSEOUT_ZH.md)
@@ -44,6 +45,7 @@
 | [Phase 5-D3.8](research/phase5d38_proof_release_20261110/D38_CLOSEOUT_ZH.md) | 固定 Lean 工具链、最小释放证书及作者模型档案 | 作用域释放 7/8，合并证书的同候选池强基线也为 7/8，只用 7 次 Lean 调用。未启动模型试验 |
 | [Phase 5-D3.9](research/phase5d39_blueprint_trace_20261110/D39_CLOSEOUT_ZH.md) | 141 个独立目标的真实动作归档、同版内核复验、驻留核验成本 | 四个改动候选均可保留已证明内容并完成目标。关闭最小释放主线 |
 | [Phase 5-D4.0](research/phase5d40_proof_authoring_20261110/D40_CLOSEOUT_ZH.md) | 11 个未解原目标的归档支持、同版失败复验与普通证明基线 | 三个受审失败复现，普通 CPU 证明完成三个原目标。新增引理方法未达模型准入 |
+| [Phase 5-D4.1](research/phase5d41_lean_scope_20261110/D41_CLOSEOUT_ZH.md) | 引理可达性、实际历史缺名与查询加完整核验成本 | 31 个目标的诊断对齐，两种等待设置下配对完整成本无稳定下降。预筛未达模型准入 |
 
 每个Phase统一记录：问题、输入与协议、实际动作、数据结论、失败与猜想、下一门槛、证据路径。后续工作继续新增Phase或阶段内子报告，不改写已冻结的结果。
 
@@ -66,6 +68,7 @@
 | Phase5-D3.8 | 正式 Lean 环境通过 9 个核心、10 个 miniF2F 控制。最小释放的七个结构证书有强合并核验基线 | 合成结构控制与外部真实模型动作分列。当前没有通过独立模型试验门槛 |
 | Phase5-D3.9 | 复算 852 个归档臂。p159 在作者同版环境通过，四个可能正例均有同目标保留证书 | 仍未知的 36 个状态保留未知。独立必要释放证据为零，未启动模型试验 |
 | Phase5-D4.0 | 同族 31 个状态、1,201 个历史步骤。11 个未解目标均已有拆分或中间提案 | 局部精确复验范围为三个原始快照及一个受控编辑。完整历史候选图未封闭 |
+| Phase5-D4.1 | 对齐 1,128 份 Lean 调用、4,283 条诊断。19 项受审控制中，导入级硬拒绝会误挡七个有效证明 | 查询与完整核验配对通过集合相同。局部性能差随顺序变化，未启动模型试验 |
 
 P0与P0.5使用不同读出协议，不连成跨轮提升曲线。CPU随机模型、形式/代数控制、人工短状态、自然轨迹观察和正式benchmark各自标明，不互相替代。
 
@@ -114,6 +117,7 @@ research/phase5d37_scoped_repair_20261110/ D3.7 作用域与格式回归、两�
 research/phase5d38_proof_release_20261110/ D3.8 Lean 内核、正式来源、最小释放与强 CPU 对照
 research/phase5d39_blueprint_trace_20261110/ D3.9 全档案复算、作者同版证明与真实核验成本
 research/phase5d40_proof_authoring_20261110/ D4.0 证明支持账本、同版失败与普通基线、引理构造准入
+research/phase5d41_lean_scope_20261110/ D4.1 引理可达性、误拦截、配对成本和试验准入
 scripts/ reason_transition/ tests/     原研究实现与检查
 experiments/radar20261013/             后续历史路线，当前冻结
 data/ results/ provenance/ recovery/   历史输入、输出和恢复证据

@@ -1,0 +1,8 @@
+{
+  "scope": "Supplemental broader-import upper-bound check, separate from original imports and the paired cost queue. Freeze before any full-proof upper-bound execution.",
+  "source_queue": "D41_PAIRED_QUEUE_FREEZE.json",
+  "extra_imports": ["Mathlib.Algebra.Ring.GeomSum", "Mathlib.Data.Int.ModEq", "Mathlib.Data.Nat.ModEq"],
+  "unchanged_proof_bodies": ["p14 explicit_root_missing_control", "p41 explicit_root_missing_control"],
+  "p41_additional_disambiguation_control": "Same full target and broader imports, explicit zero-exponent case consumes the original positive binder; successor uses the same named library lemma. This is ordinary Lean and only separates warning policy from library availability.",
+  "policy": "Original-scope statistics, preflight timing and admission do not use this upper bound. Every success requires the actual complete target and approved axiom closure."
+}

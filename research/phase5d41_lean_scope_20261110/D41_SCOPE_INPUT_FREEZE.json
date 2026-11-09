@@ -1,0 +1,142 @@
+{
+  "status": "FROZEN_BEFORE_NEW_SCOPE_PROBES",
+  "baseline": "94fc3cf7be07c59db3db9bab55c7492712d5c746",
+  "source_receipts_sha256": {
+    "cohort": "9ac91d42bd88e05c717a72531806582e848a9ab2171a5103f8400a591256db7f",
+    "runtime": "af6f042b208ea90c23d81529c9fc512b44baf197fa34d82462c13994d7e9aae3",
+    "exact_negative_replays": "603c9525f3ae5786c4f632b19a55b59a9371f62bd793abc2ff46131e9589fa58"
+  },
+  "unresolved_state_ids": [
+    "p104_bad.state0",
+    "p108_bad.state0",
+    "p113_bad.state0",
+    "p115_bad.state0",
+    "p117_bad.state0",
+    "p135_bad.state0",
+    "p136_bad.state0",
+    "p138_bad.state0",
+    "p139_bad.state0",
+    "p14_bad.state0",
+    "p41_bad.state0"
+  ],
+  "same_family_solved_state_ids": [
+    "p103_bad.state0",
+    "p105_bad.state0",
+    "p106_bad.state0",
+    "p107_bad.state0",
+    "p109_bad.state0",
+    "p110_bad.state0",
+    "p111_bad.state0",
+    "p112_bad.state0",
+    "p114_bad.state0",
+    "p116_bad.state0",
+    "p120_bad.state0",
+    "p121_bad.state0",
+    "p122_bad.state0",
+    "p137_bad.state0",
+    "p140_bad.state0",
+    "p167_bad.state0",
+    "p168_bad.state0",
+    "p169_bad.state0",
+    "p40_bad.state0",
+    "p42_bad.state0"
+  ],
+  "prior_scope_negatives": {
+    "p14": {
+      "target": "P14Bad.p14_target",
+      "original_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "availability_probe_sha256": "40a4cba60e7d2e9dc9e2ccaa0e6e158845d8f41b1d999cac28b79cfd7e6ca0a8",
+      "names_rejected_in_original_imports": [
+        "sub_dvd_pow_sub_pow",
+        "Nat.sub_dvd_pow_sub_pow",
+        "Nat.sub_one_dvd_pow_sub_one",
+        "Int.ModEq.dvd",
+        "Int.ModEq.pow",
+        "Nat.modEq_iff_dvd'",
+        "Nat.ModEq.pow"
+      ]
+    },
+    "p41": {
+      "target": "P41Bad.p41_target",
+      "original_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "availability_probe_sha256": "c60de666406268a5788166dbbdd29e078c5c164ad6a92a21fcd655c3e4b6debd",
+      "names_rejected_in_original_imports": [
+        "sub_dvd_pow_sub_pow",
+        "Nat.sub_dvd_pow_sub_pow",
+        "Nat.sub_one_dvd_pow_sub_one",
+        "Int.ModEq.dvd",
+        "Int.ModEq.pow",
+        "Nat.modEq_iff_dvd'",
+        "Nat.ModEq.pow"
+      ]
+    }
+  },
+  "exact_negative_control_classes": {
+    "p14": [
+      [
+        11,
+        "INTRO_NO_BINDER"
+      ]
+    ],
+    "p41": [
+      [
+        10,
+        "SYNTAX_EXPECTED_TOKEN"
+      ],
+      [
+        10,
+        "INSTANCE_SYNTHESIS"
+      ],
+      [
+        10,
+        "INSTANCE_SYNTHESIS"
+      ],
+      [
+        10,
+        "MISSING_CASES"
+      ],
+      [
+        9,
+        "UNSOLVED_GOALS"
+      ]
+    ],
+    "p138": [
+      [
+        8,
+        "UNSOLVED_GOALS"
+      ],
+      [
+        13,
+        "UNKNOWN_IDENTIFIER"
+      ],
+      [
+        17,
+        "UNSOLVED_GOALS"
+      ],
+      [
+        23,
+        "IMPLICIT_ARGUMENT"
+      ],
+      [
+        23,
+        "HAVE_TYPE_INFERENCE"
+      ],
+      [
+        21,
+        "UNSOLVED_GOALS"
+      ]
+    ]
+  },
+  "scope": "D4.0 archived receipts are used as known negative intake. Existence in broader Mathlib and value of pre-screening are not inferred. No new probe or model result."
+}

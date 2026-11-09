@@ -1,0 +1,96 @@
+{
+  "status": "COMPLETE_SEPARATE_BROADER_IMPORT_UPPER_BOUND",
+  "scope": "Ordinary CPU checks with additional imports. No matched original-scope proof costs or acceptance are changed.",
+  "freeze_sha256": "b80a9d7a04f32ff51df86c3c51dd5ed632a4610862bbc27b9f1503269af84a37",
+  "version": "Lean (version 4.31.0, x86_64-w64-windows-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+  "new_model_tokens": 0,
+  "gpu_seconds": 0,
+  "rows": [
+    {
+      "case": "p14",
+      "mode": "only_frozen_additional_imports",
+      "original_source_sha256": "77cd2b47bff98e942955597bd5dd6926820e915c010f4021efb89f730d1ab206",
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "P14Bad.p14_target": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "cbdf802e999e8dbd72e7e9409745269718f7628ccbf97ab301b3ee4b9075ba56",
+      "elapsed_seconds": 8.566453200008254,
+      "exit_code": 0,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "P14Bad.p14_target : ∀ (n : ℕ), 11 ∣ 10 ^ n - (-1) ^ n",
+          "line": 21
+        },
+        {
+          "severity": 3,
+          "message": "'P14Bad.p14_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 22
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "case": "p41",
+      "mode": "only_frozen_additional_imports",
+      "original_source_sha256": "c66b0ed450d929001601a130fe4338a4d4f11864cfc76b79822cc9f6f18317f4",
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "44d8b1e6c7dde15906212c36a79f4975a23a675a77c6aff093865f60a1077371",
+      "elapsed_seconds": 8.429624800002784,
+      "exit_code": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "Variable name `h₀` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+          "line": 15
+        },
+        {
+          "severity": 3,
+          "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+          "line": 20
+        },
+        {
+          "severity": 3,
+          "message": "'P41Bad.p41_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 21
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "case": "p41",
+      "mode": "additional_imports_and_explicit_binder_use",
+      "original_source_sha256": "c66b0ed450d929001601a130fe4338a4d4f11864cfc76b79822cc9f6f18317f4",
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "P41Bad.p41_target": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "d369f3bfa1bfe9dbbe1ce898fa824b51e97a3aeba8f91815467b62559adba87b",
+      "elapsed_seconds": 8.169255100001465,
+      "exit_code": 0,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+          "line": 22
+        },
+        {
+          "severity": 3,
+          "message": "'P41Bad.p41_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 23
+        }
+      ],
+      "stderr": ""
+    }
+  ]
+}

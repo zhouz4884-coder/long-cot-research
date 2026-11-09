@@ -1,0 +1,570 @@
+{
+  "status": "AUTHORED_SCOPE_CONTROL_KERNEL_RECOUNT_COMPLETED",
+  "scope": "Functional authored controls, not a cost comparison or model result. Import-only probes intentionally omit local binding context.",
+  "controls_sha256": "5bd1a17503ca3a48adb9ff2cedf53c9736c47fb813700556b7677dadfb2a06bf",
+  "runtime_smoke_sha256": "ca19818e10f7246a3f2259eb0f2341c33a47a9d55645c4aa8c325ceb7c17e2ff",
+  "author_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "controls": 19,
+  "kernel_accepted": 12,
+  "all_expected_matches": 19,
+  "contexts": {
+    "p14": {
+      "imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "import_only_probe": {
+        "status": "REJECTED",
+        "axioms": {},
+        "source_sha256": "71a66a467c9a6dd8d4caaa8c5e68c64c00274bad176c7d173b1fff81ca22ce2d",
+        "document_version": 1,
+        "elapsed_seconds": 9.025477700008196,
+        "matching_publications": 6,
+        "messages": [
+          {
+            "severity": 1,
+            "message": "Unknown identifier `h`",
+            "line": 9
+          },
+          {
+            "severity": 1,
+            "message": "Unknown identifier `localZero`",
+            "line": 10
+          },
+          {
+            "severity": 1,
+            "message": "Unknown constant `Nat.d41_scope_no_such_lemma`",
+            "line": 11
+          },
+          {
+            "severity": 3,
+            "message": "Nat.add_zero (n : ℕ) : n + 0 = n",
+            "line": 12
+          }
+        ]
+      },
+      "import_only_absent_examples": [
+        "_root_.Nat.d41_scope_no_such_lemma",
+        "h",
+        "localZero"
+      ],
+      "would_be_false_rejections_if_import_only_test_were_a_hard_gate": [
+        "local_hypothesis",
+        "let_alias",
+        "fq_missing_fallback",
+        "comment_not_term"
+      ],
+      "rows": [
+        {
+          "id": "fq_visible",
+          "expected": "PROVED",
+          "observed": "PROVED",
+          "expected_match": true,
+          "scope_policy": "VISIBLE_OR_FULL_CHECK",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "D41ScopeCases.target": []
+          },
+          "source_sha256": "3793c1f6dc0cac6410ebab1b92834f4c10dcee5f8b900be79728adccf0a54fbc",
+          "document_version": 2,
+          "elapsed_seconds": 0.21034420000796672,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' does not depend on any axioms",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "id": "fq_shadow_safe",
+          "expected": "PROVED",
+          "observed": "PROVED",
+          "expected_match": true,
+          "scope_policy": "VISIBLE_OR_FULL_CHECK",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "D41ScopeCases.target": []
+          },
+          "source_sha256": "475556b832ef2d68f5cada825feaf89a648a969fa855224cdc034888d9940d7c",
+          "document_version": 3,
+          "elapsed_seconds": 0.20444709999719635,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' does not depend on any axioms",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "id": "bare_shadow_wrong",
+          "expected": "FUNCTION_OR_TYPE_ERROR",
+          "observed": "FUNCTION_OR_TYPE_ERROR",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "1d72482aca8b2342283268e7bcf6072354f3a1dfc75619f854b72916dab7a4df",
+          "document_version": 4,
+          "elapsed_seconds": 0.20819410000694916,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Function expected at\n  add_zero\nbut this term has type\n  ℕ\n\nNote: Expected a function because this term is being applied to the argument\n  n",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' depends on axioms: [sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "id": "local_hypothesis",
+          "expected": "PROVED",
+          "observed": "PROVED",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "D41ScopeCases.target": []
+          },
+          "source_sha256": "fe086698598cf56c95154e2624447ff54c7776f8f530ecd274a52e2985ec1d89",
+          "document_version": 5,
+          "elapsed_seconds": 0.21375890000490472,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' does not depend on any axioms",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "id": "let_alias",
+          "expected": "PROVED",
+          "observed": "PROVED",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "D41ScopeCases.target": []
+          },
+          "source_sha256": "aee2c403d893ba595c95699297bdcc2d01cfdf35976f3deccd2b1aed6a0affca",
+          "document_version": 6,
+          "elapsed_seconds": 0.21628159999090713,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' does not depend on any axioms",
+              "line": 16
+            }
+          ]
+        },
+        {
+          "id": "wrong_argument",
+          "expected": "FUNCTION_OR_TYPE_ERROR",
+          "observed": "FUNCTION_OR_TYPE_ERROR",
+          "expected_match": true,
+          "scope_policy": "VISIBLE_OR_FULL_CHECK",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "2dc39ee63f40cfc02e35e2fdf3910b77c5c32cc6b8fe134be0b953aa1f37b571",
+          "document_version": 7,
+          "elapsed_seconds": 0.21823099999164697,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Application type mismatch: The argument\n  n\nhas type\n  ℤ\nbut is expected to have type\n  ℕ\nin the application\n  Nat.add_zero n",
+              "line": 12
+            },
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' depends on axioms: [sorryAx]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "id": "fq_missing_mandatory",
+          "expected": "UNKNOWN_IDENTIFIER",
+          "observed": "UNKNOWN_IDENTIFIER",
+          "expected_match": true,
+          "scope_policy": "HARD_SKIP_ONLY_IF_EXACT_ENV_ABSENT",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "9b671f30c878b489ee422091d86c93fc5db9d6776bb7eece9b546f5d50c3b2b5",
+          "document_version": 8,
+          "elapsed_seconds": 0.2167918000050122,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `Nat.d41_scope_no_such_lemma`",
+              "line": 12
+            },
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' depends on axioms: [sorryAx]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "id": "fq_missing_fallback",
+          "expected": "PROVED",
+          "observed": "PROVED",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "D41ScopeCases.target": []
+          },
+          "source_sha256": "9ce0324329965b4345e289362ff736a82c902bc162ab7ead86f0e690473ffaf4",
+          "document_version": 9,
+          "elapsed_seconds": 0.20294880001165438,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' does not depend on any axioms",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "id": "comment_not_term",
+          "expected": "PROVED",
+          "observed": "PROVED",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "D41ScopeCases.target": []
+          },
+          "source_sha256": "575b3b57ef8df82791547d9d13bc9e64190db58199add6f992a5843f61b09249",
+          "document_version": 10,
+          "elapsed_seconds": 0.20371310001064558,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' does not depend on any axioms",
+              "line": 16
+            }
+          ]
+        }
+      ],
+      "resident_startup_seconds": 1.9090250000008382,
+      "resident_shutdown_seconds": 0.08889810000255238,
+      "resident_stderr": ""
+    },
+    "p41": {
+      "imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "import_only_probe": {
+        "status": "REJECTED",
+        "axioms": {},
+        "source_sha256": "6990c557c38c0e72fd025bc7458d7d3dcd082fdecb202844909e6aa29204662e",
+        "document_version": 1,
+        "elapsed_seconds": 8.558066400000826,
+        "matching_publications": 6,
+        "messages": [
+          {
+            "severity": 1,
+            "message": "Unknown identifier `scopedZero`",
+            "line": 8
+          },
+          {
+            "severity": 1,
+            "message": "Unknown identifier `d41zero`",
+            "line": 9
+          },
+          {
+            "severity": 1,
+            "message": "Unknown identifier `n.succ`",
+            "line": 10
+          },
+          {
+            "severity": 3,
+            "message": "Inhabited.default.{u} {α : Sort u} [self : Inhabited α] : α",
+            "line": 11
+          }
+        ]
+      },
+      "import_only_absent_examples": [
+        "d41zero",
+        "n.succ",
+        "scopedZero"
+      ],
+      "would_be_false_rejections_if_import_only_test_were_a_hard_gate": [
+        "opened_alias",
+        "local_notation_alias",
+        "dot_notation"
+      ],
+      "rows": [
+        {
+          "id": "opened_alias",
+          "expected": "PROVED",
+          "observed": "PROVED",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "D41ScopeCases.target": []
+          },
+          "source_sha256": "a06d0ecd668be36fcb970ad3101dabf767dcdbdd6a5907b7e068eaf53f495196",
+          "document_version": 2,
+          "elapsed_seconds": 0.20402150000154506,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' does not depend on any axioms",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "id": "closed_alias",
+          "expected": "UNKNOWN_IDENTIFIER",
+          "observed": "UNKNOWN_IDENTIFIER",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "deae6971d207a43a14d91c805dcbec96e4e0da1e2ac378f558ef0f8857bcacd8",
+          "document_version": 3,
+          "elapsed_seconds": 0.2042135999945458,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown identifier `scopedZero`",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' depends on axioms: [sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "id": "relative_qualified_alias",
+          "expected": "PROVED",
+          "observed": "PROVED",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "D41ScopeCases.target": []
+          },
+          "source_sha256": "c8866a70648d1a3636b35ceb7a3186e46c34b265c17005f05bb135ec41a2c4ed",
+          "document_version": 4,
+          "elapsed_seconds": 0.20264080000924878,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' does not depend on any axioms",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "id": "local_notation_alias",
+          "expected": "PROVED",
+          "observed": "PROVED",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "D41ScopeCases.target": []
+          },
+          "source_sha256": "85753b0853daf4562a5ad2f58a4fb8f1a0273156f319e471236c6492d8aa1be6",
+          "document_version": 5,
+          "elapsed_seconds": 0.20559529999445658,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' does not depend on any axioms",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "id": "dot_notation",
+          "expected": "PROVED",
+          "observed": "PROVED",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "D41ScopeCases.target": []
+          },
+          "source_sha256": "5cb05d94fa6cf226930721248245460a26c7bd02231314803a42642e9bff5bf8",
+          "document_version": 6,
+          "elapsed_seconds": 0.21643339999718592,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' does not depend on any axioms",
+              "line": 14
+            }
+          ]
+        },
+        {
+          "id": "typeclass_present",
+          "expected": "PROVED",
+          "observed": "PROVED",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "D41ScopeCases.target": []
+          },
+          "source_sha256": "fd5d3cdd085066693a2ff35719a9d99f41e4c6f0fe714b17de196530d37d5e27",
+          "document_version": 7,
+          "elapsed_seconds": 0.21726969999144785,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' does not depend on any axioms",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "id": "typeclass_missing",
+          "expected": "INSTANCE_SYNTHESIS",
+          "observed": "INSTANCE_SYNTHESIS",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "2bbddcb2323003f282ef1584c21e0e6663582bb7d93df4c049d773b69dc1116e",
+          "document_version": 8,
+          "elapsed_seconds": 0.20405920001212507,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "failed to synthesize instance of type class\n  Inhabited α\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.",
+              "line": 11
+            },
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' depends on axioms: [sorryAx]",
+              "line": 14
+            }
+          ]
+        },
+        {
+          "id": "notational_syntax_error",
+          "expected": "SYNTAX_ERROR",
+          "observed": "SYNTAX_ERROR",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "71c63dbdf2744544e4196d5dda004fb539ea671588447ee3b31b7e91439ee955",
+          "document_version": 9,
+          "elapsed_seconds": 0.20327319999341853,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "expected token",
+              "line": 11
+            },
+            {
+              "severity": 1,
+              "message": "type expected, got\n  (n : ℕ)",
+              "line": 11
+            },
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' depends on axioms: [sorryAx]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "id": "open_goal",
+          "expected": "UNSOLVED_GOALS",
+          "observed": "UNSOLVED_GOALS",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "36abcb0df19fe1cba15a8ee5ab683613a038d35b7c69ce2d8bf0b309e3aa2e4c",
+          "document_version": 10,
+          "elapsed_seconds": 0.20346669999707956,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "unsolved goals\ncase right\nn : ℕ\n⊢ n = n",
+              "line": 10
+            },
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' depends on axioms: [sorryAx]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "id": "string_not_term",
+          "expected": "PROVED",
+          "observed": "PROVED",
+          "expected_match": true,
+          "scope_policy": "DEFER_TO_LEAN",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "D41ScopeCases.target": []
+          },
+          "source_sha256": "f496d536247d0c7e2aea9c4932b6aa70df493a1a4451a5657a4ff1523f4fe3b5",
+          "document_version": 11,
+          "elapsed_seconds": 0.21552189999783877,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'D41ScopeCases.target' does not depend on any axioms",
+              "line": 14
+            }
+          ]
+        }
+      ],
+      "resident_startup_seconds": 1.725236499987659,
+      "resident_shutdown_seconds": 0.07734380000329111,
+      "resident_stderr": ""
+    }
+  },
+  "model_generation": false,
+  "gpu_seconds": 0
+}

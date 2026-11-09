@@ -1,0 +1,244 @@
+{
+  "status": "PUBLISHED_ARCHIVE_CONTRASTS_BOUND",
+  "source_scope_freeze_sha256": "81ef933e9c4e00ad33c984644954f0750f040865ecf7ac74fcd188dab14c927c",
+  "controls_sha256": "5bd1a17503ca3a48adb9ff2cedf53c9736c47fb813700556b7677dadfb2a06bf",
+  "scope": "Historical evidence only. No archived source is executed or staged.",
+  "known_original_scope_negatives": {
+    "p14": {
+      "source_sha256": "85df13c04b2d38bacfb4faa15b0f5322564f38f8a9167931428066c883722335",
+      "immutable_target": "P14Bad.p14_target",
+      "original_returncode": 1,
+      "local_returncode": 1,
+      "original_lines_and_classes": [
+        [
+          11,
+          "INTRO_NO_BINDER"
+        ]
+      ],
+      "local_lines_and_classes": [
+        [
+          11,
+          "INTRO_NO_BINDER"
+        ]
+      ],
+      "all_messages_exact_equal": false,
+      "compiler_error_classes_and_lines_equal": true,
+      "expected_target_axioms": [
+        "propext",
+        "sorryAx"
+      ],
+      "local_target_axioms": [
+        "propext",
+        "sorryAx"
+      ],
+      "target_axiom_closure_equal": true,
+      "local_wall_seconds": 8.839005599998927,
+      "same_archived_failure_reproduced": true,
+      "kernel_proof_accepted": false
+    },
+    "p41": {
+      "source_sha256": "1fd1e6b5451f5e83328a64dc7b5c213f73e7badd29309157a3d4ca01b7488e00",
+      "immutable_target": "P41Bad.p41_target",
+      "original_returncode": 1,
+      "local_returncode": 1,
+      "original_lines_and_classes": [
+        [
+          10,
+          "SYNTAX_EXPECTED_TOKEN"
+        ],
+        [
+          10,
+          "INSTANCE_SYNTHESIS"
+        ],
+        [
+          10,
+          "INSTANCE_SYNTHESIS"
+        ],
+        [
+          10,
+          "MISSING_CASES"
+        ],
+        [
+          9,
+          "UNSOLVED_GOALS"
+        ]
+      ],
+      "local_lines_and_classes": [
+        [
+          10,
+          "SYNTAX_EXPECTED_TOKEN"
+        ],
+        [
+          10,
+          "INSTANCE_SYNTHESIS"
+        ],
+        [
+          10,
+          "INSTANCE_SYNTHESIS"
+        ],
+        [
+          10,
+          "MISSING_CASES"
+        ],
+        [
+          9,
+          "UNSOLVED_GOALS"
+        ]
+      ],
+      "all_messages_exact_equal": false,
+      "compiler_error_classes_and_lines_equal": true,
+      "expected_target_axioms": [
+        "propext",
+        "sorryAx"
+      ],
+      "local_target_axioms": [
+        "propext",
+        "sorryAx"
+      ],
+      "target_axiom_closure_equal": true,
+      "local_wall_seconds": 8.675126900001487,
+      "same_archived_failure_reproduced": true,
+      "kernel_proof_accepted": false
+    }
+  },
+  "prior_signature_negatives": {
+    "p14": {
+      "target": "P14Bad.p14_target",
+      "original_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "availability_probe_sha256": "40a4cba60e7d2e9dc9e2ccaa0e6e158845d8f41b1d999cac28b79cfd7e6ca0a8",
+      "names_rejected_in_original_imports": [
+        "sub_dvd_pow_sub_pow",
+        "Nat.sub_dvd_pow_sub_pow",
+        "Nat.sub_one_dvd_pow_sub_one",
+        "Int.ModEq.dvd",
+        "Int.ModEq.pow",
+        "Nat.modEq_iff_dvd'",
+        "Nat.ModEq.pow"
+      ]
+    },
+    "p41": {
+      "target": "P41Bad.p41_target",
+      "original_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "availability_probe_sha256": "c60de666406268a5788166dbbdd29e078c5c164ad6a92a21fcd655c3e4b6debd",
+      "names_rejected_in_original_imports": [
+        "sub_dvd_pow_sub_pow",
+        "Nat.sub_dvd_pow_sub_pow",
+        "Nat.sub_one_dvd_pow_sub_one",
+        "Int.ModEq.dvd",
+        "Int.ModEq.pow",
+        "Nat.modEq_iff_dvd'",
+        "Nat.ModEq.pow"
+      ]
+    }
+  },
+  "historical_candidates_deferred": {
+    "p14": {
+      "source_member": "data/llm_calls/p14_monolithic_rwsrcq_v0/typed/step08.check.lean",
+      "source_sha256": "606bf3b86b93fc893d1471ed208666ecfece725b2ef408f9c0c122fed957a101",
+      "check_log_sha256": "04cbd3f6b5d96ebb72339fdd018f9841b53a094a658e7e95013d54e7248f895f",
+      "target_header_preserved": true,
+      "original_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "actual_archive_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring"
+      ],
+      "imports_match_frozen_target": false,
+      "candidate_spelling": "sub_dvd_pow_sub_pow",
+      "mandatory_exact_root_name_established": false,
+      "disposition": "DEFERRED_NOT_A_HISTORICAL_HARD_SKIP",
+      "first_archived_error_line": 10,
+      "first_archived_error": "Unknown identifier `sub_dvd_pow_sub_pow`",
+      "reasons": [
+        "Imports were narrowed in the rewrite.",
+        "The applied identifier is bare."
+      ],
+      "executed_in_d41": false
+    },
+    "p41": {
+      "source_member": "data/llm_calls/p41_monolithic_toolsrc_v0/typed/step03.check.lean",
+      "source_sha256": "bfe7a69ab8561f3c1d1420c640eb0a8630941aa34fdb7cf0d4b9152fe5061cd9",
+      "check_log_sha256": "925de94ea72c90712595bef0fe9826cf30205a5d9bc2dd48ad8a374ce23f8ade",
+      "target_header_preserved": true,
+      "original_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "actual_archive_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "imports_match_frozen_target": true,
+      "candidate_spelling": "Nat.ModEq.pow",
+      "mandatory_exact_root_name_established": false,
+      "disposition": "DEFERRED_NOT_A_HISTORICAL_HARD_SKIP",
+      "first_archived_error_line": 10,
+      "first_archived_error": "expected token",
+      "reasons": [
+        "The qualified spelling is relative.",
+        "An earlier notation parse error prevented binding the use."
+      ],
+      "executed_in_d41": false
+    }
+  },
+  "contrasting_passing_p14": {
+    "target": "P14Bad.p14_target",
+    "original_imports": [
+      "Architect",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.LinearCombination"
+    ],
+    "target_header_sha256": "3be2f154a194a9519e983347b9234a19afbcd0a3f35cb0bf2ae37b8b797355d4",
+    "first_accept_ordinal": 21,
+    "method": "Induction:grind_pow",
+    "proof_body_sha256": "f79320720f03aed35b824559bdc9e392f3d60d1222a081d19b73e9c05665ed2d",
+    "source_sha256": "4ca867387d930cd8632dd5c764ab625bfcd0e13c6d06db4132f72f11ec29bbf5",
+    "axioms": {
+      "P14Bad.p14_target": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "same_family_p40_offline_positive": {
+    "source_sha256": "d1d235455e42cd09ac77dae91c33cd41f269c8df5f65ac13d357240dec3a66fd",
+    "exit_code": 0,
+    "axioms": {
+      "P40Bad.base_case": [
+        "propext"
+      ],
+      "P40Bad.step": [
+        "propext",
+        "Quot.sound"
+      ],
+      "P40Bad.p40_target": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "used_as_candidate_input": false
+  }
+}

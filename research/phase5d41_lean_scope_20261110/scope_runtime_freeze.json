@@ -1,0 +1,18 @@
+{
+  "status": "FROZEN_TRUSTED_COMPONENT_CONTROLS",
+  "baseline": "94fc3cf7be07c59db3db9bab55c7492712d5c746",
+  "scope_source": "D41_SCOPE_INPUT_FREEZE.json",
+  "authorization_source": "D41_REPLAY_AND_COST_PROTOCOL.json",
+  "contexts": ["p14 original imports", "p41 original imports"],
+  "cases_per_context": [
+    {"case": "visible_valid", "name": "Nat.add_zero", "visibility": "PRESENT", "proof": "PROVED"},
+    {"case": "visible_wrong_type", "name": "Nat.add_zero", "visibility": "PRESENT", "proof": "TYPE_MISMATCH"},
+    {"case": "visible_open_obligations", "name": "Nat.le_trans", "visibility": "PRESENT", "proof": "UNSOLVED_GOALS"},
+    {"case": "known_library_absent_here", "names_by_context": {"p14": "sub_dvd_pow_sub_pow", "p41": "Nat.sub_one_dvd_pow_sub_one"}, "visibility": "ABSENT", "proof": "UNKNOWN_NAME"},
+    {"case": "fabricated_name", "name": "D41ScopeRuntimeMissing.pinnedNeedle", "visibility": "ABSENT", "proof": "UNKNOWN_NAME"}
+  ],
+  "methods": ["Lean full proof elaboration and named closure", "Lean #check", "Lean Environment.find? exact-key lookup"],
+  "schedules": ["five cold single proof processes", "one batch process per method", "one resident document per context with interleaved method order"],
+  "broader_control": "The frozen additional imports are used only in separate batched visibility probes for the seven known library names plus the fabricated name. No proof candidate or original-scope comparison receives them.",
+  "release_gate": "Visibility probes supply only name facts. An accepted proof requires a full check with clean named axiom closure. Synthetic controls provide no new archived proof, model quality or algorithm headroom."
+}

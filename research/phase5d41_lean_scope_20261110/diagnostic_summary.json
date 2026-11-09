@@ -1,0 +1,1511 @@
+{
+  "status": "ARCHIVED_DIAGNOSTIC_INVENTORY_ONLY",
+  "diagnostic_freeze_sha256": "811386f7cdbfbc0cbfacf988528854b2b7b5e63721e81cda54adda6b5f239aa8",
+  "ledger_sha256": "3a5246d126060ee58cc2c1158b66e429066b4f6e2225dc25c8056ba616d78349",
+  "lean_runtime_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "combined": {
+    "states": 31,
+    "independent_targets": 31,
+    "episodes": 186,
+    "attempts": 1201,
+    "author_primary_verifier_calls": 1019,
+    "episodes_with_original_visible_source": 186,
+    "invocations_by_stage": {
+      "assembled": 2,
+      "assembled.gate": 2,
+      "check": 1017,
+      "gate": 107
+    },
+    "invocations_without_bound_source": 0,
+    "invocations_by_import_list_comparison": {
+      "CHANGED_IMPORT_LIST": 26,
+      "SAME_IMPORT_LIST": 1102
+    },
+    "messages_without_bound_source_line": 0,
+    "messages_by_stage_and_category": {
+      "all": {
+        "GOALS_OR_CASES": 618,
+        "IMPLICIT_OR_TYPE_INFERENCE": 2,
+        "INSTANCE_SYNTHESIS": 262,
+        "INVALID_FIELD_PROJECTION": 62,
+        "MISSING_NAME_NO_EXACT_LINE_TOKEN": 3,
+        "OTHER_ERROR": 64,
+        "OTHER_NONERROR": 496,
+        "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": 6,
+        "PROJECT_OR_LOCAL_SHAPED_NAME": 83,
+        "QUALIFIED_LIBRARY_SHAPED_NAME": 272,
+        "RESOURCE_OR_INTERRUPT": 43,
+        "SORRY_WARNING": 470,
+        "SYNTAX_NOTATION_OR_PARSER": 117,
+        "TACTIC_PROOF_STEP_FAILURE": 806,
+        "TYPE_APPLICATION_OR_CALC": 683,
+        "UNKNOWN_TACTIC_SYNTAX_OR_IMPORT": 76,
+        "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": 220
+      },
+      "assembled": {
+        "OTHER_NONERROR": 2
+      },
+      "assembled.gate": {
+        "OTHER_NONERROR": 2
+      },
+      "check": {
+        "GOALS_OR_CASES": 618,
+        "IMPLICIT_OR_TYPE_INFERENCE": 2,
+        "INSTANCE_SYNTHESIS": 262,
+        "INVALID_FIELD_PROJECTION": 62,
+        "MISSING_NAME_NO_EXACT_LINE_TOKEN": 3,
+        "OTHER_ERROR": 64,
+        "OTHER_NONERROR": 447,
+        "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": 6,
+        "PROJECT_OR_LOCAL_SHAPED_NAME": 83,
+        "QUALIFIED_LIBRARY_SHAPED_NAME": 272,
+        "RESOURCE_OR_INTERRUPT": 43,
+        "SORRY_WARNING": 347,
+        "SYNTAX_NOTATION_OR_PARSER": 117,
+        "TACTIC_PROOF_STEP_FAILURE": 806,
+        "TYPE_APPLICATION_OR_CALC": 683,
+        "UNKNOWN_TACTIC_SYNTAX_OR_IMPORT": 76,
+        "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": 220
+      },
+      "gate": {
+        "OTHER_NONERROR": 45,
+        "SORRY_WARNING": 123
+      }
+    },
+    "affected_targets_by_stage_and_category": {
+      "all": {
+        "GOALS_OR_CASES": 31,
+        "IMPLICIT_OR_TYPE_INFERENCE": 1,
+        "INSTANCE_SYNTHESIS": 20,
+        "INVALID_FIELD_PROJECTION": 12,
+        "MISSING_NAME_NO_EXACT_LINE_TOKEN": 2,
+        "OTHER_ERROR": 23,
+        "OTHER_NONERROR": 27,
+        "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": 5,
+        "PROJECT_OR_LOCAL_SHAPED_NAME": 13,
+        "QUALIFIED_LIBRARY_SHAPED_NAME": 20,
+        "RESOURCE_OR_INTERRUPT": 3,
+        "SORRY_WARNING": 29,
+        "SYNTAX_NOTATION_OR_PARSER": 22,
+        "TACTIC_PROOF_STEP_FAILURE": 30,
+        "TYPE_APPLICATION_OR_CALC": 28,
+        "UNKNOWN_TACTIC_SYNTAX_OR_IMPORT": 14,
+        "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": 22
+      },
+      "assembled": {
+        "OTHER_NONERROR": 1
+      },
+      "assembled.gate": {
+        "OTHER_NONERROR": 1
+      },
+      "check": {
+        "GOALS_OR_CASES": 31,
+        "IMPLICIT_OR_TYPE_INFERENCE": 1,
+        "INSTANCE_SYNTHESIS": 20,
+        "INVALID_FIELD_PROJECTION": 12,
+        "MISSING_NAME_NO_EXACT_LINE_TOKEN": 2,
+        "OTHER_ERROR": 23,
+        "OTHER_NONERROR": 27,
+        "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": 5,
+        "PROJECT_OR_LOCAL_SHAPED_NAME": 13,
+        "QUALIFIED_LIBRARY_SHAPED_NAME": 20,
+        "RESOURCE_OR_INTERRUPT": 3,
+        "SORRY_WARNING": 29,
+        "SYNTAX_NOTATION_OR_PARSER": 22,
+        "TACTIC_PROOF_STEP_FAILURE": 30,
+        "TYPE_APPLICATION_OR_CALC": 28,
+        "UNKNOWN_TACTIC_SYNTAX_OR_IMPORT": 14,
+        "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": 22
+      },
+      "gate": {
+        "OTHER_NONERROR": 15,
+        "SORRY_WARNING": 21
+      }
+    },
+    "source_bound_names_by_category_and_target": {
+      "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": {
+        "Zmod.natCastZmod_eq_zero_iff_dvd": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "even_add.mpr": [
+          "amc12b_2002_p11"
+        ],
+        "h₀.trans": [
+          "mathd_numbertheory_427"
+        ],
+        "k.succ": [
+          "induction_divisibility_9div10tonm1"
+        ],
+        "not_even_iff_odd.mp": [
+          "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+        ]
+      },
+      "PROJECT_OR_LOCAL_SHAPED_NAME": {
+        "P108Bad.p108_target": [
+          "amc12a_2008_p15"
+        ],
+        "P109Bad.base": [
+          "induction_divisibility_3div2tooddnp1"
+        ],
+        "P109Bad.p109_target": [
+          "induction_divisibility_3div2tooddnp1"
+        ],
+        "P109Bad.pow_identity": [
+          "induction_divisibility_3div2tooddnp1"
+        ],
+        "P109Bad.step": [
+          "induction_divisibility_3div2tooddnp1"
+        ],
+        "P110Bad.p110_target": [
+          "induction_divisibility_3divnto3m2n"
+        ],
+        "P113Bad.p113_target": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "P113Bad.qmod": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "P113Bad.qodd": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "P113Bad.two3k": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "P113Bad.v": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "P114Bad.p114_target": [
+          "mathd_numbertheory_412"
+        ],
+        "P115Bad.p115_target": [
+          "mathd_numbertheory_483"
+        ],
+        "P115Bad.step_fib": [
+          "mathd_numbertheory_483"
+        ],
+        "P120Bad.p120_target": [
+          "mathd_numbertheory_48"
+        ],
+        "P135Bad.a_sub_b_pos": [
+          "amc12b_2002_p11"
+        ],
+        "P137Bad.kt_sum_eq_m": [
+          "mathd_algebra_289"
+        ],
+        "P137Bad.n_eq_kt": [
+          "mathd_algebra_289"
+        ],
+        "P41Bad.mod_9": [
+          "induction_divisibility_9div10tonm1"
+        ],
+        "P41Bad.p41_target": [
+          "induction_divisibility_9div10tonm1"
+        ],
+        "a_sub_b_pos": [
+          "amc12b_2002_p11"
+        ],
+        "b_eq_two": [
+          "amc12b_2002_p11"
+        ],
+        "base": [
+          "induction_divisibility_3div2tooddnp1"
+        ],
+        "h_pow": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "h₀": [
+          "amc12b_2002_p11"
+        ],
+        "k": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "kt_sum_eq_m": [
+          "mathd_algebra_289"
+        ],
+        "mod_9": [
+          "induction_divisibility_9div10tonm1"
+        ],
+        "n": [
+          "amc12b_2002_p3",
+          "induction_1pxpownlt1pnx",
+          "induction_sumkexp3eqsumksq"
+        ],
+        "n_eq_kt": [
+          "mathd_algebra_289"
+        ],
+        "qodd": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "step_fib": [
+          "mathd_numbertheory_483"
+        ],
+        "v": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ]
+      },
+      "QUALIFIED_LIBRARY_SHAPED_NAME": {
+        "Finset.Icc": [
+          "numbertheory_sqmod3in01d"
+        ],
+        "Finset.mem_Icc.mpr": [
+          "numbertheory_sqmod3in01d"
+        ],
+        "Finset.not_mem_empty": [
+          "mathd_numbertheory_5"
+        ],
+        "Int.add_mod": [
+          "numbertheory_sqmod3in01d"
+        ],
+        "Int.cast_dvd": [
+          "numbertheory_prmdvsneqnsqmodpeq0"
+        ],
+        "Int.dvd_emod": [
+          "numbertheory_prmdvsneqnsqmodpeq0"
+        ],
+        "Int.dvd_of_mod_eq_zero": [
+          "numbertheory_aoddbdiv4asqpbsqmod8eq1",
+          "numbertheory_sqmod4in01d"
+        ],
+        "Int.ediv_add_mod": [
+          "numbertheory_sqmod4in01d"
+        ],
+        "Int.emod_eq_emod_iff_modEq": [
+          "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+        ],
+        "Int.emod_eq_zero": [
+          "numbertheory_prmdvsneqnsqmodpeq0"
+        ],
+        "Int.emod_eq_zero_iff_dvd": [
+          "numbertheory_prmdvsneqnsqmodpeq0"
+        ],
+        "Int.emod_mul": [
+          "mathd_numbertheory_412"
+        ],
+        "Int.emod_pow": [
+          "mathd_numbertheory_412"
+        ],
+        "Int.emod_range": [
+          "numbertheory_sqmod4in01d"
+        ],
+        "Int.emod_three_cases": [
+          "numbertheory_sqmod3in01d"
+        ],
+        "Int.emod_threecases": [
+          "numbertheory_sqmod3in01d"
+        ],
+        "Int.modEq_iff_modEq_mod": [
+          "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+        ],
+        "Int.modEq_iff_mod_eq_mod": [
+          "mathd_numbertheory_412"
+        ],
+        "Int.mod_eq_zero_of_dvd": [
+          "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+        ],
+        "Int.mul_mod": [
+          "mathd_numbertheory_412",
+          "numbertheory_sqmod3in01d"
+        ],
+        "Int.ofNat_emod": [
+          "mathd_numbertheory_412"
+        ],
+        "Int.pow_emod": [
+          "mathd_numbertheory_412"
+        ],
+        "Int.pow_mod": [
+          "mathd_numbertheory_412",
+          "numbertheory_sqmod3in01d"
+        ],
+        "Int.prime_iffNat": [
+          "numbertheory_prmdvsneqnsqmodpeq0"
+        ],
+        "Int.prime_natCast": [
+          "numbertheory_prmdvsneqnsqmodpeq0"
+        ],
+        "Nat.Coprime.dvd_mul": [
+          "mathd_numbertheory_541"
+        ],
+        "Nat.Mersenne.prime": [
+          "numbertheory_2pownm1prime_nprime"
+        ],
+        "Nat.MersennePrime": [
+          "numbertheory_2pownm1prime_nprime"
+        ],
+        "Nat.ModEq.dvd_iff_modEq_zero.mp": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "Nat.ModEq.dvd_iff_modEq_zero.mpr": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "Nat.ModEq.dvd_of_modEq_zero": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "Nat.ModEq.dvd_sub": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "Nat.ModEq.fermat": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "Nat.ModEq.modEq_zero_iff_dvd": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "Nat.ModEq.modEq_zero_iff_dvd.mp": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "Nat.ModEq.pow_card": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "Nat.Prime": [
+          "amc12b_2002_p11"
+        ],
+        "Nat.Prime.dvd_mul_add_self": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "Nat.Prime.eq_two_of_even": [
+          "amc12b_2002_p11"
+        ],
+        "Nat.Prime.not_two": [
+          "amc12b_2002_p11"
+        ],
+        "Nat.Prime.odd_iff_not_two": [
+          "amc12b_2002_p11"
+        ],
+        "Nat.Prime.two_lt": [
+          "amc12b_2002_p11"
+        ],
+        "Nat.cast_dvd": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "Nat.coprime": [
+          "mathd_numbertheory_541"
+        ],
+        "Nat.dvd_add_iff": [
+          "induction_12dvd4expnp1p20"
+        ],
+        "Nat.dvd_add_of_dvd_right": [
+          "induction_divisibility_3div2tooddnp1"
+        ],
+        "Nat.dvd_iff_zmod_eq_zero": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "Nat.dvd_mul_of_dvd_left": [
+          "induction_12dvd4expnp1p20",
+          "induction_divisibility_3div2tooddnp1",
+          "numbertheory_2pownm1prime_nprime"
+        ],
+        "Nat.dvd_mul_of_dvd_right": [
+          "induction_12dvd4expnp1p20",
+          "induction_divisibility_3div2tooddnp1"
+        ],
+        "Nat.dvd_pow": [
+          "amc12a_2008_p15"
+        ],
+        "Nat.dvd_pow_self": [
+          "amc12a_2008_p15"
+        ],
+        "Nat.dvd_pow_sub_pow": [
+          "numbertheory_2pownm1prime_nprime"
+        ],
+        "Nat.dvd_sub_of_dvd_add": [
+          "induction_divisibility_3div2tooddnp1"
+        ],
+        "Nat.eq_one_or_self_of_dvd": [
+          "mathd_numbertheory_541"
+        ],
+        "Nat.even": [
+          "amc12a_2008_p15"
+        ],
+        "Nat.even_iff_two_dvd": [
+          "amc12b_2002_p11"
+        ],
+        "Nat.even_iff_two_dvd.mp": [
+          "amc12b_2002_p11"
+        ],
+        "Nat.fib": [
+          "mathd_numbertheory_483"
+        ],
+        "Nat.fib_succ_succ": [
+          "mathd_numbertheory_483"
+        ],
+        "Nat.le_of_pow_le_pow": [
+          "mathd_numbertheory_234"
+        ],
+        "Nat.lt_mul_of_one_lt_right": [
+          "amc12b_2002_p3"
+        ],
+        "Nat.lt_mul_of_pos_right": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "Nat.lt_of_pow_lt_pow": [
+          "mathd_numbertheory_234"
+        ],
+        "Nat.mersenne_prime_iff": [
+          "numbertheory_2pownm1prime_nprime"
+        ],
+        "Nat.mersenne_prime_iff.mp": [
+          "numbertheory_2pownm1prime_nprime"
+        ],
+        "Nat.mod_eq_of_dvd": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "Nat.mod_sub": [
+          "induction_divisibility_9div10tonm1"
+        ],
+        "Nat.mul_mod_zero": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "Nat.not_prime_of_dvd": [
+          "amc12b_2002_p3"
+        ],
+        "Nat.not_prime_of_dvd_of_dvd": [
+          "numbertheory_2pownm1prime_nprime"
+        ],
+        "Nat.odd_iff_not_even": [
+          "amc12b_2002_p11"
+        ],
+        "Nat.one_le_succ": [
+          "induction_divisibility_9div10tonm1"
+        ],
+        "Nat.pos_pow_of_pos": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "Nat.pow_le_pow_of_le_left": [
+          "mathd_numbertheory_5"
+        ],
+        "Nat.prime_dvd_mul": [
+          "mathd_numbertheory_541"
+        ],
+        "Nat.prime_mersenne": [
+          "numbertheory_2pownm1prime_nprime"
+        ],
+        "Nat.prime_of_mersenne": [
+          "numbertheory_2pownm1prime_nprime"
+        ],
+        "Nat.prime_of_mersenne_prime": [
+          "numbertheory_2pownm1prime_nprime"
+        ],
+        "Nat.prime_of_prime_mersenne": [
+          "numbertheory_2pownm1prime_nprime"
+        ],
+        "Nat.prime_of_prime_mersenne_or_ne_zero": [
+          "numbertheory_2pownm1prime_nprime"
+        ],
+        "Nat.sub_mod": [
+          "induction_divisibility_9div10tonm1"
+        ],
+        "Nat.sum_range_cube": [
+          "induction_sumkexp3eqsumksq"
+        ],
+        "Real.bernoulli": [
+          "induction_1pxpownlt1pnx"
+        ],
+        "Real.bernoulli_inequality": [
+          "induction_1pxpownlt1pnx"
+        ],
+        "Real.one_add_mul_le_pow": [
+          "induction_1pxpownlt1pnx"
+        ],
+        "ZMod.cast_eq_cast": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "ZMod.eq_iff_modEq": [
+          "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+        ],
+        "ZMod.eq_zero_iff_dvd": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "ZMod.intCast_eq_intCast_iff.mp": [
+          "mathd_numbertheory_412"
+        ],
+        "ZMod.intCast_eq_intCast_iff.mpr": [
+          "mathd_numbertheory_412"
+        ],
+        "ZMod.natCast_coe": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "ZMod.natCast_zmodEq_natCast": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "ZMod.natCast_zmod_eq_zero_iff_dvd": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "ZMod.nat_cast_eq_zero_iff": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "ZMod.pow_prime": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "ZMod.val_eq_zero_iff_dvd": [
+          "induction_pprime_pdvdapowpma"
+        ]
+      },
+      "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": {
+        "Finset": [
+          "numbertheory_sqmod3in01d"
+        ],
+        "IH": [
+          "induction_sumkexp3eqsumksq"
+        ],
+        "a": [
+          "amc12b_2002_p11"
+        ],
+        "abs_add": [
+          "algebra_absxm1pabsxpabsxp1eqxp2_0leqxleq1"
+        ],
+        "abs_of_lt": [
+          "algebra_absxm1pabsxpabsxp1eqxp2_0leqxleq1"
+        ],
+        "add_mod": [
+          "induction_divisibility_3div2tooddnp1",
+          "induction_divisibility_3divnto3m2n"
+        ],
+        "div_add_mod": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "div_mul_cancel": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "div_two_or_three": [
+          "amc12b_2002_p11"
+        ],
+        "dvd_add": [
+          "induction_11div10tonmn1ton",
+          "induction_12dvd4expnp1p20",
+          "induction_divisibility_9div10tonm1"
+        ],
+        "dvd_iff_emod_eq_zero": [
+          "numbertheory_prmdvsneqnsqmodpeq0"
+        ],
+        "dvd_mod_iff": [
+          "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+        ],
+        "dvd_of_mod_eq_zero": [
+          "mathd_algebra_289",
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "dvd_sub": [
+          "induction_11div10tonmn1ton",
+          "induction_12dvd4expnp1p20"
+        ],
+        "even_iff_two_dvd": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "even_mul_succ_self": [
+          "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+        ],
+        "exact": [
+          "induction_pprime_pdvdapowpma"
+        ],
+        "h": [
+          "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+        ],
+        "h₀": [
+          "mathd_numbertheory_483",
+          "numbertheory_prmdvsneqnsqmodpeq0"
+        ],
+        "h₁": [
+          "mathd_numbertheory_483"
+        ],
+        "h₂": [
+          "amc12b_2002_p11",
+          "mathd_numbertheory_483",
+          "mathd_numbertheory_541"
+        ],
+        "ih": [
+          "induction_divisibility_3div2tooddnp1"
+        ],
+        "k": [
+          "numbertheory_prmdvsneqnsqmodpeq0"
+        ],
+        "le_or_lt": [
+          "mathd_numbertheory_5"
+        ],
+        "m": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "m_le_401": [
+          "mathd_numbertheory_541"
+        ],
+        "mul_div_cancel": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "mul_mod": [
+          "induction_divisibility_3div2tooddnp1",
+          "induction_divisibility_3divnto3m2n"
+        ],
+        "n": [
+          "mathd_numbertheory_541"
+        ],
+        "one_add_mul_le_pow'": [
+          "induction_1pxpownlt1pnx"
+        ],
+        "one_add_pow_le_pow'": [
+          "induction_1pxpownlt1pnx"
+        ],
+        "pow_le_pow_of_le_left": [
+          "mathd_numbertheory_5"
+        ],
+        "pow_le_pow_right": [
+          "induction_1pxpownlt1pnx"
+        ],
+        "pow_mod": [
+          "amc12a_2008_p15",
+          "induction_divisibility_3div2tooddnp1",
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "pow_mul": [
+          "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+        ],
+        "sub_dvd_pow_sub_pow": [
+          "induction_11div10tonmn1ton"
+        ],
+        "sum_range_succ": [
+          "induction_sum_odd"
+        ],
+        "this": [
+          "amc12b_2002_p11",
+          "amc12b_2002_p3",
+          "mathd_numbertheory_234"
+        ]
+      }
+    },
+    "earlier_original_import_probe_links": [
+      {
+        "state_id": "p14_bad.state0",
+        "model": "qwen/qwen3.6-flash",
+        "mode": "rewrite",
+        "step": 8,
+        "stage": "check",
+        "name": "sub_dvd_pow_sub_pow",
+        "line": 10,
+        "check_member": "data/llm_calls/p14_monolithic_rwsrcq_v0/typed/step08.check.elab.json",
+        "check_sha256": "04cbd3f6b5d96ebb72339fdd018f9841b53a094a658e7e95013d54e7248f895f",
+        "source_sha256": "606bf3b86b93fc893d1471ed208666ecfece725b2ef408f9c0c122fed957a101",
+        "checked_imports": [
+          "Architect",
+          "Mathlib.Tactic.Ring"
+        ],
+        "sha256": "40a4cba60e7d2e9dc9e2ccaa0e6e158845d8f41b1d999cac28b79cfd7e6ca0a8",
+        "probe_imports_match_checked": false
+      }
+    ]
+  },
+  "cohorts": {
+    "unresolved": {
+      "states": 11,
+      "independent_targets": 11,
+      "episodes": 66,
+      "attempts": 528,
+      "author_primary_verifier_calls": 440,
+      "episodes_with_original_visible_source": 66,
+      "invocations_by_stage": {
+        "check": 440,
+        "gate": 23
+      },
+      "invocations_without_bound_source": 0,
+      "invocations_by_import_list_comparison": {
+        "CHANGED_IMPORT_LIST": 20,
+        "SAME_IMPORT_LIST": 443
+      },
+      "messages_without_bound_source_line": 0,
+      "messages_by_stage_and_category": {
+        "all": {
+          "GOALS_OR_CASES": 317,
+          "IMPLICIT_OR_TYPE_INFERENCE": 2,
+          "INSTANCE_SYNTHESIS": 220,
+          "INVALID_FIELD_PROJECTION": 55,
+          "MISSING_NAME_NO_EXACT_LINE_TOKEN": 2,
+          "OTHER_ERROR": 34,
+          "OTHER_NONERROR": 213,
+          "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": 5,
+          "PROJECT_OR_LOCAL_SHAPED_NAME": 53,
+          "QUALIFIED_LIBRARY_SHAPED_NAME": 148,
+          "RESOURCE_OR_INTERRUPT": 43,
+          "SORRY_WARNING": 212,
+          "SYNTAX_NOTATION_OR_PARSER": 54,
+          "TACTIC_PROOF_STEP_FAILURE": 400,
+          "TYPE_APPLICATION_OR_CALC": 428,
+          "UNKNOWN_TACTIC_SYNTAX_OR_IMPORT": 49,
+          "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": 137
+        },
+        "check": {
+          "GOALS_OR_CASES": 317,
+          "IMPLICIT_OR_TYPE_INFERENCE": 2,
+          "INSTANCE_SYNTHESIS": 220,
+          "INVALID_FIELD_PROJECTION": 55,
+          "MISSING_NAME_NO_EXACT_LINE_TOKEN": 2,
+          "OTHER_ERROR": 34,
+          "OTHER_NONERROR": 207,
+          "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": 5,
+          "PROJECT_OR_LOCAL_SHAPED_NAME": 53,
+          "QUALIFIED_LIBRARY_SHAPED_NAME": 148,
+          "RESOURCE_OR_INTERRUPT": 43,
+          "SORRY_WARNING": 163,
+          "SYNTAX_NOTATION_OR_PARSER": 54,
+          "TACTIC_PROOF_STEP_FAILURE": 400,
+          "TYPE_APPLICATION_OR_CALC": 428,
+          "UNKNOWN_TACTIC_SYNTAX_OR_IMPORT": 49,
+          "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": 137
+        },
+        "gate": {
+          "OTHER_NONERROR": 6,
+          "SORRY_WARNING": 49
+        }
+      },
+      "affected_targets_by_stage_and_category": {
+        "all": {
+          "GOALS_OR_CASES": 11,
+          "IMPLICIT_OR_TYPE_INFERENCE": 1,
+          "INSTANCE_SYNTHESIS": 9,
+          "INVALID_FIELD_PROJECTION": 6,
+          "MISSING_NAME_NO_EXACT_LINE_TOKEN": 1,
+          "OTHER_ERROR": 10,
+          "OTHER_NONERROR": 9,
+          "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": 4,
+          "PROJECT_OR_LOCAL_SHAPED_NAME": 6,
+          "QUALIFIED_LIBRARY_SHAPED_NAME": 9,
+          "RESOURCE_OR_INTERRUPT": 3,
+          "SORRY_WARNING": 11,
+          "SYNTAX_NOTATION_OR_PARSER": 9,
+          "TACTIC_PROOF_STEP_FAILURE": 11,
+          "TYPE_APPLICATION_OR_CALC": 10,
+          "UNKNOWN_TACTIC_SYNTAX_OR_IMPORT": 8,
+          "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": 9
+        },
+        "check": {
+          "GOALS_OR_CASES": 11,
+          "IMPLICIT_OR_TYPE_INFERENCE": 1,
+          "INSTANCE_SYNTHESIS": 9,
+          "INVALID_FIELD_PROJECTION": 6,
+          "MISSING_NAME_NO_EXACT_LINE_TOKEN": 1,
+          "OTHER_ERROR": 10,
+          "OTHER_NONERROR": 9,
+          "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": 4,
+          "PROJECT_OR_LOCAL_SHAPED_NAME": 6,
+          "QUALIFIED_LIBRARY_SHAPED_NAME": 9,
+          "RESOURCE_OR_INTERRUPT": 3,
+          "SORRY_WARNING": 11,
+          "SYNTAX_NOTATION_OR_PARSER": 9,
+          "TACTIC_PROOF_STEP_FAILURE": 11,
+          "TYPE_APPLICATION_OR_CALC": 10,
+          "UNKNOWN_TACTIC_SYNTAX_OR_IMPORT": 8,
+          "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": 9
+        },
+        "gate": {
+          "OTHER_NONERROR": 3,
+          "SORRY_WARNING": 9
+        }
+      },
+      "source_bound_names_by_category_and_target": {
+        "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": {
+          "Zmod.natCastZmod_eq_zero_iff_dvd": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "even_add.mpr": [
+            "amc12b_2002_p11"
+          ],
+          "h₀.trans": [
+            "mathd_numbertheory_427"
+          ],
+          "k.succ": [
+            "induction_divisibility_9div10tonm1"
+          ]
+        },
+        "PROJECT_OR_LOCAL_SHAPED_NAME": {
+          "P108Bad.p108_target": [
+            "amc12a_2008_p15"
+          ],
+          "P113Bad.p113_target": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "P113Bad.qmod": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "P113Bad.qodd": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "P113Bad.two3k": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "P113Bad.v": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "P115Bad.p115_target": [
+            "mathd_numbertheory_483"
+          ],
+          "P115Bad.step_fib": [
+            "mathd_numbertheory_483"
+          ],
+          "P135Bad.a_sub_b_pos": [
+            "amc12b_2002_p11"
+          ],
+          "P41Bad.mod_9": [
+            "induction_divisibility_9div10tonm1"
+          ],
+          "P41Bad.p41_target": [
+            "induction_divisibility_9div10tonm1"
+          ],
+          "a_sub_b_pos": [
+            "amc12b_2002_p11"
+          ],
+          "b_eq_two": [
+            "amc12b_2002_p11"
+          ],
+          "h_pow": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "h₀": [
+            "amc12b_2002_p11"
+          ],
+          "k": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "mod_9": [
+            "induction_divisibility_9div10tonm1"
+          ],
+          "n": [
+            "amc12b_2002_p3"
+          ],
+          "qodd": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "step_fib": [
+            "mathd_numbertheory_483"
+          ],
+          "v": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ]
+        },
+        "QUALIFIED_LIBRARY_SHAPED_NAME": {
+          "Nat.Coprime.dvd_mul": [
+            "mathd_numbertheory_541"
+          ],
+          "Nat.Mersenne.prime": [
+            "numbertheory_2pownm1prime_nprime"
+          ],
+          "Nat.MersennePrime": [
+            "numbertheory_2pownm1prime_nprime"
+          ],
+          "Nat.ModEq.dvd_iff_modEq_zero.mp": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "Nat.ModEq.dvd_iff_modEq_zero.mpr": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "Nat.ModEq.dvd_of_modEq_zero": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "Nat.ModEq.dvd_sub": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "Nat.ModEq.fermat": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "Nat.ModEq.modEq_zero_iff_dvd": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "Nat.ModEq.modEq_zero_iff_dvd.mp": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "Nat.ModEq.pow_card": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "Nat.Prime": [
+            "amc12b_2002_p11"
+          ],
+          "Nat.Prime.dvd_mul_add_self": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "Nat.Prime.eq_two_of_even": [
+            "amc12b_2002_p11"
+          ],
+          "Nat.Prime.not_two": [
+            "amc12b_2002_p11"
+          ],
+          "Nat.Prime.odd_iff_not_two": [
+            "amc12b_2002_p11"
+          ],
+          "Nat.Prime.two_lt": [
+            "amc12b_2002_p11"
+          ],
+          "Nat.cast_dvd": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "Nat.coprime": [
+            "mathd_numbertheory_541"
+          ],
+          "Nat.dvd_iff_zmod_eq_zero": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "Nat.dvd_mul_of_dvd_left": [
+            "numbertheory_2pownm1prime_nprime"
+          ],
+          "Nat.dvd_pow": [
+            "amc12a_2008_p15"
+          ],
+          "Nat.dvd_pow_self": [
+            "amc12a_2008_p15"
+          ],
+          "Nat.dvd_pow_sub_pow": [
+            "numbertheory_2pownm1prime_nprime"
+          ],
+          "Nat.eq_one_or_self_of_dvd": [
+            "mathd_numbertheory_541"
+          ],
+          "Nat.even": [
+            "amc12a_2008_p15"
+          ],
+          "Nat.even_iff_two_dvd": [
+            "amc12b_2002_p11"
+          ],
+          "Nat.even_iff_two_dvd.mp": [
+            "amc12b_2002_p11"
+          ],
+          "Nat.fib": [
+            "mathd_numbertheory_483"
+          ],
+          "Nat.fib_succ_succ": [
+            "mathd_numbertheory_483"
+          ],
+          "Nat.lt_mul_of_one_lt_right": [
+            "amc12b_2002_p3"
+          ],
+          "Nat.lt_mul_of_pos_right": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "Nat.mersenne_prime_iff": [
+            "numbertheory_2pownm1prime_nprime"
+          ],
+          "Nat.mersenne_prime_iff.mp": [
+            "numbertheory_2pownm1prime_nprime"
+          ],
+          "Nat.mod_eq_of_dvd": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "Nat.mod_sub": [
+            "induction_divisibility_9div10tonm1"
+          ],
+          "Nat.mul_mod_zero": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "Nat.not_prime_of_dvd": [
+            "amc12b_2002_p3"
+          ],
+          "Nat.not_prime_of_dvd_of_dvd": [
+            "numbertheory_2pownm1prime_nprime"
+          ],
+          "Nat.odd_iff_not_even": [
+            "amc12b_2002_p11"
+          ],
+          "Nat.one_le_succ": [
+            "induction_divisibility_9div10tonm1"
+          ],
+          "Nat.pos_pow_of_pos": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "Nat.prime_dvd_mul": [
+            "mathd_numbertheory_541"
+          ],
+          "Nat.prime_mersenne": [
+            "numbertheory_2pownm1prime_nprime"
+          ],
+          "Nat.prime_of_mersenne": [
+            "numbertheory_2pownm1prime_nprime"
+          ],
+          "Nat.prime_of_mersenne_prime": [
+            "numbertheory_2pownm1prime_nprime"
+          ],
+          "Nat.prime_of_prime_mersenne": [
+            "numbertheory_2pownm1prime_nprime"
+          ],
+          "Nat.prime_of_prime_mersenne_or_ne_zero": [
+            "numbertheory_2pownm1prime_nprime"
+          ],
+          "Nat.sub_mod": [
+            "induction_divisibility_9div10tonm1"
+          ],
+          "ZMod.cast_eq_cast": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "ZMod.eq_zero_iff_dvd": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "ZMod.natCast_coe": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "ZMod.natCast_zmodEq_natCast": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "ZMod.natCast_zmod_eq_zero_iff_dvd": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "ZMod.nat_cast_eq_zero_iff": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "ZMod.pow_prime": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "ZMod.val_eq_zero_iff_dvd": [
+            "induction_pprime_pdvdapowpma"
+          ]
+        },
+        "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": {
+          "a": [
+            "amc12b_2002_p11"
+          ],
+          "div_add_mod": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "div_mul_cancel": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "div_two_or_three": [
+            "amc12b_2002_p11"
+          ],
+          "dvd_add": [
+            "induction_11div10tonmn1ton",
+            "induction_divisibility_9div10tonm1"
+          ],
+          "dvd_of_mod_eq_zero": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "dvd_sub": [
+            "induction_11div10tonmn1ton"
+          ],
+          "even_iff_two_dvd": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "exact": [
+            "induction_pprime_pdvdapowpma"
+          ],
+          "h₀": [
+            "mathd_numbertheory_483"
+          ],
+          "h₁": [
+            "mathd_numbertheory_483"
+          ],
+          "h₂": [
+            "amc12b_2002_p11",
+            "mathd_numbertheory_483",
+            "mathd_numbertheory_541"
+          ],
+          "m": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "m_le_401": [
+            "mathd_numbertheory_541"
+          ],
+          "mul_div_cancel": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "n": [
+            "mathd_numbertheory_541"
+          ],
+          "pow_mod": [
+            "amc12a_2008_p15",
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "pow_mul": [
+            "numbertheory_3pow2pownm1mod2pownp3eq2pownp2"
+          ],
+          "sub_dvd_pow_sub_pow": [
+            "induction_11div10tonmn1ton"
+          ],
+          "this": [
+            "amc12b_2002_p11",
+            "amc12b_2002_p3"
+          ]
+        }
+      },
+      "earlier_original_import_probe_links": [
+        {
+          "state_id": "p14_bad.state0",
+          "model": "qwen/qwen3.6-flash",
+          "mode": "rewrite",
+          "step": 8,
+          "stage": "check",
+          "name": "sub_dvd_pow_sub_pow",
+          "line": 10,
+          "check_member": "data/llm_calls/p14_monolithic_rwsrcq_v0/typed/step08.check.elab.json",
+          "check_sha256": "04cbd3f6b5d96ebb72339fdd018f9841b53a094a658e7e95013d54e7248f895f",
+          "source_sha256": "606bf3b86b93fc893d1471ed208666ecfece725b2ef408f9c0c122fed957a101",
+          "checked_imports": [
+            "Architect",
+            "Mathlib.Tactic.Ring"
+          ],
+          "sha256": "40a4cba60e7d2e9dc9e2ccaa0e6e158845d8f41b1d999cac28b79cfd7e6ca0a8",
+          "probe_imports_match_checked": false
+        }
+      ]
+    },
+    "same_family_solved": {
+      "states": 20,
+      "independent_targets": 20,
+      "episodes": 120,
+      "attempts": 673,
+      "author_primary_verifier_calls": 579,
+      "episodes_with_original_visible_source": 120,
+      "invocations_by_stage": {
+        "assembled": 2,
+        "assembled.gate": 2,
+        "check": 577,
+        "gate": 84
+      },
+      "invocations_without_bound_source": 0,
+      "invocations_by_import_list_comparison": {
+        "CHANGED_IMPORT_LIST": 6,
+        "SAME_IMPORT_LIST": 659
+      },
+      "messages_without_bound_source_line": 0,
+      "messages_by_stage_and_category": {
+        "all": {
+          "GOALS_OR_CASES": 301,
+          "INSTANCE_SYNTHESIS": 42,
+          "INVALID_FIELD_PROJECTION": 7,
+          "MISSING_NAME_NO_EXACT_LINE_TOKEN": 1,
+          "OTHER_ERROR": 30,
+          "OTHER_NONERROR": 283,
+          "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": 1,
+          "PROJECT_OR_LOCAL_SHAPED_NAME": 30,
+          "QUALIFIED_LIBRARY_SHAPED_NAME": 124,
+          "SORRY_WARNING": 258,
+          "SYNTAX_NOTATION_OR_PARSER": 63,
+          "TACTIC_PROOF_STEP_FAILURE": 406,
+          "TYPE_APPLICATION_OR_CALC": 255,
+          "UNKNOWN_TACTIC_SYNTAX_OR_IMPORT": 27,
+          "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": 83
+        },
+        "assembled": {
+          "OTHER_NONERROR": 2
+        },
+        "assembled.gate": {
+          "OTHER_NONERROR": 2
+        },
+        "check": {
+          "GOALS_OR_CASES": 301,
+          "INSTANCE_SYNTHESIS": 42,
+          "INVALID_FIELD_PROJECTION": 7,
+          "MISSING_NAME_NO_EXACT_LINE_TOKEN": 1,
+          "OTHER_ERROR": 30,
+          "OTHER_NONERROR": 240,
+          "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": 1,
+          "PROJECT_OR_LOCAL_SHAPED_NAME": 30,
+          "QUALIFIED_LIBRARY_SHAPED_NAME": 124,
+          "SORRY_WARNING": 184,
+          "SYNTAX_NOTATION_OR_PARSER": 63,
+          "TACTIC_PROOF_STEP_FAILURE": 406,
+          "TYPE_APPLICATION_OR_CALC": 255,
+          "UNKNOWN_TACTIC_SYNTAX_OR_IMPORT": 27,
+          "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": 83
+        },
+        "gate": {
+          "OTHER_NONERROR": 39,
+          "SORRY_WARNING": 74
+        }
+      },
+      "affected_targets_by_stage_and_category": {
+        "all": {
+          "GOALS_OR_CASES": 20,
+          "INSTANCE_SYNTHESIS": 11,
+          "INVALID_FIELD_PROJECTION": 6,
+          "MISSING_NAME_NO_EXACT_LINE_TOKEN": 1,
+          "OTHER_ERROR": 13,
+          "OTHER_NONERROR": 18,
+          "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": 1,
+          "PROJECT_OR_LOCAL_SHAPED_NAME": 7,
+          "QUALIFIED_LIBRARY_SHAPED_NAME": 11,
+          "SORRY_WARNING": 18,
+          "SYNTAX_NOTATION_OR_PARSER": 13,
+          "TACTIC_PROOF_STEP_FAILURE": 19,
+          "TYPE_APPLICATION_OR_CALC": 18,
+          "UNKNOWN_TACTIC_SYNTAX_OR_IMPORT": 6,
+          "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": 13
+        },
+        "assembled": {
+          "OTHER_NONERROR": 1
+        },
+        "assembled.gate": {
+          "OTHER_NONERROR": 1
+        },
+        "check": {
+          "GOALS_OR_CASES": 20,
+          "INSTANCE_SYNTHESIS": 11,
+          "INVALID_FIELD_PROJECTION": 6,
+          "MISSING_NAME_NO_EXACT_LINE_TOKEN": 1,
+          "OTHER_ERROR": 13,
+          "OTHER_NONERROR": 18,
+          "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": 1,
+          "PROJECT_OR_LOCAL_SHAPED_NAME": 7,
+          "QUALIFIED_LIBRARY_SHAPED_NAME": 11,
+          "SORRY_WARNING": 18,
+          "SYNTAX_NOTATION_OR_PARSER": 13,
+          "TACTIC_PROOF_STEP_FAILURE": 19,
+          "TYPE_APPLICATION_OR_CALC": 18,
+          "UNKNOWN_TACTIC_SYNTAX_OR_IMPORT": 6,
+          "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": 13
+        },
+        "gate": {
+          "OTHER_NONERROR": 12,
+          "SORRY_WARNING": 12
+        }
+      },
+      "source_bound_names_by_category_and_target": {
+        "OTHER_QUALIFIED_NAME_ORIGIN_UNKNOWN": {
+          "not_even_iff_odd.mp": [
+            "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+          ]
+        },
+        "PROJECT_OR_LOCAL_SHAPED_NAME": {
+          "P109Bad.base": [
+            "induction_divisibility_3div2tooddnp1"
+          ],
+          "P109Bad.p109_target": [
+            "induction_divisibility_3div2tooddnp1"
+          ],
+          "P109Bad.pow_identity": [
+            "induction_divisibility_3div2tooddnp1"
+          ],
+          "P109Bad.step": [
+            "induction_divisibility_3div2tooddnp1"
+          ],
+          "P110Bad.p110_target": [
+            "induction_divisibility_3divnto3m2n"
+          ],
+          "P114Bad.p114_target": [
+            "mathd_numbertheory_412"
+          ],
+          "P120Bad.p120_target": [
+            "mathd_numbertheory_48"
+          ],
+          "P137Bad.kt_sum_eq_m": [
+            "mathd_algebra_289"
+          ],
+          "P137Bad.n_eq_kt": [
+            "mathd_algebra_289"
+          ],
+          "base": [
+            "induction_divisibility_3div2tooddnp1"
+          ],
+          "kt_sum_eq_m": [
+            "mathd_algebra_289"
+          ],
+          "n": [
+            "induction_1pxpownlt1pnx",
+            "induction_sumkexp3eqsumksq"
+          ],
+          "n_eq_kt": [
+            "mathd_algebra_289"
+          ]
+        },
+        "QUALIFIED_LIBRARY_SHAPED_NAME": {
+          "Finset.Icc": [
+            "numbertheory_sqmod3in01d"
+          ],
+          "Finset.mem_Icc.mpr": [
+            "numbertheory_sqmod3in01d"
+          ],
+          "Finset.not_mem_empty": [
+            "mathd_numbertheory_5"
+          ],
+          "Int.add_mod": [
+            "numbertheory_sqmod3in01d"
+          ],
+          "Int.cast_dvd": [
+            "numbertheory_prmdvsneqnsqmodpeq0"
+          ],
+          "Int.dvd_emod": [
+            "numbertheory_prmdvsneqnsqmodpeq0"
+          ],
+          "Int.dvd_of_mod_eq_zero": [
+            "numbertheory_aoddbdiv4asqpbsqmod8eq1",
+            "numbertheory_sqmod4in01d"
+          ],
+          "Int.ediv_add_mod": [
+            "numbertheory_sqmod4in01d"
+          ],
+          "Int.emod_eq_emod_iff_modEq": [
+            "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+          ],
+          "Int.emod_eq_zero": [
+            "numbertheory_prmdvsneqnsqmodpeq0"
+          ],
+          "Int.emod_eq_zero_iff_dvd": [
+            "numbertheory_prmdvsneqnsqmodpeq0"
+          ],
+          "Int.emod_mul": [
+            "mathd_numbertheory_412"
+          ],
+          "Int.emod_pow": [
+            "mathd_numbertheory_412"
+          ],
+          "Int.emod_range": [
+            "numbertheory_sqmod4in01d"
+          ],
+          "Int.emod_three_cases": [
+            "numbertheory_sqmod3in01d"
+          ],
+          "Int.emod_threecases": [
+            "numbertheory_sqmod3in01d"
+          ],
+          "Int.modEq_iff_modEq_mod": [
+            "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+          ],
+          "Int.modEq_iff_mod_eq_mod": [
+            "mathd_numbertheory_412"
+          ],
+          "Int.mod_eq_zero_of_dvd": [
+            "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+          ],
+          "Int.mul_mod": [
+            "mathd_numbertheory_412",
+            "numbertheory_sqmod3in01d"
+          ],
+          "Int.ofNat_emod": [
+            "mathd_numbertheory_412"
+          ],
+          "Int.pow_emod": [
+            "mathd_numbertheory_412"
+          ],
+          "Int.pow_mod": [
+            "mathd_numbertheory_412",
+            "numbertheory_sqmod3in01d"
+          ],
+          "Int.prime_iffNat": [
+            "numbertheory_prmdvsneqnsqmodpeq0"
+          ],
+          "Int.prime_natCast": [
+            "numbertheory_prmdvsneqnsqmodpeq0"
+          ],
+          "Nat.dvd_add_iff": [
+            "induction_12dvd4expnp1p20"
+          ],
+          "Nat.dvd_add_of_dvd_right": [
+            "induction_divisibility_3div2tooddnp1"
+          ],
+          "Nat.dvd_mul_of_dvd_left": [
+            "induction_12dvd4expnp1p20",
+            "induction_divisibility_3div2tooddnp1"
+          ],
+          "Nat.dvd_mul_of_dvd_right": [
+            "induction_12dvd4expnp1p20",
+            "induction_divisibility_3div2tooddnp1"
+          ],
+          "Nat.dvd_sub_of_dvd_add": [
+            "induction_divisibility_3div2tooddnp1"
+          ],
+          "Nat.le_of_pow_le_pow": [
+            "mathd_numbertheory_234"
+          ],
+          "Nat.lt_of_pow_lt_pow": [
+            "mathd_numbertheory_234"
+          ],
+          "Nat.pow_le_pow_of_le_left": [
+            "mathd_numbertheory_5"
+          ],
+          "Nat.sum_range_cube": [
+            "induction_sumkexp3eqsumksq"
+          ],
+          "Real.bernoulli": [
+            "induction_1pxpownlt1pnx"
+          ],
+          "Real.bernoulli_inequality": [
+            "induction_1pxpownlt1pnx"
+          ],
+          "Real.one_add_mul_le_pow": [
+            "induction_1pxpownlt1pnx"
+          ],
+          "ZMod.eq_iff_modEq": [
+            "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+          ],
+          "ZMod.intCast_eq_intCast_iff.mp": [
+            "mathd_numbertheory_412"
+          ],
+          "ZMod.intCast_eq_intCast_iff.mpr": [
+            "mathd_numbertheory_412"
+          ]
+        },
+        "UNQUALIFIED_NAME_ORIGIN_UNKNOWN": {
+          "Finset": [
+            "numbertheory_sqmod3in01d"
+          ],
+          "IH": [
+            "induction_sumkexp3eqsumksq"
+          ],
+          "abs_add": [
+            "algebra_absxm1pabsxpabsxp1eqxp2_0leqxleq1"
+          ],
+          "abs_of_lt": [
+            "algebra_absxm1pabsxpabsxp1eqxp2_0leqxleq1"
+          ],
+          "add_mod": [
+            "induction_divisibility_3div2tooddnp1",
+            "induction_divisibility_3divnto3m2n"
+          ],
+          "dvd_add": [
+            "induction_12dvd4expnp1p20"
+          ],
+          "dvd_iff_emod_eq_zero": [
+            "numbertheory_prmdvsneqnsqmodpeq0"
+          ],
+          "dvd_mod_iff": [
+            "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+          ],
+          "dvd_of_mod_eq_zero": [
+            "mathd_algebra_289"
+          ],
+          "dvd_sub": [
+            "induction_12dvd4expnp1p20"
+          ],
+          "even_mul_succ_self": [
+            "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+          ],
+          "h": [
+            "numbertheory_aoddbdiv4asqpbsqmod8eq1"
+          ],
+          "h₀": [
+            "numbertheory_prmdvsneqnsqmodpeq0"
+          ],
+          "ih": [
+            "induction_divisibility_3div2tooddnp1"
+          ],
+          "k": [
+            "numbertheory_prmdvsneqnsqmodpeq0"
+          ],
+          "le_or_lt": [
+            "mathd_numbertheory_5"
+          ],
+          "mul_mod": [
+            "induction_divisibility_3div2tooddnp1",
+            "induction_divisibility_3divnto3m2n"
+          ],
+          "one_add_mul_le_pow'": [
+            "induction_1pxpownlt1pnx"
+          ],
+          "one_add_pow_le_pow'": [
+            "induction_1pxpownlt1pnx"
+          ],
+          "pow_le_pow_of_le_left": [
+            "mathd_numbertheory_5"
+          ],
+          "pow_le_pow_right": [
+            "induction_1pxpownlt1pnx"
+          ],
+          "pow_mod": [
+            "induction_divisibility_3div2tooddnp1"
+          ],
+          "sum_range_succ": [
+            "induction_sum_odd"
+          ],
+          "this": [
+            "mathd_numbertheory_234"
+          ]
+        }
+      },
+      "earlier_original_import_probe_links": []
+    }
+  }
+}

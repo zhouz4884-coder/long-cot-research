@@ -1,0 +1,2193 @@
+{
+  "status": "PASS_TRUSTED_RUNTIME",
+  "smoke": false,
+  "scope": "CPU trusted explicit-name controls only. No raw author proofs, model, or GPU.",
+  "material_hashes": {
+    "input_freeze": "81ef933e9c4e00ad33c984644954f0750f040865ecf7ac74fcd188dab14c927c",
+    "replay_cost_protocol": "cd8c482012f36b12cfa148d32ef2c8795db2d1244ef7be5f6d77a0ff0bf13eac",
+    "trusted_control_freeze": "8aea01316de27491f32c915e4ac433485cfefd72089b152c2d7ba733426f3c29"
+  },
+  "environment": {
+    "d39_smoke_sha256": "ca19818e10f7246a3f2259eb0f2341c33a47a9d55645c4aa8c325ceb7c17e2ff",
+    "d39_resident_source_sha256": "774e55f75f0bacbcbaa7d9ac5090dcfd353ab41f215429383e3ef83027b97a9d",
+    "lean": "Lean (version 4.31.0, x86_64-w64-windows-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+    "lake": "Lake version 5.0.0-src+68218e8 (Lean version 4.31.0)",
+    "lean_sha256": "9b216deb50d37c32c829d1efaaa5bafd5560417d382df35a815489e31a31593f",
+    "lake_sha256": "a5be0113af1c08ba678c1fad07594e1c5de6b871fe0c4144da2998488eba88a1",
+    "cwd": "outputs/d39_blueprintrepair_954edd3/BlueprintRepair",
+    "source": {
+      "url": "https://github.com/Karifannaa/BlueprintRepair.git",
+      "commit": "954edd366a0d1474ecfebe418d4cac14aaf8c6bf",
+      "tree": "50e8742e40899598024074816933e06b7e992cae",
+      "subtree": "BlueprintRepair",
+      "subtree_git_sha1": "dcbd16eb1acb227965f3ec346254465c6b499c21",
+      "verified_materialized_blobs": 939,
+      "archive_sha256": "d1a81a9e9d7a6e461aefa966fda06fc5a3b40381899ac80e5d2b462b9f9ea850",
+      "archive_bytes": 1710080
+    },
+    "package_commits": {
+      "mathlib": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+      "LeanArchitect": "f38c848196b0467e7b9dcc3d129a866b4051c23c",
+      "plausible": "63045536fe95024e6c18fc7b48e03f506701c5bc",
+      "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "importGraph": "5c7542ed018c78194f1e2b903eaf6a792b74c03d",
+      "proofwidgets": "24b0d9dc081c5423f8eec7e866c441e5184f29d9",
+      "aesop": "e3cb2f741431ce31bf73549fb52316a57368b06f",
+      "Qq": "f46324995fca5f0483b742e4eb4daec7f4ee50d2",
+      "batteries": "fa08db58b30eb033edcdab331bba000827f9f785",
+      "Cli": "92564e5770e4d09f2d86dfbf8ada1e9c715b384c"
+    },
+    "built_imports": {
+      ".lake/packages/mathlib/.lake/build/lib/lean/Mathlib.olean": {
+        "bytes": 755136,
+        "sha256": "45522115b8ff55410b8bcf3f48c8872302eacce07dec01c09ffe2c6f64062807"
+      },
+      ".lake/packages/LeanArchitect/.lake/build/lib/lean/Architect.olean": {
+        "bytes": 2312,
+        "sha256": "12b11d43c4b54412560a49d9d20a1583a09724721d69f40915f2bea2aea9df64"
+      }
+    },
+    "cache": {
+      "packed_count": 8542,
+      "packed_bytes": 432264798,
+      "sha256_ordered_path_size_hash_lines": "101959261c0f56313baaf01dd6f1f826fed480ae1c1a5c0d665754a0bc70e58a"
+    }
+  },
+  "preparation_seconds": 3.053252900004736,
+  "controls": 102,
+  "matched": 102,
+  "original_imports": {
+    "p14": {
+      "original_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "trusted_fixture_definition": [
+        {
+          "id": "visible_valid",
+          "name": "Nat.add_zero",
+          "visibility": "PRESENT",
+          "expected_proof": "PROVED",
+          "type": "(n : Nat) : n + 0 = n",
+          "proof": "  exact Nat.add_zero n"
+        },
+        {
+          "id": "visible_wrong_type",
+          "name": "Nat.add_zero",
+          "visibility": "PRESENT",
+          "expected_proof": "TYPE_MISMATCH",
+          "type": ": True",
+          "proof": "  exact Nat.add_zero 0"
+        },
+        {
+          "id": "visible_open_obligations",
+          "name": "Nat.le_trans",
+          "visibility": "PRESENT",
+          "expected_proof": "UNSOLVED_GOALS",
+          "type": "(a b : Nat) : a ≤ b",
+          "proof": "  apply Nat.le_trans"
+        },
+        {
+          "id": "known_library_absent_here",
+          "name": "sub_dvd_pow_sub_pow",
+          "visibility": "ABSENT",
+          "expected_proof": "UNKNOWN_NAME",
+          "type": ": True",
+          "proof": "  have _h := @sub_dvd_pow_sub_pow\n  exact True.intro"
+        },
+        {
+          "id": "fabricated_name",
+          "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+          "visibility": "ABSENT",
+          "expected_proof": "UNKNOWN_NAME",
+          "type": ": True",
+          "proof": "  have _h := @D41ScopeRuntimeMissing.pinnedNeedle\n  exact True.intro"
+        }
+      ],
+      "resident": {
+        "startup_seconds": 1.7270181000058074,
+        "prewarm": {
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {},
+          "source_sha256": "8676622f5e9fe10f89a9a1dbb5313ca3a87148ca36aac17c36da8d4a7a650ebf",
+          "document_version": 1,
+          "elapsed_seconds": 8.481851299991831,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "Nat.add_zero : ∀ (n : ℕ), n + 0 = n",
+              "line": 9
+            }
+          ]
+        },
+        "shutdown_seconds": 0.08065119999810122,
+        "cases": [
+          {
+            "case": "visible_valid",
+            "name": "Nat.add_zero",
+            "mode": "proof",
+            "status": "PROVED",
+            "expected": "PROVED",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "'d41_scope_visible_valid' does not depend on any axioms",
+                "line": 11
+              }
+            ],
+            "elapsed_seconds": 0.21578690000751521,
+            "source_sha256": "f9993f78c71eb163318a8bb103f4f8485c09ee37876faac29f134af00d84d4a4",
+            "matching_publications": 1,
+            "document_version": 2
+          },
+          {
+            "case": "visible_valid",
+            "name": "Nat.add_zero",
+            "mode": "check",
+            "status": "PRESENT",
+            "expected": "PRESENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "Nat.add_zero : ∀ (n : ℕ), n + 0 = n",
+                "line": 9
+              }
+            ],
+            "elapsed_seconds": 0.20481759999529459,
+            "source_sha256": "f00c6e1e50450353baf3b38ff963b2b21bbd2c858f54801a384f7dce9b1179e7",
+            "matching_publications": 1,
+            "document_version": 3
+          },
+          {
+            "case": "visible_valid",
+            "name": "Nat.add_zero",
+            "mode": "environment",
+            "status": "PRESENT",
+            "expected": "PRESENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "D41_EXACT_KEY Nat.add_zero true",
+                "line": 10
+              }
+            ],
+            "elapsed_seconds": 0.2058026000013342,
+            "source_sha256": "adc5f986b0e07744f88bca918c5edbc6c56036e8bf2bfb70538cbaff031503ab",
+            "matching_publications": 1,
+            "document_version": 4
+          },
+          {
+            "case": "visible_wrong_type",
+            "name": "Nat.add_zero",
+            "mode": "check",
+            "status": "PRESENT",
+            "expected": "PRESENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "Nat.add_zero : ∀ (n : ℕ), n + 0 = n",
+                "line": 9
+              }
+            ],
+            "elapsed_seconds": 0.21871049999026582,
+            "source_sha256": "f00c6e1e50450353baf3b38ff963b2b21bbd2c858f54801a384f7dce9b1179e7",
+            "matching_publications": 1,
+            "document_version": 5
+          },
+          {
+            "case": "visible_wrong_type",
+            "name": "Nat.add_zero",
+            "mode": "environment",
+            "status": "PRESENT",
+            "expected": "PRESENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "D41_EXACT_KEY Nat.add_zero true",
+                "line": 10
+              }
+            ],
+            "elapsed_seconds": 0.21865599999728147,
+            "source_sha256": "adc5f986b0e07744f88bca918c5edbc6c56036e8bf2bfb70538cbaff031503ab",
+            "matching_publications": 1,
+            "document_version": 6
+          },
+          {
+            "case": "visible_wrong_type",
+            "name": "Nat.add_zero",
+            "mode": "proof",
+            "status": "TYPE_MISMATCH",
+            "expected": "TYPE_MISMATCH",
+            "match": true,
+            "messages": [
+              {
+                "severity": 1,
+                "message": "Type mismatch\n  Nat.add_zero 0\nhas type\n  0 + 0 = 0\nbut is expected to have type\n  True",
+                "line": 10
+              },
+              {
+                "severity": 3,
+                "message": "'d41_scope_visible_wrong_type' depends on axioms: [sorryAx]",
+                "line": 11
+              }
+            ],
+            "elapsed_seconds": 0.2052830000029644,
+            "source_sha256": "03755fb60922d3c1d2d0eda04e10c16b0af82d5faa92c8f228e32d024a83caf9",
+            "matching_publications": 1,
+            "document_version": 7
+          },
+          {
+            "case": "visible_open_obligations",
+            "name": "Nat.le_trans",
+            "mode": "environment",
+            "status": "PRESENT",
+            "expected": "PRESENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "D41_EXACT_KEY Nat.le_trans true",
+                "line": 10
+              }
+            ],
+            "elapsed_seconds": 0.2134766000090167,
+            "source_sha256": "2cf47cf44e9f0429be2132df832550694a5ca456c15df6b1b266803a18e8860b",
+            "matching_publications": 1,
+            "document_version": 8
+          },
+          {
+            "case": "visible_open_obligations",
+            "name": "Nat.le_trans",
+            "mode": "proof",
+            "status": "UNSOLVED_GOALS",
+            "expected": "UNSOLVED_GOALS",
+            "match": true,
+            "messages": [
+              {
+                "severity": 1,
+                "message": "unsolved goals\ncase a\na b : ℕ\n⊢ a ≤ ?m\n\ncase a\na b : ℕ\n⊢ ?m ≤ b\n\ncase m\na b : ℕ\n⊢ ℕ",
+                "line": 9
+              },
+              {
+                "severity": 3,
+                "message": "'d41_scope_visible_open_obligations' depends on axioms: [sorryAx]",
+                "line": 11
+              }
+            ],
+            "elapsed_seconds": 0.20408199999656063,
+            "source_sha256": "7bf0f2166b0086e3bfd7a27d84f015dedfea14265192427ff8b6882ed91c4258",
+            "matching_publications": 1,
+            "document_version": 9
+          },
+          {
+            "case": "visible_open_obligations",
+            "name": "Nat.le_trans",
+            "mode": "check",
+            "status": "PRESENT",
+            "expected": "PRESENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "@Nat.le_trans : ∀ {n m k : ℕ}, n ≤ m → m ≤ k → n ≤ k",
+                "line": 9
+              }
+            ],
+            "elapsed_seconds": 0.2056723999994574,
+            "source_sha256": "d524fec0bba182a711ff1c12d273379e1f21c00fe213e0791a03d7e6d8bdd502",
+            "matching_publications": 1,
+            "document_version": 10
+          },
+          {
+            "case": "known_library_absent_here",
+            "name": "sub_dvd_pow_sub_pow",
+            "mode": "proof",
+            "status": "UNKNOWN_NAME",
+            "expected": "UNKNOWN_NAME",
+            "match": true,
+            "messages": [
+              {
+                "severity": 1,
+                "message": "Unknown identifier `sub_dvd_pow_sub_pow`",
+                "line": 10
+              },
+              {
+                "severity": 1,
+                "message": "unsolved goals\n⊢ True",
+                "line": 9
+              },
+              {
+                "severity": 3,
+                "message": "'d41_scope_known_library_absent_here' depends on axioms: [sorryAx]",
+                "line": 12
+              }
+            ],
+            "elapsed_seconds": 0.21715229999972507,
+            "source_sha256": "0dd4da3ca605d58ef53541d19a159e75fa7de639a76c7153bfb0ead0f882e4c7",
+            "matching_publications": 1,
+            "document_version": 11
+          },
+          {
+            "case": "known_library_absent_here",
+            "name": "sub_dvd_pow_sub_pow",
+            "mode": "check",
+            "status": "ABSENT",
+            "expected": "ABSENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 1,
+                "message": "Unknown identifier `sub_dvd_pow_sub_pow`",
+                "line": 9
+              }
+            ],
+            "elapsed_seconds": 0.21697699998912867,
+            "source_sha256": "a4430b48d26d98fbf08919c537d28d6419c0814c64fed07ddf8e5c3b8f237d75",
+            "matching_publications": 1,
+            "document_version": 12
+          },
+          {
+            "case": "known_library_absent_here",
+            "name": "sub_dvd_pow_sub_pow",
+            "mode": "environment",
+            "status": "ABSENT",
+            "expected": "ABSENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "D41_EXACT_KEY sub_dvd_pow_sub_pow false",
+                "line": 10
+              }
+            ],
+            "elapsed_seconds": 0.2046832999913022,
+            "source_sha256": "2924a1c9849906b42a71b02e298099cc7ddd3c30d11a75826c755db31a6aa0c3",
+            "matching_publications": 1,
+            "document_version": 13
+          },
+          {
+            "case": "fabricated_name",
+            "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+            "mode": "check",
+            "status": "ABSENT",
+            "expected": "ABSENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 1,
+                "message": "Unknown identifier `D41ScopeRuntimeMissing.pinnedNeedle`",
+                "line": 9
+              }
+            ],
+            "elapsed_seconds": 0.20540180000534747,
+            "source_sha256": "574dea1678d310f96b71d78109e38ba10a23fdd5e108a66cbbbf7f2f74bae9ed",
+            "matching_publications": 1,
+            "document_version": 14
+          },
+          {
+            "case": "fabricated_name",
+            "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+            "mode": "environment",
+            "status": "ABSENT",
+            "expected": "ABSENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "D41_EXACT_KEY D41ScopeRuntimeMissing.pinnedNeedle false",
+                "line": 10
+              }
+            ],
+            "elapsed_seconds": 0.21754330000840127,
+            "source_sha256": "8eb387fafd9f5196b84b245c4f1b6f91fb6a5f3bc795e0419f04840271d1e98f",
+            "matching_publications": 1,
+            "document_version": 15
+          },
+          {
+            "case": "fabricated_name",
+            "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+            "mode": "proof",
+            "status": "UNKNOWN_NAME",
+            "expected": "UNKNOWN_NAME",
+            "match": true,
+            "messages": [
+              {
+                "severity": 1,
+                "message": "Unknown identifier `D41ScopeRuntimeMissing.pinnedNeedle`",
+                "line": 10
+              },
+              {
+                "severity": 1,
+                "message": "unsolved goals\n⊢ True",
+                "line": 9
+              },
+              {
+                "severity": 3,
+                "message": "'d41_scope_fabricated_name' depends on axioms: [sorryAx]",
+                "line": 12
+              }
+            ],
+            "elapsed_seconds": 0.21627920000173617,
+            "source_sha256": "3155cdf7fba94c5dd4b56bd264772dd2182c1779f0eb6d64c12f2485b9afb673",
+            "matching_publications": 1,
+            "document_version": 16
+          }
+        ],
+        "marginal_request_wall_seconds_by_mode": {
+          "proof": 1.0585834000085015,
+          "check": 1.051579299979494,
+          "environment": 1.0601618000073358
+        }
+      },
+      "cold_single_proof": [
+        {
+          "case": "visible_valid",
+          "name": "Nat.add_zero",
+          "mode": "proof",
+          "status": "PROVED",
+          "expected": "PROVED",
+          "match": true,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'d41_scope_visible_valid' does not depend on any axioms",
+              "line": 11
+            }
+          ],
+          "elapsed_seconds": 8.148778200004017,
+          "exit_code": 0,
+          "source_sha256": "f9993f78c71eb163318a8bb103f4f8485c09ee37876faac29f134af00d84d4a4"
+        },
+        {
+          "case": "visible_wrong_type",
+          "name": "Nat.add_zero",
+          "mode": "proof",
+          "status": "TYPE_MISMATCH",
+          "expected": "TYPE_MISMATCH",
+          "match": true,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Type mismatch\n  Nat.add_zero 0\nhas type\n  0 + 0 = 0\nbut is expected to have type\n  True",
+              "line": 10
+            },
+            {
+              "severity": 3,
+              "message": "'d41_scope_visible_wrong_type' depends on axioms: [sorryAx]",
+              "line": 11
+            }
+          ],
+          "elapsed_seconds": 7.911724100005813,
+          "exit_code": 1,
+          "source_sha256": "03755fb60922d3c1d2d0eda04e10c16b0af82d5faa92c8f228e32d024a83caf9"
+        },
+        {
+          "case": "visible_open_obligations",
+          "name": "Nat.le_trans",
+          "mode": "proof",
+          "status": "UNSOLVED_GOALS",
+          "expected": "UNSOLVED_GOALS",
+          "match": true,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "unsolved goals\ncase a\na b : ℕ\n⊢ a ≤ ?m\n\ncase a\na b : ℕ\n⊢ ?m ≤ b\n\ncase m\na b : ℕ\n⊢ ℕ",
+              "line": 9
+            },
+            {
+              "severity": 3,
+              "message": "'d41_scope_visible_open_obligations' depends on axioms: [sorryAx]",
+              "line": 11
+            }
+          ],
+          "elapsed_seconds": 8.250901299994439,
+          "exit_code": 1,
+          "source_sha256": "7bf0f2166b0086e3bfd7a27d84f015dedfea14265192427ff8b6882ed91c4258"
+        },
+        {
+          "case": "known_library_absent_here",
+          "name": "sub_dvd_pow_sub_pow",
+          "mode": "proof",
+          "status": "UNKNOWN_NAME",
+          "expected": "UNKNOWN_NAME",
+          "match": true,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown identifier `sub_dvd_pow_sub_pow`",
+              "line": 10
+            },
+            {
+              "severity": 1,
+              "message": "unsolved goals\n⊢ True",
+              "line": 9
+            },
+            {
+              "severity": 3,
+              "message": "'d41_scope_known_library_absent_here' depends on axioms: [sorryAx]",
+              "line": 12
+            }
+          ],
+          "elapsed_seconds": 7.96366599999601,
+          "exit_code": 1,
+          "source_sha256": "0dd4da3ca605d58ef53541d19a159e75fa7de639a76c7153bfb0ead0f882e4c7"
+        },
+        {
+          "case": "fabricated_name",
+          "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+          "mode": "proof",
+          "status": "UNKNOWN_NAME",
+          "expected": "UNKNOWN_NAME",
+          "match": true,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown identifier `D41ScopeRuntimeMissing.pinnedNeedle`",
+              "line": 10
+            },
+            {
+              "severity": 1,
+              "message": "unsolved goals\n⊢ True",
+              "line": 9
+            },
+            {
+              "severity": 3,
+              "message": "'d41_scope_fabricated_name' depends on axioms: [sorryAx]",
+              "line": 12
+            }
+          ],
+          "elapsed_seconds": 7.888037800003076,
+          "exit_code": 1,
+          "source_sha256": "3155cdf7fba94c5dd4b56bd264772dd2182c1779f0eb6d64c12f2485b9afb673"
+        }
+      ],
+      "batch": {
+        "proof": {
+          "batch_elapsed_seconds": 7.925091400000383,
+          "exit_code": 1,
+          "source_sha256": "a301f22b73d742f73c2d9706a4c228b8eb597247afc627334ada3981cc79bc4c",
+          "errors_outside_blocks": [],
+          "cases": [
+            {
+              "case": "visible_valid",
+              "name": "Nat.add_zero",
+              "mode": "proof",
+              "status": "PROVED",
+              "expected": "PROVED",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "'d41_scope_visible_valid' does not depend on any axioms",
+                  "line": 11
+                }
+              ]
+            },
+            {
+              "case": "visible_wrong_type",
+              "name": "Nat.add_zero",
+              "mode": "proof",
+              "status": "TYPE_MISMATCH",
+              "expected": "TYPE_MISMATCH",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Type mismatch\n  Nat.add_zero 0\nhas type\n  0 + 0 = 0\nbut is expected to have type\n  True",
+                  "line": 14
+                },
+                {
+                  "severity": 3,
+                  "message": "'d41_scope_visible_wrong_type' depends on axioms: [sorryAx]",
+                  "line": 15
+                }
+              ]
+            },
+            {
+              "case": "visible_open_obligations",
+              "name": "Nat.le_trans",
+              "mode": "proof",
+              "status": "UNSOLVED_GOALS",
+              "expected": "UNSOLVED_GOALS",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "unsolved goals\ncase a\na b : ℕ\n⊢ a ≤ ?m\n\ncase a\na b : ℕ\n⊢ ?m ≤ b\n\ncase m\na b : ℕ\n⊢ ℕ",
+                  "line": 17
+                },
+                {
+                  "severity": 3,
+                  "message": "'d41_scope_visible_open_obligations' depends on axioms: [sorryAx]",
+                  "line": 19
+                }
+              ]
+            },
+            {
+              "case": "known_library_absent_here",
+              "name": "sub_dvd_pow_sub_pow",
+              "mode": "proof",
+              "status": "UNKNOWN_NAME",
+              "expected": "UNKNOWN_NAME",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown identifier `sub_dvd_pow_sub_pow`",
+                  "line": 22
+                },
+                {
+                  "severity": 1,
+                  "message": "unsolved goals\n⊢ True",
+                  "line": 21
+                },
+                {
+                  "severity": 3,
+                  "message": "'d41_scope_known_library_absent_here' depends on axioms: [sorryAx]",
+                  "line": 24
+                }
+              ]
+            },
+            {
+              "case": "fabricated_name",
+              "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+              "mode": "proof",
+              "status": "UNKNOWN_NAME",
+              "expected": "UNKNOWN_NAME",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown identifier `D41ScopeRuntimeMissing.pinnedNeedle`",
+                  "line": 27
+                },
+                {
+                  "severity": 1,
+                  "message": "unsolved goals\n⊢ True",
+                  "line": 26
+                },
+                {
+                  "severity": 3,
+                  "message": "'d41_scope_fabricated_name' depends on axioms: [sorryAx]",
+                  "line": 29
+                }
+              ]
+            }
+          ]
+        },
+        "check": {
+          "batch_elapsed_seconds": 7.958666499995161,
+          "exit_code": 1,
+          "source_sha256": "0a27e13d21e657c1608fe65a2f018ed902cb2afad0b9adf867cd8e11dc15e067",
+          "errors_outside_blocks": [],
+          "cases": [
+            {
+              "case": "visible_valid",
+              "name": "Nat.add_zero",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "Nat.add_zero : ∀ (n : ℕ), n + 0 = n",
+                  "line": 9
+                }
+              ]
+            },
+            {
+              "case": "visible_wrong_type",
+              "name": "Nat.add_zero",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "Nat.add_zero : ∀ (n : ℕ), n + 0 = n",
+                  "line": 11
+                }
+              ]
+            },
+            {
+              "case": "visible_open_obligations",
+              "name": "Nat.le_trans",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "@Nat.le_trans : ∀ {n m k : ℕ}, n ≤ m → m ≤ k → n ≤ k",
+                  "line": 13
+                }
+              ]
+            },
+            {
+              "case": "known_library_absent_here",
+              "name": "sub_dvd_pow_sub_pow",
+              "mode": "check",
+              "status": "ABSENT",
+              "expected": "ABSENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown identifier `sub_dvd_pow_sub_pow`",
+                  "line": 15
+                }
+              ]
+            },
+            {
+              "case": "fabricated_name",
+              "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+              "mode": "check",
+              "status": "ABSENT",
+              "expected": "ABSENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown identifier `D41ScopeRuntimeMissing.pinnedNeedle`",
+                  "line": 17
+                }
+              ]
+            }
+          ]
+        },
+        "environment": {
+          "batch_elapsed_seconds": 7.780872699993779,
+          "exit_code": 0,
+          "source_sha256": "f5d49bcad4e5667cddb63b9d87f2bbe7dfbcb30da9ca5c9854380b80ad4958db",
+          "errors_outside_blocks": [],
+          "cases": [
+            {
+              "case": "visible_valid",
+              "name": "Nat.add_zero",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.add_zero true",
+                  "line": 10
+                }
+              ]
+            },
+            {
+              "case": "visible_wrong_type",
+              "name": "Nat.add_zero",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.add_zero true",
+                  "line": 16
+                }
+              ]
+            },
+            {
+              "case": "visible_open_obligations",
+              "name": "Nat.le_trans",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.le_trans true",
+                  "line": 22
+                }
+              ]
+            },
+            {
+              "case": "known_library_absent_here",
+              "name": "sub_dvd_pow_sub_pow",
+              "mode": "environment",
+              "status": "ABSENT",
+              "expected": "ABSENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY sub_dvd_pow_sub_pow false",
+                  "line": 28
+                }
+              ]
+            },
+            {
+              "case": "fabricated_name",
+              "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+              "mode": "environment",
+              "status": "ABSENT",
+              "expected": "ABSENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY D41ScopeRuntimeMissing.pinnedNeedle false",
+                  "line": 34
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "p41": {
+      "original_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "trusted_fixture_definition": [
+        {
+          "id": "visible_valid",
+          "name": "Nat.add_zero",
+          "visibility": "PRESENT",
+          "expected_proof": "PROVED",
+          "type": "(n : Nat) : n + 0 = n",
+          "proof": "  exact Nat.add_zero n"
+        },
+        {
+          "id": "visible_wrong_type",
+          "name": "Nat.add_zero",
+          "visibility": "PRESENT",
+          "expected_proof": "TYPE_MISMATCH",
+          "type": ": True",
+          "proof": "  exact Nat.add_zero 0"
+        },
+        {
+          "id": "visible_open_obligations",
+          "name": "Nat.le_trans",
+          "visibility": "PRESENT",
+          "expected_proof": "UNSOLVED_GOALS",
+          "type": "(a b : Nat) : a ≤ b",
+          "proof": "  apply Nat.le_trans"
+        },
+        {
+          "id": "known_library_absent_here",
+          "name": "Nat.sub_one_dvd_pow_sub_one",
+          "visibility": "ABSENT",
+          "expected_proof": "UNKNOWN_NAME",
+          "type": ": True",
+          "proof": "  have _h := @Nat.sub_one_dvd_pow_sub_one\n  exact True.intro"
+        },
+        {
+          "id": "fabricated_name",
+          "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+          "visibility": "ABSENT",
+          "expected_proof": "UNKNOWN_NAME",
+          "type": ": True",
+          "proof": "  have _h := @D41ScopeRuntimeMissing.pinnedNeedle\n  exact True.intro"
+        }
+      ],
+      "resident": {
+        "startup_seconds": 1.7201003000081982,
+        "prewarm": {
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {},
+          "source_sha256": "453890c128b888583b96841e72aca376ac607d551feaaa4dd83a8a6fe48b9676",
+          "document_version": 1,
+          "elapsed_seconds": 8.176437800007989,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "Nat.add_zero : ∀ (n : ℕ), n + 0 = n",
+              "line": 8
+            }
+          ]
+        },
+        "shutdown_seconds": 0.08056840000790544,
+        "cases": [
+          {
+            "case": "visible_valid",
+            "name": "Nat.add_zero",
+            "mode": "proof",
+            "status": "PROVED",
+            "expected": "PROVED",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "'d41_scope_visible_valid' does not depend on any axioms",
+                "line": 10
+              }
+            ],
+            "elapsed_seconds": 0.20877450000261888,
+            "source_sha256": "01d3544f675dc35c03101ca3db640d7dcef9b88add72415d3b2cea05daef9285",
+            "matching_publications": 1,
+            "document_version": 2
+          },
+          {
+            "case": "visible_valid",
+            "name": "Nat.add_zero",
+            "mode": "check",
+            "status": "PRESENT",
+            "expected": "PRESENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "Nat.add_zero : ∀ (n : ℕ), n + 0 = n",
+                "line": 8
+              }
+            ],
+            "elapsed_seconds": 0.20665720000397414,
+            "source_sha256": "23bca6bda541606e2339f15cb87b44f1afb540b2fbe9e45c19f7333965263a71",
+            "matching_publications": 1,
+            "document_version": 3
+          },
+          {
+            "case": "visible_valid",
+            "name": "Nat.add_zero",
+            "mode": "environment",
+            "status": "PRESENT",
+            "expected": "PRESENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "D41_EXACT_KEY Nat.add_zero true",
+                "line": 9
+              }
+            ],
+            "elapsed_seconds": 0.20605069999874104,
+            "source_sha256": "72927ea98fbbfaa15af0975005c0d9f5512117ca776ad2d0b28ee31dee1b1e02",
+            "matching_publications": 1,
+            "document_version": 4
+          },
+          {
+            "case": "visible_wrong_type",
+            "name": "Nat.add_zero",
+            "mode": "check",
+            "status": "PRESENT",
+            "expected": "PRESENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "Nat.add_zero : ∀ (n : ℕ), n + 0 = n",
+                "line": 8
+              }
+            ],
+            "elapsed_seconds": 0.20703570000478067,
+            "source_sha256": "23bca6bda541606e2339f15cb87b44f1afb540b2fbe9e45c19f7333965263a71",
+            "matching_publications": 1,
+            "document_version": 5
+          },
+          {
+            "case": "visible_wrong_type",
+            "name": "Nat.add_zero",
+            "mode": "environment",
+            "status": "PRESENT",
+            "expected": "PRESENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "D41_EXACT_KEY Nat.add_zero true",
+                "line": 9
+              }
+            ],
+            "elapsed_seconds": 0.20341000000189524,
+            "source_sha256": "72927ea98fbbfaa15af0975005c0d9f5512117ca776ad2d0b28ee31dee1b1e02",
+            "matching_publications": 1,
+            "document_version": 6
+          },
+          {
+            "case": "visible_wrong_type",
+            "name": "Nat.add_zero",
+            "mode": "proof",
+            "status": "TYPE_MISMATCH",
+            "expected": "TYPE_MISMATCH",
+            "match": true,
+            "messages": [
+              {
+                "severity": 1,
+                "message": "Type mismatch\n  Nat.add_zero 0\nhas type\n  0 + 0 = 0\nbut is expected to have type\n  True",
+                "line": 9
+              },
+              {
+                "severity": 3,
+                "message": "'d41_scope_visible_wrong_type' depends on axioms: [sorryAx]",
+                "line": 10
+              }
+            ],
+            "elapsed_seconds": 0.20575750000716653,
+            "source_sha256": "a60b9188c3c82ce78fa72b05c33344a0ef98be120c7a9b9f1c4dc1e01423bf09",
+            "matching_publications": 1,
+            "document_version": 7
+          },
+          {
+            "case": "visible_open_obligations",
+            "name": "Nat.le_trans",
+            "mode": "environment",
+            "status": "PRESENT",
+            "expected": "PRESENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "D41_EXACT_KEY Nat.le_trans true",
+                "line": 9
+              }
+            ],
+            "elapsed_seconds": 0.2178358999954071,
+            "source_sha256": "8d5272e7b18424a0de1970d7488e3b5e03206f110c96800d0c64decae51b4985",
+            "matching_publications": 1,
+            "document_version": 8
+          },
+          {
+            "case": "visible_open_obligations",
+            "name": "Nat.le_trans",
+            "mode": "proof",
+            "status": "UNSOLVED_GOALS",
+            "expected": "UNSOLVED_GOALS",
+            "match": true,
+            "messages": [
+              {
+                "severity": 1,
+                "message": "unsolved goals\ncase a\na b : ℕ\n⊢ a ≤ ?m\n\ncase a\na b : ℕ\n⊢ ?m ≤ b\n\ncase m\na b : ℕ\n⊢ ℕ",
+                "line": 8
+              },
+              {
+                "severity": 3,
+                "message": "'d41_scope_visible_open_obligations' depends on axioms: [sorryAx]",
+                "line": 10
+              }
+            ],
+            "elapsed_seconds": 0.2041816000128165,
+            "source_sha256": "95233e43e3f3bf4823714a2c120581ec966a841e96aa4a35f83495827d2506be",
+            "matching_publications": 1,
+            "document_version": 9
+          },
+          {
+            "case": "visible_open_obligations",
+            "name": "Nat.le_trans",
+            "mode": "check",
+            "status": "PRESENT",
+            "expected": "PRESENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "@Nat.le_trans : ∀ {n m k : ℕ}, n ≤ m → m ≤ k → n ≤ k",
+                "line": 8
+              }
+            ],
+            "elapsed_seconds": 0.20448629999009427,
+            "source_sha256": "0ff1e9958cacfef4b8f126c35691748bd2c728549fff91f61f49767d0e4ef0dd",
+            "matching_publications": 1,
+            "document_version": 10
+          },
+          {
+            "case": "known_library_absent_here",
+            "name": "Nat.sub_one_dvd_pow_sub_one",
+            "mode": "proof",
+            "status": "UNKNOWN_NAME",
+            "expected": "UNKNOWN_NAME",
+            "match": true,
+            "messages": [
+              {
+                "severity": 1,
+                "message": "Unknown constant `Nat.sub_one_dvd_pow_sub_one`",
+                "line": 9
+              },
+              {
+                "severity": 1,
+                "message": "unsolved goals\n⊢ True",
+                "line": 8
+              },
+              {
+                "severity": 3,
+                "message": "'d41_scope_known_library_absent_here' depends on axioms: [sorryAx]",
+                "line": 11
+              }
+            ],
+            "elapsed_seconds": 0.21788759999617469,
+            "source_sha256": "3a66d206c5374c25e60ecd521bde8fe6abb09b4378a4b21cfc3f3c5df825317e",
+            "matching_publications": 1,
+            "document_version": 11
+          },
+          {
+            "case": "known_library_absent_here",
+            "name": "Nat.sub_one_dvd_pow_sub_one",
+            "mode": "check",
+            "status": "ABSENT",
+            "expected": "ABSENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 1,
+                "message": "Unknown constant `Nat.sub_one_dvd_pow_sub_one`",
+                "line": 8
+              }
+            ],
+            "elapsed_seconds": 0.20633419998921454,
+            "source_sha256": "3936d39968be454ebfab2453675091f689f0930b77d81925c3ec24901566429d",
+            "matching_publications": 1,
+            "document_version": 12
+          },
+          {
+            "case": "known_library_absent_here",
+            "name": "Nat.sub_one_dvd_pow_sub_one",
+            "mode": "environment",
+            "status": "ABSENT",
+            "expected": "ABSENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "D41_EXACT_KEY Nat.sub_one_dvd_pow_sub_one false",
+                "line": 9
+              }
+            ],
+            "elapsed_seconds": 0.2065914000122575,
+            "source_sha256": "41798f5e3e4d6f6592ef0be29bd56f937ef032ceb9f9088fefcf3c793cb26277",
+            "matching_publications": 1,
+            "document_version": 13
+          },
+          {
+            "case": "fabricated_name",
+            "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+            "mode": "check",
+            "status": "ABSENT",
+            "expected": "ABSENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 1,
+                "message": "Unknown identifier `D41ScopeRuntimeMissing.pinnedNeedle`",
+                "line": 8
+              }
+            ],
+            "elapsed_seconds": 0.20367469999473542,
+            "source_sha256": "39af9319d5a73aba58385fb5c07e2a2c5eacdfb4b03e5d68b6a36a72b466916a",
+            "matching_publications": 1,
+            "document_version": 14
+          },
+          {
+            "case": "fabricated_name",
+            "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+            "mode": "environment",
+            "status": "ABSENT",
+            "expected": "ABSENT",
+            "match": true,
+            "messages": [
+              {
+                "severity": 3,
+                "message": "D41_EXACT_KEY D41ScopeRuntimeMissing.pinnedNeedle false",
+                "line": 9
+              }
+            ],
+            "elapsed_seconds": 0.20400349999545142,
+            "source_sha256": "1c28f24c56ad75dc8de62550407618b123fa1e323841bc57954e9bc4503a1831",
+            "matching_publications": 1,
+            "document_version": 15
+          },
+          {
+            "case": "fabricated_name",
+            "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+            "mode": "proof",
+            "status": "UNKNOWN_NAME",
+            "expected": "UNKNOWN_NAME",
+            "match": true,
+            "messages": [
+              {
+                "severity": 1,
+                "message": "Unknown identifier `D41ScopeRuntimeMissing.pinnedNeedle`",
+                "line": 9
+              },
+              {
+                "severity": 1,
+                "message": "unsolved goals\n⊢ True",
+                "line": 8
+              },
+              {
+                "severity": 3,
+                "message": "'d41_scope_fabricated_name' depends on axioms: [sorryAx]",
+                "line": 11
+              }
+            ],
+            "elapsed_seconds": 0.20357319999311585,
+            "source_sha256": "b5d1c55285b4b6be3d265f79aaee271329da46656ac665f44db64867b3d44a3a",
+            "matching_publications": 1,
+            "document_version": 16
+          }
+        ],
+        "marginal_request_wall_seconds_by_mode": {
+          "proof": 1.0401744000118924,
+          "check": 1.028188099982799,
+          "environment": 1.0378915000037523
+        }
+      },
+      "cold_single_proof": [
+        {
+          "case": "visible_valid",
+          "name": "Nat.add_zero",
+          "mode": "proof",
+          "status": "PROVED",
+          "expected": "PROVED",
+          "match": true,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'d41_scope_visible_valid' does not depend on any axioms",
+              "line": 10
+            }
+          ],
+          "elapsed_seconds": 7.621833600001992,
+          "exit_code": 0,
+          "source_sha256": "01d3544f675dc35c03101ca3db640d7dcef9b88add72415d3b2cea05daef9285"
+        },
+        {
+          "case": "visible_wrong_type",
+          "name": "Nat.add_zero",
+          "mode": "proof",
+          "status": "TYPE_MISMATCH",
+          "expected": "TYPE_MISMATCH",
+          "match": true,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Type mismatch\n  Nat.add_zero 0\nhas type\n  0 + 0 = 0\nbut is expected to have type\n  True",
+              "line": 9
+            },
+            {
+              "severity": 3,
+              "message": "'d41_scope_visible_wrong_type' depends on axioms: [sorryAx]",
+              "line": 10
+            }
+          ],
+          "elapsed_seconds": 8.050929000004544,
+          "exit_code": 1,
+          "source_sha256": "a60b9188c3c82ce78fa72b05c33344a0ef98be120c7a9b9f1c4dc1e01423bf09"
+        },
+        {
+          "case": "visible_open_obligations",
+          "name": "Nat.le_trans",
+          "mode": "proof",
+          "status": "UNSOLVED_GOALS",
+          "expected": "UNSOLVED_GOALS",
+          "match": true,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "unsolved goals\ncase a\na b : ℕ\n⊢ a ≤ ?m\n\ncase a\na b : ℕ\n⊢ ?m ≤ b\n\ncase m\na b : ℕ\n⊢ ℕ",
+              "line": 8
+            },
+            {
+              "severity": 3,
+              "message": "'d41_scope_visible_open_obligations' depends on axioms: [sorryAx]",
+              "line": 10
+            }
+          ],
+          "elapsed_seconds": 8.074103599996306,
+          "exit_code": 1,
+          "source_sha256": "95233e43e3f3bf4823714a2c120581ec966a841e96aa4a35f83495827d2506be"
+        },
+        {
+          "case": "known_library_absent_here",
+          "name": "Nat.sub_one_dvd_pow_sub_one",
+          "mode": "proof",
+          "status": "UNKNOWN_NAME",
+          "expected": "UNKNOWN_NAME",
+          "match": true,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `Nat.sub_one_dvd_pow_sub_one`",
+              "line": 9
+            },
+            {
+              "severity": 1,
+              "message": "unsolved goals\n⊢ True",
+              "line": 8
+            },
+            {
+              "severity": 3,
+              "message": "'d41_scope_known_library_absent_here' depends on axioms: [sorryAx]",
+              "line": 11
+            }
+          ],
+          "elapsed_seconds": 7.846808500005864,
+          "exit_code": 1,
+          "source_sha256": "3a66d206c5374c25e60ecd521bde8fe6abb09b4378a4b21cfc3f3c5df825317e"
+        },
+        {
+          "case": "fabricated_name",
+          "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+          "mode": "proof",
+          "status": "UNKNOWN_NAME",
+          "expected": "UNKNOWN_NAME",
+          "match": true,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown identifier `D41ScopeRuntimeMissing.pinnedNeedle`",
+              "line": 9
+            },
+            {
+              "severity": 1,
+              "message": "unsolved goals\n⊢ True",
+              "line": 8
+            },
+            {
+              "severity": 3,
+              "message": "'d41_scope_fabricated_name' depends on axioms: [sorryAx]",
+              "line": 11
+            }
+          ],
+          "elapsed_seconds": 7.817183299994213,
+          "exit_code": 1,
+          "source_sha256": "b5d1c55285b4b6be3d265f79aaee271329da46656ac665f44db64867b3d44a3a"
+        }
+      ],
+      "batch": {
+        "proof": {
+          "batch_elapsed_seconds": 7.8833695000066655,
+          "exit_code": 1,
+          "source_sha256": "1292745a8c8d7ad1885c3238fec48106600f5cd0d194adf06d75d1a0dcf0f6da",
+          "errors_outside_blocks": [],
+          "cases": [
+            {
+              "case": "visible_valid",
+              "name": "Nat.add_zero",
+              "mode": "proof",
+              "status": "PROVED",
+              "expected": "PROVED",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "'d41_scope_visible_valid' does not depend on any axioms",
+                  "line": 10
+                }
+              ]
+            },
+            {
+              "case": "visible_wrong_type",
+              "name": "Nat.add_zero",
+              "mode": "proof",
+              "status": "TYPE_MISMATCH",
+              "expected": "TYPE_MISMATCH",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Type mismatch\n  Nat.add_zero 0\nhas type\n  0 + 0 = 0\nbut is expected to have type\n  True",
+                  "line": 13
+                },
+                {
+                  "severity": 3,
+                  "message": "'d41_scope_visible_wrong_type' depends on axioms: [sorryAx]",
+                  "line": 14
+                }
+              ]
+            },
+            {
+              "case": "visible_open_obligations",
+              "name": "Nat.le_trans",
+              "mode": "proof",
+              "status": "UNSOLVED_GOALS",
+              "expected": "UNSOLVED_GOALS",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "unsolved goals\ncase a\na b : ℕ\n⊢ a ≤ ?m\n\ncase a\na b : ℕ\n⊢ ?m ≤ b\n\ncase m\na b : ℕ\n⊢ ℕ",
+                  "line": 16
+                },
+                {
+                  "severity": 3,
+                  "message": "'d41_scope_visible_open_obligations' depends on axioms: [sorryAx]",
+                  "line": 18
+                }
+              ]
+            },
+            {
+              "case": "known_library_absent_here",
+              "name": "Nat.sub_one_dvd_pow_sub_one",
+              "mode": "proof",
+              "status": "UNKNOWN_NAME",
+              "expected": "UNKNOWN_NAME",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown constant `Nat.sub_one_dvd_pow_sub_one`",
+                  "line": 21
+                },
+                {
+                  "severity": 1,
+                  "message": "unsolved goals\n⊢ True",
+                  "line": 20
+                },
+                {
+                  "severity": 3,
+                  "message": "'d41_scope_known_library_absent_here' depends on axioms: [sorryAx]",
+                  "line": 23
+                }
+              ]
+            },
+            {
+              "case": "fabricated_name",
+              "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+              "mode": "proof",
+              "status": "UNKNOWN_NAME",
+              "expected": "UNKNOWN_NAME",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown identifier `D41ScopeRuntimeMissing.pinnedNeedle`",
+                  "line": 26
+                },
+                {
+                  "severity": 1,
+                  "message": "unsolved goals\n⊢ True",
+                  "line": 25
+                },
+                {
+                  "severity": 3,
+                  "message": "'d41_scope_fabricated_name' depends on axioms: [sorryAx]",
+                  "line": 28
+                }
+              ]
+            }
+          ]
+        },
+        "check": {
+          "batch_elapsed_seconds": 8.162604299999657,
+          "exit_code": 1,
+          "source_sha256": "0a1c8c6b951fafb1a554263d76957aea637c774e0cf5ab1543867e9c99cf9078",
+          "errors_outside_blocks": [],
+          "cases": [
+            {
+              "case": "visible_valid",
+              "name": "Nat.add_zero",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "Nat.add_zero : ∀ (n : ℕ), n + 0 = n",
+                  "line": 8
+                }
+              ]
+            },
+            {
+              "case": "visible_wrong_type",
+              "name": "Nat.add_zero",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "Nat.add_zero : ∀ (n : ℕ), n + 0 = n",
+                  "line": 10
+                }
+              ]
+            },
+            {
+              "case": "visible_open_obligations",
+              "name": "Nat.le_trans",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "@Nat.le_trans : ∀ {n m k : ℕ}, n ≤ m → m ≤ k → n ≤ k",
+                  "line": 12
+                }
+              ]
+            },
+            {
+              "case": "known_library_absent_here",
+              "name": "Nat.sub_one_dvd_pow_sub_one",
+              "mode": "check",
+              "status": "ABSENT",
+              "expected": "ABSENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown constant `Nat.sub_one_dvd_pow_sub_one`",
+                  "line": 14
+                }
+              ]
+            },
+            {
+              "case": "fabricated_name",
+              "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+              "mode": "check",
+              "status": "ABSENT",
+              "expected": "ABSENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown identifier `D41ScopeRuntimeMissing.pinnedNeedle`",
+                  "line": 16
+                }
+              ]
+            }
+          ]
+        },
+        "environment": {
+          "batch_elapsed_seconds": 7.796297199995024,
+          "exit_code": 0,
+          "source_sha256": "11b9eb3757cf92b0ca2a943aa8a0d6f02f6f3c5e88366e5fa949c2abcb80b480",
+          "errors_outside_blocks": [],
+          "cases": [
+            {
+              "case": "visible_valid",
+              "name": "Nat.add_zero",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.add_zero true",
+                  "line": 9
+                }
+              ]
+            },
+            {
+              "case": "visible_wrong_type",
+              "name": "Nat.add_zero",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.add_zero true",
+                  "line": 15
+                }
+              ]
+            },
+            {
+              "case": "visible_open_obligations",
+              "name": "Nat.le_trans",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.le_trans true",
+                  "line": 21
+                }
+              ]
+            },
+            {
+              "case": "known_library_absent_here",
+              "name": "Nat.sub_one_dvd_pow_sub_one",
+              "mode": "environment",
+              "status": "ABSENT",
+              "expected": "ABSENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.sub_one_dvd_pow_sub_one false",
+                  "line": 27
+                }
+              ]
+            },
+            {
+              "case": "fabricated_name",
+              "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+              "mode": "environment",
+              "status": "ABSENT",
+              "expected": "ABSENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY D41ScopeRuntimeMissing.pinnedNeedle false",
+                  "line": 33
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "broader_visibility_only": {
+    "p14": {
+      "imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination",
+        "Mathlib.Algebra.Ring.GeomSum",
+        "Mathlib.Data.Int.ModEq",
+        "Mathlib.Data.Nat.ModEq"
+      ],
+      "visibility_only": true,
+      "batch": {
+        "check": {
+          "batch_elapsed_seconds": 8.528826099995058,
+          "exit_code": 1,
+          "source_sha256": "a7a93e09e1fef595c560eca9a43ce8736b6184d80d43a8304e2e14289c7f60af",
+          "errors_outside_blocks": [],
+          "cases": [
+            {
+              "case": "visibility_1",
+              "name": "sub_dvd_pow_sub_pow",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "@sub_dvd_pow_sub_pow : ∀ {R : Type u_1} [inst : CommRing R] (x y : R) (n : ℕ), x - y ∣ x ^ n - y ^ n",
+                  "line": 12
+                }
+              ]
+            },
+            {
+              "case": "visibility_2",
+              "name": "Nat.sub_dvd_pow_sub_pow",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "Nat.sub_dvd_pow_sub_pow : ∀ (x y n : ℕ), x - y ∣ x ^ n - y ^ n",
+                  "line": 14
+                }
+              ]
+            },
+            {
+              "case": "visibility_3",
+              "name": "Nat.sub_one_dvd_pow_sub_one",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "Nat.sub_one_dvd_pow_sub_one : ∀ (x n : ℕ), x - 1 ∣ x ^ n - 1",
+                  "line": 16
+                }
+              ]
+            },
+            {
+              "case": "visibility_4",
+              "name": "Int.ModEq.dvd",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "@Int.ModEq.dvd : ∀ {n a b : ℤ}, a ≡ b [ZMOD n] → n ∣ b - a",
+                  "line": 18
+                }
+              ]
+            },
+            {
+              "case": "visibility_5",
+              "name": "Int.ModEq.pow",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "@Int.ModEq.pow : ∀ {n a b : ℤ} (m : ℕ), a ≡ b [ZMOD n] → a ^ m ≡ b ^ m [ZMOD n]",
+                  "line": 20
+                }
+              ]
+            },
+            {
+              "case": "visibility_6",
+              "name": "Nat.modEq_iff_dvd'",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "@Nat.modEq_iff_dvd' : ∀ {n a b : ℕ}, a ≤ b → (a ≡ b [MOD n] ↔ n ∣ b - a)",
+                  "line": 22
+                }
+              ]
+            },
+            {
+              "case": "visibility_7",
+              "name": "Nat.ModEq.pow",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "@Nat.ModEq.pow : ∀ {n a b : ℕ} (m : ℕ), a ≡ b [MOD n] → a ^ m ≡ b ^ m [MOD n]",
+                  "line": 24
+                }
+              ]
+            },
+            {
+              "case": "visibility_8",
+              "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+              "mode": "check",
+              "status": "ABSENT",
+              "expected": "ABSENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown identifier `D41ScopeRuntimeMissing.pinnedNeedle`",
+                  "line": 26
+                }
+              ]
+            }
+          ]
+        },
+        "environment": {
+          "batch_elapsed_seconds": 8.035943800001405,
+          "exit_code": 0,
+          "source_sha256": "9778414bcbe0a68ba0ccd1e30579927c2e7a0945fc282a54621b2b8c0997f12c",
+          "errors_outside_blocks": [],
+          "cases": [
+            {
+              "case": "visibility_1",
+              "name": "sub_dvd_pow_sub_pow",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY sub_dvd_pow_sub_pow true",
+                  "line": 13
+                }
+              ]
+            },
+            {
+              "case": "visibility_2",
+              "name": "Nat.sub_dvd_pow_sub_pow",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.sub_dvd_pow_sub_pow true",
+                  "line": 19
+                }
+              ]
+            },
+            {
+              "case": "visibility_3",
+              "name": "Nat.sub_one_dvd_pow_sub_one",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.sub_one_dvd_pow_sub_one true",
+                  "line": 25
+                }
+              ]
+            },
+            {
+              "case": "visibility_4",
+              "name": "Int.ModEq.dvd",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Int.ModEq.dvd true",
+                  "line": 31
+                }
+              ]
+            },
+            {
+              "case": "visibility_5",
+              "name": "Int.ModEq.pow",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Int.ModEq.pow true",
+                  "line": 37
+                }
+              ]
+            },
+            {
+              "case": "visibility_6",
+              "name": "Nat.modEq_iff_dvd'",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.modEq_iff_dvd' true",
+                  "line": 43
+                }
+              ]
+            },
+            {
+              "case": "visibility_7",
+              "name": "Nat.ModEq.pow",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.ModEq.pow true",
+                  "line": 49
+                }
+              ]
+            },
+            {
+              "case": "visibility_8",
+              "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+              "mode": "environment",
+              "status": "ABSENT",
+              "expected": "ABSENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY D41ScopeRuntimeMissing.pinnedNeedle false",
+                  "line": 55
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "p41": {
+      "imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Algebra.Ring.GeomSum",
+        "Mathlib.Data.Int.ModEq",
+        "Mathlib.Data.Nat.ModEq"
+      ],
+      "visibility_only": true,
+      "batch": {
+        "check": {
+          "batch_elapsed_seconds": 8.20318729999417,
+          "exit_code": 1,
+          "source_sha256": "ec2a2698a6793049c9d56990a66fb7f13d72f6d9a38e12438a5f02b13fecba30",
+          "errors_outside_blocks": [],
+          "cases": [
+            {
+              "case": "visibility_1",
+              "name": "sub_dvd_pow_sub_pow",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "@sub_dvd_pow_sub_pow : ∀ {R : Type u_1} [inst : CommRing R] (x y : R) (n : ℕ), x - y ∣ x ^ n - y ^ n",
+                  "line": 11
+                }
+              ]
+            },
+            {
+              "case": "visibility_2",
+              "name": "Nat.sub_dvd_pow_sub_pow",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "Nat.sub_dvd_pow_sub_pow : ∀ (x y n : ℕ), x - y ∣ x ^ n - y ^ n",
+                  "line": 13
+                }
+              ]
+            },
+            {
+              "case": "visibility_3",
+              "name": "Nat.sub_one_dvd_pow_sub_one",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "Nat.sub_one_dvd_pow_sub_one : ∀ (x n : ℕ), x - 1 ∣ x ^ n - 1",
+                  "line": 15
+                }
+              ]
+            },
+            {
+              "case": "visibility_4",
+              "name": "Int.ModEq.dvd",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "@Int.ModEq.dvd : ∀ {n a b : ℤ}, a ≡ b [ZMOD n] → n ∣ b - a",
+                  "line": 17
+                }
+              ]
+            },
+            {
+              "case": "visibility_5",
+              "name": "Int.ModEq.pow",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "@Int.ModEq.pow : ∀ {n a b : ℤ} (m : ℕ), a ≡ b [ZMOD n] → a ^ m ≡ b ^ m [ZMOD n]",
+                  "line": 19
+                }
+              ]
+            },
+            {
+              "case": "visibility_6",
+              "name": "Nat.modEq_iff_dvd'",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "@Nat.modEq_iff_dvd' : ∀ {n a b : ℕ}, a ≤ b → (a ≡ b [MOD n] ↔ n ∣ b - a)",
+                  "line": 21
+                }
+              ]
+            },
+            {
+              "case": "visibility_7",
+              "name": "Nat.ModEq.pow",
+              "mode": "check",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "@Nat.ModEq.pow : ∀ {n a b : ℕ} (m : ℕ), a ≡ b [MOD n] → a ^ m ≡ b ^ m [MOD n]",
+                  "line": 23
+                }
+              ]
+            },
+            {
+              "case": "visibility_8",
+              "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+              "mode": "check",
+              "status": "ABSENT",
+              "expected": "ABSENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown identifier `D41ScopeRuntimeMissing.pinnedNeedle`",
+                  "line": 25
+                }
+              ]
+            }
+          ]
+        },
+        "environment": {
+          "batch_elapsed_seconds": 8.085110200001509,
+          "exit_code": 0,
+          "source_sha256": "6a1ce89d189fe902cbde6199c3006757805a188e0b8d06ed8259a87ff42bfef2",
+          "errors_outside_blocks": [],
+          "cases": [
+            {
+              "case": "visibility_1",
+              "name": "sub_dvd_pow_sub_pow",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY sub_dvd_pow_sub_pow true",
+                  "line": 12
+                }
+              ]
+            },
+            {
+              "case": "visibility_2",
+              "name": "Nat.sub_dvd_pow_sub_pow",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.sub_dvd_pow_sub_pow true",
+                  "line": 18
+                }
+              ]
+            },
+            {
+              "case": "visibility_3",
+              "name": "Nat.sub_one_dvd_pow_sub_one",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.sub_one_dvd_pow_sub_one true",
+                  "line": 24
+                }
+              ]
+            },
+            {
+              "case": "visibility_4",
+              "name": "Int.ModEq.dvd",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Int.ModEq.dvd true",
+                  "line": 30
+                }
+              ]
+            },
+            {
+              "case": "visibility_5",
+              "name": "Int.ModEq.pow",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Int.ModEq.pow true",
+                  "line": 36
+                }
+              ]
+            },
+            {
+              "case": "visibility_6",
+              "name": "Nat.modEq_iff_dvd'",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.modEq_iff_dvd' true",
+                  "line": 42
+                }
+              ]
+            },
+            {
+              "case": "visibility_7",
+              "name": "Nat.ModEq.pow",
+              "mode": "environment",
+              "status": "PRESENT",
+              "expected": "PRESENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY Nat.ModEq.pow true",
+                  "line": 48
+                }
+              ]
+            },
+            {
+              "case": "visibility_8",
+              "name": "D41ScopeRuntimeMissing.pinnedNeedle",
+              "mode": "environment",
+              "status": "ABSENT",
+              "expected": "ABSENT",
+              "match": true,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT_KEY D41ScopeRuntimeMissing.pinnedNeedle false",
+                  "line": 54
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

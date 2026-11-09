@@ -1,0 +1,192 @@
+{
+  "status": "HISTORICAL_SUPPLEMENT_NEGATIVE_AND_QUERY_CHECKS_COMPLETED",
+  "scope": "Per-case same loaded import prefix. p104/p139 exact ordinary archived negatives and relative/root queries; p115 queries only. Negative-only, conditional measurements.",
+  "supplement_sha256": "2aa6fa45043b01000813f3c70a16a86a64b3da9a023681c3f4dc603ea0a73f38",
+  "runtime_smoke_sha256": "ca19818e10f7246a3f2259eb0f2341c33a47a9d55645c4aa8c325ceb7c17e2ff",
+  "author_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "cases": {
+    "p104": {
+      "scope_review": "DIRECT_MANDATORY_EXACT_TERM",
+      "results": {
+        "warm_scope_barrier": {
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {},
+          "source_sha256": "87922d236cae690072c1d180342611c73a60be9be5a9675e77972ba8f5619afe",
+          "document_version": 1,
+          "elapsed_seconds": 39.20968509999511,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "Nat : Type",
+              "line": 6
+            }
+          ]
+        },
+        "p104_same_scope_queries.lean": {
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "68339b6a3601ff740a8999213bd56cb45e008460b7f0b6f9c401550c9d453e82",
+          "document_version": 2,
+          "elapsed_seconds": 0.21591300000727642,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `ZMod.nat_cast_eq_zero_iff`",
+              "line": 6
+            },
+            {
+              "severity": 1,
+              "message": "Unknown constant `ZMod.nat_cast_eq_zero_iff`",
+              "line": 7
+            }
+          ]
+        },
+        "p104_archived_exact_negative.lean": {
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "2abf6a927079d029e87fc5aafbbe8fdbaf33429c6049c4bd09b106fbbd07f3a0",
+          "document_version": 3,
+          "elapsed_seconds": 1.249637899993104,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 2,
+              "message": "try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+              "line": 11
+            },
+            {
+              "severity": 1,
+              "message": "Unknown constant `ZMod.nat_cast_eq_zero_iff`",
+              "line": 23
+            },
+            {
+              "severity": 3,
+              "message": "'P104Bad.p104_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 26
+            }
+          ]
+        }
+      },
+      "estimated_hard_skip_or_speedup": false,
+      "resident_startup_seconds": 1.7354121999960626,
+      "resident_shutdown_seconds": 0.12743279999995138,
+      "resident_stderr": ""
+    },
+    "p115": {
+      "scope_review": "DEFER_NON_STRAIGHT_LINE_MATCH_ARM",
+      "results": {
+        "warm_scope_barrier": {
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {},
+          "source_sha256": "e27315a01f5653e29c5be5872a8c992dcffa0d597e023131ce359f18d37808f4",
+          "document_version": 1,
+          "elapsed_seconds": 21.512200299999677,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "Nat : Type",
+              "line": 6
+            }
+          ]
+        },
+        "p115_same_scope_queries.lean": {
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "10715758f89b7a57c7be89cf764b7450b356e72741cca8c69185b49b4d6049db",
+          "document_version": 2,
+          "elapsed_seconds": 0.21691699999792036,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `Nat.fib_succ_succ`",
+              "line": 6
+            },
+            {
+              "severity": 1,
+              "message": "Unknown constant `Nat.fib_succ_succ`",
+              "line": 7
+            }
+          ]
+        }
+      },
+      "estimated_hard_skip_or_speedup": false,
+      "resident_startup_seconds": 1.9513357999967411,
+      "resident_shutdown_seconds": 0.09733030000643339,
+      "resident_stderr": ""
+    },
+    "p139": {
+      "scope_review": "DIRECT_MANDATORY_EXACT_TERM",
+      "results": {
+        "warm_scope_barrier": {
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {},
+          "source_sha256": "b3b7473626824e2517e933c11a45c674c846d38dbc3d3e3f67488baa6bb14e35",
+          "document_version": 1,
+          "elapsed_seconds": 21.396988000007696,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "Nat : Type",
+              "line": 6
+            }
+          ]
+        },
+        "p139_same_scope_queries.lean": {
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "27e53d243b0487ff372df3f689db4cdb45fba791b5e40fd98828318e0c52a3bf",
+          "document_version": 2,
+          "elapsed_seconds": 0.20878410000295844,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `Nat.mersenne_prime_iff`",
+              "line": 6
+            },
+            {
+              "severity": 1,
+              "message": "Unknown constant `Nat.mersenne_prime_iff`",
+              "line": 7
+            }
+          ]
+        },
+        "p139_archived_exact_negative.lean": {
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "7e9303c33a0c1c5eb52bd9f0cc61834e7bda8a572b71f8fca592a9fa8069562d",
+          "document_version": 3,
+          "elapsed_seconds": 0.218250200006878,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `Nat.mersenne_prime_iff`",
+              "line": 9
+            },
+            {
+              "severity": 3,
+              "message": "'P139Bad.p139_target' depends on axioms: [propext, sorryAx, Quot.sound]",
+              "line": 12
+            }
+          ]
+        }
+      },
+      "estimated_hard_skip_or_speedup": false,
+      "resident_startup_seconds": 1.8406713000003947,
+      "resident_shutdown_seconds": 0.11814109999977518,
+      "resident_stderr": ""
+    }
+  },
+  "model_generation": false,
+  "gpu_seconds": 0
+}

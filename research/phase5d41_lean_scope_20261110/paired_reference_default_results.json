@@ -1,0 +1,855 @@
+{
+  "status": "COMPLETE_PAIRED_CPU_CALIBRATION",
+  "scope": "End-to-end warm resident controls with alternate policy order. Preparation, shared prelude, initialization, queries, full checks and shutdown are measured. No historical hard skips or model proof-search gain asserted.",
+  "queue_sha256": "d39b238601680711d84461d26104a41da598599bf63230d1f82994b8b8637c17",
+  "lean": "Lean (version 4.31.0, x86_64-w64-windows-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+  "queue_material_preparation_seconds": 0.16481709999789018,
+  "environment_preparation_seconds": 1.580016699997941,
+  "server_flags": [],
+  "delay_sensitivity_freeze_sha256": "59d7be7b7fc028d4331ccff8a47cd58c1d4d9bd0a9cf0cb45617e53dd608c8b7",
+  "retrieval_control_freeze_sha256": "49be0bc927d3acb535b826c4e775a14491b09c5c2cb95ba5a56591995d95f83f",
+  "per_case": {
+    "p14": {
+      "startup_seconds": 1.7750270000105957,
+      "prelude": {
+        "status": "KERNEL_ACCEPTED",
+        "axioms": {},
+        "source_sha256": "94c59fe564158e3d682c833f4a6eba1182ad1d276aee758de639210143091baa",
+        "document_version": 1,
+        "elapsed_seconds": 8.750536299994565,
+        "matching_publications": 3,
+        "messages": [
+          {
+            "severity": 3,
+            "message": "Nat.add_zero (n : ℕ) : n + 0 = n",
+            "line": 7
+          }
+        ]
+      },
+      "shutdown_seconds": 0.0832490000029793,
+      "ordered_runs": [
+        {
+          "policy": "direct",
+          "queries": [],
+          "rows": [
+            {
+              "id": "exact_historical_negative",
+              "full_check_seconds": 0.2090396999992663,
+              "status": "REJECTED",
+              "axioms": {},
+              "source_sha256": "85df13c04b2d38bacfb4faa15b0f5322564f38f8a9167931428066c883722335",
+              "document_version": 2,
+              "elapsed_seconds": 0.2090396999992663,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+                  "line": 11
+                },
+                {
+                  "severity": 3,
+                  "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+                  "line": 27
+                }
+              ]
+            },
+            {
+              "id": "explicit_root_missing_control",
+              "full_check_seconds": 0.22027979999256786,
+              "status": "REJECTED",
+              "axioms": {},
+              "source_sha256": "77cd2b47bff98e942955597bd5dd6926820e915c010f4021efb89f730d1ab206",
+              "document_version": 3,
+              "elapsed_seconds": 0.22027979999256786,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown identifier `_root_.sub_dvd_pow_sub_pow`",
+                  "line": 14
+                },
+                {
+                  "severity": 3,
+                  "message": "P14Bad.p14_target : ∀ (n : ℕ), 11 ∣ 10 ^ n - (-1) ^ n",
+                  "line": 18
+                },
+                {
+                  "severity": 3,
+                  "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+                  "line": 19
+                }
+              ]
+            },
+            {
+              "id": "ordinary_full_proof_control",
+              "full_check_seconds": 0.3505804000014905,
+              "status": "KERNEL_ACCEPTED",
+              "axioms": {
+                "P14Bad.p14_target": [
+                  "propext",
+                  "Quot.sound"
+                ]
+              },
+              "source_sha256": "a48c7dfbbd4e184c14be46c13a813a19f3d52e6fefb88a02554e8141ef139a87",
+              "document_version": 4,
+              "elapsed_seconds": 0.3505804000014905,
+              "matching_publications": 3,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "P14Bad.p14_target : ∀ (n : ℕ), 11 ∣ 10 ^ n - (-1) ^ n",
+                  "line": 28
+                },
+                {
+                  "severity": 3,
+                  "message": "'P14Bad.p14_target' depends on axioms: [propext, Quot.sound]",
+                  "line": 29
+                }
+              ]
+            }
+          ],
+          "elapsed_seconds": 0.7799327000102494
+        },
+        {
+          "policy": "query_then_full",
+          "queries": [
+            {
+              "root_name": "sub_dvd_pow_sub_pow",
+              "available": false,
+              "status": "KERNEL_ACCEPTED",
+              "axioms": {},
+              "source_sha256": "d6d44fa380ab9d72dcedbe1a8ac359bf69fea9c1130e507856649e07976a6776",
+              "document_version": 5,
+              "elapsed_seconds": 0.20318029999907594,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT|sub_dvd_pow_sub_pow|false",
+                  "line": 8
+                }
+              ]
+            }
+          ],
+          "rows": [
+            {
+              "id": "exact_historical_negative",
+              "full_check_seconds": 0.20670959999551997,
+              "status": "REJECTED",
+              "axioms": {},
+              "source_sha256": "85df13c04b2d38bacfb4faa15b0f5322564f38f8a9167931428066c883722335",
+              "document_version": 6,
+              "elapsed_seconds": 0.20670959999551997,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+                  "line": 11
+                },
+                {
+                  "severity": 3,
+                  "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+                  "line": 27
+                }
+              ]
+            },
+            {
+              "id": "explicit_root_missing_control",
+              "source_sha256": "77cd2b47bff98e942955597bd5dd6926820e915c010f4021efb89f730d1ab206",
+              "status": "SKIPPED_MANDATORY_UNAVAILABLE",
+              "full_check_seconds": 0.0
+            },
+            {
+              "id": "ordinary_full_proof_control",
+              "full_check_seconds": 0.2214423999976134,
+              "status": "KERNEL_ACCEPTED",
+              "axioms": {
+                "P14Bad.p14_target": [
+                  "propext",
+                  "Quot.sound"
+                ]
+              },
+              "source_sha256": "a48c7dfbbd4e184c14be46c13a813a19f3d52e6fefb88a02554e8141ef139a87",
+              "document_version": 7,
+              "elapsed_seconds": 0.2214423999976134,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "P14Bad.p14_target : ∀ (n : ℕ), 11 ∣ 10 ^ n - (-1) ^ n",
+                  "line": 28
+                },
+                {
+                  "severity": 3,
+                  "message": "'P14Bad.p14_target' depends on axioms: [propext, Quot.sound]",
+                  "line": 29
+                }
+              ]
+            }
+          ],
+          "elapsed_seconds": 0.6313708999950904
+        },
+        {
+          "policy": "query_then_full",
+          "queries": [
+            {
+              "root_name": "sub_dvd_pow_sub_pow",
+              "available": false,
+              "status": "KERNEL_ACCEPTED",
+              "axioms": {},
+              "source_sha256": "d6d44fa380ab9d72dcedbe1a8ac359bf69fea9c1130e507856649e07976a6776",
+              "document_version": 8,
+              "elapsed_seconds": 0.21311319999222178,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT|sub_dvd_pow_sub_pow|false",
+                  "line": 8
+                }
+              ]
+            }
+          ],
+          "rows": [
+            {
+              "id": "exact_historical_negative",
+              "full_check_seconds": 0.22077720001107082,
+              "status": "REJECTED",
+              "axioms": {},
+              "source_sha256": "85df13c04b2d38bacfb4faa15b0f5322564f38f8a9167931428066c883722335",
+              "document_version": 9,
+              "elapsed_seconds": 0.22077720001107082,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+                  "line": 11
+                },
+                {
+                  "severity": 3,
+                  "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+                  "line": 27
+                }
+              ]
+            },
+            {
+              "id": "explicit_root_missing_control",
+              "source_sha256": "77cd2b47bff98e942955597bd5dd6926820e915c010f4021efb89f730d1ab206",
+              "status": "SKIPPED_MANDATORY_UNAVAILABLE",
+              "full_check_seconds": 0.0
+            },
+            {
+              "id": "ordinary_full_proof_control",
+              "full_check_seconds": 0.22035449999384582,
+              "status": "KERNEL_ACCEPTED",
+              "axioms": {
+                "P14Bad.p14_target": [
+                  "propext",
+                  "Quot.sound"
+                ]
+              },
+              "source_sha256": "a48c7dfbbd4e184c14be46c13a813a19f3d52e6fefb88a02554e8141ef139a87",
+              "document_version": 10,
+              "elapsed_seconds": 0.22035449999384582,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "P14Bad.p14_target : ∀ (n : ℕ), 11 ∣ 10 ^ n - (-1) ^ n",
+                  "line": 28
+                },
+                {
+                  "severity": 3,
+                  "message": "'P14Bad.p14_target' depends on axioms: [propext, Quot.sound]",
+                  "line": 29
+                }
+              ]
+            }
+          ],
+          "elapsed_seconds": 0.6542807999940123
+        },
+        {
+          "policy": "direct",
+          "queries": [],
+          "rows": [
+            {
+              "id": "exact_historical_negative",
+              "full_check_seconds": 0.21563459999742918,
+              "status": "REJECTED",
+              "axioms": {},
+              "source_sha256": "85df13c04b2d38bacfb4faa15b0f5322564f38f8a9167931428066c883722335",
+              "document_version": 11,
+              "elapsed_seconds": 0.21563459999742918,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+                  "line": 11
+                },
+                {
+                  "severity": 3,
+                  "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+                  "line": 27
+                }
+              ]
+            },
+            {
+              "id": "explicit_root_missing_control",
+              "full_check_seconds": 0.20370319999346975,
+              "status": "REJECTED",
+              "axioms": {},
+              "source_sha256": "77cd2b47bff98e942955597bd5dd6926820e915c010f4021efb89f730d1ab206",
+              "document_version": 12,
+              "elapsed_seconds": 0.20370319999346975,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown identifier `_root_.sub_dvd_pow_sub_pow`",
+                  "line": 14
+                },
+                {
+                  "severity": 3,
+                  "message": "P14Bad.p14_target : ∀ (n : ℕ), 11 ∣ 10 ^ n - (-1) ^ n",
+                  "line": 18
+                },
+                {
+                  "severity": 3,
+                  "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+                  "line": 19
+                }
+              ]
+            },
+            {
+              "id": "ordinary_full_proof_control",
+              "full_check_seconds": 0.2201552000042284,
+              "status": "KERNEL_ACCEPTED",
+              "axioms": {
+                "P14Bad.p14_target": [
+                  "propext",
+                  "Quot.sound"
+                ]
+              },
+              "source_sha256": "a48c7dfbbd4e184c14be46c13a813a19f3d52e6fefb88a02554e8141ef139a87",
+              "document_version": 13,
+              "elapsed_seconds": 0.2201552000042284,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "P14Bad.p14_target : ∀ (n : ℕ), 11 ∣ 10 ^ n - (-1) ^ n",
+                  "line": 28
+                },
+                {
+                  "severity": 3,
+                  "message": "'P14Bad.p14_target' depends on axioms: [propext, Quot.sound]",
+                  "line": 29
+                }
+              ]
+            }
+          ],
+          "elapsed_seconds": 0.6395148000010522
+        }
+      ],
+      "existing_exact_retrieval": {
+        "status": "REJECTED",
+        "axioms": {},
+        "source_sha256": "d779b78a5304bf29e58a6e2724fee17009b7875a578435cf57667a785e1f7292",
+        "document_version": 14,
+        "elapsed_seconds": 0.9153051000030246,
+        "matching_publications": 1,
+        "messages": [
+          {
+            "severity": 3,
+            "message": "P14Bad.p14_target : ∀ (n : ℕ), 11 ∣ 10 ^ n - (-1) ^ n",
+            "line": 18
+          },
+          {
+            "severity": 3,
+            "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+            "line": 19
+          },
+          {
+            "severity": 1,
+            "message": "`exact?` could not close the goal. Try `apply?` to see partial suggestions.",
+            "line": 14
+          }
+        ]
+      },
+      "direct_accepted": [
+        "ordinary_full_proof_control"
+      ],
+      "filtered_accepted": [
+        "ordinary_full_proof_control"
+      ],
+      "same_acceptance_set": true,
+      "false_rejections": []
+    },
+    "p41": {
+      "startup_seconds": 1.6900713999930304,
+      "prelude": {
+        "status": "KERNEL_ACCEPTED",
+        "axioms": {},
+        "source_sha256": "04270802ccda86f990477e74b4df4605dbca2578c3b330e11186bd67e0d2a07d",
+        "document_version": 1,
+        "elapsed_seconds": 8.260522099997615,
+        "matching_publications": 3,
+        "messages": [
+          {
+            "severity": 3,
+            "message": "Nat.add_zero (n : ℕ) : n + 0 = n",
+            "line": 6
+          }
+        ]
+      },
+      "shutdown_seconds": 0.08322349999798462,
+      "ordered_runs": [
+        {
+          "policy": "query_then_full",
+          "queries": [
+            {
+              "root_name": "Nat.sub_one_dvd_pow_sub_one",
+              "available": false,
+              "status": "KERNEL_ACCEPTED",
+              "axioms": {},
+              "source_sha256": "7ba8c531d76b1fd22f996e4a9ce6c0282bdb3fb55669048a9a153000ef893bbc",
+              "document_version": 2,
+              "elapsed_seconds": 0.21824029998970218,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT|Nat.sub_one_dvd_pow_sub_one|false",
+                  "line": 7
+                }
+              ]
+            }
+          ],
+          "rows": [
+            {
+              "id": "exact_historical_negative",
+              "full_check_seconds": 0.22131710000394378,
+              "status": "REJECTED",
+              "axioms": {},
+              "source_sha256": "1fd1e6b5451f5e83328a64dc7b5c213f73e7badd29309157a3d4ca01b7488e00",
+              "document_version": 3,
+              "elapsed_seconds": 0.22131710000394378,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "expected token",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "failed to synthesize instance of type class\n  HPow (Sort ?u.22) ℕ ?m.32\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "failed to synthesize instance of type class\n  OfNat (Sort ?u.22) 10\nnumerals are polymorphic in Lean, but the numeral `10` cannot be used in a context where the expected type is\n  Sort ?u.22\ndue to the absence of the instance above\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "Missing cases:\n",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "unsolved goals\nn : ℕ\nh₀ : 0 < n\nhmod : sorry\n⊢ 9 ∣ 10 ^ n - 1",
+                  "line": 9
+                },
+                {
+                  "severity": 3,
+                  "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+                  "line": 23
+                }
+              ]
+            },
+            {
+              "id": "explicit_root_missing_control",
+              "source_sha256": "c66b0ed450d929001601a130fe4338a4d4f11864cfc76b79822cc9f6f18317f4",
+              "status": "SKIPPED_MANDATORY_UNAVAILABLE",
+              "full_check_seconds": 0.0
+            },
+            {
+              "id": "ordinary_full_proof_control",
+              "full_check_seconds": 0.234286399994744,
+              "status": "KERNEL_ACCEPTED",
+              "axioms": {
+                "P41Bad.p41_target": [
+                  "propext",
+                  "Quot.sound"
+                ]
+              },
+              "source_sha256": "209383a445ef877b67681db44d619d699714b6ed1e3dbee28f12c259cdad24af",
+              "document_version": 4,
+              "elapsed_seconds": 0.234286399994744,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+                  "line": 31
+                },
+                {
+                  "severity": 3,
+                  "message": "'P41Bad.p41_target' depends on axioms: [propext, Quot.sound]",
+                  "line": 32
+                }
+              ]
+            }
+          ],
+          "elapsed_seconds": 0.673883300012676
+        },
+        {
+          "policy": "direct",
+          "queries": [],
+          "rows": [
+            {
+              "id": "exact_historical_negative",
+              "full_check_seconds": 0.20427679999556858,
+              "status": "REJECTED",
+              "axioms": {},
+              "source_sha256": "1fd1e6b5451f5e83328a64dc7b5c213f73e7badd29309157a3d4ca01b7488e00",
+              "document_version": 5,
+              "elapsed_seconds": 0.20427679999556858,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "expected token",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "failed to synthesize instance of type class\n  HPow (Sort ?u.22) ℕ ?m.32\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "failed to synthesize instance of type class\n  OfNat (Sort ?u.22) 10\nnumerals are polymorphic in Lean, but the numeral `10` cannot be used in a context where the expected type is\n  Sort ?u.22\ndue to the absence of the instance above\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "Missing cases:\n",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "unsolved goals\nn : ℕ\nh₀ : 0 < n\nhmod : sorry\n⊢ 9 ∣ 10 ^ n - 1",
+                  "line": 9
+                },
+                {
+                  "severity": 3,
+                  "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+                  "line": 23
+                }
+              ]
+            },
+            {
+              "id": "explicit_root_missing_control",
+              "full_check_seconds": 0.21894269999756943,
+              "status": "REJECTED",
+              "axioms": {},
+              "source_sha256": "c66b0ed450d929001601a130fe4338a4d4f11864cfc76b79822cc9f6f18317f4",
+              "document_version": 6,
+              "elapsed_seconds": 0.21894269999756943,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown constant `Nat.sub_one_dvd_pow_sub_one`",
+                  "line": 13
+                },
+                {
+                  "severity": 3,
+                  "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+                  "line": 17
+                },
+                {
+                  "severity": 3,
+                  "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+                  "line": 18
+                }
+              ]
+            },
+            {
+              "id": "ordinary_full_proof_control",
+              "full_check_seconds": 0.20544920000247657,
+              "status": "KERNEL_ACCEPTED",
+              "axioms": {
+                "P41Bad.p41_target": [
+                  "propext",
+                  "Quot.sound"
+                ]
+              },
+              "source_sha256": "209383a445ef877b67681db44d619d699714b6ed1e3dbee28f12c259cdad24af",
+              "document_version": 7,
+              "elapsed_seconds": 0.20544920000247657,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+                  "line": 31
+                },
+                {
+                  "severity": 3,
+                  "message": "'P41Bad.p41_target' depends on axioms: [propext, Quot.sound]",
+                  "line": 32
+                }
+              ]
+            }
+          ],
+          "elapsed_seconds": 0.6286892999924021
+        },
+        {
+          "policy": "direct",
+          "queries": [],
+          "rows": [
+            {
+              "id": "exact_historical_negative",
+              "full_check_seconds": 0.21984199999133125,
+              "status": "REJECTED",
+              "axioms": {},
+              "source_sha256": "1fd1e6b5451f5e83328a64dc7b5c213f73e7badd29309157a3d4ca01b7488e00",
+              "document_version": 8,
+              "elapsed_seconds": 0.21984199999133125,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "expected token",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "failed to synthesize instance of type class\n  HPow (Sort ?u.22) ℕ ?m.32\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "failed to synthesize instance of type class\n  OfNat (Sort ?u.22) 10\nnumerals are polymorphic in Lean, but the numeral `10` cannot be used in a context where the expected type is\n  Sort ?u.22\ndue to the absence of the instance above\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "Missing cases:\n",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "unsolved goals\nn : ℕ\nh₀ : 0 < n\nhmod : sorry\n⊢ 9 ∣ 10 ^ n - 1",
+                  "line": 9
+                },
+                {
+                  "severity": 3,
+                  "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+                  "line": 23
+                }
+              ]
+            },
+            {
+              "id": "explicit_root_missing_control",
+              "full_check_seconds": 0.22137780000048224,
+              "status": "REJECTED",
+              "axioms": {},
+              "source_sha256": "c66b0ed450d929001601a130fe4338a4d4f11864cfc76b79822cc9f6f18317f4",
+              "document_version": 9,
+              "elapsed_seconds": 0.22137780000048224,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "Unknown constant `Nat.sub_one_dvd_pow_sub_one`",
+                  "line": 13
+                },
+                {
+                  "severity": 3,
+                  "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+                  "line": 17
+                },
+                {
+                  "severity": 3,
+                  "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+                  "line": 18
+                }
+              ]
+            },
+            {
+              "id": "ordinary_full_proof_control",
+              "full_check_seconds": 0.21811149999848567,
+              "status": "KERNEL_ACCEPTED",
+              "axioms": {
+                "P41Bad.p41_target": [
+                  "propext",
+                  "Quot.sound"
+                ]
+              },
+              "source_sha256": "209383a445ef877b67681db44d619d699714b6ed1e3dbee28f12c259cdad24af",
+              "document_version": 10,
+              "elapsed_seconds": 0.21811149999848567,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+                  "line": 31
+                },
+                {
+                  "severity": 3,
+                  "message": "'P41Bad.p41_target' depends on axioms: [propext, Quot.sound]",
+                  "line": 32
+                }
+              ]
+            }
+          ],
+          "elapsed_seconds": 0.6593542999908095
+        },
+        {
+          "policy": "query_then_full",
+          "queries": [
+            {
+              "root_name": "Nat.sub_one_dvd_pow_sub_one",
+              "available": false,
+              "status": "KERNEL_ACCEPTED",
+              "axioms": {},
+              "source_sha256": "7ba8c531d76b1fd22f996e4a9ce6c0282bdb3fb55669048a9a153000ef893bbc",
+              "document_version": 11,
+              "elapsed_seconds": 0.21704040000622626,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "D41_EXACT|Nat.sub_one_dvd_pow_sub_one|false",
+                  "line": 7
+                }
+              ]
+            }
+          ],
+          "rows": [
+            {
+              "id": "exact_historical_negative",
+              "full_check_seconds": 0.21831479998945724,
+              "status": "REJECTED",
+              "axioms": {},
+              "source_sha256": "1fd1e6b5451f5e83328a64dc7b5c213f73e7badd29309157a3d4ca01b7488e00",
+              "document_version": 12,
+              "elapsed_seconds": 0.21831479998945724,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 1,
+                  "message": "expected token",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "failed to synthesize instance of type class\n  HPow (Sort ?u.22) ℕ ?m.32\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "failed to synthesize instance of type class\n  OfNat (Sort ?u.22) 10\nnumerals are polymorphic in Lean, but the numeral `10` cannot be used in a context where the expected type is\n  Sort ?u.22\ndue to the absence of the instance above\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "Missing cases:\n",
+                  "line": 10
+                },
+                {
+                  "severity": 1,
+                  "message": "unsolved goals\nn : ℕ\nh₀ : 0 < n\nhmod : sorry\n⊢ 9 ∣ 10 ^ n - 1",
+                  "line": 9
+                },
+                {
+                  "severity": 3,
+                  "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+                  "line": 23
+                }
+              ]
+            },
+            {
+              "id": "explicit_root_missing_control",
+              "source_sha256": "c66b0ed450d929001601a130fe4338a4d4f11864cfc76b79822cc9f6f18317f4",
+              "status": "SKIPPED_MANDATORY_UNAVAILABLE",
+              "full_check_seconds": 0.0
+            },
+            {
+              "id": "ordinary_full_proof_control",
+              "full_check_seconds": 0.21547009999630973,
+              "status": "KERNEL_ACCEPTED",
+              "axioms": {
+                "P41Bad.p41_target": [
+                  "propext",
+                  "Quot.sound"
+                ]
+              },
+              "source_sha256": "209383a445ef877b67681db44d619d699714b6ed1e3dbee28f12c259cdad24af",
+              "document_version": 13,
+              "elapsed_seconds": 0.21547009999630973,
+              "matching_publications": 1,
+              "messages": [
+                {
+                  "severity": 3,
+                  "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+                  "line": 31
+                },
+                {
+                  "severity": 3,
+                  "message": "'P41Bad.p41_target' depends on axioms: [propext, Quot.sound]",
+                  "line": 32
+                }
+              ]
+            }
+          ],
+          "elapsed_seconds": 0.6508571000013035
+        }
+      ],
+      "existing_exact_retrieval": {
+        "status": "REJECTED",
+        "axioms": {},
+        "source_sha256": "935eca059a2629c487bea674ed7be2b8cfe35546b75c6711d17a93f45bd1e22e",
+        "document_version": 14,
+        "elapsed_seconds": 0.7588104999886127,
+        "matching_publications": 1,
+        "messages": [
+          {
+            "severity": 3,
+            "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+            "line": 17
+          },
+          {
+            "severity": 3,
+            "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+            "line": 18
+          },
+          {
+            "severity": 1,
+            "message": "`exact?` could not close the goal. Try `apply?` to see partial suggestions.",
+            "line": 13
+          }
+        ]
+      },
+      "direct_accepted": [
+        "ordinary_full_proof_control"
+      ],
+      "filtered_accepted": [
+        "ordinary_full_proof_control"
+      ],
+      "same_acceptance_set": true,
+      "false_rejections": []
+    }
+  },
+  "new_model_tokens": 0,
+  "gpu_seconds": 0
+}

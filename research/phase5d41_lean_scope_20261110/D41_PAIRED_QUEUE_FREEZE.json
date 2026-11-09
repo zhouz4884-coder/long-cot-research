@@ -1,0 +1,95 @@
+{
+  "status": "FROZEN_IDENTICAL_RESIDENT_PROOF_QUEUES",
+  "baseline": "94fc3cf7be07c59db3db9bab55c7492712d5c746",
+  "scope": "Fixed authored controls and safe exact historical negatives from D4.0. The historical failures remain deferred. An explicit root qualification is a constructed calibration input, not a reported historical skip. Both methods receive the identical proof queue.",
+  "replay_cost_protocol_sha256": "cd8c482012f36b12cfa148d32ef2c8795db2d1244ef7be5f6d77a0ff0bf13eac",
+  "cases": {
+    "p14": {
+      "imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "sequence": [
+        "direct",
+        "query_then_full",
+        "query_then_full",
+        "direct"
+      ],
+      "inputs": [
+        {
+          "id": "exact_historical_negative",
+          "source_sha256": "85df13c04b2d38bacfb4faa15b0f5322564f38f8a9167931428066c883722335",
+          "mandatory_root_name": null,
+          "scope": "ARCHIVED_REVIEWED_SOURCE_DEFER",
+          "targets": [
+            "P14Bad.p14_target"
+          ]
+        },
+        {
+          "id": "explicit_root_missing_control",
+          "source_sha256": "77cd2b47bff98e942955597bd5dd6926820e915c010f4021efb89f730d1ab206",
+          "mandatory_root_name": "sub_dvd_pow_sub_pow",
+          "scope": "CPU_AUTHORED_MANDATORY_ROOT_REFERENCE",
+          "targets": [
+            "P14Bad.p14_target"
+          ]
+        },
+        {
+          "id": "ordinary_full_proof_control",
+          "source_sha256": "a48c7dfbbd4e184c14be46c13a813a19f3d52e6fefb88a02554e8141ef139a87",
+          "mandatory_root_name": null,
+          "scope": "CPU_AUTHORED_ORDINARY_PROOF_DEFER",
+          "targets": [
+            "P14Bad.p14_target"
+          ]
+        }
+      ]
+    },
+    "p41": {
+      "imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "sequence": [
+        "query_then_full",
+        "direct",
+        "direct",
+        "query_then_full"
+      ],
+      "inputs": [
+        {
+          "id": "exact_historical_negative",
+          "source_sha256": "1fd1e6b5451f5e83328a64dc7b5c213f73e7badd29309157a3d4ca01b7488e00",
+          "mandatory_root_name": null,
+          "scope": "ARCHIVED_REVIEWED_SOURCE_DEFER",
+          "targets": [
+            "P41Bad.p41_target"
+          ]
+        },
+        {
+          "id": "explicit_root_missing_control",
+          "source_sha256": "c66b0ed450d929001601a130fe4338a4d4f11864cfc76b79822cc9f6f18317f4",
+          "mandatory_root_name": "Nat.sub_one_dvd_pow_sub_one",
+          "scope": "CPU_AUTHORED_MANDATORY_ROOT_REFERENCE",
+          "targets": [
+            "P41Bad.p41_target"
+          ]
+        },
+        {
+          "id": "ordinary_full_proof_control",
+          "source_sha256": "209383a445ef877b67681db44d619d699714b6ed1e3dbee28f12c259cdad24af",
+          "mandatory_root_name": null,
+          "scope": "CPU_AUTHORED_ORDINARY_PROOF_DEFER",
+          "targets": [
+            "P41Bad.p41_target"
+          ]
+        }
+      ]
+    }
+  }
+}

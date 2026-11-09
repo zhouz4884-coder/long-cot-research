@@ -1,0 +1,11 @@
+{
+  "baseline": "94fc3cf7be07c59db3db9bab55c7492712d5c746",
+  "scope": "CPU measurements and source diagnosis only. The existing Lean environment lookup is a baseline, not a new prover or model action.",
+  "original_contexts": ["p14", "p41"],
+  "additional_import_upper_bound_only": ["Mathlib.Algebra.Ring.GeomSum", "Mathlib.Data.Int.ModEq", "Mathlib.Data.Nat.ModEq"],
+  "scope_rule": "The three additional imports are allowed only in a separate broader-import visibility control. No ordinary proof or original-scope cost comparison receives them. No author source proof or benchmark target declaration is imported.",
+  "trusted_preflight_reference": "A hard negative requires an explicitly reviewed mandatory use of one exact fully qualified global declaration and absence in the exact imported Lean environment. A bare token, local binding, parser ambiguity, notation, branch fallback, or unreviewed proof never grants hard rejection. Unknown and non-mandatory cases still receive ordinary checking.",
+  "strong_controls": ["standard Lean full compilation", "Lean #check under matching syntax scope", "read-only exact getEnv.find?", "ordinary exact?/signature-directed proof and trusted full target verification", "batched and persistent Lean checking"],
+  "accounting": "Measure material binding, process setup, probes, every accepted or rejected full proof, diagnostics barrier and shutdown separately. Do not compare a lookup-only number with a full checking number as an end-to-end speedup. Record coverage, false rejections, deferred cases and actual accepted target set.",
+  "method_gate": "At least two independent real historical targets must show reproducible value over both direct full checks and existing context-aware Lean queries/retrieval under the same permission and candidate budget. Synthetic controls and an additional-import rescue cannot alone meet the gate. No model/GPU without gate."
+}

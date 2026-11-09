@@ -1,0 +1,144 @@
+{
+  "status": "COMPLETE_CPU_ADMISSION_NO_GO",
+  "baseline_commit": "bfb4ae10533502fe1194768aaaa2fb56214ece1b",
+  "structural_controls": {
+    "v1": {
+      "arms": {
+        "automation": {
+          "kernel_targets": 2,
+          "calls": 38,
+          "seconds": 59.82197599999927
+        },
+        "whole_rebuild": {
+          "kernel_targets": 7,
+          "calls": 65,
+          "seconds": 95.86997829997563
+        },
+        "single_failed_step": {
+          "kernel_targets": 1,
+          "calls": 36,
+          "seconds": 59.98312990001432
+        },
+        "diagnostic_local": {
+          "kernel_targets": 7,
+          "calls": 48,
+          "seconds": 73.0229038000034
+        },
+        "scoped_release": {
+          "kernel_targets": 7,
+          "calls": 61,
+          "seconds": 97.06249150002986
+        }
+      },
+      "minimum_certificate_counts": {
+        "1": 4,
+        "2": 2,
+        "0": 1
+      },
+      "pruned_candidates": 0
+    },
+    "corrected": {
+      "arms": {
+        "direct_finite_solver": {
+          "kernel_targets": 8,
+          "calls": 8,
+          "seconds": 12.319602999989002
+        },
+        "direct_shared_support": {
+          "kernel_targets": 7,
+          "calls": 7,
+          "seconds": 11.87188080001215
+        },
+        "automation": {
+          "kernel_targets": 2,
+          "calls": 38,
+          "seconds": 73.25529669999378
+        },
+        "whole_rebuild": {
+          "kernel_targets": 7,
+          "calls": 65,
+          "seconds": 105.38717639999959
+        },
+        "single_failed_step": {
+          "kernel_targets": 1,
+          "calls": 36,
+          "seconds": 59.04524979998678
+        },
+        "diagnostic_local": {
+          "kernel_targets": 7,
+          "calls": 48,
+          "seconds": 71.75932539999485
+        },
+        "scoped_release": {
+          "kernel_targets": 7,
+          "calls": 41,
+          "seconds": 62.389446799992584
+        }
+      },
+      "minimum_certificate_counts": {
+        "1": 4,
+        "2": 2,
+        "0": 1
+      },
+      "pruned_candidates": 20
+    },
+    "strong_direct_with_minimum_certificate": {
+      "matched_finite_support": {
+        "kernel_targets": 7,
+        "lean_calls": 7,
+        "seconds": 10.298488599997654
+      },
+      "whole_bounded_domain": {
+        "kernel_targets": 8,
+        "lean_calls": 8,
+        "seconds": 11.774095799999486
+      }
+    }
+  },
+  "verified_runtime_controls": {
+    "core": [
+      9,
+      9
+    ],
+    "official_miniF2F": [
+      10,
+      10
+    ],
+    "source_std_proofs": [
+      3,
+      3
+    ]
+  },
+  "archived_provider_attempts": {
+    "states": 6,
+    "episodes": 36,
+    "attempts": 60,
+    "author_scope_only": true
+  },
+  "model_pilot_admitted": false,
+  "independent_model_test_denominator": 0,
+  "model_tokens": 0,
+  "gpu_seconds": 0,
+  "reason": "Kernel-checked minimum release is operational on eight synthetic controls. A strong bundled solver gives the same certificates under the matched support at lower work, and no source failure provides replicated increment over known typed/whole/local baselines.",
+  "evidence_sha256": {
+    "D38_MODEL_ADMISSION.json": "59aaa6df7356bc0e300d73699a24948a19dbc2b41ce18e0fd283a0873b0165b5",
+    "D38_SOURCE_PROBE.json": "9dd74f8d86e96252f40fef274b84f1f7d04d78deeae1d27768047f9596e2b32f",
+    "D38_STRUCTURAL_CONTROL_FREEZE.json": "d94eff796b4f76b75f3c3e3cb7d12a75f63b30eb03076529b37fead164c26245",
+    "D38_STRUCTURAL_V2_FREEZE.json": "98d8332027c3646b0abcd3e4ee467dc6084a3cb3223f107c5b8cedf902dcadf7",
+    "lean_runtime_controls.json": "8fff2797713ca6d6138600498e4b64419daced97527def8295739ec0f2189976",
+    "lean_runtime_benchmark_controls.json": "1961f812c0aef329432307c0fb096d6be69353eda9d4b58bf510801ebf849104",
+    "lean_runtime_benchmark_sources.json": "9c330f2f8529917abb272e74acf094b83aba1f4eb11ab378dcb4c91a3c09fa1a",
+    "proof_intake_manifest.json": "da1b8a78f63d9facf01d416328ca77e63c451266df59cc179a5d7ee0787df370",
+    "proof_intake_std_kernel.json": "fced962d33d994354d04a4ff3b737edafc237c06f5b64ebbfd2ac9f5efbca242",
+    "competition_residue_results.json": "1f9d3e7737c083134a3e047e0bd7fe316a27de42119810ddad4f2ec33dcd4ace",
+    "context_identity_initial_results.json": "f5e398426edddb95da220c335858bc73be369b088369950c39f73157cd4a3f8b",
+    "context_identity_results.json": "3727d441cd87547972fdc08ac0906e2df143b0af9bed4c23b4bb10fd9a9c0607",
+    "structural_control_results.json": "03efb0786bf41073eb7f2b8f771a6d68ccc6d55e90ebf9883eff713889f0a2ae",
+    "structural_control_v2_results.json": "c934b3ee815e844a528ed9522f7509ab14c7bc8bac73734d1e23eebfc006579f",
+    "batched_release_baseline_results.json": "615a41fe7877466072741ae3f3fdd312124e09a718e46ac5d6f429c4921f89bc",
+    "prior_art_sources.json": "819872652a17f7b5f5da1ab16f6818cc1fa858184f1a0e6f964aded8d0461447",
+    "blueprint_trace_freeze.json": "657b0e1d770340c543af9b645a265fcea55628a1ea8fcd8664b1433cd365e1ab",
+    "blueprint_trace_intake.json": "5b39356199541a446481a3eb615d8c698a3d7ee717a8a14ab2879b120e719d64",
+    "blueprint_trace_preservation.json": "6c5110b5a51948f6aac169ac022cdb36ec18ee8db9002140274e64145e64fea5"
+  }
+}

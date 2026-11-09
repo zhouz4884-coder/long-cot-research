@@ -1,0 +1,349 @@
+{
+  "status": "PASS",
+  "scope": "Real kernel source replay for three controlled mismatch pairs. Exact input keys refuse even semantically equivalent but byte-different prefixes; no claim of a general kernel state fingerprint.",
+  "all_exact_identities_distinct": true,
+  "cases": [
+    {
+      "name": "same_surface_valid_context",
+      "exact_input_identity": "c37fe7762253fc055e7055e4a8650e24ee1aac8774c4fb68263f5b9ba9cf9c87",
+      "expected_accepted": true,
+      "matches": true,
+      "kernel": {
+        "stage": "same_surface_valid_context",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.7298545000012382,
+        "input_sha256": "9334f67d97f28304ca39f81dd7861a53524502b8773ddfd6b7152d4f54663724",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : ∀ P : Prop, P → P := by\n  intro P h\n  trace_state\n  exact h\n#print axioms d38_obligation\n",
+        "accepted_axioms": [],
+        "messages": [
+          {
+            "caption": "",
+            "data": "P : Prop\nh : P\n⊢ P",
+            "endPos": {
+              "column": 13,
+              "line": 7
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "trace",
+            "pos": {
+              "column": 2,
+              "line": 7
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'d38_obligation' does not depend on any axioms",
+            "endPos": {
+              "column": 6,
+              "line": 9
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 9
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      }
+    },
+    {
+      "name": "same_surface_wrong_context",
+      "exact_input_identity": "c8deadb2f616304264bea65dd59fb4d417d7216623dbb35d2dfd88a88b39358e",
+      "expected_accepted": false,
+      "matches": true,
+      "kernel": {
+        "stage": "same_surface_wrong_context",
+        "status": "REJECTED",
+        "wall_seconds": 1.7229175999964355,
+        "input_sha256": "85f222e40d5a6d1c2a4d961f7d6a5cace59a025571d0b381ea2deb56bcfeb836",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : ∀ P : Prop, (¬ P) → P := by\n  intro P h\n  trace_state\n  exact h\n#print axioms d38_obligation\n",
+        "accepted_axioms": null,
+        "messages": [
+          {
+            "caption": "",
+            "data": "Type mismatch\n  h\nhas type\n  ¬P\nbut is expected to have type\n  P",
+            "endPos": {
+              "column": 9,
+              "line": 8
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 2,
+              "line": 8
+            },
+            "severity": "error"
+          },
+          {
+            "caption": "",
+            "data": "P : Prop\nh : ¬P\n⊢ P",
+            "endPos": {
+              "column": 13,
+              "line": 7
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "trace",
+            "pos": {
+              "column": 2,
+              "line": 7
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [sorryAx]",
+            "endPos": {
+              "column": 6,
+              "line": 9
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 9
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      }
+    },
+    {
+      "name": "ordinary_goal_order",
+      "exact_input_identity": "5f7c129e0df4075264fe669595a251db6b30bfea3c545e7ee2b3c8b5eb500af2",
+      "expected_accepted": true,
+      "matches": true,
+      "kernel": {
+        "stage": "ordinary_goal_order",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.6623986000049626,
+        "input_sha256": "483cf14c3d3060ee75085129927f8e8f49d4c085f9b8a2cee90b7f60c39d1695",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : ∀ P Q : Prop, P → Q → P ∧ Q := by\n  intro P Q hp hq\n  constructor\n  trace_state\n  exact hp\n  exact hq\n#print axioms d38_obligation\n",
+        "accepted_axioms": [],
+        "messages": [
+          {
+            "caption": "",
+            "data": "case left\nP Q : Prop\nhp : P\nhq : Q\n⊢ P\n\ncase right\nP Q : Prop\nhp : P\nhq : Q\n⊢ Q",
+            "endPos": {
+              "column": 13,
+              "line": 8
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "trace",
+            "pos": {
+              "column": 2,
+              "line": 8
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'d38_obligation' does not depend on any axioms",
+            "endPos": {
+              "column": 6,
+              "line": 11
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 11
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      }
+    },
+    {
+      "name": "swapped_goal_order",
+      "exact_input_identity": "6503c3e86637c7e9e2e17b3b9409231ad70ff4ed0ceb814c1538a0412e8e1c8e",
+      "expected_accepted": false,
+      "matches": true,
+      "kernel": {
+        "stage": "swapped_goal_order",
+        "status": "REJECTED",
+        "wall_seconds": 1.5722212999971816,
+        "input_sha256": "979f4a5f70fde451a98cce2af8ab24c0b02428cbe9c88a7122b5b561d8a20903",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : ∀ P Q : Prop, P → Q → P ∧ Q := by\n  intro P Q hp hq\n  constructor\n  rotate_left\n  trace_state\n  exact hp\n  exact hq\n#print axioms d38_obligation\n",
+        "accepted_axioms": null,
+        "messages": [
+          {
+            "caption": "",
+            "data": "Type mismatch\n  hp\nhas type\n  P\nbut is expected to have type\n  Q",
+            "endPos": {
+              "column": 10,
+              "line": 10
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 2,
+              "line": 10
+            },
+            "severity": "error"
+          },
+          {
+            "caption": "",
+            "data": "case right\nP Q : Prop\nhp : P\nhq : Q\n⊢ Q\n\ncase left\nP Q : Prop\nhp : P\nhq : Q\n⊢ P",
+            "endPos": {
+              "column": 13,
+              "line": 9
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "trace",
+            "pos": {
+              "column": 2,
+              "line": 9
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [sorryAx]",
+            "endPos": {
+              "column": 6,
+              "line": 12
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 12
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      }
+    },
+    {
+      "name": "witness_metavariable_unassigned",
+      "exact_input_identity": "d57924ba733e18bcfc4e944614a0032669e6db5dc0f5c8df9362770ed7c0d5f7",
+      "expected_accepted": true,
+      "matches": true,
+      "kernel": {
+        "stage": "witness_metavariable_unassigned",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.5971132000049693,
+        "input_sha256": "316a3f2f7dda17194e31c24be47991586548f03bfd78dd74b7548dc2d520be3c",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : ∀ (P : Nat → Prop), P 2 → ∃ n : Nat, P n := by\n  intro P h\n  refine ⟨?_, ?_⟩\n  rotate_left\n  trace_state\n  exact h\n#print axioms d38_obligation\n",
+        "accepted_axioms": [],
+        "messages": [
+          {
+            "caption": "",
+            "data": "case refine_2\nP : Nat → Prop\nh : P 2\n⊢ P ?refine_1\n\ncase refine_1\nP : Nat → Prop\nh : P 2\n⊢ Nat",
+            "endPos": {
+              "column": 13,
+              "line": 9
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "trace",
+            "pos": {
+              "column": 2,
+              "line": 9
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'d38_obligation' does not depend on any axioms",
+            "endPos": {
+              "column": 6,
+              "line": 11
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 11
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      }
+    },
+    {
+      "name": "witness_locked_to_other_value",
+      "exact_input_identity": "6256db685a28e882639f50c570a14f539684f2a7a56a8e2ca5621f50198b26b6",
+      "expected_accepted": false,
+      "matches": true,
+      "kernel": {
+        "stage": "witness_locked_to_other_value",
+        "status": "REJECTED",
+        "wall_seconds": 1.6482923000003211,
+        "input_sha256": "d8a1d6cdac80bb2beb1657c137bcd1f2bcf8c9d9cbf57d6675b6c58d41fc6ca7",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : ∀ (P : Nat → Prop), P 2 → ∃ n : Nat, P n := by\n  intro P h\n  refine ⟨3, ?_⟩\n  trace_state\n  exact h\n#print axioms d38_obligation\n",
+        "accepted_axioms": null,
+        "messages": [
+          {
+            "caption": "",
+            "data": "Type mismatch\n  h\nhas type\n  P 2\nbut is expected to have type\n  P 3",
+            "endPos": {
+              "column": 9,
+              "line": 9
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 2,
+              "line": 9
+            },
+            "severity": "error"
+          },
+          {
+            "caption": "",
+            "data": "P : Nat → Prop\nh : P 2\n⊢ P 3",
+            "endPos": {
+              "column": 13,
+              "line": 8
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "trace",
+            "pos": {
+              "column": 2,
+              "line": 8
+            },
+            "severity": "information"
+          },
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [sorryAx]",
+            "endPos": {
+              "column": 6,
+              "line": 10
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 10
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      }
+    }
+  ]
+}

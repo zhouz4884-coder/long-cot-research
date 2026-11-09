@@ -1,0 +1,167 @@
+{
+  "status": "PASS",
+  "scope": "Fixed trusted CPU fixtures, no Mathlib or model proof submitted.",
+  "artifact": {
+    "url": "https://github.com/leanprover/lean4/releases/download/v4.27.0/lean-4.27.0-windows.tar.zst",
+    "sha256": "c34b9c2820857185978fc7310c8badeda68c9c16e83edecf176a8003c5fda1b2",
+    "bytes": 505567614
+  },
+  "runtime_files_sha256": {
+    "bin/lean.exe": "ae20fac75dfa9d92866f9c08acdff978c0f06020ab8c4ee4fc9af9505238cf81",
+    "bin/lake.exe": "cf3f1119fe62a1963b527bc4ff8fce2d32c8948fc2553b6e20ef7a9787eb59e9",
+    "lib/lean/Init.olean": "20b419dfc12a9527a50673966008780f9c2110339753d4722ef92c8ab7c5204c",
+    "lib/lean/Lean.olean": "86178b72126294e667cda343fba4ff3f5c79e6f27dcc70fe3c0193c49d1040fc",
+    "lib/lean/Std.olean": "d4121ba485c2eda293cd6a530888370a1a0dde7f4d573ccd733362efd07bc102"
+  },
+  "version": {
+    "arguments": [
+      "lean.exe",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "Lean (version 4.27.0, x86_64-w64-windows-gnu, commit db93fe1608548721853390a10cd40580fe7d22ae, Release)\n",
+    "stderr": "",
+    "wall_seconds": 0.08269969999673776
+  },
+  "lake_version": {
+    "arguments": [
+      "lake.exe",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "Lake version 5.0.0-src+db93fe1 (Lean version 4.27.0)\n",
+    "stderr": "",
+    "wall_seconds": 0.07371479999710573
+  },
+  "prefix_check": {
+    "arguments": [
+      "lean.exe",
+      "--print-prefix"
+    ],
+    "exit_code": 0,
+    "stdout": "outputs/d38_lean_4_27_0_windows/lean-4.27.0-windows\n",
+    "stderr": "",
+    "wall_seconds": 0.07066029999987222
+  },
+  "passed": 9,
+  "total": 9,
+  "controls": {
+    "kernel_positive": {
+      "source_sha256": "b54e36ff8ffa8fc9cad751cfd0a78c616df330ffef70498b5359c606ea8175c5",
+      "arguments": [
+        "lean.exe",
+        "--json",
+        "kernel_positive.lean"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"caption\":\"\",\"data\":\"'releaseTarget' does not depend on any axioms\",\"endPos\":{\"column\":6,\"line\":5},\"fileName\":\"kernel_positive.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":0,\"line\":5},\"severity\":\"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 1.480015299996012,
+      "expected_behavior_observed": true
+    },
+    "sorry_default": {
+      "source_sha256": "67b40bfaef2119ac6a7da0e86198d65dcd279b59b0ecfd9f48a58bf421a4ca76",
+      "arguments": [
+        "lean.exe",
+        "--json",
+        "sorry_default.lean"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"caption\":\"\",\"data\":\"declaration uses 'sorry'\",\"endPos\":{\"column\":21,\"line\":2},\"fileName\":\"sorry_default.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"hasSorry\",\"pos\":{\"column\":8,\"line\":2},\"severity\":\"warning\"}\n{\"caption\":\"\",\"data\":\"'releaseTarget' depends on axioms: [sorryAx]\",\"endPos\":{\"column\":6,\"line\":4},\"fileName\":\"sorry_default.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":0,\"line\":4},\"severity\":\"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 1.4419224000012036,
+      "expected_behavior_observed": true
+    },
+    "sorry_strict": {
+      "source_sha256": "e86a0d5029ce09489c640dd6fdcbda75c18626cb5b9a9b67d68858a0cc616c17",
+      "arguments": [
+        "lean.exe",
+        "--json",
+        "sorry_strict.lean"
+      ],
+      "exit_code": 1,
+      "stdout": "{\"caption\":\"\",\"data\":\"declaration uses 'sorry'\",\"endPos\":{\"column\":21,\"line\":3},\"fileName\":\"sorry_strict.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"hasSorry\",\"pos\":{\"column\":8,\"line\":3},\"severity\":\"error\"}\n{\"caption\":\"\",\"data\":\"'releaseTarget' depends on axioms: [sorryAx]\",\"endPos\":{\"column\":6,\"line\":5},\"fileName\":\"sorry_strict.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":0,\"line\":5},\"severity\":\"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 1.529771500005154,
+      "expected_behavior_observed": true
+    },
+    "indirect_sorry": {
+      "source_sha256": "53206aebaaa0ddbded676e3ca3b5e4d3351fec8f06bbb88fbbf7d8d52cf59abb",
+      "arguments": [
+        "lean.exe",
+        "--json",
+        "indirect_sorry.lean"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"caption\":\"\",\"data\":\"declaration uses 'sorry'\",\"endPos\":{\"column\":24,\"line\":2},\"fileName\":\"indirect_sorry.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"hasSorry\",\"pos\":{\"column\":8,\"line\":2},\"severity\":\"warning\"}\n{\"caption\":\"\",\"data\":\"'releaseTarget' depends on axioms: [sorryAx]\",\"endPos\":{\"column\":6,\"line\":5},\"fileName\":\"indirect_sorry.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":0,\"line\":5},\"severity\":\"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 1.4711099000051036,
+      "expected_behavior_observed": true
+    },
+    "admit_strict": {
+      "source_sha256": "ff8b4faf305378590fe77cb6afd6836f5ba9c42e923d21782af8536ce3932aa7",
+      "arguments": [
+        "lean.exe",
+        "--json",
+        "admit_strict.lean"
+      ],
+      "exit_code": 1,
+      "stdout": "{\"caption\":\"\",\"data\":\"declaration uses 'sorry'\",\"endPos\":{\"column\":21,\"line\":3},\"fileName\":\"admit_strict.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"hasSorry\",\"pos\":{\"column\":8,\"line\":3},\"severity\":\"error\"}\n{\"caption\":\"\",\"data\":\"'releaseTarget' depends on axioms: [sorryAx]\",\"endPos\":{\"column\":6,\"line\":5},\"fileName\":\"admit_strict.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":0,\"line\":5},\"severity\":\"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 1.5823749999981374,
+      "expected_behavior_observed": true
+    },
+    "custom_axiom": {
+      "source_sha256": "0ede71c57207430829bff5c172e40dd797640ca535beadcd753307175d970c9e",
+      "arguments": [
+        "lean.exe",
+        "--json",
+        "custom_axiom.lean"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"caption\":\"\",\"data\":\"'releaseTarget' depends on axioms: [fakeEvidence]\",\"endPos\":{\"column\":6,\"line\":5},\"fileName\":\"custom_axiom.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":0,\"line\":5},\"severity\":\"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 1.4790050999945379,
+      "expected_behavior_observed": true
+    },
+    "fake_statement_unbound": {
+      "source_sha256": "36e8a722a2a6762f5b21eebd18ac5da302262e4fd1a72068a42138237dac3209",
+      "arguments": [
+        "lean.exe",
+        "--json",
+        "fake_statement_unbound.lean"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"caption\":\"\",\"data\":\"'releaseTarget' does not depend on any axioms\",\"endPos\":{\"column\":6,\"line\":5},\"fileName\":\"fake_statement_unbound.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":0,\"line\":5},\"severity\":\"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 1.589965699997265,
+      "expected_behavior_observed": true
+    },
+    "fake_statement_bound": {
+      "source_sha256": "29d25119a47aac4e83d277cabcfd5a3e700116d7dbf7206aed7b916ec16fdd4f",
+      "arguments": [
+        "lean.exe",
+        "--json",
+        "fake_statement_bound.lean"
+      ],
+      "exit_code": 1,
+      "stdout": "{\"caption\":\"\",\"data\":\"Type mismatch\\n  releaseTarget\\nhas type\\n  True\\nbut is expected to have type\\n  ∀ (n : Nat), n + 0 = n\",\"endPos\":{\"column\":62,\"line\":5},\"fileName\":\"fake_statement_bound.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":49,\"line\":5},\"severity\":\"error\"}\n{\"caption\":\"\",\"data\":\"'requiredTarget' depends on axioms: [sorryAx]\",\"endPos\":{\"column\":6,\"line\":6},\"fileName\":\"fake_statement_bound.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":0,\"line\":6},\"severity\":\"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 1.6212220000015805,
+      "expected_behavior_observed": true
+    },
+    "wrong_proof_bound": {
+      "source_sha256": "eb6bb5328b898d9532a3f1c004b5ecf9d54b8f9accbccc77ef0ef3e71eae825c",
+      "arguments": [
+        "lean.exe",
+        "--json",
+        "wrong_proof_bound.lean"
+      ],
+      "exit_code": 1,
+      "stdout": "{\"caption\":\"\",\"data\":\"Type mismatch\\n  True.intro\\nhas type\\n  True\\nbut is expected to have type\\n  n + 0 = n\",\"endPos\":{\"column\":18,\"line\":4},\"fileName\":\"wrong_proof_bound.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":2,\"line\":4},\"severity\":\"error\"}\n{\"caption\":\"\",\"data\":\"'releaseTarget' depends on axioms: [sorryAx]\",\"endPos\":{\"column\":6,\"line\":5},\"fileName\":\"wrong_proof_bound.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":0,\"line\":5},\"severity\":\"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 1.4633778999996139,
+      "expected_behavior_observed": true
+    }
+  }
+}

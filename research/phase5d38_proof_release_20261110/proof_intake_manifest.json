@@ -1,0 +1,647 @@
+{
+  "status": "COMPLETE_PUBLIC_SOURCE_INTAKE",
+  "scope": "Public statements and proof provenance; not a model-ready or natural failure benchmark.",
+  "sources": {
+    "openai_original": {
+      "repository": "https://github.com/openai/miniF2F",
+      "revision": "4e433ff5cadff23f9911a2bb5bbab2d351ce5554",
+      "config_path": "leanpkg.toml",
+      "config_sha256": "5f7636ef2fadce1703cc339cb8d6562d1525e0d6505c7ef54d972762185544ef",
+      "toolchain_declared": "leanprover-community/lean:3.42.1"
+    },
+    "yang_port": {
+      "repository": "https://github.com/yangky11/miniF2F-lean4",
+      "revision": "5746b7d6c47855ce1294bed87329618ff7f1bc31",
+      "config_path": "lean-toolchain",
+      "config_sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+      "toolchain_declared": "leanprover/lean4:v4.24.0",
+      "lake_manifest_sha256": "299e9b28e4bb2b581e2652e346a71c1594930070cd5d0139aa6d1aaa847c25ee",
+      "selected_dependencies": {
+        "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+        "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee"
+      }
+    },
+    "putnam": {
+      "repository": "https://github.com/trishullab/PutnamBench",
+      "revision": "a635813f5edf297d928f9bd5ef8324a26bdde09c",
+      "config_path": "lean4/lean-toolchain",
+      "config_sha256": "7bc3447cbd72d5618fae8359a8f2eb94d86b4ad25dde7ce79df2a283247262e3",
+      "toolchain_declared": "leanprover/lean4:v4.33.1",
+      "lake_manifest_sha256": "86f328eaf63c87c7133c5fb4a480e1b368d1141631efb6f89f84ee71163cba0a",
+      "selected_dependencies": {
+        "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+        "batteries": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+      }
+    },
+    "verisoft": {
+      "repository": "https://github.com/utopia-group/VeriSoftBench",
+      "revision": "8f5e8b36ab5fbdec6fd8d8f4ee0580d29647097a",
+      "config_path": "repos.json",
+      "config_sha256": "c9cc7cb9650c482d81ee78d7f704c61d0d6073418064d11c55674938f35760de",
+      "toolchain_declared": null,
+      "projects": 23,
+      "tasks": 500,
+      "same_v4270_projects": [],
+      "dataset_sha256": "ea584250021fbfaddc060834be2e05b9b2fae4f720c770a9932c71d039a50961"
+    },
+    "deepmind": {
+      "repository": "https://github.com/google-deepmind/miniF2F",
+      "revision": "f0a20e14c1eeccd859d51bb4c2b3ee487889c303",
+      "config_path": "lean-toolchain",
+      "config_sha256": "d55ca0039a5479db5b38919d005b2c427b89b3be4f0184a20f2f4eae931f5bdb",
+      "toolchain_declared": "leanprover/lean4:v4.27.0",
+      "lake_manifest_sha256": "cad92c205de4f395f68f2a2e5e13807f85c0bb5c53cd4a473fde91bea07ae40b",
+      "selected_dependencies": {
+        "formal_conjectures": "f564f8d7a6d28bfeea4deeb0c12aa81348da6d73",
+        "mathlib": "a3a10db0e9d66acbebf76c5e6a135066525ac900",
+        "batteries": "b25b36a7caf8e237e7d1e6121543078a06777c8a"
+      },
+      "problem_imports_sha256": "ed4eb9efdfe3698c65ccd225e804a32f4027f32d64e47376df20681f268024d6",
+      "test_theorem_lines": 244,
+      "test_sorry_tokens_raw": 242
+    },
+    "std": {
+      "repository": "https://github.com/leanprover/lean4",
+      "revision": "db93fe1608548721853390a10cd40580fe7d22ae",
+      "config_path": null,
+      "config_sha256": null,
+      "toolchain_declared": "leanprover/lean4:v4.27.0"
+    },
+    "leroy": {
+      "repository": "https://github.com/leanprover/LeroyCompilerVerificationCourse",
+      "revision": "a2730e7f9228b9d7ecf4510f1f8652f2cae7ba01",
+      "config_path": "lean-toolchain",
+      "config_sha256": "4a8903b9682e21cd1d1a4dd0383ba98344163c01294e1e766b69d2c58da466c6",
+      "toolchain_declared": "leanprover/lean4:v4.23.0-rc2",
+      "lake_manifest_sha256": "a8d0a93437738e78a87c75fb48f1b58e1fbbdfce5de18a2969637ae68599200c",
+      "selected_dependencies": {
+        "batteries": "6e89c7370ca3a91b7d1f29ef7d727a9d027d7b0d"
+      },
+      "declared_source_license": "LGPL-2.1"
+    }
+  },
+  "natural_public_statements": [
+    {
+      "source": "deepmind",
+      "path": "MiniF2F/Test.lean",
+      "link": "https://github.com/google-deepmind/miniF2F/blob/f0a20e14c1eeccd859d51bb4c2b3ee487889c303/MiniF2F/Test.lean",
+      "declaration": "mathd_numbertheory_66",
+      "topic": "A closed natural-number remainder identity.",
+      "class": "NATURAL_PUBLISHED_STATEMENT",
+      "direct_imports": [
+        "MiniF2F.ProblemImports"
+      ],
+      "scope_commands": [
+        "open scoped Nat",
+        "open scoped Real",
+        "set_option autoImplicit false",
+        "set_option relaxedAutoImplicit false"
+      ],
+      "forbidden_imports": [
+        "MiniF2F.Test",
+        "MiniF2F.Valid"
+      ],
+      "related_original_lean3_reference": {
+        "source": "openai_original",
+        "path": "lean/src/test.lean",
+        "link": "https://github.com/openai/miniF2F/blob/4e433ff5cadff23f9911a2bb5bbab2d351ce5554/lean/src/test.lean",
+        "scope": "Same declaration name in Lean 3. Source proof present; no port or theorem equivalence claim.",
+        "source_raw_sha256": "fe8830147623fffbb7f55f878de363fdb2f9738c269b68ab11b31f6e3d59c5fb",
+        "declaration_sha256": "7b6255c99c4fb42fac8c420e9bec039e66cb2f13e568940dab4dea0b9337325f",
+        "statement_sha256": "da57887933bad6a51b0f9cf1b2b6a4c39501d486e2c8c86e0470c953127c5059",
+        "proof_body_sha256": "72de2541c0504ee5552ba8623d1b74054fc7a36c475bdf5729eed1edb97d784b",
+        "proof_availability": "SOURCE_PROOF_PRESENT",
+        "source_char_span": [
+          41232,
+          41304
+        ],
+        "source_line_span_inclusive": [
+          2158,
+          2162
+        ]
+      },
+      "kernel_status_in_this_intake": "OFFICIAL_LAKE_ENVIRONMENT_REQUIRED",
+      "source_raw_sha256": "8e135204947654a6f5234ee3da830ea7b72337f33dc29229fd8be6c69ac1c0b7",
+      "declaration_sha256": "27e4cf904a8ce6b55a5998a61e5ed0c57c247d40d38a3b9e211beb3d43e034b4",
+      "statement_sha256": "39835a193bb0806888c68a3e55ff082d8491bc24a66ffca985d23f6d66236258",
+      "proof_body_sha256": "5a633da644c1afc6f5222be040e6a19d687c01104c0263cce32773e07376dfa8",
+      "proof_availability": "SOURCE_PROOF_PRESENT",
+      "source_char_span": [
+        59685,
+        59738
+      ],
+      "source_line_span_inclusive": [
+        1271,
+        1272
+      ]
+    },
+    {
+      "source": "deepmind",
+      "path": "MiniF2F/Test.lean",
+      "link": "https://github.com/google-deepmind/miniF2F/blob/f0a20e14c1eeccd859d51bb4c2b3ee487889c303/MiniF2F/Test.lean",
+      "declaration": "mathd_algebra_302",
+      "topic": "Squaring a scaled complex unit.",
+      "class": "NATURAL_PUBLISHED_STATEMENT",
+      "direct_imports": [
+        "MiniF2F.ProblemImports"
+      ],
+      "scope_commands": [
+        "open scoped Nat",
+        "open scoped Real",
+        "set_option autoImplicit false",
+        "set_option relaxedAutoImplicit false"
+      ],
+      "forbidden_imports": [
+        "MiniF2F.Test",
+        "MiniF2F.Valid"
+      ],
+      "related_original_lean3_reference": {
+        "source": "openai_original",
+        "path": "lean/src/test.lean",
+        "link": "https://github.com/openai/miniF2F/blob/4e433ff5cadff23f9911a2bb5bbab2d351ce5554/lean/src/test.lean",
+        "scope": "Same declaration name in Lean 3. Source proof present; no port or theorem equivalence claim.",
+        "source_raw_sha256": "fe8830147623fffbb7f55f878de363fdb2f9738c269b68ab11b31f6e3d59c5fb",
+        "declaration_sha256": "52c5cbdd343193ddd68523dbe44e518a5d55a0910074243caa34f635d6fe197b",
+        "statement_sha256": "4e28d9ac92012eaebca9220f8f79173d6225126ee03b73733fa5f2d30c99e7de",
+        "proof_body_sha256": "817a350f41bc9c74867258017b5e254edfc789e3c149ed014d97a68cb016add5",
+        "proof_availability": "SOURCE_PROOF_PRESENT",
+        "source_char_span": [
+          45369,
+          45452
+        ],
+        "source_line_span_inclusive": [
+          2389,
+          2393
+        ]
+      },
+      "kernel_status_in_this_intake": "OFFICIAL_LAKE_ENVIRONMENT_REQUIRED",
+      "source_raw_sha256": "8e135204947654a6f5234ee3da830ea7b72337f33dc29229fd8be6c69ac1c0b7",
+      "declaration_sha256": "4fb46b49b258e1c02831420e48b2a387743209310da1a3fb9a55f2caf7dcf9fb",
+      "statement_sha256": "904bdf343abd0b17514fc0661736511af73162d755ae3c223b471275b4bb1ced",
+      "proof_body_sha256": "f211105cda7882fa9949563cd6ceb527bb2d1d7e9c54cdcf750cfede20eec5f5",
+      "proof_availability": "SOURCE_PROOF_PRESENT",
+      "source_char_span": [
+        67416,
+        67501
+      ],
+      "source_line_span_inclusive": [
+        1437,
+        1438
+      ]
+    },
+    {
+      "source": "deepmind",
+      "path": "MiniF2F/Test.lean",
+      "link": "https://github.com/google-deepmind/miniF2F/blob/f0a20e14c1eeccd859d51bb4c2b3ee487889c303/MiniF2F/Test.lean",
+      "declaration": "mathd_algebra_141",
+      "topic": "Recover a sum of squares from a product and a perimeter constraint.",
+      "class": "NATURAL_PUBLISHED_STATEMENT",
+      "direct_imports": [
+        "MiniF2F.ProblemImports"
+      ],
+      "scope_commands": [
+        "open scoped Nat",
+        "open scoped Real",
+        "set_option autoImplicit false",
+        "set_option relaxedAutoImplicit false"
+      ],
+      "forbidden_imports": [
+        "MiniF2F.Test",
+        "MiniF2F.Valid"
+      ],
+      "related_original_lean3_reference": {
+        "source": "openai_original",
+        "path": "lean/src/test.lean",
+        "link": "https://github.com/openai/miniF2F/blob/4e433ff5cadff23f9911a2bb5bbab2d351ce5554/lean/src/test.lean",
+        "scope": "Same declaration name in Lean 3. Source proof present; no port or theorem equivalence claim.",
+        "source_raw_sha256": "fe8830147623fffbb7f55f878de363fdb2f9738c269b68ab11b31f6e3d59c5fb",
+        "declaration_sha256": "14969090120624e2d256abd53d01a67dffed36892191e5564564497a4b5f60e8",
+        "statement_sha256": "04c4886add81dc92e90808d08c887bdeeecaeb0d9bfc7130691022e885b964b2",
+        "proof_body_sha256": "8a38086fcb270fbf53a21b2f195ee5123b4d7515dd768a71d1b01f7b1a31e3e1",
+        "proof_availability": "SOURCE_PROOF_PRESENT",
+        "source_char_span": [
+          1487,
+          1733
+        ],
+        "source_line_span_inclusive": [
+          70,
+          80
+        ]
+      },
+      "kernel_status_in_this_intake": "OFFICIAL_LAKE_ENVIRONMENT_REQUIRED",
+      "source_raw_sha256": "8e135204947654a6f5234ee3da830ea7b72337f33dc29229fd8be6c69ac1c0b7",
+      "declaration_sha256": "ff8f68d61668050e2a37d45c9413166bf99affe40a46e336224eb6b0f6601e1b",
+      "statement_sha256": "3b14c2db9ad1882eba47436605b15fc0986d8ca9c612fc7132900da8e8ce2b8a",
+      "proof_body_sha256": "9c73f768c6b902af55b2843988f629261dd4578a5cd1d557b1db1ff4ef22ed0b",
+      "proof_availability": "NO_SOURCE_PROOF",
+      "source_char_span": [
+        1827,
+        1945
+      ],
+      "source_line_span_inclusive": [
+        37,
+        39
+      ]
+    },
+    {
+      "source": "deepmind",
+      "path": "MiniF2F/Test.lean",
+      "link": "https://github.com/google-deepmind/miniF2F/blob/f0a20e14c1eeccd859d51bb4c2b3ee487889c303/MiniF2F/Test.lean",
+      "declaration": "numbertheory_4x3m7y3neq2003",
+      "topic": "Rule out an integral difference of weighted cubes.",
+      "class": "NATURAL_PUBLISHED_STATEMENT",
+      "direct_imports": [
+        "MiniF2F.ProblemImports"
+      ],
+      "scope_commands": [
+        "open scoped Nat",
+        "open scoped Real",
+        "set_option autoImplicit false",
+        "set_option relaxedAutoImplicit false"
+      ],
+      "forbidden_imports": [
+        "MiniF2F.Test",
+        "MiniF2F.Valid"
+      ],
+      "related_original_lean3_reference": {
+        "source": "openai_original",
+        "path": "lean/src/test.lean",
+        "link": "https://github.com/openai/miniF2F/blob/4e433ff5cadff23f9911a2bb5bbab2d351ce5554/lean/src/test.lean",
+        "scope": "Same declaration name in Lean 3. Source proof present; no port or theorem equivalence claim.",
+        "source_raw_sha256": "fe8830147623fffbb7f55f878de363fdb2f9738c269b68ab11b31f6e3d59c5fb",
+        "declaration_sha256": "d060fd1aa5d0131442fc7846ef7acca212a6403bf4475b349abcf367970d10b3",
+        "statement_sha256": "a21120b4fd580ade0a8f1db479e9698643f7e84e5d94371cf048b062f7e2ab73",
+        "proof_body_sha256": "bde77bd110970bffc99309fbbb4ed320b2f7aa1f522419d1b8e3683c72d34df1",
+        "proof_availability": "SOURCE_PROOF_PRESENT",
+        "source_char_span": [
+          507,
+          1066
+        ],
+        "source_line_span_inclusive": [
+          26,
+          50
+        ]
+      },
+      "kernel_status_in_this_intake": "OFFICIAL_LAKE_ENVIRONMENT_REQUIRED",
+      "source_raw_sha256": "8e135204947654a6f5234ee3da830ea7b72337f33dc29229fd8be6c69ac1c0b7",
+      "declaration_sha256": "e3af58b0c4be870cb963ca292aa110b451cf7da53cfdc36d0ebd287ae92358d4",
+      "statement_sha256": "2f9fe0cf0fa7652f9e0e37e46f17f91ed5b06aa87bc53e0c789ed23fbd3700b0",
+      "proof_body_sha256": "9c73f768c6b902af55b2843988f629261dd4578a5cd1d557b1db1ff4ef22ed0b",
+      "proof_availability": "NO_SOURCE_PROOF",
+      "source_char_span": [
+        683,
+        773
+      ],
+      "source_line_span_inclusive": [
+        17,
+        18
+      ]
+    },
+    {
+      "source": "deepmind",
+      "path": "MiniF2F/Test.lean",
+      "link": "https://github.com/google-deepmind/miniF2F/blob/f0a20e14c1eeccd859d51bb4c2b3ee487889c303/MiniF2F/Test.lean",
+      "declaration": "induction_12dvd4expnp1p20",
+      "topic": "Divisibility of a geometric expression at every natural index.",
+      "class": "NATURAL_PUBLISHED_STATEMENT",
+      "direct_imports": [
+        "MiniF2F.ProblemImports"
+      ],
+      "scope_commands": [
+        "open scoped Nat",
+        "open scoped Real",
+        "set_option autoImplicit false",
+        "set_option relaxedAutoImplicit false"
+      ],
+      "forbidden_imports": [
+        "MiniF2F.Test",
+        "MiniF2F.Valid"
+      ],
+      "related_original_lean3_reference": {
+        "source": "openai_original",
+        "path": "lean/src/test.lean",
+        "link": "https://github.com/openai/miniF2F/blob/4e433ff5cadff23f9911a2bb5bbab2d351ce5554/lean/src/test.lean",
+        "scope": "Same declaration name in Lean 3. Source proof present; no port or theorem equivalence claim.",
+        "source_raw_sha256": "fe8830147623fffbb7f55f878de363fdb2f9738c269b68ab11b31f6e3d59c5fb",
+        "declaration_sha256": "bec3b4ce5f76a49ac8ac803a21b86e21a640f2cef45c7e531e85c2ed6ab56a9c",
+        "statement_sha256": "c4bfd7009af26626a0f9df0ba49bb6dc230c68c25dd30f906027972aa6f7c69e",
+        "proof_body_sha256": "20f66b71900456e45b6bf92903e983626fd099f9b8155d48e703f65a028042ae",
+        "proof_availability": "SOURCE_PROOF_PRESENT",
+        "source_char_span": [
+          5260,
+          5742
+        ],
+        "source_line_span_inclusive": [
+          283,
+          301
+        ]
+      },
+      "kernel_status_in_this_intake": "OFFICIAL_LAKE_ENVIRONMENT_REQUIRED",
+      "source_raw_sha256": "8e135204947654a6f5234ee3da830ea7b72337f33dc29229fd8be6c69ac1c0b7",
+      "declaration_sha256": "19f776a185d1dc65a7cff06a9a4da669707fce094b0c068880220bb5ced575ab",
+      "statement_sha256": "1e6b9f50924b00b8208ec3fe8abb37e3bf48ec50e975f45bf239c8058b18e916",
+      "proof_body_sha256": "9c73f768c6b902af55b2843988f629261dd4578a5cd1d557b1db1ff4ef22ed0b",
+      "proof_availability": "NO_SOURCE_PROOF",
+      "source_char_span": [
+        8975,
+        9054
+      ],
+      "source_line_span_inclusive": [
+        172,
+        173
+      ]
+    },
+    {
+      "source": "putnam",
+      "path": "lean4/src/putnam_1978_a1.lean",
+      "link": "https://github.com/trishullab/PutnamBench/blob/a635813f5edf297d928f9bd5ef8324a26bdde09c/lean4/src/putnam_1978_a1.lean",
+      "declaration": "putnam_1978_a1",
+      "topic": "Pigeonhole pairing in a finite arithmetic progression.",
+      "class": "NATURAL_PUBLISHED_STATEMENT",
+      "direct_imports": [
+        "Mathlib"
+      ],
+      "scope_commands": [],
+      "forbidden_imports": [
+        "putnam_1978_a1"
+      ],
+      "kernel_status_in_this_intake": "SEPARATE_V4331_ENVIRONMENT_UNTESTED",
+      "source_raw_sha256": "20cc2623a0f85fe6cf08ca3fbcd560aea6cdcc45700938695c26ebebeddd52f2",
+      "declaration_sha256": "95abc66c3c3324c8564e0b9bc6105310e5b00ee50763963f574f3e90a7f7687e",
+      "statement_sha256": "1992cfc9a03213d1f1c2663f88be1dfbec3c0ec1ba876c1673c9fddfbea8ca00",
+      "proof_body_sha256": "484aab2f2cd0f77b3c30f91521ba9a76c8c501112a53e100154a098c274f03d3",
+      "proof_availability": "NO_SOURCE_PROOF",
+      "source_char_span": [
+        183,
+        355
+      ],
+      "source_line_span_inclusive": [
+        6,
+        11
+      ]
+    },
+    {
+      "source": "putnam",
+      "path": "lean4/src/putnam_1994_a1.lean",
+      "link": "https://github.com/trishullab/PutnamBench/blob/a635813f5edf297d928f9bd5ef8324a26bdde09c/lean4/src/putnam_1994_a1.lean",
+      "declaration": "putnam_1994_a1",
+      "topic": "Divergence from positive binary-tree inequalities.",
+      "class": "NATURAL_PUBLISHED_STATEMENT",
+      "direct_imports": [
+        "Mathlib"
+      ],
+      "scope_commands": [
+        "open Filter Topology"
+      ],
+      "forbidden_imports": [
+        "putnam_1994_a1"
+      ],
+      "kernel_status_in_this_intake": "SEPARATE_V4331_ENVIRONMENT_UNTESTED",
+      "source_raw_sha256": "0533006eea2f8989e3ee2f1c15a04f590e074bfe5e9069a7729bd06e355c4620",
+      "declaration_sha256": "024e0b643134387e2970d17c4c9a52a8742588a07504ae2dc4900ad420d331bf",
+      "statement_sha256": "f795766474fd42285f3bb2d8d83c91ba3682143f451812e603061c7fad01b089",
+      "proof_body_sha256": "484aab2f2cd0f77b3c30f91521ba9a76c8c501112a53e100154a098c274f03d3",
+      "proof_availability": "NO_SOURCE_PROOF",
+      "source_char_span": [
+        205,
+        380
+      ],
+      "source_line_span_inclusive": [
+        8,
+        12
+      ]
+    },
+    {
+      "source": "leroy",
+      "path": "LeroyCompilerVerificationCourse/Compil.lean",
+      "link": "https://github.com/leanprover/LeroyCompilerVerificationCourse/blob/a2730e7f9228b9d7ecf4510f1f8652f2cae7ba01/LeroyCompilerVerificationCourse/Compil.lean",
+      "declaration": "compile_aexp_correct",
+      "topic": "Simulation contract for compilation of arithmetic expressions.",
+      "class": "NATURAL_PUBLISHED_PROJECT_THEOREM",
+      "verisoftbench_id": 363,
+      "benchmark_row_statement_sha256": "7c1e413cb822a893523d24f006551510312016e72f1af63f99a52ce6ca3e4ffe",
+      "benchmark_row_proof_sha256": "a713a15803573945bbe3b3f0ab5a6ac35dcfd9669b02317ad60f4a6c3586b7fa",
+      "benchmark_matches_upstream_modulo_whitespace": true,
+      "required_same_file_local_defs": [
+        "instr",
+        "codelen",
+        "stack",
+        "config",
+        "instr_at",
+        "transition",
+        "transitions",
+        "compile_aexp",
+        "code_at"
+      ],
+      "required_same_file_local_lemmas": [
+        "instr_a",
+        "code_at_to_instr_at"
+      ],
+      "direct_imports": [
+        "LeroyCompilerVerificationCourse.Imp",
+        "LeroyCompilerVerificationCourse.Sequences"
+      ],
+      "forbidden_imports": [
+        "LeroyCompilerVerificationCourse.Compil"
+      ],
+      "kernel_status_in_this_intake": "SEPARATE_V4230_RC2_ENVIRONMENT_UNTESTED",
+      "source_raw_sha256": "eef96d448cc1dc1bc94d255c4fecf36d15e83e5609a315036c7c60946583413f",
+      "declaration_sha256": "f7e0ae80e41a5e706559758ee84ec130981cb5fbc155e94238f878083fc2ecd3",
+      "statement_sha256": "7c1e413cb822a893523d24f006551510312016e72f1af63f99a52ce6ca3e4ffe",
+      "proof_body_sha256": "f36fb31340e2d642e51577743186b8af5772b3c92d7a9e929a57cc21b2fd5ff6",
+      "proof_availability": "SOURCE_PROOF_PRESENT",
+      "source_char_span": [
+        12286,
+        13513
+      ],
+      "source_line_span_inclusive": [
+        351,
+        393
+      ]
+    },
+    {
+      "source": "leroy",
+      "path": "LeroyCompilerVerificationCourse/Imp.lean",
+      "link": "https://github.com/leanprover/LeroyCompilerVerificationCourse/blob/a2730e7f9228b9d7ecf4510f1f8652f2cae7ba01/LeroyCompilerVerificationCourse/Imp.lean",
+      "declaration": "cexec_to_reds",
+      "topic": "Big-step termination implies small-step reduction to SKIP.",
+      "class": "NATURAL_PUBLISHED_PROJECT_THEOREM",
+      "verisoftbench_id": 364,
+      "benchmark_row_statement_sha256": "2891429b9e1e4e059a79073745da15df2dde8980df3b309e79e201223af43417",
+      "benchmark_row_proof_sha256": "771eed0a874de56bf1fbc19f6d7c1325bb024bbcca8eca4a4076314d5f231212",
+      "benchmark_matches_upstream_modulo_whitespace": true,
+      "required_same_file_local_defs": [
+        "ident",
+        "aexp",
+        "store",
+        "aeval",
+        "bexp",
+        "beval",
+        "com",
+        "update",
+        "cexec",
+        "red"
+      ],
+      "required_same_file_local_lemmas": [
+        "red_seq_steps"
+      ],
+      "direct_imports": [
+        "LeroyCompilerVerificationCourse.Sequences"
+      ],
+      "forbidden_imports": [
+        "LeroyCompilerVerificationCourse.Imp"
+      ],
+      "kernel_status_in_this_intake": "SEPARATE_V4230_RC2_ENVIRONMENT_UNTESTED",
+      "source_raw_sha256": "f31c6454e183ea9df8c9ad1ba790ad957c285f898fe6ce610d29be8edcc27bf0",
+      "declaration_sha256": "8b34d58ae65c08b77271b990056c9579e8c896e86fe34867f87a3a17614e4e89",
+      "statement_sha256": "2891429b9e1e4e059a79073745da15df2dde8980df3b309e79e201223af43417",
+      "proof_body_sha256": "d587ffcca1425e12240a3b12eb8cf014dba9e8446466179ca14c1a00e6dfbff9",
+      "proof_availability": "SOURCE_PROOF_PRESENT",
+      "source_char_span": [
+        12796,
+        13373
+      ],
+      "source_line_span_inclusive": [
+        363,
+        385
+      ]
+    },
+    {
+      "source": "std",
+      "path": "src/Std/Tactic/BVDecide/Bitblast/BVExpr/Circuit/Lemmas/Operations/GetLsbD.lean",
+      "link": "https://github.com/leanprover/lean4/blob/db93fe1608548721853390a10cd40580fe7d22ae/src/Std/Tactic/BVDecide/Bitblast/BVExpr/Circuit/Lemmas/Operations/GetLsbD.lean",
+      "declaration": "Std.Tactic.BVDecide.BVPred.denote_blastGetLsbD",
+      "topic": "Bit-blasted indexed read agrees with circuit semantics, including an out-of-range index.",
+      "class": "NATURAL_PUBLISHED_PROJECT_THEOREM",
+      "proof_availability": "SOURCE_PROOF_PRESENT",
+      "kernel_status_in_this_intake": "RENAMED_WITH_MINIMAL_IMPORTS_KERNEL_ACCEPTED",
+      "source_line_span_inclusive": [
+        42,
+        52
+      ],
+      "source_char_span": [
+        1030,
+        1372
+      ],
+      "source_raw_sha256": "9397f3ab43a1e3e37d95c3200951e5cb8d797348b2a2fabe1f15e698ac41fa7e",
+      "declaration_sha256": "06d647e909a3555b6fa19b68874b754d14e8249fc8ea12786fd4b926b810a5c8",
+      "statement_sha256": "4dcfc6b23da90f364989dc7c7b9b9566b1459b6c5b050c8ab3cef16fdc655342",
+      "proof_body_sha256": "56c15093a6ea946e09541a9e9ac0724b92922afb7a39d811a53c27c2591c9f51",
+      "direct_imports": [
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Lemmas.Basic",
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Impl.Operations.GetLsbD"
+      ],
+      "forbidden_imports": [
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Lemmas.Operations.GetLsbD"
+      ],
+      "target_absence_confirmed": true,
+      "reference_renamed_axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "source": "std",
+      "path": "src/Std/Tactic/BVDecide/Bitblast/BVExpr/Circuit/Lemmas/Operations/Append.lean",
+      "link": "https://github.com/leanprover/lean4/blob/db93fe1608548721853390a10cd40580fe7d22ae/src/Std/Tactic/BVDecide/Bitblast/BVExpr/Circuit/Lemmas/Operations/Append.lean",
+      "declaration": "Std.Tactic.BVDecide.BVExpr.bitblast.denote_blastAppend",
+      "topic": "Concatenation bitblaster reads the correct source circuit on each side of the split.",
+      "class": "NATURAL_PUBLISHED_PROJECT_THEOREM",
+      "proof_availability": "SOURCE_PROOF_PRESENT",
+      "kernel_status_in_this_intake": "RENAMED_WITH_MINIMAL_IMPORTS_KERNEL_ACCEPTED",
+      "source_line_span_inclusive": [
+        29,
+        49
+      ],
+      "source_char_span": [
+        604,
+        1204
+      ],
+      "source_raw_sha256": "b5c4dd2409bfd852214113e7e37cd5f06216421d853d1e557d28e6526f5158f2",
+      "declaration_sha256": "228b7362349a88327d6f5e6bb65be4aecfae7bafad068a1ac2b262abf5fdb425",
+      "statement_sha256": "28c9a7ba06970c71b4358f71a53592481aec7467f673fc8d8da1c9905698154a",
+      "proof_body_sha256": "4e8c32492bf7ac8afb5129e432e472ce4ce16d66de9d3e4175203eeb3ee2b182",
+      "direct_imports": [
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Lemmas.Basic",
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Impl.Operations.Append"
+      ],
+      "forbidden_imports": [
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Lemmas.Operations.Append"
+      ],
+      "target_absence_confirmed": true,
+      "reference_renamed_axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "source": "std",
+      "path": "src/Std/Tactic/BVDecide/Bitblast/BVExpr/Circuit/Lemmas/Operations/Eq.lean",
+      "link": "https://github.com/leanprover/lean4/blob/db93fe1608548721853390a10cd40580fe7d22ae/src/Std/Tactic/BVDecide/Bitblast/BVExpr/Circuit/Lemmas/Operations/Eq.lean",
+      "declaration": "Std.Tactic.BVDecide.BVPred.mkEq_denote_eq",
+      "topic": "An equality circuit denotes bit-vector equality.",
+      "class": "NATURAL_PUBLISHED_PROJECT_THEOREM",
+      "proof_availability": "SOURCE_PROOF_PRESENT",
+      "kernel_status_in_this_intake": "RENAMED_WITH_MINIMAL_IMPORTS_KERNEL_ACCEPTED",
+      "source_line_span_inclusive": [
+        27,
+        44
+      ],
+      "source_char_span": [
+        571,
+        1287
+      ],
+      "source_raw_sha256": "738baf93d9b2ef10c2217feccafc432aad3e6f4b4a6b8c933dec1a66696a203a",
+      "declaration_sha256": "f6d1dac43dad8bc1c66d4c2972ab587b2c21414c99c08a6e94f7134a265c7151",
+      "statement_sha256": "ae1c5dcf7a77319e30ab402eb481bc677deaeeda14775a4eb470ff1c00b9f4d4",
+      "proof_body_sha256": "73ea6c138fb9d94363d544a2fa1492d84d17a6b1912d374aeeb3dd623071f833",
+      "direct_imports": [
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Lemmas.Basic",
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Impl.Operations.Eq"
+      ],
+      "forbidden_imports": [
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Lemmas.Operations.Eq"
+      ],
+      "target_absence_confirmed": true,
+      "reference_renamed_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "controlled_mutations_separate": [
+    {
+      "natural_source": "Std.Tactic.BVDecide.BVPred.denote_blastGetLsbD",
+      "class": "CONTROLLED_PROOF_BODY_OMISSION",
+      "unchanged_source_statement_sha256": "4dcfc6b23da90f364989dc7c7b9b9566b1459b6c5b050c8ab3cef16fdc655342",
+      "mutation": "Replace proof with by skip in the isolated renamed fixture.",
+      "observed_kernel_rejection": true,
+      "fixture_sha256": "15791b410595056e6a33d17fe29d02061358edbfaf04453b4d45f39e403788c6"
+    },
+    {
+      "natural_source": "Std.Tactic.BVDecide.BVExpr.bitblast.denote_blastAppend",
+      "class": "CONTROLLED_PROOF_BODY_OMISSION",
+      "unchanged_source_statement_sha256": "28c9a7ba06970c71b4358f71a53592481aec7467f673fc8d8da1c9905698154a",
+      "mutation": "Replace proof with by skip in the isolated renamed fixture.",
+      "observed_kernel_rejection": true,
+      "fixture_sha256": "ddd9793bd395fb90379888fddb49d27d94e058868fbf07f7d8fc45036ddcfc85"
+    },
+    {
+      "natural_source": "Std.Tactic.BVDecide.BVPred.mkEq_denote_eq",
+      "class": "CONTROLLED_PROOF_BODY_OMISSION",
+      "unchanged_source_statement_sha256": "ae1c5dcf7a77319e30ab402eb481bc677deaeeda14775a4eb470ff1c00b9f4d4",
+      "mutation": "Replace proof with by skip in the isolated renamed fixture.",
+      "observed_kernel_rejection": true,
+      "fixture_sha256": "86188ca2046edec8d61452e21322c222b920876858f32bc5de4bd92337ea5e8d"
+    }
+  ],
+  "natural_public_statements_count": 12,
+  "clean_source_proof_bodies_present": 7,
+  "related_original_lean3_proofs_for_selected_deepmind_names": 5,
+  "checked_std_source_proofs": 3,
+  "std_kernel_receipt_sha256": "fced962d33d994354d04a4ff3b737edafc237c06f5b64ebbfd2ac9f5efbca242",
+  "proof_bodies_embedded": false,
+  "model_payload_generated": false,
+  "gpu_used": false
+}

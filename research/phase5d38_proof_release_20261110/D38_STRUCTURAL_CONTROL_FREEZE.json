@@ -1,0 +1,22 @@
+{
+  "baseline_commit": "bfb4ae10533502fe1194768aaaa2fb56214ece1b",
+  "status": "FROZEN_SYNTHETIC_CPU_DEVELOPMENT_CONTROLS",
+  "scope": "Synthetic, ground constructive proof controls in Lean. The formal statement, broken draft, shared candidate support and identical verifier-call budget are visible to every arm. The independent accepted witnesses remain outside arm inputs. These cases measure a scoped repair mechanism, not natural model failures.",
+  "lean_version": "4.27.0",
+  "imports": ["Lean"],
+  "verifier_calls_per_arm": 20,
+  "process_timeout_seconds": 8,
+  "heartbeat_limit": 100000,
+  "arms": ["automation", "whole_rebuild", "single_failed_step", "diagnostic_local", "scoped_release"],
+  "shared_support_order": "Row-major over the instance x and y lists. The same ordered support is visible in every arm. Existing certified cells are rechecked under any modified environment. A compiler-verified refutation of the fixed scope is stronger than exhaustion of this support.",
+  "cases": [
+    {"id":"one_linear", "limit":5, "formula":"x + y = 5", "old":[2,1], "xs":[1,2,3,4], "ys":[1,2,3,4], "draft":"decide"},
+    {"id":"two_linear", "limit":5, "formula":"x + y = 7", "old":[1,1], "xs":[1,2,3,4], "ys":[1,2,3,4], "draft":"decide"},
+    {"id":"both_individually_required", "limit":5, "formula":"x = 2 ∧ y = 3", "old":[1,1], "xs":[1,2,3,4], "ys":[1,2,3,4], "draft":"decide"},
+    {"id":"one_multiplication", "limit":5, "formula":"x * y = 6", "old":[0,2], "xs":[0,1,2,3,4], "ys":[1,2,3,4], "draft":"decide"},
+    {"id":"alternate_repairs", "limit":5, "formula":"x * y = 6", "old":[2,2], "xs":[1,2,3,4], "ys":[1,2,3,4], "draft":"decide"},
+    {"id":"no_release", "limit":5, "formula":"x + y = 6", "old":[2,4], "xs":[1,2,3,4], "ys":[1,2,3,4], "draft":"exact identity"},
+    {"id":"finite_support_gap", "limit":5, "formula":"x = 5 ∧ y = 4", "old":[1,1], "xs":[1,2,3], "ys":[1,2,3], "draft":"decide"},
+    {"id":"disjunctive_domain", "limit":5, "formula":"(x = 2 ∨ x = 4) ∧ y = x + 1", "old":[2,2], "xs":[1,2,3,4], "ys":[1,2,3,4], "draft":"decide"}
+  ]
+}

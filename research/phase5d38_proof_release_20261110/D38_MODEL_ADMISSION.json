@@ -1,0 +1,12 @@
+{
+  "baseline_commit": "bfb4ae10533502fe1194768aaaa2fb56214ece1b",
+  "scope": "Admission before any new model requests. Source intakes and already started CPU controls are reported separately from a model benchmark.",
+  "gates": [
+    {"name":"exact_context", "criterion":"Pinned interpreter, imports, complete unchanged target, approved axiom closure, and protected-cell checks match. Printed goal text alone cannot bind source."},
+    {"name":"structural_headroom", "criterion":"At least two genuine source failure states show meaningful improvement in same-target completeness or complete cost over both compiler-guided local repair and a strong equal-action baseline. A synthetic mutation or source proof positive control does not satisfy this gate."},
+    {"name":"minimum_release_necessity", "criterion":"Each claimed minimum must have an accepted full proof after release and a Lean refutation of every strictly smaller fixed scope. Finite candidate search failure and timeout grant no impossibility certificate."},
+    {"name":"prior_art_distinction", "criterion":"Preserving or releasing proved nodes, typed local edits, and exact finite replay are existing capabilities. The proposed distinction needs a measured increment over an equal-action implementation of those capabilities."},
+    {"name":"independent_source_split", "criterion":"Any model pilot must freeze 12–24 independent tasks or source projects, protect proof answers and equivalent theorem imports, and verify all complete outputs in the matching environment."}
+  ],
+  "conditional_no_go": "If a necessary gate lacks qualifying evidence, report measured CPU and source results, leave model denominator zero, and retain failed attempts as scoped development evidence."
+}

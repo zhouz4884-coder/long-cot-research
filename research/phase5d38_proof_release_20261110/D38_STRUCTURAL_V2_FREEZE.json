@@ -1,0 +1,7 @@
+{
+  "status": "FROZEN_METHOD_CORRECTION_AND_STRONGER_CPU_CONTROL",
+  "scope": "All eight inputs, shared support and per-arm verifier budgets stay frozen. Preserve the first runner and its results. In the corrected arm apply certified negative scope constraints to later supersets and require refutations of every smaller scope before enlarging release cardinality. Use the actual earliest compiler diagnostic, record end-to-end wall, and add exact arithmetic preselection controls without consulting truth witnesses.",
+  "arms": ["direct_finite_solver", "direct_shared_support", "automation", "whole_rebuild", "single_failed_step", "diagnostic_local", "scoped_release"],
+  "arm_schedule": "Alternate forward and reverse arm order by case index to vary the timing order. Cases and candidate order remain unchanged.",
+  "direct_finite_solver_scope": "Reads the original bounded target and tests the complete finite domain, in addition to the matched shared-support direct arm. Emits a full Lean witness only after independent exact arithmetic preselection. The full-domain arm does not provide candidates to any matched arm."
+}

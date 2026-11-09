@@ -1,0 +1,458 @@
+{
+  "status": "PASS_SOURCE_AND_CONTROL_CHECKS",
+  "repository": "https://github.com/leanprover/lean4",
+  "source_revision": "db93fe1608548721853390a10cd40580fe7d22ae",
+  "lean_version": "Lean (version 4.27.0, x86_64-w64-windows-gnu, commit db93fe1608548721853390a10cd40580fe7d22ae, Release)",
+  "lean_binary_sha256": "ae20fac75dfa9d92866f9c08acdff978c0f06020ab8c4ee4fc9af9505238cf81",
+  "same_imports_search_scope": "One exact? query per theorem. Failure does not exclude an equivalent imported lemma.",
+  "natural_source_proofs_checked": 3,
+  "controlled_skip_mutations_rejected": 3,
+  "model_generation": false,
+  "cases": [
+    {
+      "scope": "Natural source theorem and exact source proof bytes, plus separate controlled by-skip mutation.",
+      "path": "src/Std/Tactic/BVDecide/Bitblast/BVExpr/Circuit/Lemmas/Operations/GetLsbD.lean",
+      "raw_sha256": "9397f3ab43a1e3e37d95c3200951e5cb8d797348b2a2fabe1f15e698ac41fa7e",
+      "declaration_sha256": "06d647e909a3555b6fa19b68874b754d14e8249fc8ea12786fd4b926b810a5c8",
+      "header_sha256": "4dcfc6b23da90f364989dc7c7b9b9566b1459b6c5b050c8ab3cef16fdc655342",
+      "proof_sha256": "56c15093a6ea946e09541a9e9ac0724b92922afb7a39d811a53c27c2591c9f51",
+      "source_char_span": [
+        1030,
+        1372
+      ],
+      "source_line_span_inclusive": [
+        42,
+        52
+      ],
+      "imports": [
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Lemmas.Basic",
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Impl.Operations.GetLsbD"
+      ],
+      "source_declaration": "Std.Tactic.BVDecide.BVPred.denote_blastGetLsbD",
+      "renamed_declaration": "Std.Tactic.BVDecide.BVPred.d38_intake_denote_blastGetLsbD",
+      "target_module": "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Lemmas.Operations.GetLsbD",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "target_absence": {
+        "returncode": 1,
+        "fixture_sha256": "893842765285c6a08256821c9b820eb6cd4157d1d3e03942eda734aeb42eb5f0",
+        "seconds": 0.49092010000458686,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "Unknown constant `Std.Tactic.BVDecide.BVPred.denote_blastGetLsbD`",
+            "endPos": {
+              "column": 53,
+              "line": 14
+            },
+            "fileName": "TargetAbsent.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "lean.unknownIdentifier._namedError",
+            "pos": {
+              "column": 7,
+              "line": 14
+            },
+            "severity": "error"
+          }
+        ]
+      },
+      "source_module_control": {
+        "returncode": 0,
+        "fixture_sha256": "a0610e1607b6ad739d50eccf92c65450cde7b0e37c6f9b42009dae102a96ce2a",
+        "seconds": 0.7019538999957149,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "'Std.Tactic.BVDecide.BVPred.denote_blastGetLsbD' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 2
+            },
+            "fileName": "ReferenceModule.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 2
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "renamed_proof": {
+        "returncode": 0,
+        "fixture_sha256": "6eb59309c2480f9617d7f5bdea5e614f355b0464d6b4c626abee7d7d104c4bcd",
+        "seconds": 0.5443737000023248,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "'Std.Tactic.BVDecide.BVPred.d38_intake_denote_blastGetLsbD' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 28
+            },
+            "fileName": "RenamedSourceProof.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 28
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "controlled_skip_mutation": {
+        "returncode": 1,
+        "fixture_sha256": "15791b410595056e6a33d17fe29d02061358edbfaf04453b4d45f39e403788c6",
+        "seconds": 0.48201110000081826,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "unsolved goals\nα : Type\ninst✝¹ : Hashable α\ninst✝ : DecidableEq α\naig : AIG α\ntarget : GetLsbDTarget aig\nassign : α → Bool\n⊢ ⟦assign, { aig := aig, ref := blastGetLsbD aig target }⟧ =\n    if h : target.idx < target.w then ⟦assign, { aig := aig, ref := target.vec.get target.idx h }⟧ else false",
+            "endPos": {
+              "column": 6,
+              "line": 21
+            },
+            "fileName": "SkipMutant.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "Tactic.unsolvedGoals",
+            "pos": {
+              "column": 15,
+              "line": 20
+            },
+            "severity": "error"
+          }
+        ]
+      },
+      "same_imports_exact_query": {
+        "status": "DID_NOT_CLOSE_IN_THIS_QUERY",
+        "returncode": 1,
+        "fixture_sha256": "499f1f4ba03e234a9ee7585789c9d684918425e06632614dc68186ec155a6236",
+        "seconds": 1.1108966000028886,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "`exact?` could not close the goal. Try `apply?` to see partial suggestions.",
+            "endPos": {
+              "column": 8,
+              "line": 21
+            },
+            "fileName": "LibrarySearch.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 2,
+              "line": 21
+            },
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "scope": "Natural source theorem and exact source proof bytes, plus separate controlled by-skip mutation.",
+      "path": "src/Std/Tactic/BVDecide/Bitblast/BVExpr/Circuit/Lemmas/Operations/Append.lean",
+      "raw_sha256": "b5c4dd2409bfd852214113e7e37cd5f06216421d853d1e557d28e6526f5158f2",
+      "declaration_sha256": "228b7362349a88327d6f5e6bb65be4aecfae7bafad068a1ac2b262abf5fdb425",
+      "header_sha256": "28c9a7ba06970c71b4358f71a53592481aec7467f673fc8d8da1c9905698154a",
+      "proof_sha256": "4e8c32492bf7ac8afb5129e432e472ce4ce16d66de9d3e4175203eeb3ee2b182",
+      "source_char_span": [
+        604,
+        1204
+      ],
+      "source_line_span_inclusive": [
+        29,
+        49
+      ],
+      "imports": [
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Lemmas.Basic",
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Impl.Operations.Append"
+      ],
+      "source_declaration": "Std.Tactic.BVDecide.BVExpr.bitblast.denote_blastAppend",
+      "renamed_declaration": "Std.Tactic.BVDecide.BVExpr.bitblast.d38_intake_denote_blastAppend",
+      "target_module": "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Lemmas.Operations.Append",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "target_absence": {
+        "returncode": 1,
+        "fixture_sha256": "f46308a2c87a2906e2e2ce0e437a84785bc5a79a2681b770d53d651fc37c8cfa",
+        "seconds": 0.49086520000128075,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "Unknown constant `Std.Tactic.BVDecide.BVExpr.bitblast.denote_blastAppend`",
+            "endPos": {
+              "column": 61,
+              "line": 15
+            },
+            "fileName": "TargetAbsent.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "lean.unknownIdentifier._namedError",
+            "pos": {
+              "column": 7,
+              "line": 15
+            },
+            "severity": "error"
+          }
+        ]
+      },
+      "source_module_control": {
+        "returncode": 0,
+        "fixture_sha256": "253414397ae2418b5450699894a9dbf4d61812d29f8a110c7ec48f2999447e56",
+        "seconds": 0.8089179000016884,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "'Std.Tactic.BVDecide.BVExpr.bitblast.denote_blastAppend' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 2
+            },
+            "fileName": "ReferenceModule.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 2
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "renamed_proof": {
+        "returncode": 0,
+        "fixture_sha256": "c01d04354cc397cce9c68148244b53b9ed260cd544cd40e675c7af2f0b9851bb",
+        "seconds": 0.5388722999996389,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "'Std.Tactic.BVDecide.BVExpr.bitblast.d38_intake_denote_blastAppend' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 39
+            },
+            "fileName": "RenamedSourceProof.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 39
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "controlled_skip_mutation": {
+        "returncode": 1,
+        "fixture_sha256": "ddd9793bd395fb90379888fddb49d27d94e058868fbf07f7d8fc45036ddcfc85",
+        "seconds": 0.5026923999976134,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "unsolved goals\nα : Type\ninst✝¹ : Hashable α\ninst✝ : DecidableEq α\nnewWidth : Nat\naig : AIG α\ntarget : AppendTarget aig newWidth\nassign : α → Bool\n⊢ ∀ (idx : Nat) (hidx : idx < newWidth),\n    ⟦assign, { aig := (blastAppend aig target).aig, ref := (blastAppend aig target).vec.get idx hidx }⟧ =\n      if hr : idx < target.rw then ⟦assign, { aig := aig, ref := target.rhs.get idx hr }⟧\n      else\n        have this := ⋯;\n        ⟦assign, { aig := aig, ref := target.lhs.get (idx - target.rw) ⋯ }⟧",
+            "endPos": {
+              "column": 6,
+              "line": 29
+            },
+            "fileName": "SkipMutant.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "Tactic.unsolvedGoals",
+            "pos": {
+              "column": 71,
+              "line": 28
+            },
+            "severity": "error"
+          }
+        ]
+      },
+      "same_imports_exact_query": {
+        "status": "DID_NOT_CLOSE_IN_THIS_QUERY",
+        "returncode": 1,
+        "fixture_sha256": "1ce28f3876c23e2a29263625fabe5529d6742af1630ec42b0b41d84876df54ca",
+        "seconds": 7.23576630000025,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "`exact?` could not close the goal. Try `apply?` to see partial suggestions.",
+            "endPos": {
+              "column": 8,
+              "line": 29
+            },
+            "fileName": "LibrarySearch.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 2,
+              "line": 29
+            },
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "scope": "Natural source theorem and exact source proof bytes, plus separate controlled by-skip mutation.",
+      "path": "src/Std/Tactic/BVDecide/Bitblast/BVExpr/Circuit/Lemmas/Operations/Eq.lean",
+      "raw_sha256": "738baf93d9b2ef10c2217feccafc432aad3e6f4b4a6b8c933dec1a66696a203a",
+      "declaration_sha256": "f6d1dac43dad8bc1c66d4c2972ab587b2c21414c99c08a6e94f7134a265c7151",
+      "header_sha256": "ae1c5dcf7a77319e30ab402eb481bc677deaeeda14775a4eb470ff1c00b9f4d4",
+      "proof_sha256": "73ea6c138fb9d94363d544a2fa1492d84d17a6b1912d374aeeb3dd623071f833",
+      "source_char_span": [
+        571,
+        1287
+      ],
+      "source_line_span_inclusive": [
+        27,
+        44
+      ],
+      "imports": [
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Lemmas.Basic",
+        "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Impl.Operations.Eq"
+      ],
+      "source_declaration": "Std.Tactic.BVDecide.BVPred.mkEq_denote_eq",
+      "renamed_declaration": "Std.Tactic.BVDecide.BVPred.d38_intake_mkEq_denote_eq",
+      "target_module": "Std.Tactic.BVDecide.Bitblast.BVExpr.Circuit.Lemmas.Operations.Eq",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "target_absence": {
+        "returncode": 1,
+        "fixture_sha256": "907346d8ef26e187b3c564ec565c356e847ad71fd52b86948a6450a7a8054dac",
+        "seconds": 0.4907037999946624,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "Unknown constant `Std.Tactic.BVDecide.BVPred.mkEq_denote_eq`",
+            "endPos": {
+              "column": 48,
+              "line": 14
+            },
+            "fileName": "TargetAbsent.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "lean.unknownIdentifier._namedError",
+            "pos": {
+              "column": 7,
+              "line": 14
+            },
+            "severity": "error"
+          }
+        ]
+      },
+      "source_module_control": {
+        "returncode": 0,
+        "fixture_sha256": "7d6c2218bebd5ad2bf3a2001cd0d86a4098902e9e35529a7eb6e93744bca2bcf",
+        "seconds": 0.7500282999972114,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "'Std.Tactic.BVDecide.BVPred.mkEq_denote_eq' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 2
+            },
+            "fileName": "ReferenceModule.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 2
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "renamed_proof": {
+        "returncode": 0,
+        "fixture_sha256": "7ac3017ba3ae6862f863e85f67d7c1eb4e70e7a17da2fa93cc745a1a16da5712",
+        "seconds": 0.6286659000033978,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "'Std.Tactic.BVDecide.BVPred.d38_intake_mkEq_denote_eq' depends on axioms: [propext, Classical.choice, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 35
+            },
+            "fileName": "RenamedSourceProof.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 35
+            },
+            "severity": "information"
+          }
+        ]
+      },
+      "controlled_skip_mutation": {
+        "returncode": 1,
+        "fixture_sha256": "86188ca2046edec8d61452e21322c222b920876858f32bc5de4bd92337ea5e8d",
+        "seconds": 0.4916644000040833,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "unsolved goals\nα : Type\ninst✝¹ : Hashable α\ninst✝ : DecidableEq α\nw : Nat\naig : AIG α\npair : aig.BinaryRefVec w\nassign : α → Bool\nlhs rhs : BitVec w\nhleft : ∀ (idx : Nat) (hidx : idx < w), ⟦assign, { aig := aig, ref := pair.lhs.get idx hidx }⟧ = lhs.getLsbD idx\nhright : ∀ (idx : Nat) (hidx : idx < w), ⟦assign, { aig := aig, ref := pair.rhs.get idx hidx }⟧ = rhs.getLsbD idx\n⊢ ⟦assign, mkEq aig pair⟧ = (lhs == rhs)",
+            "endPos": {
+              "column": 6,
+              "line": 19
+            },
+            "fileName": "SkipMutant.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "Tactic.unsolvedGoals",
+            "pos": {
+              "column": 46,
+              "line": 18
+            },
+            "severity": "error"
+          }
+        ]
+      },
+      "same_imports_exact_query": {
+        "status": "DID_NOT_CLOSE_IN_THIS_QUERY",
+        "returncode": 1,
+        "fixture_sha256": "69085f7ca73faaf3ad76eb89c9042ea585272a687b260bb527222563ad57e7b8",
+        "seconds": 1.6381959999998799,
+        "diagnostics": [
+          {
+            "caption": "",
+            "data": "`exact?` could not close the goal. Try `apply?` to see partial suggestions.",
+            "endPos": {
+              "column": 8,
+              "line": 19
+            },
+            "fileName": "LibrarySearch.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 2,
+              "line": 19
+            },
+            "severity": "error"
+          }
+        ]
+      }
+    }
+  ]
+}

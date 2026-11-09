@@ -1,0 +1,301 @@
+{
+  "status": "PASS",
+  "source": {
+    "commit": "f0a20e14c1eeccd859d51bb4c2b3ee487889c303",
+    "theorem_file": "https://raw.githubusercontent.com/google-deepmind/miniF2F/f0a20e14c1eeccd859d51bb4c2b3ee487889c303/MiniF2F/Test.lean",
+    "theorem_file_sha256": "8e135204947654a6f5234ee3da830ea7b72337f33dc29229fd8be6c69ac1c0b7",
+    "license": "Apache-2.0",
+    "license_url": "https://raw.githubusercontent.com/google-deepmind/miniF2F/f0a20e14c1eeccd859d51bb4c2b3ee487889c303/LICENSE",
+    "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  "scope": "Public competition statement and independently authored proof. The published `sorry` body is never imported. The first failure arose during CPU authoring, not from a model. Only Lean core is loaded, not the official Mathlib build.",
+  "statement": "∀ x y : Int, 4 * x ^ 3 - 7 * y ^ 3 ≠ 2003",
+  "first_attempt": {
+    "source_sha256": "1c47f8ddae5670b6538ffc95fb4b8a49b1e2238efa8add48957a58779a8851f9",
+    "exit_code": 1,
+    "axioms": null,
+    "kernel_accepted": false,
+    "wall_seconds": 1.9028862999984995,
+    "diagnostics": [
+      {
+        "caption": "",
+        "data": "Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  (?a - ?b) % ?n\nin the target expression\n  (fun a => a % 7) (4 * x ^ 3 - 7 * y ^ 3) = (fun a => a % 7) 2003\n\nx y : Int\nasserted : 4 * x ^ 3 - 7 * y ^ 3 = 2003\nreduced : (fun a => a % 7) (4 * x ^ 3 - 7 * y ^ 3) = (fun a => a % 7) 2003\n⊢ 4 * x ^ 3 % 7 = 1",
+        "endPos": {
+          "column": 20,
+          "line": 14
+        },
+        "isSilent": false,
+        "keepFullRange": false,
+        "kind": "[anonymous]",
+        "pos": {
+          "column": 8,
+          "line": 14
+        },
+        "severity": "error"
+      },
+      {
+        "caption": "",
+        "data": "'d38_competition_residue' depends on axioms: [propext, sorryAx, Quot.sound]",
+        "endPos": {
+          "column": 6,
+          "line": 32
+        },
+        "isSilent": false,
+        "keepFullRange": false,
+        "kind": "[anonymous]",
+        "pos": {
+          "column": 0,
+          "line": 32
+        },
+        "severity": "information"
+      }
+    ]
+  },
+  "one_line_repair": {
+    "source_sha256": "09c215c34b04cecc975c630931c814310b4afc0015805a90cdac9d95359a6d7c",
+    "exit_code": 0,
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "kernel_accepted": true,
+    "wall_seconds": 1.8394866000016918,
+    "diagnostics": [
+      {
+        "caption": "",
+        "data": "'d38_competition_residue' depends on axioms: [propext, Quot.sound]",
+        "endPos": {
+          "column": 6,
+          "line": 33
+        },
+        "isSilent": false,
+        "keepFullRange": false,
+        "kind": "[anonymous]",
+        "pos": {
+          "column": 0,
+          "line": 33
+        },
+        "severity": "information"
+      }
+    ]
+  },
+  "automatic_whole_proof": [
+    {
+      "stage": "whole_exact?",
+      "status": "REJECTED",
+      "wall_seconds": 2.438813000000664,
+      "input_sha256": "e34892a2ed2460dc01939a41ab01420639e5a7b44d1e78cf1ed25b5e443ee270",
+      "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : ∀ x y : Int, 4 * x ^ 3 - 7 * y ^ 3 ≠ 2003 := by\n  exact?\n#print axioms d38_obligation\n",
+      "accepted_axioms": null,
+      "messages": [
+        {
+          "caption": "",
+          "data": "`exact?` could not close the goal. Try `apply?` to see partial suggestions.",
+          "endPos": {
+            "column": 8,
+            "line": 6
+          },
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 2,
+            "line": 6
+          },
+          "severity": "error"
+        },
+        {
+          "caption": "",
+          "data": "'d38_obligation' depends on axioms: [sorryAx]",
+          "endPos": {
+            "column": 6,
+            "line": 7
+          },
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 7
+          },
+          "severity": "information"
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "stage": "whole_omega",
+      "status": "REJECTED",
+      "wall_seconds": 1.694325899996329,
+      "input_sha256": "abb3cb6af2376778b29aba1f950ff6734b6f36dd8436f23c855ac444bd1c90ef",
+      "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : ∀ x y : Int, 4 * x ^ 3 - 7 * y ^ 3 ≠ 2003 := by\n  omega\n#print axioms d38_obligation\n",
+      "accepted_axioms": null,
+      "messages": [
+        {
+          "caption": "",
+          "data": "omega could not prove the goal:\nNo usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.",
+          "endPos": {
+            "column": 7,
+            "line": 6
+          },
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 2,
+            "line": 6
+          },
+          "severity": "error"
+        },
+        {
+          "caption": "",
+          "data": "'d38_obligation' depends on axioms: [sorryAx]",
+          "endPos": {
+            "column": 6,
+            "line": 7
+          },
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 7
+          },
+          "severity": "information"
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "stage": "whole_grind",
+      "status": "REJECTED",
+      "wall_seconds": 1.610202500000014,
+      "input_sha256": "8c19ac3e957d0cd9da4ae194590f9a89a9e586eb6acd4cc47573415dbdeaa381",
+      "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : ∀ x y : Int, 4 * x ^ 3 - 7 * y ^ 3 ≠ 2003 := by\n  grind\n#print axioms d38_obligation\n",
+      "accepted_axioms": null,
+      "messages": [
+        {
+          "caption": "",
+          "data": "`grind` failed\ncase grind.2\nx y : Int\nh : 4 * x ^ 3 + -7 * y ^ 3 + -2003 = 0\nh_1 : ¬x = y\n⊢ False\n[grind] Goal diagnostics\n  [facts] Asserted facts\n    [prop] 4 * x ^ 3 + -7 * y ^ 3 + -2003 = 0\n    [prop] ¬x = y\n  [eqc] False propositions\n    [prop] x = y\n  [eqc] Equivalence classes\n    [eqc] {0, 4 * x ^ 3 + -7 * y ^ 3 + -2003}\n  [cases] Case analyses\n    [cases] [2/2]: x = y\n      [cases] source: Model-based theory combination at argument #4 of\n            y ^ 3\n          and\n            x ^ 3\n  [ematch] E-matching patterns\n    [thm] Nat.pow_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]\n    [thm] Nat.div_pow_of_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]\n  [cutsat] Assignment satisfying linear constraints\n    [assign] x := 0\n    [assign] y := 1\n    [assign] 「x ^ 3」 := 506\n    [assign] 「y ^ 3」 := 3\n  [ring] Ring `Int`\n    [basis] Basis\n      [_] 4 * x ^ 3 + -7 * y ^ 3 + -2003 = 0\n    [diseqs] Disequalities\n      [_] ¬x + -1 * y = 0",
+          "endPos": {
+            "column": 7,
+            "line": 6
+          },
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 2,
+            "line": 6
+          },
+          "severity": "error"
+        },
+        {
+          "caption": "",
+          "data": "'d38_obligation' depends on axioms: [sorryAx]",
+          "endPos": {
+            "column": 6,
+            "line": 7
+          },
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 7
+          },
+          "severity": "information"
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "stage": "whole_simp_all",
+      "status": "REJECTED",
+      "wall_seconds": 1.5364284999959636,
+      "input_sha256": "d6a100e54d10066d37da062595b2637e0e1783b3a99758f18f914098a2f4e0be",
+      "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : ∀ x y : Int, 4 * x ^ 3 - 7 * y ^ 3 ≠ 2003 := by\n  simp_all\n#print axioms d38_obligation\n",
+      "accepted_axioms": null,
+      "messages": [
+        {
+          "caption": "",
+          "data": "unsolved goals\n⊢ ∀ (x y : Int), ¬4 * x ^ 3 - 7 * y ^ 3 = 2003",
+          "endPos": {
+            "column": 10,
+            "line": 6
+          },
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "Tactic.unsolvedGoals",
+          "pos": {
+            "column": 70,
+            "line": 5
+          },
+          "severity": "error"
+        },
+        {
+          "caption": "",
+          "data": "'d38_obligation' depends on axioms: [sorryAx]",
+          "endPos": {
+            "column": 6,
+            "line": 7
+          },
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 7
+          },
+          "severity": "information"
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "stage": "whole_decide",
+      "status": "REJECTED",
+      "wall_seconds": 1.5595609000010882,
+      "input_sha256": "7c4ec50ce482513bfbaacd5181f458513c43d7e17488568f7718e6742c7644e9",
+      "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : ∀ x y : Int, 4 * x ^ 3 - 7 * y ^ 3 ≠ 2003 := by\n  decide\n#print axioms d38_obligation\n",
+      "accepted_axioms": null,
+      "messages": [
+        {
+          "caption": "",
+          "data": "failed to synthesize\n  Decidable (∀ (x y : Int), 4 * x ^ 3 - 7 * y ^ 3 ≠ 2003)\n\nHint: Additional diagnostic information may be available using the `set_option diagnostics true` command.",
+          "endPos": {
+            "column": 8,
+            "line": 6
+          },
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 2,
+            "line": 6
+          },
+          "severity": "error"
+        },
+        {
+          "caption": "",
+          "data": "'d38_obligation' depends on axioms: [sorryAx]",
+          "endPos": {
+            "column": 6,
+            "line": 7
+          },
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 7
+          },
+          "severity": "information"
+        }
+      ],
+      "stderr": ""
+    }
+  ],
+  "model_tokens": 0,
+  "gpu_seconds": 0
+}

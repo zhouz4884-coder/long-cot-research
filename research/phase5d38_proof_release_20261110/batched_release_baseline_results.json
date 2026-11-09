@@ -1,0 +1,797 @@
+{
+  "status": "PASS",
+  "scope": "Exact arithmetic baseline over the same finite controls. All returned witnesses and all smaller protection-set contradictions are checked in one Lean kernel invocation. Full bounded domain and the shared proposal set stay separate. No claim of support exhaustion beyond the named domain.",
+  "input_freeze_sha256": "d94eff796b4f76b75f3c3e3cb7d12a75f63b30eb03076529b37fead164c26245",
+  "gpu_seconds": 0,
+  "rows": [
+    {
+      "case": "one_linear",
+      "scope": "matched_finite_support",
+      "candidate": [
+        2,
+        3
+      ],
+      "arithmetic_candidates_checked": 4,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [
+        1
+      ],
+      "independently_refuted_smaller_lock_sets": [
+        [
+          0,
+          1
+        ]
+      ],
+      "kernel": {
+        "stage": "bundle_one_linear_matched_finite_support",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.4944658000022173,
+        "input_sha256": "d736f835b4ae49dee6b35566f973ad74f72c51a535f56a27bfd53d3c9fd520fc",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 5) ∧ (∀ z : Nat, z + 0 = z)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 5) ∧ x = 2 ∧ y = 1)) := by\n  refine ⟨?_, ?_⟩\n  · have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n    let x : Nat := 2\n    let y : Nat := 3\n    have hx : x ≤ 5 := by decide\n    have hy : y ≤ 5 := by decide\n    refine ⟨x, y, hx, hy, ?_, identity⟩\n    decide\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX, fixedY⟩\n    subst x\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n#print axioms d38_obligation\n",
+        "accepted_axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 19
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 19
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.497025799995754
+    },
+    {
+      "case": "one_linear",
+      "scope": "whole_bounded_domain",
+      "candidate": [
+        2,
+        3
+      ],
+      "arithmetic_candidates_checked": 6,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [
+        1
+      ],
+      "independently_refuted_smaller_lock_sets": [
+        [
+          0,
+          1
+        ]
+      ],
+      "kernel": {
+        "stage": "bundle_one_linear_whole_bounded_domain",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.497729899994738,
+        "input_sha256": "d736f835b4ae49dee6b35566f973ad74f72c51a535f56a27bfd53d3c9fd520fc",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 5) ∧ (∀ z : Nat, z + 0 = z)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 5) ∧ x = 2 ∧ y = 1)) := by\n  refine ⟨?_, ?_⟩\n  · have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n    let x : Nat := 2\n    let y : Nat := 3\n    have hx : x ≤ 5 := by decide\n    have hy : y ≤ 5 := by decide\n    refine ⟨x, y, hx, hy, ?_, identity⟩\n    decide\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX, fixedY⟩\n    subst x\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n#print axioms d38_obligation\n",
+        "accepted_axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 19
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 19
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.500151399995957
+    },
+    {
+      "case": "two_linear",
+      "scope": "matched_finite_support",
+      "candidate": [
+        3,
+        4
+      ],
+      "arithmetic_candidates_checked": 13,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [
+        0,
+        1
+      ],
+      "independently_refuted_smaller_lock_sets": [
+        [
+          0,
+          1
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "kernel": {
+        "stage": "bundle_two_linear_matched_finite_support",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.4741437999982736,
+        "input_sha256": "fcc5ae7347c40a276c27b373cc3f577ef9f84a1714a7d2aef8bea23c50b5e711",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 7) ∧ (∀ z : Nat, z + 0 = z)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 7) ∧ x = 1 ∧ y = 1)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 7) ∧ x = 1)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 7) ∧ y = 1)) := by\n  refine ⟨?_, ?_, ?_, ?_⟩\n  · have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n    let x : Nat := 3\n    let y : Nat := 4\n    have hx : x ≤ 5 := by decide\n    have hy : y ≤ 5 := by decide\n    refine ⟨x, y, hx, hy, ?_, identity⟩\n    decide\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX, fixedY⟩\n    subst x\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX⟩\n    subst x\n    first | (omega; done) | (simp_all; done) | (grind; done)\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedY⟩\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n#print axioms d38_obligation\n",
+        "accepted_axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 27
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 27
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.477894900002866
+    },
+    {
+      "case": "two_linear",
+      "scope": "whole_bounded_domain",
+      "candidate": [
+        2,
+        5
+      ],
+      "arithmetic_candidates_checked": 21,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [
+        0,
+        1
+      ],
+      "independently_refuted_smaller_lock_sets": [
+        [
+          0,
+          1
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "kernel": {
+        "stage": "bundle_two_linear_whole_bounded_domain",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.459255800000392,
+        "input_sha256": "66379718b69b85d32bf147ab8cd8b1204d2bcc0f212c605bd4a07297dadc599c",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 7) ∧ (∀ z : Nat, z + 0 = z)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 7) ∧ x = 1 ∧ y = 1)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 7) ∧ x = 1)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 7) ∧ y = 1)) := by\n  refine ⟨?_, ?_, ?_, ?_⟩\n  · have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n    let x : Nat := 2\n    let y : Nat := 5\n    have hx : x ≤ 5 := by decide\n    have hy : y ≤ 5 := by decide\n    refine ⟨x, y, hx, hy, ?_, identity⟩\n    decide\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX, fixedY⟩\n    subst x\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX⟩\n    subst x\n    first | (omega; done) | (simp_all; done) | (grind; done)\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedY⟩\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n#print axioms d38_obligation\n",
+        "accepted_axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 27
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 27
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.4614797000031103
+    },
+    {
+      "case": "both_individually_required",
+      "scope": "matched_finite_support",
+      "candidate": [
+        2,
+        3
+      ],
+      "arithmetic_candidates_checked": 9,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [
+        0,
+        1
+      ],
+      "independently_refuted_smaller_lock_sets": [
+        [
+          0,
+          1
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "kernel": {
+        "stage": "bundle_both_individually_required_matched_finite_support",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.4819734999982757,
+        "input_sha256": "0aa0d20dc107e2e6674ef42b4cb18e13f3ae93186fbee39d57d711ac8b5e9a6b",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x = 2 ∧ y = 3) ∧ (∀ z : Nat, z + 0 = z)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x = 2 ∧ y = 3) ∧ x = 1 ∧ y = 1)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x = 2 ∧ y = 3) ∧ x = 1)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x = 2 ∧ y = 3) ∧ y = 1)) := by\n  refine ⟨?_, ?_, ?_, ?_⟩\n  · have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n    let x : Nat := 2\n    let y : Nat := 3\n    have hx : x ≤ 5 := by decide\n    have hy : y ≤ 5 := by decide\n    refine ⟨x, y, hx, hy, ?_, identity⟩\n    decide\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX, fixedY⟩\n    subst x\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX⟩\n    subst x\n    first | (omega; done) | (simp_all; done) | (grind; done)\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedY⟩\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n#print axioms d38_obligation\n",
+        "accepted_axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 27
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 27
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.4849317000043811
+    },
+    {
+      "case": "both_individually_required",
+      "scope": "whole_bounded_domain",
+      "candidate": [
+        2,
+        3
+      ],
+      "arithmetic_candidates_checked": 19,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [
+        0,
+        1
+      ],
+      "independently_refuted_smaller_lock_sets": [
+        [
+          0,
+          1
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "kernel": {
+        "stage": "bundle_both_individually_required_whole_bounded_domain",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.4644221999988076,
+        "input_sha256": "0aa0d20dc107e2e6674ef42b4cb18e13f3ae93186fbee39d57d711ac8b5e9a6b",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x = 2 ∧ y = 3) ∧ (∀ z : Nat, z + 0 = z)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x = 2 ∧ y = 3) ∧ x = 1 ∧ y = 1)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x = 2 ∧ y = 3) ∧ x = 1)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x = 2 ∧ y = 3) ∧ y = 1)) := by\n  refine ⟨?_, ?_, ?_, ?_⟩\n  · have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n    let x : Nat := 2\n    let y : Nat := 3\n    have hx : x ≤ 5 := by decide\n    have hy : y ≤ 5 := by decide\n    refine ⟨x, y, hx, hy, ?_, identity⟩\n    decide\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX, fixedY⟩\n    subst x\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX⟩\n    subst x\n    first | (omega; done) | (simp_all; done) | (grind; done)\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedY⟩\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n#print axioms d38_obligation\n",
+        "accepted_axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 27
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 27
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.467608899998595
+    },
+    {
+      "case": "one_multiplication",
+      "scope": "matched_finite_support",
+      "candidate": [
+        3,
+        2
+      ],
+      "arithmetic_candidates_checked": 7,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [
+        0
+      ],
+      "independently_refuted_smaller_lock_sets": [
+        [
+          0,
+          1
+        ]
+      ],
+      "kernel": {
+        "stage": "bundle_one_multiplication_matched_finite_support",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.4281234000009135,
+        "input_sha256": "2a6c6c3b5c35e402baedc91c57b1c5259a23d6befe9f11bef5ebbdb107a17abc",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x * y = 6) ∧ (∀ z : Nat, z + 0 = z)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x * y = 6) ∧ x = 0 ∧ y = 2)) := by\n  refine ⟨?_, ?_⟩\n  · have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n    let x : Nat := 3\n    let y : Nat := 2\n    have hx : x ≤ 5 := by decide\n    have hy : y ≤ 5 := by decide\n    refine ⟨x, y, hx, hy, ?_, identity⟩\n    decide\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX, fixedY⟩\n    subst x\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n#print axioms d38_obligation\n",
+        "accepted_axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 19
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 19
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.431559999997262
+    },
+    {
+      "case": "one_multiplication",
+      "scope": "whole_bounded_domain",
+      "candidate": [
+        3,
+        2
+      ],
+      "arithmetic_candidates_checked": 9,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [
+        0
+      ],
+      "independently_refuted_smaller_lock_sets": [
+        [
+          0,
+          1
+        ]
+      ],
+      "kernel": {
+        "stage": "bundle_one_multiplication_whole_bounded_domain",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.4660624000025564,
+        "input_sha256": "2a6c6c3b5c35e402baedc91c57b1c5259a23d6befe9f11bef5ebbdb107a17abc",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x * y = 6) ∧ (∀ z : Nat, z + 0 = z)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x * y = 6) ∧ x = 0 ∧ y = 2)) := by\n  refine ⟨?_, ?_⟩\n  · have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n    let x : Nat := 3\n    let y : Nat := 2\n    have hx : x ≤ 5 := by decide\n    have hy : y ≤ 5 := by decide\n    refine ⟨x, y, hx, hy, ?_, identity⟩\n    decide\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX, fixedY⟩\n    subst x\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n#print axioms d38_obligation\n",
+        "accepted_axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 19
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 19
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.468752000000677
+    },
+    {
+      "case": "alternate_repairs",
+      "scope": "matched_finite_support",
+      "candidate": [
+        2,
+        3
+      ],
+      "arithmetic_candidates_checked": 4,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [
+        1
+      ],
+      "independently_refuted_smaller_lock_sets": [
+        [
+          0,
+          1
+        ]
+      ],
+      "kernel": {
+        "stage": "bundle_alternate_repairs_matched_finite_support",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.5145919999995385,
+        "input_sha256": "1ecd71dbe6e1eeae73bc3b8c069571e5ab4a8631d259db5c5ff8279f0cf74d71",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x * y = 6) ∧ (∀ z : Nat, z + 0 = z)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x * y = 6) ∧ x = 2 ∧ y = 2)) := by\n  refine ⟨?_, ?_⟩\n  · have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n    let x : Nat := 2\n    let y : Nat := 3\n    have hx : x ≤ 5 := by decide\n    have hy : y ≤ 5 := by decide\n    refine ⟨x, y, hx, hy, ?_, identity⟩\n    decide\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX, fixedY⟩\n    subst x\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n#print axioms d38_obligation\n",
+        "accepted_axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 19
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 19
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.5168645000012475
+    },
+    {
+      "case": "alternate_repairs",
+      "scope": "whole_bounded_domain",
+      "candidate": [
+        2,
+        3
+      ],
+      "arithmetic_candidates_checked": 6,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [
+        1
+      ],
+      "independently_refuted_smaller_lock_sets": [
+        [
+          0,
+          1
+        ]
+      ],
+      "kernel": {
+        "stage": "bundle_alternate_repairs_whole_bounded_domain",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.5496046000043862,
+        "input_sha256": "1ecd71dbe6e1eeae73bc3b8c069571e5ab4a8631d259db5c5ff8279f0cf74d71",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x * y = 6) ∧ (∀ z : Nat, z + 0 = z)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x * y = 6) ∧ x = 2 ∧ y = 2)) := by\n  refine ⟨?_, ?_⟩\n  · have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n    let x : Nat := 2\n    let y : Nat := 3\n    have hx : x ≤ 5 := by decide\n    have hy : y ≤ 5 := by decide\n    refine ⟨x, y, hx, hy, ?_, identity⟩\n    decide\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX, fixedY⟩\n    subst x\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n#print axioms d38_obligation\n",
+        "accepted_axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 19
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 19
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.5520140000007814
+    },
+    {
+      "case": "no_release",
+      "scope": "matched_finite_support",
+      "candidate": [
+        2,
+        4
+      ],
+      "arithmetic_candidates_checked": 1,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [],
+      "independently_refuted_smaller_lock_sets": [],
+      "kernel": {
+        "stage": "bundle_no_release_matched_finite_support",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.4313899999979185,
+        "input_sha256": "d44947836c0574e6bddf5699e47adfdce3e912606381bd21948dd0b04e12f6b4",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : ∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 6) ∧ (∀ z : Nat, z + 0 = z) := by\n  have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n  let x : Nat := 2\n  let y : Nat := 4\n  have hx : x ≤ 5 := by decide\n  have hy : y ≤ 5 := by decide\n  refine ⟨x, y, hx, hy, ?_, identity⟩\n  decide\n#print axioms d38_obligation\n",
+        "accepted_axioms": [],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' does not depend on any axioms",
+            "endPos": {
+              "column": 6,
+              "line": 13
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 13
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.433502399995632
+    },
+    {
+      "case": "no_release",
+      "scope": "whole_bounded_domain",
+      "candidate": [
+        2,
+        4
+      ],
+      "arithmetic_candidates_checked": 1,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [],
+      "independently_refuted_smaller_lock_sets": [],
+      "kernel": {
+        "stage": "bundle_no_release_whole_bounded_domain",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.3986339000039152,
+        "input_sha256": "d44947836c0574e6bddf5699e47adfdce3e912606381bd21948dd0b04e12f6b4",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : ∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x + y = 6) ∧ (∀ z : Nat, z + 0 = z) := by\n  have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n  let x : Nat := 2\n  let y : Nat := 4\n  have hx : x ≤ 5 := by decide\n  have hy : y ≤ 5 := by decide\n  refine ⟨x, y, hx, hy, ?_, identity⟩\n  decide\n#print axioms d38_obligation\n",
+        "accepted_axioms": [],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' does not depend on any axioms",
+            "endPos": {
+              "column": 6,
+              "line": 13
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 13
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.4014269999970566
+    },
+    {
+      "case": "finite_support_gap",
+      "scope": "matched_finite_support",
+      "candidate": null,
+      "arithmetic_candidates_checked": 9,
+      "status": "FINITE_SUPPORT_NO_CERTIFICATE",
+      "lean_calls": 0,
+      "end_to_end_seconds": 2.239999594166875e-05
+    },
+    {
+      "case": "finite_support_gap",
+      "scope": "whole_bounded_domain",
+      "candidate": [
+        5,
+        4
+      ],
+      "arithmetic_candidates_checked": 35,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [
+        0,
+        1
+      ],
+      "independently_refuted_smaller_lock_sets": [
+        [
+          0,
+          1
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "kernel": {
+        "stage": "bundle_finite_support_gap_whole_bounded_domain",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.4713181000042823,
+        "input_sha256": "0fe1e728d95513d77e4f41521e2ca46d26c82e07a5e8ad813b5800875dcab2f9",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x = 5 ∧ y = 4) ∧ (∀ z : Nat, z + 0 = z)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x = 5 ∧ y = 4) ∧ x = 1 ∧ y = 1)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x = 5 ∧ y = 4) ∧ x = 1)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ (x = 5 ∧ y = 4) ∧ y = 1)) := by\n  refine ⟨?_, ?_, ?_, ?_⟩\n  · have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n    let x : Nat := 5\n    let y : Nat := 4\n    have hx : x ≤ 5 := by decide\n    have hy : y ≤ 5 := by decide\n    refine ⟨x, y, hx, hy, ?_, identity⟩\n    decide\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX, fixedY⟩\n    subst x\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX⟩\n    subst x\n    first | (omega; done) | (simp_all; done) | (grind; done)\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedY⟩\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n#print axioms d38_obligation\n",
+        "accepted_axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 27
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 27
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.4741451000008965
+    },
+    {
+      "case": "disjunctive_domain",
+      "scope": "matched_finite_support",
+      "candidate": [
+        2,
+        3
+      ],
+      "arithmetic_candidates_checked": 4,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [
+        1
+      ],
+      "independently_refuted_smaller_lock_sets": [
+        [
+          0,
+          1
+        ]
+      ],
+      "kernel": {
+        "stage": "bundle_disjunctive_domain_matched_finite_support",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.4540923999957158,
+        "input_sha256": "49600e573b677c58dd3a33b5b51e5c8f709bf8a3ba68f9e78fd93042a926ff73",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ ((x = 2 ∨ x = 4) ∧ y = x + 1) ∧ (∀ z : Nat, z + 0 = z)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ ((x = 2 ∨ x = 4) ∧ y = x + 1) ∧ x = 2 ∧ y = 2)) := by\n  refine ⟨?_, ?_⟩\n  · have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n    let x : Nat := 2\n    let y : Nat := 3\n    have hx : x ≤ 5 := by decide\n    have hy : y ≤ 5 := by decide\n    refine ⟨x, y, hx, hy, ?_, identity⟩\n    decide\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX, fixedY⟩\n    subst x\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n#print axioms d38_obligation\n",
+        "accepted_axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 19
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 19
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.45668690000457
+    },
+    {
+      "case": "disjunctive_domain",
+      "scope": "whole_bounded_domain",
+      "candidate": [
+        2,
+        3
+      ],
+      "arithmetic_candidates_checked": 6,
+      "status": "KERNEL_ACCEPTED",
+      "lean_calls": 1,
+      "released_slots": [
+        1
+      ],
+      "independently_refuted_smaller_lock_sets": [
+        [
+          0,
+          1
+        ]
+      ],
+      "kernel": {
+        "stage": "bundle_disjunctive_domain_whole_bounded_domain",
+        "status": "KERNEL_ACCEPTED",
+        "wall_seconds": 1.4458717000015895,
+        "input_sha256": "49600e573b677c58dd3a33b5b51e5c8f709bf8a3ba68f9e78fd93042a926ff73",
+        "source": "import Lean\nset_option autoImplicit false\nset_option warningAsError true\nset_option maxHeartbeats 100000\ntheorem d38_obligation : (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ ((x = 2 ∨ x = 4) ∧ y = x + 1) ∧ (∀ z : Nat, z + 0 = z)) ∧ (¬ (∃ x y : Nat, x ≤ 5 ∧ y ≤ 5 ∧ ((x = 2 ∨ x = 4) ∧ y = x + 1) ∧ x = 2 ∧ y = 2)) := by\n  refine ⟨?_, ?_⟩\n  · have identity : ∀ z : Nat, z + 0 = z := by intro z; exact Nat.add_zero z\n    let x : Nat := 2\n    let y : Nat := 3\n    have hx : x ≤ 5 := by decide\n    have hy : y ≤ 5 := by decide\n    refine ⟨x, y, hx, hy, ?_, identity⟩\n    decide\n  · intro candidate\n    rcases candidate with ⟨x, y, hx, hy, hClaim, fixedX, fixedY⟩\n    subst x\n    subst y\n    first | (omega; done) | (simp_all; done) | (grind; done)\n#print axioms d38_obligation\n",
+        "accepted_axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "messages": [
+          {
+            "caption": "",
+            "data": "'d38_obligation' depends on axioms: [propext, Quot.sound]",
+            "endPos": {
+              "column": 6,
+              "line": 19
+            },
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "[anonymous]",
+            "pos": {
+              "column": 0,
+              "line": 19
+            },
+            "severity": "information"
+          }
+        ],
+        "stderr": ""
+      },
+      "end_to_end_seconds": 1.4485177000024123
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "status": "PASS_TRUSTED_CONTROLS",
+  "scope": "Fixed trusted new CPU fixtures. No author replay, unresolved theorem, model code or GPU.",
+  "environment": {
+    "d39_smoke_sha256": "ca19818e10f7246a3f2259eb0f2341c33a47a9d55645c4aa8c325ceb7c17e2ff",
+    "d39_resident_source_sha256": "774e55f75f0bacbcbaa7d9ac5090dcfd353ab41f215429383e3ef83027b97a9d",
+    "lean": "Lean (version 4.31.0, x86_64-w64-windows-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+    "lake": "Lake version 5.0.0-src+68218e8 (Lean version 4.31.0)",
+    "lean_sha256": "9b216deb50d37c32c829d1efaaa5bafd5560417d382df35a815489e31a31593f",
+    "lake_sha256": "a5be0113af1c08ba678c1fad07594e1c5de6b871fe0c4144da2998488eba88a1",
+    "cwd": "outputs/d39_blueprintrepair_954edd3/BlueprintRepair",
+    "source": {
+      "url": "https://github.com/Karifannaa/BlueprintRepair.git",
+      "commit": "954edd366a0d1474ecfebe418d4cac14aaf8c6bf",
+      "tree": "50e8742e40899598024074816933e06b7e992cae",
+      "subtree": "BlueprintRepair",
+      "subtree_git_sha1": "dcbd16eb1acb227965f3ec346254465c6b499c21",
+      "verified_materialized_blobs": 939,
+      "archive_sha256": "d1a81a9e9d7a6e461aefa966fda06fc5a3b40381899ac80e5d2b462b9f9ea850",
+      "archive_bytes": 1710080
+    },
+    "package_commits": {
+      "mathlib": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+      "LeanArchitect": "f38c848196b0467e7b9dcc3d129a866b4051c23c",
+      "plausible": "63045536fe95024e6c18fc7b48e03f506701c5bc",
+      "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "importGraph": "5c7542ed018c78194f1e2b903eaf6a792b74c03d",
+      "proofwidgets": "24b0d9dc081c5423f8eec7e866c441e5184f29d9",
+      "aesop": "e3cb2f741431ce31bf73549fb52316a57368b06f",
+      "Qq": "f46324995fca5f0483b742e4eb4daec7f4ee50d2",
+      "batteries": "fa08db58b30eb033edcdab331bba000827f9f785",
+      "Cli": "92564e5770e4d09f2d86dfbf8ada1e9c715b384c"
+    },
+    "built_imports": {
+      ".lake/packages/mathlib/.lake/build/lib/lean/Mathlib.olean": {
+        "bytes": 755136,
+        "sha256": "45522115b8ff55410b8bcf3f48c8872302eacce07dec01c09ffe2c6f64062807"
+      },
+      ".lake/packages/LeanArchitect/.lake/build/lib/lean/Architect.olean": {
+        "bytes": 2312,
+        "sha256": "12b11d43c4b54412560a49d9d20a1583a09724721d69f40915f2bea2aea9df64"
+      }
+    },
+    "cache": {
+      "packed_count": 8542,
+      "packed_bytes": 432264798,
+      "sha256_ordered_path_size_hash_lines": "101959261c0f56313baaf01dd6f1f826fed480ae1c1a5c0d665754a0bc70e58a"
+    }
+  },
+  "recheck_wall_seconds": 3.503510100003041,
+  "resident_startup_seconds": 1.988316599999962,
+  "resident_shutdown_seconds": 0.07383139999728883,
+  "resident_wall_seconds": 33.22485929999675,
+  "max_heartbeats": 200000,
+  "request_timeout_seconds": 120,
+  "controls": [
+    {
+      "case": "trusted_positive",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "69d75127d5b82bfa219d69aed6a0048866b6a7df3f965b6fcc92f1c8238ad853",
+      "body_sha256": "a5d6a92f0ca08e1d373a3e7cf7c2c2479f3e06e655c9065e7489bce722f9c144",
+      "match": true,
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "D40BaselineRuntime.target": []
+      },
+      "source_sha256": "6c8a44969ff99990bbd73af8cac9f542a58837a8cd2dabece145015e0b8973b3",
+      "document_version": 1,
+      "elapsed_seconds": 23.218002200002957,
+      "matching_publications": 5,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' does not depend on any axioms",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "case": "wrong_body",
+      "expected": "REJECTED",
+      "immutable_template_sha256": "69d75127d5b82bfa219d69aed6a0048866b6a7df3f965b6fcc92f1c8238ad853",
+      "body_sha256": "9338f7612e24f4b987404a343304b2bf597202b54af903fa422e55e5a747ffd3",
+      "match": true,
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "7c999a3205c90dc412204b6abe3f1be373ddede8c695904af5e65aca4c4ee26c",
+      "document_version": 2,
+      "elapsed_seconds": 0.254315600002883,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "Type mismatch\n  True.intro\nhas type\n  True\nbut is expected to have type\n  n + 0 = n",
+          "line": 9
+        },
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' depends on axioms: [sorryAx]",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "case": "resident_positive_again",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "69d75127d5b82bfa219d69aed6a0048866b6a7df3f965b6fcc92f1c8238ad853",
+      "body_sha256": "a5d6a92f0ca08e1d373a3e7cf7c2c2479f3e06e655c9065e7489bce722f9c144",
+      "match": true,
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "D40BaselineRuntime.target": []
+      },
+      "source_sha256": "6c8a44969ff99990bbd73af8cac9f542a58837a8cd2dabece145015e0b8973b3",
+      "document_version": 3,
+      "elapsed_seconds": 0.2141676999963238,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' does not depend on any axioms",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "case": "admitted_body",
+      "expected": "REJECTED",
+      "immutable_template_sha256": "69d75127d5b82bfa219d69aed6a0048866b6a7df3f965b6fcc92f1c8238ad853",
+      "body_sha256": "484aab2f2cd0f77b3c30f91521ba9a76c8c501112a53e100154a098c274f03d3",
+      "match": true,
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "d9feaa88f2d7ba59d9ffd4dd1d2e02261f323beee897d31cc894090d7b5eee14",
+      "document_version": 4,
+      "elapsed_seconds": 0.2097799999974086,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "declaration uses `sorry`",
+          "line": 8
+        },
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' depends on axioms: [sorryAx]",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "case": "exact_library",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "1689114bcfb14dba4159ab675582d11e2797eb0073367d22ea95d675a3880291",
+      "body_sha256": "a4bdce4a8d53514299801fcd496ef743e72a3082a00dee886bf8b1323dc322a3",
+      "match": true,
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "D40BaselineRuntime.target": []
+      },
+      "source_sha256": "652552befa1287655a2ae77a1716acfcf054fdb918965cb1a17bb507957999c0",
+      "document_version": 5,
+      "elapsed_seconds": 6.393448499999067,
+      "matching_publications": 5,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "Try this:\n  [apply] exact Nat.le_trans h₁ h₂",
+          "line": 9
+        },
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' does not depend on any axioms",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "case": "apply_library",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "1689114bcfb14dba4159ab675582d11e2797eb0073367d22ea95d675a3880291",
+      "body_sha256": "f56a3478dec8737c465b0c980e8b4b2ebfd225fab6227614bbdeedbf7f6720cb",
+      "match": true,
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "D40BaselineRuntime.target": []
+      },
+      "source_sha256": "cc038313b4051fb28009a48e121649953748433510508a5490cc144effb72f60",
+      "document_version": 6,
+      "elapsed_seconds": 0.21911679999902844,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "Try this:\n  [apply] exact Nat.le_trans h₁ h₂",
+          "line": 9
+        },
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' does not depend on any axioms",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "case": "generic_signature_int",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "6664d555ae94c633b60debf0524c265cfd9e5b24f80a1c14503b996673e4d105",
+      "body_sha256": "dbcfb38472735487a055856d7effa68e1624ebc73a02dbde453f18da392be4c6",
+      "match": true,
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "D40BaselineRuntime.target": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "a98034363948a4f6439ceb9b4678f954f3c7038a514aea005057301ea6dc70a5",
+      "document_version": 7,
+      "elapsed_seconds": 0.21345039999869186,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "case": "generic_signature_nat",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "93656b30487325df88a88318dcb62c4d0870a74c312970c9da48ec6ea0af4830",
+      "body_sha256": "6d2523d5ef7455198e345a0e0c8fa9e0a0d6576e6b1c9abe7799976d335c601b",
+      "match": true,
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "D40BaselineRuntime.target": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "d789b92237ef65508baa088e159613d86ae3ae36790975cac411c9adc1ad199b",
+      "document_version": 8,
+      "elapsed_seconds": 0.22046709999995073,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "case": "finite_ground",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "e29b95197ce55061390cb64842d8086b656af5ec61f07d3f620e74ad059daf92",
+      "body_sha256": "5589aa5863c2d85622d06d651add002416e5513afdbb455666cdde01bb3e257d",
+      "match": true,
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "D40BaselineRuntime.target": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "f5d33ca92d980d328ac530665bcbd012af1130656f299502baee03670de97d08",
+      "document_version": 9,
+      "elapsed_seconds": 0.21996300000319025,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 13
+        }
+      ]
+    }
+  ]
+}

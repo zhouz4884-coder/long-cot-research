@@ -1,0 +1,232 @@
+{
+  "status": "COMPLETE_CPU_AUTHORED_CONTROLS",
+  "scope": "Actual independent ordinary arithmetic proofs in matched imports. Expert designs are offline controls, not new model generations or a candidate discovery algorithm.",
+  "lean_version": "Lean (version 4.31.0, x86_64-w64-windows-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+  "input_sha256": "ed36404c9cdf405cc6b0ccb71daf0b915d6bfed6691aa21db04168ff9fa3dc1c",
+  "per_case": {
+    "p41": {
+      "imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "startup_seconds": 1.961856699999771,
+      "shutdown_seconds": 0.08136440000089351,
+      "attempts": [
+        {
+          "method": "ordinary_inline_induction_use_positive_binder",
+          "source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\n\nnamespace P41Bad\n\n@[blueprint \"thm:p41bad-target\"]\ntheorem p41_target (n : ℕ) (h₀ : 0 < n) : 9 ∣ 10 ^ n - 1 := by\n  have growth : ∀ m : ℕ, ∃ q : ℕ, (10 : ℕ)^m = 9 * q + 1 := by\n    intro m\n    induction m with\n    | zero => exact ⟨0, by norm_num⟩\n    | succ m ih =>\n      rcases ih with ⟨q, hq⟩\n      refine ⟨10 * q + 1, ?_⟩\n      rw [pow_succ, hq]\n      ring\n  cases n with\n  | zero => exact False.elim (Nat.lt_irrefl 0 h₀)\n  | succ n =>\n    rcases growth (n + 1) with ⟨q, hq⟩\n    refine ⟨q, ?_⟩\n    omega\n\nend P41Bad\n\n#check (P41Bad.p41_target : ∀ n : ℕ, 0 < n → 9 ∣ (10 : ℕ)^n - 1)\n#print axioms P41Bad.p41_target\n",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "P41Bad.p41_target": [
+              "propext",
+              "Quot.sound"
+            ]
+          },
+          "source_sha256": "209383a445ef877b67681db44d619d699714b6ed1e3dbee28f12c259cdad24af",
+          "document_version": 1,
+          "elapsed_seconds": 9.57039100000111,
+          "matching_publications": 5,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+              "line": 31
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, Quot.sound]",
+              "line": 32
+            }
+          ]
+        },
+        {
+          "method": "ordinary_one_auxiliary_split_use_positive_binder",
+          "source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\n\nnamespace P41Bad\n\n@[blueprint \"lem:p41bad-d40-control\"]\ntheorem d40_p41_growth : ∀ m : ℕ, ∃ q : ℕ, (10 : ℕ)^m = 9 * q + 1 := by\n  intro m\n  induction m with\n  | zero => exact ⟨0, by norm_num⟩\n  | succ m ih =>\n    rcases ih with ⟨q, hq⟩\n    refine ⟨10 * q + 1, ?_⟩\n    rw [pow_succ, hq]\n    ring\n\n@[blueprint \"thm:p41bad-target\" (proofUses := [d40_p41_growth])]\ntheorem p41_target (n : ℕ) (h₀ : 0 < n) : 9 ∣ 10 ^ n - 1 := by\n  cases n with\n  | zero => exact False.elim (Nat.lt_irrefl 0 h₀)\n  | succ n =>\n    rcases d40_p41_growth (n + 1) with ⟨q, hq⟩\n    refine ⟨q, ?_⟩\n    omega\n\nend P41Bad\n\n#check (P41Bad.p41_target : ∀ n : ℕ, 0 < n → 9 ∣ (10 : ℕ)^n - 1)\n#print axioms P41Bad.p41_target\n#print axioms P41Bad.d40_p41_growth\n",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "P41Bad.p41_target": [
+              "propext",
+              "Quot.sound"
+            ],
+            "P41Bad.d40_p41_growth": [
+              "propext"
+            ]
+          },
+          "source_sha256": "6f4078a69095e3f264521e2c276aa18723ba92a2ecec19f6e973f21ccc9e107b",
+          "document_version": 2,
+          "elapsed_seconds": 0.21347660000174074,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+              "line": 33
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, Quot.sound]",
+              "line": 34
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.d40_p41_growth' depends on axioms: [propext]",
+              "line": 35
+            }
+          ]
+        }
+      ]
+    },
+    "p138": {
+      "imports": [
+        "Architect",
+        "Mathlib"
+      ],
+      "startup_seconds": 1.967627199999697,
+      "shutdown_seconds": 0.0860123999955249,
+      "attempts": [
+        {
+          "method": "direct_bounded_decide",
+          "source": "import Architect\nimport Mathlib\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\nset_option maxRecDepth 4096\n\nnamespace P138Bad\n\n@[blueprint \"thm:p138bad-target\"]\ntheorem p138_target (a : ℕ) (h₀ : a = (∑ k ∈ (Nat.divisors 500), k)) : ∑ k ∈ Finset.filter (λ x => Nat.Prime x) (Nat.divisors a), k = 25 := by\n  subst a\n  decide\n\nend P138Bad\n\n#check (P138Bad.p138_target : ∀ a : ℕ, a = (∑ k ∈ Nat.divisors 500, k) → (∑ k ∈ Finset.filter (fun x => Nat.Prime x) (Nat.divisors a), k) = 25)\n#print axioms P138Bad.p138_target\n",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "P138Bad.p138_target": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "source_sha256": "f66a9e61ed8d1b0442a61bf37f44fca95ab8b0b5642b748dae7b3fc77a02be18",
+          "document_version": 1,
+          "elapsed_seconds": 25.494729699996242,
+          "matching_publications": 5,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "P138Bad.p138_target : ∀ (a : ℕ), a = ∑ k ∈ Nat.divisors 500, k → ∑ k ∈ a.divisors with Nat.Prime k, k = 25",
+              "line": 17
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "ordinary_inline_arithmetic_split",
+          "source": "import Architect\nimport Mathlib\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\nset_option maxRecDepth 4096\n\nnamespace P138Bad\n\n@[blueprint \"thm:p138bad-target\"]\ntheorem p138_target (a : ℕ) (h₀ : a = (∑ k ∈ (Nat.divisors 500), k)) : ∑ k ∈ Finset.filter (λ x => Nat.Prime x) (Nat.divisors a), k = 25 := by\n  have sum_divisors : (∑ k ∈ Nat.divisors 500, k) = 1092 := by decide\n  have value : a = 1092 := h₀.trans sum_divisors\n  subst a\n  decide\n\nend P138Bad\n\n#check (P138Bad.p138_target : ∀ a : ℕ, a = (∑ k ∈ Nat.divisors 500, k) → (∑ k ∈ Finset.filter (fun x => Nat.Prime x) (Nat.divisors a), k) = 25)\n#print axioms P138Bad.p138_target\n",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "P138Bad.p138_target": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "source_sha256": "a7c3572066ef4db835fb893ec88c71517f7df03cfd0285e4c11552e1b6db18bc",
+          "document_version": 2,
+          "elapsed_seconds": 3.61907319999591,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "P138Bad.p138_target : ∀ (a : ℕ), a = ∑ k ∈ Nat.divisors 500, k → ∑ k ∈ a.divisors with Nat.Prime k, k = 25",
+              "line": 19
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+              "line": 20
+            }
+          ]
+        },
+        {
+          "method": "ordinary_one_auxiliary_split",
+          "source": "import Architect\nimport Mathlib\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\nset_option maxRecDepth 4096\n\nnamespace P138Bad\n\n@[blueprint \"lem:p138bad-d40-control\"]\ntheorem d40_p138_sum : (∑ k ∈ Nat.divisors 500, k) = 1092 := by decide\n\n@[blueprint \"thm:p138bad-target\" (proofUses := [d40_p138_sum])]\ntheorem p138_target (a : ℕ) (h₀ : a = (∑ k ∈ (Nat.divisors 500), k)) : ∑ k ∈ Finset.filter (λ x => Nat.Prime x) (Nat.divisors a), k = 25 := by\n  have value : a = 1092 := h₀.trans d40_p138_sum\n  subst a\n  decide\n\nend P138Bad\n\n#check (P138Bad.p138_target : ∀ a : ℕ, a = (∑ k ∈ Nat.divisors 500, k) → (∑ k ∈ Finset.filter (fun x => Nat.Prime x) (Nat.divisors a), k) = 25)\n#print axioms P138Bad.p138_target\n#print axioms P138Bad.d40_p138_sum\n",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "P138Bad.p138_target": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "P138Bad.d40_p138_sum": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "source_sha256": "d642168911b8a087f047f037c5bd014381b4c44ff3f7e15c9ffd7c4d4f7b46a7",
+          "document_version": 3,
+          "elapsed_seconds": 0.6895041999960085,
+          "matching_publications": 4,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "P138Bad.p138_target : ∀ (a : ℕ), a = ∑ k ∈ Nat.divisors 500, k → ∑ k ∈ a.divisors with Nat.Prime k, k = 25",
+              "line": 21
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+              "line": 22
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.d40_p138_sum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+              "line": 23
+            }
+          ]
+        },
+        {
+          "method": "ordinary_prime_factorization",
+          "source": "import Architect\nimport Mathlib\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\nset_option maxRecDepth 4096\n\nnamespace P138Bad\n\n@[blueprint \"thm:p138bad-target\"]\ntheorem p138_target (a : ℕ) (h₀ : a = (∑ k ∈ (Nat.divisors 500), k)) : ∑ k ∈ Finset.filter (λ x => Nat.Prime x) (Nat.divisors a), k = 25 := by\n  have sum_divisors : (∑ k ∈ Nat.divisors 500, k) = 1092 := by decide\n  have value : a = 1092 := h₀.trans sum_divisors\n  subst a\n  have filter_eq : (Nat.divisors 1092).filter Nat.Prime = (1092 : ℕ).primeFactors := by\n    ext p\n    simp [Nat.mem_divisors, Nat.mem_primeFactors, and_assoc, and_comm, and_left_comm]\n  have factors : (1092 : ℕ).primeFactors = {2, 3, 7, 13} := by decide\n  rw [filter_eq, factors]\n  decide\n\nend P138Bad\n\n#check (P138Bad.p138_target : ∀ a : ℕ, a = (∑ k ∈ Nat.divisors 500, k) → (∑ k ∈ Finset.filter (fun x => Nat.Prime x) (Nat.divisors a), k) = 25)\n#print axioms P138Bad.p138_target\n",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "0848fb4356775d427822dc401bfab7ded67b26433e8e7ae798803f9eb89cab53",
+          "document_version": 4,
+          "elapsed_seconds": 0.24847099999897182,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Tactic `decide` failed for proposition\n  Nat.primeFactors 1092 = {2, 3, 7, 13}\nbecause its `Decidable` instance\n  (Nat.primeFactors 1092).decidableEq {2, 3, 7, 13}\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `decidable_of_decidable_of_iff`, `decidable_of_iff`, `decidable_of_iff'`, `instDecidableEqBool`, `Bool.decEq`, `Finset.decidableEq`, `List.decidablePerm`, `Multiset.decidableEq`, and `Multiset.instDecidableRListOfDecidableEq`, reduction got stuck at the `Decidable` instance\n  match (Nat.primeFactorsList 1092).dedup.isPerm (List.insert 2 (List.insert 3 (List.insert 7 [13]))), true with\n  | false, false => isTrue ⋯\n  | false, true => isFalse ⋯\n  | true, false => isFalse ⋯\n  | true, true => isTrue ⋯",
+              "line": 18
+            },
+            {
+              "severity": 1,
+              "message": "Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  Finset.filter Nat.Prime (Nat.divisors 1092)\nin the target expression\n  ∑ k ∈ (∑ k ∈ Nat.divisors 500, k).divisors with Nat.Prime k, k = 25\n\nsum_divisors value : ∑ k ∈ Nat.divisors 500, k = 1092\nfilter_eq : Finset.filter Nat.Prime (Nat.divisors 1092) = Nat.primeFactors 1092\nfactors : Nat.primeFactors 1092 = {2, 3, 7, 13}\n⊢ ∑ k ∈ (∑ k ∈ Nat.divisors 500, k).divisors with Nat.Prime k, k = 25",
+              "line": 19
+            },
+            {
+              "severity": 1,
+              "message": "This simp argument is unused:\n  and_assoc\n\nHint: Omit it from the simp argument list.\n  simp [Nat.mem_divisors, Nat.mem_primeFactors, and_a̵s̵s̵o̵c,̵ ̵a̵n̵d̵_̵c̵omm, and_left_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+              "line": 17
+            },
+            {
+              "severity": 1,
+              "message": "This simp argument is unused:\n  and_left_comm\n\nHint: Omit it from the simp argument list.\n  simp [Nat.mem_divisors, Nat.mem_primeFactors, and_assoc, and_comm,̵ ̵a̵n̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+              "line": 17
+            },
+            {
+              "severity": 3,
+              "message": "P138Bad.p138_target : ∀ (a : ℕ), a = ∑ k ∈ Nat.divisors 500, k → ∑ k ∈ a.divisors with Nat.Prime k, k = 25",
+              "line": 24
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 25
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "retry": true,
+  "retry_freeze_sha256": "05b7dfbabb2ed448fdc0bfc2487533e73ca5da6913ee05479c46a3feda0a22f5",
+  "new_model_tokens": 0,
+  "gpu_seconds": 0
+}

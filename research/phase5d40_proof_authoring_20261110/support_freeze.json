@@ -1,0 +1,19 @@
+{
+  "status": "FROZEN_ARCHIVE_SUPPORT_RULES_BEFORE_NEW_PROOFS",
+  "d40_selection_sha256": "9ac91d42bd88e05c717a72531806582e848a9ab2171a5103f8400a591256db7f",
+  "d39_inventory_sha256": "d2605672b6843ef6466cd1a56253ee5230e40bad4832e74643af02f670cfb5a7",
+  "d39_recount_source_sha256": "6c439626402ccb1543421f260bcf30394db43d937eaf3353512aebb03a78c67f",
+  "cohorts": {"unresolved": 11, "same_family_solved": 20, "same_target_overlap_sentinel": ["p142_bad.state0"]},
+  "counting_scope": "Every archived episode and step in the source selection, no replacement. Same-target p142 is separately indexed for p104 novelty and excluded from cohort counts.",
+  "source_origins": {
+    "provider": "Explicit Lean fenced blocks, exact patch replacement chunks, and proof/statement fields from decoded published structured tool calls. Exclude deleted SEARCH text, free-form model reasoning, and hidden provider reasoning.",
+    "initial": "The initial visible Lean module from the authored request. Use as prior proof support rather than newly sampled candidate code.",
+    "visible_prestate": "A Lean module explicitly visible in the current request after its latest applied graph feedback. A stale or absent current module remains unknown.",
+    "materialized_check": "Pinned stepNN.check.lean bytes with a matching same-step author check log. Includes carried declarations and author-added checking suffixes. Diff against the visible prestate only when it resolves.",
+    "assembled": "Pinned stepNN.assembled.lean bytes with matching same-step log. Includes possible author prover contributions, reported separately from delivered model code."
+  },
+  "tactic_observation": "Whitelist lexical tactic indicators in visible proof regions after removing Lean comments and string literals. Counts are lexical indicators, not executed tactics or complete proof-state transitions.",
+  "node_observation": "Record provider structured statement fields and named theorem/lemma declarations. A new node means a new non-target declaration key relative to the exact visible prestate, not just a changed source line. For retained declarations compare statement and proof token hashes separately. Compare aliases only when the unique label suffix and Lean declaration name agree. Count local have/obtain constructs separately.",
+  "candidate_novelty": "Compare a candidate's static tactic/body tokens and statement tokens against the same original target's full visible archive, separating provider, visible prior, materialized, and assembled support. If only tactic families overlap or exact tokens are unseen, report that limited observation. No inference of semantic novelty, completion, unsatisfiability, or exhaustive support. Hidden, malformed and unbound proof states remain unknown.",
+  "safety": "Read-only public archive intake. No Lean launches, model calls, code execution, optimizer, or GPU. All original targets were author-controlled starting failures. Do not expose raw reasoning or unreviewed archive snippets as executable fixtures."
+}

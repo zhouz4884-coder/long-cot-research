@@ -1,0 +1,399 @@
+{
+  "status": "FAIL_TRUSTED_CONTROLS",
+  "scope": "Fixed trusted new CPU fixtures. No author replay, unresolved theorem, model code or GPU.",
+  "environment": {
+    "d39_smoke_sha256": "ca19818e10f7246a3f2259eb0f2341c33a47a9d55645c4aa8c325ceb7c17e2ff",
+    "d39_resident_source_sha256": "774e55f75f0bacbcbaa7d9ac5090dcfd353ab41f215429383e3ef83027b97a9d",
+    "lean": "Lean (version 4.31.0, x86_64-w64-windows-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+    "lake": "Lake version 5.0.0-src+68218e8 (Lean version 4.31.0)",
+    "lean_sha256": "9b216deb50d37c32c829d1efaaa5bafd5560417d382df35a815489e31a31593f",
+    "lake_sha256": "a5be0113af1c08ba678c1fad07594e1c5de6b871fe0c4144da2998488eba88a1",
+    "cwd": "outputs/d39_blueprintrepair_954edd3/BlueprintRepair",
+    "source": {
+      "url": "https://github.com/Karifannaa/BlueprintRepair.git",
+      "commit": "954edd366a0d1474ecfebe418d4cac14aaf8c6bf",
+      "tree": "50e8742e40899598024074816933e06b7e992cae",
+      "subtree": "BlueprintRepair",
+      "subtree_git_sha1": "dcbd16eb1acb227965f3ec346254465c6b499c21",
+      "verified_materialized_blobs": 939,
+      "archive_sha256": "d1a81a9e9d7a6e461aefa966fda06fc5a3b40381899ac80e5d2b462b9f9ea850",
+      "archive_bytes": 1710080
+    },
+    "package_commits": {
+      "mathlib": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+      "LeanArchitect": "f38c848196b0467e7b9dcc3d129a866b4051c23c",
+      "plausible": "63045536fe95024e6c18fc7b48e03f506701c5bc",
+      "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "importGraph": "5c7542ed018c78194f1e2b903eaf6a792b74c03d",
+      "proofwidgets": "24b0d9dc081c5423f8eec7e866c441e5184f29d9",
+      "aesop": "e3cb2f741431ce31bf73549fb52316a57368b06f",
+      "Qq": "f46324995fca5f0483b742e4eb4daec7f4ee50d2",
+      "batteries": "fa08db58b30eb033edcdab331bba000827f9f785",
+      "Cli": "92564e5770e4d09f2d86dfbf8ada1e9c715b384c"
+    },
+    "built_imports": {
+      ".lake/packages/mathlib/.lake/build/lib/lean/Mathlib.olean": {
+        "bytes": 755136,
+        "sha256": "45522115b8ff55410b8bcf3f48c8872302eacce07dec01c09ffe2c6f64062807"
+      },
+      ".lake/packages/LeanArchitect/.lake/build/lib/lean/Architect.olean": {
+        "bytes": 2312,
+        "sha256": "12b11d43c4b54412560a49d9d20a1583a09724721d69f40915f2bea2aea9df64"
+      }
+    },
+    "cache": {
+      "packed_count": 8542,
+      "packed_bytes": 432264798,
+      "sha256_ordered_path_size_hash_lines": "101959261c0f56313baaf01dd6f1f826fed480ae1c1a5c0d665754a0bc70e58a"
+    }
+  },
+  "recheck_wall_seconds": 3.20881129999907,
+  "resident_startup_seconds": 1.9367899999997462,
+  "resident_shutdown_seconds": 0.06002319999970496,
+  "resident_wall_seconds": 34.13486100000591,
+  "max_heartbeats": 200000,
+  "request_timeout_seconds": 120,
+  "controls": [
+    {
+      "case": "trusted_positive",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "de0fce9025e004e1a2b5367cee4b6bd1c36f46ec0e1087815ba1c75cfe98452c",
+      "body_sha256": "a5d6a92f0ca08e1d373a3e7cf7c2c2479f3e06e655c9065e7489bce722f9c144",
+      "match": true,
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "D40BaselineRuntime.target": []
+      },
+      "source_sha256": "f67c945371b0f6980005746e95a6d86db5a739300655db4b381fa8ae32d44feb",
+      "document_version": 1,
+      "elapsed_seconds": 23.300441699997464,
+      "matching_publications": 5,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' does not depend on any axioms",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "case": "wrong_body",
+      "expected": "REJECTED",
+      "immutable_template_sha256": "de0fce9025e004e1a2b5367cee4b6bd1c36f46ec0e1087815ba1c75cfe98452c",
+      "body_sha256": "9338f7612e24f4b987404a343304b2bf597202b54af903fa422e55e5a747ffd3",
+      "match": true,
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "91991b7e4c688b27db93aa9f465e44705e396df03d559574b84d78ad627c9474",
+      "document_version": 2,
+      "elapsed_seconds": 0.32681120000052033,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "Type mismatch\n  True.intro\nhas type\n  True\nbut is expected to have type\n  n + 0 = n",
+          "line": 10
+        },
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' depends on axioms: [sorryAx]",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "case": "resident_positive_again",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "de0fce9025e004e1a2b5367cee4b6bd1c36f46ec0e1087815ba1c75cfe98452c",
+      "body_sha256": "a5d6a92f0ca08e1d373a3e7cf7c2c2479f3e06e655c9065e7489bce722f9c144",
+      "match": true,
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "D40BaselineRuntime.target": []
+      },
+      "source_sha256": "f67c945371b0f6980005746e95a6d86db5a739300655db4b381fa8ae32d44feb",
+      "document_version": 3,
+      "elapsed_seconds": 0.21691500000451924,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' does not depend on any axioms",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "case": "admitted_body",
+      "expected": "REJECTED",
+      "immutable_template_sha256": "de0fce9025e004e1a2b5367cee4b6bd1c36f46ec0e1087815ba1c75cfe98452c",
+      "body_sha256": "484aab2f2cd0f77b3c30f91521ba9a76c8c501112a53e100154a098c274f03d3",
+      "match": true,
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "d05d844cc75917fa0b5f7e6508503fad4ca22d81b0f246d92ed266242cc79d7e",
+      "document_version": 4,
+      "elapsed_seconds": 0.21905230000265874,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "declaration uses `sorry`",
+          "line": 9
+        },
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' depends on axioms: [sorryAx]",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "case": "exact_library",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "3c0f050d2f37171f5bef8ec7a74b2c470a0652319005219bfa33ca965eeaaf38",
+      "body_sha256": "a4bdce4a8d53514299801fcd496ef743e72a3082a00dee886bf8b1323dc322a3",
+      "match": true,
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "D40BaselineRuntime.target": []
+      },
+      "source_sha256": "fa37380a5fd87d6c9137d24117e4547f6b94a0f95c040c223c6574b8fb47e625",
+      "document_version": 5,
+      "elapsed_seconds": 7.1536303000029875,
+      "matching_publications": 5,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "Try this:\n  [apply] exact Nat.le_trans h₁ h₂",
+          "line": 10
+        },
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' does not depend on any axioms",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "case": "apply_library",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "3c0f050d2f37171f5bef8ec7a74b2c470a0652319005219bfa33ca965eeaaf38",
+      "body_sha256": "a6987e93fe4b9a67b7ac75788498139991c57a0fba8f0530f1f6c73b19d092d7",
+      "match": false,
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "b97cff55cc06b850df16f268310ab9c4b9df401f0de2dbe663871fe3a035fa72",
+      "document_version": 6,
+      "elapsed_seconds": 0.22527650000120047,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "Try this:\n  [apply] exact Nat.le_trans h₁ h₂",
+          "line": 10
+        },
+        {
+          "severity": 1,
+          "message": "'all_goals\n  first\n  | (assumption; done)\n  | (norm_num; done)\n  | (omega; done)\n  | (decide; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 11
+        },
+        {
+          "severity": 1,
+          "message": "'done' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 12
+        },
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' does not depend on any axioms",
+          "line": 16
+        }
+      ]
+    },
+    {
+      "case": "generic_signature_int",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "af247aa1ea2a9edcf7d913506677ab12888065222553c7d52b23ac95349c1910",
+      "body_sha256": "c911e3c44cce09a8c22ae39fdb4518d4f5b7e6a54e9dddb02ed7226c3eaee3ac",
+      "match": false,
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "0cbe75f38c4bf1440c65779b9b4918f595514429b810192445a4568932dd2c31",
+      "document_version": 7,
+      "elapsed_seconds": 0.21264589999918826,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "'done' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 11
+        },
+        {
+          "severity": 1,
+          "message": "'(refine dvd_trans ?_ (Nat.sub_dvd_pow_sub_pow _ _ _); norm_num; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 12
+        },
+        {
+          "severity": 1,
+          "message": "'(refine dvd_trans ?_ (Nat.sub_one_dvd_pow_sub_one _ _); norm_num; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 13
+        },
+        {
+          "severity": 1,
+          "message": "'(apply Int.ModEq.dvd; apply Int.ModEq.pow; norm_num [Int.ModEq]; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 14
+        },
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "case": "generic_signature_nat",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "a907836667bee48193bf77344fcae4df6ab8ceb96886c3bf73cd6e80b6a3ae77",
+      "body_sha256": "c911e3c44cce09a8c22ae39fdb4518d4f5b7e6a54e9dddb02ed7226c3eaee3ac",
+      "match": false,
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "b2432a12fc70a2098924965850379a59ce93e95493ab44285668962e74c2a1b4",
+      "document_version": 8,
+      "elapsed_seconds": 0.2683871999979601,
+      "matching_publications": 5,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "'refine dvd_trans ?_ (sub_dvd_pow_sub_pow _ _ _)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 11
+        },
+        {
+          "severity": 1,
+          "message": "'norm_num' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 11
+        },
+        {
+          "severity": 1,
+          "message": "'done' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 11
+        },
+        {
+          "severity": 1,
+          "message": "'refine dvd_trans ?_ (Nat.sub_dvd_pow_sub_pow _ _ _)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 12
+        },
+        {
+          "severity": 1,
+          "message": "'norm_num' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 12
+        },
+        {
+          "severity": 1,
+          "message": "'done' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 12
+        },
+        {
+          "severity": 1,
+          "message": "'done' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 13
+        },
+        {
+          "severity": 1,
+          "message": "'(apply Int.ModEq.dvd; apply Int.ModEq.pow; norm_num [Int.ModEq]; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 14
+        },
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "case": "finite_ground",
+      "expected": "KERNEL_ACCEPTED",
+      "immutable_template_sha256": "79868d5fd2e28b1f9ac52662f507e7a0560e8d04227b9214e5ce7ee2c23f6601",
+      "body_sha256": "c37c9dccaf6172e92c91ef9c78d8bc7f58a556803279f24cdaf2d641ad856e84",
+      "match": false,
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "8ad30470c0b6c4af7d7c142a131cc6087a94c70fe3c7cc4df5f41ddb3cb3e7c8",
+      "document_version": 9,
+      "elapsed_seconds": 0.21488769999996293,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "'assumption' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 11
+        },
+        {
+          "severity": 1,
+          "message": "'done' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 11
+        },
+        {
+          "severity": 1,
+          "message": "'done' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 12
+        },
+        {
+          "severity": 1,
+          "message": "'(simp_all; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 13
+        },
+        {
+          "severity": 1,
+          "message": "'(norm_num; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 14
+        },
+        {
+          "severity": 1,
+          "message": "'(omega; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 15
+        },
+        {
+          "severity": 1,
+          "message": "'(ring; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 16
+        },
+        {
+          "severity": 1,
+          "message": "'(linarith; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 17
+        },
+        {
+          "severity": 1,
+          "message": "'(nlinarith; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 18
+        },
+        {
+          "severity": 1,
+          "message": "'(decide; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 19
+        },
+        {
+          "severity": 1,
+          "message": "'(solve_by_elim; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 20
+        },
+        {
+          "severity": 1,
+          "message": "'(aesop; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 21
+        },
+        {
+          "severity": 1,
+          "message": "'(grind; done)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+          "line": 22
+        },
+        {
+          "severity": 3,
+          "message": "'D40BaselineRuntime.target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 26
+        }
+      ]
+    }
+  ]
+}

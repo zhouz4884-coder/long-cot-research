@@ -1,0 +1,307 @@
+{
+  "status": "COMPLETE_CPU_AUTHORED_CONTROLS",
+  "scope": "Actual independent ordinary arithmetic proofs in matched imports. Expert designs are offline controls, not new model generations or a candidate discovery algorithm.",
+  "lean_version": "Lean (version 4.31.0, x86_64-w64-windows-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+  "input_sha256": "ed36404c9cdf405cc6b0ccb71daf0b915d6bfed6691aa21db04168ff9fa3dc1c",
+  "per_case": {
+    "p14": {
+      "imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "startup_seconds": 1.9082405999943148,
+      "shutdown_seconds": 0.07770799999707378,
+      "attempts": [
+        {
+          "method": "direct_library_specialization",
+          "source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\n\nnamespace P14Bad\n\n@[blueprint \"thm:p14bad-target\"]\ntheorem p14_target (n : ℕ) : 11 ∣ (10^n - (-1 : ℤ)^n) := by\n  exact sub_dvd_pow_sub_pow (10 : ℤ) (-1 : ℤ) n\n\nend P14Bad\n\n#check (P14Bad.p14_target : ∀ n : ℕ, (11 : ℤ) ∣ ((10 : ℤ)^n - (-1 : ℤ)^n))\n#print axioms P14Bad.p14_target\n",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "b73cf39abea37e6c6f315b35a4b3d28f0978101d86c1bad27786d1f57adc4136",
+          "document_version": 1,
+          "elapsed_seconds": 10.029101400003128,
+          "matching_publications": 5,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown identifier `sub_dvd_pow_sub_pow`",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "P14Bad.p14_target : ∀ (n : ℕ), 11 ∣ 10 ^ n - (-1) ^ n",
+              "line": 18
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 19
+            }
+          ]
+        },
+        {
+          "method": "ordinary_inline_induction",
+          "source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\n\nnamespace P14Bad\n\n@[blueprint \"thm:p14bad-target\"]\ntheorem p14_target (n : ℕ) : 11 ∣ (10^n - (-1 : ℤ)^n) := by\n  induction n with\n  | zero => norm_num\n  | succ n ih =>\n    rcases ih with ⟨q, hq⟩\n    refine ⟨10 * q + (-1 : ℤ)^n, ?_⟩\n    have factor : (10 : ℤ)^(n + 1) - (-1 : ℤ)^(n + 1) =\n        10 * ((10 : ℤ)^n - (-1 : ℤ)^n) + 11 * (-1 : ℤ)^n := by\n      rw [pow_succ, pow_succ]\n      ring\n    rw [factor, hq]\n    ring\n\nend P14Bad\n\n#check (P14Bad.p14_target : ∀ n : ℕ, (11 : ℤ) ∣ ((10 : ℤ)^n - (-1 : ℤ)^n))\n#print axioms P14Bad.p14_target\n",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "P14Bad.p14_target": [
+              "propext",
+              "Quot.sound"
+            ]
+          },
+          "source_sha256": "a48c7dfbbd4e184c14be46c13a813a19f3d52e6fefb88a02554e8141ef139a87",
+          "document_version": 2,
+          "elapsed_seconds": 0.32457190000423,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "P14Bad.p14_target : ∀ (n : ℕ), 11 ∣ 10 ^ n - (-1) ^ n",
+              "line": 28
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, Quot.sound]",
+              "line": 29
+            }
+          ]
+        },
+        {
+          "method": "ordinary_one_auxiliary_split",
+          "source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.LinearCombination\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\n\nnamespace P14Bad\n\n@[blueprint \"lem:p14bad-d40-control\"]\ntheorem d40_p14_factor (n : ℕ) : (10 : ℤ)^(n + 1) - (-1 : ℤ)^(n + 1) =\n    10 * ((10 : ℤ)^n - (-1 : ℤ)^n) + 11 * (-1 : ℤ)^n := by\n  rw [pow_succ, pow_succ]\n  ring\n\n@[blueprint \"thm:p14bad-target\" (proofUses := [d40_p14_factor])]\ntheorem p14_target (n : ℕ) : 11 ∣ (10^n - (-1 : ℤ)^n) := by\n  induction n with\n  | zero => norm_num\n  | succ n ih =>\n    rcases ih with ⟨q, hq⟩\n    refine ⟨10 * q + (-1 : ℤ)^n, ?_⟩\n    rw [d40_p14_factor, hq]\n    ring\n\nend P14Bad\n\n#check (P14Bad.p14_target : ∀ n : ℕ, (11 : ℤ) ∣ ((10 : ℤ)^n - (-1 : ℤ)^n))\n#print axioms P14Bad.p14_target\n#print axioms P14Bad.d40_p14_factor\n",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "P14Bad.p14_target": [
+              "propext",
+              "Quot.sound"
+            ],
+            "P14Bad.d40_p14_factor": [
+              "propext",
+              "Quot.sound"
+            ]
+          },
+          "source_sha256": "ff75365a6f4bcf00aa060c87eb6b23c26a116e0286b57efc61f29645feadc1ed",
+          "document_version": 3,
+          "elapsed_seconds": 0.20640029999776743,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "P14Bad.p14_target : ∀ (n : ℕ), 11 ∣ 10 ^ n - (-1) ^ n",
+              "line": 30
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, Quot.sound]",
+              "line": 31
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.d40_p14_factor' depends on axioms: [propext, Quot.sound]",
+              "line": 32
+            }
+          ]
+        }
+      ]
+    },
+    "p41": {
+      "imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "startup_seconds": 2.177335700005642,
+      "shutdown_seconds": 0.055571199998667,
+      "attempts": [
+        {
+          "method": "direct_library_specialization",
+          "source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\n\nnamespace P41Bad\n\n@[blueprint \"thm:p41bad-target\"]\ntheorem p41_target (n : ℕ) (h₀ : 0 < n) : 9 ∣ 10 ^ n - 1 := by\n  exact Nat.sub_one_dvd_pow_sub_one 10 n\n\nend P41Bad\n\n#check (P41Bad.p41_target : ∀ n : ℕ, 0 < n → 9 ∣ (10 : ℕ)^n - 1)\n#print axioms P41Bad.p41_target\n",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "a8011e1dc292039a236bdc748504a68ea81a2a91a0eefcbfabf5bc91ef6d19dc",
+          "document_version": 1,
+          "elapsed_seconds": 9.035207600005378,
+          "matching_publications": 5,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `Nat.sub_one_dvd_pow_sub_one`",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+              "line": 17
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "ordinary_inline_induction",
+          "source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\n\nnamespace P41Bad\n\n@[blueprint \"thm:p41bad-target\"]\ntheorem p41_target (n : ℕ) (h₀ : 0 < n) : 9 ∣ 10 ^ n - 1 := by\n  have growth : ∀ m : ℕ, ∃ q : ℕ, (10 : ℕ)^m = 9 * q + 1 := by\n    intro m\n    induction m with\n    | zero => exact ⟨0, by norm_num⟩\n    | succ m ih =>\n      rcases ih with ⟨q, hq⟩\n      refine ⟨10 * q + 1, ?_⟩\n      rw [pow_succ, hq]\n      ring\n  rcases growth n with ⟨q, hq⟩\n  refine ⟨q, ?_⟩\n  omega\n\nend P41Bad\n\n#check (P41Bad.p41_target : ∀ n : ℕ, 0 < n → 9 ∣ (10 : ℕ)^n - 1)\n#print axioms P41Bad.p41_target\n",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "e8ef6a0ee5df2a21ef77885a4290fa87e3e3d2d7bd54f8a8144f44bcc0809bb7",
+          "document_version": 2,
+          "elapsed_seconds": 0.21369160000176635,
+          "matching_publications": 2,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+              "line": 28
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, Quot.sound]",
+              "line": 29
+            },
+            {
+              "severity": 1,
+              "message": "Variable name `h₀` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+              "line": 12
+            }
+          ]
+        },
+        {
+          "method": "ordinary_one_auxiliary_split",
+          "source": "import Architect\nimport Mathlib.Tactic.Ring\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.NormNum\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\n\nnamespace P41Bad\n\n@[blueprint \"lem:p41bad-d40-control\"]\ntheorem d40_p41_growth : ∀ m : ℕ, ∃ q : ℕ, (10 : ℕ)^m = 9 * q + 1 := by\n  intro m\n  induction m with\n  | zero => exact ⟨0, by norm_num⟩\n  | succ m ih =>\n    rcases ih with ⟨q, hq⟩\n    refine ⟨10 * q + 1, ?_⟩\n    rw [pow_succ, hq]\n    ring\n\n@[blueprint \"thm:p41bad-target\" (proofUses := [d40_p41_growth])]\ntheorem p41_target (n : ℕ) (h₀ : 0 < n) : 9 ∣ 10 ^ n - 1 := by\n  rcases d40_p41_growth n with ⟨q, hq⟩\n  refine ⟨q, ?_⟩\n  omega\n\nend P41Bad\n\n#check (P41Bad.p41_target : ∀ n : ℕ, 0 < n → 9 ∣ (10 : ℕ)^n - 1)\n#print axioms P41Bad.p41_target\n#print axioms P41Bad.d40_p41_growth\n",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "b3e5717ee344fa09976aecb2a25e2369edf53ba20940f2dea986a1ce6f6c160a",
+          "document_version": 3,
+          "elapsed_seconds": 0.21608060000289697,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Variable name `h₀` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+              "line": 23
+            },
+            {
+              "severity": 3,
+              "message": "P41Bad.p41_target : ∀ (n : ℕ), 0 < n → 9 ∣ 10 ^ n - 1",
+              "line": 30
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, Quot.sound]",
+              "line": 31
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.d40_p41_growth' depends on axioms: [propext]",
+              "line": 32
+            }
+          ]
+        }
+      ]
+    },
+    "p138": {
+      "imports": [
+        "Architect",
+        "Mathlib"
+      ],
+      "startup_seconds": 3.6054011000014725,
+      "shutdown_seconds": 0.09467910000239499,
+      "attempts": [
+        {
+          "method": "direct_bounded_decide",
+          "source": "import Architect\nimport Mathlib\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\n\nnamespace P138Bad\n\n@[blueprint \"thm:p138bad-target\"]\ntheorem p138_target (a : ℕ) (h₀ : a = (∑ k ∈ (Nat.divisors 500), k)) : ∑ k ∈ Finset.filter (λ x => Nat.Prime x) (Nat.divisors a), k = 25 := by\n  subst a\n  decide\n\nend P138Bad\n\n#check (P138Bad.p138_target : ∀ a : ℕ, a = (∑ k ∈ Nat.divisors 500, k) → (∑ k ∈ Finset.filter (fun x => Nat.Prime x) (Nat.divisors a), k) = 25)\n#print axioms P138Bad.p138_target\n",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "1b7d9aa6bb14153cc6847c56823aadc41cfbf9530faf521afb8b54e1c0097b13",
+          "document_version": 1,
+          "elapsed_seconds": 21.25012570000399,
+          "matching_publications": 5,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "P138Bad.p138_target : ∀ (a : ℕ), a = ∑ k ∈ Nat.divisors 500, k → ∑ k ∈ a.divisors with Nat.Prime k, k = 25",
+              "line": 16
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 17
+            },
+            {
+              "severity": 1,
+              "message": "maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information",
+              "line": 12
+            }
+          ]
+        },
+        {
+          "method": "ordinary_inline_arithmetic_split",
+          "source": "import Architect\nimport Mathlib\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\n\nnamespace P138Bad\n\n@[blueprint \"thm:p138bad-target\"]\ntheorem p138_target (a : ℕ) (h₀ : a = (∑ k ∈ (Nat.divisors 500), k)) : ∑ k ∈ Finset.filter (λ x => Nat.Prime x) (Nat.divisors a), k = 25 := by\n  have sum_divisors : (∑ k ∈ Nat.divisors 500, k) = 1092 := by decide\n  have value : a = 1092 := h₀.trans sum_divisors\n  subst a\n  decide\n\nend P138Bad\n\n#check (P138Bad.p138_target : ∀ a : ℕ, a = (∑ k ∈ Nat.divisors 500, k) → (∑ k ∈ Finset.filter (fun x => Nat.Prime x) (Nat.divisors a), k) = 25)\n#print axioms P138Bad.p138_target\n",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "0953c66e3831890b49e93d77fed8e8ba21782734d028b6871547577737bee3ae",
+          "document_version": 2,
+          "elapsed_seconds": 0.21075750000454718,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "P138Bad.p138_target : ∀ (a : ℕ), a = ∑ k ∈ Nat.divisors 500, k → ∑ k ∈ a.divisors with Nat.Prime k, k = 25",
+              "line": 18
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 19
+            }
+          ]
+        },
+        {
+          "method": "ordinary_one_auxiliary_split",
+          "source": "import Architect\nimport Mathlib\n\nset_option warningAsError true\nset_option maxHeartbeats 200000\n\nnamespace P138Bad\n\n@[blueprint \"lem:p138bad-d40-control\"]\ntheorem d40_p138_sum : (∑ k ∈ Nat.divisors 500, k) = 1092 := by decide\n\n@[blueprint \"thm:p138bad-target\" (proofUses := [d40_p138_sum])]\ntheorem p138_target (a : ℕ) (h₀ : a = (∑ k ∈ (Nat.divisors 500), k)) : ∑ k ∈ Finset.filter (λ x => Nat.Prime x) (Nat.divisors a), k = 25 := by\n  have value : a = 1092 := h₀.trans d40_p138_sum\n  subst a\n  decide\n\nend P138Bad\n\n#check (P138Bad.p138_target : ∀ a : ℕ, a = (∑ k ∈ Nat.divisors 500, k) → (∑ k ∈ Finset.filter (fun x => Nat.Prime x) (Nat.divisors a), k) = 25)\n#print axioms P138Bad.p138_target\n#print axioms P138Bad.d40_p138_sum\n",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "42d6526b68110f255c67609004800a3dfbec135d54284e66027d8fdc59953f34",
+          "document_version": 3,
+          "elapsed_seconds": 0.22130079999624286,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information",
+              "line": 16
+            },
+            {
+              "severity": 3,
+              "message": "P138Bad.p138_target : ∀ (a : ℕ), a = ∑ k ∈ Nat.divisors 500, k → ∑ k ∈ a.divisors with Nat.Prime k, k = 25",
+              "line": 20
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 21
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.d40_p138_sum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+              "line": 22
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "new_model_tokens": 0,
+  "gpu_seconds": 0
+}

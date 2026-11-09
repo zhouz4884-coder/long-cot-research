@@ -1,0 +1,117 @@
+{
+  "status": "THREE_EXACT_ARCHIVED_NEGATIVES_REVIEWED",
+  "source_slot_receipt_sha256": "ed36404c9cdf405cc6b0ccb71daf0b915d6bfed6691aa21db04168ff9fa3dc1c",
+  "author_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "scope": "Exact known source checks and diagnostics offline, disjoint from authoring slots.",
+  "ordering": "DeepSeek before Qwen, typed before patch before rewrite, then step number and member path.",
+  "cases": {
+    "p14": {
+      "member": "data/llm_calls/p14_monolithic_toolsrc_v0/typed/step02.check.lean",
+      "source_sha256": "85df13c04b2d38bacfb4faa15b0f5322564f38f8a9167931428066c883722335",
+      "source_shape_rejections": [],
+      "expected_axioms": [
+        "propext",
+        "sorryAx"
+      ],
+      "author_exit_code": 1,
+      "diagnostic_sha256": "61622550a0ef65d01958bf35b24ea3642b845f0af78d9355a89a295d24e16e56",
+      "author_module_sha256": "f11be9c7e452c4ffb32c51101d847787bce24497854b4d9b17a41968b61b418c",
+      "target": "P14Bad.p14_target",
+      "rank": [
+        0,
+        0,
+        2
+      ],
+      "reviewed_source": "p14_archived_exact_failure.lean",
+      "offline_original_diagnostics": "p14_archived_errors.offline.json",
+      "offline_original_diagnostics_sha256": "6058fdce1913a70a9c40fec14dca62ae4845ef402b8cd12a7c1a39217922cf91",
+      "original_error_classes": [
+        "INTRO_NO_BINDER"
+      ],
+      "candidate_count": 40,
+      "shape_rejection_counts": {
+        "EXACT_TARGET_HEADER_DIFFERS": 5,
+        "IMPORTS_OR_NAMESPACE_DIFFER": 5,
+        "UNREVIEWED_TOP_LEVEL_FORM": 1
+      }
+    },
+    "p41": {
+      "member": "data/llm_calls/p41_monolithic_toolsrc_v0/typed/step01.check.lean",
+      "source_sha256": "1fd1e6b5451f5e83328a64dc7b5c213f73e7badd29309157a3d4ca01b7488e00",
+      "source_shape_rejections": [],
+      "expected_axioms": [
+        "propext",
+        "sorryAx"
+      ],
+      "author_exit_code": 1,
+      "diagnostic_sha256": "3d8efaf852af5fa4b8ce2f0c58c0036e84d04509e0ab2e553ee9ac2e3ae90d59",
+      "author_module_sha256": "fcc552bd67ee0427e6648275b1d44f467f8b2e83ce0fed44a744ab6e4b3d1e72",
+      "target": "P41Bad.p41_target",
+      "rank": [
+        0,
+        0,
+        1
+      ],
+      "reviewed_source": "p41_archived_exact_failure.lean",
+      "offline_original_diagnostics": "p41_archived_errors.offline.json",
+      "offline_original_diagnostics_sha256": "44e4f4c2319cd6275b4f5ac6138df4ae4af05bfdb51df04a9d498358ad97759d",
+      "original_error_classes": [
+        "SYNTAX_EXPECTED_TOKEN",
+        "INSTANCE_SYNTHESIS",
+        "INSTANCE_SYNTHESIS",
+        "MISSING_CASES",
+        "UNSOLVED_GOALS"
+      ],
+      "candidate_count": 40,
+      "shape_rejection_counts": {
+        "UNREVIEWED_OR_ADMITTED_CODE": 3,
+        "UNREVIEWED_TOP_LEVEL_FORM": 5,
+        "NONSTANDARD_AUDIT_SUFFIX": 3,
+        "IMPORTS_OR_NAMESPACE_DIFFER": 2
+      }
+    },
+    "p138": {
+      "member": "data/llm_calls/p138_monolithic_toolsrc_v0/typed/step01.check.lean",
+      "source_sha256": "21ab05366f842aee1c357f318fc3fe9d4d30a0af057078adf33c156250ab1628",
+      "source_shape_rejections": [],
+      "expected_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "author_exit_code": 1,
+      "diagnostic_sha256": "7e502d2746f9ef815235c92552f4c43ba57594ee083736b704578383473b5d12",
+      "author_module_sha256": "026da2c28517c62d40a17c85b395eb9cf752e15ab5370785f6e82c89b24af68e",
+      "target": "P138Bad.p138_target",
+      "rank": [
+        0,
+        0,
+        1
+      ],
+      "reviewed_source": "p138_archived_exact_failure.lean",
+      "offline_original_diagnostics": "p138_archived_errors.offline.json",
+      "offline_original_diagnostics_sha256": "3aa14b06008e8518afa0a44fde62da8129e998318380b33b5034e465551d4d6b",
+      "original_error_classes": [
+        "UNSOLVED_GOALS",
+        "UNKNOWN_IDENTIFIER",
+        "UNSOLVED_GOALS",
+        "IMPLICIT_ARGUMENT",
+        "HAVE_TYPE_INFERENCE",
+        "UNSOLVED_GOALS"
+      ],
+      "candidate_count": 33,
+      "shape_rejection_counts": {
+        "UNREVIEWED_TOP_LEVEL_FORM": 2,
+        "NONSTANDARD_AUDIT_SUFFIX": 2,
+        "UNREVIEWED_OR_ADMITTED_CODE": 6
+      }
+    }
+  },
+  "model_generation": false,
+  "local_execution_performed_by_prepare": false
+}

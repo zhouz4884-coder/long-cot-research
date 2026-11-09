@@ -1,0 +1,29 @@
+{
+  "status": "FROZEN_BEFORE_APPROVED_UNRESOLVED_EXECUTION",
+  "runtime": "D39 exact author Lean 4.31.0 and its preserved Mathlib and Architect imports",
+  "scope": "CPU proof-body-only comparator. Original import order, prelude, theorem header and separately approved support are fixed per reviewed fixture. No archived tactics, upstream reference body, target identity change or new imports.",
+  "slot_marker": "  d40_slot\n",
+  "max_heartbeats_per_lean_proof_declaration": 200000,
+  "request_timeout_seconds": 120,
+  "accepted_axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "methods": [
+    "ExactLibrary",
+    "ApplyLibrary",
+    "NormalAutomationEachTacticSeparately",
+    "GenericDvdPowSignatureAssembly",
+    "InductionThenNormalAutomationWhenNamedNatBinderIsPresent",
+    "FiniteGroundAfterSubstitutionWhenDivisorsIsPresent"
+  ],
+  "normal_automation_order": [
+    "assumption", "rfl", "simp_all", "norm_num", "omega", "ring", "linarith", "nlinarith",
+    "decide", "solve_by_elim", "aesop", "grind"
+  ],
+  "generic_dvd_pow_signature_candidates": [
+    "sub_dvd_pow_sub_pow", "Nat.sub_dvd_pow_sub_pow", "Nat.sub_one_dvd_pow_sub_one",
+    "Int.ModEq.dvd", "Int.ModEq.pow", "Nat.modEq_iff_dvd'", "Nat.ModEq.pow"
+  ],
+  "acceptance": "Same reviewed statement through a source-hash-bound proof slot. Require the exact version diagnostic barrier, named axiom closure with approved axioms only, and no Lean errors. Imports-only absent-target check is required separately for an unresolved benchmark claim. Reject unapproved code, placeholders, sorryAx and foreign axioms.",
+  "trusted_control_correction": "V1/V2 strict-warning controls showed that unchosen branches in built-in tactics trigger the unreachable and unused tactic linters. V3 submits individual fixed strategies, preserves all strict warnings, and still requires named axiom closure. Change made before any unresolved execution.",
+  "accounting": "Count resident startup, per proof submission, final replay and shutdown separately. Record the first fully accepted proof and all attempted actions. A failed tactic or a library name unavailable in fixed imports is not proof of unsatisfiability. Same-process wall clock is not GPU time.",
+  "controls": "Only independently written trusted propositions during baseline setup. Known competition proof artifacts are not baseline inputs. Finite propositions may use kernel decide, not native_decide under the stated axiom policy."
+}

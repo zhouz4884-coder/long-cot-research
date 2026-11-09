@@ -1,0 +1,146 @@
+{
+  "status": "STATIC_ACCEPTED_SOURCE_OVERLAP_ANCHORS",
+  "scope": "Read-only comparison of locally kernel-accepted CPU controls against pinned visible archive proposals and their recorded diagnostics. Exact token comparison ignores layout/comments but does not decide mathematical equivalence. Hidden model reasoning and unbound proof states remain unknown. No upstream complete proof included and no new Lean, model or GPU execution.",
+  "inputs_sha256": {
+    "support_ledger.json": "6f38d696f08a03f9f4226e31aac152b117e9f0f58ebbc1ddc51fe38c38e0623c",
+    "expert_split_control_results.json": "549010cbbf88cb1d2c05487bedff01bed2e918553f5047fda73abb2103b815a7",
+    "expert_split_recheck_results.json": "0f0c6c06f3af6ff259205939a6d6c0a11c6b900cd68ddb6e19b2f25be7bcb457"
+  },
+  "accepted_source_fingerprints": [
+    {
+      "state_id": "p14_bad.state0",
+      "target_id": "induction_11div10tonmn1ton",
+      "inline_source_sha256": "a48c7dfbbd4e184c14be46c13a813a19f3d52e6fefb88a02554e8141ef139a87",
+      "split_source_sha256": "ff75365a6f4bcf00aa060c87eb6b23c26a116e0286b57efc61f29645feadc1ed",
+      "accepted_split_auxiliary_statement_tokens_sha256": "762c0f067e3d0d5f0f30d11004a22e422603fad065d9139312c0ca7fca45439a",
+      "accepted_split_auxiliary_proof_tokens_sha256": "57ed6bd378ada312aafcb767c16353bf4e477ca8c22c6d54e57234982060e0da",
+      "matching_visible_tokens_for_auxiliary_statement_or_proof": [],
+      "complete_target_proof_body_visible_exact_match": false,
+      "interpretation": "The factor identity already occurs up to bound-variable spelling or extra parentheses. Visible proposals also use it in induction. This is strong overlap in proof logic despite different accepted source tokens."
+    },
+    {
+      "state_id": "p41_bad.state0",
+      "target_id": "induction_divisibility_9div10tonm1",
+      "inline_source_sha256": "209383a445ef877b67681db44d619d699714b6ed1e3dbee28f12c259cdad24af",
+      "split_source_sha256": "6f4078a69095e3f264521e2c276aa18723ba92a2ecec19f6e973f21ccc9e107b",
+      "accepted_split_auxiliary_statement_tokens_sha256": "44dfd3f78181d146ffa2fcfc64bb7d0bc2eba041f3835fe662317f6cb3bb0845",
+      "accepted_split_auxiliary_proof_tokens_sha256": "9b73afdd071d3f8dfb96b37118535a32e2edf1c3cac907a83a067e02749c510f",
+      "matching_visible_tokens_for_auxiliary_statement_or_proof": [],
+      "complete_target_proof_body_visible_exact_match": false,
+      "interpretation": "The exact named existential-growth helper is not observed under its accepted tokens. The archive explicitly contains the witness equality and recurrence and an alternate ModEq formulation. The retry's explicit use of the positive binder does not make this mathematical recurrence new."
+    },
+    {
+      "state_id": "p138_bad.state0",
+      "target_id": "mathd_numbertheory_427",
+      "direct_source_sha256": "f66a9e61ed8d1b0442a61bf37f44fca95ab8b0b5642b748dae7b3fc77a02be18",
+      "split_source_sha256": "d642168911b8a087f047f037c5bd014381b4c44ff3f7e15c9ffd7c4d4f7b46a7",
+      "accepted_split_auxiliary_statement_tokens_sha256": "ec53af38a729e96a08c72e3e6e0d559167fdfb5323f520101e5cfb998811d817",
+      "accepted_split_auxiliary_proof_tokens_sha256": "4c02ae4f52799b88897ad8347d85ad6ac9c57a5ab224b6a607e1d34fc9367b",
+      "matching_visible_tokens_for_auxiliary_statement": [],
+      "matching_visible_tokens_for_auxiliary_proof": ["provider", "visible_prestate", "materialized_check"],
+      "complete_target_proof_body_visible_exact_match": false,
+      "archived_delivered_steps_with_same_sum_fact_and_decide_together": 8,
+      "interpretation": "The sum fact and its decide proof already co-occurred in visible proposals. The accepted CPU retry changed maxRecDepth to 4096. Two repeated archived candidates below show that the same arithmetic strategy hit a recursion limit."
+    }
+  ],
+  "archive_anchors": [
+    {
+      "state_id": "p14_bad.state0",
+      "model": "qwen/qwen3.6-flash",
+      "interface": "rewrite",
+      "step": 1,
+      "step_member": "data/llm_calls/p14_monolithic_rwsrcq_v0/typed/step01.json",
+      "step_sha256": "4209bc4476ae0a1bb3ff1a7e45167d16d5dc8fc3fd81bb383e023153c9e05efa",
+      "check_source_sha256": "3a2423d5409678ae98ba90151d7d61b52ddaefaa655ffef85e5308633717657b",
+      "check_log_sha256": "93a19283d5cf92a2d956c5d254a0c8bc14a030196a8398c4da9de2c9800c3df8",
+      "comparison": "SAME_FACTOR_RELATION_EXTRA_PARENTHESES",
+      "visible_anchor": "p14_identity has the accepted factor relation with an extra pair of parentheses around the final power. The target step invokes the identity to lift divisibility.",
+      "compiler_category": "UNKNOWN_IDENTIFIER_DVD_ADD",
+      "exit_code": 1
+    },
+    {
+      "state_id": "p14_bad.state0",
+      "model": "qwen/qwen3.6-flash",
+      "interface": "typed",
+      "step": 1,
+      "step_member": "data/llm_calls/p14_monolithic_toolsrcq_v0/typed/step01.json",
+      "step_sha256": "eed62343efd70e4a0148a00fb777ca835fafc92ce7dab49a324c6af74a85adc7",
+      "check_source_sha256": "85bbd635e83a012cbbbb2ab5d9c545dcbfbb48555cbbf48df09641761891034b",
+      "check_log_sha256": "78d8b200a988718c3b8a80a3e0d68a9fa4a36e3a02a89210a7cf1c483169d52b",
+      "comparison": "SAME_FACTOR_RELATION_BINDER_RENAMED",
+      "visible_anchor": "p14_pow_id renames the exponent binder to k and uses pow_succ plus ring. The full calc token sequence differs from the accepted two-tactic auxiliary body.",
+      "compiler_category": "TYPE_MISMATCH_AND_SIMP_NO_PROGRESS",
+      "exit_code": 1
+    },
+    {
+      "state_id": "p14_bad.state0",
+      "model": "qwen/qwen3.6-flash",
+      "interface": "rewrite",
+      "step": 8,
+      "step_member": "data/llm_calls/p14_monolithic_rwsrcq_v0/typed/step08.json",
+      "step_sha256": "c769d515c13e3e205352c58d0efc564385799f925f5ace810c4354ba93b9c4ab",
+      "check_source_sha256": "606bf3b86b93fc893d1471ed208666ecfece725b2ef408f9c0c122fed957a101",
+      "check_log_sha256": "04cbd3f6b5d96ebb72339fdd018f9841b53a094a658e7e95013d54e7248f895f",
+      "comparison": "SAME_LIBRARY_IDENTIFIER_ALREADY_ATTEMPTED",
+      "visible_anchor": "sub_dvd_pow_sub_pow",
+      "compiler_category": "UNKNOWN_IDENTIFIER_SUB_DVD_POW_SUB_POW",
+      "exit_code": 1
+    },
+    {
+      "state_id": "p41_bad.state0",
+      "model": "deepseek/deepseek-v4-flash",
+      "interface": "rewrite",
+      "step": 3,
+      "step_member": "data/llm_calls/p41_monolithic_rwsrc_v0/typed/step03.json",
+      "step_sha256": "61521952c0931c2e31c2a29de372f06efefb3c40cb914f25cdc698e3c08e868b",
+      "check_source_sha256": "8d2190665f0cd21b53097d776ade98515246f7ae4dd980843e3f082bbf1c906b",
+      "check_log_sha256": "8197680a26df3573e22e42ed96cbf007a1d8add7768cd52fe0c8c5240c0fd328",
+      "comparison": "SAME_INDUCTION_WITNESS_RECURRENCE_DIFFERENT_HELPER_FORM",
+      "visible_anchor": "10 ^ m = 9 * k + 1 and 10 ^ (m + 1) - 1 = 9 * (10 * k + 1)",
+      "compiler_category": "UNKNOWN_TACTIC_AND_UNSOLVED_GOAL",
+      "exit_code": 1
+    },
+    {
+      "state_id": "p41_bad.state0",
+      "model": "deepseek/deepseek-v4-flash",
+      "interface": "typed",
+      "step": 3,
+      "step_member": "data/llm_calls/p41_monolithic_toolsrc_v0/typed/step03.json",
+      "step_sha256": "d46d90bf040a2ad6b6f146237cbe509ff8513d9f6b3c371ecb9a3991a386eaad",
+      "check_source_sha256": "bfe7a69ab8561f3c1d1420c640eb0a8630941aa34fdb7cf0d4b9152fe5061cd9",
+      "check_log_sha256": "925de94ea72c90712595bef0fe9826cf30205a5d9bc2dd48ad8a374ce23f8ade",
+      "comparison": "RELATED_MODULAR_EQUIVALENCE_ROUTE",
+      "visible_anchor": "Nat.ModEq.pow and (10 : ℕ) ^ n ≡ 1 [MOD 9]",
+      "compiler_category": "SYNTAX_AND_TYPE_ERRORS",
+      "exit_code": 1
+    },
+    {
+      "state_id": "p41_bad.state0",
+      "model": "deepseek/deepseek-v4-flash",
+      "interface": "rewrite",
+      "step": 6,
+      "step_member": "data/llm_calls/p41_monolithic_rwsrc_v0/typed/step06.json",
+      "step_sha256": "8367fe558ba036f081272af9307e17641d2495dbcf1ad292b0f7381c6ac4a5c6",
+      "check_source_sha256": "e90c706be626cc54d4ca1344300da79b685a7c3f7c0d128b721580f4e928b7e4",
+      "check_log_sha256": "6f6b82f58458b2482466e36c67764b9e164d5688f03aee2c3e4a6e1058971f55",
+      "comparison": "SAME_QUOTIENT_PLUS_ONE_PROPERTY_IN_DIFFERENT_FORM",
+      "visible_anchor": "10 ^ n = 9 * (10 ^ n / 9) + 1 under a positive-n binder",
+      "compiler_category": "REWRITE_FAILURE_CALC_TYPE_AND_UNSOLVED_GOALS",
+      "exit_code": 1
+    },
+    {
+      "state_id": "p138_bad.state0",
+      "model": "deepseek/deepseek-v4-flash",
+      "interface": "rewrite",
+      "step": 6,
+      "step_member": "data/llm_calls/p138_monolithic_rwsrc_v0/typed/step06.json",
+      "step_sha256": "1834707ce6674731360fdea6c055c0cc2fb04a67c1f2cdebe03483e953740680",
+      "check_source_sha256": "d79d4df79977e1c876cc1eed62b95ed319ddb49b35770c391aa6c3581685d437",
+      "check_log_sha256": "64f775e72dc0c60ce3304691964eb6e496b5a3f5c3c28c76bb02143bfc9c377e",
+      "comparison": "SAME_FINITE_SUM_FACT_AND_DECIDE_PROOF_VISIBLE_TOGETHER",
+      "visible_anchor": "Sum of divisors of 500 equals 1092, proposed with by decide. Step 8 repeats the identical materialized source.",
+      "compiler_category": "MAXIMUM_RECURSION_DEPTH",
+      "exit_code": 1
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "status": "PASS_EXACT_ARCHIVED_NEGATIVES_REPRODUCED",
+  "review_receipt_sha256": "f3be83588b932129259564fc6bcd222685a85a3c50e2eb47b5342dd1c5cb5156",
+  "author_runtime_smoke_sha256": "ca19818e10f7246a3f2259eb0f2341c33a47a9d55645c4aa8c325ceb7c17e2ff",
+  "author_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "scope": "Actual negative CPU replay only. Original and local detailed errors remain offline.",
+  "cases": {
+    "p14": {
+      "source_sha256": "85df13c04b2d38bacfb4faa15b0f5322564f38f8a9167931428066c883722335",
+      "immutable_target": "P14Bad.p14_target",
+      "original_returncode": 1,
+      "local_returncode": 1,
+      "original_lines_and_classes": [
+        [
+          11,
+          "INTRO_NO_BINDER"
+        ]
+      ],
+      "local_lines_and_classes": [
+        [
+          11,
+          "INTRO_NO_BINDER"
+        ]
+      ],
+      "all_messages_exact_equal": false,
+      "compiler_error_classes_and_lines_equal": true,
+      "expected_target_axioms": [
+        "propext",
+        "sorryAx"
+      ],
+      "local_target_axioms": [
+        "propext",
+        "sorryAx"
+      ],
+      "target_axiom_closure_equal": true,
+      "local_wall_seconds": 8.839005599998927,
+      "same_archived_failure_reproduced": true,
+      "kernel_proof_accepted": false
+    },
+    "p41": {
+      "source_sha256": "1fd1e6b5451f5e83328a64dc7b5c213f73e7badd29309157a3d4ca01b7488e00",
+      "immutable_target": "P41Bad.p41_target",
+      "original_returncode": 1,
+      "local_returncode": 1,
+      "original_lines_and_classes": [
+        [
+          10,
+          "SYNTAX_EXPECTED_TOKEN"
+        ],
+        [
+          10,
+          "INSTANCE_SYNTHESIS"
+        ],
+        [
+          10,
+          "INSTANCE_SYNTHESIS"
+        ],
+        [
+          10,
+          "MISSING_CASES"
+        ],
+        [
+          9,
+          "UNSOLVED_GOALS"
+        ]
+      ],
+      "local_lines_and_classes": [
+        [
+          10,
+          "SYNTAX_EXPECTED_TOKEN"
+        ],
+        [
+          10,
+          "INSTANCE_SYNTHESIS"
+        ],
+        [
+          10,
+          "INSTANCE_SYNTHESIS"
+        ],
+        [
+          10,
+          "MISSING_CASES"
+        ],
+        [
+          9,
+          "UNSOLVED_GOALS"
+        ]
+      ],
+      "all_messages_exact_equal": false,
+      "compiler_error_classes_and_lines_equal": true,
+      "expected_target_axioms": [
+        "propext",
+        "sorryAx"
+      ],
+      "local_target_axioms": [
+        "propext",
+        "sorryAx"
+      ],
+      "target_axiom_closure_equal": true,
+      "local_wall_seconds": 8.675126900001487,
+      "same_archived_failure_reproduced": true,
+      "kernel_proof_accepted": false
+    },
+    "p138": {
+      "source_sha256": "21ab05366f842aee1c357f318fc3fe9d4d30a0af057078adf33c156250ab1628",
+      "immutable_target": "P138Bad.p138_target",
+      "original_returncode": 1,
+      "local_returncode": 1,
+      "original_lines_and_classes": [
+        [
+          8,
+          "UNSOLVED_GOALS"
+        ],
+        [
+          13,
+          "UNKNOWN_IDENTIFIER"
+        ],
+        [
+          17,
+          "UNSOLVED_GOALS"
+        ],
+        [
+          23,
+          "IMPLICIT_ARGUMENT"
+        ],
+        [
+          23,
+          "HAVE_TYPE_INFERENCE"
+        ],
+        [
+          21,
+          "UNSOLVED_GOALS"
+        ]
+      ],
+      "local_lines_and_classes": [
+        [
+          8,
+          "UNSOLVED_GOALS"
+        ],
+        [
+          13,
+          "UNKNOWN_IDENTIFIER"
+        ],
+        [
+          17,
+          "UNSOLVED_GOALS"
+        ],
+        [
+          23,
+          "IMPLICIT_ARGUMENT"
+        ],
+        [
+          23,
+          "HAVE_TYPE_INFERENCE"
+        ],
+        [
+          21,
+          "UNSOLVED_GOALS"
+        ]
+      ],
+      "all_messages_exact_equal": true,
+      "compiler_error_classes_and_lines_equal": true,
+      "expected_target_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "local_target_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "target_axiom_closure_equal": true,
+      "local_wall_seconds": 19.969187599999714,
+      "same_archived_failure_reproduced": true,
+      "kernel_proof_accepted": false
+    }
+  },
+  "model_generation": false,
+  "gpu_seconds": 0
+}

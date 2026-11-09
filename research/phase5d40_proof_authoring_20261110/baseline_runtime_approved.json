@@ -1,0 +1,2354 @@
+{
+  "status": "COMPLETE_APPROVED_CPU_BASELINE",
+  "scope": "One fixed resident sequence in the author runtime. No model or GPU. CPU automation acts on exact reviewed proof slots.",
+  "source_receipt_sha256": "ed36404c9cdf405cc6b0ccb71daf0b915d6bfed6691aa21db04168ff9fa3dc1c",
+  "protocol_sha256": "42e3290aca95c3a309ffcd51570cbb1b086496f860d71def2393c4e06bdae8e0",
+  "environment": {
+    "d39_smoke_sha256": "ca19818e10f7246a3f2259eb0f2341c33a47a9d55645c4aa8c325ceb7c17e2ff",
+    "d39_resident_source_sha256": "774e55f75f0bacbcbaa7d9ac5090dcfd353ab41f215429383e3ef83027b97a9d",
+    "lean": "Lean (version 4.31.0, x86_64-w64-windows-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+    "lake": "Lake version 5.0.0-src+68218e8 (Lean version 4.31.0)",
+    "lean_sha256": "9b216deb50d37c32c829d1efaaa5bafd5560417d382df35a815489e31a31593f",
+    "lake_sha256": "a5be0113af1c08ba678c1fad07594e1c5de6b871fe0c4144da2998488eba88a1",
+    "cwd": "outputs/d39_blueprintrepair_954edd3/BlueprintRepair",
+    "source": {
+      "url": "https://github.com/Karifannaa/BlueprintRepair.git",
+      "commit": "954edd366a0d1474ecfebe418d4cac14aaf8c6bf",
+      "tree": "50e8742e40899598024074816933e06b7e992cae",
+      "subtree": "BlueprintRepair",
+      "subtree_git_sha1": "dcbd16eb1acb227965f3ec346254465c6b499c21",
+      "verified_materialized_blobs": 939,
+      "archive_sha256": "d1a81a9e9d7a6e461aefa966fda06fc5a3b40381899ac80e5d2b462b9f9ea850",
+      "archive_bytes": 1710080
+    },
+    "package_commits": {
+      "mathlib": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+      "LeanArchitect": "f38c848196b0467e7b9dcc3d129a866b4051c23c",
+      "plausible": "63045536fe95024e6c18fc7b48e03f506701c5bc",
+      "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "importGraph": "5c7542ed018c78194f1e2b903eaf6a792b74c03d",
+      "proofwidgets": "24b0d9dc081c5423f8eec7e866c441e5184f29d9",
+      "aesop": "e3cb2f741431ce31bf73549fb52316a57368b06f",
+      "Qq": "f46324995fca5f0483b742e4eb4daec7f4ee50d2",
+      "batteries": "fa08db58b30eb033edcdab331bba000827f9f785",
+      "Cli": "92564e5770e4d09f2d86dfbf8ada1e9c715b384c"
+    },
+    "built_imports": {
+      ".lake/packages/mathlib/.lake/build/lib/lean/Mathlib.olean": {
+        "bytes": 755136,
+        "sha256": "45522115b8ff55410b8bcf3f48c8872302eacce07dec01c09ffe2c6f64062807"
+      },
+      ".lake/packages/LeanArchitect/.lake/build/lib/lean/Architect.olean": {
+        "bytes": 2312,
+        "sha256": "12b11d43c4b54412560a49d9d20a1583a09724721d69f40915f2bea2aea9df64"
+      }
+    },
+    "cache": {
+      "packed_count": 8542,
+      "packed_bytes": 432264798,
+      "sha256_ordered_path_size_hash_lines": "101959261c0f56313baaf01dd6f1f826fed480ae1c1a5c0d665754a0bc70e58a"
+    }
+  },
+  "max_heartbeats": 200000,
+  "resident_startup_seconds": 1.8974415999982739,
+  "resident_shutdown_seconds": 0.10241430000314722,
+  "resident_sequence_total_wall_seconds": 72.11489879999863,
+  "cases": {
+    "p14": {
+      "target": "P14Bad.p14_target",
+      "scope": "Same imports and theorem header; proof body only",
+      "rendered_template_sha256": "3f83dd28ff27bedb2600e8bacb9fbc337f96d1a446978097bb8648628ec133a0",
+      "target_header_sha256": "3be2f154a194a9519e983347b9234a19afbcd0a3f35cb0bf2ae37b8b797355d4",
+      "original_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ],
+      "absence_control": {
+        "status": "REJECTED",
+        "axioms": {},
+        "source_sha256": "ef48c93b98cb89da7c78f6f4a2a7f83e4c283e33991221f9e06f9c729ad79782",
+        "document_version": 1,
+        "elapsed_seconds": 8.70904850000079,
+        "matching_publications": 3,
+        "messages": [
+          {
+            "severity": 1,
+            "message": "Unknown identifier `P14Bad.p14_target`",
+            "line": 7
+          }
+        ]
+      },
+      "signature_availability_probe": {
+        "status": "REJECTED",
+        "axioms": {},
+        "source_sha256": "40a4cba60e7d2e9dc9e2ccaa0e6e158845d8f41b1d999cac28b79cfd7e6ca0a8",
+        "document_version": 2,
+        "elapsed_seconds": 0.20466400000441354,
+        "matching_publications": 1,
+        "messages": [
+          {
+            "severity": 1,
+            "message": "Unknown identifier `sub_dvd_pow_sub_pow`",
+            "line": 7
+          },
+          {
+            "severity": 1,
+            "message": "Unknown constant `Nat.sub_dvd_pow_sub_pow`",
+            "line": 8
+          },
+          {
+            "severity": 1,
+            "message": "Unknown constant `Nat.sub_one_dvd_pow_sub_one`",
+            "line": 9
+          },
+          {
+            "severity": 1,
+            "message": "Unknown constant `Int.ModEq.dvd`",
+            "line": 10
+          },
+          {
+            "severity": 1,
+            "message": "Unknown constant `Int.ModEq.pow`",
+            "line": 11
+          },
+          {
+            "severity": 1,
+            "message": "Unknown constant `Nat.modEq_iff_dvd'`",
+            "line": 12
+          },
+          {
+            "severity": 1,
+            "message": "Unknown constant `Nat.ModEq.pow`",
+            "line": 13
+          }
+        ]
+      },
+      "trials": [
+        {
+          "method": "ExactLibrary",
+          "proof_body_sha256": "a4bdce4a8d53514299801fcd496ef743e72a3082a00dee886bf8b1323dc322a3",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "f34cbaa03dc9f44b60fcc74d7d6a5376aedf72fabc91bbb9a0fe1c0d748311f3",
+          "document_version": 3,
+          "elapsed_seconds": 0.9015875000040978,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "`exact?` could not close the goal. Try `apply?` to see partial suggestions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "ApplyLibrary",
+          "proof_body_sha256": "f56a3478dec8737c465b0c980e8b4b2ebfd225fab6227614bbdeedbf7f6720cb",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "0698406035c2480b997d3883447f1f12cd1e2a4356695d0b4c36bef2caeab751",
+          "document_version": 4,
+          "elapsed_seconds": 0.2949099000034039,
+          "matching_publications": 4,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_self_sub_of_fmod_eq ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n).fmod 11 = (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_sub_self_of_tmod_eq ?_\n  -- Remaining subgoals:\n  -- ⊢ ((-1) ^ n).tmod 11 = 10 ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_sub_self_of_emod_eq ?_\n  -- Remaining subgoals:\n  -- ⊢ (-1) ^ n % 11 = 10 ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_sub_self_of_fmod_eq ?_\n  -- Remaining subgoals:\n  -- ⊢ ((-1) ^ n).fmod 11 = 10 ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_self_sub_of_tmod_eq ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n).tmod 11 = (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_self_sub_of_emod_eq ?_\n  -- Remaining subgoals:\n  -- ⊢ 10 ^ n % 11 = (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_sub ?_ ?_\n  -- Remaining subgoals:\n  -- ⊢ 11 ∣ 10 ^ n\n  -- ⊢ 11 ∣ (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.natAbs_dvd_natAbs.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ Int.natAbs 11 ∣ (10 ^ n - (-1) ^ n).natAbs",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.neg_dvd.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ -11 ∣ 10 ^ n - (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_of_emod_eq_zero ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n - (-1) ^ n) % 11 = 0",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Int.dvd_trans ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_neg.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ 11 ∣ -(10 ^ n - (-1) ^ n)",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_iff_emod_eq_zero.mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n - (-1) ^ n) % 11 = 0",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Int.dvd_mul_self_add.mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Int.dvd_of_mul_dvd_mul_right (fun a => ?_) ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Int.dvd_add_mul_self.mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Int.dvd_iff_dvd_of_dvd_add ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Int.dvd_iff_dvd_of_dvd_add ?_).mpr ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Int.mul_dvd_mul_iff_right fun a => ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Int.dvd_iff_dvd_of_dvd_sub ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Int.dvd_iff_dvd_of_dvd_sub ?_).mpr ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Int.dvd_of_mul_dvd_mul_left (fun a => ?_) ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Int.dvd_add_right ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.natAbs_dvd.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ ↑(Int.natAbs 11) ∣ 10 ^ n - (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_of_fmod_eq_zero ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n - (-1) ^ n).fmod 11 = 0",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_iff_fmod_eq_zero.mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n - (-1) ^ n).fmod 11 = 0",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Int.dvd_self_mul_add.mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_iff_tmod_eq_zero.mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n - (-1) ^ n).tmod 11 = 0",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_of_tmod_eq_zero ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n - (-1) ^ n).tmod 11 = 0",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.dvd_natAbs.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ 11 ∣ ↑(10 ^ n - (-1) ^ n).natAbs",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Int.mul_dvd_mul_iff_left fun a => ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Int.dvd_add_left ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Int.dvd_add_self_mul.mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine (Int.lcm_eq_right_iff_dvd ?_).mp ?_\n  -- Remaining subgoals:\n  -- ⊢ 0 ≤ 10 ^ n - (-1) ^ n\n  -- ⊢ ↑(Int.lcm 11 (10 ^ n - (-1) ^ n)) = 10 ^ n - (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.gcd_eq_natAbs_left_iff_dvd.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ Int.gcd 11 (10 ^ n - (-1) ^ n) = Int.natAbs 11",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.lcm_eq_natAbs_right_iff_dvd.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ Int.lcm 11 (10 ^ n - (-1) ^ n) = (10 ^ n - (-1) ^ n).natAbs",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine (Int.gcd_eq_right_iff_dvd ?_).mp ?_\n  -- Remaining subgoals:\n  -- ⊢ 0 ≤ 11\n  -- ⊢ ↑((10 ^ n - (-1) ^ n).gcd 11) = 11",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.gcd_eq_natAbs_right_iff_dvd.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n - (-1) ^ n).gcd 11 = Int.natAbs 11",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Int.pow_dvd_pow_iff fun a => ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine (Int.gcd_eq_left_iff_dvd ?_).mp ?_\n  -- Remaining subgoals:\n  -- ⊢ 0 ≤ 11\n  -- ⊢ ↑(Int.gcd 11 (10 ^ n - (-1) ^ n)) = 11",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.lcm_eq_natAbs_left_iff_dvd.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n - (-1) ^ n).lcm 11 = (10 ^ n - (-1) ^ n).natAbs",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine (Int.lcm_eq_left_iff_dvd ?_).mp ?_\n  -- Remaining subgoals:\n  -- ⊢ 0 ≤ 10 ^ n - (-1) ^ n\n  -- ⊢ ↑((10 ^ n - (-1) ^ n).lcm 11) = 10 ^ n - (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Int.dvd_of_mul_dvd ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Nat.ToInt.of_dvd ?_ ?_ 11 (10 ^ n - (-1) ^ n) ?_ ?_ ?_\n  -- Remaining subgoals:\n  -- ⊢ ℕ\n  -- ⊢ ℕ\n  -- ⊢ ↑?_ = 11\n  -- ⊢ ↑?_ = 10 ^ n - (-1) ^ n\n  -- ⊢ ?_ ∣ ?_",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine (Rat.den_div_intCast_eq_one_iff (10 ^ n - (-1) ^ n) 11 ?_).mp ?_\n  -- Remaining subgoals:\n  -- ⊢ 11 ≠ 0\n  -- ⊢ (↑(10 ^ n - (-1) ^ n) / ↑11).den = 1",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Int.dvd_of_dvd_mul_right_of_gcd_one ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Int.dvd_of_dvd_mul_left_of_gcd_one ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine dvd_of_mul_right_dvd ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine dvd_of_eq ?_\n  -- Remaining subgoals:\n  -- ⊢ 11 = 10 ^ n - (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine dvd_trans ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Dvd.intro ?_ ?_\n  -- Remaining subgoals:\n  -- ⊢ ℤ\n  -- ⊢ 11 * ?_ = 10 ^ n - (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine dvd_of_mul_right_eq ?_ ?_\n  -- Remaining subgoals:\n  -- ⊢ ℤ\n  -- ⊢ 11 * ?_ = 10 ^ n - (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Dvd.intro_left ?_ ?_\n  -- Remaining subgoals:\n  -- ⊢ ℤ\n  -- ⊢ ?_ * 11 = 10 ^ n - (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine dvd_of_mul_left_dvd ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine dvd_of_mul_left_eq ?_ ?_\n  -- Remaining subgoals:\n  -- ⊢ ℤ\n  -- ⊢ ?_ * 11 = 10 ^ n - (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Eq.dvd ?_\n  -- Remaining subgoals:\n  -- ⊢ 11 = 10 ^ n - (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine dvd_iff_exists_eq_mul_right.mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ ∃ c, 10 ^ n - (-1) ^ n = 11 * c",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (IsLeftRegular.dvd_cancel_left fun ⦃a₁⦄ => ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine dvd_iff_exists_eq_mul_left.mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ ∃ c, 10 ^ n - (-1) ^ n = c * 11",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Dvd.dvd.trans ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine dvd_def.mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ ∃ c, 10 ^ n - (-1) ^ n = 11 * c",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine IsUnit.dvd ?_\n  -- Remaining subgoals:\n  -- ⊢ IsUnit 11",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine IsRelPrime.dvd_of_dvd_mul_left_of_isPrimal ?_ ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine IsRelPrime.dvd_of_dvd_mul_right_of_isPrimal ?_ ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine IsRelPrime.dvd_of_dvd_mul_left ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Units.mul_left_dvd.mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Units.dvd_mul_left.mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (IsUnit.dvd_mul_right ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Units.mul_right_dvd.mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine IsRelPrime.dvd_of_dvd_mul_right ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Units.dvd_mul_right.mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (IsUnit.dvd_mul_left ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (IsUnit.mul_right_dvd ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (IsUnit.mul_left_dvd ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (mul_dvd_mul_iff_right fun a => ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (mul_dvd_mul_iff_left fun a => ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 14
+            },
+            {
+              "severity": 1,
+              "message": "declaration uses `sorry`",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Normal:assumption",
+          "proof_body_sha256": "c081dd376ba93a530dd044cffc81e70953e86d86f7d0796dc26bc1597302573d",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "e98334697e8b54608529f98156ed8ee232eb919a39f4db081be5ced0dc28adf8",
+          "document_version": 5,
+          "elapsed_seconds": 0.21871770000143442,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Tactic `assumption` failed\n\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Normal:rfl",
+          "proof_body_sha256": "5a633da644c1afc6f5222be040e6a19d687c01104c0263cce32773e07376dfa8",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "afcd207abc062a1ebe34ded18fa11ce480a2cebcfa32bf3e5d93901ac654c722",
+          "document_version": 6,
+          "elapsed_seconds": 0.20446760000049835,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Tactic `rfl` failed: The left-hand side\n  11\nis not definitionally equal to the right-hand side\n  10 ^ n - (-1) ^ n\n\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Normal:simp_all",
+          "proof_body_sha256": "770a776fdf57bd2930634d5176197b90f459fb4a0a757471ffc33c700413d7a2",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "2e6c02de5abf63ed9399c4f11e4387c1b2fdfa6b4322d4c5cd7cd66025500937",
+          "document_version": 7,
+          "elapsed_seconds": 0.20360000000073342,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "simp_all made no progress",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Normal:norm_num",
+          "proof_body_sha256": "7c64df8336d5a348b5f037e1d91facb19224fdef00e798d5c48c07a184602a59",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "51a3536c217565ea5047313c6552e90892977d9be2721d3f5436c405ff427e34",
+          "document_version": 8,
+          "elapsed_seconds": 0.21784499999921536,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "unsolved goals\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Normal:omega",
+          "proof_body_sha256": "304b4a90a76a1cbe4c112e074b30e75181f54df43d60f883597457844293b341",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "8e96f2624a27413e5820b775b5006388265be6e0cbd23a30532df37c12ddd55b",
+          "document_version": 9,
+          "elapsed_seconds": 0.20534419999603415,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  1 ≤ a - b - 11*c ≤ 10\nwhere\n a := 10 ^ n\n b := (-1) ^ n\n c := (10 ^ n - (-1) ^ n) / 11",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Normal:ring",
+          "proof_body_sha256": "16b974583155fdcb11fb6832a37be09c18c7acecbfb352c25a35512bfd755a33",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "f3dc9369c26c649e2e9b9b15b92ea7cb875002a6d4fbebc646acdf14f3b4cc1a",
+          "document_version": 10,
+          "elapsed_seconds": 0.21845220000250265,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.",
+              "line": 14
+            },
+            {
+              "severity": 1,
+              "message": "unsolved goals\nn : ℕ\n⊢ 11 ∣ -(-1) ^ n + 10 ^ n",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Normal:linarith",
+          "proof_body_sha256": "2c587e2f140ae41533b8e0551e8c940d4f70fbd4b1f4245ea1c9efcde110c9af",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "e0b8b4a64188c0ead9385723d9aa123c6e0f804cb25e5a2d3391ce8eaa13efe8",
+          "document_version": 11,
+          "elapsed_seconds": 0.20646719999786,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "linarith failed to find a contradiction\nn : ℕ\n⊢ False\nfailed",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Normal:nlinarith",
+          "proof_body_sha256": "f9f5d00b0a74e8e0cad8b2e63a03758dfcfe52219e94c02f8a048c1045017681",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "436678ad3da217df8e1f02cea205f392f499d9267684ef3b56c67f15fa585bd6",
+          "document_version": 12,
+          "elapsed_seconds": 0.2024371000006795,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "linarith failed to find a contradiction\nn : ℕ\n⊢ False\nfailed",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Normal:decide",
+          "proof_body_sha256": "5589aa5863c2d85622d06d651add002416e5513afdbb455666cdde01bb3e257d",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "35f6d80b9159154a2c0331a1f551ecb4a617451264fcb827053beb6d98d2f191",
+          "document_version": 13,
+          "elapsed_seconds": 0.20504480000090552,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Expected type must not contain free variables\n  11 ∣ 10 ^ n - (-1) ^ n\n\nHint: Use the `+revert` option to automatically clean up and revert free variables",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Normal:solve_by_elim",
+          "proof_body_sha256": "0604067b8067bb03f949137ca6632e496067de551e25d6bc27870abde56208a5",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "4d6fc87e92f0d08596cedde05d7eca3795f316dbbc3d0d991b939f8f19f90ba6",
+          "document_version": 14,
+          "elapsed_seconds": 0.20564349999767728,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "failed",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Normal:aesop",
+          "proof_body_sha256": "bf61abd9c8c94e02103733c96be27852844483acbf580158f224257e620356a8",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "36bd29e23916ef2528b7135c7aebc059b415f90b9991201d88559fb7e100057a",
+          "document_version": 15,
+          "elapsed_seconds": 0.40666610000334913,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "tactic 'aesop' failed, made no progress\nInitial goal:\n  n : ℕ\n  ⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Normal:grind",
+          "proof_body_sha256": "3026fac023c67598797c8c7da4ac6cf653f832b2c9de761d3922fb85ea086b1c",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "76456ab2228066c59c1f818cefbf87d3702e698eeb12add80971aa1c1ffa4996",
+          "document_version": 16,
+          "elapsed_seconds": 0.23007289999804925,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "`grind` failed\ncase grind\nn : ℕ\nh : ¬11 ∣ -1 * (-1) ^ n + 10 ^ n\n⊢ False\n[grind] Goal diagnostics\n  [facts] Asserted facts\n    [prop] ¬11 ∣ -1 * (-1) ^ n + 10 ^ n\n    [prop] -1 * ((-1 * (-1) ^ n + 10 ^ n) % 11) + 1 ≤ 0\n    [prop] (-1 * (-1) ^ n + 10 ^ n) % 11 + -10 ≤ 0\n    [prop] -1 * ((-1 * (-1) ^ n + 10 ^ n) % 11) ≤ 0\n    [prop] 11 * ((-1 * (-1) ^ n + 10 ^ n) / 11) + (-1 * (-1) ^ n + 10 ^ n) % 11 + (-1) ^ n + -1 * 10 ^ n = 0\n  [eqc] True propositions\n    [prop] (-1 * (-1) ^ n + 10 ^ n) % 11 + -10 ≤ 0\n    [prop] -1 * ((-1 * (-1) ^ n + 10 ^ n) % 11) + 1 ≤ 0\n    [prop] -1 * ((-1 * (-1) ^ n + 10 ^ n) % 11) ≤ 0\n  [eqc] False propositions\n    [prop] 11 ∣ -1 * (-1) ^ n + 10 ^ n\n  [eqc] Equivalence classes\n    [eqc] {0,\n        11 * ((-1 * (-1) ^ n + 10 ^ n) / 11) + (-1 * (-1) ^ n + 10 ^ n) % 11 + (-1) ^ n + -1 * 10 ^ n,\n        (-1) ^ n + -1 * 10 ^ n + (-1 * (-1) ^ n + 10 ^ n) % 11 + 11 * ((-1 * (-1) ^ n + 10 ^ n) / 11)}\n  [ematch] E-matching patterns\n    [thm] Nat.dvd_mul_left_of_dvd: [@Dvd.dvd `[ℕ] `[Nat.instDvd] #3 #2, @HMul.hMul `[ℕ] `[ℕ] `[ℕ] `[instHMul] #0 #2]\n    [thm] Nat.dvd_mul_right_of_dvd: [@Dvd.dvd `[ℕ] `[Nat.instDvd] #3 #2, @HMul.hMul `[ℕ] `[ℕ] `[ℕ] `[instHMul] #2 #0]\n    [thm] Nat.pow_pos: [@HPow.hPow `[ℕ] `[ℕ] `[ℕ] `[instHPow] #2 #1]\n    [thm] Nat.div_pow_of_pos: [@HPow.hPow `[ℕ] `[ℕ] `[ℕ] `[instHPow] #2 #1]\n  [cutsat] Assignment satisfying linear constraints\n    [assign] n := 0\n    [assign] 「(-1) ^ n」 := 0\n    [assign] 「10 ^ n」 := 1\n  [ring] Ring `ℤ`\n    [basis] Basis\n      [_] (-1) ^ n + -1 * 10 ^ n + (-1 * (-1) ^ n + 10 ^ n) % 11 + 11 * ((-1 * (-1) ^ n + 10 ^ n) / 11) = 0",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Signature:RingSubDvdPowSubPow",
+          "proof_body_sha256": "dbcfb38472735487a055856d7effa68e1624ebc73a02dbde453f18da392be4c6",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "397b7d77562b3d19e9bdd79df4251a05d869f82e7ec75198ed043f0d92ffd22c",
+          "document_version": 17,
+          "elapsed_seconds": 0.20917470000131289,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown identifier `sub_dvd_pow_sub_pow`",
+              "line": 14
+            },
+            {
+              "severity": 1,
+              "message": "unsolved goals\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 19
+            }
+          ]
+        },
+        {
+          "method": "Signature:NatSubDvdPowSubPow",
+          "proof_body_sha256": "82c2d7e7578570fd08ea411e9d8dd0e2c46e7ca7a8800c7356c32ecf662f66ef",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "407c8ab35ea742eee6521010ccda571bb565fef69bb623f2e0c0e1019b43d89f",
+          "document_version": 18,
+          "elapsed_seconds": 0.2034172000057879,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `Nat.sub_dvd_pow_sub_pow`",
+              "line": 14
+            },
+            {
+              "severity": 1,
+              "message": "unsolved goals\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 19
+            }
+          ]
+        },
+        {
+          "method": "Signature:NatSubOneDvdPowSubOne",
+          "proof_body_sha256": "6d2523d5ef7455198e345a0e0c8fa9e0a0d6576e6b1c9abe7799976d335c601b",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "4db302b405364040215b7f6cdbfa775b08ede97c1a51b313bd2f00c1d8525f22",
+          "document_version": 19,
+          "elapsed_seconds": 0.20579189999989467,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `Nat.sub_one_dvd_pow_sub_one`",
+              "line": 14
+            },
+            {
+              "severity": 1,
+              "message": "unsolved goals\nn : ℕ\n⊢ 11 ∣ 10 ^ n - (-1) ^ n",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 19
+            }
+          ]
+        },
+        {
+          "method": "Signature:IntModEqPower",
+          "proof_body_sha256": "bea5c2ad2332c67017a98ed2ca24df3569fee682c76b9fe5153064058c5b71a1",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "efe4b577b54316eecb54e88cbee4529537633b7192088cbaab93c058211b78d4",
+          "document_version": 20,
+          "elapsed_seconds": 0.20370959999854676,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `Int.ModEq.dvd`",
+              "line": 14
+            },
+            {
+              "severity": 1,
+              "message": "No goals to be solved",
+              "line": 15
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 20
+            }
+          ]
+        },
+        {
+          "method": "Induction:simp_pow",
+          "proof_body_sha256": "9d4735f47645038b5ab266342b851736c0845a44acc604ca4a2c769b9a213ddb",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "3928f1f00012d4493ec3635649262d965d356e4ffbcddfda7b9fe51c321fe8a7",
+          "document_version": 21,
+          "elapsed_seconds": 0.20908390000113286,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "unsolved goals\ncase succ\nn✝ : ℕ\na✝ : 11 ∣ 10 ^ n✝ - (-1) ^ n✝\n⊢ 11 ∣ 10 ^ n✝ * 10 + (-1) ^ n✝",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Induction:simp_pow_omega",
+          "proof_body_sha256": "43b8a582a91023391d020d6d176e3dc1cb1f32c7f6c9214bbfa33f9971fa5364",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "8eae799bb2b535c862953748b4c6c443f098fc4c45075027b972d7331e3ab27f",
+          "document_version": 22,
+          "elapsed_seconds": 0.20466460000170628,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, Quot.sound]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Induction:grind_pow",
+          "proof_body_sha256": "f79320720f03aed35b824559bdc9e392f3d60d1222a081d19b73e9c05665ed2d",
+          "status": "KERNEL_ACCEPTED",
+          "axioms": {
+            "P14Bad.p14_target": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          "source_sha256": "4ca867387d930cd8632dd5c764ab625bfcd0e13c6d06db4132f72f11ec29bbf5",
+          "document_version": 23,
+          "elapsed_seconds": 0.20465420000255108,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "'P14Bad.p14_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+              "line": 18
+            }
+          ]
+        }
+      ],
+      "accepted_actions": [
+        "Induction:grind_pow"
+      ],
+      "first_accepted_action": "Induction:grind_pow",
+      "first_accepted_action_ordinal": 21,
+      "proof_submission_wall_through_first_accept_seconds": 5.361751800017373,
+      "all_proof_submission_wall_seconds": 5.361751800017373
+    },
+    "p41": {
+      "target": "P41Bad.p41_target",
+      "scope": "Same imports and theorem header; proof body only",
+      "rendered_template_sha256": "6643fd2886a8ad3949ab51ad0d70934b18db8383529a5c870d7e2fd68d6658ac",
+      "target_header_sha256": "0e191f1246556b140e514270c7d06c9739e20fe2c5f998b2e008f0b5eeac27e6",
+      "original_imports": [
+        "Architect",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "absence_control": {
+        "status": "REJECTED",
+        "axioms": {},
+        "source_sha256": "0a077ee64c2b649f8eefb37432f301e4b0a6c14fb26830634d9a0fb0c763add1",
+        "document_version": 24,
+        "elapsed_seconds": 11.401627499995811,
+        "matching_publications": 3,
+        "messages": [
+          {
+            "severity": 1,
+            "message": "Unknown identifier `P41Bad.p41_target`",
+            "line": 6
+          }
+        ]
+      },
+      "signature_availability_probe": {
+        "status": "REJECTED",
+        "axioms": {},
+        "source_sha256": "c60de666406268a5788166dbbdd29e078c5c164ad6a92a21fcd655c3e4b6debd",
+        "document_version": 25,
+        "elapsed_seconds": 0.2063819000031799,
+        "matching_publications": 1,
+        "messages": [
+          {
+            "severity": 1,
+            "message": "Unknown identifier `sub_dvd_pow_sub_pow`",
+            "line": 6
+          },
+          {
+            "severity": 1,
+            "message": "Unknown constant `Nat.sub_dvd_pow_sub_pow`",
+            "line": 7
+          },
+          {
+            "severity": 1,
+            "message": "Unknown constant `Nat.sub_one_dvd_pow_sub_one`",
+            "line": 8
+          },
+          {
+            "severity": 1,
+            "message": "Unknown constant `Int.ModEq.dvd`",
+            "line": 9
+          },
+          {
+            "severity": 1,
+            "message": "Unknown constant `Int.ModEq.pow`",
+            "line": 10
+          },
+          {
+            "severity": 1,
+            "message": "Unknown constant `Nat.modEq_iff_dvd'`",
+            "line": 11
+          },
+          {
+            "severity": 1,
+            "message": "Unknown constant `Nat.ModEq.pow`",
+            "line": 12
+          }
+        ]
+      },
+      "trials": [
+        {
+          "method": "ExactLibrary",
+          "proof_body_sha256": "a4bdce4a8d53514299801fcd496ef743e72a3082a00dee886bf8b1323dc322a3",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "45efe43dcfef87e4debdaffc07a3f2adc73475e76473ba69f2f86e047a77e2d0",
+          "document_version": 26,
+          "elapsed_seconds": 0.7701754000008805,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "`exact?` could not close the goal. Try `apply?` to see partial suggestions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "ApplyLibrary",
+          "proof_body_sha256": "f56a3478dec8737c465b0c980e8b4b2ebfd225fab6227614bbdeedbf7f6720cb",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "8d6691dd32d392bdce18c799567714328cf2761a206dc289a05f1d77e857ebce",
+          "document_version": 27,
+          "elapsed_seconds": 0.22272939999675145,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine (Nat.dvd_sub_iff_left ?_ ?_).mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ 1 ≤ 10 ^ n\n  -- ⊢ 9 ∣ 1\n  -- ⊢ 9 ∣ 10 ^ n",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Nat.dvd_sub ?_ ?_\n  -- Remaining subgoals:\n  -- ⊢ 9 ∣ 10 ^ n\n  -- ⊢ 9 ∣ 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine (Nat.dvd_sub_iff_right ?_ ?_).mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ 1 ≤ 10 ^ n\n  -- ⊢ 9 ∣ 10 ^ n\n  -- ⊢ 9 ∣ 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Nat.dvd_of_mod_eq_zero ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n - 1) % 9 = 0",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Nat.dvd_of_mul_dvd_mul_right ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Nat.dvd_of_mul_dvd_mul_left ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Nat.dvd_trans ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Nat.dvd_mod_iff ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Nat.dvd_add_iff_right ?_).mpr ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Nat.dvd_iff_mod_eq_zero.mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n - 1) % 9 = 0",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Nat.dvd_add_iff_left ?_).mpr ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Nat.dvd_sub_iff_left ?_ ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Nat.dvd_sub_iff_right ?_ ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.ofNat_dvd.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ ↑9 ∣ ↑(10 ^ n - 1)",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Nat.pow_dvd_pow_iff fun a => ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Nat.gcd_eq_left_iff_dvd.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ Nat.gcd 9 (10 ^ n - 1) = 9",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Nat.gcd_eq_right_iff_dvd.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n - 1).gcd 9 = 9",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Nat.mul_div_eq_iff_dvd.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ 9 * ((10 ^ n - 1) / 9) = 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Nat.dvd_add_left ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine (Nat.dvd_iff_le_div_mul (10 ^ n - 1) 9).mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ 10 ^ n - 1 ≤ (10 ^ n - 1) / 9 * 9",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine (Nat.dvd_iff_dvd_dvd (10 ^ n - 1) 9).mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ ∀ (k : ℕ), k ∣ 9 → k ∣ 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Nat.mul_dvd_mul_iff_right ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine (Nat.dvd_iff_div_mul_eq (10 ^ n - 1) 9).mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n - 1) / 9 * 9 = 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Nat.dvd_add_right ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (Nat.mul_dvd_mul_iff_left ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Nat.dvd_of_pow_dvd ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Nat.Coprime.dvd_of_dvd_mul_left ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Nat.Coprime.dvd_of_dvd_mul_right ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Nat.lcm_eq_left_iff_dvd.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ (10 ^ n - 1).lcm 9 = 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Nat.lcm_eq_right_iff_dvd.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ Nat.lcm 9 (10 ^ n - 1) = 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Int.natCast_dvd_natCast.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ ↑9 ∣ ↑(10 ^ n - 1)",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Rat.normalize.dvd_den ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Nat.dvd_add_self_left.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ 9 ∣ 9 + (10 ^ n - 1)",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Nat.dvd_add_self_right.mp ?_\n  -- Remaining subgoals:\n  -- ⊢ 9 ∣ 10 ^ n - 1 + 9",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine (Rat.den_div_natCast_eq_one_iff (10 ^ n - 1) 9 ?_).mp ?_\n  -- Remaining subgoals:\n  -- ⊢ 9 ≠ 0\n  -- ⊢ (↑(10 ^ n - 1) / ↑9).den = 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine dvd_of_mul_right_dvd ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine dvd_of_eq ?_\n  -- Remaining subgoals:\n  -- ⊢ 9 = 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine dvd_trans ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Dvd.intro ?_ ?_\n  -- Remaining subgoals:\n  -- ⊢ ℕ\n  -- ⊢ 9 * ?_ = 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine dvd_of_mul_right_eq ?_ ?_\n  -- Remaining subgoals:\n  -- ⊢ ℕ\n  -- ⊢ 9 * ?_ = 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Dvd.intro_left ?_ ?_\n  -- Remaining subgoals:\n  -- ⊢ ℕ\n  -- ⊢ ?_ * 9 = 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine dvd_of_mul_left_dvd ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine dvd_of_mul_left_eq ?_ ?_\n  -- Remaining subgoals:\n  -- ⊢ ℕ\n  -- ⊢ ?_ * 9 = 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine Eq.dvd ?_\n  -- Remaining subgoals:\n  -- ⊢ 9 = 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine dvd_iff_exists_eq_mul_right.mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ ∃ c, 10 ^ n - 1 = 9 * c",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (IsLeftRegular.dvd_cancel_left fun ⦃a₁⦄ => ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine dvd_iff_exists_eq_mul_left.mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ ∃ c, 10 ^ n - 1 = c * 9",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Dvd.dvd.trans ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine dvd_def.mpr ?_\n  -- Remaining subgoals:\n  -- ⊢ ∃ c, 10 ^ n - 1 = 9 * c",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] refine IsUnit.dvd ?_\n  -- Remaining subgoals:\n  -- ⊢ IsUnit 9",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine IsRelPrime.dvd_of_dvd_mul_left_of_isPrimal ?_ ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine IsRelPrime.dvd_of_dvd_mul_right_of_isPrimal ?_ ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine IsRelPrime.dvd_of_dvd_mul_left ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Units.mul_left_dvd.mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Units.dvd_mul_left.mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (IsUnit.dvd_mul_right ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Units.mul_right_dvd.mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine IsRelPrime.dvd_of_dvd_mul_right ?_ ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine Units.dvd_mul_right.mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (IsUnit.dvd_mul_left ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (IsUnit.mul_right_dvd ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (IsUnit.mul_left_dvd ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (mul_dvd_mul_iff_right fun a => ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "found a partial proof, but the corresponding tactic failed:\n  (expose_names; refine (mul_dvd_mul_iff_left fun a => ?_).mp ?_)\n\nIt may be possible to correct this proof by adding type annotations, explicitly specifying implicit arguments, or eliminating unnecessary function abstractions.",
+              "line": 13
+            },
+            {
+              "severity": 1,
+              "message": "declaration uses `sorry`",
+              "line": 12
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "Normal:assumption",
+          "proof_body_sha256": "c081dd376ba93a530dd044cffc81e70953e86d86f7d0796dc26bc1597302573d",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "661e8f399e95e7314c439bf72440f5edafa474779183e5dc311947543d54c520",
+          "document_version": 28,
+          "elapsed_seconds": 0.2154104000001098,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Tactic `assumption` failed\n\nn : ℕ\nh₀ : 0 < n\n⊢ 9 ∣ 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "Normal:rfl",
+          "proof_body_sha256": "5a633da644c1afc6f5222be040e6a19d687c01104c0263cce32773e07376dfa8",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "9831ac33ba68066dd4483b2121da7f48f7ca7d218fc7ec6c240c26b70402568d",
+          "document_version": 29,
+          "elapsed_seconds": 0.2095883000001777,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Tactic `rfl` failed: The left-hand side\n  9\nis not definitionally equal to the right-hand side\n  10 ^ n - 1\n\nn : ℕ\nh₀ : 0 < n\n⊢ 9 ∣ 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "Normal:simp_all",
+          "proof_body_sha256": "770a776fdf57bd2930634d5176197b90f459fb4a0a757471ffc33c700413d7a2",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "40d8e2ffabcf67a103c38624e605333a49e8fea5a0347c1223c03e4d5a980a5e",
+          "document_version": 30,
+          "elapsed_seconds": 0.21817140000348445,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "simp_all made no progress",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "Normal:norm_num",
+          "proof_body_sha256": "7c64df8336d5a348b5f037e1d91facb19224fdef00e798d5c48c07a184602a59",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "33b225b1c975e6fc49867db0739a7686bb49f72152ae3cc2f9cfbebbba7ea39b",
+          "document_version": 31,
+          "elapsed_seconds": 0.2247057999993558,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "unsolved goals\nn : ℕ\nh₀ : 0 < n\n⊢ 9 ∣ 10 ^ n - 1",
+              "line": 12
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "Normal:omega",
+          "proof_body_sha256": "304b4a90a76a1cbe4c112e074b30e75181f54df43d60f883597457844293b341",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "bde43125a85d80f1f04fbc8a677a6157e8cea006382ba4ce9a42382c171a707e",
+          "document_version": 32,
+          "elapsed_seconds": 0.21186039999884088,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 1\n  -9 ≤ 9*b - c ≤ -2\n  a ≥ 1\nwhere\n a := ↑n\n b := ↑(10 ^ n - 1) / 9\n c := ↑10 ^ n",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "Normal:ring",
+          "proof_body_sha256": "16b974583155fdcb11fb6832a37be09c18c7acecbfb352c25a35512bfd755a33",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "8058a46c54cab77853f0a75bf33161fe7cc83d60c4a76c60fa82d140db63d8d3",
+          "document_version": 33,
+          "elapsed_seconds": 0.20458399999915855,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.",
+              "line": 13
+            },
+            {
+              "severity": 1,
+              "message": "unsolved goals\nn : ℕ\nh₀ : 0 < n\n⊢ 9 ∣ 10 ^ n - 1",
+              "line": 12
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "Normal:linarith",
+          "proof_body_sha256": "2c587e2f140ae41533b8e0551e8c940d4f70fbd4b1f4245ea1c9efcde110c9af",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "9be81065c2ea82af8d65f01c95a000b30ac8e4bdf56bfd37c64b01805a9bd549",
+          "document_version": 34,
+          "elapsed_seconds": 0.20381409999390598,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "linarith failed to find a contradiction\nn : ℕ\nh₀ : 0 < n\n⊢ False\nfailed",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "Normal:nlinarith",
+          "proof_body_sha256": "f9f5d00b0a74e8e0cad8b2e63a03758dfcfe52219e94c02f8a048c1045017681",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "a486c5cc31e99bcbd9aa6bf69ac797969940377b2002cc6f4c0a2b9b9185f66f",
+          "document_version": 35,
+          "elapsed_seconds": 0.20623470000282396,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "linarith failed to find a contradiction\nn : ℕ\nh₀ : 0 < n\n⊢ False\nfailed",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "Normal:decide",
+          "proof_body_sha256": "5589aa5863c2d85622d06d651add002416e5513afdbb455666cdde01bb3e257d",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "5b9f159fb5be4580de3dbbc9f53d02d3e2f0752f11015ab0707011df6070cce7",
+          "document_version": 36,
+          "elapsed_seconds": 0.2030700000032084,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Expected type must not contain free variables\n  9 ∣ 10 ^ n - 1\n\nHint: Use the `+revert` option to automatically clean up and revert free variables",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "Normal:solve_by_elim",
+          "proof_body_sha256": "0604067b8067bb03f949137ca6632e496067de551e25d6bc27870abde56208a5",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "a67b3db7c06056247d87dbc56efb544cde91aef98b62c154fe6856343b891844",
+          "document_version": 37,
+          "elapsed_seconds": 0.20682659999874886,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "failed",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "Normal:aesop",
+          "proof_body_sha256": "bf61abd9c8c94e02103733c96be27852844483acbf580158f224257e620356a8",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "a9aaad57fd36f2d0fdb0762a1a0827256e5b364cb6ec0cc10bde2903a4cd3209",
+          "document_version": 38,
+          "elapsed_seconds": 0.3707656999977189,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "tactic 'aesop' failed, made no progress\nInitial goal:\n  n : ℕ\n  h₀ : 0 < n\n  ⊢ 9 ∣ 10 ^ n - 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "Normal:grind",
+          "proof_body_sha256": "3026fac023c67598797c8c7da4ac6cf653f832b2c9de761d3922fb85ea086b1c",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "ea13e859ee4904a551825bae66c0ac0e1eb879bcfcda47f9c8c1c4271fddc375",
+          "document_version": 39,
+          "elapsed_seconds": 0.22483400000055553,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "`grind` failed\ncase grind\nn : ℕ\nh₀ : 0 < n\nh : ¬9 ∣ 10 ^ n - 1\n⊢ False\n[grind] Goal diagnostics\n  [facts] Asserted facts\n    [prop] 1 ≤ n\n    [prop] ¬9 ∣ 10 ^ n - 1\n    [prop] 1 ≤ (10 ^ n - 1) % 9\n    [prop] ↑(10 ^ n - 1) % 9 + -8 ≤ 0\n    [prop] -1 * (↑(10 ^ n - 1) % 9) ≤ 0\n    [prop] -1 * ↑(10 ^ n - 1) + 9 * (↑(10 ^ n - 1) / 9) + ↑(10 ^ n - 1) % 9 = 0\n    [prop] ↑(10 ^ n - 1) = if -1 * 10 ^ n + 1 ≤ 0 then 10 ^ n + -1 else 0\n    [prop] 1 ≤ 10 ^ n\n    [prop] 1 ≤ n → 10 ∣ 10 ^ n\n  [eqc] True propositions\n    [prop] ↑(10 ^ n - 1) % 9 + -8 ≤ 0\n    [prop] -1 * 10 ^ n + 1 ≤ 0\n    [prop] -1 * (↑(10 ^ n - 1) % 9) ≤ 0\n    [prop] 1 ≤ n\n    [prop] 1 ≤ (10 ^ n - 1) % 9\n    [prop] 10 ∣ 10 ^ n\n    [prop] 1 ≤ 10 ^ n\n    [prop] 1 ≤ n → 10 ∣ 10 ^ n\n  [eqc] False propositions\n    [prop] 9 ∣ 10 ^ n - 1\n  [eqc] Equivalence classes\n    [eqc] others\n      [eqc] {↑(10 ^ n - 1), if -1 * 10 ^ n + 1 ≤ 0 then 10 ^ n + -1 else 0, 10 ^ n + -1}\n      [eqc] {0, -1 * ↑(10 ^ n - 1) + 9 * (↑(10 ^ n - 1) / 9) + ↑(10 ^ n - 1) % 9}\n  [ematch] E-matching patterns\n    [thm] Nat.pow_pos: [@HPow.hPow `[ℕ] `[ℕ] `[ℕ] `[instHPow] #2 #1]\n    [thm] Nat.div_pow_of_pos: [@HPow.hPow `[ℕ] `[ℕ] `[ℕ] `[instHPow] #2 #1]\n    [thm] Nat.dvd_mul_left_of_dvd: [@Dvd.dvd `[ℕ] `[Nat.instDvd] #3 #2, @HMul.hMul `[ℕ] `[ℕ] `[ℕ] `[instHMul] #0 #2]\n    [thm] Nat.dvd_mul_right_of_dvd: [@Dvd.dvd `[ℕ] `[Nat.instDvd] #3 #2, @HMul.hMul `[ℕ] `[ℕ] `[ℕ] `[instHMul] #2 #0]\n  [cutsat] Assignment satisfying linear constraints\n    [assign] n := 1\n    [assign] 「10 ^ n」 := 90\n    [assign] 「10 ^ n」 := 90\n  [ring] Ring `ℤ`\n    [basis] Basis\n      [_] ↑(10 ^ n - 1) % 9 + -1 * ↑(10 ^ n - 1) + 9 * (↑(10 ^ n - 1) / 9) = 0\n      [_] ↑(10 ^ n - 1) + -1 * 10 ^ n + 1 = 0\n[grind] Issues\n  [issue] ring term with unexpected instance\n        10 ^ n\n  [issue] ring term with unexpected instance\n        10 ^ n\n  [issue] ring term with unexpected instance\n        10 ^ n\n  [issue] ring term with unexpected instance\n        10 ^ n\n[grind] Diagnostics\n  [thm] E-Matching instances\n    [thm] Nat.div_pow_of_pos ↦ 1\n    [thm] Nat.pow_pos ↦ 1",
+              "line": 13
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 17
+            }
+          ]
+        },
+        {
+          "method": "Signature:RingSubDvdPowSubPow",
+          "proof_body_sha256": "dbcfb38472735487a055856d7effa68e1624ebc73a02dbde453f18da392be4c6",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "d37fe9ed0b853d4c6d732f969ea109fe8a6965058c7cf12070f384f18687e23d",
+          "document_version": 40,
+          "elapsed_seconds": 0.20511000000260537,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown identifier `sub_dvd_pow_sub_pow`",
+              "line": 13
+            },
+            {
+              "severity": 1,
+              "message": "unsolved goals\nn : ℕ\nh₀ : 0 < n\n⊢ 9 ∣ 10 ^ n - 1",
+              "line": 12
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Signature:NatSubDvdPowSubPow",
+          "proof_body_sha256": "82c2d7e7578570fd08ea411e9d8dd0e2c46e7ca7a8800c7356c32ecf662f66ef",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "e0e8beeb57372bafa245c5874297dda79fd295473b1b2177659f58370709705b",
+          "document_version": 41,
+          "elapsed_seconds": 0.20708799999556504,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `Nat.sub_dvd_pow_sub_pow`",
+              "line": 13
+            },
+            {
+              "severity": 1,
+              "message": "unsolved goals\nn : ℕ\nh₀ : 0 < n\n⊢ 9 ∣ 10 ^ n - 1",
+              "line": 12
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Signature:NatSubOneDvdPowSubOne",
+          "proof_body_sha256": "6d2523d5ef7455198e345a0e0c8fa9e0a0d6576e6b1c9abe7799976d335c601b",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "4e327d169389aaa71634454445c1ce4695b6b091d5b7b6e4a2a9646875ac5047",
+          "document_version": 42,
+          "elapsed_seconds": 0.22698339999624295,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `Nat.sub_one_dvd_pow_sub_one`",
+              "line": 13
+            },
+            {
+              "severity": 1,
+              "message": "unsolved goals\nn : ℕ\nh₀ : 0 < n\n⊢ 9 ∣ 10 ^ n - 1",
+              "line": 12
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Signature:IntModEqPower",
+          "proof_body_sha256": "bea5c2ad2332c67017a98ed2ca24df3569fee682c76b9fe5153064058c5b71a1",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "f13b7207f6ce298024d7722e5b59aa2de4dce2647d698b9ec5d298eff9afffb4",
+          "document_version": 43,
+          "elapsed_seconds": 0.21068389999709325,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `Int.ModEq.dvd`",
+              "line": 13
+            },
+            {
+              "severity": 1,
+              "message": "No goals to be solved",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 19
+            }
+          ]
+        },
+        {
+          "method": "Signature:NatModEqPower",
+          "proof_body_sha256": "9b98f75c27fe1964de446987b6cbbf33f7da3910fcd5cd10852b7ed1e6ad776d",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "9beb6408f30d624bb56eae3e9f1505befb5c5cbecf481caf14914ea76a4776a8",
+          "document_version": 44,
+          "elapsed_seconds": 0.21727870000177063,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Unknown constant `Nat.modEq_iff_dvd'`",
+              "line": 13
+            },
+            {
+              "severity": 1,
+              "message": "No goals to be solved",
+              "line": 14
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 21
+            }
+          ]
+        },
+        {
+          "method": "Induction:simp_pow",
+          "proof_body_sha256": "ba21a996891b7c6681270609a41209316b25878da1fe82af376360358d08b08f",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "7b7b367051cbe862599590d00efb5965457f54e5a393c7abeceeb3dd6218534a",
+          "document_version": 45,
+          "elapsed_seconds": 0.20959830000356305,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "unsolved goals\ncase succ\nn✝ : ℕ\na✝ : 9 ∣ 10 ^ n✝ - 1\n⊢ 9 ∣ 10 ^ n✝ * 10 - 1",
+              "line": 12
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, sorryAx]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Induction:simp_pow_omega",
+          "proof_body_sha256": "2723e2d40922780b6670dc5f1bed1d20ba65b5c1aa945bd68198e20b52e728ee",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "701d9b8a9057edbb88cb409832797a9baa195b5bed48de3ce5ee17ec1c89bb79",
+          "document_version": 46,
+          "elapsed_seconds": 0.2107553000023472,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Variable name `h₀` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+              "line": 12
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, Quot.sound]",
+              "line": 18
+            }
+          ]
+        },
+        {
+          "method": "Induction:grind_pow",
+          "proof_body_sha256": "168011cd9051b8e1c175ee7a3699ef1b0fadda36bc462cefd58798a14cc652df",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "9274f88b20bf30a64d6fd784ad4f3fb95f1ba08df0349f41ed1257284ef37595",
+          "document_version": 47,
+          "elapsed_seconds": 0.2053615000040736,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Variable name `h₀` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+              "line": 12
+            },
+            {
+              "severity": 3,
+              "message": "'P41Bad.p41_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+              "line": 18
+            }
+          ]
+        }
+      ],
+      "accepted_actions": [],
+      "first_accepted_action": null,
+      "first_accepted_action_ordinal": null,
+      "proof_submission_wall_through_first_accept_seconds": null,
+      "all_proof_submission_wall_seconds": 5.385629299998982
+    },
+    "p138": {
+      "target": "P138Bad.p138_target",
+      "scope": "Same imports and theorem header; proof body only",
+      "rendered_template_sha256": "5fccd20dfd0e9e1419d7767458803e6b0f20faf90dc5f61d17efd4e4dbd2e465",
+      "target_header_sha256": "a90abdc7b6f135f03d81d058d53a96a8278330c018e4b36044f0880961eb70a4",
+      "original_imports": [
+        "Architect",
+        "Mathlib"
+      ],
+      "absence_control": {
+        "status": "REJECTED",
+        "axioms": {},
+        "source_sha256": "2c4dc13c7ddb2015acbf957a1fb59b433b1ccaee8201f7c2fcf1f28d7887209e",
+        "document_version": 48,
+        "elapsed_seconds": 20.227727500001492,
+        "matching_publications": 3,
+        "messages": [
+          {
+            "severity": 1,
+            "message": "Unknown identifier `P138Bad.p138_target`",
+            "line": 4
+          }
+        ]
+      },
+      "signature_availability_probe": null,
+      "trials": [
+        {
+          "method": "ExactLibrary",
+          "proof_body_sha256": "a4bdce4a8d53514299801fcd496ef743e72a3082a00dee886bf8b1323dc322a3",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "82bfa09b731196c59e04ce0055cc5f97b12c391e44ea24f60b0d207abb340017",
+          "document_version": 49,
+          "elapsed_seconds": 9.835448900004849,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information",
+              "line": 11
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "ApplyLibrary",
+          "proof_body_sha256": "f56a3478dec8737c465b0c980e8b4b2ebfd225fab6227614bbdeedbf7f6720cb",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "4bb8152acce241f558d6c008040e199c11b1f2df95f8ea4199c753a8937aedc3",
+          "document_version": 50,
+          "elapsed_seconds": 5.450832900001842,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information",
+              "line": 11
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "Normal:assumption",
+          "proof_body_sha256": "c081dd376ba93a530dd044cffc81e70953e86d86f7d0796dc26bc1597302573d",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "e8f6c34d2ee70e016453fef067060fc906f160a1b7fe27ffe98da591296cb309",
+          "document_version": 51,
+          "elapsed_seconds": 0.2271919999984675,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Tactic `assumption` failed\n\na : ℕ\nh₀ : a = ∑ k ∈ Nat.divisors 500, k\n⊢ ∑ k ∈ a.divisors with Nat.Prime k, k = 25",
+              "line": 11
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "Normal:rfl",
+          "proof_body_sha256": "5a633da644c1afc6f5222be040e6a19d687c01104c0263cce32773e07376dfa8",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "b976b06bb246fbd07bc53a2b7b76dcca609c876339524fc72cbdd42032ad675d",
+          "document_version": 52,
+          "elapsed_seconds": 0.20938120000209892,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Tactic `rfl` failed: The left-hand side\n  ∑ k ∈ a.divisors with Nat.Prime k, k\nis not definitionally equal to the right-hand side\n  25\n\na : ℕ\nh₀ : a = ∑ k ∈ Nat.divisors 500, k\n⊢ ∑ k ∈ a.divisors with Nat.Prime k, k = 25",
+              "line": 11
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "Normal:simp_all",
+          "proof_body_sha256": "770a776fdf57bd2930634d5176197b90f459fb4a0a757471ffc33c700413d7a2",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "ac07f09d4100f8fe65c115333ee78f310a8608b1ad59ac87e37a9d628f8fc20c",
+          "document_version": 53,
+          "elapsed_seconds": 0.2189689000006183,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "unsolved goals\na : ℕ\nh₀ : a = ∑ k ∈ Nat.divisors 500, k\n⊢ ∑ k ∈ (∑ k ∈ Nat.divisors 500, k).divisors with Nat.Prime k, k = 25",
+              "line": 10
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "Normal:norm_num",
+          "proof_body_sha256": "7c64df8336d5a348b5f037e1d91facb19224fdef00e798d5c48c07a184602a59",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "4d23cbe5e7fb3f4cce4a0643efcebf70e8ba8ea7a968be4361cd75e1e8a9d23b",
+          "document_version": 54,
+          "elapsed_seconds": 0.22072089999710442,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "unsolved goals\na : ℕ\nh₀ : a = ∑ k ∈ Nat.divisors 500, k\n⊢ ∑ k ∈ a.divisors with Nat.Prime k, k = 25",
+              "line": 10
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "Normal:omega",
+          "proof_body_sha256": "304b4a90a76a1cbe4c112e074b30e75181f54df43d60f883597457844293b341",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "271521526fb0055b015c45bcdfec5569414778e7e42bc5d535913bbaa70c043c",
+          "document_version": 55,
+          "elapsed_seconds": 0.21940299999550916,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  0 ≤ c ≤ 24\n  b ≥ 0\nwhere\n b := ↑(∑ k ∈ Nat.divisors 500, k)\n c := ↑(∑ k ∈ a.divisors with Nat.Prime k, k)",
+              "line": 11
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "Normal:ring",
+          "proof_body_sha256": "16b974583155fdcb11fb6832a37be09c18c7acecbfb352c25a35512bfd755a33",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "d656b13fa5befaba6e07022e4692361c59cf9448f501b4acc719327db1af4c13",
+          "document_version": 56,
+          "elapsed_seconds": 0.22082850000151666,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 3,
+              "message": "Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.",
+              "line": 11
+            },
+            {
+              "severity": 1,
+              "message": "unsolved goals\na : ℕ\nh₀ : a = ∑ k ∈ Nat.divisors 500, k\n⊢ ∑ k ∈ a.divisors with Nat.Prime k, k = 25",
+              "line": 10
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "Normal:linarith",
+          "proof_body_sha256": "2c587e2f140ae41533b8e0551e8c940d4f70fbd4b1f4245ea1c9efcde110c9af",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "bc2650452302d4f83674e6f526f8511915ee24715f79f1e26542cb1cf7f2e53e",
+          "document_version": 57,
+          "elapsed_seconds": 0.22676830000273185,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "linarith failed to find a contradiction\ncase h1\na : ℕ\nh₀ : a = ∑ k ∈ Nat.divisors 500, k\na✝ : ∑ k ∈ a.divisors with Nat.Prime k, k < 25\n⊢ False\nfailed",
+              "line": 11
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "Normal:nlinarith",
+          "proof_body_sha256": "f9f5d00b0a74e8e0cad8b2e63a03758dfcfe52219e94c02f8a048c1045017681",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "8d62f247fbfa7e9c0f7d32d385ab8ca1696989cc765bad00c33d8111b8d559a2",
+          "document_version": 58,
+          "elapsed_seconds": 0.21224339999753283,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "linarith failed to find a contradiction\ncase h1\na : ℕ\nh₀ : a = ∑ k ∈ Nat.divisors 500, k\na✝ : ∑ k ∈ a.divisors with Nat.Prime k, k < 25\n⊢ False\nfailed",
+              "line": 11
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "Normal:decide",
+          "proof_body_sha256": "5589aa5863c2d85622d06d651add002416e5513afdbb455666cdde01bb3e257d",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "c37d23a1e06ad37edafc70878584f17e998fa8391aeb5e82e270f25ed2d02ba2",
+          "document_version": 59,
+          "elapsed_seconds": 0.21871339999779593,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "Expected type must not contain free variables\n  ∑ k ∈ a.divisors with Nat.Prime k, k = 25\n\nHint: Use the `+revert` option to automatically clean up and revert free variables",
+              "line": 11
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "Normal:solve_by_elim",
+          "proof_body_sha256": "0604067b8067bb03f949137ca6632e496067de551e25d6bc27870abde56208a5",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "27d88c8bb96324c688cc94e0a9fc9aad0fadd924464287a2ab65c4e2e7204607",
+          "document_version": 60,
+          "elapsed_seconds": 0.2174834000034025,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "failed",
+              "line": 11
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "Normal:aesop",
+          "proof_body_sha256": "bf61abd9c8c94e02103733c96be27852844483acbf580158f224257e620356a8",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "f46a8e07b3fcdf3119d436e07b9aad7b018e54fdc838e1419036b3e62ed410c4",
+          "document_version": 61,
+          "elapsed_seconds": 0.480766799999401,
+          "matching_publications": 3,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information",
+              "line": 11
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "Normal:grind",
+          "proof_body_sha256": "3026fac023c67598797c8c7da4ac6cf653f832b2c9de761d3922fb85ea086b1c",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "89d4fc324df667cd68d3395db08b452e1b42daac0d61d4cdce7c161fb036fa0a",
+          "document_version": 62,
+          "elapsed_seconds": 0.21923780000361148,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "`grind` failed\ncase grind\na : ℕ\nh₀ : a = ∑ k ∈ Nat.divisors 500, k\nh : ¬∑ k ∈ a.divisors with Nat.Prime k, k = 25\n⊢ False\n[grind] Goal diagnostics\n  [facts] Asserted facts\n    [prop] a = ∑ k ∈ Nat.divisors 500, k\n    [prop] ¬∑ k ∈ a.divisors with Nat.Prime k, k = 25\n  [eqc] False propositions\n    [prop] ∑ k ∈ a.divisors with Nat.Prime k, k = 25\n  [eqc] Equivalence classes\n    [eqc] {a, ∑ k ∈ Nat.divisors 500, k}\n  [cutsat] Assignment satisfying linear constraints\n    [assign] a := 1\n    [assign] ∑ k ∈ Nat.divisors 500, k := 1\n    [assign] ∑ k ∈ a.divisors with Nat.Prime k, k := 2",
+              "line": 11
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 15
+            }
+          ]
+        },
+        {
+          "method": "Finite:subst_decide",
+          "proof_body_sha256": "f26cec6710de02abe07e6132ba345be8e63229b59c522cd54b26a53c85c52f7c",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "b70e9befe5c771b8e20308fc76092e441afa64fd3c26384e5704afc7a8f5d39f",
+          "document_version": 63,
+          "elapsed_seconds": 0.21700170000258368,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information",
+              "line": 12
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 16
+            }
+          ]
+        },
+        {
+          "method": "Finite:subst_norm_num",
+          "proof_body_sha256": "da8f1be535be901891df8121b5066a2e6cbcca30776be8bd4d4c4a9ad0afce5c",
+          "status": "REJECTED",
+          "axioms": {},
+          "source_sha256": "aab40defbf2798380efa8738c2387ab279df95a77a6410893f7dd368bd111862",
+          "document_version": 64,
+          "elapsed_seconds": 0.21814050000102725,
+          "matching_publications": 1,
+          "messages": [
+            {
+              "severity": 1,
+              "message": "unsolved goals\n⊢ ∑ k ∈ (∑ k ∈ Nat.divisors 500, k).divisors with Nat.Prime k, k = 25",
+              "line": 10
+            },
+            {
+              "severity": 3,
+              "message": "'P138Bad.p138_target' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+              "line": 16
+            }
+          ]
+        }
+      ],
+      "accepted_actions": [],
+      "first_accepted_action": null,
+      "first_accepted_action_ordinal": null,
+      "proof_submission_wall_through_first_accept_seconds": null,
+      "all_proof_submission_wall_seconds": 18.613131600010092
+    }
+  },
+  "same_family_p40_separate_offline": {
+    "status": "KERNEL_ACCEPTED",
+    "axioms": {
+      "P40Bad.base_case": [
+        "propext"
+      ],
+      "P40Bad.step": [
+        "propext",
+        "Quot.sound"
+      ],
+      "P40Bad.p40_target": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    "source_sha256": "d1d235455e42cd09ac77dae91c33cd41f269c8df5f65ac13d357240dec3a66fd",
+    "elapsed_seconds": 7.760502999997698,
+    "exit_code": 0,
+    "messages": [
+      {
+        "severity": 3,
+        "message": "'P40Bad.base_case' depends on axioms: [propext]",
+        "line": 27
+      },
+      {
+        "severity": 3,
+        "message": "'P40Bad.step' depends on axioms: [propext, Quot.sound]",
+        "line": 28
+      },
+      {
+        "severity": 3,
+        "message": "'P40Bad.p40_target' depends on axioms: [propext, Quot.sound]",
+        "line": 29
+      }
+    ],
+    "stderr": "",
+    "matches_archived_axioms": true,
+    "reference_used_for_baseline_generation": false
+  },
+  "case_count": 3,
+  "cases_with_accepted_action": 1,
+  "new_model_tokens": 0,
+  "gpu_seconds": 0
+}

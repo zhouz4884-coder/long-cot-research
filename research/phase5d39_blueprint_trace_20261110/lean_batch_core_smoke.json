@@ -1,0 +1,67 @@
+{
+  "source_sha256": "51e00b5e2e8cb4a9aa2ce63a46298877b6e4cf257a4c9b32f61e1c7742fbce12",
+  "elapsed_seconds": 1.6049990999963484,
+  "exit_code": 1,
+  "scopes": [
+    {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "d39_batch_1": []
+      }
+    },
+    {
+      "status": "REJECTED",
+      "axioms": {}
+    },
+    {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "d39_batch_3": []
+      }
+    },
+    {
+      "status": "REJECTED",
+      "axioms": {}
+    }
+  ],
+  "messages": [
+    {
+      "severity": 3,
+      "message": "'d39_batch_1' does not depend on any axioms",
+      "line": 5
+    },
+    {
+      "severity": 1,
+      "message": "Type mismatch\n  True.intro\nhas type\n  True\nbut is expected to have type\n  n + 0 = n",
+      "line": 7
+    },
+    {
+      "severity": 3,
+      "message": "'d39_batch_2' depends on axioms: [sorryAx]",
+      "line": 8
+    },
+    {
+      "severity": 3,
+      "message": "'d39_batch_3' does not depend on any axioms",
+      "line": 11
+    },
+    {
+      "severity": 1,
+      "message": "declaration uses 'sorry'",
+      "line": 12
+    },
+    {
+      "severity": 3,
+      "message": "'d39_batch_4' depends on axioms: [sorryAx]",
+      "line": 14
+    }
+  ],
+  "expected_statuses": [
+    "KERNEL_ACCEPTED",
+    "REJECTED",
+    "KERNEL_ACCEPTED",
+    "REJECTED"
+  ],
+  "scope": "Independent trusted core blocks. Batch exit is nonzero when a block rejects. Each result uses its own source and axiom closure. Not an author environment result.",
+  "status": "PASS"
+}

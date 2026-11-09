@@ -1,0 +1,207 @@
+{
+  "status": "COMPLETE_PUBLISHED_CORPUS_RECOUNT",
+  "inventory_sha256": "d2605672b6843ef6466cd1a56253ee5230e40bad4832e74643af02f670cfb5a7",
+  "state_count": 142,
+  "original_target_cluster_count": 141,
+  "episodes": 852,
+  "attempts": 3499,
+  "episode_outcomes": {
+    "solved": 575,
+    "budget_exhausted": 276,
+    "gave_up": 1
+  },
+  "attempt_outcomes": {
+    "AUTHOR_LOOP_ACCEPTED_TARGET": 575,
+    "ARCHIVED_LEAN_ERROR": 2148,
+    "HARNESS_REJECTED": 392,
+    "APPLIED_BUT_UNSOLVED": 327,
+    "NO_OBSERVED_MODEL_ACTION": 57
+  },
+  "prestate_resolution": {
+    "DECLARED_TARGET_CLOSURE": 3498,
+    "TARGET_BINDING_UNRESOLVED": 1
+  },
+  "errors_with_proved_ancestor": {
+    "attempts": 851,
+    "states": 85,
+    "targets": 85,
+    "targets_outside_previous_d38_sample": 84
+  },
+  "author_rescan_accepted_episodes": 573,
+  "author_rescan_accepted_any_mode_targets": 123,
+  "closed_endpoint_actions": {
+    "local_patch": 197,
+    "full_rewrite": 188,
+    "drop_false_node": 74,
+    "drop_dead_node": 12,
+    "add_dependency": 30,
+    "set_node_proof": 58,
+    "split_node": 1,
+    "rewrite_node_statement": 6,
+    "weaken_node": 6,
+    "strengthen_hypotheses": 1
+  },
+  "loop_solved_without_author_rescan": [
+    {
+      "run_id": "p145_compound_toolsrc_v0",
+      "state_id": "p145_bad.state0",
+      "model": "deepseek/deepseek-v4-flash",
+      "mode": "typed",
+      "rescan_unavailable_reason": "endpoint source final.module.lean still holds a sorry stub and no assembled artifact exists"
+    },
+    {
+      "run_id": "p96_missing_hypothesis_patchsrcq_v0",
+      "state_id": "p96_bad.state0",
+      "model": "qwen/qwen3.6-flash",
+      "mode": "patch",
+      "rescan_unavailable_reason": "endpoint source final.module.lean still holds a sorry stub and no assembled artifact exists"
+    }
+  ],
+  "observed_no_replacement_source": {
+    "episodes": 127,
+    "targets": 38
+  },
+  "observed_no_replacement_and_actual_use": {
+    "episodes": 118,
+    "targets": 37
+  },
+  "positive_minimum_release_certificates": 0,
+  "scope": "Public author-controlled starting failures with real archived model attempts. One observation per author episode, repeated model/interface observations clustered by original target. No local Lean replay, GPU, new independent task accuracy, or natural-origin failure claim.",
+  "matrix": [
+    {
+      "model": "deepseek/deepseek-v4-flash",
+      "mode": "patch",
+      "state_denominator": 142,
+      "loop_time_solved": 109,
+      "author_rescan_accepted": 109,
+      "author_rescan_accepted_target_clusters": 109,
+      "strict_preservation": {
+        "NO_IDENTIFIED_INITIAL_PROVED_PREREQUISITE": 70,
+        "ALL_IDENTIFIED_SOURCE_RETAINED": 36,
+        "SOURCE_CHANGED_OR_LABEL_ABSENT": 3
+      },
+      "rescanned_source_preservation": {
+        "NO_IDENTIFIED_INITIAL_PROVED_PREREQUISITE": 70,
+        "ALL_IDENTIFIED_SOURCE_RETAINED": 36,
+        "SOURCE_CHANGED_OR_LABEL_ABSENT": 3
+      },
+      "rescanned_release_evidence": {
+        "UNKNOWN": 73,
+        "OBSERVED_ALL_PRIOR_DECLARATIONS_RETAINED_AND_USED": 35,
+        "OBSERVED_PRIOR_DECLARATION_SOURCE_RETAINED_USE_MAY_DIFFER": 1
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash",
+      "mode": "rewrite",
+      "state_denominator": 142,
+      "loop_time_solved": 104,
+      "author_rescan_accepted": 104,
+      "author_rescan_accepted_target_clusters": 104,
+      "strict_preservation": {
+        "NO_IDENTIFIED_INITIAL_PROVED_PREREQUISITE": 67,
+        "UNRESOLVED_SOURCE": 37
+      },
+      "rescanned_source_preservation": {
+        "NO_IDENTIFIED_INITIAL_PROVED_PREREQUISITE": 67,
+        "SOURCE_CHANGED_OR_LABEL_ABSENT": 27,
+        "ALL_IDENTIFIED_SOURCE_RETAINED": 10
+      },
+      "rescanned_release_evidence": {
+        "UNKNOWN": 94,
+        "OBSERVED_PRIOR_DECLARATION_SOURCE_RETAINED_USE_MAY_DIFFER": 1,
+        "OBSERVED_ALL_PRIOR_DECLARATIONS_RETAINED_AND_USED": 9
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash",
+      "mode": "typed",
+      "state_denominator": 142,
+      "loop_time_solved": 105,
+      "author_rescan_accepted": 104,
+      "author_rescan_accepted_target_clusters": 104,
+      "strict_preservation": {
+        "NO_IDENTIFIED_INITIAL_PROVED_PREREQUISITE": 69,
+        "ALL_IDENTIFIED_SOURCE_RETAINED": 31,
+        "SOURCE_CHANGED_OR_LABEL_ABSENT": 4
+      },
+      "rescanned_source_preservation": {
+        "NO_IDENTIFIED_INITIAL_PROVED_PREREQUISITE": 69,
+        "ALL_IDENTIFIED_SOURCE_RETAINED": 30,
+        "SOURCE_CHANGED_OR_LABEL_ABSENT": 5
+      },
+      "rescanned_release_evidence": {
+        "UNKNOWN": 74,
+        "OBSERVED_ALL_PRIOR_DECLARATIONS_RETAINED_AND_USED": 27,
+        "OBSERVED_PRIOR_DECLARATION_SOURCE_RETAINED_USE_MAY_DIFFER": 3
+      }
+    },
+    {
+      "model": "qwen/qwen3.6-flash",
+      "mode": "patch",
+      "state_denominator": 142,
+      "loop_time_solved": 89,
+      "author_rescan_accepted": 88,
+      "author_rescan_accepted_target_clusters": 88,
+      "strict_preservation": {
+        "NO_IDENTIFIED_INITIAL_PROVED_PREREQUISITE": 55,
+        "ALL_IDENTIFIED_SOURCE_RETAINED": 30,
+        "SOURCE_CHANGED_OR_LABEL_ABSENT": 3
+      },
+      "rescanned_source_preservation": {
+        "NO_IDENTIFIED_INITIAL_PROVED_PREREQUISITE": 55,
+        "ALL_IDENTIFIED_SOURCE_RETAINED": 29,
+        "SOURCE_CHANGED_OR_LABEL_ABSENT": 4
+      },
+      "rescanned_release_evidence": {
+        "UNKNOWN": 59,
+        "OBSERVED_ALL_PRIOR_DECLARATIONS_RETAINED_AND_USED": 26,
+        "OBSERVED_PRIOR_DECLARATION_SOURCE_RETAINED_USE_MAY_DIFFER": 3
+      }
+    },
+    {
+      "model": "qwen/qwen3.6-flash",
+      "mode": "rewrite",
+      "state_denominator": 142,
+      "loop_time_solved": 84,
+      "author_rescan_accepted": 84,
+      "author_rescan_accepted_target_clusters": 84,
+      "strict_preservation": {
+        "NO_IDENTIFIED_INITIAL_PROVED_PREREQUISITE": 57,
+        "UNRESOLVED_SOURCE": 27
+      },
+      "rescanned_source_preservation": {
+        "NO_IDENTIFIED_INITIAL_PROVED_PREREQUISITE": 57,
+        "SOURCE_CHANGED_OR_LABEL_ABSENT": 26,
+        "ALL_IDENTIFIED_SOURCE_RETAINED": 1
+      },
+      "rescanned_release_evidence": {
+        "UNKNOWN": 83,
+        "OBSERVED_ALL_PRIOR_DECLARATIONS_RETAINED_AND_USED": 1
+      }
+    },
+    {
+      "model": "qwen/qwen3.6-flash",
+      "mode": "typed",
+      "state_denominator": 142,
+      "loop_time_solved": 84,
+      "author_rescan_accepted": 84,
+      "author_rescan_accepted_target_clusters": 84,
+      "strict_preservation": {
+        "NO_IDENTIFIED_INITIAL_PROVED_PREREQUISITE": 60,
+        "ALL_IDENTIFIED_SOURCE_RETAINED": 21,
+        "SOURCE_CHANGED_OR_LABEL_ABSENT": 3
+      },
+      "rescanned_source_preservation": {
+        "NO_IDENTIFIED_INITIAL_PROVED_PREREQUISITE": 60,
+        "ALL_IDENTIFIED_SOURCE_RETAINED": 21,
+        "SOURCE_CHANGED_OR_LABEL_ABSENT": 3
+      },
+      "rescanned_release_evidence": {
+        "UNKNOWN": 63,
+        "OBSERVED_ALL_PRIOR_DECLARATIONS_RETAINED_AND_USED": 20,
+        "OBSERVED_PRIOR_DECLARATION_SOURCE_RETAINED_USE_MAY_DIFFER": 1
+      }
+    }
+  ]
+}

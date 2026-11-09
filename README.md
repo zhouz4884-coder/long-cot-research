@@ -9,6 +9,7 @@
 - [Phase 1–5 总索引](docs/phases/INDEX_ZH.md)
 - [当前研究目标](docs/next_phase/CURRENT_RESEARCH_GOAL_20261105_ZH.md)
 - [最新建议审查与下一轮公平对照](research/repository_phase_plan_20261106/ADVISOR_REVIEW_20261106_ZH.md)
+- [Phase 5-D3.9 真实轨迹中的释放机会复核](research/phase5d39_blueprint_trace_20261110/D39_CLOSEOUT_ZH.md)
 - [Phase 5-D3.8 形式证明最小释放准入收尾](research/phase5d38_proof_release_20261110/D38_CLOSEOUT_ZH.md)
 - [Phase 5-D3.7 作用域修复与 CPU 准入收尾](research/phase5d37_scoped_repair_20261110/D37_CLOSEOUT_ZH.md)
 - [Phase 5-D3.6 证据棘轮研究收尾](research/phase5d36_progressive_witness_20261109/D36_CLOSEOUT_ZH.md)
@@ -40,6 +41,7 @@
 | [Phase 5-D3.6](research/phase5d36_progressive_witness_20261109/D36_CLOSEOUT_ZH.md) | 零 GPU 全集诊断、可信点验证、同提示的事件棘轮对照 | 48/48 条件完成，47 个自然 EOS。棘轮 3/6，一次性认证提示和逐候选审核均 4/6，未过独立扩测门槛 |
 | [Phase 5-D3.7](research/phase5d37_scoped_repair_20261110/D37_CLOSEOUT_ZH.md) | 451 个已付费事件的来源作用域修复、终局补读及构造任务 CPU 准入 | 两类受限实例各 6/6 已有强直接解，未启动模型试验 |
 | [Phase 5-D3.8](research/phase5d38_proof_release_20261110/D38_CLOSEOUT_ZH.md) | 固定 Lean 工具链、最小释放证书及作者模型档案 | 作用域释放 7/8，合并证书的同候选池强基线也为 7/8，只用 7 次 Lean 调用。未启动模型试验 |
+| [Phase 5-D3.9](research/phase5d39_blueprint_trace_20261110/D39_CLOSEOUT_ZH.md) | 141 个独立目标的真实动作归档、同版内核复验、驻留核验成本 | 四个改动候选均可保留已证明内容并完成目标。关闭最小释放主线 |
 
 每个Phase统一记录：问题、输入与协议、实际动作、数据结论、失败与猜想、下一门槛、证据路径。后续工作继续新增Phase或阶段内子报告，不改写已冻结的结果。
 
@@ -60,6 +62,7 @@
 | Phase5-D3.6 | 32 条历史轨迹只有一次确认的值漂移。E15 棘轮阻止一次错误交付路径，但冻结质量低于同提示强基线 | 同一历史题的六个配对单元。有限点工具也给出正确值，完整程序独立证明最优，独立扩测未启动 |
 | Phase5-D3.7 | 实际两处来源误触发被拦截。独立合成控制首轮 12/19 误授权，披露后复测为 0/19 | 复测和历史固定回放不构成在线安全证明。两类任务未过强求解对照门槛 |
 | Phase5-D3.8 | 正式 Lean 环境通过 9 个核心、10 个 miniF2F 控制。最小释放的七个结构证书有强合并核验基线 | 合成结构控制与外部真实模型动作分列。当前没有通过独立模型试验门槛 |
+| Phase5-D3.9 | 复算 852 个归档臂。p159 在作者同版环境通过，四个可能正例均有同目标保留证书 | 仍未知的 36 个状态保留未知。独立必要释放证据为零，未启动模型试验 |
 
 P0与P0.5使用不同读出协议，不连成跨轮提升曲线。CPU随机模型、形式/代数控制、人工短状态、自然轨迹观察和正式benchmark各自标明，不互相替代。
 
@@ -106,6 +109,7 @@ research/phase5d35_witness_gated_revision_20261109/ D3.5 协议、见证内核�
 research/phase5d36_progressive_witness_20261109/ D3.6 全集诊断、点核验状态机、双检查点原始记录与收尾
 research/phase5d37_scoped_repair_20261110/ D3.7 作用域与格式回归、两类任务强 CPU 准入和收尾
 research/phase5d38_proof_release_20261110/ D3.8 Lean 内核、正式来源、最小释放与强 CPU 对照
+research/phase5d39_blueprint_trace_20261110/ D3.9 全档案复算、作者同版证明与真实核验成本
 scripts/ reason_transition/ tests/     原研究实现与检查
 experiments/radar20261013/             后续历史路线，当前冻结
 data/ results/ provenance/ recovery/   历史输入、输出和恢复证据

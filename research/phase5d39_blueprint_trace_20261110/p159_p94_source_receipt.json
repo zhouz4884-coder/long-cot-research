@@ -1,0 +1,66 @@
+{
+  "status": "ARCHIVE_BOUND_REVIEWED_CROSS_EPISODE_BRIDGE_SOURCE_ONLY",
+  "state_id": "p94_bad.state0",
+  "scope": "Qwen complete helper from a prior applied-but-failing target step, and independently accepted DeepSeek target from same initial state. The bridge is a new controlled cross-episode construction.",
+  "deepseek_archive_sha256": "6acd6a2571ec420e61b05d2ed2d18da4422b6420a7b6d6feb98802030959500e",
+  "qwen_archive_sha256": "8a7a7e6ed192129a754f94ea85089978fc44f136fc11df01a1d676bf5b93ccb7",
+  "deepseek_members": {
+    "episode.json": "79283a0f4d0afba55099aa41e7d3e1888246ed0a06cbc168ae8ef9d0ca3f8a01",
+    "step01.json": "f4aa74138df0b6377ff38ff43ad0079f2dff2a1cba3afd06cc07a5d70794a695",
+    "step02.json": "a02b415035e712fd9033d3ca357644b20d13d4c971b110cded848bc84f2ad9ab",
+    "step03.json": "be5a7f0b1da2b01ed746684a7e1e4e2bee0921de27f039331d53ddc0c828d50e",
+    "step04.json": "aba8d8a9948b466ee007a788d69e0ebe5ace5e4931e398cf377c62091e79b7f2",
+    "step04.check.lean": "e9ce4bb5c8105fe95fd16a35f9b74157f4d9ae86bd1eb087ba7e6ae10e309b16",
+    "step04.check.elab.json": "d138621d1bc977e627bbe8809c22f367df2f5ad5fa4faf569da13daaed500b53",
+    "final.module.lean": "e4da78f80dc79ef6f2562240191a843c91106c2e7ba9b4df9f63838b8805a64a"
+  },
+  "qwen_members": {
+    "episode.json": "a37a55033d3d986b80fb05aa96c6887445cc041c437ef14429c07ac9d5c07afb",
+    "step01.json": "294baf8b76b8fa186303f490100ecf633d1537730f8f62fe0edd19d44090e851",
+    "step02.json": "33fbb020d69efcdeebb9849156c4829b5c31f573255eb2510ea039895e9955a4",
+    "step01.check.lean": "00dc7e75a000ba8312728474d14765900de38488ba4e88b516bd25ff3b9237e8",
+    "step01.check.elab.json": "16ba112e1f109d4c7e79cf3b22d2bfa3bfb5352f106a4e547ca0167780637f5b"
+  },
+  "author_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "shared_initial_module_sha256": "86bdb907b9d67e141c28eb34fc4ee938ff1e309785fad465a4c4b9eaa0f71834",
+  "unchanged_target_header_sha256": "89481f8ec547ab24ef6b13983f05d3bdff528995180817117faf5f06abe502ec",
+  "accepted_deepseek_module_sha256": "e4da78f80dc79ef6f2562240191a843c91106c2e7ba9b4df9f63838b8805a64a",
+  "qwen_pre_failure_module_sha256": "ba5ca534db248fde7742baa723f1af356cd099e99b87e4f9a8dd53ee169988b1",
+  "preserved_qwen_helper_declaration_sha256": "3abf24fa4c7e8d2f746c06d5a75a80ff0afb4cd916b046618d55a49f7f5b4766",
+  "qwen_helper_author_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "qwen_target_archived_error": "unsolved goals\na m c : ℕ\nh₀ : a + m + c = 12\nh₁ : (a + 1) * (m + 1) * (c + 1) ≤ 125\n⊢ a * m + a * m * c + a * c + m * c = 1 + a + a * m + a * m * c + a * c + m + m * c + c - 13",
+  "deepseek_target_author_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "prepared_fixtures": {
+    "p94_author_exact_check.lean": {
+      "sha256": "e9ce4bb5c8105fe95fd16a35f9b74157f4d9ae86bd1eb087ba7e6ae10e309b16",
+      "bytes": 1030
+    },
+    "p94_author_bound_check.lean": {
+      "sha256": "e8417c773f9d6332d33ee048d00b35d9f4c9a22ac98a158824347879f26658a3",
+      "bytes": 1127
+    },
+    "p94_qwen_helper_only.lean": {
+      "sha256": "97f35f52e6a6214896befdf29c5380fe367e2f90b58730d91674eb893c760a93",
+      "bytes": 555
+    },
+    "p94_preserving_bridge.lean": {
+      "sha256": "9bbd6a59bc59833e15b0603309ce21dc9069e7669f1fe85c4344f9001843c391",
+      "bytes": 1243
+    }
+  },
+  "local_kernel_acceptance_claim": false,
+  "raw_qwen_target_and_raw_author_gates_executable": false,
+  "model_generation": false
+}

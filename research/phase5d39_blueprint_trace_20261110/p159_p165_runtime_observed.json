@@ -1,0 +1,42 @@
+{
+  "status": "COMPLETED_FUNCTIONAL_RUNS",
+  "runtime_verified": true,
+  "runtime_smoke_sha256": "ca19818e10f7246a3f2259eb0f2341c33a47a9d55645c4aa8c325ceb7c17e2ff",
+  "source_receipt_sha256": "8b035ddb1e22daf4fd10c054edb3ef1d0c3776b0c3cbd2caeae93608e4cebd17",
+  "author_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "scope": "Trusted fixture hashes only; not a timing comparison.",
+  "cases": {
+    "p165_author_rescan_exact_check.lean": {
+      "source_sha256": "a200bc6ea6fb0d771b0ae4ae5a059b12ac2b5278c584a37bfcec7cf3ab3927d9",
+      "returncode": 0,
+      "stdout": "{\"caption\": \"\", \"data\": \"'P165Bad.a_cubed' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 75}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 75}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.a_value' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 76}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 76}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.b_cubed' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 77}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 77}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.b_value' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 78}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 78}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.p165_target' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 79}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 79}, \"severity\": \"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 19.332686800000374
+    },
+    "p165_author_bound_check.lean": {
+      "source_sha256": "457f5038ffe78651ff4f79c8827301812738db8dccdc66a5e867f4c4fef619cd",
+      "returncode": 0,
+      "stdout": "{\"caption\": \"\", \"data\": \"'P165Bad.a_cubed' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 75}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 75}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.a_value' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 76}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 76}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.b_cubed' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 77}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 77}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.b_value' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 78}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 78}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.p165_target' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 79}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 79}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"P165Bad.p165_target : ∀ (a b : ℝ), a ^ 2 * b ^ 3 = 32 / 27 → a / b ^ 3 = 27 / 4 → a + b = 8 / 3\", \"endPos\": {\"column\": 6, \"line\": 80}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 80}, \"severity\": \"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 19.139866699995764
+    },
+    "p165_preserved_transplant.lean": {
+      "source_sha256": "9d4a58700a76572b8b972f3f9fd3f293cb52357ee3731d714cb4a6918cb9ea84",
+      "returncode": 0,
+      "stdout": "{\"caption\": \"\", \"data\": \"'P165Bad.a_cubed' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 73}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 73}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.a_value' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 74}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 74}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.b_cubed' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 75}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 75}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.b_value' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 76}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 76}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.p165_target' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 77}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 77}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"P165Bad.p165_target : ∀ (a b : ℝ), a ^ 2 * b ^ 3 = 32 / 27 → a / b ^ 3 = 27 / 4 → a + b = 8 / 3\", \"endPos\": {\"column\": 6, \"line\": 78}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 78}, \"severity\": \"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 18.854584100001375
+    },
+    "p165_initial_three.lean": {
+      "source_sha256": "66d88a43d3a27c399bc0089795f60f84176259c19da0361b8d679bdc03ee4a88",
+      "returncode": 0,
+      "stdout": "{\"caption\": \"\", \"data\": \"'P165Bad.a_value' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 37}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 37}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.b_cubed' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 38}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 38}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P165Bad.b_value' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 39}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 39}, \"severity\": \"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 19.583269899994775
+    }
+  }
+}

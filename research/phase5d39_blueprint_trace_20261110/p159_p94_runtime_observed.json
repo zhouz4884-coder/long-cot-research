@@ -1,0 +1,42 @@
+{
+  "status": "COMPLETED_FUNCTIONAL_RUNS",
+  "runtime_verified": true,
+  "runtime_smoke_sha256": "ca19818e10f7246a3f2259eb0f2341c33a47a9d55645c4aa8c325ceb7c17e2ff",
+  "source_receipt_sha256": "d2556fc10cd3cf3095050c82352ace19d5e07b4d66ae7317add59d8994bf9a19",
+  "author_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "scope": "Trusted fixture hashes only; not a timing comparison.",
+  "cases": {
+    "p94_author_exact_check.lean": {
+      "source_sha256": "e9ce4bb5c8105fe95fd16a35f9b74157f4d9ae86bd1eb087ba7e6ae10e309b16",
+      "returncode": 0,
+      "stdout": "{\"caption\": \"\", \"data\": \"'P94Bad.product_bound_wrong' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 26}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 26}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P94Bad.p94_target' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 27}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 27}, \"severity\": \"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 18.63115480000124
+    },
+    "p94_author_bound_check.lean": {
+      "source_sha256": "e8417c773f9d6332d33ee048d00b35d9f4c9a22ac98a158824347879f26658a3",
+      "returncode": 0,
+      "stdout": "{\"caption\": \"\", \"data\": \"'P94Bad.product_bound_wrong' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 26}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 26}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P94Bad.p94_target' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 27}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 27}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"P94Bad.p94_target : ∀ (a m c : ℕ), a + m + c = 12 → a * m * c + a * m + m * c + a * c ≤ 112\", \"endPos\": {\"column\": 6, \"line\": 28}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 28}, \"severity\": \"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 18.678019400002086
+    },
+    "p94_qwen_helper_only.lean": {
+      "source_sha256": "97f35f52e6a6214896befdf29c5380fe367e2f90b58730d91674eb893c760a93",
+      "returncode": 0,
+      "stdout": "{\"caption\": \"\", \"data\": \"P94Bad.product_bound_wrong : ∀ (a m c : ℕ), a + m + c = 12 → (a + 1) * (m + 1) * (c + 1) ≤ 125\", \"endPos\": {\"column\": 6, \"line\": 15}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 15}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P94Bad.product_bound_wrong' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 16}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 16}, \"severity\": \"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 22.156939799999236
+    },
+    "p94_preserving_bridge.lean": {
+      "source_sha256": "9bbd6a59bc59833e15b0603309ce21dc9069e7669f1fe85c4344f9001843c391",
+      "returncode": 0,
+      "stdout": "{\"caption\": \"\", \"data\": \"P94Bad.p94_target : ∀ (a m c : ℕ), a + m + c = 12 → a * m * c + a * m + m * c + a * c ≤ 112\", \"endPos\": {\"column\": 6, \"line\": 32}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 32}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P94Bad.product_bound_wrong' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 33}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 33}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P94Bad.product_bound_expanded' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 34}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 34}, \"severity\": \"information\"}\n{\"caption\": \"\", \"data\": \"'P94Bad.p94_target' depends on axioms: [propext, Classical.choice, Quot.sound]\", \"endPos\": {\"column\": 6, \"line\": 35}, \"isSilent\": false, \"keepFullRange\": false, \"kind\": \"[anonymous]\", \"pos\": {\"column\": 0, \"line\": 35}, \"severity\": \"information\"}\n",
+      "stderr": "",
+      "wall_seconds": 22.372637299995404
+    }
+  }
+}

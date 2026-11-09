@@ -1,0 +1,427 @@
+{
+  "status": "INCOMPLETE_OR_UNVERIFIED",
+  "source_receipt_sha256": "583316b7dced0ded8df84c7e43dda2deac9b4e2418ba0d2e1d5c0b8bd5555c35",
+  "runtime_version": "Lean (version 4.31.0, x86_64-w64-windows-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+  "scope": "Secondary exact-author kernel checks. Source retention and observed proof/type dependence are separate fields.",
+  "results": {
+    "supplement_p82_author_check.lean": {
+      "returncode": 0,
+      "wall_seconds": 18.30307379999431,
+      "target_type": "∀ (b : ℕ), Nat.lcm 120 b = 3720 → Nat.gcd 120 b = 8 → b = 248",
+      "axiom_closures": {
+        "P82Bad.abandoned_residue": [
+          "propext"
+        ],
+        "P82Bad.product_slip_wrong": [
+          "propext"
+        ],
+        "P82Bad.p82_target": [
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_node_probes": {
+        "P82Bad.abandoned_residue": {
+          "name": "P82Bad.abandoned_residue",
+          "proof_constants": [
+            "Mathlib.Meta.NormNum.isNat_eq_true",
+            "Nat",
+            "Nat.instAddMonoidWithOne",
+            "HMod.hMod",
+            "instHMod",
+            "Nat.instMod",
+            "OfNat.ofNat",
+            "instOfNatNat",
+            "Mathlib.Meta.NormNum.isNat_natMod",
+            "Mathlib.Meta.NormNum.isNat_ofNat",
+            "Eq.refl"
+          ],
+          "type": "248 % 120 = 8",
+          "type_constants": [
+            "Eq",
+            "Nat",
+            "HMod.hMod",
+            "instHMod",
+            "Nat.instMod",
+            "OfNat.ofNat",
+            "instOfNatNat"
+          ]
+        },
+        "P82Bad.product_slip_wrong": {
+          "name": "P82Bad.product_slip_wrong",
+          "proof_constants": [
+            "Mathlib.Meta.NormNum.isNat_eq_true",
+            "Nat",
+            "Nat.instAddMonoidWithOne",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "OfNat.ofNat",
+            "instOfNatNat",
+            "Mathlib.Meta.NormNum.isNat_mul",
+            "Nat.instSemiring",
+            "Distrib.toMul",
+            "instDistribOfSemiring",
+            "Eq.refl",
+            "Mathlib.Meta.NormNum.isNat_ofNat"
+          ],
+          "type": "8 * 3720 = 29760",
+          "type_constants": [
+            "Eq",
+            "Nat",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "OfNat.ofNat",
+            "instOfNatNat"
+          ]
+        },
+        "P82Bad.p82_target": {
+          "name": "P82Bad.p82_target",
+          "proof_constants": [
+            "Nat",
+            "Eq",
+            "Nat.lcm",
+            "OfNat.ofNat",
+            "instOfNatNat",
+            "Nat.gcd",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "Trans.trans",
+            "instTransEq",
+            "Eq.symm",
+            "Nat.gcd_mul_lcm",
+            "Eq.mpr",
+            "id",
+            "congrArg",
+            "Eq.refl",
+            "P82Bad.product_slip_wrong",
+            "Decidable.byContradiction",
+            "instDecidableEqNat",
+            "Not",
+            "P82Bad.p82_target._proof_1_1"
+          ],
+          "type": "∀ (b : ℕ), Nat.lcm 120 b = 3720 → Nat.gcd 120 b = 8 → b = 248",
+          "type_constants": [
+            "Nat",
+            "Eq",
+            "Nat.lcm",
+            "OfNat.ofNat",
+            "instOfNatNat",
+            "Nat.gcd"
+          ]
+        }
+      },
+      "protected_declaration_actually_used": true,
+      "status": "VERIFIED",
+      "case": "p82",
+      "variant": "author_check",
+      "source_sha256": "552d17ebdccaf21be93dd22d42b2a2d4e34adb02ea781c59bd1657b4fee001e7",
+      "protected_source_preserved": false,
+      "matches_author_elaborated_target_type": true
+    },
+    "supplement_p82_preserved_transport.lean": {
+      "returncode": 0,
+      "wall_seconds": 18.25269709999702,
+      "target_type": "∀ (b : ℕ), Nat.lcm 120 b = 3720 → Nat.gcd 120 b = 8 → b = 248",
+      "axiom_closures": {
+        "P82Bad.abandoned_residue": [
+          "propext"
+        ],
+        "P82Bad.product_slip_wrong": [
+          "propext"
+        ],
+        "P82Bad.p82_target": [
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_node_probes": {
+        "P82Bad.abandoned_residue": {
+          "name": "P82Bad.abandoned_residue",
+          "proof_constants": [
+            "Mathlib.Meta.NormNum.isNat_eq_true",
+            "Nat",
+            "Nat.instAddMonoidWithOne",
+            "HMod.hMod",
+            "instHMod",
+            "Nat.instMod",
+            "OfNat.ofNat",
+            "instOfNatNat",
+            "Mathlib.Meta.NormNum.isNat_natMod",
+            "Mathlib.Meta.NormNum.isNat_ofNat",
+            "Eq.refl"
+          ],
+          "type": "248 % 120 = 8",
+          "type_constants": [
+            "Eq",
+            "Nat",
+            "HMod.hMod",
+            "instHMod",
+            "Nat.instMod",
+            "OfNat.ofNat",
+            "instOfNatNat"
+          ]
+        },
+        "P82Bad.product_slip_wrong": {
+          "name": "P82Bad.product_slip_wrong",
+          "proof_constants": [
+            "Mathlib.Meta.NormNum.isNat_eq_true",
+            "Nat",
+            "Nat.instAddMonoidWithOne",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "OfNat.ofNat",
+            "instOfNatNat",
+            "Mathlib.Meta.NormNum.isNat_mul",
+            "Nat.instSemiring",
+            "Distrib.toMul",
+            "instDistribOfSemiring",
+            "Eq.refl",
+            "Mathlib.Meta.NormNum.isNat_ofNat"
+          ],
+          "type": "8 * 3720 = 120 * 248",
+          "type_constants": [
+            "Eq",
+            "Nat",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "OfNat.ofNat",
+            "instOfNatNat"
+          ]
+        },
+        "P82Bad.p82_target": {
+          "name": "P82Bad.p82_target",
+          "proof_constants": [
+            "Nat",
+            "Eq",
+            "Nat.lcm",
+            "OfNat.ofNat",
+            "instOfNatNat",
+            "Nat.gcd",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "Trans.trans",
+            "instTransEq",
+            "Eq.symm",
+            "Nat.gcd_mul_lcm",
+            "Eq.mpr",
+            "id",
+            "congrArg",
+            "Eq.refl",
+            "P82Bad.product_slip_wrong",
+            "Mathlib.Meta.NormNum.isNat_eq_true",
+            "Nat.instAddMonoidWithOne",
+            "Mathlib.Meta.NormNum.isNat_mul",
+            "Nat.instSemiring",
+            "Distrib.toMul",
+            "instDistribOfSemiring",
+            "Mathlib.Meta.NormNum.isNat_ofNat",
+            "Decidable.byContradiction",
+            "instDecidableEqNat",
+            "Not",
+            "P82Bad.p82_target._proof_1_1"
+          ],
+          "type": "∀ (b : ℕ), Nat.lcm 120 b = 3720 → Nat.gcd 120 b = 8 → b = 248",
+          "type_constants": [
+            "Nat",
+            "Eq",
+            "Nat.lcm",
+            "OfNat.ofNat",
+            "instOfNatNat",
+            "Nat.gcd"
+          ]
+        }
+      },
+      "protected_declaration_actually_used": true,
+      "status": "VERIFIED",
+      "case": "p82",
+      "variant": "preserved_transport",
+      "source_sha256": "fec05bcb21b78d049c4a848b3996f969c9ed64e44c049493c8502848e5453a6c",
+      "protected_source_preserved": true,
+      "matches_author_elaborated_target_type": true
+    },
+    "supplement_p30_author_check.lean": {
+      "returncode": 0,
+      "wall_seconds": 7.662150999996811,
+      "target_type": "∀ (n : ℕ), 5 * n % 17 = 8 → n % 17 = 5",
+      "axiom_closures": {
+        "P30Bad.residue_wrong": [
+          "Quot.sound",
+          "propext"
+        ],
+        "P30Bad.p30_target": [
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_node_probes": {
+        "P30Bad.residue_wrong": {
+          "name": "P30Bad.residue_wrong",
+          "proof_constants": [
+            "Nat",
+            "Eq",
+            "HMod.hMod",
+            "instHMod",
+            "Nat.instMod",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "OfNat.ofNat",
+            "instOfNatNat",
+            "Decidable.byContradiction",
+            "instDecidableEqNat",
+            "Not",
+            "P30Bad.residue_wrong._proof_1_1"
+          ],
+          "type": "∀ (n : ℕ), 5 * n % 17 = 8 → n % 17 = 5",
+          "type_constants": [
+            "Nat",
+            "Eq",
+            "HMod.hMod",
+            "instHMod",
+            "Nat.instMod",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "OfNat.ofNat",
+            "instOfNatNat"
+          ]
+        },
+        "P30Bad.p30_target": {
+          "name": "P30Bad.p30_target",
+          "proof_constants": [
+            "Nat",
+            "Eq",
+            "HMod.hMod",
+            "instHMod",
+            "Nat.instMod",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "OfNat.ofNat",
+            "instOfNatNat",
+            "P30Bad.residue_wrong"
+          ],
+          "type": "∀ (n : ℕ), 5 * n % 17 = 8 → n % 17 = 5",
+          "type_constants": [
+            "Nat",
+            "Eq",
+            "HMod.hMod",
+            "instHMod",
+            "Nat.instMod",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "OfNat.ofNat",
+            "instOfNatNat"
+          ]
+        }
+      },
+      "protected_declaration_actually_used": true,
+      "status": "VERIFIED",
+      "case": "p30",
+      "variant": "author_check",
+      "source_sha256": "49db03355c9f46e7cf16fbe1daf9f165e8c56f27678307993de30ff9993172d8",
+      "protected_source_preserved": false,
+      "matches_author_elaborated_target_type": true
+    },
+    "supplement_p30_preserved_direct.lean": {
+      "returncode": 0,
+      "wall_seconds": 7.984720100001141,
+      "target_type": "∀ (n : ℕ), 5 * n % 17 = 8 → n % 17 = 5",
+      "axiom_closures": {
+        "P30Bad.residue_wrong": [],
+        "P30Bad.p30_target": [
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "compiled_node_probes": {
+        "P30Bad.residue_wrong": {
+          "name": "P30Bad.residue_wrong",
+          "proof_constants": [
+            "Eq.refl",
+            "Nat",
+            "HMod.hMod",
+            "instHMod",
+            "Nat.instMod",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "OfNat.ofNat",
+            "instOfNatNat"
+          ],
+          "type": "5 * 7 % 17 = 1",
+          "type_constants": [
+            "Eq",
+            "Nat",
+            "HMod.hMod",
+            "instHMod",
+            "Nat.instMod",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "OfNat.ofNat",
+            "instOfNatNat"
+          ]
+        },
+        "P30Bad.p30_target": {
+          "name": "P30Bad.p30_target",
+          "proof_constants": [
+            "Nat",
+            "Eq",
+            "HMod.hMod",
+            "instHMod",
+            "Nat.instMod",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "OfNat.ofNat",
+            "instOfNatNat",
+            "Decidable.byContradiction",
+            "instDecidableEqNat",
+            "Not",
+            "P30Bad.p30_target._proof_1_1"
+          ],
+          "type": "∀ (n : ℕ), 5 * n % 17 = 8 → n % 17 = 5",
+          "type_constants": [
+            "Nat",
+            "Eq",
+            "HMod.hMod",
+            "instHMod",
+            "Nat.instMod",
+            "HMul.hMul",
+            "instHMul",
+            "instMulNat",
+            "OfNat.ofNat",
+            "instOfNatNat"
+          ]
+        }
+      },
+      "protected_declaration_actually_used": false,
+      "status": "VERIFIED",
+      "case": "p30",
+      "variant": "preserved_direct",
+      "source_sha256": "4d016ca79a4d6f94331965f2e54a541b172b5123542a2bc90df28bf2962c3c93",
+      "protected_source_preserved": true,
+      "matches_author_elaborated_target_type": true
+    },
+    "supplement_p30_preserved_inverse.lean": {
+      "status": "UNVERIFIED",
+      "reason": "Lean emitted a warning or error",
+      "wall_seconds": 7.718406899999536,
+      "stdout": "{\"caption\":\"\",\"data\":\"'decide' tactic does nothing\\n\\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\",\"endPos\":{\"column\":34,\"line\":21},\"fileName\":\"D:\\\\ACL\\\\outputs\\\\d39_supplement_reviewed\\\\supplement_p30_preserved_inverse.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"linter.unusedTactic\",\"pos\":{\"column\":28,\"line\":21},\"severity\":\"warning\"}\n{\"caption\":\"\",\"data\":\"this tactic is never executed\\n\\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\",\"endPos\":{\"column\":34,\"line\":21},\"fileName\":\"D:\\\\ACL\\\\outputs\\\\d39_supplement_reviewed\\\\supplement_p30_preserved_inverse.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"linter.unreachableTactic\",\"pos\":{\"column\":28,\"line\":21},\"severity\":\"warning\"}\n{\"caption\":\"\",\"data\":\"P30Bad.p30_target : ∀ (n : ℕ), 5 * n % 17 = 8 → n % 17 = 5\",\"endPos\":{\"column\":6,\"line\":24},\"fileName\":\"D:\\\\ACL\\\\outputs\\\\d39_supplement_reviewed\\\\supplement_p30_preserved_inverse.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":0,\"line\":24},\"severity\":\"information\"}\n{\"caption\":\"\",\"data\":\"'P30Bad.residue_wrong' does not depend on any axioms\",\"endPos\":{\"column\":6,\"line\":25},\"fileName\":\"D:\\\\ACL\\\\outputs\\\\d39_supplement_reviewed\\\\supplement_p30_preserved_inverse.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":0,\"line\":25},\"severity\":\"information\"}\n{\"caption\":\"\",\"data\":\"'P30Bad.p30_target' depends on axioms: [propext]\",\"endPos\":{\"column\":6,\"line\":26},\"fileName\":\"D:\\\\ACL\\\\outputs\\\\d39_supplement_reviewed\\\\supplement_p30_preserved_inverse.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":0,\"line\":26},\"severity\":\"information\"}\n{\"caption\":\"\",\"data\":\"D39_SUPPLEMENT_IDENTITY {\\\"name\\\":\\\"P30Bad.residue_wrong\\\",\\\"proof_constants\\\":[\\\"Eq.refl\\\",\\\"Nat\\\",\\\"HMod.hMod\\\",\\\"instHMod\\\",\\\"Nat.instMod\\\",\\\"HMul.hMul\\\",\\\"instHMul\\\",\\\"instMulNat\\\",\\\"OfNat.ofNat\\\",\\\"instOfNatNat\\\"],\\\"type\\\":\\\"5 * 7 % 17 = 1\\\",\\\"type_constants\\\":[\\\"Eq\\\",\\\"Nat\\\",\\\"HMod.hMod\\\",\\\"instHMod\\\",\\\"Nat.instMod\\\",\\\"HMul.hMul\\\",\\\"instHMul\\\",\\\"instMulNat\\\",\\\"OfNat.ofNat\\\",\\\"instOfNatNat\\\"]}\\nD39_SUPPLEMENT_IDENTITY {\\\"name\\\":\\\"P30Bad.p30_target\\\",\\\"proof_constants\\\":[\\\"Nat\\\",\\\"Eq\\\",\\\"HMod.hMod\\\",\\\"instHMod\\\",\\\"Nat.instMod\\\",\\\"HMul.hMul\\\",\\\"instHMul\\\",\\\"instMulNat\\\",\\\"OfNat.ofNat\\\",\\\"instOfNatNat\\\",\\\"Trans.trans\\\",\\\"instTransEq\\\",\\\"Eq.mpr\\\",\\\"id\\\",\\\"congrArg\\\",\\\"P30Bad.residue_wrong\\\",\\\"Nat.one_mul\\\",\\\"Eq.refl\\\",\\\"Nat.mod_mul_mod\\\",\\\"Nat.mul_comm\\\",\\\"Nat.mul_assoc\\\",\\\"Eq.symm\\\",\\\"Nat.mul_mod_mod\\\"],\\\"type\\\":\\\"∀ (n : ℕ), 5 * n % 17 = 8 → n % 17 = 5\\\",\\\"type_constants\\\":[\\\"Nat\\\",\\\"Eq\\\",\\\"HMod.hMod\\\",\\\"instHMod\\\",\\\"Nat.instMod\\\",\\\"HMul.hMul\\\",\\\"instHMul\\\",\\\"instMulNat\\\",\\\"OfNat.ofNat\\\",\\\"instOfNatNat\\\"]}\\n\",\"endPos\":{\"column\":5,\"line\":29},\"fileName\":\"D:\\\\ACL\\\\outputs\\\\d39_supplement_reviewed\\\\supplement_p30_preserved_inverse.lean\",\"isSilent\":false,\"keepFullRange\":false,\"kind\":\"[anonymous]\",\"pos\":{\"column\":0,\"line\":29},\"severity\":\"information\"}\n",
+      "stderr": "",
+      "case": "p30",
+      "variant": "preserved_inverse",
+      "source_sha256": "69cd5be2e4d633e2b576b44f2c4cd16b92b950411cfe27e9575ca09e84645ff5",
+      "protected_source_preserved": true,
+      "matches_author_elaborated_target_type": false
+    }
+  }
+}

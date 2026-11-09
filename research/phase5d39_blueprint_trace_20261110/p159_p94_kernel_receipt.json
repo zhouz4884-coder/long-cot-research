@@ -1,0 +1,97 @@
+{
+  "status": "SAME_TARGET_PRESERVATION_KERNEL_ACCEPTED",
+  "scope": "Functional proof checks only. p165 is a same-author-source three-body splice. p94 is an auditor-constructed cross-episode bridge.",
+  "suite": "p94",
+  "source_receipt_sha256": "d2556fc10cd3cf3095050c82352ace19d5e07b4d66ae7317add59d8994bf9a19",
+  "runtime_observation_sha256": "3f27959653f63c96b075c8d821acdb0ded8cff1f9eb2c494b80b5c3cbc0e00e5",
+  "same_author_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "author_exact_accepted": true,
+  "prior_proofs_independently_accepted": true,
+  "same_explicit_target_type": true,
+  "preserved_prior_axiom_sets_equal": true,
+  "prior_verified_declarations_preserved_in_same_target_certificate": 1,
+  "verified_prior_cells_released": 0,
+  "model_generation": false,
+  "cases": {
+    "p94_author_exact_check.lean": {
+      "source_sha256": "e9ce4bb5c8105fe95fd16a35f9b74157f4d9ae86bd1eb087ba7e6ae10e309b16",
+      "returncode": 0,
+      "accepted": true,
+      "errors_or_warnings": [],
+      "axioms": {
+        "P94Bad.product_bound_wrong": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "P94Bad.p94_target": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "target_type_print": null
+    },
+    "p94_author_bound_check.lean": {
+      "source_sha256": "e8417c773f9d6332d33ee048d00b35d9f4c9a22ac98a158824347879f26658a3",
+      "returncode": 0,
+      "accepted": true,
+      "errors_or_warnings": [],
+      "axioms": {
+        "P94Bad.product_bound_wrong": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "P94Bad.p94_target": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "target_type_print": "P94Bad.p94_target : ∀ (a m c : ℕ), a + m + c = 12 → a * m * c + a * m + m * c + a * c ≤ 112"
+    },
+    "p94_qwen_helper_only.lean": {
+      "source_sha256": "97f35f52e6a6214896befdf29c5380fe367e2f90b58730d91674eb893c760a93",
+      "returncode": 0,
+      "accepted": true,
+      "errors_or_warnings": [],
+      "axioms": {
+        "P94Bad.product_bound_wrong": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "target_type_print": null
+    },
+    "p94_preserving_bridge.lean": {
+      "source_sha256": "9bbd6a59bc59833e15b0603309ce21dc9069e7669f1fe85c4344f9001843c391",
+      "returncode": 0,
+      "accepted": true,
+      "errors_or_warnings": [],
+      "axioms": {
+        "P94Bad.product_bound_wrong": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "P94Bad.product_bound_expanded": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "P94Bad.p94_target": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "target_type_print": "P94Bad.p94_target : ∀ (a m c : ℕ), a + m + c = 12 → a * m * c + a * m + m * c + a * c ≤ 112"
+    }
+  }
+}

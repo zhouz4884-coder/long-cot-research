@@ -1,0 +1,162 @@
+{
+  "cold": [
+    {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "d39_resident_target": []
+      },
+      "source_sha256": "aa94d37a13961a491d71ef416c1284f2dd7cf31842afb70cd0a3d2bd3da6b77c",
+      "elapsed_seconds": 1.7440655999962473,
+      "exit_code": 0,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'d39_resident_target' does not depend on any axioms",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "bce19bcecfe4dc527ec12953a07fe742ff8110439169c6ad939238588c9dea82",
+      "elapsed_seconds": 1.5943484000017634,
+      "exit_code": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "Type mismatch\n  True.intro\nhas type\n  True\nbut is expected to have type\n  n + 0 = n",
+          "line": 4
+        },
+        {
+          "severity": 3,
+          "message": "'d39_resident_target' depends on axioms: [sorryAx]",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "d39_resident_target": []
+      },
+      "source_sha256": "aa94d37a13961a491d71ef416c1284f2dd7cf31842afb70cd0a3d2bd3da6b77c",
+      "elapsed_seconds": 1.4519128000029013,
+      "exit_code": 0,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'d39_resident_target' does not depend on any axioms",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "2a1f1779522572d32493529fd725e9089018200d1727010e84579da85eaf8e5c",
+      "elapsed_seconds": 1.5586173000046983,
+      "exit_code": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "declaration uses 'sorry'",
+          "line": 3
+        },
+        {
+          "severity": 3,
+          "message": "'d39_resident_target' depends on axioms: [sorryAx]",
+          "line": 5
+        }
+      ]
+    }
+  ],
+  "resident": [
+    {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "d39_resident_target": []
+      },
+      "source_sha256": "aa94d37a13961a491d71ef416c1284f2dd7cf31842afb70cd0a3d2bd3da6b77c",
+      "document_version": 1,
+      "elapsed_seconds": 1.5934974999981932,
+      "matching_publications": 4,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'d39_resident_target' does not depend on any axioms",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "bce19bcecfe4dc527ec12953a07fe742ff8110439169c6ad939238588c9dea82",
+      "document_version": 2,
+      "elapsed_seconds": 0.21829120000620605,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "Type mismatch\n  True.intro\nhas type\n  True\nbut is expected to have type\n  n + 0 = n",
+          "line": 4
+        },
+        {
+          "severity": 3,
+          "message": "'d39_resident_target' depends on axioms: [sorryAx]",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "d39_resident_target": []
+      },
+      "source_sha256": "aa94d37a13961a491d71ef416c1284f2dd7cf31842afb70cd0a3d2bd3da6b77c",
+      "document_version": 3,
+      "elapsed_seconds": 0.2097801999989315,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'d39_resident_target' does not depend on any axioms",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "status": "REJECTED",
+      "axioms": {},
+      "source_sha256": "2a1f1779522572d32493529fd725e9089018200d1727010e84579da85eaf8e5c",
+      "document_version": 4,
+      "elapsed_seconds": 0.21672879999823635,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 1,
+          "message": "declaration uses 'sorry'",
+          "line": 3
+        },
+        {
+          "severity": 3,
+          "message": "'d39_resident_target' depends on axioms: [sorryAx]",
+          "line": 5
+        }
+      ]
+    }
+  ],
+  "resident_startup_seconds": 0.18912129999807803,
+  "cold_total_seconds": 6.34894410000561,
+  "resident_total_seconds": 2.427418999999645,
+  "all_statuses_match": true,
+  "expected_statuses": [
+    "KERNEL_ACCEPTED",
+    "REJECTED",
+    "KERNEL_ACCEPTED",
+    "REJECTED"
+  ],
+  "scope": "Trusted Lean core protocol controls only. No BlueprintTrace module or author environment is used.",
+  "status": "PASS"
+}

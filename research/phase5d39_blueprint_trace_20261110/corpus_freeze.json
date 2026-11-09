@@ -1,0 +1,38 @@
+{
+  "status": "FROZEN_COMPLETE_POPULATION_BEFORE_FULL_OUTCOME_ANALYSIS",
+  "baseline_commit": "df460b430f8ec792af69b896edc5aa9f958a90a8",
+  "protocol": "d39-blueprinttrace-complete-archive-v1",
+  "source": {
+    "dataset": "Karifannaa/BlueprintTrace",
+    "revision": "504b7ae3604f363a3cf5e32308b08d2ac258ac25",
+    "artifact_commit": "954edd366a0d1474ecfebe418d4cac14aaf8c6bf",
+    "state_source_path": "data/states_v0.jsonl",
+    "state_source_sha256": "8845042e9953d8794d1f78dfa4f87a43e3502cdd2b783ad72e7035e6ccf9cb6b",
+    "archive_manifest_sha256": "5cfa10a99142d131e1dfbb4386c4aaba808e99467a16d37ea1bfdc3d8c16c4aa",
+    "archives": [
+      {"model": "deepseek/deepseek-v4-flash", "path": "trajectories/llm_calls_equal_source.tar.gz", "sha256": "6acd6a2571ec420e61b05d2ed2d18da4422b6420a7b6d6feb98802030959500e"},
+      {"model": "qwen/qwen3.6-flash", "path": "trajectories/llm_calls_qwen_equal_source.tar.gz", "sha256": "8a7a7e6ed192129a754f94ea85089978fc44f136fc11df01a1d676bf5b93ccb7"}
+    ]
+  },
+  "population": {
+    "rule": "All published state IDs in both equal_source_v2 archives and exactly one episode per state, model and typed, patch, or rewrite interface. Retain unsuccessful episodes, every paid attempt and the six D3.8 sample states. Skip only archive metadata and non-protocol files. Missing, duplicate, mismatched or ambiguous identities are reported; no replacement.",
+    "expected_states": 142,
+    "expected_independent_target_ids": 141,
+    "target_cluster_key": "state.seed_source.item_id (published original miniF2F target, validated against benchmark metadata)",
+    "interfaces": ["typed", "patch", "rewrite"],
+    "expected_episodes": 852,
+    "previous_d38_states": ["p162_bad.state0", "p69_bad.state0", "p88_bad.state0", "p39_bad.state0", "p127_bad.state0", "p159_bad.state0"]
+  },
+  "attempt_scope": {
+    "source": "Archive stepNN.json bytes, its provider response, matching episode action, and author .elab.json companion when present. No candidate or label lookup outside the pinned archive.",
+    "failure_types": "Separate author-accepted target, archived non-timeout Lean error, timeout, harness rejection, applied but still unsolved, and no recorded model action.",
+    "prerequisites": "Recorded proved or proved_and_used ancestors of the same original target in the latest author graph visible before the attempt. Use declared edges and author status labels, not inferred Lean proof-term validity. Keep unresolved graph binding explicit."
+  },
+  "endpoint_scope": {
+    "target": "Author acceptance with an archived solved step. Match final.module.lean bytes to the author's hash when present. For step-only outputs, only use a candidate source matching the accepted step's module hash without mutating or reconstructing missing source; otherwise mark unknown endpoint source.",
+    "source_preservation": "Compare each initially proved declared target prerequisite by exact blueprint label with its terminal declaration span, trimming outer whitespace only. Retain equal source, changed source, absent exact label, and unresolved source as distinct outcomes. An unchanged declaration alone does not establish unchanged semantic environment or continued use by the repaired target.",
+    "necessity": "A checked successful endpoint retaining all identified prior declarations is an observed no-replacement path for those declarations. Edited, dropped, or renamed declarations, absent evidence and unsuccessful episodes do not establish whether release was necessary. All positive minimum-necessity claims remain unassessed without exact equal-scope counterfactual verification.",
+    "successful_edits": "Record observed author-accepted actions and source changes; distinguish prior applied-but-unsolved attempts from the successful endpoint. Compare within the same target; no causal conclusion from action occurrence."
+  },
+  "analysis_scope": "Public author-controlled starting failures with real archived model attempts. One observation per author episode, repeated model/interface observations clustered by original target. No local Lean replay, GPU, new independent task accuracy, or natural-origin failure claim."
+}

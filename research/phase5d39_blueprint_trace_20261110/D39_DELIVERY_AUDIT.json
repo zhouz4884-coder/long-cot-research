@@ -1,0 +1,95 @@
+{
+  "status": "COMPLETE_NO_GO_CLOSE_MINIMUM_RELEASE_MAINLINE",
+  "baseline_commit": "df460b430f8ec792af69b896edc5aa9f958a90a8",
+  "archive": {
+    "independent_target_clusters": 141,
+    "episodes": 852,
+    "step_records": 3499,
+    "author_rescan_success": 573,
+    "positive_minimum_release_certificates": 0,
+    "unresolved_dynamic_states": 36
+  },
+  "mandatory_negative": {
+    "target": "p159",
+    "verified_cells_released": 0,
+    "retained_used_count": 3
+  },
+  "primary_nominated_targets": {
+    "p94": {
+      "full_target_verified": true,
+      "proved_cells_retained_and_used": 1,
+      "verified_cells_released": 0,
+      "target_proof_paths": {
+        "P94Bad.product_bound_wrong": [
+          "P94Bad.p94_target",
+          "P94Bad.product_bound_expanded",
+          "P94Bad.product_bound_wrong"
+        ]
+      }
+    },
+    "p165": {
+      "full_target_verified": true,
+      "proved_cells_retained_and_used": 3,
+      "verified_cells_released": 0,
+      "target_proof_paths": {
+        "P165Bad.a_value": [
+          "P165Bad.p165_target",
+          "P165Bad.a_value"
+        ],
+        "P165Bad.b_cubed": [
+          "P165Bad.p165_target",
+          "P165Bad.b_cubed"
+        ],
+        "P165Bad.b_value": [
+          "P165Bad.p165_target",
+          "P165Bad.b_value"
+        ]
+      }
+    }
+  },
+  "supplemental_nominated_targets": {
+    "p82": "SAME_TARGET_PROTECTED_DECLARATION_RETAINED_AND_USED",
+    "p30": "SAME_TARGET_PROTECTED_DECLARATION_RETAINED_WITH_UNUSED_AND_USED_VARIANTS"
+  },
+  "independent_verified_required_release_cases": 0,
+  "independent_model_test_denominator": 0,
+  "model_tokens": 0,
+  "gpu_seconds": 0,
+  "cpu_cost": {
+    "cold_three": 55.0902960000094,
+    "resident_three_including_shutdown": 24.357261199998902,
+    "one_author_batch": 18.336934699997073,
+    "material_preparation": 1.806185599998571
+  },
+  "reason": "All four source-change nominations admit a same-target preserved proof in the matched author environment. Unknown states remain unknown. No independent baseline gap qualifies a model experiment.",
+  "evidence_sha256": {
+    "D39_EVIDENCE_INPUTS.json": "7964bdd4bbd39b6f80a6a15c80b7e5a46c2d36d304626a4cb06b3b0765e6131b",
+    "D39_SOURCE_LICENSES.json": "022e848155fc797bba561aba5567d052259cd0a0a927cf44ea530c104ff88aa7",
+    "D39_REPLAY_GATE.json": "2f62a59bca11c40a0e33d218cf688b8df3a04777c273cb71b1de4d524610f57f",
+    "D39_SUPPLEMENT_FREEZE.json": "5b1be07562bdf5ea889128b2e9826f3041f97ec2d6802a4fe0ea8e55f18c8b85",
+    "corpus_freeze.json": "f684cb7373e94824a3023f7a2f045a8f0dfee16527467dd6107c8e17b7a5f4ca",
+    "corpus_inventory.json": "d2605672b6843ef6466cd1a56253ee5230e40bad4832e74643af02f670cfb5a7",
+    "corpus_summary.json": "427ff6666daa2a0dd9ced286485f1d7d2e6777f377e84d1ea09b1cd2f3e81a2a",
+    "corpus_replay_nomination.json": "d56cf7492bda50d742d529ee95745f5e27848f6d0e0a7489cb34131973519c58",
+    "D39_CORPUS_VALIDATION.json": "5ebdb91d7b6df447276248b2be24771de669a6016c1ea6c4c8c4470a5b3b0ed0",
+    "author_runtime_toolchain.json": "b4ce9896cae29b1470f267ad7282f5ccf940911ef36347fa60599da6103d3206",
+    "author_runtime_sources.json": "6eadef24c3a0b3a37adb1e64e6bc2962a3b342f95292a8376ff2c27a25829add",
+    "author_runtime_smoke.json": "ca19818e10f7246a3f2259eb0f2341c33a47a9d55645c4aa8c325ceb7c17e2ff",
+    "p159_reviewed_source_receipt.json": "d3e7fbb9f90b18d6af2c992b6461e09605da279f11f01e3f439e9d1c5e8b0438",
+    "p159_identity_receipt.json": "6a9e3f47efecad8eced874ee68e18185054964ec97dbff8e4b7fa8c50623769a",
+    "p159_p159_runtime_observed.json": "66feb66be0383e5c8c876f144d70816c9feed85ed302a9719047431414a05df6",
+    "p159_p94_source_receipt.json": "d2556fc10cd3cf3095050c82352ace19d5e07b4d66ae7317add59d8994bf9a19",
+    "p159_p165_source_receipt.json": "8b035ddb1e22daf4fd10c054edb3ef1d0c3776b0c3cbd2caeae93608e4cebd17",
+    "p159_p94_runtime_observed.json": "3f27959653f63c96b075c8d821acdb0ded8cff1f9eb2c494b80b5c3cbc0e00e5",
+    "p159_p165_runtime_observed.json": "3c616e49105d4b8d89493e319704c0d80ad6ab4a4cf653055a449470b618c2e0",
+    "p159_p94_kernel_receipt.json": "3062f66007a0da92e17cc794c0b631a8422e53029aa2994c8833cea38687d826",
+    "p159_p165_kernel_receipt.json": "e5c729dc20725bef19b7537b4d9ff5f40bc8599c50ba79ba531ea8d4dce97d0e",
+    "p159_closure_probe_freeze.json": "e47a8fc35162f785c54957a89c4e398ccafb981e1e718daa4215d1a9167a882e",
+    "p159_closure_probe_receipt.json": "2cde23265f4b053b5eb62eddbd30a6509ec9d2437e8f31431b0395b977579079",
+    "supplement_source_receipt.json": "583316b7dced0ded8df84c7e43dda2deac9b4e2418ba0d2e1d5c0b8bd5555c35",
+    "supplement_runtime_observed.json": "185cdd57843d109abec52a96d1b82d33e5ce9c5d348e8e43c290e0370e18528d",
+    "supplement_inverse_retry_source.json": "848f5e8e9a5d78e0855c637784e4e8826ecae32bef4588da8fd9a49886caa6df",
+    "supplement_inverse_retry_observed.json": "195eb0ebd5b4838cadea11a42aacb9cf4a868fdd2a7ab9a48f08cc1e498c95a8",
+    "p159_replay_cost_results.json": "c8ac3a1b0e6bf3fd06d582bc545bb2c7fddbca1605bd35c1f948a2f75fef9b29"
+  }
+}

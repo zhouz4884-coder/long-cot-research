@@ -1,0 +1,97 @@
+{
+  "status": "ARCHIVE_BOUND_REVIEWED_COUNTERFACTUAL_SOURCE_ONLY",
+  "author_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "archive_sha256": "6acd6a2571ec420e61b05d2ed2d18da4422b6420a7b6d6feb98802030959500e",
+  "members": {
+    "episode.json": "7543475938179b494371b2baf348f883e3184d2930a1c8480518d3a8f2de9304",
+    "step01.json": "1f282d5417ea125880b319fd4abf0ebe5d1b456c06690d5554e5e6b0b9ba4dca",
+    "step03.json": "cd36320c175a9e485a2522bfe46a69683080a1f20e957b20df1914d5d376ca2a",
+    "step03.check.lean": "a200bc6ea6fb0d771b0ae4ae5a059b12ac2b5278c584a37bfcec7cf3ab3927d9",
+    "step03.check.elab.json": "ec72c7f9cade9e78e8b7baac0dea99ef39e11a7eaeda5fb9857dc142501b3f76",
+    "step03.gate.elab.json": "d0b3880be6c57ebc3f287b9e2a289ab0f4bbcb0d8e5c03b4b96922483249a19d"
+  },
+  "initial_module_sha256": "122f4f48afcaeb644bb0ba1e8e6ff708304e43290be6804cb304e9704ee560c6",
+  "author_episode_final_module_sha256": null,
+  "author_step_module_sha256": "7838fd17d815f04393c77596acd271d758cbc0975adb6f49743e30af13268ae7",
+  "author_rescan_check_sha256": "a200bc6ea6fb0d771b0ae4ae5a059b12ac2b5278c584a37bfcec7cf3ab3927d9",
+  "target_header_sha256": "7bc5bc984c27b6a7243d080722bcab692a76aa2a3797e443c63a075de29b5792",
+  "scope": "Separate author rescan source and paired old-body transplant. Proof success and preservation need exact local kernel validation.",
+  "author_archived_check_axioms": {
+    "a_cubed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "a_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "b_cubed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "b_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "p165_target": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "preserved_source_body_splices": [
+    {
+      "declaration": "P165Bad.a_value",
+      "initial_blueprint_id": "lem:p165bad-a-value",
+      "accepted_blueprint_id": "p165bad-a-value",
+      "unchanged_header_sha256": "876e924435b4be1a8200009b4c3246bbd1eca5a34fe66bdd8adb5a2f32d3bd74",
+      "restored_original_proof_body_sha256": "0f0e36ee9cbb53952a71bcb74f2edeaa1c35bc6aee4ff89ee82eca0f66d3e360",
+      "author_new_proof_body_sha256": "59a1cb671e9dfa455fde92d404c575e69fa45c940a2dd4b35f5b3dcf536502a9"
+    },
+    {
+      "declaration": "P165Bad.b_cubed",
+      "initial_blueprint_id": "lem:p165bad-b-cubed",
+      "accepted_blueprint_id": "p165bad-b-cubed",
+      "unchanged_header_sha256": "a8c6b70497fc05b5d4eae4c9abe83836671c757ba223ea488230b575bfd0a045",
+      "restored_original_proof_body_sha256": "0dee38d98d8288c98baa505acafe7189e8f4046e41da5a936589a5eaaee5fc14",
+      "author_new_proof_body_sha256": "0a0142bc335250d0f99d3f1aae5fb8ed33bc0ee93cb9bf5050f5407bccf95a9d"
+    },
+    {
+      "declaration": "P165Bad.b_value",
+      "initial_blueprint_id": "lem:p165bad-b-value",
+      "accepted_blueprint_id": "p165bad-b-value",
+      "unchanged_header_sha256": "5d5bd9aa9e33fe544e03f16a43a3e3aebf91b4a680a8b8ebb7ffc5feff32b034",
+      "restored_original_proof_body_sha256": "6a019919d1adf9a9311d9cd788dad2b0ecb071e528ad77f3ad503347d00952ab",
+      "author_new_proof_body_sha256": "ea10cbe31fc7d77c498337628bdf21b1d8bc6d9560ec4d51ebabd938ed3891a9"
+    }
+  ],
+  "prepared_fixtures": {
+    "p165_author_rescan_exact_check.lean": {
+      "sha256": "a200bc6ea6fb0d771b0ae4ae5a059b12ac2b5278c584a37bfcec7cf3ab3927d9",
+      "bytes": 2418
+    },
+    "p165_author_bound_check.lean": {
+      "sha256": "457f5038ffe78651ff4f79c8827301812738db8dccdc66a5e867f4c4fef619cd",
+      "bytes": 2523
+    },
+    "p165_preserved_transplant.lean": {
+      "sha256": "9d4a58700a76572b8b972f3f9fd3f293cb52357ee3731d714cb4a6918cb9ea84",
+      "bytes": 2468
+    },
+    "p165_initial_three.lean": {
+      "sha256": "66d88a43d3a27c399bc0089795f60f84176259c19da0361b8d679bdc03ee4a88",
+      "bytes": 1080
+    }
+  },
+  "raw_author_gate_executable": false,
+  "executed_locally": false,
+  "model_generation": false
+}

@@ -1,0 +1,91 @@
+{
+  "status": "REVIEWED_SUPPLEMENT_SOURCE_ONLY",
+  "secondary_freeze_sha256": "f5415a4919829061c14138d068085efb652a32aa64289d649379ba7e9b9d0c84",
+  "prepare_source_sha256": "7e370b3484037030308b8d5bbf27e7072fd5bb38b4243ce87a2b975ffb0888a5",
+  "author_inputs_sha256": "7964bdd4bbd39b6f80a6a15c80b7e5a46c2d36d304626a4cb06b3b0765e6131b",
+  "author_runtime_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "primary_selection_unchanged": [
+    "amc12_2000_p12",
+    "mathd_algebra_362"
+  ],
+  "scope": "Exact archived inputs plus deterministic reviewed substitutions. Only trusted target/type/axiom/direct-constant probes added. No local Lean verification during prepare.",
+  "cases": {
+    "p82": {
+      "target_id": "mathd_numbertheory_222",
+      "target_header_sha256": "1c269c872c79c57f8be7b77796cae55a7aa965308375c422786488e0f720ba5a",
+      "protected_declaration": "P82Bad.product_slip_wrong",
+      "old_protected_cell_sha256": "ef771f6c8757bac17e01ae3085aa2e16cf777d672f9aec182773852e519acc4b",
+      "author_replacement_cell_sha256": "29d7d80b1348ce590dd3c10a66131e399a414b5e0a5edcd8c66e8b20400882d8",
+      "archived_old_protected_axioms": {
+        "P82Bad.product_slip_wrong": [
+          "propext"
+        ]
+      },
+      "archived_complete_axioms": {
+        "P82Bad.abandoned_residue": [
+          "propext"
+        ],
+        "P82Bad.product_slip_wrong": [
+          "propext"
+        ],
+        "P82Bad.p82_target": [
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "archived_direct_target_axioms": null
+    },
+    "p30": {
+      "target_id": "mathd_numbertheory_92",
+      "target_header_sha256": "72081cf43269ceca770ffefd833868e293fe98a1426b974ac8931e119d00cb1a",
+      "protected_declaration": "P30Bad.residue_wrong",
+      "old_protected_cell_sha256": "5ed1f02ac4ba9e1e54088c7f2ef37a4e94c7a719d536b1150f77912af5664718",
+      "author_replacement_cell_sha256": "76498495459d97fb0219703b6d44fa5c35ab91509a45f5aac3aca541c9ba7bf7",
+      "archived_old_protected_axioms": {
+        "P30Bad.residue_wrong": []
+      },
+      "archived_complete_axioms": {
+        "P30Bad.residue_wrong": [
+          "Quot.sound",
+          "propext"
+        ],
+        "P30Bad.p30_target": [
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "archived_direct_target_axioms": {
+        "P30Bad.p30_target": [
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  },
+  "prepared_fixtures": {
+    "supplement_p82_author_check.lean": {
+      "sha256": "552d17ebdccaf21be93dd22d42b2a2d4e34adb02ea781c59bd1657b4fee001e7",
+      "bytes": 1889
+    },
+    "supplement_p82_preserved_transport.lean": {
+      "sha256": "fec05bcb21b78d049c4a848b3996f969c9ed64e44c049493c8502848e5453a6c",
+      "bytes": 1926
+    },
+    "supplement_p30_author_check.lean": {
+      "sha256": "49db03355c9f46e7cf16fbe1daf9f165e8c56f27678307993de30ff9993172d8",
+      "bytes": 1386
+    },
+    "supplement_p30_preserved_direct.lean": {
+      "sha256": "4d016ca79a4d6f94331965f2e54a541b172b5123542a2bc90df28bf2962c3c93",
+      "bytes": 1336
+    },
+    "supplement_p30_preserved_inverse.lean": {
+      "sha256": "69cd5be2e4d633e2b576b44f2c4cd16b92b950411cfe27e9575ca09e84645ff5",
+      "bytes": 1651
+    }
+  }
+}

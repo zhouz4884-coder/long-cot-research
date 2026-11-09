@@ -1,0 +1,55 @@
+{
+  "status": "FROZEN_SECONDARY_PRESERVATION_CONTROLS_BEFORE_EXECUTION",
+  "primary_selection_unchanged": ["amc12_2000_p12", "mathd_algebra_362"],
+  "scope": "Optional secondary exact-author-runtime controls for p82 and p30. Preserve the original previously proved declaration source and check the same full immutable target. Record source retention and actual proof/type dependency use separately. These are chosen archived cases, not new independent accuracy or minimum-release evidence.",
+  "root_gate_sha256": "2f62a59bca11c40a0e33d218cf688b8df3a04777c273cb71b1de4d524610f57f",
+  "author_inputs_sha256": "7964bdd4bbd39b6f80a6a15c80b7e5a46c2d36d304626a4cb06b3b0765e6131b",
+  "corpus_nomination_sha256": "d56cf7492bda50d742d529ee95745f5e27848f6d0e0a7489cb34131973519c58",
+  "archive_sha256": {
+    "deepseek": "6acd6a2571ec420e61b05d2ed2d18da4422b6420a7b6d6feb98802030959500e",
+    "qwen": "8a7a7e6ed192129a754f94ea85089978fc44f136fc11df01a1d676bf5b93ccb7"
+  },
+  "cases": {
+    "p82": {
+      "target_id": "mathd_numbertheory_222",
+      "state_id": "p82_bad.state0",
+      "failed_prefix": "data/llm_calls/p82_dead_node_patchsrcq_v0/typed/",
+      "failed_step_sha256": "85f1051eca0a67b1a9b2d31b4ebb8063c530d647f21777a0af4164606836cbc2",
+      "failed_check_source_sha256": "5bcdcc1588fbb2ab73b5da348d8bd375ebf2998636d9d17e8fa34702d573c143",
+      "failed_check_log_sha256": "10d287c6ee32e372eb92db506b812694c0c8376a23428aa9c988376dc345f580",
+      "old_visible_module_sha256": "3816c298a3fcadd4b7e418702645410053db4dec2e73641057e9bddb1ebef216",
+      "accepted_prefix": "data/llm_calls/p82_dead_node_patchsrc_v0/typed/",
+      "accepted_episode_sha256": "10cc84c864e8bce7ba938e5b61f6a35fc2a6551b82a7c90913ae164282bd42d8",
+      "accepted_module_sha256": "c8f646dd0b808d1395734baa76ed98e00f3d324aac0cd990682bea808a61108f",
+      "accepted_check_member": "step02.check.lean",
+      "accepted_check_sha256": "67fa31c98ef540de08dda2fa3b798280bd119efa5f160e720140a82e3e952321",
+      "accepted_check_log_member": "step02.check.elab.json",
+      "accepted_check_log_sha256": "d269152fa1a98a5d7502751157a5d300c898b0c5fced961feaf65e46b108d4b0",
+      "transform": "Keep the old product_slip_wrong declaration, including annotation and proof. Preserve accepted target header and dependency annotation. Replace exactly the calc edge from 8*3720 to 29760 with old checked equality to 120*248 plus norm_num on that closed product. Keep abandoned_residue unchanged.",
+      "expected_preserved_source_actual_use": true
+    },
+    "p30": {
+      "target_id": "mathd_numbertheory_92",
+      "state_id": "p30_bad.state0",
+      "failed_prefix": "data/llm_calls/p30_missing_hypothesis_patchsrcq_v0/typed/",
+      "failed_step_sha256": "d83306afd8ade752219e17e4a28b9ff84a09bb581544805b844f8cd68b51b8a7",
+      "failed_check_source_sha256": "1ef15d2d41c3bbd9b051df1989451ece9d9c7e9a438eca613e6f3b4826045007",
+      "failed_check_log_sha256": "868f09191d04674415841bf474831396e67a3bef7c17ec6db94a795e6adec89c",
+      "old_visible_module_sha256": "0b2b438091bf3cbba2805d1b6b303c8a36494c3663df74edd56c2215e9bf2089",
+      "accepted_prefix": "data/llm_calls/p30_missing_hypothesis_patchsrc_v0/typed/",
+      "accepted_episode_sha256": "4abfdb4f4a7031b54cff6da4ad336c4006d85eae706a35dc6acfee7a1e883fe0",
+      "accepted_module_sha256": "089421ed938c249c87d7173593996670742a58b66ce8b0114f754f16fc137a60",
+      "accepted_check_member": "step01.assembled.lean",
+      "accepted_check_sha256": "70a1526bf5336de9c829aa7f9176de647c16369f72070a60cffd6ca374350f72",
+      "accepted_check_log_member": "step01.assembled.elab.json",
+      "accepted_check_log_sha256": "e6b679150f22ad0db957432a965315388bb8fda0b3af2a6de43b057475cec68d",
+      "author_direct_prefix": "data/llm_calls/p30_missing_hypothesis_toolsrc_v0/typed/",
+      "author_direct_check_sha256": "6c9ab2fbb92feb9507a1273ed4d617cf26a81280134d3aae215b7fbd82c14164",
+      "author_direct_log_sha256": "e46b4524956c7a53909f8d640dbb27158c63c3539fdb5be5c76642463a80d661",
+      "transform": "Keep the old residue_wrong declaration, including annotation and proof. Replace only the open target proof with the archived author-accepted direct by omega proof. Preserve target header and declared dependency annotation; whether the protected theorem is actually used is a separate result.",
+      "expected_preserved_source_actual_use": false,
+      "additional_authored_actual_use_variant": "Use the old inverse equation in a calc from n % 17 to ((5 * 7 % 17) * n) % 17, remove the inner modulus with Nat.mod_mul_mod, reassociate, restore the inner modulus with Nat.mul_mod_mod, and substitute h₀. This is a separately labeled unexecuted authored proof, not an author-archived proof body.",
+      "expected_inverse_variant_actual_use": true
+    }
+  }
+}

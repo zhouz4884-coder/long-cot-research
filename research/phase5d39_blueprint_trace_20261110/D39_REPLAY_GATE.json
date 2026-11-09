@@ -1,0 +1,16 @@
+{
+  "baseline": "df460b430f8ec792af69b896edc5aa9f958a90a8",
+  "purpose": "Find an independent, measured need to release already-proved dependencies rather than count successful changes as necessity.",
+  "local_case_selection": {
+    "mandatory_negative": "p159_bad.state0 from D3.8, bound to the same complete immutable target and Qwen archive exact-patch candidate.",
+    "possible_positive_rule": "Among independent source items with an observed Lean failure under an already proved target prerequisite, nominate those with an author-accepted output changing at least one such prerequisite and no same-state successful preserved-prerequisite output in the available archive. Order lexically by source item ID, choose the first two that have approved complete sources. This rule nominates cases only. It does not prove necessity. Missing data are listed separately.",
+    "possible_positive_fallback": "If no cases satisfy the rule, keep p159 as negative and report zero admitted possible positives. If a named candidate is unavailable or cannot be admitted safely, record the exact reason instead of counting it as failed Lean verification."
+  },
+  "source_safety": [
+    "Version, source and exact imports must match the author's locked environment. Earlier Lean 4.27 controls only validate the replay harness.",
+    "No raw model module executes without review. A separate check-only fixture may preserve source declarations but strips or rejects untrusted commands. Its scope is compared byte-wise to the archive before use.",
+    "A successful local proof must retain the immutable target, pass full elaboration, and have a trusted axiom closure. Compare checked types and dependencies separately from retained text."
+  ],
+  "cost_controls": "Measure cold Lean, batched verified goals and the existing Lean resident server. Charge initial loads, handshakes, document versions, rejected attempts, verification and material building. A synthetic core control checks instrumentation only.",
+  "model_gate": "At least two independent targets with exact-version verified structural repair opportunity and a same-rights correctness or complete cost advantage over strong local, whole and resident/batch baselines. Observed edits, logical possibility, and finite search misses do not satisfy it."
+}

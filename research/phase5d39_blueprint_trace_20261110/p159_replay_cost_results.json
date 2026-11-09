@@ -1,0 +1,458 @@
+{
+  "status": "PASS",
+  "scope": "CPU checker cost for exact reviewed p159 sources. The middle author-exact file checks the complete target and four support axioms in one batch. These are cold module loads versus the existing resident server, not model generation or a new algorithm benchmark.",
+  "lean_version": "Lean (version 4.31.0, x86_64-w64-windows-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+  "lean_binary_sha256": "9b216deb50d37c32c829d1efaaa5bafd5560417d382df35a815489e31a31593f",
+  "source_review_receipt_sha256": "d3e7fbb9f90b18d6af2c992b6461e09605da279f11f01e3f439e9d1c5e8b0438",
+  "material_preparation_seconds": 1.806185599998571,
+  "fixture_order": [
+    "p159_initial_identity.lean",
+    "p159_author_exact_check.lean",
+    "p159_accepted_identity.lean"
+  ],
+  "local_cold_batch": {
+    "lean_invocations": 1,
+    "named_axiom_closures": 5,
+    "elapsed_seconds": 18.336934699997073,
+    "status": "KERNEL_ACCEPTED"
+  },
+  "cold": [
+    {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "P159Bad.diff_four": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.a_value": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.diff_ten": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "855a7281fffbf114aa19bbee762e4bd236e58602b895a27b697d1a170e805d75",
+      "elapsed_seconds": 18.47996320000675,
+      "exit_code": 0,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "P159Bad.diff_four : ∀ (a b : ℝ), a * 6 + b - (a * 2 + b) = 4 * a",
+          "line": 27
+        },
+        {
+          "severity": 3,
+          "message": "P159Bad.a_value : ∀ (a b : ℝ) (f : ℝ → ℝ), (∀ (x : ℝ), f x = a * x + b) → f 6 - f 2 = 12 → a = 3",
+          "line": 28
+        },
+        {
+          "severity": 3,
+          "message": "P159Bad.diff_ten : ∀ (a b : ℝ), a * 12 + b - (a * 2 + b) = 10 * a",
+          "line": 29
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.diff_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 30
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.a_value' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 31
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.diff_ten' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 32
+        },
+        {
+          "severity": 3,
+          "message": "P159_IDENTITY {\"name\":\"P159Bad.diff_four\",\"proof_constants\":[\"Real\",\"Mathlib.Tactic.Ring.of_eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"Distrib.toAdd\",\"instDistribOfSemiring\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Distrib.toMul\",\"HPow.hPow\",\"instHPow\",\"Monoid.toPow\",\"Semiring.toMonoid\",\"Nat.rawCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"Nat.instCommSemiring\",\"Mathlib.Meta.NormNum.instAddMonoidWithOne\",\"inferInstance\",\"Ring\",\"CommRing.toRing\",\"Real.commRing\",\"Zero.toOfNat0\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"Mathlib.Tactic.Ring.Common.sub_congr\",\"Mathlib.Tactic.Ring.Common.add_congr\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.Common.atom_pf\",\"rfl\",\"Eq.mpr\",\"Eq\",\"id\",\"congrArg\",\"Eq.symm\",\"Eq.refl\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"AddMonoidWithOne.toNatCast\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Tactic.Ring.Common.mul_pf_left\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\",\"Mathlib.Tactic.Ring.Common.add_pf_add_lt\",\"Mathlib.Tactic.Ring.Common.add_pf_zero_add\",\"Mathlib.Tactic.Ring.Common.sub_pf\",\"Int.rawCast\",\"Int.negOfNat\",\"Mathlib.Tactic.Ring.Common.neg_add\",\"Mathlib.Tactic.Ring.Common.neg_mul\",\"Mathlib.Meta.NormNum.IsInt.to_raw_eq\",\"Neg.neg\",\"NegZeroClass.toNeg\",\"SubNegZeroMonoid.toNegZeroClass\",\"SubtractionMonoid.toSubNegZeroMonoid\",\"SubtractionCommMonoid.toSubtractionMonoid\",\"AddCommGroup.toDivisionAddCommMonoid\",\"Ring.toAddCommGroup\",\"Mathlib.Meta.NormNum.isInt_neg\",\"Int.ofNat\",\"Mathlib.Meta.NormNum.IsNat.to_isInt\",\"Int\",\"Mathlib.Tactic.Ring.Common.neg_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf\",\"Mathlib.Meta.NormNum.IsInt.to_isNat\",\"Mathlib.Meta.NormNum.isInt_add\",\"Mathlib.Meta.NormNum.IsInt.of_raw\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf_zero\",\"Mathlib.Tactic.Ring.Common.mul_pf_right\"],\"type\":\"∀ (a b : ℝ), a * 6 + b - (a * 2 + b) = 4 * a\",\"type_constants\":[\"Real\",\"Eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\nP159_IDENTITY {\"name\":\"P159Bad.a_value\",\"proof_constants\":[\"Real\",\"Eq\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"P159Bad.diff_four\",\"Mathlib.Tactic.Linarith.eq_of_not_lt_of_not_gt\",\"Real.linearOrder\",\"Not.intro\",\"LT.lt\",\"Preorder.toLT\",\"PartialOrder.toPreorder\",\"SemilatticeInf.toPartialOrder\",\"Lattice.toSemilatticeInf\",\"DistribLattice.toLattice\",\"instDistribLatticeOfLinearOrder\",\"Mathlib.Tactic.Linarith.lt_irrefl\",\"Real.instPreorder\",\"Zero.toOfNat0\",\"Real.instZero\",\"Eq.mp\",\"Real.partialOrder\",\"AddSemigroup.toAdd\",\"AddMonoid.toAddSemigroup\",\"Real.instAddMonoid\",\"Neg.neg\",\"NegZeroClass.toNeg\",\"SubNegZeroMonoid.toNegZeroClass\",\"SubtractionMonoid.toSubNegZeroMonoid\",\"SubtractionCommMonoid.toSubtractionMonoid\",\"AddCommGroup.toDivisionAddCommMonoid\",\"Real.instAddCommGroup\",\"SubNegMonoid.toSub\",\"AddGroup.toSubNegMonoid\",\"Real.instAddGroup\",\"Distrib.toMul\",\"instDistribOfSemiring\",\"Real.semiring\",\"AddMonoidWithOne.toNatCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"instAddNat\",\"instNeZeroNatHAdd_1\",\"AddGroupWithOne.toAddGroup\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"congrArg\",\"Mathlib.Tactic.Ring.of_eq\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Mathlib.Tactic.Ring.Common.add_congr\",\"Distrib.toAdd\",\"Nat.rawCast\",\"Mathlib.Meta.NormNum.instAddMonoidWithOne\",\"inferInstance\",\"Ring\",\"CommRing.toRing\",\"Real.commRing\",\"HPow.hPow\",\"instHPow\",\"Monoid.toPow\",\"Semiring.toMonoid\",\"Nat.instCommSemiring\",\"Int.rawCast\",\"Int.negOfNat\",\"Mathlib.Tactic.Ring.Common.neg_congr\",\"Mathlib.Tactic.Ring.Common.sub_congr\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.Common.atom_pf\",\"rfl\",\"Eq.mpr\",\"id\",\"Eq.symm\",\"Eq.refl\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Tactic.Ring.Common.mul_pf_left\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\",\"Mathlib.Tactic.Ring.Common.add_pf_add_lt\",\"Mathlib.Tactic.Ring.Common.add_pf_zero_add\",\"Mathlib.Tactic.Ring.Common.sub_pf\",\"Mathlib.Tactic.Ring.Common.neg_add\",\"Mathlib.Tactic.Ring.Common.neg_mul\",\"Mathlib.Meta.NormNum.IsInt.to_raw_eq\",\"Ring.toAddCommGroup\",\"Mathlib.Meta.NormNum.isInt_neg\",\"Int.ofNat\",\"Mathlib.Meta.NormNum.IsNat.to_isInt\",\"Int\",\"Mathlib.Tactic.Ring.Common.neg_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf\",\"Mathlib.Meta.NormNum.IsInt.to_isNat\",\"Mathlib.Meta.NormNum.isInt_add\",\"Mathlib.Meta.NormNum.IsInt.of_raw\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_gt\",\"Mathlib.Meta.NormNum.isInt_mul\",\"Ring.toSemiring\",\"Mathlib.Tactic.Ring.Common.mul_pf_right\",\"Mathlib.Tactic.Ring.cast_zero\",\"Nat.cast_zero\",\"Mathlib.Tactic.Linarith.lt_of_eq_of_lt\",\"Iff.mpr\",\"NegZeroClass.toZero\",\"neg_eq_zero\",\"sub_eq_zero_of_eq\",\"Mathlib.Tactic.Linarith.mul_neg\",\"Real.instIsStrictOrderedRing\",\"Mathlib.Tactic.Linarith.sub_neg_of_lt\",\"Real.instIsOrderedRing\",\"Mathlib.Meta.NormNum.isNat_lt_true\",\"FloorSemiring.instCharZero\",\"FloorRing.toFloorSemiring\",\"Real.instFloorRing\",\"Bool\",\"Bool.false\"],\"type\":\"∀ (a b : ℝ) (f : ℝ → ℝ), (∀ (x : ℝ), f x = a * x + b) → f 6 - f 2 = 12 → a = 3\",\"type_constants\":[\"Real\",\"Eq\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\nP159_IDENTITY {\"name\":\"P159Bad.diff_ten\",\"proof_constants\":[\"Real\",\"Mathlib.Tactic.Ring.of_eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"Distrib.toAdd\",\"instDistribOfSemiring\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Distrib.toMul\",\"HPow.hPow\",\"instHPow\",\"Monoid.toPow\",\"Semiring.toMonoid\",\"Nat.rawCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"Nat.instCommSemiring\",\"Mathlib.Meta.NormNum.instAddMonoidWithOne\",\"inferInstance\",\"Ring\",\"CommRing.toRing\",\"Real.commRing\",\"Zero.toOfNat0\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"Mathlib.Tactic.Ring.Common.sub_congr\",\"Mathlib.Tactic.Ring.Common.add_congr\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.Common.atom_pf\",\"rfl\",\"Eq.mpr\",\"Eq\",\"id\",\"congrArg\",\"Eq.symm\",\"Eq.refl\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"AddMonoidWithOne.toNatCast\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Tactic.Ring.Common.mul_pf_left\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\",\"Mathlib.Tactic.Ring.Common.add_pf_add_lt\",\"Mathlib.Tactic.Ring.Common.add_pf_zero_add\",\"Mathlib.Tactic.Ring.Common.sub_pf\",\"Int.rawCast\",\"Int.negOfNat\",\"Mathlib.Tactic.Ring.Common.neg_add\",\"Mathlib.Tactic.Ring.Common.neg_mul\",\"Mathlib.Meta.NormNum.IsInt.to_raw_eq\",\"Neg.neg\",\"NegZeroClass.toNeg\",\"SubNegZeroMonoid.toNegZeroClass\",\"SubtractionMonoid.toSubNegZeroMonoid\",\"SubtractionCommMonoid.toSubtractionMonoid\",\"AddCommGroup.toDivisionAddCommMonoid\",\"Ring.toAddCommGroup\",\"Mathlib.Meta.NormNum.isInt_neg\",\"Int.ofNat\",\"Mathlib.Meta.NormNum.IsNat.to_isInt\",\"Int\",\"Mathlib.Tactic.Ring.Common.neg_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf\",\"Mathlib.Meta.NormNum.IsInt.to_isNat\",\"Mathlib.Meta.NormNum.isInt_add\",\"Mathlib.Meta.NormNum.IsInt.of_raw\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf_zero\",\"Mathlib.Tactic.Ring.Common.mul_pf_right\"],\"type\":\"∀ (a b : ℝ), a * 12 + b - (a * 2 + b) = 10 * a\",\"type_constants\":[\"Real\",\"Eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\n",
+          "line": 35
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "P159Bad.diff_four": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.a_value": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.diff_ten": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.final_step": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.p159_target": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "0eeaccb017650d9a7b5dcf33596f90d45b2b53453ee1c5a6e0b9b5b7bc853031",
+      "elapsed_seconds": 18.336934699997073,
+      "exit_code": 0,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'P159Bad.diff_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 45
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.a_value' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 46
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.diff_ten' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 47
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.final_step' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 48
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.p159_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 49
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "P159Bad.diff_four": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.a_value": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.diff_ten": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.final_step": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.p159_target": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "fa893455e54b797c006a622c0f64968be27e0954850365654f1ec3101a02736b",
+      "elapsed_seconds": 18.27339810000558,
+      "exit_code": 0,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "P159Bad.diff_four : ∀ (a b : ℝ), a * 6 + b - (a * 2 + b) = 4 * a",
+          "line": 46
+        },
+        {
+          "severity": 3,
+          "message": "P159Bad.a_value : ∀ (a b : ℝ) (f : ℝ → ℝ), (∀ (x : ℝ), f x = a * x + b) → f 6 - f 2 = 12 → a = 3",
+          "line": 47
+        },
+        {
+          "severity": 3,
+          "message": "P159Bad.diff_ten : ∀ (a b : ℝ), a * 12 + b - (a * 2 + b) = 10 * a",
+          "line": 48
+        },
+        {
+          "severity": 3,
+          "message": "P159Bad.final_step : ∀ (a d : ℝ), d = 10 * a → a = 3 → d = 30",
+          "line": 49
+        },
+        {
+          "severity": 3,
+          "message": "P159Bad.p159_target : ∀ (a b : ℝ) (f : ℝ → ℝ), (∀ (x : ℝ), f x = a * x + b) → f 6 - f 2 = 12 → f 12 - f 2 = 30",
+          "line": 50
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.diff_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 51
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.a_value' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 52
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.diff_ten' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 53
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.final_step' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 54
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.p159_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 55
+        },
+        {
+          "severity": 3,
+          "message": "P159_IDENTITY {\"name\":\"P159Bad.diff_four\",\"proof_constants\":[\"Real\",\"Mathlib.Tactic.Ring.of_eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"Distrib.toAdd\",\"instDistribOfSemiring\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Distrib.toMul\",\"HPow.hPow\",\"instHPow\",\"Monoid.toPow\",\"Semiring.toMonoid\",\"Nat.rawCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"Nat.instCommSemiring\",\"Mathlib.Meta.NormNum.instAddMonoidWithOne\",\"inferInstance\",\"Ring\",\"CommRing.toRing\",\"Real.commRing\",\"Zero.toOfNat0\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"Mathlib.Tactic.Ring.Common.sub_congr\",\"Mathlib.Tactic.Ring.Common.add_congr\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.Common.atom_pf\",\"rfl\",\"Eq.mpr\",\"Eq\",\"id\",\"congrArg\",\"Eq.symm\",\"Eq.refl\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"AddMonoidWithOne.toNatCast\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Tactic.Ring.Common.mul_pf_left\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\",\"Mathlib.Tactic.Ring.Common.add_pf_add_lt\",\"Mathlib.Tactic.Ring.Common.add_pf_zero_add\",\"Mathlib.Tactic.Ring.Common.sub_pf\",\"Int.rawCast\",\"Int.negOfNat\",\"Mathlib.Tactic.Ring.Common.neg_add\",\"Mathlib.Tactic.Ring.Common.neg_mul\",\"Mathlib.Meta.NormNum.IsInt.to_raw_eq\",\"Neg.neg\",\"NegZeroClass.toNeg\",\"SubNegZeroMonoid.toNegZeroClass\",\"SubtractionMonoid.toSubNegZeroMonoid\",\"SubtractionCommMonoid.toSubtractionMonoid\",\"AddCommGroup.toDivisionAddCommMonoid\",\"Ring.toAddCommGroup\",\"Mathlib.Meta.NormNum.isInt_neg\",\"Int.ofNat\",\"Mathlib.Meta.NormNum.IsNat.to_isInt\",\"Int\",\"Mathlib.Tactic.Ring.Common.neg_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf\",\"Mathlib.Meta.NormNum.IsInt.to_isNat\",\"Mathlib.Meta.NormNum.isInt_add\",\"Mathlib.Meta.NormNum.IsInt.of_raw\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf_zero\",\"Mathlib.Tactic.Ring.Common.mul_pf_right\"],\"type\":\"∀ (a b : ℝ), a * 6 + b - (a * 2 + b) = 4 * a\",\"type_constants\":[\"Real\",\"Eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\nP159_IDENTITY {\"name\":\"P159Bad.a_value\",\"proof_constants\":[\"Real\",\"Eq\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"P159Bad.diff_four\",\"Mathlib.Tactic.Linarith.eq_of_not_lt_of_not_gt\",\"Real.linearOrder\",\"Not.intro\",\"LT.lt\",\"Preorder.toLT\",\"PartialOrder.toPreorder\",\"SemilatticeInf.toPartialOrder\",\"Lattice.toSemilatticeInf\",\"DistribLattice.toLattice\",\"instDistribLatticeOfLinearOrder\",\"Mathlib.Tactic.Linarith.lt_irrefl\",\"Real.instPreorder\",\"Zero.toOfNat0\",\"Real.instZero\",\"Eq.mp\",\"Real.partialOrder\",\"AddSemigroup.toAdd\",\"AddMonoid.toAddSemigroup\",\"Real.instAddMonoid\",\"Neg.neg\",\"NegZeroClass.toNeg\",\"SubNegZeroMonoid.toNegZeroClass\",\"SubtractionMonoid.toSubNegZeroMonoid\",\"SubtractionCommMonoid.toSubtractionMonoid\",\"AddCommGroup.toDivisionAddCommMonoid\",\"Real.instAddCommGroup\",\"SubNegMonoid.toSub\",\"AddGroup.toSubNegMonoid\",\"Real.instAddGroup\",\"Distrib.toMul\",\"instDistribOfSemiring\",\"Real.semiring\",\"AddMonoidWithOne.toNatCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"instAddNat\",\"instNeZeroNatHAdd_1\",\"AddGroupWithOne.toAddGroup\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"congrArg\",\"Mathlib.Tactic.Ring.of_eq\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Mathlib.Tactic.Ring.Common.add_congr\",\"Distrib.toAdd\",\"Nat.rawCast\",\"Mathlib.Meta.NormNum.instAddMonoidWithOne\",\"inferInstance\",\"Ring\",\"CommRing.toRing\",\"Real.commRing\",\"HPow.hPow\",\"instHPow\",\"Monoid.toPow\",\"Semiring.toMonoid\",\"Nat.instCommSemiring\",\"Int.rawCast\",\"Int.negOfNat\",\"Mathlib.Tactic.Ring.Common.neg_congr\",\"Mathlib.Tactic.Ring.Common.sub_congr\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.Common.atom_pf\",\"rfl\",\"Eq.mpr\",\"id\",\"Eq.symm\",\"Eq.refl\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Tactic.Ring.Common.mul_pf_left\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\",\"Mathlib.Tactic.Ring.Common.add_pf_add_lt\",\"Mathlib.Tactic.Ring.Common.add_pf_zero_add\",\"Mathlib.Tactic.Ring.Common.sub_pf\",\"Mathlib.Tactic.Ring.Common.neg_add\",\"Mathlib.Tactic.Ring.Common.neg_mul\",\"Mathlib.Meta.NormNum.IsInt.to_raw_eq\",\"Ring.toAddCommGroup\",\"Mathlib.Meta.NormNum.isInt_neg\",\"Int.ofNat\",\"Mathlib.Meta.NormNum.IsNat.to_isInt\",\"Int\",\"Mathlib.Tactic.Ring.Common.neg_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf\",\"Mathlib.Meta.NormNum.IsInt.to_isNat\",\"Mathlib.Meta.NormNum.isInt_add\",\"Mathlib.Meta.NormNum.IsInt.of_raw\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_gt\",\"Mathlib.Meta.NormNum.isInt_mul\",\"Ring.toSemiring\",\"Mathlib.Tactic.Ring.Common.mul_pf_right\",\"Mathlib.Tactic.Ring.cast_zero\",\"Nat.cast_zero\",\"Mathlib.Tactic.Linarith.lt_of_eq_of_lt\",\"Iff.mpr\",\"NegZeroClass.toZero\",\"neg_eq_zero\",\"sub_eq_zero_of_eq\",\"Mathlib.Tactic.Linarith.mul_neg\",\"Real.instIsStrictOrderedRing\",\"Mathlib.Tactic.Linarith.sub_neg_of_lt\",\"Real.instIsOrderedRing\",\"Mathlib.Meta.NormNum.isNat_lt_true\",\"FloorSemiring.instCharZero\",\"FloorRing.toFloorSemiring\",\"Real.instFloorRing\",\"Bool\",\"Bool.false\"],\"type\":\"∀ (a b : ℝ) (f : ℝ → ℝ), (∀ (x : ℝ), f x = a * x + b) → f 6 - f 2 = 12 → a = 3\",\"type_constants\":[\"Real\",\"Eq\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\nP159_IDENTITY {\"name\":\"P159Bad.diff_ten\",\"proof_constants\":[\"Real\",\"Mathlib.Tactic.Ring.of_eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"Distrib.toAdd\",\"instDistribOfSemiring\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Distrib.toMul\",\"HPow.hPow\",\"instHPow\",\"Monoid.toPow\",\"Semiring.toMonoid\",\"Nat.rawCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"Nat.instCommSemiring\",\"Mathlib.Meta.NormNum.instAddMonoidWithOne\",\"inferInstance\",\"Ring\",\"CommRing.toRing\",\"Real.commRing\",\"Zero.toOfNat0\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"Mathlib.Tactic.Ring.Common.sub_congr\",\"Mathlib.Tactic.Ring.Common.add_congr\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.Common.atom_pf\",\"rfl\",\"Eq.mpr\",\"Eq\",\"id\",\"congrArg\",\"Eq.symm\",\"Eq.refl\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"AddMonoidWithOne.toNatCast\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Tactic.Ring.Common.mul_pf_left\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\",\"Mathlib.Tactic.Ring.Common.add_pf_add_lt\",\"Mathlib.Tactic.Ring.Common.add_pf_zero_add\",\"Mathlib.Tactic.Ring.Common.sub_pf\",\"Int.rawCast\",\"Int.negOfNat\",\"Mathlib.Tactic.Ring.Common.neg_add\",\"Mathlib.Tactic.Ring.Common.neg_mul\",\"Mathlib.Meta.NormNum.IsInt.to_raw_eq\",\"Neg.neg\",\"NegZeroClass.toNeg\",\"SubNegZeroMonoid.toNegZeroClass\",\"SubtractionMonoid.toSubNegZeroMonoid\",\"SubtractionCommMonoid.toSubtractionMonoid\",\"AddCommGroup.toDivisionAddCommMonoid\",\"Ring.toAddCommGroup\",\"Mathlib.Meta.NormNum.isInt_neg\",\"Int.ofNat\",\"Mathlib.Meta.NormNum.IsNat.to_isInt\",\"Int\",\"Mathlib.Tactic.Ring.Common.neg_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf\",\"Mathlib.Meta.NormNum.IsInt.to_isNat\",\"Mathlib.Meta.NormNum.isInt_add\",\"Mathlib.Meta.NormNum.IsInt.of_raw\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf_zero\",\"Mathlib.Tactic.Ring.Common.mul_pf_right\"],\"type\":\"∀ (a b : ℝ), a * 12 + b - (a * 2 + b) = 10 * a\",\"type_constants\":[\"Real\",\"Eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\nP159_IDENTITY {\"name\":\"P159Bad.final_step\",\"proof_constants\":[\"Real\",\"Eq\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"Eq.mpr\",\"id\",\"congrArg\",\"Eq.mp\",\"Mathlib.Tactic.Ring.of_eq\",\"HAdd.hAdd\",\"instHAdd\",\"Distrib.toAdd\",\"instDistribOfSemiring\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Nat.rawCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"Zero.toOfNat0\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"Eq.refl\",\"AddMonoidWithOne.toNatCast\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Distrib.toMul\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\"],\"type\":\"∀ (a d : ℝ), d = 10 * a → a = 3 → d = 30\",\"type_constants\":[\"Real\",\"Eq\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\nP159_IDENTITY {\"name\":\"P159Bad.p159_target\",\"proof_constants\":[\"Real\",\"Eq\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"P159Bad.a_value\",\"Trans.trans\",\"instTransEq\",\"Eq.mpr\",\"id\",\"congrArg\",\"Eq.refl\",\"P159Bad.diff_ten\",\"P159Bad.final_step\",\"rfl\"],\"type\":\"∀ (a b : ℝ) (f : ℝ → ℝ), (∀ (x : ℝ), f x = a * x + b) → f 6 - f 2 = 12 → f 12 - f 2 = 30\",\"type_constants\":[\"Real\",\"Eq\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\n",
+          "line": 58
+        }
+      ],
+      "stderr": ""
+    }
+  ],
+  "resident": [
+    {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "P159Bad.diff_four": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.a_value": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.diff_ten": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "855a7281fffbf114aa19bbee762e4bd236e58602b895a27b697d1a170e805d75",
+      "document_version": 1,
+      "elapsed_seconds": 22.042509099999734,
+      "matching_publications": 12,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "P159Bad.diff_four : ∀ (a b : ℝ), a * 6 + b - (a * 2 + b) = 4 * a",
+          "line": 27
+        },
+        {
+          "severity": 3,
+          "message": "P159Bad.a_value : ∀ (a b : ℝ) (f : ℝ → ℝ), (∀ (x : ℝ), f x = a * x + b) → f 6 - f 2 = 12 → a = 3",
+          "line": 28
+        },
+        {
+          "severity": 3,
+          "message": "P159Bad.diff_ten : ∀ (a b : ℝ), a * 12 + b - (a * 2 + b) = 10 * a",
+          "line": 29
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.diff_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 30
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.a_value' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 31
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.diff_ten' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 32
+        },
+        {
+          "severity": 3,
+          "message": "P159_IDENTITY {\"name\":\"P159Bad.diff_four\",\"proof_constants\":[\"Real\",\"Mathlib.Tactic.Ring.of_eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"Distrib.toAdd\",\"instDistribOfSemiring\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Distrib.toMul\",\"HPow.hPow\",\"instHPow\",\"Monoid.toPow\",\"Semiring.toMonoid\",\"Nat.rawCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"Nat.instCommSemiring\",\"Mathlib.Meta.NormNum.instAddMonoidWithOne\",\"inferInstance\",\"Ring\",\"CommRing.toRing\",\"Real.commRing\",\"Zero.toOfNat0\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"Mathlib.Tactic.Ring.Common.sub_congr\",\"Mathlib.Tactic.Ring.Common.add_congr\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.Common.atom_pf\",\"rfl\",\"Eq.mpr\",\"Eq\",\"id\",\"congrArg\",\"Eq.symm\",\"Eq.refl\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"AddMonoidWithOne.toNatCast\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Tactic.Ring.Common.mul_pf_left\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\",\"Mathlib.Tactic.Ring.Common.add_pf_add_lt\",\"Mathlib.Tactic.Ring.Common.add_pf_zero_add\",\"Mathlib.Tactic.Ring.Common.sub_pf\",\"Int.rawCast\",\"Int.negOfNat\",\"Mathlib.Tactic.Ring.Common.neg_add\",\"Mathlib.Tactic.Ring.Common.neg_mul\",\"Mathlib.Meta.NormNum.IsInt.to_raw_eq\",\"Neg.neg\",\"NegZeroClass.toNeg\",\"SubNegZeroMonoid.toNegZeroClass\",\"SubtractionMonoid.toSubNegZeroMonoid\",\"SubtractionCommMonoid.toSubtractionMonoid\",\"AddCommGroup.toDivisionAddCommMonoid\",\"Ring.toAddCommGroup\",\"Mathlib.Meta.NormNum.isInt_neg\",\"Int.ofNat\",\"Mathlib.Meta.NormNum.IsNat.to_isInt\",\"Int\",\"Mathlib.Tactic.Ring.Common.neg_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf\",\"Mathlib.Meta.NormNum.IsInt.to_isNat\",\"Mathlib.Meta.NormNum.isInt_add\",\"Mathlib.Meta.NormNum.IsInt.of_raw\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf_zero\",\"Mathlib.Tactic.Ring.Common.mul_pf_right\"],\"type\":\"∀ (a b : ℝ), a * 6 + b - (a * 2 + b) = 4 * a\",\"type_constants\":[\"Real\",\"Eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\nP159_IDENTITY {\"name\":\"P159Bad.a_value\",\"proof_constants\":[\"Real\",\"Eq\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"P159Bad.diff_four\",\"Mathlib.Tactic.Linarith.eq_of_not_lt_of_not_gt\",\"Real.linearOrder\",\"Not.intro\",\"LT.lt\",\"Preorder.toLT\",\"PartialOrder.toPreorder\",\"SemilatticeInf.toPartialOrder\",\"Lattice.toSemilatticeInf\",\"DistribLattice.toLattice\",\"instDistribLatticeOfLinearOrder\",\"Mathlib.Tactic.Linarith.lt_irrefl\",\"Real.instPreorder\",\"Zero.toOfNat0\",\"Real.instZero\",\"Eq.mp\",\"Real.partialOrder\",\"AddSemigroup.toAdd\",\"AddMonoid.toAddSemigroup\",\"Real.instAddMonoid\",\"Neg.neg\",\"NegZeroClass.toNeg\",\"SubNegZeroMonoid.toNegZeroClass\",\"SubtractionMonoid.toSubNegZeroMonoid\",\"SubtractionCommMonoid.toSubtractionMonoid\",\"AddCommGroup.toDivisionAddCommMonoid\",\"Real.instAddCommGroup\",\"SubNegMonoid.toSub\",\"AddGroup.toSubNegMonoid\",\"Real.instAddGroup\",\"Distrib.toMul\",\"instDistribOfSemiring\",\"Real.semiring\",\"AddMonoidWithOne.toNatCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"instAddNat\",\"instNeZeroNatHAdd_1\",\"AddGroupWithOne.toAddGroup\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"congrArg\",\"Mathlib.Tactic.Ring.of_eq\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Mathlib.Tactic.Ring.Common.add_congr\",\"Distrib.toAdd\",\"Nat.rawCast\",\"Mathlib.Meta.NormNum.instAddMonoidWithOne\",\"inferInstance\",\"Ring\",\"CommRing.toRing\",\"Real.commRing\",\"HPow.hPow\",\"instHPow\",\"Monoid.toPow\",\"Semiring.toMonoid\",\"Nat.instCommSemiring\",\"Int.rawCast\",\"Int.negOfNat\",\"Mathlib.Tactic.Ring.Common.neg_congr\",\"Mathlib.Tactic.Ring.Common.sub_congr\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.Common.atom_pf\",\"rfl\",\"Eq.mpr\",\"id\",\"Eq.symm\",\"Eq.refl\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Tactic.Ring.Common.mul_pf_left\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\",\"Mathlib.Tactic.Ring.Common.add_pf_add_lt\",\"Mathlib.Tactic.Ring.Common.add_pf_zero_add\",\"Mathlib.Tactic.Ring.Common.sub_pf\",\"Mathlib.Tactic.Ring.Common.neg_add\",\"Mathlib.Tactic.Ring.Common.neg_mul\",\"Mathlib.Meta.NormNum.IsInt.to_raw_eq\",\"Ring.toAddCommGroup\",\"Mathlib.Meta.NormNum.isInt_neg\",\"Int.ofNat\",\"Mathlib.Meta.NormNum.IsNat.to_isInt\",\"Int\",\"Mathlib.Tactic.Ring.Common.neg_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf\",\"Mathlib.Meta.NormNum.IsInt.to_isNat\",\"Mathlib.Meta.NormNum.isInt_add\",\"Mathlib.Meta.NormNum.IsInt.of_raw\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_gt\",\"Mathlib.Meta.NormNum.isInt_mul\",\"Ring.toSemiring\",\"Mathlib.Tactic.Ring.Common.mul_pf_right\",\"Mathlib.Tactic.Ring.cast_zero\",\"Nat.cast_zero\",\"Mathlib.Tactic.Linarith.lt_of_eq_of_lt\",\"Iff.mpr\",\"NegZeroClass.toZero\",\"neg_eq_zero\",\"sub_eq_zero_of_eq\",\"Mathlib.Tactic.Linarith.mul_neg\",\"Real.instIsStrictOrderedRing\",\"Mathlib.Tactic.Linarith.sub_neg_of_lt\",\"Real.instIsOrderedRing\",\"Mathlib.Meta.NormNum.isNat_lt_true\",\"FloorSemiring.instCharZero\",\"FloorRing.toFloorSemiring\",\"Real.instFloorRing\",\"Bool\",\"Bool.false\"],\"type\":\"∀ (a b : ℝ) (f : ℝ → ℝ), (∀ (x : ℝ), f x = a * x + b) → f 6 - f 2 = 12 → a = 3\",\"type_constants\":[\"Real\",\"Eq\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\nP159_IDENTITY {\"name\":\"P159Bad.diff_ten\",\"proof_constants\":[\"Real\",\"Mathlib.Tactic.Ring.of_eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"Distrib.toAdd\",\"instDistribOfSemiring\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Distrib.toMul\",\"HPow.hPow\",\"instHPow\",\"Monoid.toPow\",\"Semiring.toMonoid\",\"Nat.rawCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"Nat.instCommSemiring\",\"Mathlib.Meta.NormNum.instAddMonoidWithOne\",\"inferInstance\",\"Ring\",\"CommRing.toRing\",\"Real.commRing\",\"Zero.toOfNat0\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"Mathlib.Tactic.Ring.Common.sub_congr\",\"Mathlib.Tactic.Ring.Common.add_congr\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.Common.atom_pf\",\"rfl\",\"Eq.mpr\",\"Eq\",\"id\",\"congrArg\",\"Eq.symm\",\"Eq.refl\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"AddMonoidWithOne.toNatCast\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Tactic.Ring.Common.mul_pf_left\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\",\"Mathlib.Tactic.Ring.Common.add_pf_add_lt\",\"Mathlib.Tactic.Ring.Common.add_pf_zero_add\",\"Mathlib.Tactic.Ring.Common.sub_pf\",\"Int.rawCast\",\"Int.negOfNat\",\"Mathlib.Tactic.Ring.Common.neg_add\",\"Mathlib.Tactic.Ring.Common.neg_mul\",\"Mathlib.Meta.NormNum.IsInt.to_raw_eq\",\"Neg.neg\",\"NegZeroClass.toNeg\",\"SubNegZeroMonoid.toNegZeroClass\",\"SubtractionMonoid.toSubNegZeroMonoid\",\"SubtractionCommMonoid.toSubtractionMonoid\",\"AddCommGroup.toDivisionAddCommMonoid\",\"Ring.toAddCommGroup\",\"Mathlib.Meta.NormNum.isInt_neg\",\"Int.ofNat\",\"Mathlib.Meta.NormNum.IsNat.to_isInt\",\"Int\",\"Mathlib.Tactic.Ring.Common.neg_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf\",\"Mathlib.Meta.NormNum.IsInt.to_isNat\",\"Mathlib.Meta.NormNum.isInt_add\",\"Mathlib.Meta.NormNum.IsInt.of_raw\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf_zero\",\"Mathlib.Tactic.Ring.Common.mul_pf_right\"],\"type\":\"∀ (a b : ℝ), a * 12 + b - (a * 2 + b) = 10 * a\",\"type_constants\":[\"Real\",\"Eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\n",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "P159Bad.diff_four": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.a_value": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.diff_ten": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.final_step": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.p159_target": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "0eeaccb017650d9a7b5dcf33596f90d45b2b53453ee1c5a6e0b9b5b7bc853031",
+      "document_version": 2,
+      "elapsed_seconds": 0.22480519999953685,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "'P159Bad.diff_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 45
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.a_value' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 46
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.diff_ten' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 47
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.final_step' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 48
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.p159_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 49
+        }
+      ]
+    },
+    {
+      "status": "KERNEL_ACCEPTED",
+      "axioms": {
+        "P159Bad.diff_four": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.a_value": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.diff_ten": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.final_step": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "P159Bad.p159_target": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "source_sha256": "fa893455e54b797c006a622c0f64968be27e0954850365654f1ec3101a02736b",
+      "document_version": 3,
+      "elapsed_seconds": 0.2546998999969219,
+      "matching_publications": 1,
+      "messages": [
+        {
+          "severity": 3,
+          "message": "P159Bad.diff_four : ∀ (a b : ℝ), a * 6 + b - (a * 2 + b) = 4 * a",
+          "line": 46
+        },
+        {
+          "severity": 3,
+          "message": "P159Bad.a_value : ∀ (a b : ℝ) (f : ℝ → ℝ), (∀ (x : ℝ), f x = a * x + b) → f 6 - f 2 = 12 → a = 3",
+          "line": 47
+        },
+        {
+          "severity": 3,
+          "message": "P159Bad.diff_ten : ∀ (a b : ℝ), a * 12 + b - (a * 2 + b) = 10 * a",
+          "line": 48
+        },
+        {
+          "severity": 3,
+          "message": "P159Bad.final_step : ∀ (a d : ℝ), d = 10 * a → a = 3 → d = 30",
+          "line": 49
+        },
+        {
+          "severity": 3,
+          "message": "P159Bad.p159_target : ∀ (a b : ℝ) (f : ℝ → ℝ), (∀ (x : ℝ), f x = a * x + b) → f 6 - f 2 = 12 → f 12 - f 2 = 30",
+          "line": 50
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.diff_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 51
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.a_value' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 52
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.diff_ten' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 53
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.final_step' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 54
+        },
+        {
+          "severity": 3,
+          "message": "'P159Bad.p159_target' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "line": 55
+        },
+        {
+          "severity": 3,
+          "message": "P159_IDENTITY {\"name\":\"P159Bad.diff_four\",\"proof_constants\":[\"Real\",\"Mathlib.Tactic.Ring.of_eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"Distrib.toAdd\",\"instDistribOfSemiring\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Distrib.toMul\",\"HPow.hPow\",\"instHPow\",\"Monoid.toPow\",\"Semiring.toMonoid\",\"Nat.rawCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"Nat.instCommSemiring\",\"Mathlib.Meta.NormNum.instAddMonoidWithOne\",\"inferInstance\",\"Ring\",\"CommRing.toRing\",\"Real.commRing\",\"Zero.toOfNat0\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"Mathlib.Tactic.Ring.Common.sub_congr\",\"Mathlib.Tactic.Ring.Common.add_congr\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.Common.atom_pf\",\"rfl\",\"Eq.mpr\",\"Eq\",\"id\",\"congrArg\",\"Eq.symm\",\"Eq.refl\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"AddMonoidWithOne.toNatCast\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Tactic.Ring.Common.mul_pf_left\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\",\"Mathlib.Tactic.Ring.Common.add_pf_add_lt\",\"Mathlib.Tactic.Ring.Common.add_pf_zero_add\",\"Mathlib.Tactic.Ring.Common.sub_pf\",\"Int.rawCast\",\"Int.negOfNat\",\"Mathlib.Tactic.Ring.Common.neg_add\",\"Mathlib.Tactic.Ring.Common.neg_mul\",\"Mathlib.Meta.NormNum.IsInt.to_raw_eq\",\"Neg.neg\",\"NegZeroClass.toNeg\",\"SubNegZeroMonoid.toNegZeroClass\",\"SubtractionMonoid.toSubNegZeroMonoid\",\"SubtractionCommMonoid.toSubtractionMonoid\",\"AddCommGroup.toDivisionAddCommMonoid\",\"Ring.toAddCommGroup\",\"Mathlib.Meta.NormNum.isInt_neg\",\"Int.ofNat\",\"Mathlib.Meta.NormNum.IsNat.to_isInt\",\"Int\",\"Mathlib.Tactic.Ring.Common.neg_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf\",\"Mathlib.Meta.NormNum.IsInt.to_isNat\",\"Mathlib.Meta.NormNum.isInt_add\",\"Mathlib.Meta.NormNum.IsInt.of_raw\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf_zero\",\"Mathlib.Tactic.Ring.Common.mul_pf_right\"],\"type\":\"∀ (a b : ℝ), a * 6 + b - (a * 2 + b) = 4 * a\",\"type_constants\":[\"Real\",\"Eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\nP159_IDENTITY {\"name\":\"P159Bad.a_value\",\"proof_constants\":[\"Real\",\"Eq\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"P159Bad.diff_four\",\"Mathlib.Tactic.Linarith.eq_of_not_lt_of_not_gt\",\"Real.linearOrder\",\"Not.intro\",\"LT.lt\",\"Preorder.toLT\",\"PartialOrder.toPreorder\",\"SemilatticeInf.toPartialOrder\",\"Lattice.toSemilatticeInf\",\"DistribLattice.toLattice\",\"instDistribLatticeOfLinearOrder\",\"Mathlib.Tactic.Linarith.lt_irrefl\",\"Real.instPreorder\",\"Zero.toOfNat0\",\"Real.instZero\",\"Eq.mp\",\"Real.partialOrder\",\"AddSemigroup.toAdd\",\"AddMonoid.toAddSemigroup\",\"Real.instAddMonoid\",\"Neg.neg\",\"NegZeroClass.toNeg\",\"SubNegZeroMonoid.toNegZeroClass\",\"SubtractionMonoid.toSubNegZeroMonoid\",\"SubtractionCommMonoid.toSubtractionMonoid\",\"AddCommGroup.toDivisionAddCommMonoid\",\"Real.instAddCommGroup\",\"SubNegMonoid.toSub\",\"AddGroup.toSubNegMonoid\",\"Real.instAddGroup\",\"Distrib.toMul\",\"instDistribOfSemiring\",\"Real.semiring\",\"AddMonoidWithOne.toNatCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"instAddNat\",\"instNeZeroNatHAdd_1\",\"AddGroupWithOne.toAddGroup\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"congrArg\",\"Mathlib.Tactic.Ring.of_eq\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Mathlib.Tactic.Ring.Common.add_congr\",\"Distrib.toAdd\",\"Nat.rawCast\",\"Mathlib.Meta.NormNum.instAddMonoidWithOne\",\"inferInstance\",\"Ring\",\"CommRing.toRing\",\"Real.commRing\",\"HPow.hPow\",\"instHPow\",\"Monoid.toPow\",\"Semiring.toMonoid\",\"Nat.instCommSemiring\",\"Int.rawCast\",\"Int.negOfNat\",\"Mathlib.Tactic.Ring.Common.neg_congr\",\"Mathlib.Tactic.Ring.Common.sub_congr\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.Common.atom_pf\",\"rfl\",\"Eq.mpr\",\"id\",\"Eq.symm\",\"Eq.refl\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Tactic.Ring.Common.mul_pf_left\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\",\"Mathlib.Tactic.Ring.Common.add_pf_add_lt\",\"Mathlib.Tactic.Ring.Common.add_pf_zero_add\",\"Mathlib.Tactic.Ring.Common.sub_pf\",\"Mathlib.Tactic.Ring.Common.neg_add\",\"Mathlib.Tactic.Ring.Common.neg_mul\",\"Mathlib.Meta.NormNum.IsInt.to_raw_eq\",\"Ring.toAddCommGroup\",\"Mathlib.Meta.NormNum.isInt_neg\",\"Int.ofNat\",\"Mathlib.Meta.NormNum.IsNat.to_isInt\",\"Int\",\"Mathlib.Tactic.Ring.Common.neg_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf\",\"Mathlib.Meta.NormNum.IsInt.to_isNat\",\"Mathlib.Meta.NormNum.isInt_add\",\"Mathlib.Meta.NormNum.IsInt.of_raw\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_gt\",\"Mathlib.Meta.NormNum.isInt_mul\",\"Ring.toSemiring\",\"Mathlib.Tactic.Ring.Common.mul_pf_right\",\"Mathlib.Tactic.Ring.cast_zero\",\"Nat.cast_zero\",\"Mathlib.Tactic.Linarith.lt_of_eq_of_lt\",\"Iff.mpr\",\"NegZeroClass.toZero\",\"neg_eq_zero\",\"sub_eq_zero_of_eq\",\"Mathlib.Tactic.Linarith.mul_neg\",\"Real.instIsStrictOrderedRing\",\"Mathlib.Tactic.Linarith.sub_neg_of_lt\",\"Real.instIsOrderedRing\",\"Mathlib.Meta.NormNum.isNat_lt_true\",\"FloorSemiring.instCharZero\",\"FloorRing.toFloorSemiring\",\"Real.instFloorRing\",\"Bool\",\"Bool.false\"],\"type\":\"∀ (a b : ℝ) (f : ℝ → ℝ), (∀ (x : ℝ), f x = a * x + b) → f 6 - f 2 = 12 → a = 3\",\"type_constants\":[\"Real\",\"Eq\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\nP159_IDENTITY {\"name\":\"P159Bad.diff_ten\",\"proof_constants\":[\"Real\",\"Mathlib.Tactic.Ring.of_eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"Distrib.toAdd\",\"instDistribOfSemiring\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Distrib.toMul\",\"HPow.hPow\",\"instHPow\",\"Monoid.toPow\",\"Semiring.toMonoid\",\"Nat.rawCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"Nat.instCommSemiring\",\"Mathlib.Meta.NormNum.instAddMonoidWithOne\",\"inferInstance\",\"Ring\",\"CommRing.toRing\",\"Real.commRing\",\"Zero.toOfNat0\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"Mathlib.Tactic.Ring.Common.sub_congr\",\"Mathlib.Tactic.Ring.Common.add_congr\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.Common.atom_pf\",\"rfl\",\"Eq.mpr\",\"Eq\",\"id\",\"congrArg\",\"Eq.symm\",\"Eq.refl\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"AddMonoidWithOne.toNatCast\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Tactic.Ring.Common.mul_pf_left\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\",\"Mathlib.Tactic.Ring.Common.add_pf_add_lt\",\"Mathlib.Tactic.Ring.Common.add_pf_zero_add\",\"Mathlib.Tactic.Ring.Common.sub_pf\",\"Int.rawCast\",\"Int.negOfNat\",\"Mathlib.Tactic.Ring.Common.neg_add\",\"Mathlib.Tactic.Ring.Common.neg_mul\",\"Mathlib.Meta.NormNum.IsInt.to_raw_eq\",\"Neg.neg\",\"NegZeroClass.toNeg\",\"SubNegZeroMonoid.toNegZeroClass\",\"SubtractionMonoid.toSubNegZeroMonoid\",\"SubtractionCommMonoid.toSubtractionMonoid\",\"AddCommGroup.toDivisionAddCommMonoid\",\"Ring.toAddCommGroup\",\"Mathlib.Meta.NormNum.isInt_neg\",\"Int.ofNat\",\"Mathlib.Meta.NormNum.IsNat.to_isInt\",\"Int\",\"Mathlib.Tactic.Ring.Common.neg_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf\",\"Mathlib.Meta.NormNum.IsInt.to_isNat\",\"Mathlib.Meta.NormNum.isInt_add\",\"Mathlib.Meta.NormNum.IsInt.of_raw\",\"Mathlib.Tactic.Ring.Common.add_pf_add_overlap_zero\",\"Mathlib.Tactic.Ring.Common.add_overlap_pf_zero\",\"Mathlib.Tactic.Ring.Common.mul_pf_right\"],\"type\":\"∀ (a b : ℝ), a * 12 + b - (a * 2 + b) = 10 * a\",\"type_constants\":[\"Real\",\"Eq\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\nP159_IDENTITY {\"name\":\"P159Bad.final_step\",\"proof_constants\":[\"Real\",\"Eq\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"Eq.mpr\",\"id\",\"congrArg\",\"Eq.mp\",\"Mathlib.Tactic.Ring.of_eq\",\"HAdd.hAdd\",\"instHAdd\",\"Distrib.toAdd\",\"instDistribOfSemiring\",\"CommSemiring.toSemiring\",\"Real.instCommSemiring\",\"Nat.rawCast\",\"AddCommMonoidWithOne.toAddMonoidWithOne\",\"NonAssocSemiring.toAddCommMonoidWithOne\",\"Semiring.toNonAssocSemiring\",\"Zero.toOfNat0\",\"MulZeroClass.toZero\",\"instMulZeroClassOfSemiring\",\"Mathlib.Tactic.Ring.Common.mul_congr\",\"Mathlib.Tactic.Ring.cast_pos\",\"Mathlib.Meta.NormNum.isNat_ofNat\",\"AddGroupWithOne.toAddMonoidWithOne\",\"Ring.toAddGroupWithOne\",\"Real.instRing\",\"Eq.refl\",\"AddMonoidWithOne.toNatCast\",\"Mathlib.Meta.NormNum.instAtLeastTwo\",\"Mathlib.Tactic.Ring.Common.add_mul\",\"Mathlib.Tactic.Ring.Common.mul_add\",\"Mathlib.Meta.NormNum.IsNat.to_raw_eq\",\"Distrib.toMul\",\"Mathlib.Meta.NormNum.isNat_mul\",\"Mathlib.Meta.NormNum.IsNat.of_raw\",\"Mathlib.Tactic.Ring.Common.mul_zero\",\"Mathlib.Tactic.Ring.Common.add_pf_add_zero\",\"Mathlib.Tactic.Ring.Common.zero_mul\"],\"type\":\"∀ (a d : ℝ), d = 10 * a → a = 3 → d = 30\",\"type_constants\":[\"Real\",\"Eq\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\nP159_IDENTITY {\"name\":\"P159Bad.p159_target\",\"proof_constants\":[\"Real\",\"Eq\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\",\"P159Bad.a_value\",\"Trans.trans\",\"instTransEq\",\"Eq.mpr\",\"id\",\"congrArg\",\"Eq.refl\",\"P159Bad.diff_ten\",\"P159Bad.final_step\",\"rfl\"],\"type\":\"∀ (a b : ℝ) (f : ℝ → ℝ), (∀ (x : ℝ), f x = a * x + b) → f 6 - f 2 = 12 → f 12 - f 2 = 30\",\"type_constants\":[\"Real\",\"Eq\",\"HAdd.hAdd\",\"instHAdd\",\"Real.instAdd\",\"HMul.hMul\",\"instHMul\",\"Real.instMul\",\"HSub.hSub\",\"instHSub\",\"Real.instSub\",\"OfNat.ofNat\",\"instOfNatAtLeastTwo\",\"Real.instNatCast\",\"Nat.instAtLeastTwoHAddOfNat\",\"Nat\",\"instOfNatNat\",\"Nat.instNeZeroSucc\"]}\n",
+          "line": 58
+        }
+      ]
+    }
+  ],
+  "resident_startup_seconds": 1.7368095999991056,
+  "resident_shutdown_seconds": 0.09843740000360413,
+  "resident_stderr": "",
+  "cold_total_seconds": 55.0902960000094,
+  "resident_total_seconds": 24.258823799995298,
+  "resident_total_including_shutdown_seconds": 24.357261199998902,
+  "all_statuses_match": true,
+  "new_gpu_seconds": 0,
+  "new_model_tokens": 0
+}

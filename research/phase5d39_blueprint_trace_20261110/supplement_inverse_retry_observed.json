@@ -1,0 +1,89 @@
+{
+  "runtime_version": "Lean (version 4.31.0, x86_64-w64-windows-gnu, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+  "retry_source_receipt_sha256": "848f5e8e9a5d78e0855c637784e4e8826ecae32bef4588da8fd9a49886caa6df",
+  "source_sha256": "b66e98ab7ab40f5341d8ae68133153be2e4d9616c5540fbfedc27dc0ffc59907",
+  "returncode": 0,
+  "wall_seconds": 8.024554299998272,
+  "protected_source_preserved": true,
+  "scope": "One secondary functional check; observed shared-host wall time only.",
+  "target_type": "∀ (n : ℕ), 5 * n % 17 = 8 → n % 17 = 5",
+  "axiom_closures": {
+    "P30Bad.residue_wrong": [],
+    "P30Bad.p30_target": [
+      "propext"
+    ]
+  },
+  "compiled_node_probes": {
+    "P30Bad.residue_wrong": {
+      "name": "P30Bad.residue_wrong",
+      "proof_constants": [
+        "Eq.refl",
+        "Nat",
+        "HMod.hMod",
+        "instHMod",
+        "Nat.instMod",
+        "HMul.hMul",
+        "instHMul",
+        "instMulNat",
+        "OfNat.ofNat",
+        "instOfNatNat"
+      ],
+      "type": "5 * 7 % 17 = 1",
+      "type_constants": [
+        "Eq",
+        "Nat",
+        "HMod.hMod",
+        "instHMod",
+        "Nat.instMod",
+        "HMul.hMul",
+        "instHMul",
+        "instMulNat",
+        "OfNat.ofNat",
+        "instOfNatNat"
+      ]
+    },
+    "P30Bad.p30_target": {
+      "name": "P30Bad.p30_target",
+      "proof_constants": [
+        "Nat",
+        "Eq",
+        "HMod.hMod",
+        "instHMod",
+        "Nat.instMod",
+        "HMul.hMul",
+        "instHMul",
+        "instMulNat",
+        "OfNat.ofNat",
+        "instOfNatNat",
+        "Trans.trans",
+        "instTransEq",
+        "Eq.mpr",
+        "id",
+        "congrArg",
+        "P30Bad.residue_wrong",
+        "Nat.one_mul",
+        "Eq.refl",
+        "Nat.mod_mul_mod",
+        "Nat.mul_comm",
+        "Nat.mul_assoc",
+        "Eq.symm",
+        "Nat.mul_mod_mod"
+      ],
+      "type": "∀ (n : ℕ), 5 * n % 17 = 8 → n % 17 = 5",
+      "type_constants": [
+        "Nat",
+        "Eq",
+        "HMod.hMod",
+        "instHMod",
+        "Nat.instMod",
+        "HMul.hMul",
+        "instHMul",
+        "instMulNat",
+        "OfNat.ofNat",
+        "instOfNatNat"
+      ]
+    }
+  },
+  "protected_declaration_actually_used": true,
+  "status": "PASS"
+}

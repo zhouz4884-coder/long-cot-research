@@ -1,0 +1,146 @@
+{
+  "status": "TWO_BOUND_REVIEWED_SOURCE_FIXTURES",
+  "source_pins_sha256": "7964bdd4bbd39b6f80a6a15c80b7e5a46c2d36d304626a4cb06b3b0765e6131b",
+  "archive_sha256": "6acd6a2571ec420e61b05d2ed2d18da4422b6420a7b6d6feb98802030959500e",
+  "author_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "scope": "Line-reviewed fixed final declarations plus original axiom-print suffix only. Raw author gate and admitted initial modules are not staged.",
+  "cases": [
+    {
+      "state_id": "p151_bad.state0",
+      "author_model": "deepseek/deepseek-v4-flash",
+      "archive_episode_member": "data/llm_calls/p151_compound_patchsrc_v0/typed/episode.json",
+      "episode_sha256": "5129cbefed142f98af635dad063753a30edb8a6d6d4147a0d2bae62fe5ed6d32",
+      "initial_module_sha256": "536161d3eb484f138ee0df36f289f0a0fdc115ba720ca54d668d293791383145",
+      "final_module_sha256": "f016727b60bc222ce9a1a6c3ddcb90d912bf645d09b359b29c9acc83bf999590",
+      "accepted_check_sha256": "b77266c94475397fceb94d96eb335cd814b009007f5d654bc232f963efb18bac",
+      "target_declaration": "P151Bad.p151_target",
+      "target_header_sha256": "29ea671dfe7a1087f07cff8abe6b3561c3c7fde1d2437de5a75a30d9f2364d34",
+      "target_header_preserved": true,
+      "proved_label_changes_at_initial_source": [
+        {
+          "node_id": "lem:p151bad-final-mod",
+          "archived_graph_label": "proved_and_used",
+          "initial_contains_admission": true,
+          "same_theorem_header": true,
+          "source_before_sha256": "bf40ea87f56449e3783ac1296d44ad4134e18b68d2ce6084618b25b9490db1aa",
+          "source_after_sha256": "c38fced72af82195e22d2d550fd7bb3c8b2ca3b280ac6e122862b5c0f3a90cd8"
+        }
+      ],
+      "author_accepted_axioms": {
+        "sum_subst": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "sum_eval": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "mod_window": [
+          "propext"
+        ],
+        "final_mod": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "seven_mult": [
+          "propext"
+        ],
+        "p151_target": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "patch_chain": [
+        {
+          "step": 1,
+          "step_sha256": "2741881646283a18879b61128c36949a0752dcf90c04f8a56ed73c29e478a1be",
+          "module_sha256": "923db29f1f729203cce2e4d52978baac55f40310c9c8abe893eb97673703e4eb",
+          "blocks": 4
+        },
+        {
+          "step": 2,
+          "step_sha256": "ef7cd5963304f58e67b5f36ae140e66f399a038d599a14303061c90a37d33806",
+          "module_sha256": "99aea949e26d7f66eb05ac9dd81a80072e350e42e9717ca5d1760c1a48010b54",
+          "blocks": 1
+        },
+        {
+          "step": 3,
+          "step_sha256": "0419a43cc4bae47ef2af8a1d327c01d1714b121d73e8a3733f808101f142de3a",
+          "module_sha256": "f016727b60bc222ce9a1a6c3ddcb90d912bf645d09b359b29c9acc83bf999590",
+          "blocks": 1
+        }
+      ],
+      "executed_locally": false
+    },
+    {
+      "state_id": "p149_bad.state0",
+      "author_model": "deepseek/deepseek-v4-flash",
+      "archive_episode_member": "data/llm_calls/p149_compound_patchsrc_v0/typed/episode.json",
+      "episode_sha256": "f4ecac07b8a4f8277919d7c64db363f1bd9e7f5dc55cbb943ff7b2ce1463b5d2",
+      "initial_module_sha256": "28c23fdd35763d0b03f7f5f2764cc27b8af9cf61a8c1177253671521456047f2",
+      "final_module_sha256": "007b91579fbb44615298996c67a915a7689c36d9a42c3f61263a73587fb41f7b",
+      "accepted_check_sha256": "8e3f4a13dbc68a0a22fa647d6e2e26595a925b9efae543eb5ac0da71698ef7f9",
+      "target_declaration": "P149Bad.p149_target",
+      "target_header_sha256": "1197ecc0ab542607e40c844e8f65a019d3a723cc72eff0fa913a0d684d6c0220",
+      "target_header_preserved": true,
+      "proved_label_changes_at_initial_source": [
+        {
+          "node_id": "lem:p149bad-window",
+          "archived_graph_label": "proved_and_used",
+          "initial_contains_admission": true,
+          "same_theorem_header": true,
+          "source_before_sha256": "1f6082f2b58a063b05d4b25391afee981c3094c088ad11141e78b9bbbc5e3161",
+          "source_after_sha256": "67173d0be1f4cff05432edb03b131a7653e89fb90bf07043be8d43feed245b3b"
+        }
+      ],
+      "author_accepted_axioms": {
+        "sum_eval": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "sub_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "mult_range": [
+          "Quot.sound",
+          "propext"
+        ],
+        "window": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "key_multiple": [
+          "propext"
+        ],
+        "p149_target": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "patch_chain": [
+        {
+          "step": 1,
+          "step_sha256": "0a10fe74a4d3a5a492a173a5a88391d3826fcbe1f2623609f4e1e305f8f97a99",
+          "module_sha256": "007b91579fbb44615298996c67a915a7689c36d9a42c3f61263a73587fb41f7b",
+          "blocks": 4
+        }
+      ],
+      "executed_locally": false
+    }
+  ],
+  "model_generation": false,
+  "gpu_seconds": 0
+}

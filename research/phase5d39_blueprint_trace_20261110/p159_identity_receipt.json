@@ -1,0 +1,175 @@
+{
+  "status": "PASS",
+  "scope": "Exact reviewed author-check and separate clean-process probes. Type formatting and direct constant-set equality do not imply proof-term or whole-environment identity.",
+  "utc": "2026-11-09T21:10:39.464809+00:00",
+  "source_receipt_sha256": "d3e7fbb9f90b18d6af2c992b6461e09605da279f11f01e3f439e9d1c5e8b0438",
+  "approved_runtime_observation_sha256": "66feb66be0383e5c8c876f144d70816c9feed85ed302a9719047431414a05df6",
+  "author_pins": {
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib_rev": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+    "leanarchitect_rev": "f38c848196b0467e7b9dcc3d129a866b4051c23c"
+  },
+  "source_target_absent_before_declarations": [
+    "P159Bad.diff_four",
+    "P159Bad.a_value",
+    "P159Bad.diff_ten",
+    "P159Bad.final_step",
+    "P159Bad.p159_target"
+  ],
+  "preserved_declarations": [
+    {
+      "declaration": "P159Bad.diff_four",
+      "pretty_elaborated_type_equal": true,
+      "type_direct_constants_equal": true,
+      "proof_direct_constants_equal": true,
+      "transitive_axioms_equal": true,
+      "type_sha256_initial": "567dcc23911cd79849e695b376fa9002c78c339792de597cd19fd748c1e29196",
+      "type_sha256_accepted": "567dcc23911cd79849e695b376fa9002c78c339792de597cd19fd748c1e29196",
+      "type_direct_constant_count": 18,
+      "proof_direct_constant_count": 95,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "P159Bad.a_value",
+      "pretty_elaborated_type_equal": true,
+      "type_direct_constants_equal": true,
+      "proof_direct_constants_equal": true,
+      "transitive_axioms_equal": true,
+      "type_sha256_initial": "cfc01c1937a7ef0028524bb57df56a287190eace49970ca70f9c5e02c4fd39e7",
+      "type_sha256_accepted": "cfc01c1937a7ef0028524bb57df56a287190eace49970ca70f9c5e02c4fd39e7",
+      "type_direct_constant_count": 18,
+      "proof_direct_constant_count": 143,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "P159Bad.diff_ten",
+      "pretty_elaborated_type_equal": true,
+      "type_direct_constants_equal": true,
+      "proof_direct_constants_equal": true,
+      "transitive_axioms_equal": true,
+      "type_sha256_initial": "6bf0bfe1e3c542c7fe6f1b9f7b8dcfa0fa1fd7dd7894b3f58cb0333fc9a04fce",
+      "type_sha256_accepted": "6bf0bfe1e3c542c7fe6f1b9f7b8dcfa0fa1fd7dd7894b3f58cb0333fc9a04fce",
+      "type_direct_constant_count": 18,
+      "proof_direct_constant_count": 95,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "complete_target": {
+    "name": "P159Bad.p159_target",
+    "proof_constants": [
+      "Eq",
+      "Eq.mpr",
+      "Eq.refl",
+      "HAdd.hAdd",
+      "HMul.hMul",
+      "HSub.hSub",
+      "Nat",
+      "Nat.instAtLeastTwoHAddOfNat",
+      "Nat.instNeZeroSucc",
+      "OfNat.ofNat",
+      "P159Bad.a_value",
+      "P159Bad.diff_ten",
+      "P159Bad.final_step",
+      "Real",
+      "Real.instAdd",
+      "Real.instMul",
+      "Real.instNatCast",
+      "Real.instSub",
+      "Trans.trans",
+      "congrArg",
+      "id",
+      "instHAdd",
+      "instHMul",
+      "instHSub",
+      "instOfNatAtLeastTwo",
+      "instOfNatNat",
+      "instTransEq",
+      "rfl"
+    ],
+    "type": "∀ (a b : ℝ) (f : ℝ → ℝ), (∀ (x : ℝ), f x = a * x + b) → f 6 - f 2 = 12 → f 12 - f 2 = 30",
+    "type_constants": [
+      "Eq",
+      "HAdd.hAdd",
+      "HMul.hMul",
+      "HSub.hSub",
+      "Nat",
+      "Nat.instAtLeastTwoHAddOfNat",
+      "Nat.instNeZeroSucc",
+      "OfNat.ofNat",
+      "Real",
+      "Real.instAdd",
+      "Real.instMul",
+      "Real.instNatCast",
+      "Real.instSub",
+      "instHAdd",
+      "instHMul",
+      "instHSub",
+      "instOfNatAtLeastTwo",
+      "instOfNatNat"
+    ]
+  },
+  "author_graph_edges_reproduced": {
+    "P159Bad.diff_four": [],
+    "P159Bad.a_value": [
+      "P159Bad.diff_four"
+    ],
+    "P159Bad.diff_ten": [],
+    "P159Bad.final_step": [],
+    "P159Bad.p159_target": [
+      "P159Bad.a_value",
+      "P159Bad.diff_ten",
+      "P159Bad.final_step"
+    ]
+  },
+  "author_check_axioms": {
+    "P159Bad.diff_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P159Bad.a_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P159Bad.diff_ten": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P159Bad.final_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P159Bad.p159_target": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "false_original_helper_counterexample": {
+    "status": "KERNEL_ACCEPTED",
+    "a": 0,
+    "d": 0,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "verified_original_proof_cells_released": 0,
+  "model_generation": false
+}

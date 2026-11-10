@@ -1,0 +1,536 @@
+{
+  "status": "D47_EIGHT_QUESTION_ONLY_TARGETS_FROZEN_BEFORE_TRACES_OR_GOLD",
+  "source": {
+    "dataset": "suryadv/qwen3-8b-aime-2009-2024-16x",
+    "revision": "c34143c92856d9b90fdb9c808c7e66070dcab9a1",
+    "draw00_sha256": "5da6ef58914d22c60659e7e21266f4530021993014d8af6cebe1a640d137c787",
+    "projection_columns": [
+      "problem_id",
+      "year",
+      "part",
+      "problem_number",
+      "problem",
+      "has_asy"
+    ],
+    "exclusion_artifact_sha256": {
+      "prior": "c2511f1fa78525d26a02204a35400274eca6964d66449d2305ef4109ee596566",
+      "d43": "1eb07b5bcc988124ed0b79af779b6a08a20e3621b736a590f928df1790d8a01d",
+      "d44": "b4d100ec10b1f337dcea35d96174ecf9d2a9ef239c1549cb550e9d1a4dfa707f",
+      "d45": "f6e2c37da342ac2dfe3893fedb0551034ce1ed9d2b5a3f3dd1c0a3833c06918b",
+      "d46": "b37ca3a8574e4cbe2eb7da7ccfe379c2138395ffdf2b8eb91d4cf81c1866219b"
+    }
+  },
+  "rules": {
+    "year_range_inclusive": [
+      2009,
+      2023
+    ],
+    "exclusion": "Exact ID or normalized SHA-256 in union of five pinned sources.",
+    "normalization": "SHA256(re.sub(r'\\s+', ' ', unicodedata.normalize('NFKC', question)).strip().casefold().encode())",
+    "pure_text": "has_asy=false and casefolded question lacks <img and [asy.",
+    "lexical_regex": "\\b(?:maximum|minimum|largest|least|smallest|greatest|fewest|maximal|minimal|highest|lowest)\\b",
+    "ignore_case": true,
+    "last_codepoints": 440,
+    "semantic_scope": "One exact orderable delivered scalar with at least two distinct feasible values. Only the explicitly declared squared diameter rendering is admitted; its positive-domain transformation preserves order."
+  },
+  "counts": {
+    "source_rows": 480,
+    "year_rows": 450,
+    "excluded_by_history": 63,
+    "history_counts": {
+      "d43": 32,
+      "d44": 8,
+      "d45": 11,
+      "d46": 11,
+      "prior": 1
+    },
+    "after_history": 387,
+    "pure_text": 359,
+    "lexical_hits": 66,
+    "normalized_collisions_after_history": 0,
+    "selected": 8
+  },
+  "rows": [
+    {
+      "case_id": "2009-I-13",
+      "exact_question_sha256": "bdc39b513c8881b0b754c7fd4a58b653e4b0d55feadd8e75b27097d25325d335",
+      "normalized_question_sha256": "aa74d898d848d9f5a96330700c7904b009a8ed1fe0457eddd07d2caa3df26c17",
+      "direction": "MIN",
+      "scope_summary": "integral recurrence reduces to a fixed product"
+    },
+    {
+      "case_id": "2010-I-12",
+      "exact_question_sha256": "52fd506c3f8fe376bb1c9df32d4fe106711f89902a8f336218dc5b5ab065c5d3",
+      "normalized_question_sha256": "1cec04de747b1187d05618284865dd7ff455730bdaa74a970ed347de6789e7fc",
+      "direction": "MIN",
+      "scope_summary": "fixed threshold with exact finite two-color decision"
+    },
+    {
+      "case_id": "2016-II-4",
+      "exact_question_sha256": "a18713f43e7fe88c2da802903c5691e379a60859071f2da6f182d901efb79f12",
+      "normalized_question_sha256": "90c2bde068fcb28c191c8fab2c795e0d7beb2be16521c922faccc10ae6f4ced7",
+      "direction": "MIN",
+      "scope_summary": "integer colored-box volume with exact cyclic construction"
+    },
+    {
+      "case_id": "2018-I-8",
+      "exact_question_sha256": "9a876098be1959156919cf8e943bea1f47821681307b21eb727cba0734247a5a",
+      "normalized_question_sha256": "010327d0f30e898ea5d2affccdb6950c156bf849f978eeaed0d94c0a7eac69fe",
+      "direction": "MAX",
+      "scope_summary": "squared diameter, a monotone exact rendering on positive diameters"
+    },
+    {
+      "case_id": "2018-I-13",
+      "exact_question_sha256": "5b4f3bd719e8170054913117674da2641ca33a13de01320a245a1964981eaa4e",
+      "normalized_question_sha256": "81d9a20858c3b77c2beda49df25d0ae328e8c9166ed3234cf8296890f49b3267",
+      "direction": "MIN",
+      "scope_summary": "attainable incenter triangle area by an exact interval"
+    },
+    {
+      "case_id": "2019-I-11",
+      "exact_question_sha256": "fac62d2e4df186e0168666236322c6987df722d55aeee071a99a34dad354638c",
+      "normalized_question_sha256": "aebc71c5cae9cfaa7f1c51a041e5a302a6d371751f00daa5865fe36961b57aa3",
+      "direction": "MIN",
+      "scope_summary": "integer perimeter with separately solved tangent circle radius"
+    },
+    {
+      "case_id": "2020-II-8",
+      "exact_question_sha256": "3ec5c5f709b7dbd0327d59ffeb9303de1563038ce716a30eaf69b6f9ab21c334",
+      "normalized_question_sha256": "e09014cb3db137f398ff28c6fd7cc683bc8f1b01d6085d88fa02233a712e5021",
+      "direction": "MIN",
+      "scope_summary": "recursive-zero sum from exact arithmetic-progression closure"
+    },
+    {
+      "case_id": "2022-II-12",
+      "exact_question_sha256": "19ee0c76df9a7b0c90e370cc303d0a01c4211b904db97693bcbdfad349c525bc",
+      "normalized_question_sha256": "ad3629e1ec7e86a31def098ef703e86e115aa1307a9de20985218ce00e6c754e",
+      "direction": "MIN",
+      "scope_summary": "attainable sum of semimajor axes via exact focal distances"
+    }
+  ],
+  "lexical_hit_identities": [
+    {
+      "case_id": "2009-I-1",
+      "exact_question_sha256": "000300df7db9946bbdfbffded4bf3c6330d75318b8729fe524eab2b86a2adde2",
+      "normalized_question_sha256": "9344f092ce51182e3dede1f52d4998fb8a09a5760126178a24472b199ab8e3c9"
+    },
+    {
+      "case_id": "2009-I-13",
+      "exact_question_sha256": "bdc39b513c8881b0b754c7fd4a58b653e4b0d55feadd8e75b27097d25325d335",
+      "normalized_question_sha256": "aa74d898d848d9f5a96330700c7904b009a8ed1fe0457eddd07d2caa3df26c17"
+    },
+    {
+      "case_id": "2009-I-15",
+      "exact_question_sha256": "001915b25093d4925827c8108b8d2fc0730e0ee876154941315b853576272a8f",
+      "normalized_question_sha256": "a4f0eb06d1e902413506f540ec4a605abfb12ebf52cbbbfb8d524f6559f02e8e"
+    },
+    {
+      "case_id": "2009-II-14",
+      "exact_question_sha256": "c816fc4bfea5a5bebbf745e2f1bf1e014d477fef244d8599f36f2542d3bd48d7",
+      "normalized_question_sha256": "5bd2374298ee51e74c97d9b091460953a07d5df33f846b65873082ec122c16ad"
+    },
+    {
+      "case_id": "2009-II-15",
+      "exact_question_sha256": "a47e4e41bed8166e2330d3570fbef9d68e94911b6c8f6d89c27857a6e416a4d1",
+      "normalized_question_sha256": "fdfeed54aff885d80f24de7fc7bf78e9e6c610592f9a96eff816a812461d8f77"
+    },
+    {
+      "case_id": "2009-II-3",
+      "exact_question_sha256": "e119ba30a0ebf40865bc1e002445a5662abab3f93b6d71600a28084d94b9fba6",
+      "normalized_question_sha256": "c916bcdb737a2dc6dc9892351d73c5f8ca573b754677007e039372846c09070b"
+    },
+    {
+      "case_id": "2009-II-6",
+      "exact_question_sha256": "c3e5efad565a639b86ef3aafbc0c790495d948c55ee7108c35757d81384007b4",
+      "normalized_question_sha256": "cd6e8e94cba8a76c2b8cbbe6841b357ca1a08092b02f14f336f3c834263c3865"
+    },
+    {
+      "case_id": "2009-II-7",
+      "exact_question_sha256": "4729ffe28e390f133f060b04a01a95ad90adec5211511a65da0ea46f80e8e985",
+      "normalized_question_sha256": "d61530b009d570be5e6a7d7125d420321e20be0621bfb62ccf00e69b5ca205e4"
+    },
+    {
+      "case_id": "2010-I-12",
+      "exact_question_sha256": "52fd506c3f8fe376bb1c9df32d4fe106711f89902a8f336218dc5b5ab065c5d3",
+      "normalized_question_sha256": "1cec04de747b1187d05618284865dd7ff455730bdaa74a970ed347de6789e7fc"
+    },
+    {
+      "case_id": "2010-I-8",
+      "exact_question_sha256": "26cec27d393e644cd143e578d8143038e27e267ca7592e549b63d6c787631717",
+      "normalized_question_sha256": "83d04902c1eba426d6fe76a4a6be9f7f345ce36f6a05ee2443f4a937358e299d"
+    },
+    {
+      "case_id": "2010-I-9",
+      "exact_question_sha256": "efcd03adf8f91f2cbafcf89c92c421036c038f0afaf54097d31ec9eecd2da837",
+      "normalized_question_sha256": "bba4fdfe475ce89ce5251fa32480817148f9dc2bf4b3608bbab521768ed3f1e3"
+    },
+    {
+      "case_id": "2010-II-1",
+      "exact_question_sha256": "71c9a110cd9c66d565e61acadb7c346eecf253e9c538bb9acc86c838a0e22b4b",
+      "normalized_question_sha256": "11daa8cccd678f0a09af0a189c752e0bd8d3fc5960184b3f173a4a68d9d3c256"
+    },
+    {
+      "case_id": "2010-II-13",
+      "exact_question_sha256": "f59c7bdb8305636863ea07d0760b5f5c341a50d774098df06ddaf6dbe6a017c5",
+      "normalized_question_sha256": "fd4b12178e81800c10a9c98c7ffd5e7da73cf23304009bb70ed1d7bc02ccef0e"
+    },
+    {
+      "case_id": "2011-I-6",
+      "exact_question_sha256": "91bdd5bb0cee9546b958e779100802f70accc12cece4bdc8735001dd55d52152",
+      "normalized_question_sha256": "7d461c9a77d83e883622fb69833dbb807f87345e79dbe23b456e6722daf779dc"
+    },
+    {
+      "case_id": "2011-II-12",
+      "exact_question_sha256": "015543e8c91eb8b1dd6344daeec1c361c7467541288587ed3985bd1c464d218f",
+      "normalized_question_sha256": "4770e7cf87af0a4f0dfe0457c623628b335ec546894390cb3521fe5473f4a97e"
+    },
+    {
+      "case_id": "2011-II-3",
+      "exact_question_sha256": "76de1d2b812cf5124a17a36376734f94adbcba5a0f5ff6d59b131b3714e99d5e",
+      "normalized_question_sha256": "318a5d60598bbbeb99faf0b4287ee79861aa5f46f3285658a10587fa9fb18324"
+    },
+    {
+      "case_id": "2011-II-7",
+      "exact_question_sha256": "948106459bd8f6c97d98a806c9b356ee436065f4820cc4027847914d102ed70e",
+      "normalized_question_sha256": "a6aab0fc66e6d5bec6a6d593542f9f9785bd317d1d0eab2c96380ace0279f8cd"
+    },
+    {
+      "case_id": "2011-II-9",
+      "exact_question_sha256": "ecd227cf4052229bcda3729ab296125e54d5b27eb70e3029a986cd3e1d79930b",
+      "normalized_question_sha256": "d34fc59dd288f8ae0fcdaf5cd4645e9513b212a174f5fb8da1497337ffc619df"
+    },
+    {
+      "case_id": "2012-II-14",
+      "exact_question_sha256": "857f9a53d18013ed8f8d7033fd5293f06470fa0f9c517a9df36959e8b48449ac",
+      "normalized_question_sha256": "001f4cb66949a06b359b087acc6e24f65a8d9b23345c61d7fd3f56f1f51ec689"
+    },
+    {
+      "case_id": "2013-I-11",
+      "exact_question_sha256": "9848bddf60e9844eb4f32cf4d0c418daa80fb1bc4c42de063b811c5565a60a77",
+      "normalized_question_sha256": "93a79565ae388be2e15d66caeb05506e5bcaff4aa58f8fda10afa7bca848d4e9"
+    },
+    {
+      "case_id": "2013-I-8",
+      "exact_question_sha256": "b5f3b5cb487daaf9b56b3c0c84cef98b73a0f9855d6f640f5b839f599bb33e4e",
+      "normalized_question_sha256": "2e0a0fcde9a3d9106757528aa33464d0453a301aefdbe1edfa244ba69603e5f7"
+    },
+    {
+      "case_id": "2013-II-10",
+      "exact_question_sha256": "810731488d5c5669d621c624f682f3bd3eb1d381f25374f30067d7a8d2f514a0",
+      "normalized_question_sha256": "b1d440e708200543ed959c62dd1bd8366c5a4a16d2eb7f8ff3d05b05b2f94dc3"
+    },
+    {
+      "case_id": "2013-II-9",
+      "exact_question_sha256": "519c64637374e6660d0c11ec1de3e6c99691a513dbac3d3ebacabb41d42a9e8d",
+      "normalized_question_sha256": "29b8057b3afac473aedc48820fa8f69f73b23b3d5a99a4774d40f5b8c841aae6"
+    },
+    {
+      "case_id": "2014-I-14",
+      "exact_question_sha256": "5df902c541c778c7db03a4370c443309f1fc9ae3a9c5c92feb431d2e50014ec8",
+      "normalized_question_sha256": "b096077e5ddd41a6e7e13faf79a35ee345926ebb3d74caede708a4967378afd8"
+    },
+    {
+      "case_id": "2014-I-3",
+      "exact_question_sha256": "76934a3f5cddbd86fa38f8c262f045996ffe5af46ca24937e1b9acf4239be71a",
+      "normalized_question_sha256": "b42df658c8f7aa577524dfe016bc39c5d82aa6eff398fc9f13ef240ef587694e"
+    },
+    {
+      "case_id": "2014-II-12",
+      "exact_question_sha256": "9e081ea0073c01e7aa302d46dbe9e20fbe6a5b28dbfb6896df424ea7eae69bcb",
+      "normalized_question_sha256": "56f7d1843daccc3445c1fd9ec0337a26a9ca557b08ad5e6080847dcd8d5c4df5"
+    },
+    {
+      "case_id": "2014-II-15",
+      "exact_question_sha256": "1679a517d5c904c253b88f2e0ac5eb5bee1acb86c65be50d11ee1e4d17504584",
+      "normalized_question_sha256": "2bca1db0465237cb6f538319ef365026ae50f9cd845e83e4b6c64b1b252b144f"
+    },
+    {
+      "case_id": "2014-II-9",
+      "exact_question_sha256": "0769fc3e476735c3f3cb84d58b622e61e664abb64e2d9bffb0a0ac19223f68de",
+      "normalized_question_sha256": "09f53607d7ba87814d6261b226028ead854b7b28cacde1e483de26f83ea1fa07"
+    },
+    {
+      "case_id": "2015-I-12",
+      "exact_question_sha256": "525b9719fc504834e60fa4372ced84d2ab29de4fb8518c1338ddf47c5f53117d",
+      "normalized_question_sha256": "6762e0ff6a18bf725413212c4de1f6fdf953ee4a4c81395f252301091708e257"
+    },
+    {
+      "case_id": "2015-I-14",
+      "exact_question_sha256": "4afa7d13e273b541af34a450722010ea33a051db798f5ba974a62e4cfe1a4191",
+      "normalized_question_sha256": "f430348b54ffdff4ddc335869d744994c67bee0d12eb23f0232b41c556f79d48"
+    },
+    {
+      "case_id": "2015-II-1",
+      "exact_question_sha256": "814d144c1b7b2bf04d33781326a10bb284b8ee81ff002dccc838249ff1f73525",
+      "normalized_question_sha256": "b97c15791b975d61972e14edc09d5718f182c2e9b985adc829d5ad27db46b664"
+    },
+    {
+      "case_id": "2015-II-8",
+      "exact_question_sha256": "8154ffb7cc89ccbb683d587193e68276cd2724a2f8a392ea57a83ace6f1f3fc7",
+      "normalized_question_sha256": "fc9fe932c1ed3962bbbf7e99aa76140a25f9a9036083e2d6762a6213317f686b"
+    },
+    {
+      "case_id": "2016-I-8",
+      "exact_question_sha256": "f8f43679754aa59ee6d1e4fa336dbf6c3c4b12d6586404af914cdf3e2fe7eb00",
+      "normalized_question_sha256": "9d0c3011a144adecae6cc71376353570e2d44ee948390c09aa091b6e6a7eb5d6"
+    },
+    {
+      "case_id": "2016-II-1",
+      "exact_question_sha256": "1b43b1cb9d93b1b77a992f19903c665e60c1d12f5c2c96b4db7d47aafcd5c998",
+      "normalized_question_sha256": "7b884cd2310a9a57ebb7b20199bb611b3602f9c5eb3f711813e4eab776e899b9"
+    },
+    {
+      "case_id": "2016-II-15",
+      "exact_question_sha256": "0e8539e8e64e303c89ac2dfcc22dda5fbebc20468b56b24b4f9707c74cf32811",
+      "normalized_question_sha256": "b6e206fd6f8a55739cdd8b537686dafde8874e81c2eb8935524dc5f9d9fbf044"
+    },
+    {
+      "case_id": "2016-II-2",
+      "exact_question_sha256": "7e3cbe708f74840827105168f29e579633071717ca155cf07110a15172860e3d",
+      "normalized_question_sha256": "18db3c4b35dbac398314dcc68af960048c3d394d45315f05d638630b8e82aa10"
+    },
+    {
+      "case_id": "2016-II-4",
+      "exact_question_sha256": "a18713f43e7fe88c2da802903c5691e379a60859071f2da6f182d901efb79f12",
+      "normalized_question_sha256": "90c2bde068fcb28c191c8fab2c795e0d7beb2be16521c922faccc10ae6f4ced7"
+    },
+    {
+      "case_id": "2016-II-7",
+      "exact_question_sha256": "69cab70c2a6b0473b4fc663bffff012d9f587464b97fec15bc80f92252234d60",
+      "normalized_question_sha256": "7aa81c301a54a0c9f944b69937dd5379debdb1bd9bdf71b4ab318f545aa25c13"
+    },
+    {
+      "case_id": "2017-I-13",
+      "exact_question_sha256": "bc525c2a1b66242b5a744b0319f66919ac6dae7ec866d52759bd366a84eaf5f5",
+      "normalized_question_sha256": "ea87ddb6b6c28c5f761c776ef0bf4d8ee13ec3c931e539b4537f5957114638a4"
+    },
+    {
+      "case_id": "2017-II-15",
+      "exact_question_sha256": "2b8218fdf3bda4e5635d23dfae686c77c582340972a600fbc86789f8567e582f",
+      "normalized_question_sha256": "28a48808325b20c465a5f9be47de893f103e8a98311117a3874ca34ad57a2bad"
+    },
+    {
+      "case_id": "2017-II-9",
+      "exact_question_sha256": "d832d88d71be850045104ad20500d9a559a1c07c2e389ce0dc2d0f053991edcc",
+      "normalized_question_sha256": "d44fbbe9841c9e57c9bdce328e29ef568fe293b652bc744673686f56f1f4a2ff"
+    },
+    {
+      "case_id": "2018-I-13",
+      "exact_question_sha256": "5b4f3bd719e8170054913117674da2641ca33a13de01320a245a1964981eaa4e",
+      "normalized_question_sha256": "81d9a20858c3b77c2beda49df25d0ae328e8c9166ed3234cf8296890f49b3267"
+    },
+    {
+      "case_id": "2018-I-8",
+      "exact_question_sha256": "9a876098be1959156919cf8e943bea1f47821681307b21eb727cba0734247a5a",
+      "normalized_question_sha256": "010327d0f30e898ea5d2affccdb6950c156bf849f978eeaed0d94c0a7eac69fe"
+    },
+    {
+      "case_id": "2018-II-11",
+      "exact_question_sha256": "06ebec8aff36b7186df40b57ef302fb2368a871ad02784537e26c00b999c06ed",
+      "normalized_question_sha256": "554bfa5680383b51cedb472924da1ac6d0ab6a82fbfad6b7a3f211352e9eca1b"
+    },
+    {
+      "case_id": "2019-I-11",
+      "exact_question_sha256": "fac62d2e4df186e0168666236322c6987df722d55aeee071a99a34dad354638c",
+      "normalized_question_sha256": "aebc71c5cae9cfaa7f1c51a041e5a302a6d371751f00daa5865fe36961b57aa3"
+    },
+    {
+      "case_id": "2019-I-2",
+      "exact_question_sha256": "e0ee70803ed6d88ce68356ee27fe24ba1c6f72861a48a482d57e06e07ab6de24",
+      "normalized_question_sha256": "a1126576966f533607e4e3a33b2938f9ce3a5e6f33deaba0c079ae150d8e09d5"
+    },
+    {
+      "case_id": "2019-I-9",
+      "exact_question_sha256": "74170d1655e58eeda1280c7d88e77cfebf4f42117d3d7abfcb28c2f5d1b33fbf",
+      "normalized_question_sha256": "189f44b95360c01124403e1ff338e4cb323538b16f84988c066150d72126d4f1"
+    },
+    {
+      "case_id": "2019-II-14",
+      "exact_question_sha256": "838b572708e7e992a4c419c4af90639feacc3b8c7c3fff28ae3a31fd8796efe8",
+      "normalized_question_sha256": "450ff2805814344194df35303642733f1da53a3ed7d22d4d8e96b213f3b51655"
+    },
+    {
+      "case_id": "2020-I-12",
+      "exact_question_sha256": "35015f99a023c4cfb948ae024c6088e7cf0c73e179e6c2ca800efd14795b13f8",
+      "normalized_question_sha256": "3d89105db652953694b4174d5fd9f96ce5b76c16d608362ec57ee47592690e8a"
+    },
+    {
+      "case_id": "2020-II-14",
+      "exact_question_sha256": "f47cef8b0487f9fc89d297d27f1f27aea0a40793dbf126377ac931269441b364",
+      "normalized_question_sha256": "43a29ba07c6159ac8160f0b18e21d995d2aedae96b32240abcbe820532658f5e"
+    },
+    {
+      "case_id": "2020-II-5",
+      "exact_question_sha256": "b9cc24435ba110922fb8cc1e88490247cc21ff69095ae9ac5e820a46bb82c739",
+      "normalized_question_sha256": "00bffe1337d3740ff5fe80e1c1f82a6ae1efc8bd3634377b312b68e34d5ed8bf"
+    },
+    {
+      "case_id": "2020-II-7",
+      "exact_question_sha256": "cfa6688d0bd1a39553a3d0298179b676b0ff6fcd4b6d8e046921259403b6f589",
+      "normalized_question_sha256": "6d2069f80c72c3df06063ee1eabb0cacd0010b621846f2690b65d45d5ef366aa"
+    },
+    {
+      "case_id": "2020-II-8",
+      "exact_question_sha256": "3ec5c5f709b7dbd0327d59ffeb9303de1563038ce716a30eaf69b6f9ab21c334",
+      "normalized_question_sha256": "e09014cb3db137f398ff28c6fd7cc683bc8f1b01d6085d88fa02233a712e5021"
+    },
+    {
+      "case_id": "2021-I-14",
+      "exact_question_sha256": "a0e158c2a213f868392fb476a69807631ca19fab5de300ce3d2e8260003ee18d",
+      "normalized_question_sha256": "377fb5bebc3b2feec7e572fdd475bf342d195b767dd8b90af1a2d7e489b657fb"
+    },
+    {
+      "case_id": "2021-I-15",
+      "exact_question_sha256": "3b32f446475d659a609c22d2a571f3fa860a0ddd5002210a9d5670f179d4a634",
+      "normalized_question_sha256": "69d4520337e91e21d06bd8ee61e81fd5edb6f2b467ba65d9f5379fea57a10dad"
+    },
+    {
+      "case_id": "2021-II-11",
+      "exact_question_sha256": "a8c76c0b31154429c7f082b469e8f291b9a54095add07056e21ac33c4cea08a8",
+      "normalized_question_sha256": "67448075c75cd15fe3c88cc11a1975a4f00e8e0474d1678ddc8f8094594ad949"
+    },
+    {
+      "case_id": "2021-II-9",
+      "exact_question_sha256": "aa7ae4769e140fb2e53daf55e82d33fe827f5105531415539a02cf2b01b3084f",
+      "normalized_question_sha256": "ff7939c274a230b5e3d0a87020403ac7dcbc34d480988949f5a2fb1657800fac"
+    },
+    {
+      "case_id": "2022-I-13",
+      "exact_question_sha256": "2d4f06cf8ed005e4bfd4128a91abd5fb8b7d30edc26edb4a041f9c9a0f41372d",
+      "normalized_question_sha256": "5dd3e8a4fed0dd2b1e8f374e6129e892e149ecd519fbb894c1b33414c0e6f6e4"
+    },
+    {
+      "case_id": "2022-I-7",
+      "exact_question_sha256": "9a5cfb9409f1a822af703cac471d68653e5ca284dda8bd0f1e0bb79a16afcedf",
+      "normalized_question_sha256": "325363a7e70189e3cd89ea361cf8b2807b24074aba928e1c0ec6d6206eb8105d"
+    },
+    {
+      "case_id": "2022-II-12",
+      "exact_question_sha256": "19ee0c76df9a7b0c90e370cc303d0a01c4211b904db97693bcbdfad349c525bc",
+      "normalized_question_sha256": "ad3629e1ec7e86a31def098ef703e86e115aa1307a9de20985218ce00e6c754e"
+    },
+    {
+      "case_id": "2022-II-14",
+      "exact_question_sha256": "c7eb20584b867c0026a403f514b61adb4e1b441917e06bdd6659368380f2179b",
+      "normalized_question_sha256": "f40d56b72e57d23b8f854ea95cd6335e3f85f95cf4f6859f8a46c69f63979d73"
+    },
+    {
+      "case_id": "2022-II-8",
+      "exact_question_sha256": "ee7deaf70992d982ed0f498ef66679826ea2d515f33da5bf010c659ff198be3b",
+      "normalized_question_sha256": "24c204a2bc4f132e9a5a39c36ed9b13607b3a664b50ae4985ef8530b1a7e389f"
+    },
+    {
+      "case_id": "2023-I-10",
+      "exact_question_sha256": "7b8552a6447ed22407b999e9dca510c4c4e8432db33939bd4a9e0732ad4b618d",
+      "normalized_question_sha256": "d6f2f7487ad357d2dd463a4f900de232ccfcbaae6038766393f02cd02a48529b"
+    },
+    {
+      "case_id": "2023-II-1",
+      "exact_question_sha256": "6537c2de2d1e733fd6b15ccedb0ca53bcec174abadbf605e60065f9d5476d362",
+      "normalized_question_sha256": "dd731bbf43f016d37d316a1fdbab03233a7f30ff52c8f528d37ccc4cf8c56412"
+    },
+    {
+      "case_id": "2023-II-15",
+      "exact_question_sha256": "e4818be9a2e5cf5473512a7ee3e0be1ffa260c525b16dcb8f61381b445cfd33c",
+      "normalized_question_sha256": "22b5bc705cde4186b25c540b16bfc563b2de2a631d9c33cc56d96f029f537a46"
+    },
+    {
+      "case_id": "2023-II-5",
+      "exact_question_sha256": "0ad93fe26435b76d88ad58a85b362d95dd75d96aace3338e0572268d3451a357",
+      "normalized_question_sha256": "87517a6ddd72f4f10aac27dbcea329c80d7f1b880a28535667b526a8c49130f3"
+    }
+  ],
+  "nearby_exclusions": [
+    {
+      "case_id": "2014-II-15",
+      "exact_question_sha256": "1679a517d5c904c253b88f2e0ac5eb5bee1acb86c65be50d11ee1e4d17504584",
+      "normalized_question_sha256": "2bca1db0465237cb6f538319ef365026ae50f9cd845e83e4b6c64b1b252b144f",
+      "reason": "Injective squarefree binary-state sequence has a unique hitting value, not competing feasible objectives."
+    },
+    {
+      "case_id": "2011-II-3",
+      "exact_question_sha256": "76de1d2b812cf5124a17a36376734f94adbcba5a0f5ff6d59b131b3714e99d5e",
+      "normalized_question_sha256": "318a5d60598bbbeb99faf0b4287ee79861aa5f46f3285658a10587fa9fb18324",
+      "reason": "A unique integral angle progression under convexity gives no alternative feasible smallest term."
+    },
+    {
+      "case_id": "2023-II-1",
+      "exact_question_sha256": "6537c2de2d1e733fd6b15ccedb0ca53bcec174abadbf605e60065f9d5476d362",
+      "normalized_question_sha256": "dd731bbf43f016d37d316a1fdbab03233a7f30ff52c8f528d37ccc4cf8c56412",
+      "reason": "The arithmetic progression and its greatest term are already fixed by the given equations."
+    },
+    {
+      "case_id": "2014-II-12",
+      "exact_question_sha256": "9e081ea0073c01e7aa302d46dbe9e20fbe6a5b28dbfb6896df424ea7eae69bcb",
+      "normalized_question_sha256": "56f7d1843daccc3445c1fd9ec0337a26a9ca557b08ad5e6080847dcd8d5c4df5",
+      "reason": "Squared-length rendering has only one feasible integer among the law-of-cosines cases."
+    },
+    {
+      "case_id": "2009-I-1",
+      "exact_question_sha256": "000300df7db9946bbdfbffded4bf3c6330d75318b8729fe524eab2b86a2adde2",
+      "normalized_question_sha256": "9344f092ce51182e3dede1f52d4998fb8a09a5760126178a24472b199ab8e3c9",
+      "reason": "Difference of two separately constrained extrema; neither endpoint is the delivered scalar."
+    },
+    {
+      "case_id": "2016-II-7",
+      "exact_question_sha256": "69cab70c2a6b0473b4fc663bffff012d9f587464b97fec15bc80f92252234d60",
+      "normalized_question_sha256": "7aa81c301a54a0c9f944b69937dd5379debdb1bd9bdf71b4ab318f545aa25c13",
+      "reason": "Difference of the largest and smallest integer geometric areas; two endpoint objectives."
+    },
+    {
+      "case_id": "2010-II-1",
+      "exact_question_sha256": "71c9a110cd9c66d565e61acadb7c346eecf253e9c538bb9acc86c838a0e22b4b",
+      "normalized_question_sha256": "11daa8cccd678f0a09af0a189c752e0bd8d3fc5960184b3f173a4a68d9d3c256",
+      "reason": "A residue of the maximum does not preserve the order of original feasible values."
+    },
+    {
+      "case_id": "2015-II-8",
+      "exact_question_sha256": "8154ffb7cc89ccbb683d587193e68276cd2724a2f8a392ea57a83ace6f1f3fc7",
+      "normalized_question_sha256": "fc9fe932c1ed3962bbbf7e99aa76140a25f9a9036083e2d6762a6213317f686b",
+      "reason": "Numerator-plus-denominator output does not preserve the order of the rational objective."
+    },
+    {
+      "case_id": "2019-I-9",
+      "exact_question_sha256": "74170d1655e58eeda1280c7d88e77cfebf4f42117d3d7abfcb28c2f5d1b33fbf",
+      "normalized_question_sha256": "189f44b95360c01124403e1ff338e4cb323538b16f84988c066150d72126d4f1",
+      "reason": "Sum of six least solutions, not a single feasible objective."
+    },
+    {
+      "case_id": "2022-II-14",
+      "exact_question_sha256": "c7eb20584b867c0026a403f514b61adb4e1b441917e06bdd6659368380f2179b",
+      "normalized_question_sha256": "f40d56b72e57d23b8f854ea95cd6335e3f85f95cf4f6859f8a46c69f63979d73",
+      "reason": "Three optimized denomination values and a nested minimum; incompatible with one point contract."
+    },
+    {
+      "case_id": "2023-I-6",
+      "exact_question_sha256": "08478b1ed6660af8b0baa11adda116f0c9a90c0e791a08dc4afb63ac6d1a4c47",
+      "normalized_question_sha256": "cfb1d52b7e3fa50c5024855d7c5c81a5c00196d38c645d2f39d731324d212be8",
+      "reason": "Alternate optimum-word scan detects an expected rational value rendered as numerator-plus-denominator."
+    },
+    {
+      "case_id": "2012-II-6",
+      "exact_question_sha256": "845b95b985874e8fceee965d0ebc40922552bf8dad8884715221e91dfc56216a",
+      "normalized_question_sha256": "06f0f7c256b2e6dd22ce6108ad6a60a6bae30db7b0ae4c253f7b6d3938ad74f3",
+      "reason": "Alternate optimum-word scan detects a derived coordinate sum after optimization."
+    },
+    {
+      "case_id": "2024-I-7",
+      "exact_question_sha256": "070f959b69b28c1947fbd957e8ef67bd2df59d07e458c13f8c348469879e9be5",
+      "normalized_question_sha256": "60aea6f55211d695ddd4e1a8be42e6421ac0fe7fe27dad39a25bc73e6396a09a",
+      "reason": "Potential direct maximization, excluded by the unchanged pre-2024 year rule."
+    },
+    {
+      "case_id": "2024-II-14",
+      "exact_question_sha256": "5639413296a006586b911608838c6852d0028a1e3a305ab95411ff3d94fb5648",
+      "normalized_question_sha256": "01d99bcf6c14833facca15c1d26fc4588a89dfcd08f1bac79c92fa887180db54",
+      "reason": "Potential direct minimization, excluded by the unchanged pre-2024 year rule."
+    },
+    {
+      "case_id": "2024-I-13",
+      "exact_question_sha256": "c03f3e9f9c27ae49ab282bd3aabdbe723f1731be5145fb818e5281eb4ee65eb2",
+      "normalized_question_sha256": "8347c13f532f7ae43ef234300a215e958668b6f87a7ae8e8a00bbe9974f99856",
+      "reason": "Excluded by year and the known earlier canonical alias aime-2024-i-13."
+    }
+  ],
+  "scope": "Question-only exact identities and derived scope metadata. No source prose, response, correctness, or accepted answer."
+}

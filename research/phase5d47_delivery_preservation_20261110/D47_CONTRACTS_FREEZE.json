@@ -1,0 +1,350 @@
+{
+  "status": "D47_POINT_AND_UNIT_CONTRACTS_FROZEN_BEFORE_HELDOUT",
+  "cohort_sha256": "2934940c86a5e632f5a0efa3e9fa1d3af5554f6f796dfc03fd252c8fe43dc1fe",
+  "contract_source_sha256": "4a8495e2b1c5bcf9402fbcd84882621ee7edf26c4da1a98bed42e191c8a01207",
+  "preservation_source_sha256": "9bc249732f3926555f69b65f8be0e6604ccc4b5892fbba1184ccfaf6b427fca1",
+  "gate_rules_sha256": "90f482643583407787c255176b260e52525ed2252a0835ef3af2f5bc04823e82",
+  "rows": [
+    {
+      "case_id": "2009-I-13",
+      "unit": "integer-sum-of-initial-terms",
+      "contract": {
+        "binding": {
+          "question_sha256": "bdc39b513c8881b0b754c7fd4a58b653e4b0d55feadd8e75b27097d25325d335",
+          "objective_id": "least-integral-sequence-start-sum",
+          "scope_sha256": "f9b9cd156df578b8590ef0972017be8dc3cb43dea1d53e94c05ad90d997b1a27",
+          "constraints_sha256": "9d8bc9250d01a29ece89fe9916434afdefbeb0cc5e0b860b9feac6931216bae6",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_integer_sum",
+          "positive_integer_factors",
+          "infinite_recurrence"
+        ],
+        "checker_id": "d47.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "1eebc3587eafc49bb5e47f7303a190c7696610a176d0df5d815cf0c9b430220e",
+        "review_sha256": "6e36a8a554912c66a6093691b11897840f8675b9b72abfeecb58453829bade67"
+      },
+      "contract_sha256": "4128cd3b234742d96ece6871d400bdcacf3a3c313b4b2c88ac50f5e94636ed71",
+      "question_only_review": {
+        "case_id": "2009-I-13",
+        "question_sha256": "bdc39b513c8881b0b754c7fd4a58b653e4b0d55feadd8e75b27097d25325d335",
+        "scope": {
+          "direction": "MIN",
+          "unit": "integer-sum-of-initial-terms",
+          "objective_id": "least-integral-sequence-start-sum",
+          "description": "Least a1+a2 over the original infinite positive integer recurrence.",
+          "subject_patterns": [
+            "a_?\\s*\\{?1\\}?\\s*\\+\\s*a_?\\s*\\{?2\\}?",
+            "sum of (?:the )?(?:first two|initial) terms"
+          ]
+        },
+        "proof": "The integer error a_i*a_(i+1)-2009 contracts by the denominator 1+a_(i+1). It must be zero, and product 2009 conversely gives a period-two valid sequence. At a fixed sum verify the exact positive integer roots of the product quadratic.",
+        "checker_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8"
+      }
+    },
+    {
+      "case_id": "2010-I-12",
+      "unit": "integer-set-endpoint",
+      "contract": {
+        "binding": {
+          "question_sha256": "52fd506c3f8fe376bb1c9df32d4fe106711f89902a8f336218dc5b5ab065c5d3",
+          "objective_id": "least-monochromatic-product-endpoint",
+          "scope_sha256": "eae31be88fda70bf9baf22b5b08e8f3b66807adb9dfc71347d1089f5c718105f",
+          "constraints_sha256": "c87b4265d369a3af216354b42e7b1b77694d7320c0b21a4417d46efd7dbbcf7b",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "integer_endpoint_at_least_three",
+          "every_partition_forces_product"
+        ],
+        "checker_id": "d47.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "d52910ed62dceeaf000486840a3eb40fc6ef122235d9ab1d7a67357bb6bcdd85",
+        "review_sha256": "5fd9391184b5a3cdbac95dd597f801355883265fc2fe2dac02412cf2fa1075cf"
+      },
+      "contract_sha256": "3ae9c4d4fc152960538055a0a64365e5f624a6fd3405c2755f0e79378e44661f",
+      "question_only_review": {
+        "case_id": "2010-I-12",
+        "question_sha256": "52fd506c3f8fe376bb1c9df32d4fe106711f89902a8f336218dc5b5ab065c5d3",
+        "scope": {
+          "direction": "MIN",
+          "unit": "integer-set-endpoint",
+          "objective_id": "least-monochromatic-product-endpoint",
+          "description": "Smallest endpoint m for the original universal two-part monochromatic product property.",
+          "subject_patterns": [
+            "m",
+            "(?:set )?endpoint(?: m)?",
+            "integer m"
+          ]
+        },
+        "proof": "Below 243 color 3..8 and 81..242 red, others blue; verify every product triple at the fixed endpoint. At or above 243 verify all 32 two-colorings of the five powers 3,9,27,81,243. The subproblem alone forces a monochromatic product with equality allowed for the factors.",
+        "checker_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8"
+      }
+    },
+    {
+      "case_id": "2016-II-4",
+      "unit": "unit-cubes",
+      "contract": {
+        "binding": {
+          "question_sha256": "a18713f43e7fe88c2da802903c5691e379a60859071f2da6f182d901efb79f12",
+          "objective_id": "least-coloured-box-volume",
+          "scope_sha256": "5af0436d966ea066228ff27b2b953f0123d2b0a9017cab8203b9b3260fee3d05",
+          "constraints_sha256": "6f4ab5ca1e1ca3f77c55ccde53b7cc93d982e3cdf6a69fd1e38722f7ae35360e",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "integer_box_dimensions",
+          "first_direction_layer_colours",
+          "second_direction_layer_colours"
+        ],
+        "checker_id": "d47.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "c4b8c75ec67d9c60d0c0577bd21d19952d89493887c88be6fd8f9769954e6e56",
+        "review_sha256": "a9d00bc4e94a176ddfbbc727b5d7609b0ec33d6037b19b249d5bceb7546c204b"
+      },
+      "contract_sha256": "75f29cd8c196d2810083334a9ef3e2873cd4e387b74b10a1778e0ab8ef7196a2",
+      "question_only_review": {
+        "case_id": "2016-II-4",
+        "question_sha256": "a18713f43e7fe88c2da802903c5691e379a60859071f2da6f182d901efb79f12",
+        "scope": {
+          "direction": "MIN",
+          "unit": "unit-cubes",
+          "objective_id": "least-coloured-box-volume",
+          "description": "Smallest original box volume abc satisfying all prescribed layer counts.",
+          "subject_patterns": [
+            "v",
+            "(?:box )?volume",
+            "volume of (?:the )?box",
+            "a\\s*b\\s*c"
+          ]
+        },
+        "proof": "Green counts force a=5k and b=3k; all color counts give volume 180k and kc=12. For k dividing 12, distribute a fixed sequence of 3R+4G+5Y using k equal contiguous slices indexed by row-plus-column residue, checking every original layer.",
+        "checker_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8"
+      }
+    },
+    {
+      "case_id": "2018-I-13",
+      "unit": "squared-length",
+      "contract": {
+        "binding": {
+          "question_sha256": "5b4f3bd719e8170054913117674da2641ca33a13de01320a245a1964981eaa4e",
+          "objective_id": "least-two-incenter-triangle-area",
+          "scope_sha256": "6d396a8bee900d9686e6a7dd26dc801df5380c445ac010b1f1eff2ea458586e2",
+          "constraints_sha256": "793ad7d8193de28523702149fee033852af3c47a709d1e40f570cdf13be88327",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "interior_side_position",
+          "original_incenter_area"
+        ],
+        "checker_id": "d47.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "0d1faa6ff6165c57a287b3e2f002838a56f9476292a7f53a16128a65ffda3222",
+        "review_sha256": "ca13b83fa6b2e33327edc921566e4abd4bd923501c606d6a9f917f63413a9192"
+      },
+      "contract_sha256": "13460db9fb839ae17c1058ba54f2792da73c51070bab2594f1bbff8a48756613",
+      "question_only_review": {
+        "case_id": "2018-I-13",
+        "question_sha256": "5b4f3bd719e8170054913117674da2641ca33a13de01320a245a1964981eaa4e",
+        "scope": {
+          "direction": "MIN",
+          "unit": "squared-length",
+          "objective_id": "least-two-incenter-triangle-area",
+          "description": "Least area of AI1I2 with X in the strict interior of the original side.",
+          "subject_patterns": [
+            "(?:triangle )?area",
+            "area of (?:triangle )?a\\s*i_?\\s*\\{?1\\}?\\s*i_?\\s*\\{?2\\}?",
+            "area of (?:the )?incenter triangle"
+          ]
+        },
+        "proof": "With B=(0,0), C=(32,0), A=(12,6sqrt(21)), X=(t,0), put u=AX. The original incenter barycentric determinant simplifies to area sqrt(21)*u. A right-side interior witness exists exactly for 0<=area²/21-756<400; it uses t=12+sqrt(radicand).",
+        "checker_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8"
+      }
+    },
+    {
+      "case_id": "2018-I-8",
+      "unit": "squared-diameter",
+      "contract": {
+        "binding": {
+          "question_sha256": "9a876098be1959156919cf8e943bea1f47821681307b21eb727cba0734247a5a",
+          "objective_id": "maximum-inscribed-diameter-squared",
+          "scope_sha256": "00f85e833b54999229763e54c677b8969c21e4fb0f8effc9217f25d46ae22aa7",
+          "constraints_sha256": "cb1702bcba712591b47b942b2bab18c1d6000eaed316ac27a6ebc2fabb1e360e",
+          "direction": "MAX"
+        },
+        "required_constraints": [
+          "positive_squared_diameter",
+          "six_original_halfspaces"
+        ],
+        "checker_id": "d47.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "f6c6e840c1114cbf8fd59952b0af201624f1688b8c814d8770bbee48afdb7daa",
+        "review_sha256": "404c0bf2c7928b55be288cf9be7ea9662679264cab0839151d50a57ffa52b209"
+      },
+      "contract_sha256": "ead9b4b3f49c9ac557d0d669d4c6850b631c6ce801d4c6c8cfb958aa2cf48f92",
+      "question_only_review": {
+        "case_id": "2018-I-8",
+        "question_sha256": "9a876098be1959156919cf8e943bea1f47821681307b21eb727cba0734247a5a",
+        "scope": {
+          "direction": "MAX",
+          "unit": "squared-diameter",
+          "objective_id": "maximum-inscribed-diameter-squared",
+          "description": "Squared diameter of the largest circle inside the original equiangular hexagon. Square preserves order for positive diameters.",
+          "subject_patterns": [
+            "d\\s*\\^\\s*\\{?2\\}?",
+            "squared diameter",
+            "diameter squared",
+            "square of (?:the )?diameter"
+          ]
+        },
+        "proof": "Equiangular convex closure fixes the two omitted edges as 2 and 16. Opposite CD/FA have distance 7sqrt(3), giving d²<=147. The center (5/2,9sqrt(3)/2) meets the radius constraints at all six sides for every 0<d²<=147.",
+        "checker_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8"
+      }
+    },
+    {
+      "case_id": "2019-I-11",
+      "unit": "perimeter-length",
+      "contract": {
+        "binding": {
+          "question_sha256": "fac62d2e4df186e0168666236322c6987df722d55aeee071a99a34dad354638c",
+          "objective_id": "least-isosceles-excircle-perimeter",
+          "scope_sha256": "23f2dd71556f7cb8a873240c5ce4940ed2172bfd4ae638d45dccd6e542d462cb",
+          "constraints_sha256": "a1f6e4c98c97d8846952f49e7f18f518544db55b5eeb0d162d864596bf8e539e",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_integer_isosceles_sides",
+          "strict_triangle",
+          "internal_base_tangency",
+          "external_side_tangencies"
+        ],
+        "checker_id": "d47.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "902ae231f88073ccfaf905b665911fb0f8cf98059ec32036daa1a6901d7e54e5",
+        "review_sha256": "dbafd921d5ea51988b4db9b18e076544a838ed1419d831999c8a1f97e85d93cc"
+      },
+      "contract_sha256": "699a2767b4411a4e2fa3a8b4d5893495ada1dbe3f133992c29c3566a9aeb52b3",
+      "question_only_review": {
+        "case_id": "2019-I-11",
+        "question_sha256": "fac62d2e4df186e0168666236322c6987df722d55aeee071a99a34dad354638c",
+        "scope": {
+          "direction": "MIN",
+          "unit": "perimeter-length",
+          "objective_id": "least-isosceles-excircle-perimeter",
+          "description": "Least integer-sided isosceles perimeter permitting an incenter-centered circle with all three original tangencies.",
+          "subject_patterns": [
+            "p",
+            "perimeter(?: p)?",
+            "perimeter of (?:the )?triangle(?: abc)?"
+          ]
+        },
+        "proof": "The base excenter forces omega radius r+2r_A. With common side a, base b and altitude h, the side excenter has coordinates (a,h) and radius h. Its external tangency gives 2a=9b. Integer sides give a=9k,b=2k; verify exact radius ratios and both tangencies.",
+        "checker_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8"
+      }
+    },
+    {
+      "case_id": "2020-II-8",
+      "unit": "integer-sequence-index",
+      "contract": {
+        "binding": {
+          "question_sha256": "3ec5c5f709b7dbd0327d59ffeb9303de1563038ce716a30eaf69b6f9ab21c334",
+          "objective_id": "least-recursive-zero-sum-index",
+          "scope_sha256": "a3f273eec1ee4ddb2ac00a58bf94007336bbd88c785e26906fd28491b682705f",
+          "constraints_sha256": "cc3715671f9ed404277f03e25fac8d862e322d84f01a8d830305aa300aefe0e8",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_integer_index",
+          "strict_sum_of_all_distinct_zeros"
+        ],
+        "checker_id": "d47.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "07537ac6d9a125e2a9f28a4b336e4cd8328e14b0986b9ed037abe852cecde1c2",
+        "review_sha256": "c143708e61d7e45c7738b403cc1543e11ac0b41d2ec52cc46d7722d1b114743e"
+      },
+      "contract_sha256": "c6724d0971e3d4f9509d0dbcdba8931f3e13041030bc34d2e2923d55b5f571f5",
+      "question_only_review": {
+        "case_id": "2020-II-8",
+        "question_sha256": "3ec5c5f709b7dbd0327d59ffeb9303de1563038ce716a30eaf69b6f9ab21c334",
+        "scope": {
+          "direction": "MIN",
+          "unit": "integer-sequence-index",
+          "objective_id": "least-recursive-zero-sum-index",
+          "description": "Least positive index n whose original function has zero sum strictly greater than 500000.",
+          "subject_patterns": [
+            "n",
+            "(?:positive )?(?:integer )?index(?: n)?",
+            "function index(?: n)?"
+          ]
+        },
+        "proof": "The recurrence zero sets are contiguous step-two progressions centered at n, with largest zero n(n+1)/2 and smallest n-n(n-1)/2. Induct using n plus/minus the nonnegative preceding roots. Test the exact sum n*(n(n-1)/2+1).",
+        "checker_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8"
+      }
+    },
+    {
+      "case_id": "2022-II-12",
+      "unit": "sum-of-semiaxis-lengths",
+      "contract": {
+        "binding": {
+          "question_sha256": "19ee0c76df9a7b0c90e370cc303d0a01c4211b904db97693bcbdfad349c525bc",
+          "objective_id": "least-confocal-ellipse-semiaxis-sum",
+          "scope_sha256": "efc8171bb93ad49599d725a53cbaef8e3df5ba2aad0a4928724d2e7afdfc8da9",
+          "constraints_sha256": "ab0f8eeb059f80118e1ccd2f699ee8354def131bbe98cd7235139cc78166baf1",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "strict_original_semiaxes",
+          "common_point_of_both_ellipses"
+        ],
+        "checker_id": "d47.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "31fd9bacd49a70201063b1a43e110726ed5ba9c343cf195101eb650bc7b57bd5",
+        "review_sha256": "30c7e2854546e29d0d66f312251391521d6a9a754ebe0947975f74cf39ec9330"
+      },
+      "contract_sha256": "d288f78cedb0f15b2f67f2fca6e17f7945ccd8aacdde2b77d81d3808c1447758",
+      "question_only_review": {
+        "case_id": "2022-II-12",
+        "question_sha256": "19ee0c76df9a7b0c90e370cc303d0a01c4211b904db97693bcbdfad349c525bc",
+        "scope": {
+          "direction": "MIN",
+          "unit": "sum-of-semiaxis-lengths",
+          "objective_id": "least-confocal-ellipse-semiaxis-sum",
+          "description": "Least a+b over the real variables satisfying both original ellipse equalities and strict semiaxis constraints.",
+          "subject_patterns": [
+            "a\\s*\\+\\s*b",
+            "sum of a and b",
+            "sum of (?:the )?semiaxes"
+          ]
+        },
+        "proof": "Pair the two focal segments to get distance sum at least 26+20=46. Both equalities hold at the intersection (14,15/2) with strict original semiaxes. A vertical ray from there avoids both focal segments and continuously reaches all sums a+b>=23.",
+        "checker_sha256": "b58e027aaf0a06165f188346d938fffa2d08aa0def81303d960d8bc718ca4ad8"
+      }
+    }
+  ]
+}

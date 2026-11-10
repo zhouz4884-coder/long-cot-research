@@ -1,0 +1,1083 @@
+{
+  "status": "PASS_D47_ACTUAL_OLD_DELIVERY_CALIBRATION",
+  "sources": {
+    "baseline_commit": "97af21cfb0b8995a5cc50dbd82924da83e0a11d6",
+    "d47_heldout_identity_only_sha256": "2934940c86a5e632f5a0efa3e9fa1d3af5554f6f796dfc03fd252c8fe43dc1fe",
+    "old_cases_disjoint": true,
+    "old_published_sha256": {
+      "research/phase5d46_point_infeasibility_20261110/D46_DELIVERY_AUDIT.json": "b39e1611a59f4a8a2b8f555af8cc5826cbf956d4e15dfeed83a3d30fad87bb55",
+      "research/phase5d46_point_infeasibility_20261110/D46_RESULTS.json": "51566277d6d79ffe541f1a32ea5ff0ab58c404cf546d11d94b617a0edab9dce7",
+      "research/phase5d46_point_infeasibility_20261110/D46_POSTSCORE_FAILURE_MODES.json": "ead57bf079ee83f2be3a63ab21655b8e993edc0807f1c84bed9ecdfff5515ee3",
+      "research/phase5d46_point_infeasibility_20261110/D46_COHORT_FREEZE.json": "b37ca3a8574e4cbe2eb7da7ccfe379c2138395ffdf2b8eb91d4cf81c1866219b",
+      "research/phase5d46_point_infeasibility_20261110/D46_CONTRACTS_FREEZE.json": "0aa9f4a1addb5db55728ee360d2bd66231dbcc39fa349ed18934652b0c5d1d56",
+      "research/phase5d46_point_infeasibility_20261110/D46_CLAIM_READOUT_FREEZE.json": "5507d9055fc7cab5f2cbada859ad4cb2a4c8a9ac55b508e95702041d7a13cfaf",
+      "research/phase5d46_point_infeasibility_20261110/D46_SCOPE_AUDIT.json": "6a954d5193a8730ec1b05c1b8058149bbd51a5a8563d3b498b42128c1463ede9",
+      "research/phase5d45_feasible_witness_20261110/D45_POSTSCORE_DIAGNOSTICS.json": "c0fc3355d2b586b0af11e7eb295ae74a4f6cf050f408d9ba0468ec53d2ee0fc6",
+      "research/phase5d45_feasible_witness_20261110/D45_CLAIM_READOUT_FREEZE.json": "0d826046686b427434e27304bde07ad253cea3645ae9f947af0d0ca790429bb5",
+      "research/phase5d45_feasible_witness_20261110/D45_COHORT_FREEZE.json": "f6e2c37da342ac2dfe3893fedb0551034ce1ed9d2b5a3f3dd1c0a3833c06918b"
+    },
+    "old_d46_blind_projection_sha256": "742b33b25b321f3a7dcc790b742c1b695950b381dd5b874ad07b6436af9562c0",
+    "old_d45_blind_projection_sha256": "a01bd5adec51a3ffec8926b549155a349ef5c910ea6d83ee1e92e217ad3ba757"
+  },
+  "observation_rules_sha256": "fb75794632ace663a9015f450904045b070b672fe609daee38577b16e6827e56",
+  "calibration_code_sha256": "7273ce433d20045454129d4914a2f5b08ec20fa0869a6bd79dc19a2c7654966f",
+  "delivery_preservation_source_sha256": "9bc249732f3926555f69b65f8be0e6604ccc4b5892fbba1184ccfaf6b427fca1",
+  "old_regression": {
+    "sample_id": "2017-II-5:draw-05",
+    "response_sha256": "43b26fd6fe8c45d964d8ededcfc3543b5ba56277448ea79b26645992583fbfe6",
+    "paid_archived_tokens": {
+      "input_tokens": 93,
+      "output_tokens": 23531
+    },
+    "strict_early": {
+      "status": "NO_COMPLETE_SCOPED_POINT",
+      "value": null,
+      "rational": null,
+      "scope_status": "UNBOUND",
+      "complete_explicit_candidate": false,
+      "observed_characters": 12000,
+      "observation_prefix_sha256": "87ec5e2351405d4ab8ab591c01ad4044167dccc210dca84cb8e574f1dfaa3164",
+      "observation_char_span_in_response": [
+        7,
+        12007
+      ],
+      "lookback_characters": 3000,
+      "event_status_counts": {}
+    },
+    "strict_late": {
+      "status": "EXPLICIT_SCOPED_POINT",
+      "scope_status": "ORIGINAL_REQUESTED_SCALAR",
+      "direction": "MAX",
+      "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+      "complete_explicit_candidate": true,
+      "value": 791,
+      "rational": {
+        "numerator": 791,
+        "denominator": 1
+      },
+      "assertion_span": [
+        55008,
+        55062
+      ],
+      "assertion_sha256": "f484c70e0c557ca454453ba4c4de226bd8ed213a5c10b1c38d4ebaabced2f80c",
+      "numeric_span": [
+        55059,
+        55062
+      ],
+      "numeric_text": "791",
+      "numeric_sha256": "0b0fc3be2ee8d1d33518036b0f38402ee7bc022380a0b9653886019d38acd128",
+      "assertion_operator_receipt": {
+        "char_span_in_response": [
+          55063,
+          55066
+        ],
+        "source_excerpt_sha256": "523bdb19151aebc2998bf24daecc767a245f7746559137ae875da7fd8b6a7f70"
+      },
+      "subject_receipt": {
+        "alias_index": 0,
+        "normalization": "one_value_of_prefix_removed",
+        "char_span_in_response": [
+          55048,
+          55063
+        ],
+        "source_excerpt_sha256": "72156310da2fc23a88ecf97d348ec07fb3d77c858fdb4fd00ad547eea8eb1a78"
+      },
+      "direction_receipt": {
+        "char_span_in_response": [
+          55030,
+          55038
+        ],
+        "source_excerpt_sha256": "35b9592f532369ad6106a9f75cc76b0afb34050dc2e18cf6748d23e500aafc77"
+      },
+      "extraction_method": "adjacent_repeated_box",
+      "char_span_in_response": [
+        55089,
+        55100
+      ],
+      "source_excerpt_sha256": "9b3dca788c75d1cfd99e63b1a077ce17bc19fe60a32275fac5cf630c01ad4668",
+      "terminal_echo_receipt": {
+        "char_span_in_response": [
+          55089,
+          55100
+        ],
+        "source_excerpt_sha256": "9b3dca788c75d1cfd99e63b1a077ce17bc19fe60a32275fac5cf630c01ad4668"
+      },
+      "adjacency_gap_characters": 20,
+      "adjacency_gap_sha256": "52170054c0e7bde9e31d91f72886cd76a6dbe38a9fa65b71c23a734fa3a337f1",
+      "observed_characters": 55094,
+      "observation_prefix_sha256": "4526e9df70b73bb844b3c2481897a39538ccd23f26e541033a8d89f40d2a1dc3",
+      "observation_char_span_in_response": [
+        7,
+        55101
+      ],
+      "lookback_characters": 3000,
+      "event_status_counts": {
+        "EXPLICIT_SCOPED_POINT": 2
+      }
+    },
+    "ordinary_native_final": {
+      "status": "EXPLICIT_INTEGER",
+      "segment": "final",
+      "value": 533,
+      "scope_status": "DELIVERY_CLAIM",
+      "complete_explicit_candidate": true,
+      "extraction_method": "last_complete_box_in_final",
+      "char_span_in_response": [
+        61036,
+        61047
+      ],
+      "source_excerpt_sha256": "1d918b9198fe0a333e38aa0e5deb4a6dd9db9626f5fad5da00e3cffe84bbea1f"
+    },
+    "strict_final": {
+      "status": "LATER_UNSCOPED_BOX",
+      "value": null,
+      "rational": null,
+      "scope_status": "UNBOUND",
+      "complete_explicit_candidate": false,
+      "char_span_in_response": [
+        61036,
+        61047
+      ],
+      "source_excerpt_sha256": "1d918b9198fe0a333e38aa0e5deb4a6dd9db9626f5fad5da00e3cffe84bbea1f",
+      "observed_characters": 5941,
+      "observation_prefix_sha256": "11ee25eaf04cf6e4d9bd7aceea703531876a42dbdeb9fbc62acdced33c3e8e37",
+      "observation_char_span_in_response": [
+        55109,
+        61050
+      ],
+      "lookback_characters": 3000,
+      "event_status_counts": {
+        "LATER_UNSCOPED_BOX": 4
+      },
+      "segment": "final",
+      "unit": "missing-edge-sum",
+      "official_final_box_receipt": {
+        "value": 533,
+        "char_span_in_response": [
+          61036,
+          61047
+        ],
+        "source_excerpt_sha256": "1d918b9198fe0a333e38aa0e5deb4a6dd9db9626f5fad5da00e3cffe84bbea1f"
+      },
+      "ordinary_final_status": "EXPLICIT_INTEGER",
+      "stripped_exact_eos_suffix": false
+    },
+    "strict_readout_cost": {
+      "wall_ns": 2246100,
+      "cpu_ns": 0
+    },
+    "strict_policy": {
+      "preserver": {
+        "updates": [
+          {
+            "status": "FIRST_FEASIBLE_INCUMBENT",
+            "considered_ticket_sha256": "af32a0a5db58c8b7aaac09217e4bcb231f871e39354bc4facabd602a800d0e45",
+            "incumbent_ticket_sha256": "af32a0a5db58c8b7aaac09217e4bcb231f871e39354bc4facabd602a800d0e45",
+            "incumbent_value": "791",
+            "comparison_operations": 0,
+            "cpu_ns": 0,
+            "wall_ns": 162300
+          }
+        ],
+        "decision": {
+          "status": "FINAL_SCOPE_UNKNOWN",
+          "action": "KEEP_NATIVE",
+          "native_value": "533",
+          "proposed_value": "533",
+          "incumbent_value": "791",
+          "incumbent_ticket_sha256": "af32a0a5db58c8b7aaac09217e4bcb231f871e39354bc4facabd602a800d0e45",
+          "final_ticket_sha256": null,
+          "comparison_operations": 0,
+          "cpu_ns": 0,
+          "wall_ns": 6300,
+          "decision_sha256": "853a87b5238bf4f7e1bd26ef4265ba711a49330b952f8166ae0666ce5b4e7556"
+        },
+        "incumbent_ticket_sha256": "af32a0a5db58c8b7aaac09217e4bcb231f871e39354bc4facabd602a800d0e45",
+        "incumbent_value": "791"
+      },
+      "naive_same_verified_evidence": {
+        "status": "FINAL_SCOPE_UNKNOWN",
+        "action": "KEEP_NATIVE",
+        "native_value": "533",
+        "proposed_value": "533",
+        "incumbent_value": "791",
+        "incumbent_ticket_sha256": "af32a0a5db58c8b7aaac09217e4bcb231f871e39354bc4facabd602a800d0e45",
+        "final_ticket_sha256": null,
+        "comparison_operations": 0,
+        "cpu_ns": 0,
+        "wall_ns": 19500,
+        "decision_sha256": "68be4ccecd50c854afed2cbaf2d3f39ddaf648c53849d1a0f7249638e157755f"
+      },
+      "same_scalar_decision": true,
+      "naive_additional_point_calls": 0,
+      "custody": {
+        "scope_sha256": "03006c7f82a3f6a56cdcfdd46be6d79096af9da0cf1eaad252c6abab9326e1ee",
+        "custody_requests": 1,
+        "point_checker_calls": 1,
+        "point_work": 25,
+        "custody_cpu_ns": 0,
+        "custody_wall_ns": 411100,
+        "point_cpu_ns_included_in_custody": 0,
+        "point_wall_ns_included_in_custody": 335100,
+        "receipts": [
+          {
+            "status": "ISSUED_POINT_CHECK",
+            "scope_sha256": "03006c7f82a3f6a56cdcfdd46be6d79096af9da0cf1eaad252c6abab9326e1ee",
+            "observation_sha256": "9767ffbc878e68f3cbdeb013d09daa1c72e14b2f4e52cf979b79ef322500d317",
+            "point_receipt": {
+              "verifier_id": "d46.reviewed-point-verifier",
+              "verifier_version": 1,
+              "contract_sha256": "51c80fd982b86dfc9401580748c84325c9f5a89504cbd1f4af77afd063f5e69f",
+              "candidate_sha256": "6f5b23897a7024cf54fd9350bee4cc84db52bd663fc9baeb264e7005fb6de34d",
+              "evidence_sha256": "c418fb5ed165997ecf585c2c2b5a027fcd205ac63bec41da0499efec93c751a5",
+              "authority": "FEASIBILITY_ONLY",
+              "work": 25,
+              "status": "PROVEN_FEASIBLE",
+              "reason": "EXACT_FEASIBILITY_ONLY",
+              "contract": {
+                "binding": {
+                  "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+                  "objective_id": "greatest-missing-edge-sum",
+                  "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+                  "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+                  "direction": "MAX"
+                },
+                "required_constraints": [
+                  "four_distinct_real_values",
+                  "all_given_pair_sums",
+                  "fixed_missing_pair_sum"
+                ],
+                "checker_id": "d46.exact.point",
+                "checker_version": 1,
+                "checker_entrypoint": "check",
+                "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+                "exclusion_kind": "COMPLETE_FIXED_VALUE_FIBER",
+                "proof_sha256": "be180ac3303ccb28a68c5c92163aff552657b12cf646fb09156c47e7da75ccff",
+                "review_sha256": "a7b616ce1e17617199ed6594a9572e9aa8955315aab18f1b8c093df2bfb8fc7a"
+              },
+              "candidate": {
+                "binding": {
+                  "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+                  "objective_id": "greatest-missing-edge-sum",
+                  "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+                  "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+                  "direction": "MAX"
+                },
+                "sample_id": "2017-II-5:draw-05",
+                "response_sha256": "43b26fd6fe8c45d964d8ededcfc3543b5ba56277448ea79b26645992583fbfe6",
+                "observed_prefix_sha256": "4526e9df70b73bb844b3c2481897a39538ccd23f26e541033a8d89f40d2a1dc3",
+                "numeric_span": [
+                  55059,
+                  55062
+                ],
+                "numeric_text": "791",
+                "assertion_span": [
+                  55008,
+                  55062
+                ],
+                "assertion_sha256": "f484c70e0c557ca454453ba4c4de226bd8ed213a5c10b1c38d4ebaabced2f80c",
+                "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+                "assertion_review_sha256": "158c1b7ad327d0f9ab6a2d1e6c0a96df5879306bfc5c751a072905213fceb8ca"
+              },
+              "request_number": 1,
+              "checked_value": "791",
+              "checker_calls": 1,
+              "operation_charges": [
+                [
+                  "fiber_points",
+                  7
+                ],
+                [
+                  "opposite_edge_checks",
+                  15
+                ],
+                [
+                  "constraint:four_distinct_real_values",
+                  1
+                ],
+                [
+                  "constraint:all_given_pair_sums",
+                  1
+                ],
+                [
+                  "constraint:fixed_missing_pair_sum",
+                  1
+                ]
+              ],
+              "denied_operation": null,
+              "evidence": {
+                "status": "PROVEN_FEASIBLE",
+                "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+                "details": [
+                  [
+                    "vertex_0",
+                    "68"
+                  ],
+                  [
+                    "vertex_1",
+                    "121"
+                  ],
+                  [
+                    "vertex_2",
+                    "252"
+                  ],
+                  [
+                    "vertex_3",
+                    "166"
+                  ]
+                ],
+                "complete": true,
+                "covered_constraints": [
+                  "four_distinct_real_values",
+                  "all_given_pair_sums",
+                  "fixed_missing_pair_sum"
+                ],
+                "fiber_expected": null,
+                "fiber_visited": null
+              },
+              "cpu_ns": 0,
+              "wall_ns": 335100,
+              "receipt_sha256": "1b6e5318d9748d7a81f6bbb83c714e96148c469ad01f511e7541ca729ff8b3a4"
+            },
+            "custody_request_number": 1,
+            "cpu_ns": 0,
+            "wall_ns": 411100,
+            "receipt_sha256": "af32a0a5db58c8b7aaac09217e4bcb231f871e39354bc4facabd602a800d0e45"
+          }
+        ]
+      },
+      "first_update_status": "FIRST_FEASIBLE_INCUMBENT",
+      "global_optimum_authority": false
+    },
+    "independent_old_late_role": {
+      "job_id": "2017-II-5:draw-05@late",
+      "numeric_sha256": "0b0fc3be2ee8d1d33518036b0f38402ee7bc022380a0b9653886019d38acd128",
+      "decision": "BOUND",
+      "value": 791,
+      "reason": "Flagged declaration directly states the maximum of the original sum.",
+      "strict_status": "EXPLICIT_SCOPED_POINT",
+      "review_output_sha256": "158c1b7ad327d0f9ab6a2d1e6c0a96df5879306bfc5c751a072905213fceb8ca"
+    },
+    "postscore_old_final_role": {
+      "basis": "D46 published postscore final diagnosis plus exact old D47 original-object role check",
+      "sample_id": "2017-II-5:draw-05",
+      "source_assertion_sha256": "a0b72b245b2d30e5734320c5b62851af46bca00fb0bee2e9f70b3eb1178870cf",
+      "final_box_sha256": "1d918b9198fe0a333e38aa0e5deb4a6dd9db9626f5fad5da00e3cffe84bbea1f",
+      "final_prefix_sha256": "11ee25eaf04cf6e4d9bd7aceea703531876a42dbdeb9fbc62acdced33c3e8e37",
+      "d46_final_diagnosis_sha256": "2e5a2ae1349fbee97847258bdacd20414ea031e0393369c43f6fbc18b44dbafb",
+      "prior_blind_final_review": false
+    },
+    "development_corroboration_only": {
+      "preserver": {
+        "updates": [
+          {
+            "status": "FIRST_FEASIBLE_INCUMBENT",
+            "considered_ticket_sha256": "92316f6af367dc1486f8cf48fc7c28fca3978dcd937d89959d032609f27a67ef",
+            "incumbent_ticket_sha256": "92316f6af367dc1486f8cf48fc7c28fca3978dcd937d89959d032609f27a67ef",
+            "incumbent_value": "791",
+            "comparison_operations": 0,
+            "cpu_ns": 0,
+            "wall_ns": 146600
+          }
+        ],
+        "decision": {
+          "status": "FEASIBLE_REGRESSION",
+          "action": "RETAIN_CERTIFIED_INCUMBENT",
+          "native_value": "533",
+          "proposed_value": "791",
+          "incumbent_value": "791",
+          "incumbent_ticket_sha256": "92316f6af367dc1486f8cf48fc7c28fca3978dcd937d89959d032609f27a67ef",
+          "final_ticket_sha256": "b4797dadbfc8721dce7cf43c8fdeb1769384e24f96a19d6fb53c731e402b58ee",
+          "comparison_operations": 3,
+          "cpu_ns": 0,
+          "wall_ns": 156600,
+          "decision_sha256": "7fd65d6c0737edd4ff7febb6cd3387f99a4bc1c75f463a6340979771f9e1d4d5"
+        },
+        "incumbent_ticket_sha256": "92316f6af367dc1486f8cf48fc7c28fca3978dcd937d89959d032609f27a67ef",
+        "incumbent_value": "791"
+      },
+      "naive_same_verified_evidence": {
+        "status": "FEASIBLE_REGRESSION",
+        "action": "RETAIN_CERTIFIED_INCUMBENT",
+        "native_value": "533",
+        "proposed_value": "791",
+        "incumbent_value": "791",
+        "incumbent_ticket_sha256": "92316f6af367dc1486f8cf48fc7c28fca3978dcd937d89959d032609f27a67ef",
+        "final_ticket_sha256": "b4797dadbfc8721dce7cf43c8fdeb1769384e24f96a19d6fb53c731e402b58ee",
+        "comparison_operations": 3,
+        "cpu_ns": 0,
+        "wall_ns": 19700,
+        "decision_sha256": "df88bfa099448aa9269e0acad907bb0ccb42c17809cb57957dce11d932d79693"
+      },
+      "same_scalar_decision": true,
+      "naive_additional_point_calls": 0,
+      "custody": {
+        "scope_sha256": "03006c7f82a3f6a56cdcfdd46be6d79096af9da0cf1eaad252c6abab9326e1ee",
+        "custody_requests": 2,
+        "point_checker_calls": 2,
+        "point_work": 32,
+        "custody_cpu_ns": 0,
+        "custody_wall_ns": 520900,
+        "point_cpu_ns_included_in_custody": 0,
+        "point_wall_ns_included_in_custody": 399800,
+        "receipts": [
+          {
+            "status": "ISSUED_POINT_CHECK",
+            "scope_sha256": "03006c7f82a3f6a56cdcfdd46be6d79096af9da0cf1eaad252c6abab9326e1ee",
+            "observation_sha256": "9767ffbc878e68f3cbdeb013d09daa1c72e14b2f4e52cf979b79ef322500d317",
+            "point_receipt": {
+              "verifier_id": "d46.reviewed-point-verifier",
+              "verifier_version": 1,
+              "contract_sha256": "51c80fd982b86dfc9401580748c84325c9f5a89504cbd1f4af77afd063f5e69f",
+              "candidate_sha256": "6f5b23897a7024cf54fd9350bee4cc84db52bd663fc9baeb264e7005fb6de34d",
+              "evidence_sha256": "c418fb5ed165997ecf585c2c2b5a027fcd205ac63bec41da0499efec93c751a5",
+              "authority": "FEASIBILITY_ONLY",
+              "work": 25,
+              "status": "PROVEN_FEASIBLE",
+              "reason": "EXACT_FEASIBILITY_ONLY",
+              "contract": {
+                "binding": {
+                  "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+                  "objective_id": "greatest-missing-edge-sum",
+                  "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+                  "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+                  "direction": "MAX"
+                },
+                "required_constraints": [
+                  "four_distinct_real_values",
+                  "all_given_pair_sums",
+                  "fixed_missing_pair_sum"
+                ],
+                "checker_id": "d46.exact.point",
+                "checker_version": 1,
+                "checker_entrypoint": "check",
+                "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+                "exclusion_kind": "COMPLETE_FIXED_VALUE_FIBER",
+                "proof_sha256": "be180ac3303ccb28a68c5c92163aff552657b12cf646fb09156c47e7da75ccff",
+                "review_sha256": "a7b616ce1e17617199ed6594a9572e9aa8955315aab18f1b8c093df2bfb8fc7a"
+              },
+              "candidate": {
+                "binding": {
+                  "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+                  "objective_id": "greatest-missing-edge-sum",
+                  "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+                  "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+                  "direction": "MAX"
+                },
+                "sample_id": "2017-II-5:draw-05",
+                "response_sha256": "43b26fd6fe8c45d964d8ededcfc3543b5ba56277448ea79b26645992583fbfe6",
+                "observed_prefix_sha256": "4526e9df70b73bb844b3c2481897a39538ccd23f26e541033a8d89f40d2a1dc3",
+                "numeric_span": [
+                  55059,
+                  55062
+                ],
+                "numeric_text": "791",
+                "assertion_span": [
+                  55008,
+                  55062
+                ],
+                "assertion_sha256": "f484c70e0c557ca454453ba4c4de226bd8ed213a5c10b1c38d4ebaabced2f80c",
+                "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+                "assertion_review_sha256": "158c1b7ad327d0f9ab6a2d1e6c0a96df5879306bfc5c751a072905213fceb8ca"
+              },
+              "request_number": 1,
+              "checked_value": "791",
+              "checker_calls": 1,
+              "operation_charges": [
+                [
+                  "fiber_points",
+                  7
+                ],
+                [
+                  "opposite_edge_checks",
+                  15
+                ],
+                [
+                  "constraint:four_distinct_real_values",
+                  1
+                ],
+                [
+                  "constraint:all_given_pair_sums",
+                  1
+                ],
+                [
+                  "constraint:fixed_missing_pair_sum",
+                  1
+                ]
+              ],
+              "denied_operation": null,
+              "evidence": {
+                "status": "PROVEN_FEASIBLE",
+                "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+                "details": [
+                  [
+                    "vertex_0",
+                    "68"
+                  ],
+                  [
+                    "vertex_1",
+                    "121"
+                  ],
+                  [
+                    "vertex_2",
+                    "252"
+                  ],
+                  [
+                    "vertex_3",
+                    "166"
+                  ]
+                ],
+                "complete": true,
+                "covered_constraints": [
+                  "four_distinct_real_values",
+                  "all_given_pair_sums",
+                  "fixed_missing_pair_sum"
+                ],
+                "fiber_expected": null,
+                "fiber_visited": null
+              },
+              "cpu_ns": 0,
+              "wall_ns": 283100,
+              "receipt_sha256": "caca5f841eff60037da5fd02a2bdffc9753117c3ba36e89098265dbf9f610e80"
+            },
+            "custody_request_number": 1,
+            "cpu_ns": 0,
+            "wall_ns": 345900,
+            "receipt_sha256": "92316f6af367dc1486f8cf48fc7c28fca3978dcd937d89959d032609f27a67ef"
+          },
+          {
+            "status": "ISSUED_POINT_CHECK",
+            "scope_sha256": "03006c7f82a3f6a56cdcfdd46be6d79096af9da0cf1eaad252c6abab9326e1ee",
+            "observation_sha256": "d28aaf64573911af184faa9b467befe87df893224d439d9dd58d6b8ea54222e6",
+            "point_receipt": {
+              "verifier_id": "d46.reviewed-point-verifier",
+              "verifier_version": 1,
+              "contract_sha256": "51c80fd982b86dfc9401580748c84325c9f5a89504cbd1f4af77afd063f5e69f",
+              "candidate_sha256": "3c19694d926df4945377f60ebe6c39baf4d0c72f68e023cf2460a150c092854c",
+              "evidence_sha256": "a6c342336c29340fde9f97a885fac501f2e14ff3319488afd4c09061b9a23a1a",
+              "authority": "FEASIBILITY_ONLY",
+              "work": 7,
+              "status": "PROVEN_FEASIBLE",
+              "reason": "EXACT_FEASIBILITY_ONLY",
+              "contract": {
+                "binding": {
+                  "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+                  "objective_id": "greatest-missing-edge-sum",
+                  "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+                  "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+                  "direction": "MAX"
+                },
+                "required_constraints": [
+                  "four_distinct_real_values",
+                  "all_given_pair_sums",
+                  "fixed_missing_pair_sum"
+                ],
+                "checker_id": "d46.exact.point",
+                "checker_version": 1,
+                "checker_entrypoint": "check",
+                "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+                "exclusion_kind": "COMPLETE_FIXED_VALUE_FIBER",
+                "proof_sha256": "be180ac3303ccb28a68c5c92163aff552657b12cf646fb09156c47e7da75ccff",
+                "review_sha256": "a7b616ce1e17617199ed6594a9572e9aa8955315aab18f1b8c093df2bfb8fc7a"
+              },
+              "candidate": {
+                "binding": {
+                  "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+                  "objective_id": "greatest-missing-edge-sum",
+                  "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+                  "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+                  "direction": "MAX"
+                },
+                "sample_id": "2017-II-5:draw-05",
+                "response_sha256": "43b26fd6fe8c45d964d8ededcfc3543b5ba56277448ea79b26645992583fbfe6",
+                "observed_prefix_sha256": "11ee25eaf04cf6e4d9bd7aceea703531876a42dbdeb9fbc62acdced33c3e8e37",
+                "numeric_span": [
+                  5812,
+                  5815
+                ],
+                "numeric_text": "533",
+                "assertion_span": [
+                  5785,
+                  5896
+                ],
+                "assertion_sha256": "a0b72b245b2d30e5734320c5b62851af46bca00fb0bee2e9f70b3eb1178870cf",
+                "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+                "assertion_review_sha256": "8d1ab701ac58ddcbb835c5a772497479ffa57bbe3f51deada55823541c5a1be6"
+              },
+              "request_number": 2,
+              "checked_value": "533",
+              "checker_calls": 1,
+              "operation_charges": [
+                [
+                  "fiber_points",
+                  1
+                ],
+                [
+                  "opposite_edge_checks",
+                  3
+                ],
+                [
+                  "constraint:four_distinct_real_values",
+                  1
+                ],
+                [
+                  "constraint:all_given_pair_sums",
+                  1
+                ],
+                [
+                  "constraint:fixed_missing_pair_sum",
+                  1
+                ]
+              ],
+              "denied_operation": null,
+              "evidence": {
+                "status": "PROVEN_FEASIBLE",
+                "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+                "details": [
+                  [
+                    "vertex_0",
+                    "275/2"
+                  ],
+                  [
+                    "vertex_1",
+                    "103/2"
+                  ],
+                  [
+                    "vertex_2",
+                    "365/2"
+                  ],
+                  [
+                    "vertex_3",
+                    "299/2"
+                  ]
+                ],
+                "complete": true,
+                "covered_constraints": [
+                  "four_distinct_real_values",
+                  "all_given_pair_sums",
+                  "fixed_missing_pair_sum"
+                ],
+                "fiber_expected": null,
+                "fiber_visited": null
+              },
+              "cpu_ns": 0,
+              "wall_ns": 116700,
+              "receipt_sha256": "31835e0da596fd0e797bcb88b05431d7573afbbe7049d1e935e9fd94d0b88ce5"
+            },
+            "custody_request_number": 2,
+            "cpu_ns": 0,
+            "wall_ns": 175000,
+            "receipt_sha256": "b4797dadbfc8721dce7cf43c8fdeb1769384e24f96a19d6fb53c731e402b58ee"
+          }
+        ]
+      },
+      "first_update_status": "FIRST_FEASIBLE_INCUMBENT",
+      "global_optimum_authority": false
+    },
+    "batch_cpu_profile": {
+      "repetitions": 16,
+      "cpu_ns": 31250000,
+      "wall_ns": 26079900,
+      "repeated_point_work": 512,
+      "scope": "Includes new custody engines, checks and both decisions each repetition. Separate from one-shot receipts."
+    }
+  },
+  "old_threshold": {
+    "sample_id": "2010-I-14:draw-02",
+    "strict_early": {
+      "status": "NO_COMPLETE_SCOPED_POINT",
+      "value": null,
+      "rational": null,
+      "scope_status": "UNBOUND",
+      "complete_explicit_candidate": false,
+      "observed_characters": 12000,
+      "observation_prefix_sha256": "fda1fef50adfd347d9eee7b9b494bf08a51d3c6219c82c8bab8f7b0f354186db",
+      "observation_char_span_in_response": [
+        7,
+        12007
+      ],
+      "lookback_characters": 3000,
+      "event_status_counts": {}
+    },
+    "diagnosed_threshold_excerpt_sha256": "dd88cbd6a48e5e2e3336a562ca35be939b6343d0e28131c6a881ec7bfdca10cc",
+    "paid_archived_tokens": {
+      "input_tokens": 114,
+      "output_tokens": 18593
+    },
+    "issued_observations": 0,
+    "point_checker_calls": 0,
+    "point_work": 0,
+    "wall_ns": 1493100,
+    "cpu_ns": 0
+  },
+  "adversarial_custody_controls": [
+    {
+      "control": "wrong_unit",
+      "receipt": {
+        "status": "DELIVERY_SCOPE_MISMATCH",
+        "scope_sha256": "03006c7f82a3f6a56cdcfdd46be6d79096af9da0cf1eaad252c6abab9326e1ee",
+        "observation_sha256": "e7570a3a5b871d82d12add52ef9a7c986c52ebca22cb993cdef6b1579d542df1",
+        "point_receipt": null,
+        "custody_request_number": 1,
+        "cpu_ns": 0,
+        "wall_ns": 16200,
+        "receipt_sha256": "f9476bc193258fd56bcf3a448b1110bc2643b7276dff838581fc901c74856f02"
+      },
+      "point_checker_calls": 0,
+      "point_work": 0
+    },
+    {
+      "control": "wrong_direction",
+      "receipt": {
+        "status": "DELIVERY_SCOPE_MISMATCH",
+        "scope_sha256": "03006c7f82a3f6a56cdcfdd46be6d79096af9da0cf1eaad252c6abab9326e1ee",
+        "observation_sha256": "0d50b61939311f7182d34ec0101514bde8181a8eabf5ebf7c8fa5618a15e80e7",
+        "point_receipt": null,
+        "custody_request_number": 1,
+        "cpu_ns": 0,
+        "wall_ns": 16600,
+        "receipt_sha256": "7e9646e0ced83e498292b093639ceff87d3471d6e81304215ab2c392adfc96b1"
+      },
+      "point_checker_calls": 0,
+      "point_work": 0
+    },
+    {
+      "control": "changed_constraint_binding",
+      "receipt": {
+        "status": "DELIVERY_SCOPE_MISMATCH",
+        "scope_sha256": "03006c7f82a3f6a56cdcfdd46be6d79096af9da0cf1eaad252c6abab9326e1ee",
+        "observation_sha256": "34b7740324dc4c82bff6b9d90cef70153933d34513120c0b114c536cd5f431de",
+        "point_receipt": null,
+        "custody_request_number": 1,
+        "cpu_ns": 0,
+        "wall_ns": 16100,
+        "receipt_sha256": "f8f7811b9286e59e593cfdcc9ae9490cf79a7aa1e617777e06537988ec3f1429"
+      },
+      "point_checker_calls": 0,
+      "point_work": 0
+    },
+    {
+      "control": "another_draw",
+      "receipt": {
+        "status": "DELIVERY_SCOPE_MISMATCH",
+        "scope_sha256": "03006c7f82a3f6a56cdcfdd46be6d79096af9da0cf1eaad252c6abab9326e1ee",
+        "observation_sha256": "ef3319a092c06e0908088a885c9baf3d267c3f60e6c6037ff709aff6d6cc89f5",
+        "point_receipt": null,
+        "custody_request_number": 1,
+        "cpu_ns": 0,
+        "wall_ns": 15600,
+        "receipt_sha256": "7acd659f49f7af85dd11416839992a27117a773b7837d4ae056954a484b7b31a"
+      },
+      "point_checker_calls": 0,
+      "point_work": 0
+    }
+  ],
+  "synthetic_better_final": {
+    "preserver": {
+      "updates": [
+        {
+          "status": "FIRST_FEASIBLE_INCUMBENT",
+          "considered_ticket_sha256": "1892116924a7edb324008e20576d2c28349c975c5ed5f92a1bc39a2b05cd8c02",
+          "incumbent_ticket_sha256": "1892116924a7edb324008e20576d2c28349c975c5ed5f92a1bc39a2b05cd8c02",
+          "incumbent_value": "533",
+          "comparison_operations": 0,
+          "cpu_ns": 0,
+          "wall_ns": 150400
+        }
+      ],
+      "decision": {
+        "status": "FEASIBLE_IMPROVEMENT",
+        "action": "KEEP_NATIVE",
+        "native_value": "791",
+        "proposed_value": "791",
+        "incumbent_value": "533",
+        "incumbent_ticket_sha256": "1892116924a7edb324008e20576d2c28349c975c5ed5f92a1bc39a2b05cd8c02",
+        "final_ticket_sha256": "2b4576196e746944ca845b6a8a153a77b610780cc1e736188a19176931b386e1",
+        "comparison_operations": 3,
+        "cpu_ns": 0,
+        "wall_ns": 147100,
+        "decision_sha256": "a4d9ec95ff0b965af25bdb63ee9cb99625a4d1bbcfe5ef6bcfff6440bb72085a"
+      },
+      "incumbent_ticket_sha256": "1892116924a7edb324008e20576d2c28349c975c5ed5f92a1bc39a2b05cd8c02",
+      "incumbent_value": "533"
+    },
+    "naive_same_verified_evidence": {
+      "status": "FEASIBLE_IMPROVEMENT",
+      "action": "KEEP_NATIVE",
+      "native_value": "791",
+      "proposed_value": "791",
+      "incumbent_value": "533",
+      "incumbent_ticket_sha256": "1892116924a7edb324008e20576d2c28349c975c5ed5f92a1bc39a2b05cd8c02",
+      "final_ticket_sha256": "2b4576196e746944ca845b6a8a153a77b610780cc1e736188a19176931b386e1",
+      "comparison_operations": 3,
+      "cpu_ns": 0,
+      "wall_ns": 15600,
+      "decision_sha256": "2d6358185bfdf8abaf4f8c503843c20b541ff7a360967a06a27b4e0d57ef38bc"
+    },
+    "same_scalar_decision": true,
+    "naive_additional_point_calls": 0,
+    "custody": {
+      "scope_sha256": "9e74a016e28df97a00ab91f3709ec02865875890c13fafac7c81c3605c3b9e7f",
+      "custody_requests": 2,
+      "point_checker_calls": 2,
+      "point_work": 32,
+      "custody_cpu_ns": 0,
+      "custody_wall_ns": 335600,
+      "point_cpu_ns_included_in_custody": 0,
+      "point_wall_ns_included_in_custody": 224000,
+      "receipts": [
+        {
+          "status": "ISSUED_POINT_CHECK",
+          "scope_sha256": "9e74a016e28df97a00ab91f3709ec02865875890c13fafac7c81c3605c3b9e7f",
+          "observation_sha256": "ab4de36652d850e4611cb814fa0bef9df285ae89c951f86173bf1563205953aa",
+          "point_receipt": {
+            "verifier_id": "d46.reviewed-point-verifier",
+            "verifier_version": 1,
+            "contract_sha256": "51c80fd982b86dfc9401580748c84325c9f5a89504cbd1f4af77afd063f5e69f",
+            "candidate_sha256": "c7ed5bcd0d99b5092ee8deba22c7bcf3094c3533578cbde0823f9e64dd3ff324",
+            "evidence_sha256": "a6c342336c29340fde9f97a885fac501f2e14ff3319488afd4c09061b9a23a1a",
+            "authority": "FEASIBILITY_ONLY",
+            "work": 7,
+            "status": "PROVEN_FEASIBLE",
+            "reason": "EXACT_FEASIBILITY_ONLY",
+            "contract": {
+              "binding": {
+                "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+                "objective_id": "greatest-missing-edge-sum",
+                "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+                "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+                "direction": "MAX"
+              },
+              "required_constraints": [
+                "four_distinct_real_values",
+                "all_given_pair_sums",
+                "fixed_missing_pair_sum"
+              ],
+              "checker_id": "d46.exact.point",
+              "checker_version": 1,
+              "checker_entrypoint": "check",
+              "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+              "exclusion_kind": "COMPLETE_FIXED_VALUE_FIBER",
+              "proof_sha256": "be180ac3303ccb28a68c5c92163aff552657b12cf646fb09156c47e7da75ccff",
+              "review_sha256": "a7b616ce1e17617199ed6594a9572e9aa8955315aab18f1b8c093df2bfb8fc7a"
+            },
+            "candidate": {
+              "binding": {
+                "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+                "objective_id": "greatest-missing-edge-sum",
+                "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+                "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+                "direction": "MAX"
+              },
+              "sample_id": "synthetic-better:draw-00",
+              "response_sha256": "ecd83f9918737b51707d4dd7f26adf988ac6f7546a5e133a3a926e969514500c",
+              "observed_prefix_sha256": "127fd13e7536c014a1065ae2af5512270765ace5d3c494b28bc9497dc9eea7e3",
+              "numeric_span": [
+                36,
+                39
+              ],
+              "numeric_text": "533",
+              "assertion_span": [
+                0,
+                40
+              ],
+              "assertion_sha256": "fe235ef0a6720f1cbe5f56c2c542a52a20045eb4b5eaca9ff495acff96e58023",
+              "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+              "assertion_review_sha256": "d9ebdea2a058ab4851704efd7706b46549046dbe728d138fc7c2bc587d9a4eef"
+            },
+            "request_number": 1,
+            "checked_value": "533",
+            "checker_calls": 1,
+            "operation_charges": [
+              [
+                "fiber_points",
+                1
+              ],
+              [
+                "opposite_edge_checks",
+                3
+              ],
+              [
+                "constraint:four_distinct_real_values",
+                1
+              ],
+              [
+                "constraint:all_given_pair_sums",
+                1
+              ],
+              [
+                "constraint:fixed_missing_pair_sum",
+                1
+              ]
+            ],
+            "denied_operation": null,
+            "evidence": {
+              "status": "PROVEN_FEASIBLE",
+              "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+              "details": [
+                [
+                  "vertex_0",
+                  "275/2"
+                ],
+                [
+                  "vertex_1",
+                  "103/2"
+                ],
+                [
+                  "vertex_2",
+                  "365/2"
+                ],
+                [
+                  "vertex_3",
+                  "299/2"
+                ]
+              ],
+              "complete": true,
+              "covered_constraints": [
+                "four_distinct_real_values",
+                "all_given_pair_sums",
+                "fixed_missing_pair_sum"
+              ],
+              "fiber_expected": null,
+              "fiber_visited": null
+            },
+            "cpu_ns": 0,
+            "wall_ns": 104200,
+            "receipt_sha256": "810758d21e24ca2a2a61c215b24874d1eebc363fb77db1a10e0c6c573b96a29a"
+          },
+          "custody_request_number": 1,
+          "cpu_ns": 0,
+          "wall_ns": 160700,
+          "receipt_sha256": "1892116924a7edb324008e20576d2c28349c975c5ed5f92a1bc39a2b05cd8c02"
+        },
+        {
+          "status": "ISSUED_POINT_CHECK",
+          "scope_sha256": "9e74a016e28df97a00ab91f3709ec02865875890c13fafac7c81c3605c3b9e7f",
+          "observation_sha256": "386a8f00f5a43581e3e4f5aa0ba974c6801a635507538653a704dec5f03e3961",
+          "point_receipt": {
+            "verifier_id": "d46.reviewed-point-verifier",
+            "verifier_version": 1,
+            "contract_sha256": "51c80fd982b86dfc9401580748c84325c9f5a89504cbd1f4af77afd063f5e69f",
+            "candidate_sha256": "3dec2ee0b96837df38d896a0977126b768c3e26dce4e4090faea873272ea4941",
+            "evidence_sha256": "c418fb5ed165997ecf585c2c2b5a027fcd205ac63bec41da0499efec93c751a5",
+            "authority": "FEASIBILITY_ONLY",
+            "work": 25,
+            "status": "PROVEN_FEASIBLE",
+            "reason": "EXACT_FEASIBILITY_ONLY",
+            "contract": {
+              "binding": {
+                "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+                "objective_id": "greatest-missing-edge-sum",
+                "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+                "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+                "direction": "MAX"
+              },
+              "required_constraints": [
+                "four_distinct_real_values",
+                "all_given_pair_sums",
+                "fixed_missing_pair_sum"
+              ],
+              "checker_id": "d46.exact.point",
+              "checker_version": 1,
+              "checker_entrypoint": "check",
+              "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+              "exclusion_kind": "COMPLETE_FIXED_VALUE_FIBER",
+              "proof_sha256": "be180ac3303ccb28a68c5c92163aff552657b12cf646fb09156c47e7da75ccff",
+              "review_sha256": "a7b616ce1e17617199ed6594a9572e9aa8955315aab18f1b8c093df2bfb8fc7a"
+            },
+            "candidate": {
+              "binding": {
+                "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+                "objective_id": "greatest-missing-edge-sum",
+                "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+                "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+                "direction": "MAX"
+              },
+              "sample_id": "synthetic-better:draw-00",
+              "response_sha256": "ecd83f9918737b51707d4dd7f26adf988ac6f7546a5e133a3a926e969514500c",
+              "observed_prefix_sha256": "c8904c0f602c11ed710f64053730e9a0b9f4a1378e03e8faf13605c78795d1c9",
+              "numeric_span": [
+                36,
+                39
+              ],
+              "numeric_text": "791",
+              "assertion_span": [
+                0,
+                40
+              ],
+              "assertion_sha256": "6b29da4db227d6ef673206a3c1136298ad71837861bf7c5d838c78198629f9e4",
+              "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+              "assertion_review_sha256": "b0e42d5ba180706e3708de84f34bdca5688fa5c95d66a70214855282ee11641a"
+            },
+            "request_number": 2,
+            "checked_value": "791",
+            "checker_calls": 1,
+            "operation_charges": [
+              [
+                "fiber_points",
+                7
+              ],
+              [
+                "opposite_edge_checks",
+                15
+              ],
+              [
+                "constraint:four_distinct_real_values",
+                1
+              ],
+              [
+                "constraint:all_given_pair_sums",
+                1
+              ],
+              [
+                "constraint:fixed_missing_pair_sum",
+                1
+              ]
+            ],
+            "denied_operation": null,
+            "evidence": {
+              "status": "PROVEN_FEASIBLE",
+              "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+              "details": [
+                [
+                  "vertex_0",
+                  "68"
+                ],
+                [
+                  "vertex_1",
+                  "121"
+                ],
+                [
+                  "vertex_2",
+                  "252"
+                ],
+                [
+                  "vertex_3",
+                  "166"
+                ]
+              ],
+              "complete": true,
+              "covered_constraints": [
+                "four_distinct_real_values",
+                "all_given_pair_sums",
+                "fixed_missing_pair_sum"
+              ],
+              "fiber_expected": null,
+              "fiber_visited": null
+            },
+            "cpu_ns": 0,
+            "wall_ns": 119800,
+            "receipt_sha256": "85adf7e40a27ac870dc29c09d41e66b82e658074d04b5761335cd5d8141780ea"
+          },
+          "custody_request_number": 2,
+          "cpu_ns": 0,
+          "wall_ns": 174900,
+          "receipt_sha256": "2b4576196e746944ca845b6a8a153a77b610780cc1e736188a19176931b386e1"
+        }
+      ]
+    },
+    "first_update_status": "FIRST_FEASIBLE_INCUMBENT",
+    "global_optimum_authority": false
+  },
+  "scope": "Old development and synthetic controls only. Strict final abstention retained. Postscore role corroboration is not a strict or fresh heldout authorization. No labels loaded, no new model work, and no global optimum authority."
+}

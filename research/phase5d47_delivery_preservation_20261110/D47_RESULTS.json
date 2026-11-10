@@ -1,0 +1,2299 @@
+{
+  "status": "D47_FROZEN_DELIVERY_COMPARISONS_SCORED",
+  "cohort_sha256": "2934940c86a5e632f5a0efa3e9fa1d3af5554f6f796dfc03fd252c8fe43dc1fe",
+  "strict_sha256": "25626208ee65b98a020bd33360607224d5f04ba66b11340ec10a1129d709336c",
+  "sensitivity_sha256": "fbbc9dcb79462a5f21b6707fa8038217754e6c2f312262cc10fafa792d8d84a1",
+  "scope_audit_sha256": "fff119230344aafd84021a989769e9697c99f45d44365275827494ddc89aa869",
+  "oracle_sha256": "c9a4d58ca6e07d512fb59f7491dcd99cbfc923df05b2ff8401b9352b0551edf6",
+  "complete_scope_sha256": "43c14ac22340645392118c728665c47a1667492b6d13b6058a8c33b32581dfc8",
+  "scorer_sha256": "371cee47a5ee042379845ba1a91c03ca2285c5e3c215db615333af4ed356d381",
+  "label_audit": [
+    {
+      "case_id": "2009-I-13",
+      "direction": "MIN",
+      "unit": "integer-sum-of-initial-terms",
+      "optimum": 90,
+      "official_values": [
+        90
+      ],
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "The contracting product invariant reduces the complete domain to all factor pairs. Enumerate one member up to the integer square root and take the smallest sum.",
+      "complete_control_scope": "Finite factor-pair reduction after integer contraction.",
+      "exact_solver_work": {
+        "wall_ns": 19800,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "factor_pair_trial": 44
+        }
+      },
+      "optimum_point_validation_work": {
+        "wall_ns": 16600,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "fixed_point": 1,
+          "integer_square_root": 1,
+          "quadratic_discriminant": 1
+        }
+      },
+      "independent_validation_point_work": {
+        "quadratic_discriminant": 1,
+        "integer_square_root": 1,
+        "constraint:positive_integer_sum": 1,
+        "constraint:positive_integer_factors": 1,
+        "constraint:infinite_recurrence": 1
+      },
+      "independent_ordinary_point_work": {
+        "fixed_point": 1,
+        "quadratic_discriminant": 1,
+        "integer_square_root": 1
+      }
+    },
+    {
+      "case_id": "2010-I-12",
+      "direction": "MIN",
+      "unit": "integer-set-endpoint",
+      "optimum": 243,
+      "official_values": [
+        243
+      ],
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "The floor-log coloring provides a certified false lower neighbor and the five powers force a true upper endpoint. Monotonicity rules out every smaller endpoint. Independent exact DPLL finds a checked coloring below and a checked contradiction tree at the endpoint; both computations are charged.",
+      "complete_control_scope": "Finite five-power universal proof and explicit below-threshold countercolour.",
+      "exact_solver_work": {
+        "wall_ns": 12890200,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "explicit_floor_log_color_values": 240,
+          "generate_multiplicative_clause": 995,
+          "nae_counterexample_clause": 662,
+          "nae_proof_conflict": 1,
+          "nae_proof_node": 1,
+          "nae_proof_unit": 4,
+          "nae_propagation_clause": 30408,
+          "nae_search_node": 58,
+          "schur_colorings": 16,
+          "schur_triple_tests": 44
+        }
+      },
+      "optimum_point_validation_work": {
+        "wall_ns": 30900,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "fixed_point": 1,
+          "schur_colorings": 16,
+          "schur_triple_tests": 44
+        }
+      },
+      "independent_validation_point_work": {
+        "five_power_colour_triples": 88,
+        "constraint:integer_endpoint_at_least_three": 1,
+        "constraint:every_partition_forces_product": 1
+      },
+      "independent_ordinary_point_work": {
+        "fixed_point": 1,
+        "schur_colorings": 16,
+        "schur_triple_tests": 44
+      }
+    },
+    {
+      "case_id": "2016-II-4",
+      "direction": "MIN",
+      "unit": "unit-cubes",
+      "optimum": 180,
+      "official_values": [
+        180
+      ],
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "All volumes are positive multiples of 180, and the first is feasible.",
+      "complete_control_scope": "Linear volume identity and original cyclic layer realization.",
+      "exact_solver_work": {
+        "wall_ns": 22900,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "cyclic_color_construction": 12,
+          "volume_division": 1
+        }
+      },
+      "optimum_point_validation_work": {
+        "wall_ns": 9100,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "cyclic_color_construction": 12,
+          "fixed_point": 1,
+          "volume_division": 1
+        }
+      },
+      "independent_validation_point_work": {
+        "integer_volume_divisions": 2,
+        "constructed_cube_assignments": 180,
+        "layer_vector_checks": 8,
+        "constraint:integer_box_dimensions": 1,
+        "constraint:first_direction_layer_colours": 1,
+        "constraint:second_direction_layer_colours": 1
+      },
+      "independent_ordinary_point_work": {
+        "fixed_point": 1,
+        "volume_division": 1,
+        "cyclic_color_construction": 12
+      }
+    },
+    {
+      "case_id": "2018-I-13",
+      "direction": "MIN",
+      "unit": "squared-length",
+      "optimum": 126,
+      "official_values": [
+        126
+      ],
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "The minimum AX is at the altitude foot, which lies in the open segment.",
+      "complete_control_scope": "Exact determinant identity and interior altitude foot.",
+      "exact_solver_work": {
+        "wall_ns": 60600,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "incenter_exact_geometry": 8,
+          "integer_square_root": 1
+        }
+      },
+      "optimum_point_validation_work": {
+        "wall_ns": 4700,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "exact_incenter_area_range": 2,
+          "fixed_point": 1
+        }
+      },
+      "independent_validation_point_work": {
+        "exact_area_radicand": 1,
+        "constraint:interior_side_position": 1,
+        "constraint:original_incenter_area": 1
+      },
+      "independent_ordinary_point_work": {
+        "fixed_point": 1,
+        "exact_incenter_area_range": 2
+      }
+    },
+    {
+      "case_id": "2018-I-8",
+      "direction": "MAX",
+      "unit": "squared-diameter",
+      "optimum": 147,
+      "official_values": [
+        147
+      ],
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "Use the opposite-side width and an exact feasible disk at that width.",
+      "complete_control_scope": "Exact opposite support bound plus one common center for all six halfspaces.",
+      "exact_solver_work": {
+        "wall_ns": 70300,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "exact_hexagon_coordinate": 6,
+          "exact_side_distance": 6,
+          "hexagon_closure_equations": 2
+        }
+      },
+      "optimum_point_validation_work": {
+        "wall_ns": 2900,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "exact_squared_diameter_range": 1,
+          "fixed_point": 1
+        }
+      },
+      "independent_validation_point_work": {
+        "exact_halfspace_squared_distances": 6,
+        "constraint:positive_squared_diameter": 1,
+        "constraint:six_original_halfspaces": 1
+      },
+      "independent_ordinary_point_work": {
+        "fixed_point": 1,
+        "exact_squared_diameter_range": 1
+      }
+    },
+    {
+      "case_id": "2019-I-11",
+      "direction": "MIN",
+      "unit": "perimeter-length",
+      "optimum": 20,
+      "official_values": [
+        20
+      ],
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "The positive root t=1/9 forces s=9j,b=2j, with j=1 feasible.",
+      "complete_control_scope": "Exact excircle tangency ratio and least integer scale.",
+      "exact_solver_work": {
+        "wall_ns": 17700,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "incircle_and_excircle_rational_checks": 3
+        }
+      },
+      "optimum_point_validation_work": {
+        "wall_ns": 2200,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "exact_perimeter_scale": 1,
+          "fixed_point": 1
+        }
+      },
+      "independent_validation_point_work": {
+        "perimeter_divisibility": 1,
+        "exact_tangency_equalities": 3,
+        "constraint:positive_integer_isosceles_sides": 1,
+        "constraint:strict_triangle": 1,
+        "constraint:internal_base_tangency": 1,
+        "constraint:external_side_tangencies": 1
+      },
+      "independent_ordinary_point_work": {
+        "fixed_point": 1,
+        "exact_perimeter_scale": 1
+      }
+    },
+    {
+      "case_id": "2020-II-8",
+      "direction": "MIN",
+      "unit": "integer-sequence-index",
+      "optimum": 101,
+      "official_values": [
+        101
+      ],
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "The exact sum is strictly increasing on positive indices. Use a charged binary threshold search.",
+      "complete_control_scope": "Inductive zero progression and increasing cubic threshold.",
+      "exact_solver_work": {
+        "wall_ns": 8100,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "closed_zero_sum": 10
+        }
+      },
+      "optimum_point_validation_work": {
+        "wall_ns": 3300,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "closed_zero_sum": 1,
+          "fixed_point": 1
+        }
+      },
+      "independent_validation_point_work": {
+        "exact_recursive_zero_sum": 1,
+        "constraint:positive_integer_index": 1,
+        "constraint:strict_sum_of_all_distinct_zeros": 1
+      },
+      "independent_ordinary_point_work": {
+        "fixed_point": 1,
+        "closed_zero_sum": 1
+      }
+    },
+    {
+      "case_id": "2022-II-12",
+      "direction": "MIN",
+      "unit": "sum-of-semiaxis-lengths",
+      "optimum": 23,
+      "official_values": [
+        23
+      ],
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "Both triangle inequalities are tight at the same exact focal-segment intersection.",
+      "complete_control_scope": "Two triangle bounds attained at one rational focal-segment intersection.",
+      "exact_solver_work": {
+        "wall_ns": 12400,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "focal_chord_intersection": 2,
+          "focal_matching_distance": 2
+        }
+      },
+      "optimum_point_validation_work": {
+        "wall_ns": 1800,
+        "thread_cpu_ns": 0,
+        "paid_work": {
+          "exact_attainable_ellipse_sum_range": 1,
+          "fixed_point": 1
+        }
+      },
+      "independent_validation_point_work": {
+        "sum_of_focal_distance_bound": 1,
+        "constraint:strict_original_semiaxes": 1,
+        "constraint:common_point_of_both_ellipses": 1
+      },
+      "independent_ordinary_point_work": {
+        "fixed_point": 1,
+        "exact_attainable_ellipse_sum_range": 1
+      }
+    }
+  ],
+  "strict_primary": {
+    "trace_count": 64,
+    "independent_question_count": 8,
+    "totals": {
+      "LENGTH_CAP": 12,
+      "PRESERVATION_EQUALS_NAIVE": 64,
+      "NATIVE_CORRECT": 45,
+      "PRESERVATION_CORRECT": 45,
+      "NAIVE_CORRECT": 45,
+      "NUMERIC_ONLY_CORRECT": 45,
+      "POINT_CHECK_late": 13,
+      "VERDICT_PROVEN_FEASIBLE": 11,
+      "NATIVE_WRONG": 6,
+      "VERDICT_PROVEN_INFEASIBLE": 2,
+      "NO_ELIGIBLE_NATIVE_FINAL": 1
+    },
+    "decisions": {
+      "FINAL_CONTEXT_CAP": 12,
+      "FINAL_SCOPE_UNKNOWN": 51,
+      "FINAL_FORMAT_FAILURE": 1
+    },
+    "verified_regressions": [],
+    "verified_regression_questions": [],
+    "unresolved_questions_beyond_same_evidence_and_complete_control": [],
+    "false_authorizations": [],
+    "work": {
+      "custody_requests": 13,
+      "point_checker_calls": 13,
+      "point_work": 709,
+      "custody_cpu_ns": 0,
+      "custody_wall_ns": 3724700,
+      "ordinary_point_named_work": 359,
+      "preserver_comparisons": 0,
+      "naive_comparisons": 0
+    },
+    "case_rows": [
+      {
+        "case_id": "2009-I-13",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "decisions": {
+          "FINAL_SCOPE_UNKNOWN": 8
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2010-I-12",
+        "native": {
+          "LENGTH_CAP": 6,
+          "NATIVE_WRONG": 2
+        },
+        "decisions": {
+          "FINAL_CONTEXT_CAP": 6,
+          "FINAL_SCOPE_UNKNOWN": 2
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2016-II-4",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "decisions": {
+          "FINAL_SCOPE_UNKNOWN": 8
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2018-I-13",
+        "native": {
+          "NATIVE_CORRECT": 7,
+          "LENGTH_CAP": 1
+        },
+        "decisions": {
+          "FINAL_SCOPE_UNKNOWN": 7,
+          "FINAL_CONTEXT_CAP": 1
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2018-I-8",
+        "native": {
+          "NATIVE_CORRECT": 5,
+          "NATIVE_WRONG": 3
+        },
+        "decisions": {
+          "FINAL_SCOPE_UNKNOWN": 8
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2019-I-11",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "decisions": {
+          "FINAL_SCOPE_UNKNOWN": 8
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2020-II-8",
+        "native": {
+          "NATIVE_CORRECT": 7,
+          "LENGTH_CAP": 1
+        },
+        "decisions": {
+          "FINAL_SCOPE_UNKNOWN": 7,
+          "FINAL_CONTEXT_CAP": 1
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2022-II-12",
+        "native": {
+          "LENGTH_CAP": 4,
+          "NATIVE_WRONG": 1,
+          "NATIVE_CORRECT": 2,
+          "NO_ELIGIBLE_NATIVE_FINAL": 1
+        },
+        "decisions": {
+          "FINAL_CONTEXT_CAP": 4,
+          "FINAL_SCOPE_UNKNOWN": 3,
+          "FINAL_FORMAT_FAILURE": 1
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      }
+    ],
+    "trace_rows": [
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-00",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-00",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-00",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-00",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 147,
+        "preserved_value": "147",
+        "naive_value": "147",
+        "numeric_only_value": "147",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-00",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-00",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-00",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-00",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-01",
+        "native_outcome": "NATIVE_WRONG",
+        "native_value": 31,
+        "preserved_value": "31",
+        "naive_value": "31",
+        "numeric_only_value": "31",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": false,
+        "naive_correct": false,
+        "numeric_only_correct": false
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-01",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-01",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-01",
+        "native_outcome": "NATIVE_WRONG",
+        "native_value": 3,
+        "preserved_value": "3",
+        "naive_value": "3",
+        "numeric_only_value": "3",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": false,
+        "naive_correct": false,
+        "numeric_only_correct": false
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-01",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-01",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-01",
+        "native_outcome": "NATIVE_WRONG",
+        "native_value": 36,
+        "preserved_value": "36",
+        "naive_value": "36",
+        "numeric_only_value": "36",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": false,
+        "naive_correct": false,
+        "numeric_only_correct": false
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-01",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-02",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-02",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-02",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-02",
+        "native_outcome": "NATIVE_WRONG",
+        "native_value": 108,
+        "preserved_value": "108",
+        "naive_value": "108",
+        "numeric_only_value": "108",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": false,
+        "naive_correct": false,
+        "numeric_only_correct": false
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-02",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-02",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-02",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-02",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 23,
+        "preserved_value": "23",
+        "naive_value": "23",
+        "numeric_only_value": "23",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 147,
+        "preserved_value": "147",
+        "naive_value": "147",
+        "numeric_only_value": "147",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-03",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-04",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-04",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-04",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-04",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 147,
+        "preserved_value": "147",
+        "naive_value": "147",
+        "numeric_only_value": "147",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-04",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-04",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-04",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-04",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-05",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-05",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-05",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-05",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 147,
+        "preserved_value": "147",
+        "naive_value": "147",
+        "numeric_only_value": "147",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-05",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-05",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-05",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-05",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-06",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 23,
+        "preserved_value": "23",
+        "naive_value": "23",
+        "numeric_only_value": "23",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-06",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-06",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-06",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 147,
+        "preserved_value": "147",
+        "naive_value": "147",
+        "numeric_only_value": "147",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-06",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-06",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-06",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-06",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-07",
+        "native_outcome": "NO_ELIGIBLE_NATIVE_FINAL",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_FORMAT_FAILURE",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-07",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-07",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-07",
+        "native_outcome": "NATIVE_WRONG",
+        "native_value": 108,
+        "preserved_value": "108",
+        "naive_value": "108",
+        "numeric_only_value": "108",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": false,
+        "naive_correct": false,
+        "numeric_only_correct": false
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-07",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-07",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-07",
+        "native_outcome": "NATIVE_WRONG",
+        "native_value": 81,
+        "preserved_value": "81",
+        "naive_value": "81",
+        "numeric_only_value": "81",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": false,
+        "naive_correct": false,
+        "numeric_only_correct": false
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-07",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FINAL_SCOPE_UNKNOWN",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      }
+    ]
+  },
+  "blind_scope_sensitivity": {
+    "trace_count": 64,
+    "independent_question_count": 8,
+    "totals": {
+      "LENGTH_CAP": 12,
+      "PRESERVATION_EQUALS_NAIVE": 64,
+      "NATIVE_CORRECT": 45,
+      "PRESERVATION_CORRECT": 45,
+      "NAIVE_CORRECT": 45,
+      "NUMERIC_ONLY_CORRECT": 45,
+      "POINT_CHECK_late": 52,
+      "VERDICT_PROVEN_FEASIBLE": 99,
+      "POINT_CHECK_final_point": 51,
+      "NATIVE_WRONG": 6,
+      "VERDICT_PROVEN_INFEASIBLE": 4,
+      "NO_ELIGIBLE_NATIVE_FINAL": 1
+    },
+    "decisions": {
+      "FINAL_CONTEXT_CAP": 12,
+      "FEASIBLE_TIE": 49,
+      "FINAL_INFEASIBLE": 2,
+      "FINAL_FORMAT_FAILURE": 1
+    },
+    "verified_regressions": [],
+    "verified_regression_questions": [],
+    "unresolved_questions_beyond_same_evidence_and_complete_control": [],
+    "false_authorizations": [],
+    "work": {
+      "custody_requests": 103,
+      "point_checker_calls": 103,
+      "point_work": 3715,
+      "custody_cpu_ns": 15625000,
+      "custody_wall_ns": 23676600,
+      "ordinary_point_named_work": 1014,
+      "preserver_comparisons": 100,
+      "naive_comparisons": 100
+    },
+    "case_rows": [
+      {
+        "case_id": "2009-I-13",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "decisions": {
+          "FEASIBLE_TIE": 8
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2010-I-12",
+        "native": {
+          "LENGTH_CAP": 6,
+          "NATIVE_WRONG": 2
+        },
+        "decisions": {
+          "FINAL_CONTEXT_CAP": 6,
+          "FINAL_INFEASIBLE": 2
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2016-II-4",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "decisions": {
+          "FEASIBLE_TIE": 8
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2018-I-13",
+        "native": {
+          "NATIVE_CORRECT": 7,
+          "LENGTH_CAP": 1
+        },
+        "decisions": {
+          "FEASIBLE_TIE": 7,
+          "FINAL_CONTEXT_CAP": 1
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2018-I-8",
+        "native": {
+          "NATIVE_CORRECT": 5,
+          "NATIVE_WRONG": 3
+        },
+        "decisions": {
+          "FEASIBLE_TIE": 8
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2019-I-11",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "decisions": {
+          "FEASIBLE_TIE": 8
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2020-II-8",
+        "native": {
+          "NATIVE_CORRECT": 7,
+          "LENGTH_CAP": 1
+        },
+        "decisions": {
+          "FEASIBLE_TIE": 7,
+          "FINAL_CONTEXT_CAP": 1
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      },
+      {
+        "case_id": "2022-II-12",
+        "native": {
+          "LENGTH_CAP": 4,
+          "NATIVE_WRONG": 1,
+          "NATIVE_CORRECT": 2,
+          "NO_ELIGIBLE_NATIVE_FINAL": 1
+        },
+        "decisions": {
+          "FINAL_CONTEXT_CAP": 4,
+          "FEASIBLE_TIE": 3,
+          "FINAL_FORMAT_FAILURE": 1
+        },
+        "verified_regressions": [],
+        "simple_retention_repairs": 0,
+        "numeric_only_harms": 0
+      }
+    ],
+    "trace_rows": [
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-00",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-00",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-00",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-00",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 147,
+        "preserved_value": "147",
+        "naive_value": "147",
+        "numeric_only_value": "147",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-00",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-00",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-00",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-00",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-01",
+        "native_outcome": "NATIVE_WRONG",
+        "native_value": 31,
+        "preserved_value": "31",
+        "naive_value": "31",
+        "numeric_only_value": "31",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": false,
+        "naive_correct": false,
+        "numeric_only_correct": false
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-01",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-01",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-01",
+        "native_outcome": "NATIVE_WRONG",
+        "native_value": 3,
+        "preserved_value": "3",
+        "naive_value": "3",
+        "numeric_only_value": "3",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": false,
+        "naive_correct": false,
+        "numeric_only_correct": false
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-01",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-01",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-01",
+        "native_outcome": "NATIVE_WRONG",
+        "native_value": 36,
+        "preserved_value": "36",
+        "naive_value": "36",
+        "numeric_only_value": "36",
+        "delivery_status": "FINAL_INFEASIBLE",
+        "preservation_correct": false,
+        "naive_correct": false,
+        "numeric_only_correct": false
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-01",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-02",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-02",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-02",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-02",
+        "native_outcome": "NATIVE_WRONG",
+        "native_value": 108,
+        "preserved_value": "108",
+        "naive_value": "108",
+        "numeric_only_value": "108",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": false,
+        "naive_correct": false,
+        "numeric_only_correct": false
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-02",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-02",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-02",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-02",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 23,
+        "preserved_value": "23",
+        "naive_value": "23",
+        "numeric_only_value": "23",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 147,
+        "preserved_value": "147",
+        "naive_value": "147",
+        "numeric_only_value": "147",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-03",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-03",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-04",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-04",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-04",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-04",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 147,
+        "preserved_value": "147",
+        "naive_value": "147",
+        "numeric_only_value": "147",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-04",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-04",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-04",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-04",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-05",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-05",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-05",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-05",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 147,
+        "preserved_value": "147",
+        "naive_value": "147",
+        "numeric_only_value": "147",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-05",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-05",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-05",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-05",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-06",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 23,
+        "preserved_value": "23",
+        "naive_value": "23",
+        "numeric_only_value": "23",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-06",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-06",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-06",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 147,
+        "preserved_value": "147",
+        "naive_value": "147",
+        "numeric_only_value": "147",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-06",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-06",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-06",
+        "native_outcome": "LENGTH_CAP",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_CONTEXT_CAP",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-06",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2022-II-12",
+        "sample_id": "2022-II-12:draw-07",
+        "native_outcome": "NO_ELIGIBLE_NATIVE_FINAL",
+        "native_value": null,
+        "preserved_value": null,
+        "naive_value": null,
+        "numeric_only_value": null,
+        "delivery_status": "FINAL_FORMAT_FAILURE",
+        "preservation_correct": null,
+        "naive_correct": null,
+        "numeric_only_correct": null
+      },
+      {
+        "case_id": "2020-II-8",
+        "sample_id": "2020-II-8:draw-07",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 101,
+        "preserved_value": "101",
+        "naive_value": "101",
+        "numeric_only_value": "101",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2019-I-11",
+        "sample_id": "2019-I-11:draw-07",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 20,
+        "preserved_value": "20",
+        "naive_value": "20",
+        "numeric_only_value": "20",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2018-I-8",
+        "sample_id": "2018-I-8:draw-07",
+        "native_outcome": "NATIVE_WRONG",
+        "native_value": 108,
+        "preserved_value": "108",
+        "naive_value": "108",
+        "numeric_only_value": "108",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": false,
+        "naive_correct": false,
+        "numeric_only_correct": false
+      },
+      {
+        "case_id": "2018-I-13",
+        "sample_id": "2018-I-13:draw-07",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 126,
+        "preserved_value": "126",
+        "naive_value": "126",
+        "numeric_only_value": "126",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2016-II-4",
+        "sample_id": "2016-II-4:draw-07",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 180,
+        "preserved_value": "180",
+        "naive_value": "180",
+        "numeric_only_value": "180",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      },
+      {
+        "case_id": "2010-I-12",
+        "sample_id": "2010-I-12:draw-07",
+        "native_outcome": "NATIVE_WRONG",
+        "native_value": 81,
+        "preserved_value": "81",
+        "naive_value": "81",
+        "numeric_only_value": "81",
+        "delivery_status": "FINAL_INFEASIBLE",
+        "preservation_correct": false,
+        "naive_correct": false,
+        "numeric_only_correct": false
+      },
+      {
+        "case_id": "2009-I-13",
+        "sample_id": "2009-I-13:draw-07",
+        "native_outcome": "NATIVE_CORRECT",
+        "native_value": 90,
+        "preserved_value": "90",
+        "naive_value": "90",
+        "numeric_only_value": "90",
+        "delivery_status": "FEASIBLE_TIE",
+        "preservation_correct": true,
+        "naive_correct": true,
+        "numeric_only_correct": true
+      }
+    ]
+  },
+  "gate": {
+    "required_independent_regression_questions": 2,
+    "strict_independent_verified_regressions": 0,
+    "strict_unresolved_independent_questions": 0,
+    "strict_false_authorizations": 0,
+    "admitted": false
+  },
+  "wall_ns": 299800700,
+  "cpu_ns": 250000000
+}

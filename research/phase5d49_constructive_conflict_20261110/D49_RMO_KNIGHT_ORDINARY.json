@@ -1,0 +1,778 @@
+{
+  "status": "D49_RMO_ORDINARY_CONTROL_COMPLETE",
+  "case_id": "RMO-2018-P4-81",
+  "cohort_sha256": "2ef60c97ae05c2b811f873457682c8be4a650fdd9556f26c332e1203b2671617",
+  "question_sha256": "c36b3c447fc8e4e98b9c3ba7be9e8fc2d4db27146d5a0795623c2b23a55d190e",
+  "instruction_sha256": "d64c1738b326f8be4d103528704614d9b2608955322c7ab11c0f8ae7e69a0078",
+  "ordinary_checker_code_sha256": "1fc51b2dc15bcdc42d9df5199f37585e2fd7f9d5995c14f1e896748abd32638e",
+  "found_routes": [
+    "UNRESTRICTED_FULL_BOARD"
+  ],
+  "private_witness_sha256": "200c64b3a586cf8bf3ea029428a96183e43ff5febf35e21a432fc6398db74dfa",
+  "ordinary_solver": {
+    "implementation": "OR-Tools CP-SAT",
+    "version": "9.14.6206",
+    "threads": 1,
+    "seed": 0,
+    "entry_module": "ortools.sat.python.cp_model"
+  },
+  "solver_setup_cost": {
+    "wall_ns": 331631200,
+    "process_cpu_ns": 328125000
+  },
+  "proof_scope": "Black cells at most one per length-three diagonal segment in both slopes. The endpoints are white on different cut sides, and adjacent white cells share a side. The unrestricted model is equivalent to exact white knight disconnection. Envelope failures are only restricted searches. Limits and UNKNOWN are retained.",
+  "negative_controls": {
+    "all_white": {
+      "check": {
+        "valid": false,
+        "shape": "BINARY_SQUARE",
+        "cells_checked": 6561,
+        "black_cells": 0,
+        "endpoints_black_flags": [
+          0,
+          0
+        ],
+        "diagonal_triplets_checked": 12482,
+        "diagonal_violations": 0,
+        "first_diagonal_conflict": null,
+        "white_knight_path": [
+          [
+            80,
+            0
+          ],
+          [
+            78,
+            1
+          ],
+          [
+            76,
+            0
+          ],
+          [
+            74,
+            1
+          ],
+          [
+            72,
+            2
+          ],
+          [
+            70,
+            3
+          ],
+          [
+            68,
+            4
+          ],
+          [
+            66,
+            5
+          ],
+          [
+            64,
+            6
+          ],
+          [
+            62,
+            7
+          ],
+          [
+            60,
+            8
+          ],
+          [
+            58,
+            9
+          ],
+          [
+            56,
+            10
+          ],
+          [
+            54,
+            11
+          ],
+          [
+            52,
+            12
+          ],
+          [
+            50,
+            13
+          ],
+          [
+            48,
+            14
+          ],
+          [
+            46,
+            15
+          ],
+          [
+            44,
+            16
+          ],
+          [
+            42,
+            17
+          ],
+          [
+            40,
+            18
+          ],
+          [
+            38,
+            19
+          ],
+          [
+            36,
+            20
+          ],
+          [
+            34,
+            21
+          ],
+          [
+            32,
+            22
+          ],
+          [
+            30,
+            23
+          ],
+          [
+            28,
+            24
+          ],
+          [
+            27,
+            26
+          ],
+          [
+            26,
+            28
+          ],
+          [
+            25,
+            30
+          ],
+          [
+            24,
+            32
+          ],
+          [
+            23,
+            34
+          ],
+          [
+            22,
+            36
+          ],
+          [
+            21,
+            38
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            19,
+            42
+          ],
+          [
+            18,
+            44
+          ],
+          [
+            17,
+            46
+          ],
+          [
+            16,
+            48
+          ],
+          [
+            15,
+            50
+          ],
+          [
+            14,
+            52
+          ],
+          [
+            13,
+            54
+          ],
+          [
+            12,
+            56
+          ],
+          [
+            11,
+            58
+          ],
+          [
+            10,
+            60
+          ],
+          [
+            9,
+            62
+          ],
+          [
+            8,
+            64
+          ],
+          [
+            7,
+            66
+          ],
+          [
+            6,
+            68
+          ],
+          [
+            5,
+            70
+          ],
+          [
+            4,
+            72
+          ],
+          [
+            3,
+            74
+          ],
+          [
+            2,
+            76
+          ],
+          [
+            1,
+            78
+          ],
+          [
+            0,
+            80
+          ]
+        ],
+        "white_bfs_status": "WHITE_PATH_FOUND",
+        "white_reachable_count": null,
+        "white_bfs_expanded": 6561,
+        "knight_edges_tested": 50558
+      },
+      "cost": {
+        "wall_ns": 17517200,
+        "process_cpu_ns": 15625000
+      }
+    },
+    "diagonal_pair": {
+      "check": {
+        "valid": false,
+        "shape": "BINARY_SQUARE",
+        "cells_checked": 6561,
+        "black_cells": 2,
+        "endpoints_black_flags": [
+          0,
+          0
+        ],
+        "diagonal_triplets_checked": 12482,
+        "diagonal_violations": 1,
+        "first_diagonal_conflict": {
+          "triple": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "black_cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        "white_knight_path": [
+          [
+            80,
+            0
+          ],
+          [
+            78,
+            1
+          ],
+          [
+            76,
+            0
+          ],
+          [
+            74,
+            1
+          ],
+          [
+            72,
+            2
+          ],
+          [
+            70,
+            3
+          ],
+          [
+            68,
+            4
+          ],
+          [
+            66,
+            5
+          ],
+          [
+            64,
+            6
+          ],
+          [
+            62,
+            7
+          ],
+          [
+            60,
+            8
+          ],
+          [
+            58,
+            9
+          ],
+          [
+            56,
+            10
+          ],
+          [
+            54,
+            11
+          ],
+          [
+            52,
+            12
+          ],
+          [
+            50,
+            13
+          ],
+          [
+            48,
+            14
+          ],
+          [
+            46,
+            15
+          ],
+          [
+            44,
+            16
+          ],
+          [
+            42,
+            17
+          ],
+          [
+            40,
+            18
+          ],
+          [
+            38,
+            19
+          ],
+          [
+            36,
+            20
+          ],
+          [
+            34,
+            21
+          ],
+          [
+            32,
+            22
+          ],
+          [
+            30,
+            23
+          ],
+          [
+            28,
+            24
+          ],
+          [
+            27,
+            26
+          ],
+          [
+            26,
+            28
+          ],
+          [
+            25,
+            30
+          ],
+          [
+            24,
+            32
+          ],
+          [
+            23,
+            34
+          ],
+          [
+            22,
+            36
+          ],
+          [
+            21,
+            38
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            19,
+            42
+          ],
+          [
+            18,
+            44
+          ],
+          [
+            17,
+            46
+          ],
+          [
+            16,
+            48
+          ],
+          [
+            15,
+            50
+          ],
+          [
+            14,
+            52
+          ],
+          [
+            13,
+            54
+          ],
+          [
+            12,
+            56
+          ],
+          [
+            11,
+            58
+          ],
+          [
+            10,
+            60
+          ],
+          [
+            9,
+            62
+          ],
+          [
+            8,
+            64
+          ],
+          [
+            7,
+            66
+          ],
+          [
+            6,
+            68
+          ],
+          [
+            5,
+            70
+          ],
+          [
+            4,
+            72
+          ],
+          [
+            3,
+            74
+          ],
+          [
+            2,
+            76
+          ],
+          [
+            1,
+            78
+          ],
+          [
+            0,
+            80
+          ]
+        ],
+        "white_bfs_status": "WHITE_PATH_FOUND",
+        "white_reachable_count": null,
+        "white_bfs_expanded": 6559,
+        "knight_edges_tested": 50552
+      },
+      "cost": {
+        "wall_ns": 16012600,
+        "process_cpu_ns": 0
+      }
+    }
+  },
+  "attempts": [
+    {
+      "width": 4,
+      "search_domain": "FIXED_CORNER_ENVELOPE",
+      "solver_limit_seconds": 5,
+      "solver_status": "INFEASIBLE",
+      "model": {
+        "variables": 32,
+        "diagonal_constraints": 17,
+        "internal_knight_edges": 24,
+        "boundary_knight_edges": 36,
+        "constraint_count": 104
+      },
+      "encoding_cost": {
+        "wall_ns": 4681400,
+        "process_cpu_ns": 15625000
+      },
+      "solver_cost": {
+        "wall_ns": 5770200,
+        "process_cpu_ns": 0
+      },
+      "solver_wall_seconds": 0.0033132,
+      "solver_user_seconds": 0.0033132,
+      "solver_branches": 0,
+      "solver_conflicts": 0,
+      "solver_deterministic_time": 0.0
+    },
+    {
+      "width": 6,
+      "search_domain": "FIXED_CORNER_ENVELOPE",
+      "solver_limit_seconds": 5,
+      "solver_status": "INFEASIBLE",
+      "model": {
+        "variables": 72,
+        "diagonal_constraints": 49,
+        "internal_knight_edges": 80,
+        "boundary_knight_edges": 60,
+        "constraint_count": 272
+      },
+      "encoding_cost": {
+        "wall_ns": 5741600,
+        "process_cpu_ns": 0
+      },
+      "solver_cost": {
+        "wall_ns": 1047100,
+        "process_cpu_ns": 0
+      },
+      "solver_wall_seconds": 0.0009268000000000001,
+      "solver_user_seconds": 0.0009269,
+      "solver_branches": 0,
+      "solver_conflicts": 0,
+      "solver_deterministic_time": 6.820000000000002e-06
+    },
+    {
+      "width": 8,
+      "search_domain": "FIXED_CORNER_ENVELOPE",
+      "solver_limit_seconds": 5,
+      "solver_status": "INFEASIBLE",
+      "model": {
+        "variables": 128,
+        "diagonal_constraints": 97,
+        "internal_knight_edges": 168,
+        "boundary_knight_edges": 84,
+        "constraint_count": 520
+      },
+      "encoding_cost": {
+        "wall_ns": 8990700,
+        "process_cpu_ns": 15625000
+      },
+      "solver_cost": {
+        "wall_ns": 1587900,
+        "process_cpu_ns": 0
+      },
+      "solver_wall_seconds": 0.0014053000000000002,
+      "solver_user_seconds": 0.0014053000000000002,
+      "solver_branches": 0,
+      "solver_conflicts": 0,
+      "solver_deterministic_time": 0.00014829499999999995
+    },
+    {
+      "width": 10,
+      "search_domain": "FIXED_CORNER_ENVELOPE",
+      "solver_limit_seconds": 5,
+      "solver_status": "INFEASIBLE",
+      "model": {
+        "variables": 200,
+        "diagonal_constraints": 161,
+        "internal_knight_edges": 288,
+        "boundary_knight_edges": 108,
+        "constraint_count": 848
+      },
+      "encoding_cost": {
+        "wall_ns": 13048600,
+        "process_cpu_ns": 15625000
+      },
+      "solver_cost": {
+        "wall_ns": 6892200,
+        "process_cpu_ns": 0
+      },
+      "solver_wall_seconds": 0.006609,
+      "solver_user_seconds": 0.0066091000000000006,
+      "solver_branches": 696,
+      "solver_conflicts": 23,
+      "solver_deterministic_time": 0.0013295065459015742
+    },
+    {
+      "width": 12,
+      "search_domain": "FIXED_CORNER_ENVELOPE",
+      "solver_limit_seconds": 5,
+      "solver_status": "INFEASIBLE",
+      "model": {
+        "variables": 288,
+        "diagonal_constraints": 241,
+        "internal_knight_edges": 440,
+        "boundary_knight_edges": 132,
+        "constraint_count": 1256
+      },
+      "encoding_cost": {
+        "wall_ns": 15303700,
+        "process_cpu_ns": 15625000
+      },
+      "solver_cost": {
+        "wall_ns": 11458500,
+        "process_cpu_ns": 15625000
+      },
+      "solver_wall_seconds": 0.011086700000000001,
+      "solver_user_seconds": 0.011086700000000001,
+      "solver_branches": 1266,
+      "solver_conflicts": 57,
+      "solver_deterministic_time": 0.002401430662755496
+    },
+    {
+      "width": 16,
+      "search_domain": "FIXED_CORNER_ENVELOPE",
+      "solver_limit_seconds": 5,
+      "solver_status": "INFEASIBLE",
+      "model": {
+        "variables": 512,
+        "diagonal_constraints": 449,
+        "internal_knight_edges": 840,
+        "boundary_knight_edges": 180,
+        "constraint_count": 2312
+      },
+      "encoding_cost": {
+        "wall_ns": 26898600,
+        "process_cpu_ns": 31250000
+      },
+      "solver_cost": {
+        "wall_ns": 19997400,
+        "process_cpu_ns": 15625000
+      },
+      "solver_wall_seconds": 0.0191628,
+      "solver_user_seconds": 0.0191628,
+      "solver_branches": 2924,
+      "solver_conflicts": 174,
+      "solver_deterministic_time": 0.005468204229583511
+    },
+    {
+      "width": 24,
+      "search_domain": "FIXED_CORNER_ENVELOPE",
+      "solver_limit_seconds": 5,
+      "solver_status": "INFEASIBLE",
+      "model": {
+        "variables": 1152,
+        "diagonal_constraints": 1057,
+        "internal_knight_edges": 2024,
+        "boundary_knight_edges": 276,
+        "constraint_count": 5384
+      },
+      "encoding_cost": {
+        "wall_ns": 58108600,
+        "process_cpu_ns": 46875000
+      },
+      "solver_cost": {
+        "wall_ns": 50673500,
+        "process_cpu_ns": 46875000
+      },
+      "solver_wall_seconds": 0.0485948,
+      "solver_user_seconds": 0.0485949,
+      "solver_branches": 8241,
+      "solver_conflicts": 581,
+      "solver_deterministic_time": 0.015387843695720556
+    },
+    {
+      "width": 81,
+      "search_domain": "ORIGINAL_FULL_BOARD",
+      "solver_limit_seconds": 20,
+      "solver_status": "OPTIMAL",
+      "model": {
+        "variables": 13122,
+        "diagonal_constraints": 12482,
+        "internal_knight_edges": 25280,
+        "boundary_knight_edges": 0,
+        "constraint_count": 63047
+      },
+      "encoding_cost": {
+        "wall_ns": 694261600,
+        "process_cpu_ns": 640625000
+      },
+      "solver_cost": {
+        "wall_ns": 1167829000,
+        "process_cpu_ns": 1171875000
+      },
+      "solver_wall_seconds": 1.1431942000000002,
+      "solver_user_seconds": 1.1431943,
+      "solver_branches": 1013538,
+      "solver_conflicts": 8860,
+      "solver_deterministic_time": 0.8441902405620347,
+      "materialize_cost": {
+        "wall_ns": 4989000,
+        "process_cpu_ns": 0
+      },
+      "independent_check": {
+        "valid": true,
+        "shape": "BINARY_SQUARE",
+        "cells_checked": 6561,
+        "black_cells": 2187,
+        "endpoints_black_flags": [
+          0,
+          0
+        ],
+        "diagonal_triplets_checked": 12482,
+        "diagonal_violations": 0,
+        "first_diagonal_conflict": null,
+        "white_knight_path": null,
+        "white_bfs_status": "WHITE_COMPONENT_EXHAUSTED",
+        "white_reachable_count": 2187,
+        "white_bfs_expanded": 2187,
+        "knight_edges_tested": 16854
+      },
+      "independent_check_cost": {
+        "wall_ns": 8389800,
+        "process_cpu_ns": 15625000
+      }
+    }
+  ],
+  "boundary": "Question-only exact independent solver and checker. Author references and executable verifiers stayed closed."
+}

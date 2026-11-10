@@ -28,6 +28,7 @@
 | [Phase 5-D4.6 点不可行性与局部修复](../../research/phase5d46_point_infeasibility_20261110/D46_CLOSEOUT_ZH.md) | 11 道独立题、88 条原生轨迹、明确候选绑定、普通点检和完整短解 | 1 个严格点拒绝与 6 个敏感性点拒绝同属一道题，普通点检全部覆盖 | 已完成，GPU 准入为 0。另确认思维到最终交付的可行解退步 |
 | [Phase 5-D4.7 可行解退步与证书保全](../../research/phase5d47_delivery_preservation_20261110/D47_CLOSEOUT_ZH.md) | 8 道新题、64 条原生轨迹、两处观察与终稿分开核验 | 49 对可行比较全部同值，0 退步，证书策略与朴素保留同输出 | 已完成，GPU 准入为 0。六条错值都在思维末段已形成 |
 | [Phase 5-D4.8 中途局部反证与完整求解](../../research/phase5d48_local_proof_headroom_20261110/D48_CLOSEOUT_ZH.md) | 9 道独立 HMMT 题，归档前缀、精确反例和普通完整对照 | 4 条精确早期错误均自修，普通完整解 9/9 | 已完成，独立修复残余 0，未启动 GPU |
+| [Phase 5-D4.9 格点构造的冲突核验与普通求解](../../research/phase5d49_constructive_conflict_20261110/D49_CLOSEOUT_ZH.md) | 10 道独立 ComBench 构造题，普通完整求解、部分状态和作者参考 | 10/10 普通完整覆盖及参考核验，九个极值证明 | 已完成，独立修复残余 0，未启动 GPU |
 
 ## 状态与阅读规则
 

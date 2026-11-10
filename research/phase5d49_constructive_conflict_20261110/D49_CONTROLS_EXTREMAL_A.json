@@ -1,0 +1,326 @@
+{
+  "cohort_sha256": "2ef60c97ae05c2b811f873457682c8be4a650fdd9556f26c332e1203b2671617",
+  "cost_boundary": "CPU wall/thread times and named work for each separately executed constructor, independent checker and synthetic controls. Manual derivation and JSON I/O are outside these timings.",
+  "private_witnesses_sha256": "1392899775f112e9543d50e1c62cd2c25bde7e531e7bd0422c65ac85d108c76e",
+  "question_projection_sha256": "f71dd6d85c8b7b50db88eb5e3b0fa020077906de72083224e024829fd6356b2a",
+  "rows": [
+    {
+      "complete_construction": {
+        "named_work": {
+          "alternating_bar_constructions": 19,
+          "axis_center_and_gap_bound_evaluations": 2
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 13500
+      },
+      "complete_proof": "Every bar crosses its axis center. A horizontal at a top-half row blocks every vertical through its own length-ten interval from that row and every row above it. Thus these rows must all have horizontals, or the same interval is addable. The bottom case is symmetric, so horizontal rows form a prefix and suffix. Vertical columns do likewise. A central horizontal blocks its whole interval from every vertical globally, forcing horizontals in all rows. A central vertical is symmetric. In a mixed solution the middle gap of each central line has length below ten, forcing at least ten cards of each orientation. Any one-orientation saturated solution requires nineteen bars. Alternating left- and right-aligned horizontal rows attains nineteen and blocks every vertical length-ten interval.",
+      "derived_optimum": 19,
+      "id": "EGMO-2016-P5",
+      "independent_full_check_result": {
+        "objective": 19,
+        "status": "VALID"
+      },
+      "independent_full_checker": {
+        "named_work": {
+          "bar_cell_overlap_checks": 190,
+          "bar_endpoint_checks": 19,
+          "line_cell_visits": 722
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 228900
+      },
+      "instruction_sha256": "0d84340a54604a7dffed24c9c0fec9dfa9c86e8ea70ccf02d75d4be559ba5ef9",
+      "local_adversaries": {
+        "declared_complete": {
+          "empty_bar_endpoints": [
+            [
+              18,
+              0
+            ],
+            [
+              18,
+              9
+            ]
+          ],
+          "status": "ADDABLE_BAR"
+        },
+        "identical_partial": {
+          "status": "UNKNOWN_COMPLETION"
+        },
+        "two_bar_monotone_overlap": {
+          "committed_bar_support": [
+            0,
+            1
+          ],
+          "conflict_cell": [
+            0,
+            0
+          ],
+          "status": "OVERLAP"
+        }
+      },
+      "local_adversary_cost": {
+        "named_work": {
+          "bar_cell_overlap_checks": 371,
+          "bar_endpoint_checks": 38,
+          "line_cell_visits": 352
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 263700
+      },
+      "question_sha256": "ccb8710d6c82f00e7eba10f0d5cce92c58a548459679dd3e1dee2024bef21562",
+      "status": "EXACT_ORDINARY_OPTIMUM_CONSTRUCTED_AND_INDEPENDENTLY_CHECKED",
+      "witness_bytes": 1322,
+      "witness_sha256": "f823fa5f6da8566d7c0862882d67f61d944af25e9b32e3048f3fb05b01415975"
+    },
+    {
+      "complete_construction": {
+        "named_work": {
+          "affine_row_recurrence_values": 25600,
+          "occupied_endpoint_scans": 25600,
+          "occupied_partner_membership_reads": 25600
+        },
+        "thread_cpu_ns": 15625000,
+        "wall_ns": 15968700
+      },
+      "complete_proof": "Let A be the symmetric grid adjacency matrix and x the binary occupied-cell vector. Every legal solution satisfies Ax=1. Propagate each new row from the two known rows and lateral neighbors, starting with a repeating 0011 top row and zero exterior. The full independent checker validates the resulting vector w and its pairing. For any legal occupancy x, 1-transpose times x equals (Aw)-transpose times x, which equals w-transpose times Ax and therefore the occupied count of w. All legal placements have that same objective.",
+      "derived_optimum": 3240,
+      "id": "EGMO-2019-P2-80",
+      "independent_full_check_result": {
+        "objective": 3240,
+        "status": "VALID"
+      },
+      "independent_full_checker": {
+        "named_work": {
+          "domino_endpoint_pair_checks": 3240,
+          "exact_one_neighbor_constraint_checks": 25600,
+          "neighbor_membership_reads": 101760
+        },
+        "thread_cpu_ns": 46875000,
+        "wall_ns": 37007900
+      },
+      "instruction_sha256": "8f607684aaaefdd0e197671138a787208ec90c39de8fde2ce7e1f6e78156de68",
+      "local_adversaries": {
+        "closed_zero": {
+          "status": "NO_OCCUPIED_NEIGHBOR"
+        },
+        "monotone_two_selected_neighbors": {
+          "status": "TOO_MANY_OCCUPIED_NEIGHBORS",
+          "support": [
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "single_selected_with_unseen_neighbors": {
+          "status": "UNKNOWN"
+        },
+        "two_compatible_committed_dominoes_zero_based": [
+          [
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ]
+          ],
+          [
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ]
+        ]
+      },
+      "local_adversary_cost": {
+        "named_work": {
+          "local_neighbor_reads": 12
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 31900
+      },
+      "question_sha256": "d5dc0674e5844fc44d2269d9812858d00c4495dacf838b077efb74fe89b0e75a",
+      "status": "EXACT_ORDINARY_OPTIMUM_CONSTRUCTED_AND_INDEPENDENTLY_CHECKED",
+      "witness_bytes": 159683,
+      "witness_sha256": "19d7d178fec3f84e4092c03481677a580c9ac15ef9ea8489aac8729573799353"
+    },
+    {
+      "complete_construction": {
+        "named_work": {
+          "edge_bound_formula_evaluations": 1,
+          "matrix_cells_written": 289,
+          "recursive_holes_written": 117,
+          "subdivision_levels": 5
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 50400
+      },
+      "complete_proof": "With W white cells, removing their incident edges removes at most 4W edges. A nonempty remaining forest has at most n squared minus W minus 1 edges. The original grid has 2n(n-1) edges, so W is at least the ceiling of (n-1) squared over 3. Remove all odd-odd cells. The remaining graph is a one-subdivision of the smaller even-even grid. Recursively remove the smaller grid holes at even-even positions. Any unused subdivider is isolated or pendant, so cycles correspond exactly to compressed cycles. Start with one deleted corner on the 2 by 2 grid. The 17 by 17 construction attains the lower bound.",
+      "derived_optimum": 203,
+      "id": "ELMO-2014-P6",
+      "independent_full_check_result": {
+        "objective": 203,
+        "status": "VALID"
+      },
+      "independent_full_checker": {
+        "named_work": {
+          "binary_cell_checks": 289,
+          "dsu_parent_steps": 122,
+          "forest_edge_checks": 202,
+          "right_down_neighbor_reads": 372
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 203300
+      },
+      "instruction_sha256": "a880569f04fcff297e37bee3ab8b05234d95760e7661cb46bb3d822f45f7766a",
+      "local_adversaries": {
+        "checked_complete_counterexample": {
+          "closing_edge": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "status": "CYCLE"
+        },
+        "minimal_closed_occupied_support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "local_adversary_cost": {
+        "named_work": {
+          "binary_cell_checks": 289,
+          "cycle_neighbor_edge_checks": 4,
+          "cycle_vertex_distinctness_checks": 1,
+          "dsu_parent_steps": 2,
+          "forest_edge_checks": 4,
+          "right_down_neighbor_reads": 6
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 65400
+      },
+      "question_sha256": "0699e66b5e91fda3ff4f39a4bf7d18386392f8fee923ab02d81913b68fe5d2a5",
+      "status": "EXACT_ORDINARY_OPTIMUM_CONSTRUCTED_AND_INDEPENDENTLY_CHECKED",
+      "witness_bytes": 2740,
+      "witness_sha256": "3d8cc4c1314fe8295033cb30f069410bf9af41f134be2d41e56ceeeaa03bce0a"
+    },
+    {
+      "complete_construction": {
+        "named_work": {
+          "antichain_cardinality_contradiction_checks": 2,
+          "antichain_order_checks": 4,
+          "matrix_cells_written": 64
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 10100
+      },
+      "complete_proof": "Map red (r,c) to (c,r-c). Reachability is coordinatewise dominance. For any m-point antichain the ordered first coordinates grow by at least one and the second decrease by at least one, so every member has r at least m-1. If the longest chain were at most three, the origin is rank one and rank two contains row one, giving at most two members in rank two. Rank three then has at least five members, all in rows four or later. That leaves rows one through three in rank two, a contradiction. The explicit construction partitions the eight reds into four antichains and attains four.",
+      "derived_optimum": 4,
+      "id": "IMO-2023-P5-8",
+      "independent_full_check_result": {
+        "objective": 4,
+        "status": "VALID"
+      },
+      "independent_full_checker": {
+        "named_work": {
+          "predecessor_path_values_read": 56,
+          "triangle_cell_checks": 64
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 40600
+      },
+      "instruction_sha256": "7150fe7194fae9811d140e5c7240177d1c0865582c95f7a95acfc4c95d1b444a",
+      "local_adversaries": {
+        "bound_red_path_prefix": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "full_recheck": {
+          "objective": 8,
+          "status": "VALID"
+        },
+        "target_upper_bound": 4
+      },
+      "local_adversary_cost": {
+        "named_work": {
+          "confirmed_path_red_checks": 5,
+          "explicit_path_step_checks": 4,
+          "predecessor_path_values_read": 56,
+          "triangle_cell_checks": 64
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 37600
+      },
+      "question_sha256": "426f487ce45d1b63d6351180a3a100d1999c2e058dbb1f0d2b5f677d3551c372",
+      "separate_exhaustive_recount": {
+        "histogram_by_longest_red_chain": {
+          "4": 6998,
+          "5": 20642,
+          "6": 10568,
+          "7": 1984,
+          "8": 128
+        },
+        "named_work": {
+          "legal_row_position_vectors": 40320,
+          "red_reachability_checks": 1128960
+        },
+        "thread_cpu_ns": 203125000,
+        "wall_ns": 254378400
+      },
+      "status": "EXACT_ORDINARY_OPTIMUM_CONSTRUCTED_AND_INDEPENDENTLY_CHECKED",
+      "witness_bytes": 515,
+      "witness_sha256": "9b5861dca9df9efb5e0c9887e8890e3e8e18dc25417e5c0c3673fb39aa31fc5c"
+    }
+  ],
+  "scope": "Question-derived exact controls and synthetic adversaries. No benchmark references, author checker code, or model trajectory fields opened.",
+  "source_sha256": "3ecef6af26178c1b34522630ff2e735295583712fe8712fca06f6c8ebbaa7dcc",
+  "status": "D49_EXTREMAL_A_QUESTION_ONLY_EXACT_CONTROLS_FROZEN_BEFORE_REFERENCE"
+}

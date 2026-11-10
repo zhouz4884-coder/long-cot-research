@@ -1,0 +1,132 @@
+{
+  "status": "D49_PINNED_COMBENCH_CONSTRUCTION_PROJECTED_BEFORE_INDEPENDENT_COHORT_REVIEW",
+  "dataset": {
+    "repo_id": "Simplified-Reasoning/ComBench",
+    "revision": "110c7561f007ee0ee60410003a98010230b2c937",
+    "declared_license": "Apache-2.0",
+    "card_url": "https://huggingface.co/datasets/Simplified-Reasoning/ComBench/resolve/110c7561f007ee0ee60410003a98010230b2c937/README.md",
+    "card_sha256": "88d40603b5bc72c9829ca79555ee6641e61e9fb1d0f034c20c11c66ab1c4bb29"
+  },
+  "paper": "https://arxiv.org/abs/2606.10479v1",
+  "code": {
+    "revision": "a1afc8390be8a0cca800845a489454b43e866784",
+    "repo": "https://github.com/Simplified-Reasoning/ComBench",
+    "license_url": "https://github.com/Simplified-Reasoning/ComBench/blob/a1afc8390be8a0cca800845a489454b43e866784/LICENSE",
+    "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "source_assets": [
+    {
+      "repository_path": "data/construction.jsonl",
+      "url": "https://huggingface.co/datasets/Simplified-Reasoning/ComBench/resolve/110c7561f007ee0ee60410003a98010230b2c937/data/construction.jsonl",
+      "bytes": 487780,
+      "git_blob_sha1": "1597f9cb0c5aa0739d7d7194c051bfdff46890e4",
+      "sha256": "6f38ee5f41846cadaa00a024c627a431b6e4df9ed9c67bab2be8174075e179db"
+    },
+    {
+      "repository_path": "metadata/categories.csv",
+      "url": "https://huggingface.co/datasets/Simplified-Reasoning/ComBench/resolve/110c7561f007ee0ee60410003a98010230b2c937/metadata/categories.csv",
+      "bytes": 7631,
+      "git_blob_sha1": "6281924a5e1f0065346ca158141122f063a5c8be",
+      "sha256": "14b2622c2d17bc9861de351758575c99bc16ca50d43bfb04b8525f84e45683c2"
+    }
+  ],
+  "question_only_sha256": "f71dd6d85c8b7b50db88eb5e3b0fa020077906de72083224e024829fd6356b2a",
+  "projector_code_sha256": "3327afd9343046f5ef856c44e4b169c34b2a90f167dd39767fd507e3cdd04c34",
+  "physical_column_boundary": "The separate CSV supports metadata-only filtering. No author Parquet conversion is available. This trusted process parses whole JSONL rows internally and exports only the explicit field allowlist. No reference, rubric, note or verifier is emitted.",
+  "allowlist": {
+    "construction_jsonl": [
+      "id",
+      "split",
+      "source",
+      "category",
+      "query",
+      "instruction"
+    ],
+    "categories_csv": [
+      "id",
+      "split",
+      "source",
+      "cb_id",
+      "category"
+    ]
+  },
+  "source_schema_names_only": [
+    {
+      "fields": [
+        "category",
+        "grading_guidelines",
+        "id",
+        "instruction",
+        "query",
+        "ref_answer",
+        "ref_construction",
+        "ref_solution",
+        "source",
+        "split",
+        "verify_code"
+      ],
+      "rows": 50
+    }
+  ],
+  "counts": {
+    "construction": 50,
+    "paper_exposed_removed": 3,
+    "eligible_questions": 47,
+    "eligible_by_category": {
+      "Counting": 3,
+      "Existence and Construction": 6,
+      "Extremal Problems": 27,
+      "Graph Theory": 4,
+      "Operations and Strategies": 7
+    },
+    "eligible_by_source_family": {
+      "APMO": 3,
+      "CGMO": 3,
+      "CMO": 3,
+      "CSMO": 4,
+      "CTST": 2,
+      "EGMO": 3,
+      "ELMO": 2,
+      "EMC": 2,
+      "IMO": 5,
+      "IMOSLC": 3,
+      "RMO": 6,
+      "TSTST": 2,
+      "USAMO": 7,
+      "USEMO": 2
+    }
+  },
+  "paper_exposed_exclusions": [
+    {
+      "id": "IMO-2022-P6",
+      "source": "IMO-2022-P6",
+      "cb_id": "CB-8",
+      "category": "Extremal Problems",
+      "source_family": "IMO"
+    },
+    {
+      "id": "IMO-2020-P4-33",
+      "source": "IMO-2020-P4",
+      "cb_id": "CB-12",
+      "category": "Graph Theory",
+      "source_family": "IMO"
+    },
+    {
+      "id": "USAMO-2009-P3-20-21",
+      "source": "USAMO-2009-P3",
+      "cb_id": "CB-43",
+      "category": "Existence and Construction",
+      "source_family": "USAMO"
+    }
+  ],
+  "output_archive_provenance": {
+    "public_per_attempt_artifact": "NOT_LOCATED_IN_FIRST_PARTY_RELEASE",
+    "project_notice": "Full result artifacts are maintained separately.",
+    "client_source": "https://github.com/Simplified-Reasoning/ComBench/blob/a1afc8390be8a0cca800845a489454b43e866784/src/llm/client.py",
+    "client_sha256": "71386782c13abc42d24a2072b85649566263b7e3eef5675b3b7b6cafef4415a2",
+    "runner_source": "https://github.com/Simplified-Reasoning/ComBench/blob/a1afc8390be8a0cca800845a489454b43e866784/src/eval/runner.py",
+    "runner_sha256": "45021a3494203b9655a93ce9d93d04ce4fda77b7a44f4872dca88adca912f759",
+    "recorded_channel": "The public client accumulates streamed content. Dedicated reasoning_content is counted rather than retained as text, and finish_reason is debug metadata. The normal successful cache stores response text and usage, not those debug fields. No native reasoning transcript or EOS can be inferred from those public artifacts."
+  },
+  "rights_scope": "The authors declare Apache-2.0 for their release. Original contest statements can carry separate rights and attribution. Keep the combined source and projected question text local."
+}

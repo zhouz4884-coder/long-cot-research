@@ -1,0 +1,224 @@
+{
+  "status": "QUESTION_ONLY_OPTIMUM_BOUND_AND_WITNESS_MATCH_3_OF_3",
+  "frozen_cohort_sha256": "2ef60c97ae05c2b811f873457682c8be4a650fdd9556f26c332e1203b2671617",
+  "question_only_projection_sha256": "f71dd6d85c8b7b50db88eb5e3b0fa020077906de72083224e024829fd6356b2a",
+  "script_sha256": "83b38fd34f84233464eef6aff17241ee057f0c5661f9aebcbf9887f5958f9b57",
+  "scope": "Question-only ordinary deterministic controls. Author verifier, reference construction, model output and official objective values were unopened. Attainment plus a mathematical bound is recorded separately from local feasibility.",
+  "witness_hash_convention": "Compact UTF-8 JSON of integer matrix; sort_keys enabled and no ASCII escaping needed.",
+  "local_witness_file_sha256": "f16dbbe7ba24943aed74f380b1a87627921b4c65aea434f12ddb3e6f5aaa534d",
+  "hardware_runtime": {
+    "python": "3.13.5",
+    "system": "Windows",
+    "machine": "AMD64"
+  },
+  "cost_scope": "Single Python process, no GPU or solver dependency. Timings omit interpreter startup and analyst derivation. Python process CPU clock has coarse granularity on some Windows calls. Report the exact operation counts together with timings.",
+  "intake_cost": {
+    "wall_seconds": 0.00024680000205989927,
+    "cpu_seconds": 0.0
+  },
+  "rows": [
+    {
+      "id": "RMO-2017-P22",
+      "cb_id": "CB-76",
+      "question_sha256": "a37061a718dc09f232c2f22faab213844f575a6c5757621a06494decf2cabb7e",
+      "instruction_sha256": "a6d2d77411ce345a00c47cd9bfa18afe9d50c91762c15952fb10c501dbdb02eb",
+      "witness_sha256": "6891063741fbb8944d31c41b4e8df5ec589f7dfb732a8371529022fa0a9f7ee5",
+      "bound_certificate": {
+        "direction": "MAX",
+        "bound": 3800,
+        "nonmixed_side_count_cases": {
+          "both_at_least_ten": 3800,
+          "exactly_one_below_ten": 3710,
+          "both_below_ten": 3600
+        }
+      },
+      "independent_full_check": {
+        "valid": true,
+        "objective": 3800,
+        "work": {
+          "cell_tallies": 80000,
+          "cell_visits": 40000,
+          "piece_constraints_checked": 3800
+        },
+        "first_conflict": null,
+        "conflicts": 0
+      },
+      "construction_work": {
+        "cell_values_written": 40000
+      },
+      "construction_cost": {
+        "wall_seconds": 0.005135300001711585,
+        "cpu_seconds": 0.0
+      },
+      "full_check_cost": {
+        "wall_seconds": 0.009864100007689558,
+        "cpu_seconds": 0.015625
+      }
+    },
+    {
+      "id": "TSTST-2024-P9-20",
+      "cb_id": "CB-46",
+      "question_sha256": "90d4087fc488679b093243b1357faf43bf8362488a419722a5eb89ad2188c8ba",
+      "instruction_sha256": "348f86f73a2a909d8fb8ba0d65c96da58e1e45b30644e820efbf445338d95dc4",
+      "witness_sha256": "1316a688c15d2bd6a761defe1dcfae5ff289987bff295b7e8b6329841d1afba4",
+      "bound_certificate": {
+        "direction": "MAX",
+        "bound": 13300,
+        "corner_upper_bound": 49400,
+        "one_corner_per_rectangle": 36100
+      },
+      "independent_full_check": {
+        "valid": true,
+        "objective": 13300,
+        "work": {
+          "ranks_checked": 400,
+          "rectangles_checked": 36100
+        }
+      },
+      "construction_work": {
+        "cell_values_written": 400
+      },
+      "construction_cost": {
+        "wall_seconds": 2.540000423323363e-05,
+        "cpu_seconds": 0.0
+      },
+      "full_check_cost": {
+        "wall_seconds": 0.009510499992757104,
+        "cpu_seconds": 0.015625
+      }
+    },
+    {
+      "id": "USEMO-2022-P1",
+      "cb_id": "CB-99",
+      "question_sha256": "d690e1475499583872aef0c322f310e9d43be894925e1bf40575cdc3eea5e402",
+      "instruction_sha256": "456fe0965302f38c58e42ef73e728c4604307ef937a5854d0e6ea28f9fe00e70",
+      "witness_sha256": "4b0a96794393041419440b61b3f7dfae47fc6fb0b05074385ad79a02ecd5b74d",
+      "bound_certificate": {
+        "direction": "MIN",
+        "bound": 44,
+        "dual_squares": 81,
+        "dual_boundary_squares": 32,
+        "merge_upper_bound": 56
+      },
+      "independent_full_check": {
+        "valid": true,
+        "objective": 44,
+        "work": {
+          "cell_visits": 100,
+          "adjacencies_checked": 180,
+          "sticks_checked": 44
+        },
+        "contact_edges": 124,
+        "malformed_labels": [],
+        "repeated_contact_pairs": []
+      },
+      "construction_work": {
+        "cell_values_written": 100,
+        "merge_edges": 56
+      },
+      "construction_cost": {
+        "wall_seconds": 0.0003378999972483143,
+        "cpu_seconds": 0.0
+      },
+      "full_check_cost": {
+        "wall_seconds": 0.00015610000991728157,
+        "cpu_seconds": 0.0
+      }
+    }
+  ],
+  "crosschecks": {
+    "CB-46": {
+      "corner_identity_value": 13300,
+      "row_column_comparisons": 16000,
+      "cost": {
+        "wall_seconds": 0.0008931000047596171,
+        "cpu_seconds": 0.0
+      }
+    },
+    "CB-99": {
+      "independent_maximum_bipartite_matching": {
+        "left_vertices": 57,
+        "edges_built": 180,
+        "edge_inspections": 809,
+        "maximum_merges": 56
+      },
+      "witness_sha256": "0db8e299a34f5dabb03c7e575088fcf633b02af0424b545b9a21b8df5b439908",
+      "independent_full_check": {
+        "valid": true,
+        "objective": 44,
+        "work": {
+          "cell_visits": 100,
+          "adjacencies_checked": 180,
+          "sticks_checked": 44
+        },
+        "contact_edges": 124,
+        "malformed_labels": [],
+        "repeated_contact_pairs": []
+      },
+      "matching_cost": {
+        "wall_seconds": 0.000374700000975281,
+        "cpu_seconds": 0.0
+      },
+      "full_check_cost": {
+        "wall_seconds": 0.00014629999350290745,
+        "cpu_seconds": 0.0
+      }
+    }
+  },
+  "adversarial_controls": {
+    "visibility": {
+      "excess": {
+        "reason": "excess",
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ]
+        ]
+      },
+      "shortfall_support_size": 395,
+      "unknown_not_rejected": true,
+      "mutated_full_board_rejected": true
+    },
+    "rank": {
+      "named_rectangle_both_directions": true,
+      "duplicate_rank_rejected": true,
+      "feasible_suboptimal_objective": 0,
+      "all_rank_permutations_2x2_checked": 24
+    },
+    "sticks": {
+      "bend_and_parallel_double_contact_rejected": true,
+      "unknown_not_rejected": true,
+      "feasible_suboptimal_objective": 100,
+      "all_merge_subsets_3x3_checked": 4096
+    }
+  },
+  "adversarial_control_cost": {
+    "wall_seconds": 0.09681579998868983,
+    "cpu_seconds": 0.09375
+  }
+}

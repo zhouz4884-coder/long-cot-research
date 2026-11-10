@@ -1,0 +1,60 @@
+{
+  "status": "D49_RMO_REFERENCE_AUDITED_WITHOUT_AUTHOR_EXECUTION",
+  "case_id": "RMO-2018-P4-81",
+  "cohort_sha256": "2ef60c97ae05c2b811f873457682c8be4a650fdd9556f26c332e1203b2671617",
+  "question_sha256": "c36b3c447fc8e4e98b9c3ba7be9e8fc2d4db27146d5a0795623c2b23a55d190e",
+  "instruction_sha256": "d64c1738b326f8be4d103528704614d9b2608955322c7ab11c0f8ae7e69a0078",
+  "ordinary_freeze_sha256": "3468dd0e3c3d229624a33b16a01d5d289c86de9eaa784d330502c14eaa626889",
+  "reference_projection_receipt_sha256": "30c3dbe24d7068b00e689e9ef0abb1c76f5bf31111cea99bf4dfcda5913156e4",
+  "selected_reference_file_sha256": "15b5e9c51caf3d175a55687e9650dc9eab0740ebe5774a8d6dacf49894c77b66",
+  "selected_answer_keys_file_sha256": "c308dff27a23d258ebef7cd632c34082c88695eb993ce99c31f29fcd92f9af21",
+  "selected_reference_row_sha256": "58dcb43958f668c83d9b23b77a33b46cabc075d6f472ec36c081b726ad804655",
+  "selected_key_row_sha256": "0af401feee1eadbf53e341196e5e7bc9a99e60539a361a786c128f7d25c2b68a",
+  "decoder_sha256": "724f4e33063d0575596f93d9962023f7c2030af645739dc55867989160ea9600",
+  "independent_checker_sha256": "1fc51b2dc15bcdc42d9df5199f37585e2fd7f9d5995c14f1e896748abd32638e",
+  "original_answer_key": {
+    "meaning": "The forced-pattern sizes are n>=4 congruent to 1 modulo 3.",
+    "canonical_predicate": {
+      "minimum_n": 4,
+      "modulus": 3,
+      "residue": 1
+    },
+    "all_n_classification_independently_proved_here": false,
+    "fixed_n_in_forced_class": false
+  },
+  "fixed_reference_witness": {
+    "n": 81,
+    "status": "FIXED_CONSTRUCTION_VALID",
+    "reference_valid": true,
+    "checker_result": {
+      "valid": true,
+      "shape": "BINARY_SQUARE",
+      "cells_checked": 6561,
+      "black_cells": 2187,
+      "endpoints_black_flags": [
+        0,
+        0
+      ],
+      "diagonal_triplets_checked": 12482,
+      "diagonal_violations": 0,
+      "first_diagonal_conflict": null,
+      "white_knight_path": null,
+      "white_bfs_status": "WHITE_COMPONENT_EXHAUSTED",
+      "white_reachable_count": 2187,
+      "white_bfs_expanded": 2187,
+      "knight_edges_tested": 16854
+    },
+    "decoder_ast_visits": 52815,
+    "decode_cost": {
+      "wall_ns": 44987300,
+      "process_cpu_ns": 31250000
+    },
+    "check_cost": {
+      "wall_ns": 7927900,
+      "process_cpu_ns": 15625000
+    },
+    "identical_to_independent_ordinary_grid": true,
+    "ordinary_control_receipt_sha256": "131734c6c62c969b6078d637d82f1da91de924bea312121a3d0ff5a08fc00d66"
+  },
+  "boundary": "Only this case object was decoded in each local sealed file. The original key and the n=81 counterexample are distinct. The exact fixed checker validates the white endpoints, both diagonal slopes and exhaustive knight reachability. Neither the author verifier nor any reference expression was executed as Python."
+}

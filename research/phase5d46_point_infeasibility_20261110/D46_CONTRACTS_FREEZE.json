@@ -1,0 +1,478 @@
+{
+  "status": "D46_REVIEWED_POINT_CONTRACTS_FROZEN_BEFORE_HELDOUT",
+  "cohort_sha256": "b37ca3a8574e4cbe2eb7da7ccfe379c2138395ffdf2b8eb91d4cf81c1866219b",
+  "contract_source_sha256": "2a559f4d62dd469c8317e67cb0513e17d92f4d2398c87e31eed589317449f8bb",
+  "verifier_source_sha256": "ead84d2e0f69955f27d20ab83ab34d95dd732642a63dbadbd7685d079434f76d",
+  "rows": [
+    {
+      "case_id": "2009-I-7",
+      "contract": {
+        "binding": {
+          "question_sha256": "18b0b279b55fb6921f600163bc91e4e44428435883c9dacdf1f639246d40b438",
+          "objective_id": "first-integral-telescoping-index",
+          "scope_sha256": "c05473b4d673376521855feebea5b3e3d7e283a5a9e908c3b8f8552d015fadc3",
+          "constraints_sha256": "1a431b9a9ee71ca1eb1c9da6b86e8de2287339450d927a9abcd646d32156e185",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "index_above_one",
+          "integral_sequence_term"
+        ],
+        "checker_id": "d46.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "b7b33c393de8dfaf47408cdf5f7137e8526cf4d58962ac6fd9e94af733d1eca1",
+        "review_sha256": "3740fa23a3220a40b13301c32f30af2243c5f09e2dabe9a516d2bfe9eb9b7217"
+      },
+      "contract_sha256": "ac6341df630e4b3482261b70dbfc11fd2994847b0aac2c9c48f5549fd65b4af9",
+      "question_only_review": {
+        "case_id": "2009-I-7",
+        "question_sha256": "18b0b279b55fb6921f600163bc91e4e44428435883c9dacdf1f639246d40b438",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "first-integral-telescoping-index",
+          "description": "Least index k greater than one whose sequence term is integral.",
+          "subject_patterns": [
+            "k",
+            "(?:positive )?(?:integer )?index(?: k)?",
+            "sequence index(?: k)?"
+          ]
+        },
+        "point_proof": "The original product telescopes exactly to 5^a_k=3k+2. The term is integral precisely when that integer is a power of five.",
+        "checker_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f"
+      },
+      "weak_necessity": "k>1 and odd, since 3k+2 must be an odd power.",
+      "structural_full_control": "The same telescoping reduces the entire minimum to the first allowed odd power exponent."
+    },
+    {
+      "case_id": "2010-II-12",
+      "contract": {
+        "binding": {
+          "question_sha256": "a482615c291f5a71252cf1dc00e254a24a60dfb41955b044160853472093eedf",
+          "objective_id": "minimum-isosceles-common-perimeter",
+          "scope_sha256": "08d094ac969f3de740773d0430d25fa278b05c93ea324ee15905be29ef07f3a4",
+          "constraints_sha256": "d05117166722417437b1e2d1157b0d655dba51e12cf813e5b798851fd8cfa901",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_perimeter",
+          "integer_base_ratio",
+          "integer_lateral_sides",
+          "strict_triangles",
+          "equal_areas"
+        ],
+        "checker_id": "d46.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "6b567f0f4467f191d022995961e54d26214a6af20f04d71726f78c385032b925",
+        "review_sha256": "404324ab857cadd036deea0373b3b29f0a91b555362b5469fa28063060fa628b"
+      },
+      "contract_sha256": "f612cb6e18efdbc83c16d847e513ea7861c56f338ef167edf22258242a46792d",
+      "question_only_review": {
+        "case_id": "2010-II-12",
+        "question_sha256": "a482615c291f5a71252cf1dc00e254a24a60dfb41955b044160853472093eedf",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "minimum-isosceles-common-perimeter",
+          "description": "Minimum common perimeter of the specified noncongruent isosceles triangles.",
+          "subject_patterns": [
+            "p",
+            "(?:common )?perimeter(?: p)?",
+            "perimeter of (?:both|the) triangles"
+          ]
+        },
+        "point_proof": "Coprime bases imply bases 8t and 7t. Equality of squared Heron areas gives 15P=338t. Check the resulting integer lateral sides and both strict triangle constraints.",
+        "checker_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f"
+      },
+      "weak_necessity": "The even base 8t with two integer lateral sides forces an even perimeter.",
+      "structural_full_control": "The one point's equality and integrality relations solve the first admissible scale globally."
+    },
+    {
+      "case_id": "2010-II-3",
+      "contract": {
+        "binding": {
+          "question_sha256": "f65fb4b9eea6975066a556f2c9081450be9d48f15d001bbfc8764d0208e24c8d",
+          "objective_id": "greatest-power-two-exponent",
+          "scope_sha256": "d7c0153dde629ad3a8c1117755e1d2b2ef4bdd63328daf726f0dbc34641124be",
+          "constraints_sha256": "00c96ca08828d5ba462fd862cf81e3f2d5a77ca61fcbeaa2f7e99b01c3f660ec",
+          "direction": "MAX"
+        },
+        "required_constraints": [
+          "positive_exponent",
+          "divides_original_product"
+        ],
+        "checker_id": "d46.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "3a789917a377fb367aff26229687c6c21bf3d70993f1adebfedd43bd24bba414",
+        "review_sha256": "59ec5c59eb778198c38baf267fec60350c1b4979fe8b576c6abf32740d0e1468"
+      },
+      "contract_sha256": "31d84e83dce80b352ba8cc9815fa0909cf0583a9c7a16f242a6c6665afc81d6c",
+      "question_only_review": {
+        "case_id": "2010-II-3",
+        "question_sha256": "f65fb4b9eea6975066a556f2c9081450be9d48f15d001bbfc8764d0208e24c8d",
+        "scope": {
+          "direction": "MAX",
+          "objective_id": "greatest-power-two-exponent",
+          "description": "Greatest exponent n of 2 dividing the product of all original differences.",
+          "subject_patterns": [
+            "n",
+            "(?:integer )?exponent(?: n)?",
+            "power of (?:2|two) exponent"
+          ]
+        },
+        "point_proof": "Difference d occurs 20-d times. Multiplying all factors modulo 2^n decides divisibility. The crude strict bit bound covers very large exponents.",
+        "checker_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f"
+      },
+      "weak_necessity": "The product is strictly below 2^950, so a dividing exponent is positive and below 950.",
+      "structural_full_control": "Summing the 19 multiplicities times their 2-adic valuations yields the exact maximum directly."
+    },
+    {
+      "case_id": "2011-I-12",
+      "contract": {
+        "binding": {
+          "question_sha256": "94c70bb62fd53d698a7ff36ae0737e55cd5d6ceb4ab12748a89dbcd187621865",
+          "objective_id": "minimum-women-conditioned-run-count",
+          "scope_sha256": "5503d555c9de27ba22a6d3549530fd4902222ff7f03c81fd86995e1bf838b626",
+          "constraints_sha256": "a56f4aec144b6639ea89da9db6f90e0e3d06c78555e8ef9d30827176a99a88f5",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_women_count",
+          "conditioned_probability_threshold"
+        ],
+        "checker_id": "d46.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "398330bd660f54041738cdc9e252cf96ba9df990d3b3ce177c79ee1e8e33f0b0",
+        "review_sha256": "04bab7cf4c9f4a8bcfa2abb2fd95c3cc56df0350d6afc6943827e0745f064245"
+      },
+      "contract_sha256": "3eab00cbb74da9d55ad2a2fde4738cb74e5bf3d1bece0ae5243e5cda1565a840",
+      "question_only_review": {
+        "case_id": "2011-I-12",
+        "question_sha256": "94c70bb62fd53d698a7ff36ae0737e55cd5d6ceb4ab12748a89dbcd187621865",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "minimum-women-conditioned-run-count",
+          "description": "Least number of women for the exact conditional run probability threshold.",
+          "subject_patterns": [
+            "w",
+            "(?:number|count) of women",
+            "women(?: in (?:the )?line)?"
+          ]
+        },
+        "point_proof": "Every nonempty men-run has size at least two. Six men can occupy one, two or three selected gaps, with run-count multiplicities 1,3,1. The favorable counts have multiplicities 1,2,0.",
+        "checker_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f"
+      },
+      "weak_necessity": "The original count of women is positive.",
+      "structural_full_control": "The same exact count simplifies to one quadratic threshold in the gap count."
+    },
+    {
+      "case_id": "2013-II-6",
+      "contract": {
+        "binding": {
+          "question_sha256": "40a21503b40e4906fc8d0f05bf932a5e1088a55c6d19dbe2cbe5606bd891b1c8",
+          "objective_id": "least-square-free-block-index",
+          "scope_sha256": "710be5699858a20f32a7c4dc18632b747f9f441662252984d81768facf15efa1",
+          "constraints_sha256": "14a6a2bac1ec285bdc125efe2ca603fc6c916a5ca12b56b99af2f2d87317bb25",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_index",
+          "complete_block_contains_no_square"
+        ],
+        "checker_id": "d46.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "30c821a95b2f2f5ed54fddd5099eaec9355e640fc4295bc06df03cc1e1dc79b2",
+        "review_sha256": "4fe9b876166bd34e7cf3a32b7096184ed068dda6b46a8f40fd48fe074c57f303"
+      },
+      "contract_sha256": "cb06b8309281049c23ebac3e479237c9d90d6d30023ac9b8c94c4fd9431fbc82",
+      "question_only_review": {
+        "case_id": "2013-II-6",
+        "question_sha256": "40a21503b40e4906fc8d0f05bf932a5e1088a55c6d19dbe2cbe5606bd891b1c8",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "least-square-free-block-index",
+          "description": "Least positive block index N whose 1000 prescribed consecutive integers contain no square.",
+          "subject_patterns": [
+            "n",
+            "(?:positive )?(?:integer )?(?:block )?index(?: n)?",
+            "block number(?: n)?"
+          ]
+        },
+        "point_proof": "The smallest integer square at or above the closed left endpoint completely decides whether the block has a square.",
+        "checker_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f"
+      },
+      "weak_necessity": "For N<=249, the next integer square is less than 1000 integers away.",
+      "structural_full_control": null
+    },
+    {
+      "case_id": "2015-I-11",
+      "contract": {
+        "binding": {
+          "question_sha256": "53b7557cd08d9661c66ff3cdf94e0490842596f1f8328285d194729b1141f343",
+          "objective_id": "minimum-incenter-isosceles-perimeter",
+          "scope_sha256": "35744e05e2aba2df06dc604c2c08a7ca30516f547370b2b1565ffe4728327069",
+          "constraints_sha256": "f2099dac74abc3a9fc22c76a0d7036f48ddf685e5294b2a600119594cded7f73",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_integer_perimeter",
+          "integer_isosceles_sides",
+          "strict_triangle",
+          "exact_incenter_distance"
+        ],
+        "checker_id": "d46.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+        "exclusion_kind": "COMPLETE_FIXED_VALUE_FIBER",
+        "proof_sha256": "414ef3ed15e13cd069c4000aa7ab6427ffecbaada3d5de27a87b9591f5774288",
+        "review_sha256": "d28b20351470520bc8aee1e7a838a559d697b1347d7455a75c3c1a0ac0a398b7"
+      },
+      "contract_sha256": "3b2c8a2aa23836973d23a9fae1a548b8fe527fb589ffefe20577558594a1a44b",
+      "question_only_review": {
+        "case_id": "2015-I-11",
+        "question_sha256": "53b7557cd08d9661c66ff3cdf94e0490842596f1f8328285d194729b1141f343",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "minimum-incenter-isosceles-perimeter",
+          "description": "Least perimeter among original integer isosceles triangles satisfying BI=8.",
+          "subject_patterns": [
+            "p",
+            "perimeter(?: p)?",
+            "perimeter of (?:the )?triangle(?: abc)?"
+          ]
+        },
+        "point_proof": "For base b and common side a, BI^2=b^2a/P=b^2(P-b)/(2P). Positivity and P>2b imply 128<b^2<256, leaving four original integer bases. Check all four at the fixed perimeter.",
+        "checker_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f"
+      },
+      "weak_necessity": "BI=8 and strict triangle inequalities imply b>=12 and P>2b.",
+      "structural_full_control": "The complete optimum also uses just the four reviewed base possibilities."
+    },
+    {
+      "case_id": "2015-II-3",
+      "contract": {
+        "binding": {
+          "question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+          "objective_id": "least-divisible-number-with-digit-sum",
+          "scope_sha256": "2518fafb5ffe7365e7bef91f104282ade10c06ffae47d80ed7746f40d9d0d722",
+          "constraints_sha256": "509acc58e62cf2e3d203ecdc87464b9cd1d903c3a87719a093b34e4f580cf78e",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_integer",
+          "divisible_by_17",
+          "decimal_digit_sum_17"
+        ],
+        "checker_id": "d46.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "ff0ae7adb6b4be26264054a5d39715aa2ea921fc2249008ddb9c32d570835096",
+        "review_sha256": "20b51980c4977847a0b36315a76941e4f7bea8324eaf0783047f6e31ec3e3155"
+      },
+      "contract_sha256": "d4f87736040b5b9654df034495eacb0befe672113903afd516173f1fe9049515",
+      "question_only_review": {
+        "case_id": "2015-II-3",
+        "question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "least-divisible-number-with-digit-sum",
+          "description": "Least positive integer m with both the original divisibility and digit-sum constraints.",
+          "subject_patterns": [
+            "m",
+            "(?:positive )?(?:integer|number)(?: m)?",
+            "qualifying multiple(?: m)?"
+          ]
+        },
+        "point_proof": "The original candidate must be positive, divisible by 17 and have exactly the specified decimal digit sum.",
+        "checker_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f"
+      },
+      "weak_necessity": "Digit sum gives the necessary residue 8 modulo 9.",
+      "structural_full_control": null
+    },
+    {
+      "case_id": "2015-II-5",
+      "contract": {
+        "binding": {
+          "question_sha256": "7bd72b857ca67f29ab6dd79e5fc6f4dca4ed50d15fc86066f997a27c551fae55",
+          "objective_id": "minimum-grid-side-adjacency-probability",
+          "scope_sha256": "cfb8c1f2afb8dddb33c7f1d111f5e76041d52b2184d1a7a1c82bf9faa373a369",
+          "constraints_sha256": "6fb21d98f0549acc806912ec8043a8d4c86f468d43e1f1730162837365c7f009",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "two_squares_selectable",
+          "strict_probability_threshold"
+        ],
+        "checker_id": "d46.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "32e459e3a05bf70f36c5858c4c4be7425c1b6ae8e77c0119841893628afe95c8",
+        "review_sha256": "9b4d468b90aa4095bc16d2cd7029533756e90d018dc1a12600ad0f0faa54780f"
+      },
+      "contract_sha256": "7ea0d9dfecc6f779bdf934b82837a74d6932e210f0eb9457473571ca316ef95e",
+      "question_only_review": {
+        "case_id": "2015-II-5",
+        "question_sha256": "7bd72b857ca67f29ab6dd79e5fc6f4dca4ed50d15fc86066f997a27c551fae55",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "minimum-grid-side-adjacency-probability",
+          "description": "Least grid side n at which the exact adjacent-pair probability is below the given threshold.",
+          "subject_patterns": [
+            "n",
+            "(?:grid )?side(?: length)?(?: n)?",
+            "dimension(?: n)?",
+            "grid size(?: n)?"
+          ]
+        },
+        "point_proof": "Count the 2n(n-1) adjacent unordered pairs and divide by the total unordered pairs. For n>=2 the probability is 4/[n(n+1)].",
+        "checker_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f"
+      },
+      "weak_necessity": "At least two squares must be selectable, so n>=2.",
+      "structural_full_control": "The point inequality itself is monotone and gives the first admissible integer by an exact square-root threshold."
+    },
+    {
+      "case_id": "2017-II-5",
+      "contract": {
+        "binding": {
+          "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+          "objective_id": "greatest-missing-edge-sum",
+          "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+          "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+          "direction": "MAX"
+        },
+        "required_constraints": [
+          "four_distinct_real_values",
+          "all_given_pair_sums",
+          "fixed_missing_pair_sum"
+        ],
+        "checker_id": "d46.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+        "exclusion_kind": "COMPLETE_FIXED_VALUE_FIBER",
+        "proof_sha256": "be180ac3303ccb28a68c5c92163aff552657b12cf646fb09156c47e7da75ccff",
+        "review_sha256": "a7b616ce1e17617199ed6594a9572e9aa8955315aab18f1b8c093df2bfb8fc7a"
+      },
+      "contract_sha256": "51c80fd982b86dfc9401580748c84325c9f5a89504cbd1f4af77afd063f5e69f",
+      "question_only_review": {
+        "case_id": "2017-II-5",
+        "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+        "scope": {
+          "direction": "MAX",
+          "objective_id": "greatest-missing-edge-sum",
+          "description": "Maximum x+y for the two unspecified pair sums of four distinct real numbers.",
+          "subject_patterns": [
+            "x\\s*\\+\\s*y",
+            "sum of x and y",
+            "sum of (?:the )?(?:two )?missing(?: pair(?:wise)?)? sums"
+          ]
+        },
+        "point_proof": "For total vertex sum S=(1030+x+y)/3, opposite edge weights sum to S. Enumerate each assignment of four known weights. If both missing edges are opposite, S must be 515 but no given pair sums to 515. Otherwise infer both missing weights and check the uniquely reconstructed four distinct vertices.",
+        "checker_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f"
+      },
+      "weak_necessity": "At least one opposite edge pair is fully given; the possible total vertex sum is bounded by the smallest and largest sums of two known edges.",
+      "structural_full_control": "Six known-pair sums suffice for the entire target range, with constructive opposite-pair realization."
+    },
+    {
+      "case_id": "2019-I-14",
+      "contract": {
+        "binding": {
+          "question_sha256": "56add4ac727ce828b6b0f32297322933f068870b5e1b313415c6f5bc511ec40c",
+          "objective_id": "least-odd-prime-factor",
+          "scope_sha256": "2f39e276f31bfd2a4fce4004d6315b49018c29a0ede67b8c52e8cec163f11d2e",
+          "constraints_sha256": "d71e72ce0b4d7dd7ed0e2c531941f625de54919fa01bf9d79ee046b42f564c16",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "odd_prime",
+          "modular_divisibility"
+        ],
+        "checker_id": "d46.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "b313fe463c897216686fda258d5e8c23adfc084cf86a85ae49564b2940796002",
+        "review_sha256": "a27279057d5e19802e4966add5ca44529b7f5a913701fe1c70228b615cc4d861"
+      },
+      "contract_sha256": "ba2a6d44143d3ca60f2aebf982ede18f41ad2a3af928ad5371233604b3a5c957",
+      "question_only_review": {
+        "case_id": "2019-I-14",
+        "question_sha256": "56add4ac727ce828b6b0f32297322933f068870b5e1b313415c6f5bc511ec40c",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "least-odd-prime-factor",
+          "description": "Least odd prime divisor of the original fixed integer.",
+          "subject_patterns": [
+            "p",
+            "(?:odd )?prime(?: factor| divisor)?(?: p)?",
+            "factor p"
+          ]
+        },
+        "point_proof": "Only an odd prime may be the claimed factor. Trial primality and modular powering decide that single candidate.",
+        "checker_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f"
+      },
+      "weak_necessity": "The residue multiplicative order is 16, so the odd prime is 1 modulo 16.",
+      "structural_full_control": null
+    },
+    {
+      "case_id": "2021-II-15",
+      "contract": {
+        "binding": {
+          "question_sha256": "4c78b3b6b2d0a1ff42e590474eb24cf0e615885993446df24149299facf1af93",
+          "objective_id": "least-index-exact-recursive-ratio",
+          "scope_sha256": "bbd91c0c5ae454eb18de945cc70f6b73bc4c22a5b942acd464feeb1fd2748b0e",
+          "constraints_sha256": "4b3ee16e321494af06e65339b5ced75de2642c8d72163edb8d93308ef0887100",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_index",
+          "exact_recursive_ratio"
+        ],
+        "checker_id": "d46.exact.point",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+        "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+        "proof_sha256": "1b5fccd754fb1aac704b778e5f15699729e50541bae98f12ad4799679aaf004e",
+        "review_sha256": "faddaa4b450112a6c6dc5089e1872f24d283a95bb06940bd6f596e9b0c65d2f1"
+      },
+      "contract_sha256": "8121b0f27306c0c142238275667221d5d7c12206a3dd8bc1533f338d97755771",
+      "question_only_review": {
+        "case_id": "2021-II-15",
+        "question_sha256": "4c78b3b6b2d0a1ff42e590474eb24cf0e615885993446df24149299facf1af93",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "least-index-exact-recursive-ratio",
+          "description": "Least positive n where the two original recurrence functions have the exact given ratio.",
+          "subject_patterns": [
+            "n",
+            "(?:positive )?(?:integer )?index(?: n)?",
+            "input(?: n)?"
+          ]
+        },
+        "point_proof": "The +1 recurrence reaches the least square at or above n. The +2 recurrence reaches the least square of the same parity. The recurrences add the respective gaps exactly before the integer square root.",
+        "checker_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f"
+      },
+      "weak_necessity": "The original recurrence index must be positive.",
+      "structural_full_control": null
+    }
+  ]
+}

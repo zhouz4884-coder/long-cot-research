@@ -1,0 +1,4495 @@
+{
+  "status": "D46_FROZEN_POINT_OPPORTUNITIES_SCORED",
+  "cohort_sha256": "b37ca3a8574e4cbe2eb7da7ccfe379c2138395ffdf2b8eb91d4cf81c1866219b",
+  "strict_comparison_sha256": "c594f2832a50da7728ed3ba7b8c32dd8c01a4e97860ea40c8220dc9069d8eb91",
+  "sensitivity_comparison_sha256": "284f5d042b1bec0b0d720411aef8c951c5aa7ec58c5c8eecb080fa50e9c08177",
+  "scope_audit_sha256": "6a954d5193a8730ec1b05c1b8058149bbd51a5a8563d3b498b42128c1463ede9",
+  "oracle_sha256": "6ef023811ddc44f4b152dc9ee4de37e0d6c64452dec280a1c4272e5ddfb07247",
+  "scorer_sha256": "fdadee7913b8a0ff36ab18393c30b2e44993f7c05c1b70fb87c6fcc479df6fd9",
+  "label_audit": [
+    {
+      "case_id": "2009-I-7",
+      "official_values": [
+        41
+      ],
+      "exact_optimum": 41,
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "Powers equal 2 mod 3 only for odd exponents; exponent 1 is the excluded k=1.",
+      "complete_paid_work": {
+        "minimal_exponent_residue_argument": 1
+      },
+      "complete_validation_paid_work": {
+        "base_five_division": 3,
+        "fixed_point": 1
+      },
+      "exact_optimum_is_feasible": true,
+      "weak_condition_contains_optimum": true,
+      "independent_point_validation_work": {
+        "power_of_five_divisions": 3,
+        "constraint:index_above_one": 1,
+        "constraint:integral_sequence_term": 1
+      },
+      "ordinary_point_validation_work": {
+        "fixed_point": 1,
+        "base_five_division": 3
+      },
+      "closed_form_or_smaller_complete_control": "The same telescoping reduces the entire minimum to the first allowed odd power exponent.",
+      "supplementary_complete_control": null
+    },
+    {
+      "case_id": "2010-II-12",
+      "official_values": [
+        676
+      ],
+      "exact_optimum": 676,
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "Coprimality in 15P=338k gives k=15j, P=338j. Integrality requires even j; j=2 is feasible.",
+      "complete_paid_work": {
+        "primitive_scale_and_parity_argument": 1
+      },
+      "complete_validation_paid_work": {
+        "fixed_point": 1,
+        "fixed_scale_division": 1,
+        "squared_area_product": 2
+      },
+      "exact_optimum_is_feasible": true,
+      "weak_condition_contains_optimum": true,
+      "independent_point_validation_work": {
+        "equal_area_base_scale_relation": 1,
+        "perimeter_side_checks": 2,
+        "squared_area_products": 2,
+        "constraint:positive_perimeter": 1,
+        "constraint:integer_base_ratio": 1,
+        "constraint:integer_lateral_sides": 1,
+        "constraint:strict_triangles": 1,
+        "constraint:equal_areas": 1
+      },
+      "ordinary_point_validation_work": {
+        "fixed_point": 1,
+        "fixed_scale_division": 1,
+        "squared_area_product": 2
+      },
+      "closed_form_or_smaller_complete_control": "The one point's equality and integrality relations solve the first admissible scale globally.",
+      "supplementary_complete_control": null
+    },
+    {
+      "case_id": "2010-II-3",
+      "official_values": [
+        150
+      ],
+      "exact_optimum": 150,
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "Add each factor group's exact 2-adic valuation.",
+      "complete_paid_work": {
+        "difference_valuation": 19
+      },
+      "complete_validation_paid_work": {
+        "fixed_point": 1,
+        "group_modular_power": 18
+      },
+      "exact_optimum_is_feasible": true,
+      "weak_condition_contains_optimum": true,
+      "independent_point_validation_work": {
+        "product_modular_steps": 189,
+        "constraint:positive_exponent": 1,
+        "constraint:divides_original_product": 1
+      },
+      "ordinary_point_validation_work": {
+        "fixed_point": 1,
+        "group_modular_power": 18
+      },
+      "closed_form_or_smaller_complete_control": "Summing the 19 multiplicities times their 2-adic valuations yields the exact maximum directly.",
+      "supplementary_complete_control": null
+    },
+    {
+      "case_id": "2011-I-12",
+      "official_values": [
+        594
+      ],
+      "exact_optimum": 594,
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "Divide the exact run inequality by w+1 to obtain w^2-592w-594>=0. Use its sole nonnegative root.",
+      "complete_paid_work": {
+        "quadratic_discriminant_square_root": 1
+      },
+      "complete_validation_paid_work": {
+        "binomial": 2,
+        "fixed_point": 1
+      },
+      "exact_optimum_is_feasible": true,
+      "weak_condition_contains_optimum": true,
+      "independent_point_validation_work": {
+        "small_binomial_evaluations": 2,
+        "constraint:positive_women_count": 1,
+        "constraint:conditioned_probability_threshold": 1
+      },
+      "ordinary_point_validation_work": {
+        "fixed_point": 1,
+        "binomial": 2
+      },
+      "closed_form_or_smaller_complete_control": "The same exact count simplifies to one quadratic threshold in the gap count.",
+      "supplementary_complete_control": null
+    },
+    {
+      "case_id": "2013-II-6",
+      "official_values": [
+        282
+      ],
+      "exact_optimum": 282,
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "Search the entire positive integer prefix ending at the first feasible square-free block.",
+      "complete_paid_work": {
+        "fixed_point": 282,
+        "integer_square_root": 564
+      },
+      "complete_validation_paid_work": {
+        "fixed_point": 1,
+        "integer_square_root": 2
+      },
+      "exact_optimum_is_feasible": true,
+      "weak_condition_contains_optimum": true,
+      "independent_point_validation_work": {
+        "integer_square_root": 1,
+        "constraint:positive_index": 1,
+        "constraint:complete_block_contains_no_square": 1
+      },
+      "ordinary_point_validation_work": {
+        "fixed_point": 1,
+        "integer_square_root": 2
+      },
+      "closed_form_or_smaller_complete_control": null,
+      "supplementary_complete_control": {
+        "case_id": "2013-II-6",
+        "question_sha256": "40a21503b40e4906fc8d0f05bf932a5e1088a55c6d19dbe2cbe5606bd891b1c8",
+        "optimum": 282,
+        "completeness_argument": "For k<500 adjacent square gaps are at most 999 and cannot skip a complete block. For k=500+t the thousand-block index is 250+t+floor(t²/1000). The first skipped block occurs at t=isqrt(999)=31, before (t+1)² crosses 1000.",
+        "construction_named_work": {
+          "integer_square_roots": 1,
+          "scalar_boundary_formulas": 3
+        },
+        "separate_validation_work": {
+          "fixed_point": 1,
+          "integer_square_root": 2
+        }
+      }
+    },
+    {
+      "case_id": "2015-I-11",
+      "official_values": [
+        108
+      ],
+      "exact_optimum": 108,
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "Check every possible base 12..15 using the exact derived lateral-side formula.",
+      "complete_paid_work": {
+        "complete_base_case": 4
+      },
+      "complete_validation_paid_work": {
+        "fixed_base_incenter_test": 1,
+        "fixed_point": 1
+      },
+      "exact_optimum_is_feasible": true,
+      "weak_condition_contains_optimum": true,
+      "independent_point_validation_work": {
+        "fiber_points": 1,
+        "constraint:positive_integer_perimeter": 1,
+        "constraint:integer_isosceles_sides": 1,
+        "constraint:strict_triangle": 1,
+        "constraint:exact_incenter_distance": 1
+      },
+      "ordinary_point_validation_work": {
+        "fixed_point": 1,
+        "fixed_base_incenter_test": 1
+      },
+      "closed_form_or_smaller_complete_control": "The complete optimum also uses just the four reviewed base possibilities.",
+      "supplementary_complete_control": null
+    },
+    {
+      "case_id": "2015-II-3",
+      "official_values": [
+        476
+      ],
+      "exact_optimum": 476,
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "Digit sum fixes n modulo 9, hence the multiplier is 1 mod 9. Search that prefix exactly.",
+      "complete_paid_work": {
+        "decimal_digit_division": 11,
+        "divisibility_by_17": 4,
+        "fixed_point": 4
+      },
+      "complete_validation_paid_work": {
+        "decimal_digit_division": 3,
+        "divisibility_by_17": 1,
+        "fixed_point": 1
+      },
+      "exact_optimum_is_feasible": true,
+      "weak_condition_contains_optimum": true,
+      "independent_point_validation_work": {
+        "original_modular_predicates": 1,
+        "digit_remainder_steps": 3,
+        "constraint:positive_integer": 1,
+        "constraint:divisible_by_17": 1,
+        "constraint:decimal_digit_sum_17": 1
+      },
+      "ordinary_point_validation_work": {
+        "fixed_point": 1,
+        "divisibility_by_17": 1,
+        "decimal_digit_division": 3
+      },
+      "closed_form_or_smaller_complete_control": null,
+      "supplementary_complete_control": null
+    },
+    {
+      "case_id": "2015-II-5",
+      "official_values": [
+        90
+      ],
+      "exact_optimum": 90,
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "The strictly increasing quadratic passes strictly after its nonnegative root.",
+      "complete_paid_work": {
+        "strict_quadratic_threshold_square_root": 1
+      },
+      "complete_validation_paid_work": {
+        "fixed_point": 1,
+        "grid_probability_product": 1
+      },
+      "exact_optimum_is_feasible": true,
+      "weak_condition_contains_optimum": true,
+      "independent_point_validation_work": {
+        "cross_multiplied_probability": 1,
+        "constraint:two_squares_selectable": 1,
+        "constraint:strict_probability_threshold": 1
+      },
+      "ordinary_point_validation_work": {
+        "fixed_point": 1,
+        "grid_probability_product": 1
+      },
+      "closed_form_or_smaller_complete_control": "The point inequality itself is monotone and gives the first admissible integer by an exact square-root threshold.",
+      "supplementary_complete_control": null
+    },
+    {
+      "case_id": "2017-II-5",
+      "official_values": [
+        791
+      ],
+      "exact_optimum": 791,
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "Enumerate every possible known opposite pair and require an exact distinct-vertex realization.",
+      "complete_paid_work": {
+        "complete_known_opposite_pair": 6,
+        "edge_orientation": 6,
+        "known_opposite_partition": 3,
+        "rational_edge_sum": 36
+      },
+      "complete_validation_paid_work": {
+        "edge_orientation": 1,
+        "fixed_known_pair_comparison": 4,
+        "fixed_point": 1,
+        "known_opposite_partition": 3,
+        "rational_edge_sum": 6
+      },
+      "exact_optimum_is_feasible": true,
+      "weak_condition_contains_optimum": true,
+      "independent_point_validation_work": {
+        "fiber_points": 7,
+        "opposite_edge_checks": 15,
+        "constraint:four_distinct_real_values": 1,
+        "constraint:all_given_pair_sums": 1,
+        "constraint:fixed_missing_pair_sum": 1
+      },
+      "ordinary_point_validation_work": {
+        "fixed_point": 1,
+        "known_opposite_partition": 3,
+        "fixed_known_pair_comparison": 4,
+        "edge_orientation": 1,
+        "rational_edge_sum": 6
+      },
+      "closed_form_or_smaller_complete_control": "Six known-pair sums suffice for the entire target range, with constructive opposite-pair realization.",
+      "supplementary_complete_control": null
+    },
+    {
+      "case_id": "2019-I-14",
+      "official_values": [
+        97
+      ],
+      "exact_optimum": 97,
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "All odd prime factors are 1 mod 16. Test the allowed class in ascending order through the hit.",
+      "complete_paid_work": {
+        "ascending_prime_factor_candidate": 6,
+        "factor_modular_power": 6,
+        "prime_trial_division": 4
+      },
+      "complete_validation_paid_work": {
+        "factor_modular_power": 1,
+        "fixed_point": 1,
+        "prime_trial_division": 4
+      },
+      "exact_optimum_is_feasible": true,
+      "weak_condition_contains_optimum": true,
+      "independent_point_validation_work": {
+        "prime_trial_remainders": 8,
+        "modular_square_steps": 3,
+        "modular_multiply_steps": 1,
+        "constraint:odd_prime": 1,
+        "constraint:modular_divisibility": 1
+      },
+      "ordinary_point_validation_work": {
+        "fixed_point": 1,
+        "factor_modular_power": 1,
+        "prime_trial_division": 4
+      },
+      "closed_form_or_smaller_complete_control": null,
+      "supplementary_complete_control": null
+    },
+    {
+      "case_id": "2021-II-15",
+      "official_values": [
+        258
+      ],
+      "exact_optimum": 258,
+      "label_status": "VALIDATED_LITERAL_OPTIMUM",
+      "ordinary_complete_proof": "Same parity gives f=g and fails. Otherwise h=k+1, so f=8(k+1)/3. The interval (k-1)^2<n<=k^2 gives k<=f<=3k-2, hence k>=14. Integrality gives k=2 mod 3 and f even, so n=k^2+k-f is even and k odd. Thus k=5 mod 6, with first permissible k=17. The derived n is feasible there, and later square intervals contain strictly larger n.",
+      "complete_paid_work": {
+        "minimum_square_parity_argument": 1
+      },
+      "complete_validation_paid_work": {
+        "fixed_point": 1,
+        "integer_square_root": 1
+      },
+      "exact_optimum_is_feasible": true,
+      "weak_condition_contains_optimum": true,
+      "independent_point_validation_work": {
+        "integer_square_root": 1,
+        "exact_ratio_cross_products": 2,
+        "constraint:positive_index": 1,
+        "constraint:exact_recursive_ratio": 1
+      },
+      "ordinary_point_validation_work": {
+        "fixed_point": 1,
+        "integer_square_root": 1
+      },
+      "closed_form_or_smaller_complete_control": "With k=ceil sqrt(n) and δ=k²-n, opposite parity is necessary. Then 3δ=5k+8, δ is odd and δ<=2k-2. Thus k>=14 and k=5 mod 6, so the first valid k is 17. Every later square block has larger n.",
+      "supplementary_complete_control": {
+        "case_id": "2021-II-15",
+        "question_sha256": "4c78b3b6b2d0a1ff42e590474eb24cf0e615885993446df24149299facf1af93",
+        "optimum": 258,
+        "completeness_argument": "With k=ceil sqrt(n) and δ=k²-n, opposite parity is necessary. Then 3δ=5k+8, δ is odd and δ<=2k-2. Thus k>=14 and k=5 mod 6, so the first valid k is 17. Every later square block has larger n.",
+        "construction_named_work": {
+          "affine_parity_boundary_formulas": 3
+        },
+        "separate_validation_work": {
+          "fixed_point": 1,
+          "integer_square_root": 1
+        }
+      }
+    }
+  ],
+  "strict_primary": {
+    "independent_question_count": 11,
+    "trace_count": 88,
+    "totals": {
+      "NATIVE_CORRECT": 73,
+      "late_BOUND": 11,
+      "PROVEN_FEASIBLE": 10,
+      "LENGTH_CAP": 7,
+      "NATIVE_WRONG": 7,
+      "PROVEN_INFEASIBLE": 1,
+      "NO_ELIGIBLE_NATIVE_FINAL": 1
+    },
+    "persistent_verified_points": [
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-00",
+        "point": "late",
+        "value": "590",
+        "ordinary_point_also_rejects": true,
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "complete_target_already_available": true
+      }
+    ],
+    "ordinary_point_opportunity_cases": [
+      "2011-I-12"
+    ],
+    "gpu_gate_candidate_questions": [],
+    "false_authorizations": [],
+    "question_rows": [
+      {
+        "case_id": "2009-I-7",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "points": {},
+        "opportunities": [],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2010-II-12",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "points": {},
+        "opportunities": [],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2010-II-3",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "points": {},
+        "opportunities": [],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2011-I-12",
+        "native": {
+          "NATIVE_WRONG": 6,
+          "LENGTH_CAP": 1,
+          "NO_ELIGIBLE_NATIVE_FINAL": 1
+        },
+        "points": {
+          "late_BOUND": 1,
+          "PROVEN_INFEASIBLE": 1
+        },
+        "opportunities": [
+          {
+            "case_id": "2011-I-12",
+            "sample_id": "2011-I-12:draw-00",
+            "point": "late",
+            "value": "590",
+            "ordinary_point_also_rejects": true,
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "complete_target_already_available": true
+          }
+        ],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2013-II-6",
+        "native": {
+          "LENGTH_CAP": 3,
+          "NATIVE_CORRECT": 5
+        },
+        "points": {},
+        "opportunities": [],
+        "same_permission_complete_control": false
+      },
+      {
+        "case_id": "2015-I-11",
+        "native": {
+          "NATIVE_CORRECT": 7,
+          "LENGTH_CAP": 1
+        },
+        "points": {
+          "late_BOUND": 3,
+          "PROVEN_FEASIBLE": 3
+        },
+        "opportunities": [],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2015-II-3",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "points": {
+          "late_BOUND": 5,
+          "PROVEN_FEASIBLE": 5
+        },
+        "opportunities": [],
+        "same_permission_complete_control": false
+      },
+      {
+        "case_id": "2015-II-5",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "points": {},
+        "opportunities": [],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2017-II-5",
+        "native": {
+          "NATIVE_CORRECT": 7,
+          "NATIVE_WRONG": 1
+        },
+        "points": {
+          "late_BOUND": 2,
+          "PROVEN_FEASIBLE": 2
+        },
+        "opportunities": [],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2019-I-14",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "points": {},
+        "opportunities": [],
+        "same_permission_complete_control": false
+      },
+      {
+        "case_id": "2021-II-15",
+        "native": {
+          "NATIVE_CORRECT": 6,
+          "LENGTH_CAP": 2
+        },
+        "points": {},
+        "opportunities": [],
+        "same_permission_complete_control": true
+      }
+    ],
+    "trace_rows": [
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 258,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "476",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-00",
+        "draw_index": 0,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNOBSERVABLE_THINKING_CLOSE"
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 590,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "590",
+            "reviewed_point_status": "PROVEN_INFEASIBLE",
+            "authorized": true,
+            "ordinary_status": "PROVEN_INFEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": false,
+            "same_value_as_eligible_wrong_delivery": true
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 258,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "INCOMPLETE_OR_NONSCALAR_TARGET_ASSERTION"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-01",
+        "draw_index": 1,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNOBSERVABLE_THINKING_CLOSE"
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 282,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 34,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-02",
+        "draw_index": 2,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNOBSERVABLE_THINKING_CLOSE"
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "791",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "476",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-02",
+        "draw_index": 2,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNOBSERVABLE_THINKING_CLOSE"
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-02",
+        "draw_index": 2,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNOBSERVABLE_THINKING_CLOSE"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 258,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "108",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 282,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 590,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 258,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "108",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 282,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 100,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-05",
+        "draw_index": 5,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 533,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "791",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "476",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-05",
+        "draw_index": 5,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNOBSERVABLE_THINKING_CLOSE"
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 100,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 258,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "108",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "476",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 282,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 199,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 258,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "476",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 282,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NO_ELIGIBLE_NATIVE_FINAL",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "LATER_UNSCOPED_BOX"
+          }
+        }
+      }
+    ]
+  },
+  "blind_scope_sensitivity": {
+    "independent_question_count": 11,
+    "trace_count": 88,
+    "totals": {
+      "NATIVE_CORRECT": 73,
+      "late_BOUND": 82,
+      "PROVEN_FEASIBLE": 77,
+      "LENGTH_CAP": 7,
+      "NATIVE_WRONG": 7,
+      "PROVEN_INFEASIBLE": 6,
+      "early_BOUND": 1,
+      "NO_ELIGIBLE_NATIVE_FINAL": 1
+    },
+    "persistent_verified_points": [
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-00",
+        "point": "late",
+        "value": "590",
+        "ordinary_point_also_rejects": true,
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "complete_target_already_available": true
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-01",
+        "point": "late",
+        "value": "34",
+        "ordinary_point_also_rejects": true,
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "complete_target_already_available": true
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-03",
+        "point": "late",
+        "value": "590",
+        "ordinary_point_also_rejects": true,
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "complete_target_already_available": true
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-04",
+        "point": "late",
+        "value": "100",
+        "ordinary_point_also_rejects": true,
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "complete_target_already_available": true
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-05",
+        "point": "late",
+        "value": "100",
+        "ordinary_point_also_rejects": true,
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "complete_target_already_available": true
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-06",
+        "point": "late",
+        "value": "199",
+        "ordinary_point_also_rejects": true,
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "complete_target_already_available": true
+      }
+    ],
+    "ordinary_point_opportunity_cases": [
+      "2011-I-12"
+    ],
+    "gpu_gate_candidate_questions": [],
+    "false_authorizations": [],
+    "question_rows": [
+      {
+        "case_id": "2009-I-7",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "points": {
+          "late_BOUND": 8,
+          "PROVEN_FEASIBLE": 8
+        },
+        "opportunities": [],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2010-II-12",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "points": {
+          "late_BOUND": 8,
+          "PROVEN_FEASIBLE": 8
+        },
+        "opportunities": [],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2010-II-3",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "points": {
+          "late_BOUND": 8,
+          "PROVEN_FEASIBLE": 8
+        },
+        "opportunities": [],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2011-I-12",
+        "native": {
+          "NATIVE_WRONG": 6,
+          "LENGTH_CAP": 1,
+          "NO_ELIGIBLE_NATIVE_FINAL": 1
+        },
+        "points": {
+          "late_BOUND": 7,
+          "PROVEN_INFEASIBLE": 6,
+          "PROVEN_FEASIBLE": 1
+        },
+        "opportunities": [
+          {
+            "case_id": "2011-I-12",
+            "sample_id": "2011-I-12:draw-00",
+            "point": "late",
+            "value": "590",
+            "ordinary_point_also_rejects": true,
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "complete_target_already_available": true
+          },
+          {
+            "case_id": "2011-I-12",
+            "sample_id": "2011-I-12:draw-01",
+            "point": "late",
+            "value": "34",
+            "ordinary_point_also_rejects": true,
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "complete_target_already_available": true
+          },
+          {
+            "case_id": "2011-I-12",
+            "sample_id": "2011-I-12:draw-03",
+            "point": "late",
+            "value": "590",
+            "ordinary_point_also_rejects": true,
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "complete_target_already_available": true
+          },
+          {
+            "case_id": "2011-I-12",
+            "sample_id": "2011-I-12:draw-04",
+            "point": "late",
+            "value": "100",
+            "ordinary_point_also_rejects": true,
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "complete_target_already_available": true
+          },
+          {
+            "case_id": "2011-I-12",
+            "sample_id": "2011-I-12:draw-05",
+            "point": "late",
+            "value": "100",
+            "ordinary_point_also_rejects": true,
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "complete_target_already_available": true
+          },
+          {
+            "case_id": "2011-I-12",
+            "sample_id": "2011-I-12:draw-06",
+            "point": "late",
+            "value": "199",
+            "ordinary_point_also_rejects": true,
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "complete_target_already_available": true
+          }
+        ],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2013-II-6",
+        "native": {
+          "LENGTH_CAP": 3,
+          "NATIVE_CORRECT": 5
+        },
+        "points": {
+          "late_BOUND": 5,
+          "PROVEN_FEASIBLE": 5
+        },
+        "opportunities": [],
+        "same_permission_complete_control": false
+      },
+      {
+        "case_id": "2015-I-11",
+        "native": {
+          "NATIVE_CORRECT": 7,
+          "LENGTH_CAP": 1
+        },
+        "points": {
+          "late_BOUND": 7,
+          "PROVEN_FEASIBLE": 7
+        },
+        "opportunities": [],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2015-II-3",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "points": {
+          "late_BOUND": 8,
+          "PROVEN_FEASIBLE": 8
+        },
+        "opportunities": [],
+        "same_permission_complete_control": false
+      },
+      {
+        "case_id": "2015-II-5",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "points": {
+          "late_BOUND": 8,
+          "PROVEN_FEASIBLE": 9,
+          "early_BOUND": 1
+        },
+        "opportunities": [],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2017-II-5",
+        "native": {
+          "NATIVE_CORRECT": 7,
+          "NATIVE_WRONG": 1
+        },
+        "points": {
+          "late_BOUND": 8,
+          "PROVEN_FEASIBLE": 8
+        },
+        "opportunities": [],
+        "same_permission_complete_control": true
+      },
+      {
+        "case_id": "2019-I-14",
+        "native": {
+          "NATIVE_CORRECT": 8
+        },
+        "points": {
+          "late_BOUND": 8,
+          "PROVEN_FEASIBLE": 8
+        },
+        "opportunities": [],
+        "same_permission_complete_control": false
+      },
+      {
+        "case_id": "2021-II-15",
+        "native": {
+          "NATIVE_CORRECT": 6,
+          "LENGTH_CAP": 2
+        },
+        "points": {
+          "late_BOUND": 7,
+          "PROVEN_FEASIBLE": 7
+        },
+        "opportunities": [],
+        "same_permission_complete_control": true
+      }
+    ],
+    "trace_rows": [
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 258,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "258",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "97",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "791",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "108",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "476",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "90",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-00",
+        "draw_index": 0,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNOBSERVABLE_THINKING_CLOSE"
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 590,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "590",
+            "reviewed_point_status": "PROVEN_INFEASIBLE",
+            "authorized": true,
+            "ordinary_status": "PROVEN_INFEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": false,
+            "same_value_as_eligible_wrong_delivery": true
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "150",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "676",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-00",
+        "draw_index": 0,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "41",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 258,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "258",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "INCOMPLETE_OR_NONSCALAR_TARGET_ASSERTION"
+          },
+          "late": {
+            "value": "97",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "791",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-01",
+        "draw_index": 1,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNOBSERVABLE_THINKING_CLOSE"
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "476",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "90",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 282,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "282",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 34,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "34",
+            "reviewed_point_status": "PROVEN_INFEASIBLE",
+            "authorized": true,
+            "ordinary_status": "PROVEN_INFEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": false,
+            "same_value_as_eligible_wrong_delivery": true
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "150",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "676",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-01",
+        "draw_index": 1,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "41",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-02",
+        "draw_index": 2,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNOBSERVABLE_THINKING_CLOSE"
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "97",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "791",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "108",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "476",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "90",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-02",
+        "draw_index": 2,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNOBSERVABLE_THINKING_CLOSE"
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-02",
+        "draw_index": 2,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNOBSERVABLE_THINKING_CLOSE"
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "150",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "676",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-02",
+        "draw_index": 2,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "41",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 258,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "258",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "97",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "791",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "108",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "476",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "90",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 282,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "282",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 590,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "590",
+            "reviewed_point_status": "PROVEN_INFEASIBLE",
+            "authorized": true,
+            "ordinary_status": "PROVEN_INFEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": false,
+            "same_value_as_eligible_wrong_delivery": true
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "150",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "676",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-03",
+        "draw_index": 3,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "41",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 258,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "258",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "97",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "791",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "108",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "476",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "90",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 282,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "282",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 100,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "100",
+            "reviewed_point_status": "PROVEN_INFEASIBLE",
+            "authorized": true,
+            "ordinary_status": "PROVEN_INFEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": false,
+            "same_value_as_eligible_wrong_delivery": true
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "150",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "676",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-04",
+        "draw_index": 4,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "41",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-05",
+        "draw_index": 5,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "258",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "97",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 533,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "791",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "108",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "476",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "90",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-05",
+        "draw_index": 5,
+        "official_native_status": "LENGTH_CAP",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNOBSERVABLE_THINKING_CLOSE"
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 100,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "100",
+            "reviewed_point_status": "PROVEN_INFEASIBLE",
+            "authorized": true,
+            "ordinary_status": "PROVEN_INFEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": false,
+            "same_value_as_eligible_wrong_delivery": true
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "150",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "676",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-05",
+        "draw_index": 5,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "41",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 258,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "258",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "97",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "791",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "108",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "476",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "value": "90",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          },
+          "late": {
+            "value": "90",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 282,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "282",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_WRONG",
+        "final_value": 199,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "199",
+            "reviewed_point_status": "PROVEN_INFEASIBLE",
+            "authorized": true,
+            "ordinary_status": "PROVEN_INFEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": false,
+            "same_value_as_eligible_wrong_delivery": true
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "150",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "676",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-06",
+        "draw_index": 6,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "41",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2021-II-15",
+        "sample_id": "2021-II-15:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 258,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "258",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2019-I-14",
+        "sample_id": "2019-I-14:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 97,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "97",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2017-II-5",
+        "sample_id": "2017-II-5:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 791,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "791",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-I-11",
+        "sample_id": "2015-I-11:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 108,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "108",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-3",
+        "sample_id": "2015-II-3:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 476,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "476",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2015-II-5",
+        "sample_id": "2015-II-5:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 90,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "90",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2013-II-6",
+        "sample_id": "2013-II-6:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 282,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "282",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2011-I-12",
+        "sample_id": "2011-I-12:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NO_ELIGIBLE_NATIVE_FINAL",
+        "final_value": null,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "3558",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": true,
+            "role_audit": "BOUND",
+            "literal_optimum": false,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-3",
+        "sample_id": "2010-II-3:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 150,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "150",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2010-II-12",
+        "sample_id": "2010-II-12:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 676,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "NO_COMPLETE_SCOPED_POINT"
+          },
+          "late": {
+            "value": "676",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      },
+      {
+        "case_id": "2009-I-7",
+        "sample_id": "2009-I-7:draw-07",
+        "draw_index": 7,
+        "official_native_status": "NATIVE_CORRECT",
+        "final_value": 41,
+        "points": {
+          "early": {
+            "status": "UNBOUND_ABSTAIN",
+            "observation": "UNREACHED_EARLY_BOUNDARY"
+          },
+          "late": {
+            "value": "41",
+            "reviewed_point_status": "PROVEN_FEASIBLE",
+            "authorized": false,
+            "ordinary_status": "PROVEN_FEASIBLE",
+            "weak_refutes": false,
+            "one_sided_refutes": false,
+            "role_audit": "BOUND",
+            "literal_optimum": true,
+            "same_value_as_eligible_wrong_delivery": false
+          }
+        }
+      }
+    ]
+  },
+  "gate": {
+    "required_independent_eligible_questions": 2,
+    "strict_questions": 0,
+    "strict_false_authorizations": 0,
+    "admitted": false
+  },
+  "wall_ns": 292546600,
+  "cpu_ns": 265625000
+}

@@ -9,6 +9,7 @@
 - [Phase 1–5 总索引](docs/phases/INDEX_ZH.md)
 - [当前研究目标](docs/next_phase/CURRENT_RESEARCH_GOAL_20261105_ZH.md)
 - [最新建议审查与下一轮公平对照](research/repository_phase_plan_20261106/ADVISOR_REVIEW_20261106_ZH.md)
+- [Phase 5-D4.6 点不可行性与候选绑定](research/phase5d46_point_infeasibility_20261110/D46_CLOSEOUT_ZH.md)
 - [Phase 5-D4.5 可行见证与自然长链](research/phase5d45_feasible_witness_20261110/D45_CLOSEOUT_ZH.md)
 - [Phase 5-D4.4 补抽与实时生成修复](research/phase5d44_candidate_generation_20261110/D44_CLOSEOUT_ZH.md)
 - [Phase 5-D4.3 自然长链反证与终局选答](research/phase5d43_answer_refutation_20261110/D43_CLOSEOUT_ZH.md)
@@ -54,6 +55,7 @@
 | [Phase 5-D4.3](research/phase5d43_answer_refutation_20261110/D43_CLOSEOUT_ZH.md) | 32 道独立 AIME、128 条原生轨迹、同池选答与原题反证 | 首抽 26/32，四抽多数票、普通复核和作用域反证均 29/32。当前选答未达独立扩测门槛 |
 | [Phase 5-D4.4](research/phase5d44_candidate_generation_20261110/D44_CLOSEOUT_ZH.md) | 同合同补四抽、8 道独立新题、精确触发与官方键复核 | 补四抽与八抽覆盖均为 29/32。新题 0 次触发，冻结官方键 7/8、7/8、7/8、8/8。隔离争议题后四臂均 7/7 |
 | [Phase 5-D4.5](research/phase5d45_feasible_witness_20261110/D45_CLOSEOUT_ZH.md) | 11 道新优化题、88 条归档轨迹、精确见证与完整求解对照 | 新增反证题为 0。两条持续错误均过于乐观，可行见证的一侧界无法排除。零 GPU |
+| [Phase 5-D4.6](research/phase5d46_point_infeasibility_20261110/D46_CLOSEOUT_ZH.md) | 11 道新题、88 条归档轨迹、原题候选绑定与精确点核验 | 严格 1 条、盲审 6 条持续不可行值均来自同一可用短解覆盖的题。GPU 准入为 0 |
 
 每个Phase统一记录：问题、输入与协议、实际动作、数据结论、失败与猜想、下一门槛、证据路径。后续工作继续新增Phase或阶段内子报告，不改写已冻结的结果。
 
@@ -81,6 +83,7 @@
 | Phase5-D4.3 | 正确候选覆盖 29/32，三题的必要条件可区分候选，排除六个错误值 | 多数票已达固定池上限。无正确值被排除，同权限准确率增量为零 |
 | Phase5-D4.4 | 16 条实跑轨迹全为自然 EOS，七个启用题的真实观察中无数值条件被违反 | 两提示臂均按协议复用原生输出，未测得干预注入效应。官方分差唯一一题的题面与解答冲突，单列敏感性分析 |
 | Phase5-D4.5 | 88 条轨迹中 65 条正确、2 条错误、21 条触顶。盲审将末答绑定从 12 提高到 67 | 两个持续错值都能被事后局部不可行性核验排除，可行见证并未触发。11 题金标均与独立精确求解一致 |
+| Phase5-D4.6 | 88 条中 73 条正确、7 条错误、7 条触顶、1 条末框格式失败 | 点核验与普通点检结果一致。另有一条轨迹把已可行且正确的 791 改成交付较差的可行值 533 |
 
 P0与P0.5使用不同读出协议，不连成跨轮提升曲线。CPU随机模型、形式/代数控制、人工短状态、自然轨迹观察和正式benchmark各自标明，不互相替代。
 
@@ -134,6 +137,7 @@ research/phase5d42_lean_diagnostics_20261110/ D4.2 同源最小修正、诊断�
 research/phase5d43_answer_refutation_20261110/ D4.3 固定候选池、原题必要条件、同权限正确率和成本
 research/phase5d44_candidate_generation_20261110/ D4.4 同合同补抽、前缀准入与实时生成小试
 research/phase5d45_feasible_witness_20261110/ D4.5 精确可行见证、归档自然候选和点核验诊断
+research/phase5d46_point_infeasibility_20261110/ D4.6 直接点核验、真实候选绑定和交付退步诊断
 scripts/ reason_transition/ tests/     原研究实现与检查
 experiments/radar20261013/             后续历史路线，当前冻结
 data/ results/ provenance/ recovery/   历史输入、输出和恢复证据

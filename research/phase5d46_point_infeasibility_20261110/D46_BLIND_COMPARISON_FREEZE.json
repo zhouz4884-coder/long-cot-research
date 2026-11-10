@@ -1,0 +1,3084 @@
+{
+  "status": "D46_BLIND_POINT_COMPARISONS_FROZEN_WITHOUT_GOLD",
+  "input_sha256": {
+    "cohort": "b37ca3a8574e4cbe2eb7da7ccfe379c2138395ffdf2b8eb91d4cf81c1866219b",
+    "claims": "5507d9055fc7cab5f2cbada859ad4cb2a4c8a9ac55b508e95702041d7a13cfaf",
+    "blind": "742b33b25b321f3a7dcc790b742c1b695950b381dd5b874ad07b6436af9562c0",
+    "contracts": "0aa9f4a1addb5db55728ee360d2bd66231dbcc39fa349ed18934652b0c5d1d56",
+    "controls": "faba080320a4cafebe70a979d19982f53a104cf02f2bfbd33d9c9eb6159542e3",
+    "bounds": "acc599c66148080889760b4bc3ed28f6086f81b3273431e0abf4c5ca184f135b",
+    "rules": "b3cb714754f3c6ad971ca19e77a7a3ad23971db5aa1b42f57b78db77aecc3d58"
+  },
+  "comparison_source_sha256": "00afe49a04d69afb13ba58c65ad204d6eb427533aac6f79820dd4ccab87cd594",
+  "rows": [
+    {
+      "case_id": "2021-II-15",
+      "sample_id": "2021-II-15:draw-00",
+      "draw_index": 0,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 258,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2019-I-14",
+      "sample_id": "2019-I-14:draw-00",
+      "draw_index": 0,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 97,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2017-II-5",
+      "sample_id": "2017-II-5:draw-00",
+      "draw_index": 0,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 791,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2015-I-11",
+      "sample_id": "2015-I-11:draw-00",
+      "draw_index": 0,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 108,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2015-II-3",
+      "sample_id": "2015-II-3:draw-00",
+      "draw_index": 0,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 476,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "BOUND_POINT_CHECKED",
+        "value": "476",
+        "candidate_sha256": "acfff9ef5e55765a7fccc3c76e84f2a76098d3de523df3be41c025688007675d",
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "ordinary_point_status": "PROVEN_FEASIBLE",
+        "ordinary_reason": "ORDINARY_EXACT_POINT_ONLY",
+        "ordinary_named_work_units": 5,
+        "ordinary_cpu_ns": 0,
+        "ordinary_wall_ns": 27100,
+        "reviewed_point_status": "PROVEN_FEASIBLE",
+        "reviewed_point_authorizes": false,
+        "reviewed_point_receipt": {
+          "verifier_id": "d46.reviewed-point-verifier",
+          "verifier_version": 1,
+          "contract_sha256": "d4f87736040b5b9654df034495eacb0befe672113903afd516173f1fe9049515",
+          "candidate_sha256": "acfff9ef5e55765a7fccc3c76e84f2a76098d3de523df3be41c025688007675d",
+          "evidence_sha256": "2ec2a35761c0fd397c5aeb54caae250dca3ff080eeb905c7025bce58c23618ac",
+          "authority": "FEASIBILITY_ONLY",
+          "work": 7,
+          "status": "PROVEN_FEASIBLE",
+          "reason": "EXACT_FEASIBILITY_ONLY",
+          "contract": {
+            "binding": {
+              "question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+              "objective_id": "least-divisible-number-with-digit-sum",
+              "scope_sha256": "2518fafb5ffe7365e7bef91f104282ade10c06ffae47d80ed7746f40d9d0d722",
+              "constraints_sha256": "509acc58e62cf2e3d203ecdc87464b9cd1d903c3a87719a093b34e4f580cf78e",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_integer",
+              "divisible_by_17",
+              "decimal_digit_sum_17"
+            ],
+            "checker_id": "d46.exact.point",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+            "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+            "proof_sha256": "ff0ae7adb6b4be26264054a5d39715aa2ea921fc2249008ddb9c32d570835096",
+            "review_sha256": "20b51980c4977847a0b36315a76941e4f7bea8324eaf0783047f6e31ec3e3155"
+          },
+          "candidate": {
+            "binding": {
+              "question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+              "objective_id": "least-divisible-number-with-digit-sum",
+              "scope_sha256": "2518fafb5ffe7365e7bef91f104282ade10c06ffae47d80ed7746f40d9d0d722",
+              "constraints_sha256": "509acc58e62cf2e3d203ecdc87464b9cd1d903c3a87719a093b34e4f580cf78e",
+              "direction": "MIN"
+            },
+            "sample_id": "2015-II-3:draw-00",
+            "response_sha256": "980193318276613f704949d1128b8df7270d90653a7cfa16e2f0676e9e84fd0e",
+            "observed_prefix_sha256": "cf43340ed9bf53b2f7efe040b144a6570d0bbba5ec2bafa5cfb0a7599695f41d",
+            "numeric_span": [
+              11456,
+              11459
+            ],
+            "numeric_text": "476",
+            "assertion_span": [
+              11413,
+              11460
+            ],
+            "assertion_sha256": "71e2fe86471f9d7265c27ed5361b1283863bd71a2e33971a995ea9c06639646e",
+            "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+            "assertion_review_sha256": "1cc98248e2e17189eaadca5aeb476dbd7658594b347ebc8bd4c55654b751f8a8"
+          },
+          "request_number": 1,
+          "checked_value": "476",
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "original_modular_predicates",
+              1
+            ],
+            [
+              "digit_remainder_steps",
+              3
+            ],
+            [
+              "constraint:positive_integer",
+              1
+            ],
+            [
+              "constraint:divisible_by_17",
+              1
+            ],
+            [
+              "constraint:decimal_digit_sum_17",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "evidence": {
+            "status": "PROVEN_FEASIBLE",
+            "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+            "details": [
+              [
+                "modulo_17",
+                0
+              ],
+              [
+                "decimal_digit_sum",
+                17
+              ]
+            ],
+            "complete": true,
+            "covered_constraints": [
+              "positive_integer",
+              "divisible_by_17",
+              "decimal_digit_sum_17"
+            ],
+            "fiber_expected": null,
+            "fiber_visited": null
+          },
+          "cpu_ns": 0,
+          "wall_ns": 139700,
+          "receipt_sha256": "e331f23d5ba5a78d96c556ac6e3328bbd50c16e591b37c963c69dc46bc6cf608"
+        },
+        "scope_review_sha256": null
+      }
+    },
+    {
+      "case_id": "2015-II-5",
+      "sample_id": "2015-II-5:draw-00",
+      "draw_index": 0,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 90,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2013-II-6",
+      "sample_id": "2013-II-6:draw-00",
+      "draw_index": 0,
+      "termination": "LENGTH_CAP",
+      "native_final_eligible": false,
+      "native_final_value": null,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNOBSERVABLE_THINKING_CLOSE"
+      }
+    },
+    {
+      "case_id": "2011-I-12",
+      "sample_id": "2011-I-12:draw-00",
+      "draw_index": 0,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 590,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "BOUND_POINT_CHECKED",
+        "value": "590",
+        "candidate_sha256": "9c21a7bad91102f69e3149b489ff5ff9c5e47ad963c19b6ff88a6f05df9a74a8",
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "ordinary_point_status": "PROVEN_INFEASIBLE",
+        "ordinary_reason": "ORDINARY_EXACT_POINT_ONLY",
+        "ordinary_named_work_units": 3,
+        "ordinary_cpu_ns": 0,
+        "ordinary_wall_ns": 23000,
+        "reviewed_point_status": "PROVEN_INFEASIBLE",
+        "reviewed_point_authorizes": true,
+        "reviewed_point_receipt": {
+          "verifier_id": "d46.reviewed-point-verifier",
+          "verifier_version": 1,
+          "contract_sha256": "3eab00cbb74da9d55ad2a2fde4738cb74e5bf3d1bece0ae5243e5cda1565a840",
+          "candidate_sha256": "9c21a7bad91102f69e3149b489ff5ff9c5e47ad963c19b6ff88a6f05df9a74a8",
+          "evidence_sha256": "9d18edd1c05186310ed8f5e47fffe4b6cef7a5810e20be7b78d743ec5166e823",
+          "authority": "REJECT_THIS_VALUE_ONLY",
+          "work": 3,
+          "status": "PROVEN_INFEASIBLE",
+          "reason": "COMPLETE_REVIEWED_POINT_EXCLUSION",
+          "contract": {
+            "binding": {
+              "question_sha256": "94c70bb62fd53d698a7ff36ae0737e55cd5d6ceb4ab12748a89dbcd187621865",
+              "objective_id": "minimum-women-conditioned-run-count",
+              "scope_sha256": "5503d555c9de27ba22a6d3549530fd4902222ff7f03c81fd86995e1bf838b626",
+              "constraints_sha256": "a56f4aec144b6639ea89da9db6f90e0e3d06c78555e8ef9d30827176a99a88f5",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_women_count",
+              "conditioned_probability_threshold"
+            ],
+            "checker_id": "d46.exact.point",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+            "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+            "proof_sha256": "398330bd660f54041738cdc9e252cf96ba9df990d3b3ce177c79ee1e8e33f0b0",
+            "review_sha256": "04bab7cf4c9f4a8bcfa2abb2fd95c3cc56df0350d6afc6943827e0745f064245"
+          },
+          "candidate": {
+            "binding": {
+              "question_sha256": "94c70bb62fd53d698a7ff36ae0737e55cd5d6ceb4ab12748a89dbcd187621865",
+              "objective_id": "minimum-women-conditioned-run-count",
+              "scope_sha256": "5503d555c9de27ba22a6d3549530fd4902222ff7f03c81fd86995e1bf838b626",
+              "constraints_sha256": "a56f4aec144b6639ea89da9db6f90e0e3d06c78555e8ef9d30827176a99a88f5",
+              "direction": "MIN"
+            },
+            "sample_id": "2011-I-12:draw-00",
+            "response_sha256": "a4d8e67aafe704e8ed2aea07c7b30e7fa92a201d68ffeaad1418e6d8f735c38a",
+            "observed_prefix_sha256": "e6d4016c1d0eea796b9b0385c060aa82a467a0fb7897d5f877d2c129fc739eb2",
+            "numeric_span": [
+              70973,
+              70976
+            ],
+            "numeric_text": "590",
+            "assertion_span": [
+              70933,
+              70976
+            ],
+            "assertion_sha256": "bcefcf78f1da823640a2a086bde7e38fa37499bc09295c64cb905c89153c3d38",
+            "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+            "assertion_review_sha256": "5b26b84c401139cc75ca942859c39ed9128215668e2442226fee1f0c03161731"
+          },
+          "request_number": 1,
+          "checked_value": "590",
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "small_binomial_evaluations",
+              2
+            ],
+            [
+              "exclusion_proof",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "evidence": {
+            "status": "PROVEN_INFEASIBLE",
+            "proof_kind": "EXACT_NECESSARY_PREDICATE",
+            "details": [
+              [
+                "favorable_patterns",
+                "349281"
+              ],
+              [
+                "conditioned_patterns",
+                "34753361"
+              ]
+            ],
+            "complete": true,
+            "covered_constraints": [
+              "positive_women_count",
+              "conditioned_probability_threshold"
+            ],
+            "fiber_expected": null,
+            "fiber_visited": null
+          },
+          "cpu_ns": 0,
+          "wall_ns": 264500,
+          "receipt_sha256": "10292f9a564ec0457df5dfbfa06da5ed5d6d91f9756a1c92233e161899161eed"
+        },
+        "scope_review_sha256": null
+      }
+    },
+    {
+      "case_id": "2010-II-3",
+      "sample_id": "2010-II-3:draw-00",
+      "draw_index": 0,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 150,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-12",
+      "sample_id": "2010-II-12:draw-00",
+      "draw_index": 0,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 676,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2009-I-7",
+      "sample_id": "2009-I-7:draw-00",
+      "draw_index": 0,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 41,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2021-II-15",
+      "sample_id": "2021-II-15:draw-01",
+      "draw_index": 1,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 258,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2019-I-14",
+      "sample_id": "2019-I-14:draw-01",
+      "draw_index": 1,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 97,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "INCOMPLETE_OR_NONSCALAR_TARGET_ASSERTION"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2017-II-5",
+      "sample_id": "2017-II-5:draw-01",
+      "draw_index": 1,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 791,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2015-I-11",
+      "sample_id": "2015-I-11:draw-01",
+      "draw_index": 1,
+      "termination": "LENGTH_CAP",
+      "native_final_eligible": false,
+      "native_final_value": null,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNOBSERVABLE_THINKING_CLOSE"
+      }
+    },
+    {
+      "case_id": "2015-II-3",
+      "sample_id": "2015-II-3:draw-01",
+      "draw_index": 1,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 476,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2015-II-5",
+      "sample_id": "2015-II-5:draw-01",
+      "draw_index": 1,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 90,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2013-II-6",
+      "sample_id": "2013-II-6:draw-01",
+      "draw_index": 1,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 282,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2011-I-12",
+      "sample_id": "2011-I-12:draw-01",
+      "draw_index": 1,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 34,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-3",
+      "sample_id": "2010-II-3:draw-01",
+      "draw_index": 1,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 150,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-12",
+      "sample_id": "2010-II-12:draw-01",
+      "draw_index": 1,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 676,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2009-I-7",
+      "sample_id": "2009-I-7:draw-01",
+      "draw_index": 1,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 41,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2021-II-15",
+      "sample_id": "2021-II-15:draw-02",
+      "draw_index": 2,
+      "termination": "LENGTH_CAP",
+      "native_final_eligible": false,
+      "native_final_value": null,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNOBSERVABLE_THINKING_CLOSE"
+      }
+    },
+    {
+      "case_id": "2019-I-14",
+      "sample_id": "2019-I-14:draw-02",
+      "draw_index": 2,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 97,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2017-II-5",
+      "sample_id": "2017-II-5:draw-02",
+      "draw_index": 2,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 791,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "BOUND_POINT_CHECKED",
+        "value": "791",
+        "candidate_sha256": "e221dd700ae25a92e899f9d7ac7d157b499961ec0c178fcc3eb61bec2299856a",
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "ordinary_point_status": "PROVEN_FEASIBLE",
+        "ordinary_reason": "ORDINARY_EXACT_POINT_ONLY",
+        "ordinary_named_work_units": 15,
+        "ordinary_cpu_ns": 0,
+        "ordinary_wall_ns": 63300,
+        "reviewed_point_status": "PROVEN_FEASIBLE",
+        "reviewed_point_authorizes": false,
+        "reviewed_point_receipt": {
+          "verifier_id": "d46.reviewed-point-verifier",
+          "verifier_version": 1,
+          "contract_sha256": "51c80fd982b86dfc9401580748c84325c9f5a89504cbd1f4af77afd063f5e69f",
+          "candidate_sha256": "e221dd700ae25a92e899f9d7ac7d157b499961ec0c178fcc3eb61bec2299856a",
+          "evidence_sha256": "c418fb5ed165997ecf585c2c2b5a027fcd205ac63bec41da0499efec93c751a5",
+          "authority": "FEASIBILITY_ONLY",
+          "work": 25,
+          "status": "PROVEN_FEASIBLE",
+          "reason": "EXACT_FEASIBILITY_ONLY",
+          "contract": {
+            "binding": {
+              "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+              "objective_id": "greatest-missing-edge-sum",
+              "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+              "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+              "direction": "MAX"
+            },
+            "required_constraints": [
+              "four_distinct_real_values",
+              "all_given_pair_sums",
+              "fixed_missing_pair_sum"
+            ],
+            "checker_id": "d46.exact.point",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+            "exclusion_kind": "COMPLETE_FIXED_VALUE_FIBER",
+            "proof_sha256": "be180ac3303ccb28a68c5c92163aff552657b12cf646fb09156c47e7da75ccff",
+            "review_sha256": "a7b616ce1e17617199ed6594a9572e9aa8955315aab18f1b8c093df2bfb8fc7a"
+          },
+          "candidate": {
+            "binding": {
+              "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+              "objective_id": "greatest-missing-edge-sum",
+              "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+              "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+              "direction": "MAX"
+            },
+            "sample_id": "2017-II-5:draw-02",
+            "response_sha256": "aa612c4e952f2732cf9d8e91df28caea483bdcfe4f679bcda026f5dfb9405cf1",
+            "observed_prefix_sha256": "18cc0fdd093a65e44f571a34da42c88c9baac37efde94dcf813a3cc35e455653",
+            "numeric_span": [
+              35702,
+              35705
+            ],
+            "numeric_text": "791",
+            "assertion_span": [
+              35651,
+              35705
+            ],
+            "assertion_sha256": "f484c70e0c557ca454453ba4c4de226bd8ed213a5c10b1c38d4ebaabced2f80c",
+            "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+            "assertion_review_sha256": "d4971f96d51721458f3f31bc3225be512bcc00bc42f104bafae81f3f18d8c5d8"
+          },
+          "request_number": 1,
+          "checked_value": "791",
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "fiber_points",
+              7
+            ],
+            [
+              "opposite_edge_checks",
+              15
+            ],
+            [
+              "constraint:four_distinct_real_values",
+              1
+            ],
+            [
+              "constraint:all_given_pair_sums",
+              1
+            ],
+            [
+              "constraint:fixed_missing_pair_sum",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "evidence": {
+            "status": "PROVEN_FEASIBLE",
+            "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+            "details": [
+              [
+                "vertex_0",
+                "68"
+              ],
+              [
+                "vertex_1",
+                "121"
+              ],
+              [
+                "vertex_2",
+                "252"
+              ],
+              [
+                "vertex_3",
+                "166"
+              ]
+            ],
+            "complete": true,
+            "covered_constraints": [
+              "four_distinct_real_values",
+              "all_given_pair_sums",
+              "fixed_missing_pair_sum"
+            ],
+            "fiber_expected": null,
+            "fiber_visited": null
+          },
+          "cpu_ns": 0,
+          "wall_ns": 218800,
+          "receipt_sha256": "0c1bf4128eea92eff4506abf0ec0e61711e05c7f098f41f2045f25e74b1eb283"
+        },
+        "scope_review_sha256": null
+      }
+    },
+    {
+      "case_id": "2015-I-11",
+      "sample_id": "2015-I-11:draw-02",
+      "draw_index": 2,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 108,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2015-II-3",
+      "sample_id": "2015-II-3:draw-02",
+      "draw_index": 2,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 476,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "BOUND_POINT_CHECKED",
+        "value": "476",
+        "candidate_sha256": "604f5efff94c2380da55d9e8a09cb37d5e302c058a8a92c4a911dabc019743ff",
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "ordinary_point_status": "PROVEN_FEASIBLE",
+        "ordinary_reason": "ORDINARY_EXACT_POINT_ONLY",
+        "ordinary_named_work_units": 5,
+        "ordinary_cpu_ns": 0,
+        "ordinary_wall_ns": 26000,
+        "reviewed_point_status": "PROVEN_FEASIBLE",
+        "reviewed_point_authorizes": false,
+        "reviewed_point_receipt": {
+          "verifier_id": "d46.reviewed-point-verifier",
+          "verifier_version": 1,
+          "contract_sha256": "d4f87736040b5b9654df034495eacb0befe672113903afd516173f1fe9049515",
+          "candidate_sha256": "604f5efff94c2380da55d9e8a09cb37d5e302c058a8a92c4a911dabc019743ff",
+          "evidence_sha256": "2ec2a35761c0fd397c5aeb54caae250dca3ff080eeb905c7025bce58c23618ac",
+          "authority": "FEASIBILITY_ONLY",
+          "work": 7,
+          "status": "PROVEN_FEASIBLE",
+          "reason": "EXACT_FEASIBILITY_ONLY",
+          "contract": {
+            "binding": {
+              "question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+              "objective_id": "least-divisible-number-with-digit-sum",
+              "scope_sha256": "2518fafb5ffe7365e7bef91f104282ade10c06ffae47d80ed7746f40d9d0d722",
+              "constraints_sha256": "509acc58e62cf2e3d203ecdc87464b9cd1d903c3a87719a093b34e4f580cf78e",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_integer",
+              "divisible_by_17",
+              "decimal_digit_sum_17"
+            ],
+            "checker_id": "d46.exact.point",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+            "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+            "proof_sha256": "ff0ae7adb6b4be26264054a5d39715aa2ea921fc2249008ddb9c32d570835096",
+            "review_sha256": "20b51980c4977847a0b36315a76941e4f7bea8324eaf0783047f6e31ec3e3155"
+          },
+          "candidate": {
+            "binding": {
+              "question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+              "objective_id": "least-divisible-number-with-digit-sum",
+              "scope_sha256": "2518fafb5ffe7365e7bef91f104282ade10c06ffae47d80ed7746f40d9d0d722",
+              "constraints_sha256": "509acc58e62cf2e3d203ecdc87464b9cd1d903c3a87719a093b34e4f580cf78e",
+              "direction": "MIN"
+            },
+            "sample_id": "2015-II-3:draw-02",
+            "response_sha256": "f4e09ea3231ccdeb18b590d8433d81ac7b36deb706a096071e6f3e1f49a7a273",
+            "observed_prefix_sha256": "aee9ad0a875dd077a98c26d36a18ca2aff09374a8a8fd1f596c02654a535ba9b",
+            "numeric_span": [
+              18048,
+              18051
+            ],
+            "numeric_text": "476",
+            "assertion_span": [
+              18005,
+              18052
+            ],
+            "assertion_sha256": "71e2fe86471f9d7265c27ed5361b1283863bd71a2e33971a995ea9c06639646e",
+            "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+            "assertion_review_sha256": "9a9d5b879d33c92645e157206c4c3a765dc71093daccf1f5f74b1414b6e24276"
+          },
+          "request_number": 2,
+          "checked_value": "476",
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "original_modular_predicates",
+              1
+            ],
+            [
+              "digit_remainder_steps",
+              3
+            ],
+            [
+              "constraint:positive_integer",
+              1
+            ],
+            [
+              "constraint:divisible_by_17",
+              1
+            ],
+            [
+              "constraint:decimal_digit_sum_17",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "evidence": {
+            "status": "PROVEN_FEASIBLE",
+            "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+            "details": [
+              [
+                "modulo_17",
+                0
+              ],
+              [
+                "decimal_digit_sum",
+                17
+              ]
+            ],
+            "complete": true,
+            "covered_constraints": [
+              "positive_integer",
+              "divisible_by_17",
+              "decimal_digit_sum_17"
+            ],
+            "fiber_expected": null,
+            "fiber_visited": null
+          },
+          "cpu_ns": 0,
+          "wall_ns": 340900,
+          "receipt_sha256": "2ff4909f54e57f76b6a51e3a4736b929a81e2c4a4a3301cc77b6190086d1bb5b"
+        },
+        "scope_review_sha256": null
+      }
+    },
+    {
+      "case_id": "2015-II-5",
+      "sample_id": "2015-II-5:draw-02",
+      "draw_index": 2,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 90,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2013-II-6",
+      "sample_id": "2013-II-6:draw-02",
+      "draw_index": 2,
+      "termination": "LENGTH_CAP",
+      "native_final_eligible": false,
+      "native_final_value": null,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNOBSERVABLE_THINKING_CLOSE"
+      }
+    },
+    {
+      "case_id": "2011-I-12",
+      "sample_id": "2011-I-12:draw-02",
+      "draw_index": 2,
+      "termination": "LENGTH_CAP",
+      "native_final_eligible": false,
+      "native_final_value": null,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNOBSERVABLE_THINKING_CLOSE"
+      }
+    },
+    {
+      "case_id": "2010-II-3",
+      "sample_id": "2010-II-3:draw-02",
+      "draw_index": 2,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 150,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-12",
+      "sample_id": "2010-II-12:draw-02",
+      "draw_index": 2,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 676,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2009-I-7",
+      "sample_id": "2009-I-7:draw-02",
+      "draw_index": 2,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 41,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2021-II-15",
+      "sample_id": "2021-II-15:draw-03",
+      "draw_index": 3,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 258,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2019-I-14",
+      "sample_id": "2019-I-14:draw-03",
+      "draw_index": 3,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 97,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2017-II-5",
+      "sample_id": "2017-II-5:draw-03",
+      "draw_index": 3,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 791,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2015-I-11",
+      "sample_id": "2015-I-11:draw-03",
+      "draw_index": 3,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 108,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "BOUND_POINT_CHECKED",
+        "value": "108",
+        "candidate_sha256": "102f09f7ef6a0221355f2e6136779d3ecfe5f0ebcf415befec7078e1d6505262",
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "ordinary_point_status": "PROVEN_FEASIBLE",
+        "ordinary_reason": "ORDINARY_EXACT_POINT_ONLY",
+        "ordinary_named_work_units": 2,
+        "ordinary_cpu_ns": 0,
+        "ordinary_wall_ns": 21600,
+        "reviewed_point_status": "PROVEN_FEASIBLE",
+        "reviewed_point_authorizes": false,
+        "reviewed_point_receipt": {
+          "verifier_id": "d46.reviewed-point-verifier",
+          "verifier_version": 1,
+          "contract_sha256": "3b2c8a2aa23836973d23a9fae1a548b8fe527fb589ffefe20577558594a1a44b",
+          "candidate_sha256": "102f09f7ef6a0221355f2e6136779d3ecfe5f0ebcf415befec7078e1d6505262",
+          "evidence_sha256": "c99e25bd8dd98ebd91b9d9ce4d55f1afc7c1bd29abf82ad31a09cb06dbd72af1",
+          "authority": "FEASIBILITY_ONLY",
+          "work": 5,
+          "status": "PROVEN_FEASIBLE",
+          "reason": "EXACT_FEASIBILITY_ONLY",
+          "contract": {
+            "binding": {
+              "question_sha256": "53b7557cd08d9661c66ff3cdf94e0490842596f1f8328285d194729b1141f343",
+              "objective_id": "minimum-incenter-isosceles-perimeter",
+              "scope_sha256": "35744e05e2aba2df06dc604c2c08a7ca30516f547370b2b1565ffe4728327069",
+              "constraints_sha256": "f2099dac74abc3a9fc22c76a0d7036f48ddf685e5294b2a600119594cded7f73",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_integer_perimeter",
+              "integer_isosceles_sides",
+              "strict_triangle",
+              "exact_incenter_distance"
+            ],
+            "checker_id": "d46.exact.point",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+            "exclusion_kind": "COMPLETE_FIXED_VALUE_FIBER",
+            "proof_sha256": "414ef3ed15e13cd069c4000aa7ab6427ffecbaada3d5de27a87b9591f5774288",
+            "review_sha256": "d28b20351470520bc8aee1e7a838a559d697b1347d7455a75c3c1a0ac0a398b7"
+          },
+          "candidate": {
+            "binding": {
+              "question_sha256": "53b7557cd08d9661c66ff3cdf94e0490842596f1f8328285d194729b1141f343",
+              "objective_id": "minimum-incenter-isosceles-perimeter",
+              "scope_sha256": "35744e05e2aba2df06dc604c2c08a7ca30516f547370b2b1565ffe4728327069",
+              "constraints_sha256": "f2099dac74abc3a9fc22c76a0d7036f48ddf685e5294b2a600119594cded7f73",
+              "direction": "MIN"
+            },
+            "sample_id": "2015-I-11:draw-03",
+            "response_sha256": "a5ca08d1b2ce08e4a7fc79a383dd53f4e60e1055e21e2cf2c2fa175042df2da5",
+            "observed_prefix_sha256": "a44fdc1d423309bdc72ce82b4e1d1d4937ed1af8f5a9539484f9900fe4651720",
+            "numeric_span": [
+              37287,
+              37290
+            ],
+            "numeric_text": "108",
+            "assertion_span": [
+              37226,
+              37292
+            ],
+            "assertion_sha256": "bb1733887054e15455222cef27bc025018639600735e32a74e68bb6dba29ad5a",
+            "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+            "assertion_review_sha256": "4c143665e5b8a7d336a2728b255a87bc849be5e155fde00870b5b4c215c24434"
+          },
+          "request_number": 1,
+          "checked_value": "108",
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "fiber_points",
+              1
+            ],
+            [
+              "constraint:positive_integer_perimeter",
+              1
+            ],
+            [
+              "constraint:integer_isosceles_sides",
+              1
+            ],
+            [
+              "constraint:strict_triangle",
+              1
+            ],
+            [
+              "constraint:exact_incenter_distance",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "evidence": {
+            "status": "PROVEN_FEASIBLE",
+            "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+            "details": [
+              [
+                "equal_side",
+                48
+              ],
+              [
+                "base",
+                12
+              ]
+            ],
+            "complete": true,
+            "covered_constraints": [
+              "positive_integer_perimeter",
+              "integer_isosceles_sides",
+              "strict_triangle",
+              "exact_incenter_distance"
+            ],
+            "fiber_expected": null,
+            "fiber_visited": null
+          },
+          "cpu_ns": 0,
+          "wall_ns": 175900,
+          "receipt_sha256": "ef7e204ff6926239d0e8256b910a7d361f90eddb5457a47d388120f05b375b3c"
+        },
+        "scope_review_sha256": null
+      }
+    },
+    {
+      "case_id": "2015-II-3",
+      "sample_id": "2015-II-3:draw-03",
+      "draw_index": 3,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 476,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2015-II-5",
+      "sample_id": "2015-II-5:draw-03",
+      "draw_index": 3,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 90,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2013-II-6",
+      "sample_id": "2013-II-6:draw-03",
+      "draw_index": 3,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 282,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2011-I-12",
+      "sample_id": "2011-I-12:draw-03",
+      "draw_index": 3,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 590,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-3",
+      "sample_id": "2010-II-3:draw-03",
+      "draw_index": 3,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 150,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-12",
+      "sample_id": "2010-II-12:draw-03",
+      "draw_index": 3,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 676,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2009-I-7",
+      "sample_id": "2009-I-7:draw-03",
+      "draw_index": 3,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 41,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2021-II-15",
+      "sample_id": "2021-II-15:draw-04",
+      "draw_index": 4,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 258,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2019-I-14",
+      "sample_id": "2019-I-14:draw-04",
+      "draw_index": 4,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 97,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2017-II-5",
+      "sample_id": "2017-II-5:draw-04",
+      "draw_index": 4,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 791,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2015-I-11",
+      "sample_id": "2015-I-11:draw-04",
+      "draw_index": 4,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 108,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "BOUND_POINT_CHECKED",
+        "value": "108",
+        "candidate_sha256": "e5e23c393ebd7cbc1b84d892cadb62625f521293e915dd73e33ee8fa6553858c",
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "ordinary_point_status": "PROVEN_FEASIBLE",
+        "ordinary_reason": "ORDINARY_EXACT_POINT_ONLY",
+        "ordinary_named_work_units": 2,
+        "ordinary_cpu_ns": 0,
+        "ordinary_wall_ns": 18100,
+        "reviewed_point_status": "PROVEN_FEASIBLE",
+        "reviewed_point_authorizes": false,
+        "reviewed_point_receipt": {
+          "verifier_id": "d46.reviewed-point-verifier",
+          "verifier_version": 1,
+          "contract_sha256": "3b2c8a2aa23836973d23a9fae1a548b8fe527fb589ffefe20577558594a1a44b",
+          "candidate_sha256": "e5e23c393ebd7cbc1b84d892cadb62625f521293e915dd73e33ee8fa6553858c",
+          "evidence_sha256": "c99e25bd8dd98ebd91b9d9ce4d55f1afc7c1bd29abf82ad31a09cb06dbd72af1",
+          "authority": "FEASIBILITY_ONLY",
+          "work": 5,
+          "status": "PROVEN_FEASIBLE",
+          "reason": "EXACT_FEASIBILITY_ONLY",
+          "contract": {
+            "binding": {
+              "question_sha256": "53b7557cd08d9661c66ff3cdf94e0490842596f1f8328285d194729b1141f343",
+              "objective_id": "minimum-incenter-isosceles-perimeter",
+              "scope_sha256": "35744e05e2aba2df06dc604c2c08a7ca30516f547370b2b1565ffe4728327069",
+              "constraints_sha256": "f2099dac74abc3a9fc22c76a0d7036f48ddf685e5294b2a600119594cded7f73",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_integer_perimeter",
+              "integer_isosceles_sides",
+              "strict_triangle",
+              "exact_incenter_distance"
+            ],
+            "checker_id": "d46.exact.point",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+            "exclusion_kind": "COMPLETE_FIXED_VALUE_FIBER",
+            "proof_sha256": "414ef3ed15e13cd069c4000aa7ab6427ffecbaada3d5de27a87b9591f5774288",
+            "review_sha256": "d28b20351470520bc8aee1e7a838a559d697b1347d7455a75c3c1a0ac0a398b7"
+          },
+          "candidate": {
+            "binding": {
+              "question_sha256": "53b7557cd08d9661c66ff3cdf94e0490842596f1f8328285d194729b1141f343",
+              "objective_id": "minimum-incenter-isosceles-perimeter",
+              "scope_sha256": "35744e05e2aba2df06dc604c2c08a7ca30516f547370b2b1565ffe4728327069",
+              "constraints_sha256": "f2099dac74abc3a9fc22c76a0d7036f48ddf685e5294b2a600119594cded7f73",
+              "direction": "MIN"
+            },
+            "sample_id": "2015-I-11:draw-04",
+            "response_sha256": "fad951b6facd318e5365272fabcb5d9afcb9e8307877d03b8ee2b390c8727d4c",
+            "observed_prefix_sha256": "ee4303adae9f60b6cfd0edb62e54269084885304cd36dc38c5e31dfda722d247",
+            "numeric_span": [
+              40678,
+              40681
+            ],
+            "numeric_text": "108",
+            "assertion_span": [
+              40617,
+              40683
+            ],
+            "assertion_sha256": "bb1733887054e15455222cef27bc025018639600735e32a74e68bb6dba29ad5a",
+            "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+            "assertion_review_sha256": "069ca6e81829d407edfabd0f09f4c3bc66531d6875fa2204837d9080d17c15c1"
+          },
+          "request_number": 2,
+          "checked_value": "108",
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "fiber_points",
+              1
+            ],
+            [
+              "constraint:positive_integer_perimeter",
+              1
+            ],
+            [
+              "constraint:integer_isosceles_sides",
+              1
+            ],
+            [
+              "constraint:strict_triangle",
+              1
+            ],
+            [
+              "constraint:exact_incenter_distance",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "evidence": {
+            "status": "PROVEN_FEASIBLE",
+            "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+            "details": [
+              [
+                "equal_side",
+                48
+              ],
+              [
+                "base",
+                12
+              ]
+            ],
+            "complete": true,
+            "covered_constraints": [
+              "positive_integer_perimeter",
+              "integer_isosceles_sides",
+              "strict_triangle",
+              "exact_incenter_distance"
+            ],
+            "fiber_expected": null,
+            "fiber_visited": null
+          },
+          "cpu_ns": 0,
+          "wall_ns": 160600,
+          "receipt_sha256": "72812e7d92aa14101fab10d08ffe22d18e3dcdd7fc7a073e4511d090c5582697"
+        },
+        "scope_review_sha256": null
+      }
+    },
+    {
+      "case_id": "2015-II-3",
+      "sample_id": "2015-II-3:draw-04",
+      "draw_index": 4,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 476,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2015-II-5",
+      "sample_id": "2015-II-5:draw-04",
+      "draw_index": 4,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 90,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2013-II-6",
+      "sample_id": "2013-II-6:draw-04",
+      "draw_index": 4,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 282,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2011-I-12",
+      "sample_id": "2011-I-12:draw-04",
+      "draw_index": 4,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 100,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-3",
+      "sample_id": "2010-II-3:draw-04",
+      "draw_index": 4,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 150,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-12",
+      "sample_id": "2010-II-12:draw-04",
+      "draw_index": 4,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 676,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2009-I-7",
+      "sample_id": "2009-I-7:draw-04",
+      "draw_index": 4,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 41,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2021-II-15",
+      "sample_id": "2021-II-15:draw-05",
+      "draw_index": 5,
+      "termination": "LENGTH_CAP",
+      "native_final_eligible": false,
+      "native_final_value": null,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2019-I-14",
+      "sample_id": "2019-I-14:draw-05",
+      "draw_index": 5,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 97,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2017-II-5",
+      "sample_id": "2017-II-5:draw-05",
+      "draw_index": 5,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 533,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "BOUND_POINT_CHECKED",
+        "value": "791",
+        "candidate_sha256": "44de3ee64f8c30d4f3c3fdf15d6648f66be395884cc49ea139a52067a1f66aac",
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "ordinary_point_status": "PROVEN_FEASIBLE",
+        "ordinary_reason": "ORDINARY_EXACT_POINT_ONLY",
+        "ordinary_named_work_units": 15,
+        "ordinary_cpu_ns": 0,
+        "ordinary_wall_ns": 62400,
+        "reviewed_point_status": "PROVEN_FEASIBLE",
+        "reviewed_point_authorizes": false,
+        "reviewed_point_receipt": {
+          "verifier_id": "d46.reviewed-point-verifier",
+          "verifier_version": 1,
+          "contract_sha256": "51c80fd982b86dfc9401580748c84325c9f5a89504cbd1f4af77afd063f5e69f",
+          "candidate_sha256": "44de3ee64f8c30d4f3c3fdf15d6648f66be395884cc49ea139a52067a1f66aac",
+          "evidence_sha256": "c418fb5ed165997ecf585c2c2b5a027fcd205ac63bec41da0499efec93c751a5",
+          "authority": "FEASIBILITY_ONLY",
+          "work": 25,
+          "status": "PROVEN_FEASIBLE",
+          "reason": "EXACT_FEASIBILITY_ONLY",
+          "contract": {
+            "binding": {
+              "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+              "objective_id": "greatest-missing-edge-sum",
+              "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+              "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+              "direction": "MAX"
+            },
+            "required_constraints": [
+              "four_distinct_real_values",
+              "all_given_pair_sums",
+              "fixed_missing_pair_sum"
+            ],
+            "checker_id": "d46.exact.point",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+            "exclusion_kind": "COMPLETE_FIXED_VALUE_FIBER",
+            "proof_sha256": "be180ac3303ccb28a68c5c92163aff552657b12cf646fb09156c47e7da75ccff",
+            "review_sha256": "a7b616ce1e17617199ed6594a9572e9aa8955315aab18f1b8c093df2bfb8fc7a"
+          },
+          "candidate": {
+            "binding": {
+              "question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+              "objective_id": "greatest-missing-edge-sum",
+              "scope_sha256": "3c21d47cfb5c623b47e69a1cafb19d6bbac6166b9f10b92e79499bf3143e293a",
+              "constraints_sha256": "d896565fdedc082a049ce4b83072a6fb73bef3b51fedc73b84655af6dad69c6e",
+              "direction": "MAX"
+            },
+            "sample_id": "2017-II-5:draw-05",
+            "response_sha256": "43b26fd6fe8c45d964d8ededcfc3543b5ba56277448ea79b26645992583fbfe6",
+            "observed_prefix_sha256": "4526e9df70b73bb844b3c2481897a39538ccd23f26e541033a8d89f40d2a1dc3",
+            "numeric_span": [
+              55059,
+              55062
+            ],
+            "numeric_text": "791",
+            "assertion_span": [
+              55008,
+              55062
+            ],
+            "assertion_sha256": "f484c70e0c557ca454453ba4c4de226bd8ed213a5c10b1c38d4ebaabced2f80c",
+            "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+            "assertion_review_sha256": "c5bae5569b7f24f4591342712e7893ff7941026fff3cf89df352fa36d3dd89d2"
+          },
+          "request_number": 2,
+          "checked_value": "791",
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "fiber_points",
+              7
+            ],
+            [
+              "opposite_edge_checks",
+              15
+            ],
+            [
+              "constraint:four_distinct_real_values",
+              1
+            ],
+            [
+              "constraint:all_given_pair_sums",
+              1
+            ],
+            [
+              "constraint:fixed_missing_pair_sum",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "evidence": {
+            "status": "PROVEN_FEASIBLE",
+            "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+            "details": [
+              [
+                "vertex_0",
+                "68"
+              ],
+              [
+                "vertex_1",
+                "121"
+              ],
+              [
+                "vertex_2",
+                "252"
+              ],
+              [
+                "vertex_3",
+                "166"
+              ]
+            ],
+            "complete": true,
+            "covered_constraints": [
+              "four_distinct_real_values",
+              "all_given_pair_sums",
+              "fixed_missing_pair_sum"
+            ],
+            "fiber_expected": null,
+            "fiber_visited": null
+          },
+          "cpu_ns": 0,
+          "wall_ns": 253100,
+          "receipt_sha256": "ae6d180f849ffc4ff12ed41c6700825b647c06ba9e26265422db27d555a06da3"
+        },
+        "scope_review_sha256": null
+      }
+    },
+    {
+      "case_id": "2015-I-11",
+      "sample_id": "2015-I-11:draw-05",
+      "draw_index": 5,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 108,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2015-II-3",
+      "sample_id": "2015-II-3:draw-05",
+      "draw_index": 5,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 476,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "BOUND_POINT_CHECKED",
+        "value": "476",
+        "candidate_sha256": "30d1e05597e461f75f012f24d279f653de33b93624ff1069b60880149ded92f0",
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "ordinary_point_status": "PROVEN_FEASIBLE",
+        "ordinary_reason": "ORDINARY_EXACT_POINT_ONLY",
+        "ordinary_named_work_units": 5,
+        "ordinary_cpu_ns": 0,
+        "ordinary_wall_ns": 20000,
+        "reviewed_point_status": "PROVEN_FEASIBLE",
+        "reviewed_point_authorizes": false,
+        "reviewed_point_receipt": {
+          "verifier_id": "d46.reviewed-point-verifier",
+          "verifier_version": 1,
+          "contract_sha256": "d4f87736040b5b9654df034495eacb0befe672113903afd516173f1fe9049515",
+          "candidate_sha256": "30d1e05597e461f75f012f24d279f653de33b93624ff1069b60880149ded92f0",
+          "evidence_sha256": "2ec2a35761c0fd397c5aeb54caae250dca3ff080eeb905c7025bce58c23618ac",
+          "authority": "FEASIBILITY_ONLY",
+          "work": 7,
+          "status": "PROVEN_FEASIBLE",
+          "reason": "EXACT_FEASIBILITY_ONLY",
+          "contract": {
+            "binding": {
+              "question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+              "objective_id": "least-divisible-number-with-digit-sum",
+              "scope_sha256": "2518fafb5ffe7365e7bef91f104282ade10c06ffae47d80ed7746f40d9d0d722",
+              "constraints_sha256": "509acc58e62cf2e3d203ecdc87464b9cd1d903c3a87719a093b34e4f580cf78e",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_integer",
+              "divisible_by_17",
+              "decimal_digit_sum_17"
+            ],
+            "checker_id": "d46.exact.point",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+            "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+            "proof_sha256": "ff0ae7adb6b4be26264054a5d39715aa2ea921fc2249008ddb9c32d570835096",
+            "review_sha256": "20b51980c4977847a0b36315a76941e4f7bea8324eaf0783047f6e31ec3e3155"
+          },
+          "candidate": {
+            "binding": {
+              "question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+              "objective_id": "least-divisible-number-with-digit-sum",
+              "scope_sha256": "2518fafb5ffe7365e7bef91f104282ade10c06ffae47d80ed7746f40d9d0d722",
+              "constraints_sha256": "509acc58e62cf2e3d203ecdc87464b9cd1d903c3a87719a093b34e4f580cf78e",
+              "direction": "MIN"
+            },
+            "sample_id": "2015-II-3:draw-05",
+            "response_sha256": "c135397c5a853be3b99ff75189860daf4d757eaa04f1f49eda5e6c85fec05d3c",
+            "observed_prefix_sha256": "f32f5f91bbb03b684f655c868115993fa2e453620392ac762424b4443258c3eb",
+            "numeric_span": [
+              15718,
+              15721
+            ],
+            "numeric_text": "476",
+            "assertion_span": [
+              15675,
+              15722
+            ],
+            "assertion_sha256": "71e2fe86471f9d7265c27ed5361b1283863bd71a2e33971a995ea9c06639646e",
+            "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+            "assertion_review_sha256": "9b98b0d7b485b1ea5261703d7405126e4c4e908656b5cfe8500d53e3812bb0be"
+          },
+          "request_number": 3,
+          "checked_value": "476",
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "original_modular_predicates",
+              1
+            ],
+            [
+              "digit_remainder_steps",
+              3
+            ],
+            [
+              "constraint:positive_integer",
+              1
+            ],
+            [
+              "constraint:divisible_by_17",
+              1
+            ],
+            [
+              "constraint:decimal_digit_sum_17",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "evidence": {
+            "status": "PROVEN_FEASIBLE",
+            "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+            "details": [
+              [
+                "modulo_17",
+                0
+              ],
+              [
+                "decimal_digit_sum",
+                17
+              ]
+            ],
+            "complete": true,
+            "covered_constraints": [
+              "positive_integer",
+              "divisible_by_17",
+              "decimal_digit_sum_17"
+            ],
+            "fiber_expected": null,
+            "fiber_visited": null
+          },
+          "cpu_ns": 0,
+          "wall_ns": 100000,
+          "receipt_sha256": "1e879e2726954abc432f326691780274c2a8d7368c0f262c364403443038ab77"
+        },
+        "scope_review_sha256": null
+      }
+    },
+    {
+      "case_id": "2015-II-5",
+      "sample_id": "2015-II-5:draw-05",
+      "draw_index": 5,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 90,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2013-II-6",
+      "sample_id": "2013-II-6:draw-05",
+      "draw_index": 5,
+      "termination": "LENGTH_CAP",
+      "native_final_eligible": false,
+      "native_final_value": null,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNOBSERVABLE_THINKING_CLOSE"
+      }
+    },
+    {
+      "case_id": "2011-I-12",
+      "sample_id": "2011-I-12:draw-05",
+      "draw_index": 5,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 100,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-3",
+      "sample_id": "2010-II-3:draw-05",
+      "draw_index": 5,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 150,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-12",
+      "sample_id": "2010-II-12:draw-05",
+      "draw_index": 5,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 676,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2009-I-7",
+      "sample_id": "2009-I-7:draw-05",
+      "draw_index": 5,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 41,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2021-II-15",
+      "sample_id": "2021-II-15:draw-06",
+      "draw_index": 6,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 258,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2019-I-14",
+      "sample_id": "2019-I-14:draw-06",
+      "draw_index": 6,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 97,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2017-II-5",
+      "sample_id": "2017-II-5:draw-06",
+      "draw_index": 6,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 791,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2015-I-11",
+      "sample_id": "2015-I-11:draw-06",
+      "draw_index": 6,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 108,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "BOUND_POINT_CHECKED",
+        "value": "108",
+        "candidate_sha256": "7873af073a85b3ccf0909c8a55681f7b652fd78cd24cd54fb3b831722a118299",
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "ordinary_point_status": "PROVEN_FEASIBLE",
+        "ordinary_reason": "ORDINARY_EXACT_POINT_ONLY",
+        "ordinary_named_work_units": 2,
+        "ordinary_cpu_ns": 0,
+        "ordinary_wall_ns": 16900,
+        "reviewed_point_status": "PROVEN_FEASIBLE",
+        "reviewed_point_authorizes": false,
+        "reviewed_point_receipt": {
+          "verifier_id": "d46.reviewed-point-verifier",
+          "verifier_version": 1,
+          "contract_sha256": "3b2c8a2aa23836973d23a9fae1a548b8fe527fb589ffefe20577558594a1a44b",
+          "candidate_sha256": "7873af073a85b3ccf0909c8a55681f7b652fd78cd24cd54fb3b831722a118299",
+          "evidence_sha256": "c99e25bd8dd98ebd91b9d9ce4d55f1afc7c1bd29abf82ad31a09cb06dbd72af1",
+          "authority": "FEASIBILITY_ONLY",
+          "work": 5,
+          "status": "PROVEN_FEASIBLE",
+          "reason": "EXACT_FEASIBILITY_ONLY",
+          "contract": {
+            "binding": {
+              "question_sha256": "53b7557cd08d9661c66ff3cdf94e0490842596f1f8328285d194729b1141f343",
+              "objective_id": "minimum-incenter-isosceles-perimeter",
+              "scope_sha256": "35744e05e2aba2df06dc604c2c08a7ca30516f547370b2b1565ffe4728327069",
+              "constraints_sha256": "f2099dac74abc3a9fc22c76a0d7036f48ddf685e5294b2a600119594cded7f73",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_integer_perimeter",
+              "integer_isosceles_sides",
+              "strict_triangle",
+              "exact_incenter_distance"
+            ],
+            "checker_id": "d46.exact.point",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+            "exclusion_kind": "COMPLETE_FIXED_VALUE_FIBER",
+            "proof_sha256": "414ef3ed15e13cd069c4000aa7ab6427ffecbaada3d5de27a87b9591f5774288",
+            "review_sha256": "d28b20351470520bc8aee1e7a838a559d697b1347d7455a75c3c1a0ac0a398b7"
+          },
+          "candidate": {
+            "binding": {
+              "question_sha256": "53b7557cd08d9661c66ff3cdf94e0490842596f1f8328285d194729b1141f343",
+              "objective_id": "minimum-incenter-isosceles-perimeter",
+              "scope_sha256": "35744e05e2aba2df06dc604c2c08a7ca30516f547370b2b1565ffe4728327069",
+              "constraints_sha256": "f2099dac74abc3a9fc22c76a0d7036f48ddf685e5294b2a600119594cded7f73",
+              "direction": "MIN"
+            },
+            "sample_id": "2015-I-11:draw-06",
+            "response_sha256": "6d66379683537d56d4e4039dd604753542878b2284280220561e2df8c485c8fa",
+            "observed_prefix_sha256": "29c86253dd1c5f48f0e8672c83092fd5842b166134289a7fda4c9fbbf98354e4",
+            "numeric_span": [
+              49039,
+              49042
+            ],
+            "numeric_text": "108",
+            "assertion_span": [
+              48978,
+              49044
+            ],
+            "assertion_sha256": "bb1733887054e15455222cef27bc025018639600735e32a74e68bb6dba29ad5a",
+            "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+            "assertion_review_sha256": "f6866698c87a0da0d18115457a313b65c36be0b5cf65fa16374285dbc585a66b"
+          },
+          "request_number": 3,
+          "checked_value": "108",
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "fiber_points",
+              1
+            ],
+            [
+              "constraint:positive_integer_perimeter",
+              1
+            ],
+            [
+              "constraint:integer_isosceles_sides",
+              1
+            ],
+            [
+              "constraint:strict_triangle",
+              1
+            ],
+            [
+              "constraint:exact_incenter_distance",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "evidence": {
+            "status": "PROVEN_FEASIBLE",
+            "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+            "details": [
+              [
+                "equal_side",
+                48
+              ],
+              [
+                "base",
+                12
+              ]
+            ],
+            "complete": true,
+            "covered_constraints": [
+              "positive_integer_perimeter",
+              "integer_isosceles_sides",
+              "strict_triangle",
+              "exact_incenter_distance"
+            ],
+            "fiber_expected": null,
+            "fiber_visited": null
+          },
+          "cpu_ns": 0,
+          "wall_ns": 184400,
+          "receipt_sha256": "fed4cf8db68e410be8eb0d4ad1d9617a46cffe9b76999e53b9512036b52cdb3b"
+        },
+        "scope_review_sha256": null
+      }
+    },
+    {
+      "case_id": "2015-II-3",
+      "sample_id": "2015-II-3:draw-06",
+      "draw_index": 6,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 476,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "BOUND_POINT_CHECKED",
+        "value": "476",
+        "candidate_sha256": "f4aea38da987f184f3f9fe17a835077e04116c3153779bf4abb161cc91846a36",
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "ordinary_point_status": "PROVEN_FEASIBLE",
+        "ordinary_reason": "ORDINARY_EXACT_POINT_ONLY",
+        "ordinary_named_work_units": 5,
+        "ordinary_cpu_ns": 0,
+        "ordinary_wall_ns": 18800,
+        "reviewed_point_status": "PROVEN_FEASIBLE",
+        "reviewed_point_authorizes": false,
+        "reviewed_point_receipt": {
+          "verifier_id": "d46.reviewed-point-verifier",
+          "verifier_version": 1,
+          "contract_sha256": "d4f87736040b5b9654df034495eacb0befe672113903afd516173f1fe9049515",
+          "candidate_sha256": "f4aea38da987f184f3f9fe17a835077e04116c3153779bf4abb161cc91846a36",
+          "evidence_sha256": "2ec2a35761c0fd397c5aeb54caae250dca3ff080eeb905c7025bce58c23618ac",
+          "authority": "FEASIBILITY_ONLY",
+          "work": 7,
+          "status": "PROVEN_FEASIBLE",
+          "reason": "EXACT_FEASIBILITY_ONLY",
+          "contract": {
+            "binding": {
+              "question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+              "objective_id": "least-divisible-number-with-digit-sum",
+              "scope_sha256": "2518fafb5ffe7365e7bef91f104282ade10c06ffae47d80ed7746f40d9d0d722",
+              "constraints_sha256": "509acc58e62cf2e3d203ecdc87464b9cd1d903c3a87719a093b34e4f580cf78e",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_integer",
+              "divisible_by_17",
+              "decimal_digit_sum_17"
+            ],
+            "checker_id": "d46.exact.point",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+            "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+            "proof_sha256": "ff0ae7adb6b4be26264054a5d39715aa2ea921fc2249008ddb9c32d570835096",
+            "review_sha256": "20b51980c4977847a0b36315a76941e4f7bea8324eaf0783047f6e31ec3e3155"
+          },
+          "candidate": {
+            "binding": {
+              "question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+              "objective_id": "least-divisible-number-with-digit-sum",
+              "scope_sha256": "2518fafb5ffe7365e7bef91f104282ade10c06ffae47d80ed7746f40d9d0d722",
+              "constraints_sha256": "509acc58e62cf2e3d203ecdc87464b9cd1d903c3a87719a093b34e4f580cf78e",
+              "direction": "MIN"
+            },
+            "sample_id": "2015-II-3:draw-06",
+            "response_sha256": "6e5344233b2bc1639dcabd4461006f2e9c0ad79ebb50cd4989d0a67c25183904",
+            "observed_prefix_sha256": "16a546eb16316074d3b1c8390db0cb848bdf826b2e20b3a233a0a3c94d5742d4",
+            "numeric_span": [
+              11477,
+              11480
+            ],
+            "numeric_text": "476",
+            "assertion_span": [
+              11434,
+              11481
+            ],
+            "assertion_sha256": "71e2fe86471f9d7265c27ed5361b1283863bd71a2e33971a995ea9c06639646e",
+            "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+            "assertion_review_sha256": "5fe24311c46495b6758c2f3cc245f818d5d3959745db83a1ce722fbb93ca829b"
+          },
+          "request_number": 4,
+          "checked_value": "476",
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "original_modular_predicates",
+              1
+            ],
+            [
+              "digit_remainder_steps",
+              3
+            ],
+            [
+              "constraint:positive_integer",
+              1
+            ],
+            [
+              "constraint:divisible_by_17",
+              1
+            ],
+            [
+              "constraint:decimal_digit_sum_17",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "evidence": {
+            "status": "PROVEN_FEASIBLE",
+            "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+            "details": [
+              [
+                "modulo_17",
+                0
+              ],
+              [
+                "decimal_digit_sum",
+                17
+              ]
+            ],
+            "complete": true,
+            "covered_constraints": [
+              "positive_integer",
+              "divisible_by_17",
+              "decimal_digit_sum_17"
+            ],
+            "fiber_expected": null,
+            "fiber_visited": null
+          },
+          "cpu_ns": 0,
+          "wall_ns": 81500,
+          "receipt_sha256": "e26bddcd6eccd06c0c0d03079f29389980cb3e9ee3325f8b0dacc0ea15968b0e"
+        },
+        "scope_review_sha256": null
+      }
+    },
+    {
+      "case_id": "2015-II-5",
+      "sample_id": "2015-II-5:draw-06",
+      "draw_index": 6,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 90,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2013-II-6",
+      "sample_id": "2013-II-6:draw-06",
+      "draw_index": 6,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 282,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2011-I-12",
+      "sample_id": "2011-I-12:draw-06",
+      "draw_index": 6,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 199,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-3",
+      "sample_id": "2010-II-3:draw-06",
+      "draw_index": 6,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 150,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-12",
+      "sample_id": "2010-II-12:draw-06",
+      "draw_index": 6,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 676,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2009-I-7",
+      "sample_id": "2009-I-7:draw-06",
+      "draw_index": 6,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 41,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2021-II-15",
+      "sample_id": "2021-II-15:draw-07",
+      "draw_index": 7,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 258,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2019-I-14",
+      "sample_id": "2019-I-14:draw-07",
+      "draw_index": 7,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 97,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2017-II-5",
+      "sample_id": "2017-II-5:draw-07",
+      "draw_index": 7,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 791,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2015-I-11",
+      "sample_id": "2015-I-11:draw-07",
+      "draw_index": 7,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 108,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2015-II-3",
+      "sample_id": "2015-II-3:draw-07",
+      "draw_index": 7,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 476,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "BOUND_POINT_CHECKED",
+        "value": "476",
+        "candidate_sha256": "cc40827da8536168eced41fa1787b624f5596e6db98c34d22099e17502167b53",
+        "weak_refutes": false,
+        "one_sided_refutes": false,
+        "ordinary_point_status": "PROVEN_FEASIBLE",
+        "ordinary_reason": "ORDINARY_EXACT_POINT_ONLY",
+        "ordinary_named_work_units": 5,
+        "ordinary_cpu_ns": 0,
+        "ordinary_wall_ns": 19500,
+        "reviewed_point_status": "PROVEN_FEASIBLE",
+        "reviewed_point_authorizes": false,
+        "reviewed_point_receipt": {
+          "verifier_id": "d46.reviewed-point-verifier",
+          "verifier_version": 1,
+          "contract_sha256": "d4f87736040b5b9654df034495eacb0befe672113903afd516173f1fe9049515",
+          "candidate_sha256": "cc40827da8536168eced41fa1787b624f5596e6db98c34d22099e17502167b53",
+          "evidence_sha256": "2ec2a35761c0fd397c5aeb54caae250dca3ff080eeb905c7025bce58c23618ac",
+          "authority": "FEASIBILITY_ONLY",
+          "work": 7,
+          "status": "PROVEN_FEASIBLE",
+          "reason": "EXACT_FEASIBILITY_ONLY",
+          "contract": {
+            "binding": {
+              "question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+              "objective_id": "least-divisible-number-with-digit-sum",
+              "scope_sha256": "2518fafb5ffe7365e7bef91f104282ade10c06ffae47d80ed7746f40d9d0d722",
+              "constraints_sha256": "509acc58e62cf2e3d203ecdc87464b9cd1d903c3a87719a093b34e4f580cf78e",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_integer",
+              "divisible_by_17",
+              "decimal_digit_sum_17"
+            ],
+            "checker_id": "d46.exact.point",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "da307ac00b9fa400b604bb069ac24bb5eeb07d2796a5bee0428d80f21fcb491f",
+            "exclusion_kind": "EXACT_NECESSARY_PREDICATE",
+            "proof_sha256": "ff0ae7adb6b4be26264054a5d39715aa2ea921fc2249008ddb9c32d570835096",
+            "review_sha256": "20b51980c4977847a0b36315a76941e4f7bea8324eaf0783047f6e31ec3e3155"
+          },
+          "candidate": {
+            "binding": {
+              "question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+              "objective_id": "least-divisible-number-with-digit-sum",
+              "scope_sha256": "2518fafb5ffe7365e7bef91f104282ade10c06ffae47d80ed7746f40d9d0d722",
+              "constraints_sha256": "509acc58e62cf2e3d203ecdc87464b9cd1d903c3a87719a093b34e4f580cf78e",
+              "direction": "MIN"
+            },
+            "sample_id": "2015-II-3:draw-07",
+            "response_sha256": "ee7cdaff5db0efb83056cc41eab5c1f7fa363ce90a20b866d1c1bd90ae810b3a",
+            "observed_prefix_sha256": "a001cf801d6dff122e5af1e0daac0decaab2cc65eb81970587a488af5758be30",
+            "numeric_span": [
+              14518,
+              14521
+            ],
+            "numeric_text": "476",
+            "assertion_span": [
+              14475,
+              14522
+            ],
+            "assertion_sha256": "71e2fe86471f9d7265c27ed5361b1283863bd71a2e33971a995ea9c06639646e",
+            "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+            "assertion_review_sha256": "df35eef0cd8276227b16080208291de49c9f3a65cf6c0437c125adbc586b8c59"
+          },
+          "request_number": 5,
+          "checked_value": "476",
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "original_modular_predicates",
+              1
+            ],
+            [
+              "digit_remainder_steps",
+              3
+            ],
+            [
+              "constraint:positive_integer",
+              1
+            ],
+            [
+              "constraint:divisible_by_17",
+              1
+            ],
+            [
+              "constraint:decimal_digit_sum_17",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "evidence": {
+            "status": "PROVEN_FEASIBLE",
+            "proof_kind": "EXACT_FEASIBILITY_WITNESS",
+            "details": [
+              [
+                "modulo_17",
+                0
+              ],
+              [
+                "decimal_digit_sum",
+                17
+              ]
+            ],
+            "complete": true,
+            "covered_constraints": [
+              "positive_integer",
+              "divisible_by_17",
+              "decimal_digit_sum_17"
+            ],
+            "fiber_expected": null,
+            "fiber_visited": null
+          },
+          "cpu_ns": 0,
+          "wall_ns": 89700,
+          "receipt_sha256": "f0720d2e33741bce52d58a87038060bd71ac736872d58b8d77f09e54f372c2a2"
+        },
+        "scope_review_sha256": null
+      }
+    },
+    {
+      "case_id": "2015-II-5",
+      "sample_id": "2015-II-5:draw-07",
+      "draw_index": 7,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 90,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2013-II-6",
+      "sample_id": "2013-II-6:draw-07",
+      "draw_index": 7,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 282,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2011-I-12",
+      "sample_id": "2011-I-12:draw-07",
+      "draw_index": 7,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": false,
+      "native_final_value": null,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-3",
+      "sample_id": "2010-II-3:draw-07",
+      "draw_index": 7,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 150,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2010-II-12",
+      "sample_id": "2010-II-12:draw-07",
+      "draw_index": 7,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 676,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "NO_COMPLETE_SCOPED_POINT"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    },
+    {
+      "case_id": "2009-I-7",
+      "sample_id": "2009-I-7:draw-07",
+      "draw_index": 7,
+      "termination": "NATIVE_STOP",
+      "native_final_eligible": true,
+      "native_final_value": 41,
+      "early": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "UNREACHED_EARLY_BOUNDARY"
+      },
+      "late": {
+        "status": "UNBOUND_ABSTAIN",
+        "observation_status": "LATER_UNSCOPED_BOX"
+      }
+    }
+  ],
+  "candidate_count": 11,
+  "bound_readback": [
+    {
+      "case_id": "2009-I-7",
+      "bound": 41,
+      "direction": "MIN",
+      "work": {
+        "power_of_five_divisions": 3,
+        "constraint:index_above_one": 1,
+        "constraint:integral_sequence_term": 1
+      },
+      "cpu_ns": 0,
+      "wall_ns": 39500,
+      "details": [
+        [
+          "remaining_factor",
+          1
+        ],
+        [
+          "power_of_five_exponent",
+          3
+        ]
+      ]
+    },
+    {
+      "case_id": "2010-II-12",
+      "bound": 676,
+      "direction": "MIN",
+      "work": {
+        "equal_area_base_scale_relation": 1,
+        "perimeter_side_checks": 2,
+        "squared_area_products": 2,
+        "constraint:positive_perimeter": 1,
+        "constraint:integer_base_ratio": 1,
+        "constraint:integer_lateral_sides": 1,
+        "constraint:strict_triangles": 1,
+        "constraint:equal_areas": 1
+      },
+      "cpu_ns": 0,
+      "wall_ns": 25000,
+      "details": [
+        [
+          "base_one",
+          240
+        ],
+        [
+          "base_two",
+          210
+        ],
+        [
+          "scaled_area_squared",
+          "7631769600"
+        ]
+      ]
+    },
+    {
+      "case_id": "2010-II-3",
+      "bound": 90,
+      "direction": "MAX",
+      "work": {
+        "product_modular_steps": 121,
+        "constraint:positive_exponent": 1,
+        "constraint:divides_original_product": 1
+      },
+      "cpu_ns": 0,
+      "wall_ns": 131500,
+      "details": [
+        [
+          "modular_product",
+          0
+        ],
+        [
+          "exponent",
+          90
+        ]
+      ]
+    },
+    {
+      "case_id": "2011-I-12",
+      "bound": 600,
+      "direction": "MIN",
+      "work": {
+        "small_binomial_evaluations": 2,
+        "constraint:positive_women_count": 1,
+        "constraint:conditioned_probability_threshold": 1
+      },
+      "cpu_ns": 0,
+      "wall_ns": 18000,
+      "details": [
+        [
+          "favorable_patterns",
+          "361201"
+        ],
+        [
+          "conditioned_patterns",
+          "36541401"
+        ]
+      ]
+    },
+    {
+      "case_id": "2013-II-6",
+      "bound": 812,
+      "direction": "MIN",
+      "work": {
+        "integer_square_root": 1,
+        "constraint:positive_index": 1,
+        "constraint:complete_block_contains_no_square": 1
+      },
+      "cpu_ns": 0,
+      "wall_ns": 18600,
+      "details": [
+        [
+          "next_square",
+          813604
+        ],
+        [
+          "interval_upper",
+          812999
+        ]
+      ]
+    },
+    {
+      "case_id": "2015-I-11",
+      "bound": 108,
+      "direction": "MIN",
+      "work": {
+        "fiber_points": 1,
+        "constraint:positive_integer_perimeter": 1,
+        "constraint:integer_isosceles_sides": 1,
+        "constraint:strict_triangle": 1,
+        "constraint:exact_incenter_distance": 1
+      },
+      "cpu_ns": 0,
+      "wall_ns": 16900,
+      "details": [
+        [
+          "equal_side",
+          48
+        ],
+        [
+          "base",
+          12
+        ]
+      ]
+    },
+    {
+      "case_id": "2015-II-3",
+      "bound": 629,
+      "direction": "MIN",
+      "work": {
+        "original_modular_predicates": 1,
+        "digit_remainder_steps": 3,
+        "constraint:positive_integer": 1,
+        "constraint:divisible_by_17": 1,
+        "constraint:decimal_digit_sum_17": 1
+      },
+      "cpu_ns": 0,
+      "wall_ns": 18600,
+      "details": [
+        [
+          "modulo_17",
+          0
+        ],
+        [
+          "decimal_digit_sum",
+          17
+        ]
+      ]
+    },
+    {
+      "case_id": "2015-II-5",
+      "bound": 100,
+      "direction": "MIN",
+      "work": {
+        "cross_multiplied_probability": 1,
+        "constraint:two_squares_selectable": 1,
+        "constraint:strict_probability_threshold": 1
+      },
+      "cpu_ns": 0,
+      "wall_ns": 16100,
+      "details": [
+        [
+          "n_times_n_plus_one",
+          "10100"
+        ],
+        [
+          "required_strict_threshold",
+          8060
+        ]
+      ]
+    },
+    {
+      "case_id": "2017-II-5",
+      "bound": 497,
+      "direction": "MAX",
+      "work": {
+        "fiber_points": 49,
+        "opposite_edge_checks": 87,
+        "constraint:four_distinct_real_values": 1,
+        "constraint:all_given_pair_sums": 1,
+        "constraint:fixed_missing_pair_sum": 1
+      },
+      "cpu_ns": 0,
+      "wall_ns": 289500,
+      "details": [
+        [
+          "vertex_0",
+          "201/2"
+        ],
+        [
+          "vertex_1",
+          "177/2"
+        ],
+        [
+          "vertex_2",
+          "373/2"
+        ],
+        [
+          "vertex_3",
+          "267/2"
+        ]
+      ]
+    },
+    {
+      "case_id": "2019-I-14",
+      "bound": 97,
+      "direction": "MIN",
+      "work": {
+        "prime_trial_remainders": 8,
+        "modular_square_steps": 3,
+        "modular_multiply_steps": 1,
+        "constraint:odd_prime": 1,
+        "constraint:modular_divisibility": 1
+      },
+      "cpu_ns": 0,
+      "wall_ns": 34700,
+      "details": [
+        [
+          "prime_and_odd",
+          true
+        ],
+        [
+          "original_expression_remainder",
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "2021-II-15",
+      "bound": 488,
+      "direction": "MIN",
+      "work": {
+        "integer_square_root": 1,
+        "exact_ratio_cross_products": 2,
+        "constraint:positive_index": 1,
+        "constraint:exact_recursive_ratio": 1
+      },
+      "cpu_ns": 0,
+      "wall_ns": 18700,
+      "details": [
+        [
+          "f_at_point",
+          64
+        ],
+        [
+          "g_at_point",
+          112
+        ]
+      ]
+    }
+  ],
+  "work": {
+    "wall_ns": 24298400,
+    "cpu_ns": 15625000,
+    "weak_evaluations": 11,
+    "weak_cpu_ns": 0,
+    "side_comparisons": 11,
+    "side_cpu_ns": 0,
+    "ordinary_calls": 11,
+    "ordinary_work": {
+      "2009-I-7": {},
+      "2010-II-12": {},
+      "2010-II-3": {},
+      "2011-I-12": {
+        "fixed_point": 1,
+        "binomial": 2
+      },
+      "2013-II-6": {},
+      "2015-I-11": {
+        "fixed_point": 3,
+        "fixed_base_incenter_test": 3
+      },
+      "2015-II-3": {
+        "fixed_point": 5,
+        "divisibility_by_17": 5,
+        "decimal_digit_division": 15
+      },
+      "2015-II-5": {},
+      "2017-II-5": {
+        "fixed_point": 2,
+        "known_opposite_partition": 6,
+        "fixed_known_pair_comparison": 8,
+        "edge_orientation": 2,
+        "rational_edge_sum": 12
+      },
+      "2019-I-14": {},
+      "2021-II-15": {}
+    },
+    "reviewed_work": {
+      "2009-I-7": {
+        "checker_calls": 0,
+        "work": 0
+      },
+      "2010-II-12": {
+        "checker_calls": 0,
+        "work": 0
+      },
+      "2010-II-3": {
+        "checker_calls": 0,
+        "work": 0
+      },
+      "2011-I-12": {
+        "checker_calls": 1,
+        "work": 3
+      },
+      "2013-II-6": {
+        "checker_calls": 0,
+        "work": 0
+      },
+      "2015-I-11": {
+        "checker_calls": 3,
+        "work": 15
+      },
+      "2015-II-3": {
+        "checker_calls": 5,
+        "work": 35
+      },
+      "2015-II-5": {
+        "checker_calls": 0,
+        "work": 0
+      },
+      "2017-II-5": {
+        "checker_calls": 2,
+        "work": 50
+      },
+      "2019-I-14": {
+        "checker_calls": 0,
+        "work": 0
+      },
+      "2021-II-15": {
+        "checker_calls": 0,
+        "work": 0
+      }
+    }
+  }
+}

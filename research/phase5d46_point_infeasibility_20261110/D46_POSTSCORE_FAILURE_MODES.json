@@ -1,0 +1,103 @@
+{
+  "status": "POSTSCORE_FAILURE_MODE_DIAGNOSIS_ONLY",
+  "results_sha256": "51566277d6d79ffe541f1a32ea5ff0ab58c404cf546d11d94b617a0edab9dce7",
+  "scope_readout_sha256": "34dcf1a2e6c3d3b16be05a04a91a91488c0be6ec33ca0af7cc8e953a2d640a3a",
+  "no_new_model_work_or_preregistered_gate_change": true,
+  "repeated_conditional_count_case": {
+    "case_id": "2011-I-12",
+    "persistent_infeasible_points": [
+      {
+        "sample_id": "2011-I-12:draw-00",
+        "women": 590,
+        "correct_probability": "1773/176413",
+        "threshold_polynomial": -1774,
+        "same_value_in_original_wrong_final": true
+      },
+      {
+        "sample_id": "2011-I-12:draw-01",
+        "women": 34,
+        "correct_probability": "35/239",
+        "threshold_polynomial": -19566,
+        "same_value_in_original_wrong_final": true
+      },
+      {
+        "sample_id": "2011-I-12:draw-03",
+        "women": 590,
+        "correct_probability": "1773/176413",
+        "threshold_polynomial": -1774,
+        "same_value_in_original_wrong_final": true
+      },
+      {
+        "sample_id": "2011-I-12:draw-04",
+        "women": 100,
+        "correct_probability": "101/1801",
+        "threshold_polynomial": -49794,
+        "same_value_in_original_wrong_final": true
+      },
+      {
+        "sample_id": "2011-I-12:draw-05",
+        "women": 100,
+        "correct_probability": "101/1801",
+        "threshold_polynomial": -49794,
+        "same_value_in_original_wrong_final": true
+      },
+      {
+        "sample_id": "2011-I-12:draw-06",
+        "women": 199,
+        "correct_probability": "400/13733",
+        "threshold_polynomial": -78801,
+        "same_value_in_original_wrong_final": true
+      }
+    ],
+    "closed_form_solution": 594,
+    "threshold_at_predecessor": -1,
+    "proof": "With g=w+1 gaps the conditional probability is 6g/(g²+6g−1). The 1% requirement is w²−592w−594≥0, with first admissible w=594."
+  },
+  "feasible_final_regression": {
+    "sample_id": "2017-II-5:draw-05",
+    "response_sha256": "43b26fd6fe8c45d964d8ededcfc3543b5ba56277448ea79b26645992583fbfe6",
+    "thought_optimum": 791,
+    "wrong_native_final": 533,
+    "difference": 258,
+    "both_values_feasible": true,
+    "postscore_independent_checks": [
+      {
+        "value": 791,
+        "independently_feasible_vertices": {
+          "vertex_0": "68",
+          "vertex_1": "121",
+          "vertex_2": "252",
+          "vertex_3": "166"
+        },
+        "named_point_work": {
+          "fiber_points": 7,
+          "opposite_edge_checks": 15,
+          "constraint:four_distinct_real_values": 1,
+          "constraint:all_given_pair_sums": 1,
+          "constraint:fixed_missing_pair_sum": 1
+        }
+      },
+      {
+        "value": 533,
+        "independently_feasible_vertices": {
+          "vertex_0": "275/2",
+          "vertex_1": "103/2",
+          "vertex_2": "365/2",
+          "vertex_3": "299/2"
+        },
+        "named_point_work": {
+          "fiber_points": 1,
+          "opposite_edge_checks": 3,
+          "constraint:four_distinct_real_values": 1,
+          "constraint:all_given_pair_sums": 1,
+          "constraint:fixed_missing_pair_sum": 1
+        }
+      }
+    ],
+    "fixed_simple_bound": 497,
+    "later_edge_assertion_sha256": "7e08fe3ab5f32de299697287d0a66fad09961322f0477e8f8c294247243ea04d",
+    "conflicting_final_edge_arithmetic_sha256": "cf92f87f90dbf105e09a783a92540c29727a15ee244c345d22934c8ef004764a"
+  },
+  "wall_ns": 15240000,
+  "cpu_ns": 15625000
+}

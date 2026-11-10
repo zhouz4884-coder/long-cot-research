@@ -1,0 +1,874 @@
+{
+  "status": "PASS_D46_ACTUAL_OLD_DEVELOPMENT_CALIBRATION",
+  "sources": {
+    "baseline_commit": "efedfee0bb10ffbb778cec05f7e778622f404970",
+    "published_d45_sha256": {
+      "D45_DELIVERY_AUDIT.json": "cf58caadac16864861e0bf8e3562c55252739b08578e307aa073f54ed47575ec",
+      "D45_RESULTS.json": "5d53b28adcdb0a210d8018394051d48bac84fee9a88d24aadc3a08662ed2d570",
+      "D45_POSTSCORE_DIAGNOSTICS.json": "c0fc3355d2b586b0af11e7eb295ae74a4f6cf050f408d9ba0468ec53d2ee0fc6",
+      "D45_COHORT_FREEZE.json": "f6e2c37da342ac2dfe3893fedb0551034ce1ed9d2b5a3f3dd1c0a3833c06918b",
+      "D45_CLAIM_READOUT_FREEZE.json": "0d826046686b427434e27304bde07ad253cea3645ae9f947af0d0ca790429bb5",
+      "D45_SCOPE_SENSITIVITY_AUDIT.json": "7c8ad12b990ccab3f58098b077ed299c40c3d84ad7d45567555004ef036527ae",
+      "D45_SCOPE_SENSITIVITY_READOUT.json": "037ff68f6f9b2c86a81c1a52f7a016c50165d77868e2a7645d30954ce848cd3f"
+    },
+    "old_blind_projection_sha256": "a01bd5adec51a3ffec8926b549155a349ef5c910ea6d83ee1e92e217ad3ba757",
+    "heldout_identity_only_sha256": "b37ca3a8574e4cbe2eb7da7ccfe379c2138395ffdf2b8eb91d4cf81c1866219b",
+    "heldout_disjoint": true
+  },
+  "observation_rules_sha256": "ac82afe29ec5fbe6feee48b0d97be700e32560de305c70043e456b5a4e41af45",
+  "extractor_sha256": "468ec744124de579afafda682d2e00bb3caffe2ff0f710005d5c21d8a1139243",
+  "point_verifier_sha256": "ead84d2e0f69955f27d20ab83ab34d95dd732642a63dbadbd7685d079434f76d",
+  "calibration_code_sha256": "83b210c00d267498847a052beca604340dd6f49b7e3f8da1d8f16c3b2b470628",
+  "controls": [
+    {
+      "sample_id": "2010-I-14:draw-02",
+      "question_sha256": "6e8a142a1a6291b42579b03b840b1888350a8fa27bb52c187db2aa9134f42cb4",
+      "response_sha256": "427dbe6726df570edd982415ef80dd7daefb4984d334e1b3b18bd00499eba28f",
+      "strict_readout": {
+        "early": {
+          "status": "NO_COMPLETE_SCOPED_POINT",
+          "value": null,
+          "rational": null,
+          "scope_status": "UNBOUND",
+          "complete_explicit_candidate": false,
+          "observed_characters": 12000,
+          "observation_prefix_sha256": "fda1fef50adfd347d9eee7b9b494bf08a51d3c6219c82c8bab8f7b0f354186db",
+          "observation_char_span_in_response": [
+            7,
+            12007
+          ],
+          "lookback_characters": 3000,
+          "event_status_counts": {}
+        },
+        "late": {
+          "status": "LATER_UNSCOPED_BOX",
+          "value": null,
+          "rational": null,
+          "scope_status": "UNBOUND",
+          "complete_explicit_candidate": false,
+          "char_span_in_response": [
+            45702,
+            45713
+          ],
+          "source_excerpt_sha256": "8ff8c500d3cf4ea1b6824bd423cbedde409cb19fb5452a36f06794c7b37dd418",
+          "observed_characters": 45707,
+          "observation_prefix_sha256": "68031c0fd0fd02d39269f7534f051e15d20c3d2e0070d4fa0c9c29e28e38db5d",
+          "observation_char_span_in_response": [
+            7,
+            45714
+          ],
+          "lookback_characters": 3000,
+          "event_status_counts": {
+            "ADJACENT_HYPOTHESIS_OR_TRIAL": 1,
+            "LATER_UNSCOPED_BOX": 2
+          }
+        },
+        "termination": "NATIVE_STOP",
+        "final": {
+          "status": "EXPLICIT_INTEGER",
+          "segment": "final",
+          "value": 109,
+          "scope_status": "DELIVERY_CLAIM",
+          "complete_explicit_candidate": true,
+          "extraction_method": "last_complete_box_in_final",
+          "char_span_in_response": [
+            48311,
+            48322
+          ],
+          "source_excerpt_sha256": "8ff8c500d3cf4ea1b6824bd423cbedde409cb19fb5452a36f06794c7b37dd418"
+        },
+        "native_final_eligible": true
+      },
+      "binding_elapsed": {
+        "wall_ns": 1447100,
+        "cpu_ns": 0
+      },
+      "paid_historical_input_tokens": 114,
+      "paid_historical_output_tokens": 18593,
+      "status": "THRESHOLD_REJECTED_AT_BINDING",
+      "candidate_issued": false,
+      "checker_calls": 0,
+      "work": 0,
+      "old_threshold_span": [
+        9466,
+        9493
+      ],
+      "old_threshold_excerpt_sha256": "dd88cbd6a48e5e2e3336a562ca35be939b6343d0e28131c6a881ec7bfdca10cc"
+    },
+    {
+      "sample_id": "2020-I-10:draw-03",
+      "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+      "response_sha256": "d9690170ef32e23c662ff6e4e13eaa6572dde7affa2686d88a576503a7257d86",
+      "strict_readout": {
+        "early": {
+          "status": "NO_COMPLETE_SCOPED_POINT",
+          "value": null,
+          "rational": null,
+          "scope_status": "UNBOUND",
+          "complete_explicit_candidate": false,
+          "observed_characters": 12000,
+          "observation_prefix_sha256": "17cc354f8e2ed776e0603f6d301b1f24b45ffff7375ff8706c4122579f8de539",
+          "observation_char_span_in_response": [
+            7,
+            12007
+          ],
+          "lookback_characters": 3000,
+          "event_status_counts": {}
+        },
+        "late": {
+          "status": "EXPLICIT_SCOPED_POINT",
+          "scope_status": "ORIGINAL_REQUESTED_SCALAR",
+          "direction": "MIN",
+          "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+          "complete_explicit_candidate": true,
+          "value": 23,
+          "rational": {
+            "numerator": 23,
+            "denominator": 1
+          },
+          "assertion_span": [
+            39083,
+            39134
+          ],
+          "assertion_sha256": "8db7bff1c9cbefb30a5440de3cc00c866679dcabc4f2f8458e38a4162678cb36",
+          "numeric_span": [
+            39131,
+            39133
+          ],
+          "numeric_text": "23",
+          "numeric_sha256": "535fa30d7e25dd8a49f1536779734ec8286108d115da5045d77f3b4185d8f790",
+          "assertion_operator_receipt": {
+            "char_span_in_response": [
+              39128,
+              39131
+            ],
+            "source_excerpt_sha256": "523bdb19151aebc2998bf24daecc767a245f7746559137ae875da7fd8b6a7f70"
+          },
+          "subject_receipt": {
+            "alias_index": 0,
+            "normalization": "one_value_of_prefix_removed",
+            "char_span_in_response": [
+              39109,
+              39128
+            ],
+            "source_excerpt_sha256": "3fe4679c51d88165f86662b637235b487d85293dbfe55ccc6f7d1851a85e9282"
+          },
+          "direction_receipt": {
+            "char_span_in_response": [
+              39094,
+              39099
+            ],
+            "source_excerpt_sha256": "6bab65a2bddec8af5dbc7f8b24ef22fc58acc385abcde4a6c4e34387d3b29261"
+          },
+          "extraction_method": "explicit_target_box",
+          "char_span_in_response": [
+            39090,
+            39141
+          ],
+          "source_excerpt_sha256": "8db7bff1c9cbefb30a5440de3cc00c866679dcabc4f2f8458e38a4162678cb36",
+          "observed_characters": 39136,
+          "observation_prefix_sha256": "6bffc00a19db74664c27cc834d28edb1ca2a8d552e1e436daa3e44405ca5a7b0",
+          "observation_char_span_in_response": [
+            7,
+            39143
+          ],
+          "lookback_characters": 3000,
+          "event_status_counts": {
+            "EXPLICIT_SCOPED_POINT": 2
+          }
+        },
+        "termination": "NATIVE_STOP",
+        "final": {
+          "status": "EXPLICIT_INTEGER",
+          "segment": "final",
+          "value": 23,
+          "scope_status": "DELIVERY_CLAIM",
+          "complete_explicit_candidate": true,
+          "extraction_method": "last_complete_box_in_final",
+          "char_span_in_response": [
+            41535,
+            41545
+          ],
+          "source_excerpt_sha256": "dcb940d89fea4bc8e7dca7da2352e49955e0729fede3c19c7826ee0bb6c1722f"
+        },
+        "native_final_eligible": true
+      },
+      "binding_elapsed": {
+        "wall_ns": 1382800,
+        "cpu_ns": 0
+      },
+      "paid_historical_input_tokens": 99,
+      "paid_historical_output_tokens": 18280,
+      "status": "OLD_BOUND_POINT_REFUTED",
+      "binding_route": "D46_STRICT_ACTUAL_OLD_SCOPE",
+      "role_review": {
+        "basis": "D46 independent old-span role check and D45 strict receipt",
+        "sample_id": "2020-I-10:draw-03",
+        "old_declared_span_sha256": "4f66b9cf734fa24c60789ecc6e7834f5cd51e0e867b45a960692d9cab02b1112",
+        "assertion_sha256": "8db7bff1c9cbefb30a5440de3cc00c866679dcabc4f2f8458e38a4162678cb36",
+        "prefix_sha256": "6bffc00a19db74664c27cc834d28edb1ca2a8d552e1e436daa3e44405ca5a7b0"
+      },
+      "candidate_issued": true,
+      "point_receipt": {
+        "verifier_id": "d46.reviewed-point-verifier",
+        "verifier_version": 1,
+        "contract_sha256": "1ab5b284aa78618e7476465cc4b301452de6c65c9ddf3735658508d4941c4c4a",
+        "candidate_sha256": "62f349d97a44e518ff9b114407edb522e3a44a69fb2f736b0c2843e99270aa68",
+        "evidence_sha256": "b68d3270cd48fa311ce63c862b90070b5fb3a9fb94a2d3ae4ff81fb46181a84c",
+        "authority": "REJECT_THIS_VALUE_ONLY",
+        "work": 9,
+        "status": "PROVEN_INFEASIBLE",
+        "reason": "COMPLETE_REVIEWED_POINT_EXCLUSION",
+        "contract": {
+          "binding": {
+            "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+            "objective_id": "minimum-power-divisibility-sum",
+            "scope_sha256": "007098287ab85e3518256565862555eb5f099cb9793622169b94fa7ba45d8c54",
+            "constraints_sha256": "11cb473f19dbe0f56cdaefb77a52d02c886c6f2123c174af850079709e6e11ee",
+            "direction": "MIN"
+          },
+          "required_constraints": [
+            "positive_pair",
+            "sum_coprime_210",
+            "power_divisibility",
+            "ordinary_nondivisibility"
+          ],
+          "checker_id": "d46.old-development",
+          "checker_version": 1,
+          "checker_entrypoint": "prime_sum",
+          "checker_source_sha256": "83b210c00d267498847a052beca604340dd6f49b7e3f8da1d8f16c3b2b470628",
+          "exclusion_kind": "EXACT_CONTRADICTION",
+          "proof_sha256": "592843bbf44e2790181793863adc183ffd3e9393ae1d7adcc6a02351c2e155b7",
+          "review_sha256": "dfbc3dcad6bb624638f6ead3414e0f115ae6dfdd134f586ceeb252ecfbe10b64"
+        },
+        "candidate": {
+          "binding": {
+            "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+            "objective_id": "minimum-power-divisibility-sum",
+            "scope_sha256": "007098287ab85e3518256565862555eb5f099cb9793622169b94fa7ba45d8c54",
+            "constraints_sha256": "11cb473f19dbe0f56cdaefb77a52d02c886c6f2123c174af850079709e6e11ee",
+            "direction": "MIN"
+          },
+          "sample_id": "2020-I-10:draw-03",
+          "response_sha256": "d9690170ef32e23c662ff6e4e13eaa6572dde7affa2686d88a576503a7257d86",
+          "observed_prefix_sha256": "6bffc00a19db74664c27cc834d28edb1ca2a8d552e1e436daa3e44405ca5a7b0",
+          "numeric_span": [
+            39131,
+            39133
+          ],
+          "numeric_text": "23",
+          "assertion_span": [
+            39083,
+            39134
+          ],
+          "assertion_sha256": "8db7bff1c9cbefb30a5440de3cc00c866679dcabc4f2f8458e38a4162678cb36",
+          "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+          "assertion_review_sha256": "0fc8a67f71113b932653995a8fd7fd46a850b06ddbd0ed7ed203cea999899892"
+        },
+        "request_number": 1,
+        "checked_value": "23",
+        "checker_calls": 1,
+        "operation_charges": [
+          [
+            "integer_comparison",
+            1
+          ],
+          [
+            "integer_square_root",
+            1
+          ],
+          [
+            "integer_remainder",
+            3
+          ],
+          [
+            "integer_nonzero_comparison",
+            3
+          ],
+          [
+            "exclusion_proof",
+            1
+          ]
+        ],
+        "denied_operation": null,
+        "evidence": {
+          "status": "PROVEN_INFEASIBLE",
+          "proof_kind": "EXACT_CONTRADICTION",
+          "details": [
+            [
+              "prime_sum",
+              23
+            ],
+            [
+              "trial_limit",
+              4
+            ],
+            [
+              "trial_remainders",
+              "1,2,3"
+            ],
+            [
+              "proof",
+              "A prime divisor of n>1 also divides m and hence prime m+n, impossible with n<m+n. n=1 violates nondivisibility."
+            ]
+          ],
+          "complete": true,
+          "covered_constraints": [
+            "positive_pair",
+            "power_divisibility",
+            "ordinary_nondivisibility"
+          ],
+          "fiber_expected": null,
+          "fiber_visited": null
+        },
+        "cpu_ns": 0,
+        "wall_ns": 206000,
+        "receipt_sha256": "8f4d281d85898bb070da89ecbee0340ff07e9ec182483d864b2799c08f578c39"
+      },
+      "batch_cpu_profile": {
+        "repetitions": 3968,
+        "thread_cpu_ns": 31250000,
+        "wall_ns": 36052000,
+        "scope": "Exact arithmetic plus repeat consistency only. Separate from the single full verifier receipt."
+      }
+    },
+    {
+      "sample_id": "2021-II-13:draw-07",
+      "question_sha256": "4b12b8de4e0ab89bea80eb624cb59454ccec075df16bc6310eeb927d385ad4f9",
+      "response_sha256": "8328f15a773cfa06ebc2694ba84c9e36179b575f6b92ce554972a5dd6b3c0cf8",
+      "strict_readout": {
+        "early": {
+          "status": "NO_COMPLETE_SCOPED_POINT",
+          "value": null,
+          "rational": null,
+          "scope_status": "UNBOUND",
+          "complete_explicit_candidate": false,
+          "observed_characters": 12000,
+          "observation_prefix_sha256": "808e489ac69b52e21a3d496fe9c780985f7494940400254ab8e76bb0bc838f9c",
+          "observation_char_span_in_response": [
+            7,
+            12007
+          ],
+          "lookback_characters": 3000,
+          "event_status_counts": {}
+        },
+        "late": {
+          "status": "LATER_UNSCOPED_BOX",
+          "value": null,
+          "rational": null,
+          "scope_status": "UNBOUND",
+          "complete_explicit_candidate": false,
+          "char_span_in_response": [
+            39772,
+            39783
+          ],
+          "source_excerpt_sha256": "8b718e45951f0fe003e507f26e82e50c6836414e34b025200953d376b45b23db",
+          "observed_characters": 39777,
+          "observation_prefix_sha256": "37ba9d031449cb873d760ab7085690b4487af9f1e59d7367c167f23110b70691",
+          "observation_char_span_in_response": [
+            7,
+            39784
+          ],
+          "lookback_characters": 3000,
+          "event_status_counts": {
+            "LATER_UNSCOPED_BOX": 2
+          }
+        },
+        "termination": "NATIVE_STOP",
+        "final": {
+          "status": "EXPLICIT_INTEGER",
+          "segment": "final",
+          "value": 397,
+          "scope_status": "DELIVERY_CLAIM",
+          "complete_explicit_candidate": true,
+          "extraction_method": "last_complete_box_in_final",
+          "char_span_in_response": [
+            42118,
+            42129
+          ],
+          "source_excerpt_sha256": "8b718e45951f0fe003e507f26e82e50c6836414e34b025200953d376b45b23db"
+        },
+        "native_final_eligible": true
+      },
+      "binding_elapsed": {
+        "wall_ns": 1203300,
+        "cpu_ns": 0
+      },
+      "paid_historical_input_tokens": 57,
+      "paid_historical_output_tokens": 22772,
+      "status": "OLD_BOUND_POINT_REFUTED",
+      "binding_route": "D45_INDEPENDENT_BLIND_ROLE_REVIEW_ONLY",
+      "role_review": {
+        "basis": "D45 frozen gold-blind role review, development only",
+        "job_id": "2021-II-13:draw-07@late",
+        "review_reason": "FINAL_FIRST_VALID_INDEX",
+        "review_output_sha256": "5fd7cdf905a2f1789f3db5ad6d050a1adf6b75535faf96ee19992fe8b07e463a",
+        "reviewed_box_sha256": "8b718e45951f0fe003e507f26e82e50c6836414e34b025200953d376b45b23db"
+      },
+      "candidate_issued": true,
+      "point_receipt": {
+        "verifier_id": "d46.reviewed-point-verifier",
+        "verifier_version": 1,
+        "contract_sha256": "ca7ab1171921fc541bcb20371d45af73e427bb83632efdd2794366e3e0c353eb",
+        "candidate_sha256": "652cf383dd58a255157ca9d3d3d783ee577030e16bf87afae6931dac829fe4f5",
+        "evidence_sha256": "d68b18aa705f5fb3d809dbbbf64d75afef5b47df1fa8ef3e97dc847a1a0876b0",
+        "authority": "REJECT_THIS_VALUE_ONLY",
+        "work": 9,
+        "status": "PROVEN_INFEASIBLE",
+        "reason": "COMPLETE_REVIEWED_POINT_EXCLUSION",
+        "contract": {
+          "binding": {
+            "question_sha256": "4b12b8de4e0ab89bea80eb624cb59454ccec075df16bc6310eeb927d385ad4f9",
+            "objective_id": "minimum-modular-sequence-index",
+            "scope_sha256": "c2e38f1f25801573a2170b5322e2ba915cfd5f21a8f2dd98df4219be056b4aea",
+            "constraints_sha256": "f5ac2d345d3d35ca8e313e373461f4af3fe5ab9822bf1b491fe05322f6deef36",
+            "direction": "MIN"
+          },
+          "required_constraints": [
+            "positive_n",
+            "residue_zero"
+          ],
+          "checker_id": "d46.old-development",
+          "checker_version": 1,
+          "checker_entrypoint": "modular_index",
+          "checker_source_sha256": "83b210c00d267498847a052beca604340dd6f49b7e3f8da1d8f16c3b2b470628",
+          "exclusion_kind": "EXACT_CONTRADICTION",
+          "proof_sha256": "763483375b0e4e89964ba5bd304d9dcea8f9e2d8a18b497f75922c0705208745",
+          "review_sha256": "381af893664c4d7828337aafdf062ab34a02bf0f0a3483e304301e8ca67f1161"
+        },
+        "candidate": {
+          "binding": {
+            "question_sha256": "4b12b8de4e0ab89bea80eb624cb59454ccec075df16bc6310eeb927d385ad4f9",
+            "objective_id": "minimum-modular-sequence-index",
+            "scope_sha256": "c2e38f1f25801573a2170b5322e2ba915cfd5f21a8f2dd98df4219be056b4aea",
+            "constraints_sha256": "f5ac2d345d3d35ca8e313e373461f4af3fe5ab9822bf1b491fe05322f6deef36",
+            "direction": "MIN"
+          },
+          "sample_id": "2021-II-13:draw-07",
+          "response_sha256": "8328f15a773cfa06ebc2694ba84c9e36179b575f6b92ce554972a5dd6b3c0cf8",
+          "observed_prefix_sha256": "37ba9d031449cb873d760ab7085690b4487af9f1e59d7367c167f23110b70691",
+          "numeric_span": [
+            39673,
+            39676
+          ],
+          "numeric_text": "397",
+          "assertion_span": [
+            39671,
+            39707
+          ],
+          "assertion_sha256": "975cd0a1548158423e92d8b4312f3ad6f213b6b5d1699858c2f9cd85a608d965",
+          "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+          "assertion_review_sha256": "5fd7cdf905a2f1789f3db5ad6d050a1adf6b75535faf96ee19992fe8b07e463a"
+        },
+        "request_number": 1,
+        "checked_value": "397",
+        "checker_calls": 1,
+        "operation_charges": [
+          [
+            "integer_comparison",
+            3
+          ],
+          [
+            "integer_addition",
+            1
+          ],
+          [
+            "integer_remainder",
+            3
+          ],
+          [
+            "integer_multiplication",
+            1
+          ],
+          [
+            "exclusion_proof",
+            1
+          ]
+        ],
+        "denied_operation": null,
+        "evidence": {
+          "status": "PROVEN_INFEASIBLE",
+          "proof_kind": "EXACT_CONTRADICTION",
+          "details": [
+            [
+              "n_mod125",
+              22
+            ],
+            [
+              "eight_n_mod125",
+              51
+            ],
+            [
+              "necessary_scaled_residue",
+              1
+            ],
+            [
+              "proof",
+              "For n>=3 the 5-power vanishes modulo 125. Euler gives 2^100=1, so 8*2^n=1 when n+3 is a multiple of 100."
+            ]
+          ],
+          "complete": true,
+          "covered_constraints": [
+            "positive_n",
+            "residue_zero"
+          ],
+          "fiber_expected": null,
+          "fiber_visited": null
+        },
+        "cpu_ns": 0,
+        "wall_ns": 200900,
+        "receipt_sha256": "28d4703768854395ac9a0bb7fe2b0b873485bb89d624aedb31257a5b6195740d"
+      },
+      "batch_cpu_profile": {
+        "repetitions": 3968,
+        "thread_cpu_ns": 31250000,
+        "wall_ns": 34020700,
+        "scope": "Exact arithmetic plus repeat consistency only. Separate from the single full verifier receipt."
+      }
+    }
+  ],
+  "adversarial_controls": [
+    {
+      "control": "incomplete_comparison",
+      "status": "NO_COMPLETE_SCOPED_POINT",
+      "synthetic_source_sha256": "9eb87bbd8d9eed116d110c06a7963962c13c6ba9e35413c78811c8398f98d0b3",
+      "candidate_issued": false,
+      "checker_calls": 0,
+      "work": 0,
+      "wall_ns": 29200,
+      "cpu_ns": 0
+    },
+    {
+      "control": "equality_threshold_not_input",
+      "status": "NO_COMPLETE_SCOPED_POINT",
+      "synthetic_source_sha256": "570bbea9c0afa53b0d5748b9f26f74ec13422b9430e3804c08171445cd3afb31",
+      "candidate_issued": false,
+      "checker_calls": 0,
+      "work": 0,
+      "wall_ns": 22900,
+      "cpu_ns": 0
+    },
+    {
+      "control": "wrong_original_object",
+      "status": "NO_COMPLETE_SCOPED_POINT",
+      "synthetic_source_sha256": "429a60d13d3d31e20aa32ffc99a70a9e4c29896adaa8d059c45ddb288b1ab00e",
+      "candidate_issued": false,
+      "checker_calls": 0,
+      "work": 0,
+      "wall_ns": 21600,
+      "cpu_ns": 0
+    },
+    {
+      "control": "function_value_not_index",
+      "status": "NO_COMPLETE_SCOPED_POINT",
+      "synthetic_source_sha256": "7485511bad0f8e2b24f4d7e1dd7133af5fd94de54968cf1c2f0e277794f5a8d1",
+      "candidate_issued": false,
+      "checker_calls": 0,
+      "work": 0,
+      "wall_ns": 20300,
+      "cpu_ns": 0
+    },
+    {
+      "control": "malformed_sign",
+      "status": "INCOMPLETE_OR_NONSCALAR_TARGET_ASSERTION",
+      "synthetic_source_sha256": "64ac66602fe3777d7353d9cafb7f90d9f20ebe0040acfe6dc96dde7508f9c96c",
+      "candidate_issued": false,
+      "checker_calls": 0,
+      "work": 0,
+      "wall_ns": 29600,
+      "cpu_ns": 0
+    },
+    {
+      "control": "changed_constraints",
+      "verifier_id": "d46.reviewed-point-verifier",
+      "verifier_version": 1,
+      "contract_sha256": "1ab5b284aa78618e7476465cc4b301452de6c65c9ddf3735658508d4941c4c4a",
+      "candidate_sha256": "04587e9461edc4bd0c669e04579122b946d12d8485807a4d89f2c2f26c5d5da0",
+      "evidence_sha256": null,
+      "authority": "NONE",
+      "work": 0,
+      "status": "UNKNOWN",
+      "reason": "ORIGINAL_BINDING_MISMATCH",
+      "contract": {
+        "binding": {
+          "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+          "objective_id": "minimum-power-divisibility-sum",
+          "scope_sha256": "007098287ab85e3518256565862555eb5f099cb9793622169b94fa7ba45d8c54",
+          "constraints_sha256": "11cb473f19dbe0f56cdaefb77a52d02c886c6f2123c174af850079709e6e11ee",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_pair",
+          "sum_coprime_210",
+          "power_divisibility",
+          "ordinary_nondivisibility"
+        ],
+        "checker_id": "d46.old-development",
+        "checker_version": 1,
+        "checker_entrypoint": "prime_sum",
+        "checker_source_sha256": "83b210c00d267498847a052beca604340dd6f49b7e3f8da1d8f16c3b2b470628",
+        "exclusion_kind": "EXACT_CONTRADICTION",
+        "proof_sha256": "592843bbf44e2790181793863adc183ffd3e9393ae1d7adcc6a02351c2e155b7",
+        "review_sha256": "dfbc3dcad6bb624638f6ead3414e0f115ae6dfdd134f586ceeb252ecfbe10b64"
+      },
+      "candidate": {
+        "binding": {
+          "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+          "objective_id": "minimum-power-divisibility-sum",
+          "scope_sha256": "007098287ab85e3518256565862555eb5f099cb9793622169b94fa7ba45d8c54",
+          "constraints_sha256": "cb94dff5a955563e7c31baf720ce4c609f70a829af12c37192ea290411ec4f82",
+          "direction": "MIN"
+        },
+        "sample_id": "2020-I-10:draw-03",
+        "response_sha256": "d9690170ef32e23c662ff6e4e13eaa6572dde7affa2686d88a576503a7257d86",
+        "observed_prefix_sha256": "6bffc00a19db74664c27cc834d28edb1ca2a8d552e1e436daa3e44405ca5a7b0",
+        "numeric_span": [
+          39131,
+          39133
+        ],
+        "numeric_text": "23",
+        "assertion_span": [
+          39083,
+          39134
+        ],
+        "assertion_sha256": "8db7bff1c9cbefb30a5440de3cc00c866679dcabc4f2f8458e38a4162678cb36",
+        "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+        "assertion_review_sha256": "0fc8a67f71113b932653995a8fd7fd46a850b06ddbd0ed7ed203cea999899892"
+      },
+      "request_number": 1,
+      "checked_value": null,
+      "checker_calls": 0,
+      "operation_charges": [],
+      "denied_operation": null,
+      "evidence": null,
+      "cpu_ns": 0,
+      "wall_ns": 25300,
+      "receipt_sha256": "3e75069011cc546c1eff10df9982b6374777ff12a2545a1dfebfcd6f6c98fd0c"
+    },
+    {
+      "control": "changed_objective",
+      "verifier_id": "d46.reviewed-point-verifier",
+      "verifier_version": 1,
+      "contract_sha256": "1ab5b284aa78618e7476465cc4b301452de6c65c9ddf3735658508d4941c4c4a",
+      "candidate_sha256": "49fe25948296bd70580f58346a10b1b1b0324bdf37765a4834d186bc8606cb9c",
+      "evidence_sha256": null,
+      "authority": "NONE",
+      "work": 0,
+      "status": "UNKNOWN",
+      "reason": "ORIGINAL_BINDING_MISMATCH",
+      "contract": {
+        "binding": {
+          "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+          "objective_id": "minimum-power-divisibility-sum",
+          "scope_sha256": "007098287ab85e3518256565862555eb5f099cb9793622169b94fa7ba45d8c54",
+          "constraints_sha256": "11cb473f19dbe0f56cdaefb77a52d02c886c6f2123c174af850079709e6e11ee",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_pair",
+          "sum_coprime_210",
+          "power_divisibility",
+          "ordinary_nondivisibility"
+        ],
+        "checker_id": "d46.old-development",
+        "checker_version": 1,
+        "checker_entrypoint": "prime_sum",
+        "checker_source_sha256": "83b210c00d267498847a052beca604340dd6f49b7e3f8da1d8f16c3b2b470628",
+        "exclusion_kind": "EXACT_CONTRADICTION",
+        "proof_sha256": "592843bbf44e2790181793863adc183ffd3e9393ae1d7adcc6a02351c2e155b7",
+        "review_sha256": "dfbc3dcad6bb624638f6ead3414e0f115ae6dfdd134f586ceeb252ecfbe10b64"
+      },
+      "candidate": {
+        "binding": {
+          "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+          "objective_id": "minimum-m",
+          "scope_sha256": "007098287ab85e3518256565862555eb5f099cb9793622169b94fa7ba45d8c54",
+          "constraints_sha256": "11cb473f19dbe0f56cdaefb77a52d02c886c6f2123c174af850079709e6e11ee",
+          "direction": "MIN"
+        },
+        "sample_id": "2020-I-10:draw-03",
+        "response_sha256": "d9690170ef32e23c662ff6e4e13eaa6572dde7affa2686d88a576503a7257d86",
+        "observed_prefix_sha256": "6bffc00a19db74664c27cc834d28edb1ca2a8d552e1e436daa3e44405ca5a7b0",
+        "numeric_span": [
+          39131,
+          39133
+        ],
+        "numeric_text": "23",
+        "assertion_span": [
+          39083,
+          39134
+        ],
+        "assertion_sha256": "8db7bff1c9cbefb30a5440de3cc00c866679dcabc4f2f8458e38a4162678cb36",
+        "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+        "assertion_review_sha256": "0fc8a67f71113b932653995a8fd7fd46a850b06ddbd0ed7ed203cea999899892"
+      },
+      "request_number": 1,
+      "checked_value": null,
+      "checker_calls": 0,
+      "operation_charges": [],
+      "denied_operation": null,
+      "evidence": null,
+      "cpu_ns": 0,
+      "wall_ns": 17500,
+      "receipt_sha256": "0e573de163d9a2c4e1a78ee683902566a8775880ca044f3c132bd7da7fe19e9b"
+    },
+    {
+      "control": "changed_numeric_symbol",
+      "verifier_id": "d46.reviewed-point-verifier",
+      "verifier_version": 1,
+      "contract_sha256": "1ab5b284aa78618e7476465cc4b301452de6c65c9ddf3735658508d4941c4c4a",
+      "candidate_sha256": "966da1bdbae4afae0b554cff5b972b5f5de1bc8b03dd068a5491fe2fad2f889f",
+      "evidence_sha256": null,
+      "authority": "NONE",
+      "work": 0,
+      "status": "UNKNOWN",
+      "reason": "ASSERTION_OR_NUMERIC_SPAN_MISMATCH",
+      "contract": {
+        "binding": {
+          "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+          "objective_id": "minimum-power-divisibility-sum",
+          "scope_sha256": "007098287ab85e3518256565862555eb5f099cb9793622169b94fa7ba45d8c54",
+          "constraints_sha256": "11cb473f19dbe0f56cdaefb77a52d02c886c6f2123c174af850079709e6e11ee",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_pair",
+          "sum_coprime_210",
+          "power_divisibility",
+          "ordinary_nondivisibility"
+        ],
+        "checker_id": "d46.old-development",
+        "checker_version": 1,
+        "checker_entrypoint": "prime_sum",
+        "checker_source_sha256": "83b210c00d267498847a052beca604340dd6f49b7e3f8da1d8f16c3b2b470628",
+        "exclusion_kind": "EXACT_CONTRADICTION",
+        "proof_sha256": "592843bbf44e2790181793863adc183ffd3e9393ae1d7adcc6a02351c2e155b7",
+        "review_sha256": "dfbc3dcad6bb624638f6ead3414e0f115ae6dfdd134f586ceeb252ecfbe10b64"
+      },
+      "candidate": {
+        "binding": {
+          "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+          "objective_id": "minimum-power-divisibility-sum",
+          "scope_sha256": "007098287ab85e3518256565862555eb5f099cb9793622169b94fa7ba45d8c54",
+          "constraints_sha256": "11cb473f19dbe0f56cdaefb77a52d02c886c6f2123c174af850079709e6e11ee",
+          "direction": "MIN"
+        },
+        "sample_id": "2020-I-10:draw-03",
+        "response_sha256": "d9690170ef32e23c662ff6e4e13eaa6572dde7affa2686d88a576503a7257d86",
+        "observed_prefix_sha256": "6bffc00a19db74664c27cc834d28edb1ca2a8d552e1e436daa3e44405ca5a7b0",
+        "numeric_span": [
+          39131,
+          39133
+        ],
+        "numeric_text": "24",
+        "assertion_span": [
+          39083,
+          39134
+        ],
+        "assertion_sha256": "8db7bff1c9cbefb30a5440de3cc00c866679dcabc4f2f8458e38a4162678cb36",
+        "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+        "assertion_review_sha256": "0fc8a67f71113b932653995a8fd7fd46a850b06ddbd0ed7ed203cea999899892"
+      },
+      "request_number": 1,
+      "checked_value": null,
+      "checker_calls": 0,
+      "operation_charges": [],
+      "denied_operation": null,
+      "evidence": null,
+      "cpu_ns": 0,
+      "wall_ns": 144800,
+      "receipt_sha256": "71bf04e997e2a6ffd6ae3910f8550991209c55f384ee8ed6ff3090e051d0f883"
+    },
+    {
+      "control": "changed_prefix",
+      "verifier_id": "d46.reviewed-point-verifier",
+      "verifier_version": 1,
+      "contract_sha256": "1ab5b284aa78618e7476465cc4b301452de6c65c9ddf3735658508d4941c4c4a",
+      "candidate_sha256": "62f349d97a44e518ff9b114407edb522e3a44a69fb2f736b0c2843e99270aa68",
+      "evidence_sha256": null,
+      "authority": "NONE",
+      "work": 0,
+      "status": "UNKNOWN",
+      "reason": "OBSERVED_PREFIX_MISMATCH",
+      "contract": {
+        "binding": {
+          "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+          "objective_id": "minimum-power-divisibility-sum",
+          "scope_sha256": "007098287ab85e3518256565862555eb5f099cb9793622169b94fa7ba45d8c54",
+          "constraints_sha256": "11cb473f19dbe0f56cdaefb77a52d02c886c6f2123c174af850079709e6e11ee",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_pair",
+          "sum_coprime_210",
+          "power_divisibility",
+          "ordinary_nondivisibility"
+        ],
+        "checker_id": "d46.old-development",
+        "checker_version": 1,
+        "checker_entrypoint": "prime_sum",
+        "checker_source_sha256": "83b210c00d267498847a052beca604340dd6f49b7e3f8da1d8f16c3b2b470628",
+        "exclusion_kind": "EXACT_CONTRADICTION",
+        "proof_sha256": "592843bbf44e2790181793863adc183ffd3e9393ae1d7adcc6a02351c2e155b7",
+        "review_sha256": "dfbc3dcad6bb624638f6ead3414e0f115ae6dfdd134f586ceeb252ecfbe10b64"
+      },
+      "candidate": {
+        "binding": {
+          "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+          "objective_id": "minimum-power-divisibility-sum",
+          "scope_sha256": "007098287ab85e3518256565862555eb5f099cb9793622169b94fa7ba45d8c54",
+          "constraints_sha256": "11cb473f19dbe0f56cdaefb77a52d02c886c6f2123c174af850079709e6e11ee",
+          "direction": "MIN"
+        },
+        "sample_id": "2020-I-10:draw-03",
+        "response_sha256": "d9690170ef32e23c662ff6e4e13eaa6572dde7affa2686d88a576503a7257d86",
+        "observed_prefix_sha256": "6bffc00a19db74664c27cc834d28edb1ca2a8d552e1e436daa3e44405ca5a7b0",
+        "numeric_span": [
+          39131,
+          39133
+        ],
+        "numeric_text": "23",
+        "assertion_span": [
+          39083,
+          39134
+        ],
+        "assertion_sha256": "8db7bff1c9cbefb30a5440de3cc00c866679dcabc4f2f8458e38a4162678cb36",
+        "assertion_role": "ASSERTED_ORIGINAL_CANDIDATE",
+        "assertion_review_sha256": "0fc8a67f71113b932653995a8fd7fd46a850b06ddbd0ed7ed203cea999899892"
+      },
+      "request_number": 1,
+      "checked_value": null,
+      "checker_calls": 0,
+      "operation_charges": [],
+      "denied_operation": null,
+      "evidence": null,
+      "cpu_ns": 0,
+      "wall_ns": 75500,
+      "receipt_sha256": "f73cb014477a990dfe1e7d6c3f46ddb7ca9d1e81406eb0bc511d08a07b805b8b"
+    }
+  ],
+  "ordinary_same_point_controls": {
+    "2020-I-10": {
+      "fixed_positive_pairs_considered": 22,
+      "unit_n_rejections": 1,
+      "gcd_calls": 21,
+      "feasible_pairs": 0,
+      "wall_ns": 8300,
+      "cpu_ns": 0
+    },
+    "2021-II-13": {
+      "modular_power_calls": 2,
+      "residual": 400,
+      "wall_ns": 3700,
+      "cpu_ns": 0
+    }
+  },
+  "counts": {
+    "old_cases": 3,
+    "strict_old_positive": 1,
+    "prior_blind_review_positive": 1,
+    "threshold_without_candidate_or_call": 1,
+    "adversarial_controls_without_call": 9
+  },
+  "scope": "Old development only. No fresh heldout trace, label, new model tokens or gate contribution. The 397 role is prior independently reviewed sensitivity, not a D46 strict binding."
+}

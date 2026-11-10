@@ -1,0 +1,36 @@
+{
+  "status": "QUESTION_ONLY_STRUCTURAL_COMPLETE_CONTROLS_BEFORE_HELDOUT",
+  "cohort_sha256": "b37ca3a8574e4cbe2eb7da7ccfe379c2138395ffdf2b8eb91d4cf81c1866219b",
+  "cost_scope": "Fixed exact formulas and separately charged validation. No archive response, gold or ordinary complete-oracle output read.",
+  "rows": [
+    {
+      "case_id": "2013-II-6",
+      "question_sha256": "40a21503b40e4906fc8d0f05bf932a5e1088a55c6d19dbe2cbe5606bd891b1c8",
+      "optimum": 282,
+      "completeness_argument": "For k<500 adjacent square gaps are at most 999 and cannot skip a complete block. For k=500+t the thousand-block index is 250+t+floor(t²/1000). The first skipped block occurs at t=isqrt(999)=31, before (t+1)² crosses 1000.",
+      "construction_named_work": {
+        "integer_square_roots": 1,
+        "scalar_boundary_formulas": 3
+      },
+      "separate_validation_work": {
+        "fixed_point": 1,
+        "integer_square_root": 2
+      }
+    },
+    {
+      "case_id": "2021-II-15",
+      "question_sha256": "4c78b3b6b2d0a1ff42e590474eb24cf0e615885993446df24149299facf1af93",
+      "optimum": 258,
+      "completeness_argument": "With k=ceil sqrt(n) and δ=k²-n, opposite parity is necessary. Then 3δ=5k+8, δ is odd and δ<=2k-2. Thus k>=14 and k=5 mod 6, so the first valid k is 17. Every later square block has larger n.",
+      "construction_named_work": {
+        "affine_parity_boundary_formulas": 3
+      },
+      "separate_validation_work": {
+        "fixed_point": 1,
+        "integer_square_root": 1
+      }
+    }
+  ],
+  "wall_ns": 416800,
+  "cpu_ns": 0
+}

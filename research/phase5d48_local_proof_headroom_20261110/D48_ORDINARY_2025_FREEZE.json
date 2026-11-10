@@ -1,0 +1,473 @@
+{
+  "control_source_sha256": "759a27c660e99e356ae05fa0ce605f9df38128a64d1da10f366298e7da01fcbb",
+  "cost_boundary": "Each timed call includes its executable work. Manual derivation, initial PDF I/O and final JSON I/O are outside these receipts. Named operations have heterogeneous costs. Separate validation never supplies the ordinary construction's input.",
+  "problem_pdf_sha256": "ee5ce8e248dc4edae912ed0449dc4d504020d59ed914c806894d15f8fab9312b",
+  "question_freeze_sha256": "622e581c19323b1089f3fa1716ee130579edabede1200f20138eea38e82f84cd",
+  "rows": [
+    {
+      "case_id": "HMMT-2025-FEB-COMB-P03",
+      "complete_proof": "Each box has four balls and no singleton run, so all maximal runs have length two or four. Every run boundary is even. Pair the eight canonical consecutive pairs into four unordered boxes. Conversely any such pairing supplies a same-box neighbor to every ball.",
+      "exact_local_counterexample": {
+        "named_work": {
+          "canonical_pair_index_checks": 8,
+          "consecutiveness_tests": 1
+        },
+        "result": {
+          "consequent_false": true,
+          "fixed_canonical_pair_groups": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "premises_true": true
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 8300
+      },
+      "ordinary_complete": {
+        "named_work": {
+          "canonical_pair_count": 1,
+          "matching_count_multiplications": 4
+        },
+        "result": {
+          "answer": "105",
+          "atomic_pairs": 8
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 10100
+      },
+      "representative_local_assertion": "Every valid box must consist of four consecutive labels.",
+      "separate_independent_validation": {
+        "named_work": {
+          "ball_domain_and_uniqueness_checks": 16,
+          "box_capacity_checks": 4,
+          "exact_cover_states": 95,
+          "fixed_anchor_subset_checks": 2245,
+          "four_set_feasibility_checks": 1820,
+          "same_box_neighbor_checks": 16
+        },
+        "result": {
+          "independent_exact_cover_count": "105"
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 1390300
+      }
+    },
+    {
+      "case_id": "HMMT-2025-FEB-COMB-P05",
+      "complete_proof": "An Eulerian closed trail leaves even degrees. All 36 original odd vertices need one removed endpoint. Each of the four side groups has odd size and needs an odd removal cut. A cross-cut edge goes to a non-odd vertex because no grid door joins two different odd side groups. Thus at least four more removed endpoints and 20 removed doors are required. The four side matchings and two corner paths achieve 20. The full inner grid and intact inward doors connect all positive-degree vertices.",
+      "exact_local_counterexample": {
+        "named_work": {
+          "disjoint_support_checks": 1,
+          "original_grid_door_checks": 8,
+          "simple_cycle_distinctness_checks": 2
+        },
+        "result": {
+          "consequent_false": true,
+          "cycle_vertices": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            [
+              [
+                3,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                3
+              ]
+            ]
+          ],
+          "premises_true": true
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 18600
+      },
+      "ordinary_complete": {
+        "named_work": {
+          "common_side_group_parity_evaluations": 1,
+          "constructed_corner_path_deletions": 4,
+          "constructed_within_side_deletions": 16,
+          "deleted_degree_endpoint_bound_formulas": 1,
+          "grid_edge_count_formulas": 1
+        },
+        "result": {
+          "answer": "200",
+          "lower_deletions": 20,
+          "removed_edges": [
+            [
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ]
+            ],
+            [
+              [
+                2,
+                0
+              ],
+              [
+                3,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                4
+              ],
+              [
+                0,
+                5
+              ]
+            ],
+            [
+              [
+                4,
+                0
+              ],
+              [
+                5,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                6
+              ],
+              [
+                0,
+                7
+              ]
+            ],
+            [
+              [
+                6,
+                0
+              ],
+              [
+                7,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                9
+              ]
+            ],
+            [
+              [
+                8,
+                0
+              ],
+              [
+                9,
+                0
+              ]
+            ],
+            [
+              [
+                10,
+                1
+              ],
+              [
+                10,
+                2
+              ]
+            ],
+            [
+              [
+                1,
+                10
+              ],
+              [
+                2,
+                10
+              ]
+            ],
+            [
+              [
+                10,
+                3
+              ],
+              [
+                10,
+                4
+              ]
+            ],
+            [
+              [
+                3,
+                10
+              ],
+              [
+                4,
+                10
+              ]
+            ],
+            [
+              [
+                10,
+                5
+              ],
+              [
+                10,
+                6
+              ]
+            ],
+            [
+              [
+                5,
+                10
+              ],
+              [
+                6,
+                10
+              ]
+            ],
+            [
+              [
+                10,
+                7
+              ],
+              [
+                10,
+                8
+              ]
+            ],
+            [
+              [
+                7,
+                10
+              ],
+              [
+                8,
+                10
+              ]
+            ],
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            [
+              [
+                10,
+                9
+              ],
+              [
+                10,
+                10
+              ]
+            ],
+            [
+              [
+                9,
+                10
+              ],
+              [
+                10,
+                10
+              ]
+            ]
+          ]
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 20900
+      },
+      "representative_local_assertion": "Any even-degree door subset is the support of one closed trail using every chosen door.",
+      "separate_independent_validation": {
+        "named_work": {
+          "adjacency_insertions": 416,
+          "component_adjacencies_scanned": 8,
+          "duplicate_door_checks": 8,
+          "euler_doors_traversed": 200,
+          "original_edges_generated": 220,
+          "original_grid_door_checks": 8,
+          "remaining_degree_parity_checks": 119,
+          "used_cell_degree_parity_checks": 8
+        },
+        "result": {
+          "closed_trail_edges": 200,
+          "euler_vertex_sequence_sha256": "d6f77daf684245bc18ceb068597ced67abb4dff520b2beb79ad75b591cbcb94c",
+          "local_seen_support_vertices": 4,
+          "local_total_used_vertices": 8
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 602400
+      }
+    },
+    {
+      "case_id": "HMMT-2025-FEB-COMB-P07",
+      "complete_proof": "Pair projections are separated triples or alternating. If two disjoint letter intervals overlapped a third one, two copies of the third letter would be before the first boundary and two after the second, which is impossible. Thus alternating overlap forms ordered blocks. Each block repeats its first-occurrence permutation three times. Each global permutation and each subset of its 25 internal cuts yields one word.",
+      "exact_local_counterexample": {
+        "named_work": {
+          "compressed_projection_letter_occurrences": 6,
+          "global_repeated_order_consequent_checks": 1,
+          "partition_letter_visits": 26,
+          "two_gap_equality_checks": 2
+        },
+        "result": {
+          "consequent_false": true,
+          "distinguishing_projection": "aaabbb",
+          "fixed_repeat_blocks": [
+            "a",
+            "bcdefghijklmnopqrstuvwxyz"
+          ],
+          "premises_true": true
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 16400
+      },
+      "ordinary_complete": {
+        "named_work": {
+          "block_count_multiplications": 1,
+          "internal_cut_subset_cardinality": 1,
+          "permutation_count_multiplications": 25
+        },
+        "result": {
+          "answer": "13532215908553332190020108288000000",
+          "cut_subsets": 33554432,
+          "permutations": "403291461126605635584000000"
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 7700
+      },
+      "representative_local_assertion": "Every valid arrangement repeats one permutation of all letters three times.",
+      "separate_independent_validation": {
+        "named_work": {
+          "projected_letter_visits": 25350,
+          "two_gap_equality_checks": 676,
+          "two_letter_words_checked": 20
+        },
+        "result": {
+          "two_letter_patterns": [
+            "aaabbb",
+            "ababab",
+            "bababa",
+            "bbbaaa"
+          ],
+          "validated_local_unordered_pairs": 325
+        },
+        "thread_cpu_ns": 15625000,
+        "wall_ns": 3570800
+      }
+    },
+    {
+      "case_id": "HMMT-2025-FEB-COMB-P08",
+      "complete_proof": "After 100 synchronous steps each entry is the maximum of one cyclic window of width 201. For a fixed rank, each larger index on its left or right cuts a prefix or suffix from the start interval of windows containing it. Surviving ranks therefore each give one contiguous run of equal maxima, and the runs are counted by changes between adjacent windows. The maximum of their 202-position union is equally likely at every position. The maxima differ precisely when that index is an entering or departing endpoint.",
+      "exact_local_counterexample": {
+        "named_work": {
+          "cyclic_window_width_and_position_checks": 2,
+          "fixed_rank_bounds": 2,
+          "strictly_larger_neighbor_checks": 1
+        },
+        "result": {
+          "consequent_false": true,
+          "fixed_ring_rank_rule": "second-largest at index 0, largest at 1, index-1 elsewhere",
+          "premises_true": true,
+          "window_center": 1925,
+          "window_width": 201
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 6100
+      },
+      "ordinary_complete": {
+        "named_work": {
+          "exact_indicator_expectation_formulas": 1,
+          "unwrapped_window_geometry_checks": 1,
+          "window_width_formulas": 1
+        },
+        "result": {
+          "adjacent_union_width": 202,
+          "answer": "2025/101",
+          "window_width": 201
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 17900
+      },
+      "representative_local_assertion": "A surviving original value must have been largest in its own radius-100 neighborhood.",
+      "separate_independent_validation": {
+        "named_work": {
+          "direct_window_rank_reads": 402,
+          "small_circular_orderings": 120,
+          "small_window_maxima": 600
+        },
+        "result": {
+          "direct_windows_verified": 2,
+          "small_analog_expected_distinct": "5/2"
+        },
+        "thread_cpu_ns": 0,
+        "wall_ns": 231500
+      }
+    }
+  ],
+  "scope": "Original problem PDF only. Values are independent derivations. Local claims and witnesses are synthetic arithmetic controls.",
+  "status": "D48_2025_QUESTION_ONLY_ORDINARY_AND_LOCAL_CONTROLS_FROZEN",
+  "timer_resolution_seconds": {
+    "perf_counter": 1e-07,
+    "thread_time": 1e-07
+  }
+}

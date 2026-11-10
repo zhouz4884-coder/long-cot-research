@@ -1,0 +1,754 @@
+{
+  "status": "D48_2025_REASONING_ONLY_SCOPE_FROZEN_WITHOUT_FINAL_OR_GOLD",
+  "cohort_sha256": "622e581c19323b1089f3fa1716ee130579edabede1200f20138eea38e82f84cd",
+  "method_sha256": "f923abaf0455dfbcc5dc448ac492d9e765b0903753d99d1000757c6de12759f9",
+  "archive_audit_rules_sha256": "7992a6369e1c94aeb05628261cffbca5bc76026d0dc1a77839243a8427c1abd2",
+  "reasoning_only_source_sha256": "f3f97292118dc3431ce4c170f26a77209f97e2927c27678027bd5f5d953bf553",
+  "official_problem_pdf_sha256": "ee5ce8e248dc4edae912ed0449dc4d504020d59ed914c806894d15f8fab9312b",
+  "scope": "Only five 2025 draw-0 prefixes. Each review ended at a complete sentence inside 12000 Unicode characters. No post-limit reasoning, final, official answers, ordinary 2025 results or EOS evidence read.",
+  "counts": {
+    "rows": 5,
+    "typed_local_counterexamples": 2,
+    "typed_counterexamples_self_corrected_within_slice": 2,
+    "false_claims_with_non_dsl_exact_local_proof": 2,
+    "trial_only_no_authority": 1
+  },
+  "manual_review_cost_scope": "Not instrumented. Mechanical reconciliation and verifier timing are separate from manual reading, archive generation and any ordinary full solve.",
+  "mechanical_cost": {
+    "wall_ns": 7052100,
+    "cpu_ns": 0
+  },
+  "no_final_correctness_or_persistence_inference": true,
+  "rows": [
+    {
+      "case_id": "HMMT-2025-FEB-COMB-P03",
+      "sample_uid": "3d5260d790ed717536a120b8626a13cdc3a5a5912bcfeb0b055dd2188f67e9ed",
+      "draw_index": 0,
+      "model_name": "QED-Nano",
+      "archive_revision": "e3fb6c74f24eabf83413eb9e62b9816c1f3f7d2e",
+      "archive_conversation_sha256": "16323c9624cbb91c6d2ff33da9ba92053d40d5034ba8f9406ffbc43168d8ca02",
+      "archive_problem_sha256": "2512a9ba7a4b5924072fda32d58679cb573f9cdebefdd7878ac8469513853b2f",
+      "question_sha256": "2512a9ba7a4b5924072fda32d58679cb573f9cdebefdd7878ac8469513853b2f",
+      "reasoning_kind": "ARCHIVE_COT_POSSIBLY_SUMMARY",
+      "exact_native_eos_proven": false,
+      "read_limit_chars": 12000,
+      "reviewed_span_unicode_half_open": [
+        0,
+        11962
+      ],
+      "reviewed_prefix_sha256": "2ea2f280487738003790ebde58448de818b9da55560b673cf767565e9d781a18",
+      "review_status": "FALSE_LOCAL_SYMMETRY_CLAIM_OUTSIDE_SINGLE_WITNESS_DSL",
+      "earliest_relevant_span": {
+        "span_unicode_half_open": [
+          2747,
+          2882
+        ],
+        "excerpt_sha256": "c1038dade34a804296e42841c8eb8fbd79e70209a8563b1b41f40f73ec56efb2",
+        "prefix_through_span_sha256": "06b401ae1ac6f01bee2345e367449907558e8baf24ddba008682c1173d78310a"
+      },
+      "earliest_span_role": "FALSE_LOCAL_ASSERTION",
+      "derived_explanation": "The text answers that dividing valid labeled assignments by 4! need not work, attributing fixed assignments to box-label symmetries. It later entertains the same issue again. Automorphisms that permute numbered balls are irrelevant to the action that only renames boxes.",
+      "correction_within_reviewed_slice": null,
+      "source_paid_tokens_for_whole_archive_call": {
+        "input": 116,
+        "output": 28300
+      },
+      "independent_local_control": {
+        "method": "A label action that fixes a labeled assignment must fix every used box label. All four boxes are nonempty, so the action is free. A consecutive-block fixture verifies all 24 distinct relabelings without counting all valid partitions.",
+        "work": {
+          "box_label_permutations": 24,
+          "label_assignments_under_permutations": 384
+        },
+        "scope": "Disproves the claimed possible nontrivial stabilizer. A universal free-action proof is not one fixed arithmetic counterexample to the stated existential claim.",
+        "wall_ns": 64900,
+        "cpu_ns": 0,
+        "certificate_issued": false
+      },
+      "repeat_without_resolving_free_action": {
+        "span_unicode_half_open": [
+          6947,
+          7233
+        ],
+        "excerpt_sha256": "50752a8386aad1ebab0a46a18584a3771d6a802356f0ad56e4d19283d347db64",
+        "prefix_through_span_sha256": "a2aa23a93830156ae4e35b023fcfb3b9bcedab28095c9b352c2931181f68ae4c"
+      }
+    },
+    {
+      "case_id": "HMMT-2025-FEB-COMB-P05",
+      "sample_uid": "20a88c5e46b9da484ed3e75e4af9d6179c91166e31122ae379e5413072b1d547",
+      "draw_index": 0,
+      "model_name": "QED-Nano",
+      "archive_revision": "e3fb6c74f24eabf83413eb9e62b9816c1f3f7d2e",
+      "archive_conversation_sha256": "2e037915a8177e0b3fbcf944e9d68018b543001bb8498a5d722c2437da781c84",
+      "archive_problem_sha256": "e103f900aaa1d05ff2d7aa86d29e62fc24a18bddfbf6556997579dbbb90f574f",
+      "question_sha256": "e103f900aaa1d05ff2d7aa86d29e62fc24a18bddfbf6556997579dbbb90f574f",
+      "reasoning_kind": "ARCHIVE_COT_POSSIBLY_SUMMARY",
+      "exact_native_eos_proven": false,
+      "read_limit_chars": 12000,
+      "reviewed_span_unicode_half_open": [
+        0,
+        11915
+      ],
+      "reviewed_prefix_sha256": "b682bd790d37b3b671891e1e94c8c4e0ee007efcb018981bfec821fdf28539c7",
+      "review_status": "EXACT_TYPED_COUNTEREXAMPLE_SELF_CORRECTED",
+      "earliest_relevant_span": {
+        "span_unicode_half_open": [
+          1057,
+          1181
+        ],
+        "excerpt_sha256": "5b8137cf84f7d8e1e18558da5ab7a69527c3d9d257ed64d76abed93edac468d0",
+        "prefix_through_span_sha256": "c754e91a90f16424253aec3a925c4c0aaf3a22a901b0d9fa3c9b28c16e77e66b"
+      },
+      "earliest_span_role": "FALSE_LOCAL_ASSERTION",
+      "derived_explanation": "The text states that the full grid has only even degrees. It later recognizes degree-three noncorner boundary cells, then separately states the connectivity requirement for a single closed trail.",
+      "correction_within_reviewed_slice": {
+        "span_unicode_half_open": [
+          1958,
+          2162
+        ],
+        "excerpt_sha256": "bde8b42d2a4324b0a55018f0c9d40cf18b7a8393e9936f3352adff56459dd504",
+        "prefix_through_span_sha256": "a9e67990da8215dd50e783bb14b386c7e6d81cb42791d0db18c65352b731bce2"
+      },
+      "source_paid_tokens_for_whole_archive_call": {
+        "input": 111,
+        "output": 67996
+      },
+      "typed_counterexample": {
+        "mathematical_binding": "The source graph is the actual 11-by-11 grid. At its top noncorner cell the left, right, and downward neighbours exist and the upward neighbour does not. This is a direct counterexample to all vertices having even degree.",
+        "contract_sha256": "ae119186136f76f853b8b23a539a46594bfc036fa952b7ece9d025c02fe0d6b0",
+        "statement_sha256": "c156a9ae23c7349b891348da7b3f6726ff767d63340270f0962dc8ee12be7368",
+        "typed_statement": {
+          "variables": [
+            {
+              "name": "r",
+              "domain": "INTEGER"
+            },
+            {
+              "name": "c",
+              "domain": "INTEGER"
+            },
+            {
+              "name": "degree",
+              "domain": "INTEGER"
+            }
+          ],
+          "domain": [
+            {
+              "op": "GE",
+              "left": "r",
+              "right": 1
+            },
+            {
+              "op": "LE",
+              "left": "r",
+              "right": 11
+            },
+            {
+              "op": "GE",
+              "left": "c",
+              "right": 1
+            },
+            {
+              "op": "LE",
+              "left": "c",
+              "right": 11
+            }
+          ],
+          "premises": [
+            {
+              "op": "EQ",
+              "left": "r",
+              "right": 1
+            },
+            {
+              "op": "GE",
+              "left": "c",
+              "right": 2
+            },
+            {
+              "op": "LE",
+              "left": "c",
+              "right": 10
+            },
+            {
+              "op": "EQ",
+              "left": "degree",
+              "right": [
+                "ADD",
+                1,
+                [
+                  "ADD",
+                  1,
+                  1
+                ]
+              ]
+            }
+          ],
+          "consequent": {
+            "op": "EQ",
+            "left": [
+              "MOD",
+              "degree",
+              2
+            ],
+            "right": 0
+          }
+        },
+        "fixed_witness": [
+          [
+            "r",
+            "1"
+          ],
+          [
+            "c",
+            "2"
+          ],
+          [
+            "degree",
+            "3"
+          ]
+        ],
+        "arithmetic_receipt": {
+          "verifier_id": "d48.reviewed-local-implication",
+          "verifier_version": 1,
+          "verifier_source_sha256": "2c13a2968c15266eb46bcaafd593c581e883772a5116866a3049087d5d1e6e49",
+          "assertion_receipt_sha256": "9b94dec0bb7ffaf3753560d19f3362cb31bab06fdca8040d36db5114118f8256",
+          "work": 15,
+          "authority": "REFUTE_THIS_LOCAL_ASSERTION_ONLY",
+          "status": "REFUTE_THIS_LOCAL_ASSERTION_ONLY",
+          "reason": "COMPLETE_EXACT_COUNTEREXAMPLE",
+          "contract_sha256": "ae119186136f76f853b8b23a539a46594bfc036fa952b7ece9d025c02fe0d6b0",
+          "statement_sha256": "c156a9ae23c7349b891348da7b3f6726ff767d63340270f0962dc8ee12be7368",
+          "assertion": {
+            "binding": {
+              "question_sha256": "e103f900aaa1d05ff2d7aa86d29e62fc24a18bddfbf6556997579dbbb90f574f",
+              "objective_id": "grid-degree-parity",
+              "scope_sha256": "6b4006b725fab0bcddb80c2bd2e2be158a079db9abba4d1e3a51466e132aeced",
+              "direction": "PROVE"
+            },
+            "implication_sha256": "c156a9ae23c7349b891348da7b3f6726ff767d63340270f0962dc8ee12be7368",
+            "sample_id": "20a88c5e46b9da484ed3e75e4af9d6179c91166e31122ae379e5413072b1d547",
+            "response_sha256": "2e037915a8177e0b3fbcf944e9d68018b543001bb8498a5d722c2437da781c84",
+            "observed_prefix_sha256": "b682bd790d37b3b671891e1e94c8c4e0ee007efcb018981bfec821fdf28539c7",
+            "assertion_span": [
+              1057,
+              1181
+            ],
+            "assertion_sha256": "5b8137cf84f7d8e1e18558da5ab7a69527c3d9d257ed64d76abed93edac468d0",
+            "issuer_sha256": "7b4f682ffae5ba4e053bba2f327c6b56a8dafaf271beaa5ac5ca7fecda2ae7fb",
+            "role": "ASSERT_IMPLICATION",
+            "arrow": "A_IMPLIES_B"
+          },
+          "fixed_witness": [
+            [
+              "r",
+              "1"
+            ],
+            [
+              "c",
+              "2"
+            ],
+            [
+              "degree",
+              "3"
+            ]
+          ],
+          "variable_checks": [
+            [
+              "r",
+              true
+            ],
+            [
+              "c",
+              true
+            ],
+            [
+              "degree",
+              true
+            ]
+          ],
+          "domain_checks": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "premise_checks": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "consequent": false,
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "variable_domain_check",
+              3
+            ],
+            [
+              "exact_compare",
+              9
+            ],
+            [
+              "exact_add",
+              2
+            ],
+            [
+              "exact_mod",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "cpu_ns": 0,
+          "wall_ns": 124700,
+          "receipt_sha256": "65bc3ef7b651e84b9b0ca86aefdb344efffd576ef866ec26dc64a964867b3c62"
+        },
+        "scope": "One archived assertion only. The response digest field identifies the publisher conversation receipt, not native completion bytes. No global answer or intervention authority."
+      }
+    },
+    {
+      "case_id": "HMMT-2025-FEB-COMB-P07",
+      "sample_uid": "5a7f0a2ef0ba659130f24a826d7b9d0ad0b9e7a1996b9fc9ebd73e46ca0c1d0a",
+      "draw_index": 0,
+      "model_name": "QED-Nano",
+      "archive_revision": "e3fb6c74f24eabf83413eb9e62b9816c1f3f7d2e",
+      "archive_conversation_sha256": "0b8224e2cc46fe1ae525f43e2dae8244e0e468cbb0ed2801aa670f24ddc8f1bb",
+      "archive_problem_sha256": "a6f7b1426ac39584abbcb998eea20719b2d37315f92aa7f644e2c16f040d4b09",
+      "question_sha256": "a6f7b1426ac39584abbcb998eea20719b2d37315f92aa7f644e2c16f040d4b09",
+      "reasoning_kind": "ARCHIVE_COT_POSSIBLY_SUMMARY",
+      "exact_native_eos_proven": false,
+      "read_limit_chars": 12000,
+      "reviewed_span_unicode_half_open": [
+        0,
+        11968
+      ],
+      "reviewed_prefix_sha256": "e04326a740a7803775e188f2e284dfe7c5b16356a70568c662b3079411994883",
+      "review_status": "FALSE_LOCAL_PAIR_INDEPENDENCE_OUTSIDE_SINGLE_WITNESS_DSL",
+      "earliest_relevant_span": {
+        "span_unicode_half_open": [
+          10485,
+          10681
+        ],
+        "excerpt_sha256": "176891f849f284f29b0d7987da808db3a9d79bed13c97b191f027b99a2d286af",
+        "prefix_through_span_sha256": "ad02a0fda78ac864f05fa804d227804285e4ceba7d386eabc28bcf76d656aa9f"
+      },
+      "earliest_span_role": "FALSE_LOCAL_ASSERTION",
+      "derived_explanation": "The text denies that the directed gap counts must agree and treats the two direction constraints as independent. The gap counts are both derived from the same projected word. No correction to that denial is observed in the frozen slice.",
+      "correction_within_reviewed_slice": null,
+      "source_paid_tokens_for_whole_archive_call": {
+        "input": 109,
+        "output": 92056
+      },
+      "independent_local_control": {
+        "method": "Enumerate all 20 six-position two-letter projections. For each, test the balance in both orders. Every balanced projection has the same directed gap count in the two orders.",
+        "balanced_projections": 4,
+        "directed_gap_count_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "work": {
+          "two_letter_projections": 20,
+          "ordered_gap_counts": 80,
+          "ordered_balance_comparisons": 40
+        },
+        "scope": "An exhaustive local proof refutes the asserted possibility of unequal counts. It does not compute the full 26-letter count or authorize the fixed-counterexample DSL.",
+        "wall_ns": 82400,
+        "cpu_ns": 0,
+        "certificate_issued": false
+      }
+    },
+    {
+      "case_id": "HMMT-2025-FEB-COMB-P08",
+      "sample_uid": "a94cc6416f6414de2a4278d852d1251d8415eff176e3cd06ee5c203a6c7f0bac",
+      "draw_index": 0,
+      "model_name": "QED-Nano",
+      "archive_revision": "e3fb6c74f24eabf83413eb9e62b9816c1f3f7d2e",
+      "archive_conversation_sha256": "8cb5801206c753da0f5c0635d4e6a9adefb4763002d603bef8b41da8cb6b7765",
+      "archive_problem_sha256": "7d2bf8a412c891a5bc37646321515d86fb52f69903e680b62e7f701f52b184fe",
+      "question_sha256": "7d2bf8a412c891a5bc37646321515d86fb52f69903e680b62e7f701f52b184fe",
+      "reasoning_kind": "ARCHIVE_COT_POSSIBLY_SUMMARY",
+      "exact_native_eos_proven": false,
+      "read_limit_chars": 12000,
+      "reviewed_span_unicode_half_open": [
+        0,
+        11848
+      ],
+      "reviewed_prefix_sha256": "4b96f25b38f2a15f67d0d2c26af286c22b73518cad317b45ba0756d77a0b215a",
+      "review_status": "EXACT_TYPED_COUNTEREXAMPLE_SELF_CORRECTED",
+      "earliest_relevant_span": {
+        "span_unicode_half_open": [
+          4305,
+          4455
+        ],
+        "excerpt_sha256": "01c65a97ad66ea710f2ae90fe1dc0d4a6f8f06180c5d9f87db96a96c0f8ee8a0",
+        "prefix_through_span_sha256": "f56849b782d6cc4c3535f84af95e1baf8d518a41c7e2c7c2c714b5cec0cc3d89"
+      },
+      "earliest_span_role": "FALSE_LOCAL_ASSERTION",
+      "derived_explanation": "The text infers increasing inclusion of the set of values from monotonicity of each position. It later explicitly recognizes that an old value can disappear and derives shrinking set inclusion. The earlier weaker fixed-point characterization is phrased as a question and is not separately authorized.",
+      "correction_within_reviewed_slice": {
+        "span_unicode_half_open": [
+          5574,
+          5822
+        ],
+        "excerpt_sha256": "b16919ea24d6625e8b0b3ba08edc55baea51612003abb3ec2c6213cf89c155ff",
+        "prefix_through_span_sha256": "9b65157e55d44978475beeb5a35456d8137169971a19022ec9efe8df7aac0cd5"
+      },
+      "source_paid_tokens_for_whole_archive_call": {
+        "input": 184,
+        "output": 50738
+      },
+      "typed_counterexample": {
+        "mathematical_binding": "Take a_i=i/2026 for the 2025 original cyclic positions. The values lie strictly inside the allowed interval and are distinct. The unique old minimum occurs only at position 1. Only the outputs centered at positions 2025, 1, and 2 can inherit that value. Their synchronous maxima are a_2025, a_2025, and a_3. The product in the consequent tests whether at least one equals the old minimum, a necessary consequence of increasing set inclusion. None does.",
+        "contract_sha256": "6ebc1667f28d95fd88266f9332792750f4ea706cac56c6f36002ca474f7a4bfd",
+        "statement_sha256": "bf23df69f057ed68d0363fcbe1f277862ddec7fea7eb558310834b1b41a1b00f",
+        "typed_statement": {
+          "variables": [
+            {
+              "name": "x",
+              "domain": "RATIONAL"
+            },
+            {
+              "name": "previous_previous",
+              "domain": "RATIONAL"
+            },
+            {
+              "name": "previous",
+              "domain": "RATIONAL"
+            },
+            {
+              "name": "next",
+              "domain": "RATIONAL"
+            },
+            {
+              "name": "next_next",
+              "domain": "RATIONAL"
+            }
+          ],
+          "domain": [
+            {
+              "op": "GT",
+              "left": "x",
+              "right": 0
+            },
+            {
+              "op": "LT",
+              "left": "x",
+              "right": 1
+            },
+            {
+              "op": "GT",
+              "left": "previous_previous",
+              "right": 0
+            },
+            {
+              "op": "LT",
+              "left": "previous_previous",
+              "right": 1
+            },
+            {
+              "op": "GT",
+              "left": "previous",
+              "right": 0
+            },
+            {
+              "op": "LT",
+              "left": "previous",
+              "right": 1
+            },
+            {
+              "op": "GT",
+              "left": "next",
+              "right": 0
+            },
+            {
+              "op": "LT",
+              "left": "next",
+              "right": 1
+            },
+            {
+              "op": "GT",
+              "left": "next_next",
+              "right": 0
+            },
+            {
+              "op": "LT",
+              "left": "next_next",
+              "right": 1
+            }
+          ],
+          "premises": [
+            {
+              "op": "GE",
+              "left": "previous",
+              "right": "previous_previous"
+            },
+            {
+              "op": "GE",
+              "left": "previous",
+              "right": "x"
+            },
+            {
+              "op": "GE",
+              "left": "previous",
+              "right": "next"
+            },
+            {
+              "op": "GE",
+              "left": "next_next",
+              "right": "x"
+            },
+            {
+              "op": "GE",
+              "left": "next_next",
+              "right": "next"
+            }
+          ],
+          "consequent": {
+            "op": "EQ",
+            "left": [
+              "MUL",
+              [
+                "POW",
+                [
+                  "SUB",
+                  "previous",
+                  "x"
+                ],
+                2
+              ],
+              [
+                "SUB",
+                "next_next",
+                "x"
+              ]
+            ],
+            "right": 0
+          }
+        },
+        "fixed_witness": [
+          [
+            "x",
+            "1/2026"
+          ],
+          [
+            "previous_previous",
+            "1012/1013"
+          ],
+          [
+            "previous",
+            "2025/2026"
+          ],
+          [
+            "next",
+            "1/1013"
+          ],
+          [
+            "next_next",
+            "3/2026"
+          ]
+        ],
+        "arithmetic_receipt": {
+          "verifier_id": "d48.reviewed-local-implication",
+          "verifier_version": 1,
+          "verifier_source_sha256": "2c13a2968c15266eb46bcaafd593c581e883772a5116866a3049087d5d1e6e49",
+          "assertion_receipt_sha256": "ed2ff27c2bf0de91191cb7dc4467404c3582f7ca724db36ae33896d63c2bd254",
+          "work": 27,
+          "authority": "REFUTE_THIS_LOCAL_ASSERTION_ONLY",
+          "status": "REFUTE_THIS_LOCAL_ASSERTION_ONLY",
+          "reason": "COMPLETE_EXACT_COUNTEREXAMPLE",
+          "contract_sha256": "6ebc1667f28d95fd88266f9332792750f4ea706cac56c6f36002ca474f7a4bfd",
+          "statement_sha256": "bf23df69f057ed68d0363fcbe1f277862ddec7fea7eb558310834b1b41a1b00f",
+          "assertion": {
+            "binding": {
+              "question_sha256": "7d2bf8a412c891a5bc37646321515d86fb52f69903e680b62e7f701f52b184fe",
+              "objective_id": "one-step-value-set-inclusion",
+              "scope_sha256": "5e2d5e50c187ad4f214cb5b4e7a4ba29c99fe6e8e4701aadf1174c2fd2519e68",
+              "direction": "PROVE"
+            },
+            "implication_sha256": "bf23df69f057ed68d0363fcbe1f277862ddec7fea7eb558310834b1b41a1b00f",
+            "sample_id": "a94cc6416f6414de2a4278d852d1251d8415eff176e3cd06ee5c203a6c7f0bac",
+            "response_sha256": "8cb5801206c753da0f5c0635d4e6a9adefb4763002d603bef8b41da8cb6b7765",
+            "observed_prefix_sha256": "4b96f25b38f2a15f67d0d2c26af286c22b73518cad317b45ba0756d77a0b215a",
+            "assertion_span": [
+              4305,
+              4455
+            ],
+            "assertion_sha256": "01c65a97ad66ea710f2ae90fe1dc0d4a6f8f06180c5d9f87db96a96c0f8ee8a0",
+            "issuer_sha256": "aa532ccd662012bbd8babc219214dc5d23afb971fc3552681d7e8c2b3e29e178",
+            "role": "ASSERT_IMPLICATION",
+            "arrow": "A_IMPLIES_B"
+          },
+          "fixed_witness": [
+            [
+              "x",
+              "1/2026"
+            ],
+            [
+              "previous_previous",
+              "1012/1013"
+            ],
+            [
+              "previous",
+              "2025/2026"
+            ],
+            [
+              "next",
+              "1/1013"
+            ],
+            [
+              "next_next",
+              "3/2026"
+            ]
+          ],
+          "variable_checks": [
+            [
+              "x",
+              true
+            ],
+            [
+              "previous_previous",
+              true
+            ],
+            [
+              "previous",
+              true
+            ],
+            [
+              "next",
+              true
+            ],
+            [
+              "next_next",
+              true
+            ]
+          ],
+          "domain_checks": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "premise_checks": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "consequent": false,
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "variable_domain_check",
+              5
+            ],
+            [
+              "exact_compare",
+              16
+            ],
+            [
+              "exact_sub",
+              2
+            ],
+            [
+              "power_domain_check",
+              1
+            ],
+            [
+              "exact_mul",
+              3
+            ]
+          ],
+          "denied_operation": null,
+          "cpu_ns": 0,
+          "wall_ns": 479200,
+          "receipt_sha256": "3a36f81c71e77c88aa6d0a31bfb898dbac71e9b7942fd70a4334e5f8d0a33fbb"
+        },
+        "scope": "One archived assertion only. The response digest field identifies the publisher conversation receipt, not native completion bytes. No global answer or intervention authority."
+      },
+      "earlier_ambiguous_question": {
+        "span_unicode_half_open": [
+          1311,
+          1454
+        ],
+        "excerpt_sha256": "7e19031848b5e86b7931b5676467e1e721dcfeeac445b86fef10d026b947bfd7",
+        "prefix_through_span_sha256": "4223c1f03314f990421d668e0b51fcb7b054c4d708d54d724eca2a2ef96e2581"
+      }
+    },
+    {
+      "case_id": "HMMT-2025-FEB-COMB-P10",
+      "sample_uid": "35f9b43fdbb373d601a5f61bdbe58daea4efa91bd86d39374a80cf8b0d518777",
+      "draw_index": 0,
+      "model_name": "QED-Nano",
+      "archive_revision": "e3fb6c74f24eabf83413eb9e62b9816c1f3f7d2e",
+      "archive_conversation_sha256": "3e50164f676a606329c622a7a6d5138987b6722bd40618dfaf4997580e71991e",
+      "archive_problem_sha256": "caaa8d40dff4a94a699189b71926eb5930da8d7e834ee43fd3e14f94de417bab",
+      "question_sha256": "caaa8d40dff4a94a699189b71926eb5930da8d7e834ee43fd3e14f94de417bab",
+      "reasoning_kind": "ARCHIVE_COT_POSSIBLY_SUMMARY",
+      "exact_native_eos_proven": false,
+      "read_limit_chars": 12000,
+      "reviewed_span_unicode_half_open": [
+        0,
+        11963
+      ],
+      "reviewed_prefix_sha256": "d003302be2325ec55fd9162ba95344fcf938a8a4d932c3a34038331c20147edc",
+      "review_status": "TRIAL_ONLY_SELF_CORRECTED",
+      "earliest_relevant_span": {
+        "span_unicode_half_open": [
+          3458,
+          3537
+        ],
+        "excerpt_sha256": "e27506626100f830b496332ec0fd0ab62da93e7673d823de1966302dd823f393",
+        "prefix_through_span_sha256": "57b8f08a3535dec112d1567a8d78f7640de149fd7fa67af05c5868d84265ee97"
+      },
+      "earliest_span_role": "TRIAL_ONLY",
+      "derived_explanation": "The text tentatively suggests that only overlap triggers a merge, then reasons that adjacency already counts as touching and explicitly uses that rule. No unequivocal false local implication requiring intervention is issued in this slice.",
+      "correction_within_reviewed_slice": {
+        "span_unicode_half_open": [
+          4334,
+          4779
+        ],
+        "excerpt_sha256": "f011d996c1ef4be2a94b15e44477b6b2bc009335c95892279081fb85afa9bf75",
+        "prefix_through_span_sha256": "90af53dcae11ce87cfd20162d69c068f2ce093888fd0ea9fa92c6e4e18e2ad6b"
+      },
+      "source_paid_tokens_for_whole_archive_call": {
+        "input": 133,
+        "output": 76117
+      },
+      "independent_local_control": {
+        "method": "Two adjacent initial snakes can step inward to adjacent arcs 1 and 2 in the first round. The arcs meet at their shared endpoint without overlap.",
+        "work": {
+          "arc_updates": 2,
+          "adjacency_checks": 1
+        },
+        "scope": "Would contradict an overlap-only assertion. The observed language proposes a trial and revises it, so no assertion or certificate is issued.",
+        "wall_ns": 2900,
+        "cpu_ns": 0,
+        "certificate_issued": false
+      }
+    }
+  ]
+}

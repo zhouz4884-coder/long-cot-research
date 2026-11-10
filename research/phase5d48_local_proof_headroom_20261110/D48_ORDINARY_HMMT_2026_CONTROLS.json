@@ -1,0 +1,280 @@
+{
+  "status": "D48_QUESTION_ONLY_ORDINARY_HMMT_2026_CONTROLS_FROZEN",
+  "sources": {
+    "cohort_sha256": "622e581c19323b1089f3fa1716ee130579edabede1200f20138eea38e82f84cd",
+    "official_problem_pdf": "https://hmmt-archive.s3.amazonaws.com/tournaments/2026/feb/comb/problems.pdf",
+    "official_problem_pdf_sha256": "c5b8d47964e0b6bcae46659e8de4e08522615ea4037deca2a632983485b1d7b0",
+    "case_ids": [
+      "HMMT-2026-FEB-COMB-P05",
+      "HMMT-2026-FEB-COMB-P07",
+      "HMMT-2026-FEB-COMB-P09"
+    ]
+  },
+  "code_sha256": "888d0acde1db3baee652100c983d2d13b6cbbf408c2631da9f9591bd9489c41b",
+  "rows": [
+    {
+      "case_id": "HMMT-2026-FEB-COMB-P05",
+      "ordinary_short_complete": {
+        "value": 252,
+        "half_rows": 5,
+        "allowed_half_height_values": 6,
+        "proof": "Divisors are indexed by two exponents 0..9. A downset is specified by ten nonincreasing row heights. Complementing both exponents pairs rows with height sums 10. The first five heights lie in 5..10 and determine the other five. Count weakly ordered selections of five heights from six values.",
+        "named_work": {
+          "binomial_evaluations": 1,
+          "integer_additions": 2,
+          "integer_floor_divisions": 1,
+          "integer_subtractions": 2
+        },
+        "wall_ns": 23700,
+        "thread_cpu_ns": 0,
+        "repeat_cpu_profile": {
+          "repetitions": 16368,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 37882700,
+          "includes_consistency_comparisons": true
+        }
+      },
+      "independent_complete": {
+        "value": 252,
+        "scope": "All downsets are weakly ordered height vectors; complement relation is tested exactly.",
+        "named_work": {
+          "downset_height_vectors": 184756,
+          "paired_height_sum_checks": 268484
+        },
+        "wall_ns": 77789900,
+        "thread_cpu_ns": 78125000,
+        "repeat_cpu_profile": null
+      },
+      "local_counterexample": {
+        "claim": "Complement exclusivity implies the divisor-downset condition.",
+        "antecedent": true,
+        "consequent": false,
+        "witness_encoding": "All rows a<5, then flip the complement pair (2,3) and (7,6).",
+        "selected_exponents": [
+          2,
+          4
+        ],
+        "missing_divisor_exponents": [
+          2,
+          3
+        ],
+        "authority": "REFUTE_ONLY_THE_COMPLEMENT_IMPLIES_DOWNSET_CLAIM",
+        "named_work": {
+          "complement_pair_checks": 50,
+          "directed_predecessor_checks": 1,
+          "grid_membership_initializations": 100,
+          "membership_checks": 2,
+          "membership_edits": 2
+        },
+        "wall_ns": 51100,
+        "thread_cpu_ns": 0,
+        "repeat_cpu_profile": {
+          "repetitions": 2032,
+          "thread_cpu_ns": 46875000,
+          "wall_ns": 42647300,
+          "includes_consistency_comparisons": true
+        }
+      }
+    },
+    {
+      "case_id": "HMMT-2026-FEB-COMB-P07",
+      "ordinary_short_complete": {
+        "side_subsets_including_empty_and_full": 1574,
+        "both_parts_nonempty": 1572,
+        "count_parts": {
+          "both_trivial": 4,
+          "one_trivial": 360,
+          "same_parity_nontrivial": 410,
+          "opposite_parity_nontrivial": 800
+        },
+        "proof": "The two aligned layers use one horizontal projection and two independent thresholds. A nontrivial k-vertex set is an arc whose admissible normal directions form one open sector of vertex-spacing width about its center. For equal-parity sizes, sectors overlap only at the same center. For opposite parity there are two adjacent half-offset choices. Empty and full layers impose no orientation restriction.",
+        "named_work": {
+          "integer_additions": 4,
+          "integer_floor_divisions": 1,
+          "integer_multiplications": 6,
+          "integer_squares": 2,
+          "integer_subtractions": 3
+        },
+        "wall_ns": 4300,
+        "thread_cpu_ns": 0,
+        "repeat_cpu_profile": {
+          "repetitions": 16368,
+          "thread_cpu_ns": 46875000,
+          "wall_ns": 45506900,
+          "includes_consistency_comparisons": true
+        }
+      },
+      "independent_complete": {
+        "side_subsets_including_empty_and_full": 1574,
+        "both_parts_nonempty": 1572,
+        "proof": "Projection-order crossings occur at half-vertex-spacing orientations. A representative at each of the 20 open sectors has an exact cyclic angular order. A strict threshold at a tied orientation survives a small perturbation, so no additional side subsets occur only at ties.",
+        "named_work": {
+          "exact_angular_distance_keys": 200,
+          "layer_vertex_sorts": 20,
+          "prefix_bit_updates": 200,
+          "threshold_pair_visits": 2420
+        },
+        "wall_ns": 946000,
+        "thread_cpu_ns": 0,
+        "repeat_cpu_profile": {
+          "repetitions": 112,
+          "thread_cpu_ns": 46875000,
+          "wall_ns": 66705900,
+          "includes_consistency_comparisons": true
+        }
+      },
+      "local_counterexample": {
+        "claim": "Two separately separable layer cuts are jointly realizable by one plane.",
+        "antecedent": true,
+        "consequent": false,
+        "opposite_singletons_in_aligned_vertex_indexing": [
+          0,
+          5
+        ],
+        "proof": "Each singleton is separable within its regular polygon by a normal toward it. A single plane induces superlevel sets of the same projected scores at both heights, hence nested subsets. These singleton labels are not nested.",
+        "authority": "REFUTE_ONLY_THE_INDEPENDENT_LAYER_CUT_CLAIM",
+        "named_work": {
+          "nested_threshold_set_checks": 2,
+          "per_layer_singleton_separability_checks": 2
+        },
+        "wall_ns": 8000,
+        "thread_cpu_ns": 0,
+        "repeat_cpu_profile": {
+          "repetitions": 32752,
+          "thread_cpu_ns": 62500000,
+          "wall_ns": 74459400,
+          "includes_consistency_comparisons": true
+        }
+      }
+    },
+    {
+      "case_id": "HMMT-2026-FEB-COMB-P09",
+      "ordinary_short_complete": {
+        "value": 499,
+        "block_sizes": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            25,
+            20
+          ],
+          [
+            50,
+            20
+          ],
+          [
+            125,
+            100
+          ],
+          [
+            250,
+            100
+          ]
+        ],
+        "block_end_labels": [
+          1,
+          2,
+          6,
+          10,
+          30,
+          50,
+          150,
+          250
+        ],
+        "proof": "The gcd law and equal diagonal sizes imply A_i∩A_j=A_gcd(i,j). Each label has a least supporting index e and occurs exactly in multiples of e. Its disjoint block B_e has size phi(e). Sorting block maxima gives each maximum a lower bound by the cumulative block sizes. The sum of those completions is minimized by shortest block first, by the adjacent-exchange inequality. The order by (phi(e),e) here is divisor-compatible, so each target set's maximum equals its own block end. Assign contiguous labels 1..250 in this order, then give every other positive index its own fresh disjoint block of phi size. Unions over divisors extend the construction to all indices.",
+        "named_work": {
+          "block_completion_updates": 8,
+          "block_order_sorts": 1,
+          "completion_sum_terms": 8,
+          "divisor_precedence_tests": 64,
+          "target_divisor_tests": 15,
+          "totient_factor_updates": 10,
+          "totient_prime_divisor_tests": 16
+        },
+        "wall_ns": 148500,
+        "thread_cpu_ns": 0,
+        "repeat_cpu_profile": {
+          "repetitions": 2032,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 57753800,
+          "includes_consistency_comparisons": true
+        }
+      },
+      "independent_complete": {
+        "value": 499,
+        "block_order_states": 256,
+        "proof": "Every contiguous-block order is a subset path. A target maximum is finalized when its last divisor block is placed, so the cumulative label at that transition is charged exactly once.",
+        "named_work": {
+          "independent_totient_gcd_calls": 468,
+          "subset_completed_target_tests": 2048,
+          "subset_order_transitions": 1024,
+          "subset_weight_membership_tests": 2048,
+          "target_ancestor_membership_tests": 64,
+          "target_divisor_tests": 15
+        },
+        "wall_ns": 744400,
+        "thread_cpu_ns": 0,
+        "repeat_cpu_profile": {
+          "repetitions": 48,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 37261300,
+          "includes_consistency_comparisons": true
+        }
+      },
+      "local_counterexample": {
+        "claim": "Smaller numeric indices necessarily give subsets of larger numeric indices.",
+        "antecedent": true,
+        "consequent": false,
+        "counterexample_indices": [
+          2,
+          5
+        ],
+        "counterexample_label": 2,
+        "premises_checked_at": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "extendibility": "The disjoint displayed blocks have phi sizes. Add fresh phi-sized blocks for all remaining positive indices, then use unions over divisors. This certifies the finite witness can occur under the full infinite condition.",
+        "authority": "REFUTE_ONLY_NUMERIC_INDEX_NESTING",
+        "named_work": {
+          "counterexample_label_membership_checks": 2,
+          "local_block_cardinality_checks": 4,
+          "local_pair_intersection_gcd_checks": 16,
+          "local_support_divisibility_tests": 16,
+          "local_totient_gcd_calls": 18
+        },
+        "wall_ns": 32600,
+        "thread_cpu_ns": 0,
+        "repeat_cpu_profile": {
+          "repetitions": 2032,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 33525800,
+          "includes_consistency_comparisons": true
+        }
+      }
+    }
+  ],
+  "P07_label_review_before_gold": {
+    "both_sides_may_be_empty_at_extremes": 1574,
+    "both_parts_nonempty": 1572,
+    "scope": "The Problems PDF says partitions the vertices into two sets and does not explicitly settle emptiness. Retain both mathematically scoped counts until independent official-label review."
+  },
+  "cost_boundary": "Single-call CPU and wall include exact checking or solving. Repeated timings are separate and include consistency comparisons. Named work units are algorithm primitives with different costs. Proof derivation by the reviewer is not included.",
+  "scope": "Official Problems PDF and frozen question IDs only. No official solutions, labels, trajectories or GPU work. Local synthetic assertions are method controls, not claims made by a model."
+}

@@ -1,0 +1,40 @@
+{
+  "status": "QUESTION_ONLY_COHORT_FROZEN_BEFORE_ARCHIVE_RESPONSE_OR_GOLD_PROJECTION",
+  "review": "Independent reviewer inspected and rendered both official problem PDFs, with no solution, gold, or trajectory access. An archive scout separately saw solution excerpts during readiness and did not decide the cohort.",
+  "source_scope": "The public report may include source IDs, checksums and independently derived measurements. Copyrighted problem PDFs and model traces remain local. Do not read old archive draws 8–15.",
+  "sources": {
+    "2025": {
+      "archive": "https://www.hmmt.org/www/archive/282",
+      "problem_pdf": "https://hmmt-archive.s3.amazonaws.com/tournaments/2025/feb/comb/problems.pdf",
+      "sha256": "ee5ce8e248dc4edae912ed0449dc4d504020d59ed914c806894d15f8fab9312b"
+    },
+    "2026": {
+      "archive": "https://www.hmmt.org/www/archive/292",
+      "problem_pdf": "https://hmmt-archive.s3.amazonaws.com/tournaments/2026/feb/comb/problems.pdf",
+      "sha256": "c5b8d47964e0b6bcae46659e8de4e08522615ea4037deca2a632983485b1d7b0"
+    }
+  },
+  "selection_rule": "An exact finite local object distinct from the global answer, with a plausible stronger complete structural control. Skip evident tiny complete checks and exact domains outside the intended checker. Inclusion expresses neither problem hardness nor evidence of a model error.",
+  "rows": [
+    ["HMMT-2025-FEB-COMB-P01", false, "Cyclic edge check, direct 7! enumeration"],
+    ["HMMT-2025-FEB-COMB-P02", false, "Local connectivity, only 35 subsets"],
+    ["HMMT-2025-FEB-COMB-P03", true, "Exact box partition and noncontiguous block, canonical exact-cover control"],
+    ["HMMT-2025-FEB-COMB-P04", false, "Small board with 16 cells, retain outside cohort"],
+    ["HMMT-2025-FEB-COMB-P05", true, "Even subgraph versus a single closed trail, parity and connectivity control"],
+    ["HMMT-2025-FEB-COMB-P06", false, "Direct comparison of at most 25,200 rectangle pairs"],
+    ["HMMT-2025-FEB-COMB-P07", true, "Projected two-letter balance, pair-template or poset control"],
+    ["HMMT-2025-FEB-COMB-P08", true, "Finite cyclic synchronous transition, sliding-window or indicator control"],
+    ["HMMT-2025-FEB-COMB-P09", false, "Continuous intersection measure outside the exact discrete scope"],
+    ["HMMT-2025-FEB-COMB-P10", true, "One-step merge and shared next move, gap chain or potential control"],
+    ["HMMT-2026-FEB-COMB-P01", false, "Exact conditional membership, direct 4^4 counting"],
+    ["HMMT-2026-FEB-COMB-P02", false, "Small face transition and direct first-appearance expectation"],
+    ["HMMT-2026-FEB-COMB-P03", false, "Fixed crossing check, direct 7! counting"],
+    ["HMMT-2026-FEB-COMB-P04", false, "Single-state expectation recurrence"],
+    ["HMMT-2026-FEB-COMB-P05", true, "Divisor downset and complement closure, monotone-boundary control"],
+    ["HMMT-2026-FEB-COMB-P06", false, "Prepayment event, short Bernoulli-series control"],
+    ["HMMT-2026-FEB-COMB-P07", true, "Fixed halfspace assignments, arrangement or nested-cut control"],
+    ["HMMT-2026-FEB-COMB-P08", false, "Strict determinant conditions, direct 35,990 triples"],
+    ["HMMT-2026-FEB-COMB-P09", true, "Finite gcd incidence claims, global infinite construction treated separately"],
+    ["HMMT-2026-FEB-COMB-P10", true, "Fixed directed path and transfer state, width-three connectivity control"]
+  ]
+}

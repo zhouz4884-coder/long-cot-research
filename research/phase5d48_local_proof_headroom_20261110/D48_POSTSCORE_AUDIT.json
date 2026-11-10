@@ -1,0 +1,161 @@
+{
+  "status": "D48_POSTSCORE_DIAGNOSIS_NO_CHANGE_TO_BLIND_GATE",
+  "source_sha256": "19960299f124168aea2ca7d11134230fd349b77fcc0a77df9bf00de7efd744d0",
+  "archive_scores_sha256": "865aabb4b236c3bfdd9e18c2ec7e1d6eddf3e0400e3e149dbdeadb73d0e846d8",
+  "blind_outcomes_sha256": "f3f4fb0f3e1147933348131418b141c853ad4ea1d922f2e73fb16be47e4b6b8f",
+  "stratified_archive_last_box_counts": {
+    "2025": {
+      "match": 4,
+      "mismatch": 1
+    },
+    "2026": {
+      "match": 2,
+      "mismatch": 2
+    }
+  },
+  "ordinary_agrees_with_official": {
+    "HMMT-2025-FEB-COMB-P03": true,
+    "HMMT-2025-FEB-COMB-P05": true,
+    "HMMT-2025-FEB-COMB-P07": true,
+    "HMMT-2025-FEB-COMB-P08": true,
+    "HMMT-2026-FEB-COMB-P05": true,
+    "HMMT-2026-FEB-COMB-P07": true,
+    "HMMT-2026-FEB-COMB-P09": true,
+    "HMMT-2025-FEB-COMB-P10": true,
+    "HMMT-2026-FEB-COMB-P10": true
+  },
+  "ordinary_full_controls_available": 9,
+  "postscore_failure_diagnostics": [
+    {
+      "case_id": "HMMT-2025-FEB-COMB-P10",
+      "mechanism": "LATE_GUESS_WITHOUT_VALID_COMPLETE_EXPECTATION",
+      "thinking_tail": {
+        "span": [
+          278533,
+          279433
+        ],
+        "source_excerpt_sha256": "0242e254d7af9e3be187d7000fe254107cce51feecd81100b912e92d9d1d3d38"
+      },
+      "final": {
+        "span": [
+          0,
+          10
+        ],
+        "source_excerpt_sha256": "a17f675c42d51199625303e11b0db1c3781b136477b5f96263c1bf1714726e9b"
+      },
+      "counterexample": null,
+      "ordinary_control": "Cubic gap potential with bounded stopped expectation."
+    },
+    {
+      "case_id": "HMMT-2026-FEB-COMB-P07",
+      "mechanism": "ALL_DIRECTIONS_FORCED_TO_VERTEX_CENTRED_THRESHOLD_SETS",
+      "thinking_generic_direction": {
+        "span": [
+          118020,
+          118280
+        ],
+        "source_excerpt_sha256": "ef30b621c7d35227d8ef563734433564e17515749585d66b8a940a04e008c770"
+      },
+      "thinking_late_vertex_symmetry": {
+        "span": [
+          264506,
+          264770
+        ],
+        "source_excerpt_sha256": "e2a3738daf4d88c9238889d40427b71e0da98ce69da12fb1dac9de718dcfb33c"
+      },
+      "final": {
+        "span": [
+          960,
+          1880
+        ],
+        "source_excerpt_sha256": "f5ac8a9d96b830e0ccfaa6f85ec80a207f4f92c1badb10824e9706604a30c7a4"
+      },
+      "counterexample": {
+        "selected_a_layer_indices_zero_based": [
+          0,
+          1
+        ],
+        "b_layer_empty": true,
+        "angular_distance_half_step_units": [
+          1,
+          1,
+          3,
+          5,
+          7,
+          9,
+          9,
+          7,
+          5,
+          3
+        ],
+        "integer_cut_between_distance_ranks": 2,
+        "relation": "The odd nontrivial vertex-centred cuts miss this two-element legal cut.",
+        "named_work": {
+          "exact_rank_vertex_checks": 10,
+          "separate_layer_threshold_arguments": 1
+        },
+        "wall_ns": 8800,
+        "thread_cpu_ns": 0
+      },
+      "ordinary_control": "Exact sector sweep and short cut-count formula."
+    },
+    {
+      "case_id": "HMMT-2026-FEB-COMB-P10",
+      "mechanism": "EAST_STEP_ORDER_CONFUSED_WITH_CONTIGUOUS_ROW_VISITATION",
+      "thinking_late_count": {
+        "span": [
+          79517,
+          80434
+        ],
+        "source_excerpt_sha256": "7984f5b2233d175d789abe443c233599c1e3d1cce62b166c92d72186f27fcf06"
+      },
+      "final": {
+        "span": [
+          609,
+          1084
+        ],
+        "source_excerpt_sha256": "1c7451e30d140a64bcdaf76325c545b0ba82f2db2d76fc68999cfeea8c8d40f9"
+      },
+      "counterexample": {
+        "path_sha256": "e1555a351e5b026a7eb32c78cecbbbdab75ce2c8c654906b2385b4bec0f0ce8c",
+        "horizontal_steps": 39,
+        "vertical_steps": 20,
+        "start": [
+          0,
+          2
+        ],
+        "finish": [
+          19,
+          0
+        ],
+        "named_work": {
+          "distinct_vertices": 60,
+          "vertex_range_checks": 60,
+          "directed_edges": 59
+        },
+        "wall_ns": 77800,
+        "thread_cpu_ns": 0
+      },
+      "ordinary_control": "Closed form for even cylinder width, independently checked by transfer."
+    }
+  ],
+  "additional_visible_self_repair": {
+    "case_id": "HMMT-2026-FEB-COMB-P05",
+    "sentinel_restored_in_final": {
+      "span": [
+        928,
+        982
+      ],
+      "source_excerpt_sha256": "73184560f79b828dfbc8938d903e1c23cb72c64f0c4fb09b29f77bc668eb47d0"
+    },
+    "last_box_correct": true,
+    "scope": "Early typed counterexample was addressed before final delivery."
+  },
+  "typed_early_local_refutations_followed_by_visible_self_correction": 4,
+  "repair_gate": {
+    "minimum_independent_uncovered_cases": 2,
+    "observed_independent_uncovered_cases": 0,
+    "passes": false,
+    "new_gpu_runs": 0
+  }
+}

@@ -9,6 +9,7 @@
 - [Phase 1–5 总索引](docs/phases/INDEX_ZH.md)
 - [当前研究目标](docs/next_phase/CURRENT_RESEARCH_GOAL_20261105_ZH.md)
 - [最新建议审查与下一轮公平对照](research/repository_phase_plan_20261106/ADVISOR_REVIEW_20261106_ZH.md)
+- [Phase 5-D4.8 中途局部反证与完整求解](research/phase5d48_local_proof_headroom_20261110/D48_CLOSEOUT_ZH.md)
 - [Phase 5-D4.7 可行解退步与证书保全](research/phase5d47_delivery_preservation_20261110/D47_CLOSEOUT_ZH.md)
 - [Phase 5-D4.6 点不可行性与候选绑定](research/phase5d46_point_infeasibility_20261110/D46_CLOSEOUT_ZH.md)
 - [Phase 5-D4.5 可行见证与自然长链](research/phase5d45_feasible_witness_20261110/D45_CLOSEOUT_ZH.md)
@@ -58,6 +59,7 @@
 | [Phase 5-D4.5](research/phase5d45_feasible_witness_20261110/D45_CLOSEOUT_ZH.md) | 11 道新优化题、88 条归档轨迹、精确见证与完整求解对照 | 新增反证题为 0。两条持续错误均过于乐观，可行见证的一侧界无法排除。零 GPU |
 | [Phase 5-D4.6](research/phase5d46_point_infeasibility_20261110/D46_CLOSEOUT_ZH.md) | 11 道新题、88 条归档轨迹、原题候选绑定与精确点核验 | 严格 1 条、盲审 6 条持续不可行值均来自同一可用短解覆盖的题。GPU 准入为 0 |
 | [Phase 5-D4.7](research/phase5d47_delivery_preservation_20261110/D47_CLOSEOUT_ZH.md) | 8 道新题、64 条归档轨迹、同目标可行证书与朴素保留 | 49 对两值均可行且相等，0 条退步。证书保全与朴素保留全体同输出。零 GPU |
+| [Phase 5-D4.8](research/phase5d48_local_proof_headroom_20261110/D48_CLOSEOUT_ZH.md) | 9 道新 HMMT 题，固定归档与局部反例，独立完整对照 | 4 条精确早期反例，全部自修。普通完整解 9/9，修复准入为 0，零 GPU |
 
 每个Phase统一记录：问题、输入与协议、实际动作、数据结论、失败与猜想、下一门槛、证据路径。后续工作继续新增Phase或阶段内子报告，不改写已冻结的结果。
 
@@ -87,6 +89,7 @@
 | Phase5-D4.5 | 88 条轨迹中 65 条正确、2 条错误、21 条触顶。盲审将末答绑定从 12 提高到 67 | 两个持续错值都能被事后局部不可行性核验排除，可行见证并未触发。11 题金标均与独立精确求解一致 |
 | Phase5-D4.6 | 88 条中 73 条正确、7 条错误、7 条触顶、1 条末框格式失败 | 点核验与普通点检结果一致。另有一条轨迹把已可行且正确的 791 改成交付较差的可行值 533 |
 | Phase5-D4.7 | 64 条中 45 条正确、6 条错误、12 条触顶、1 条末框格式失败 | 六条错值都在思维末段已形成。另有两条终稿不可行，未复现可行值交付退步 |
+| Phase5-D4.8 | 两年末答分别为 4/5、2/4。四条精确早期错误均可见自修，另验证两条晚期结构性反例 | 归档 EOS 未知，普通完整解覆盖九题，未测续写干预效果 |
 
 P0与P0.5使用不同读出协议，不连成跨轮提升曲线。CPU随机模型、形式/代数控制、人工短状态、自然轨迹观察和正式benchmark各自标明，不互相替代。
 

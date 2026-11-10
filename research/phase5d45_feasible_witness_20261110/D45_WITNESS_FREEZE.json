@@ -1,0 +1,3518 @@
+{
+  "status": "D45_PROPOSAL_BOUNDS_INDEPENDENTLY_CERTIFIED_BEFORE_TRACE_AND_GOLD",
+  "cohort_freeze_sha256": "f6e2c37da342ac2dfe3893fedb0551034ce1ed9d2b5a3f3dd1c0a3833c06918b",
+  "author_sha256": "7f5d008878f0c29aab5850f701c58746cb72d72aee51461232c3a50854bdbff7",
+  "strengthened_sha256": "f5031f398e5503f2e7d879fd22d17feb3a7337b41726fe4b8c66a05822fcff49",
+  "rules_sha256": "5f070df245ef1e45d51842af83dfb0fd69812d6b0316b331b70dee0cb2677a49",
+  "contract_source_sha256": "92e01ace7745ca9b8ffec618cdae55ed9fe8aed727b8e161008a84bc47d5b524",
+  "verifier_source_sha256": "5cfc4ce09bd862d0468e66d0e7ad2baf990826e47a6dbada74c2741a2e6a35ea",
+  "rows": [
+    {
+      "case_id": "2009-I-14",
+      "contract": {
+        "binding": {
+          "question_sha256": "6b2cd50c9e617a96ebbef7665d5029716c185f37387bd4a3aa09f40ffa972833",
+          "objective_id": "minimum-s2",
+          "scope_sha256": "9b8f6fd7e707188e6fe8f72585de343c1bdc97b09b66a8a3c5d82049c0b3dc40",
+          "constraints_sha256": "d3dd3df7dddc98d77971cd14f51d06a8a17260dd16c597767338845fd03b278b",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "four_count_domain",
+          "length",
+          "first_moment",
+          "fourth_moment"
+        ],
+        "checker_id": "d45.arithmetic.checker",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "proof_sha256": "67d9af9865b91cab6ac409372092d1d6ab12d7ef3d14b5980921ac391f3bec82",
+        "review_sha256": "d43097f750949f90deec5157c20718e586d8bfeae8c0b0d2760022b4e142a79c"
+      },
+      "contract_sha256": "b5e6abd5d73441604bb7047cefce9505cfc431c8895809a6785a109d23660c9c",
+      "scope": {
+        "direction": "MIN",
+        "objective_id": "minimum-s2",
+        "description": "Minimum sum of squared entries over the original length and two moments.",
+        "role_patterns": [
+          "\\bS\\s*[_\\\\{ ]*\\s*2\\b|sum of (?:the )?squares|second moment"
+        ]
+      },
+      "question_only_review": {
+        "case_id": "2009-I-14",
+        "question_sha256": "6b2cd50c9e617a96ebbef7665d5029716c185f37387bd4a3aa09f40ffa972833",
+        "review": "Independent of witness authors",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "minimum-s2",
+          "description": "Minimum sum of squared entries over the original length and two moments.",
+          "role_patterns": [
+            "\\bS\\s*[_\\\\{ ]*\\s*2\\b|sum of (?:the )?squares|second moment"
+          ]
+        },
+        "checker": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "original_constraints": "A length-four histogram with nonnegative integer counts encodes exactly a multiset on 1 through 4. Verify the length and weighted first/fourth moments; compute the second moment separately."
+      },
+      "weak_necessary": "Square and value have the same residue modulo 2, so the second moment is odd.",
+      "author_reported": [
+        {
+          "proposal_pass": 1,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 1,
+          "construction_and_audit_subwork": {
+            "moment_terms_checked": 8,
+            "length_terms_checked": 4
+          },
+          "executable_wall_ns": 14900,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "8dcee431408e906d9c5b6295a25b263a37659f5dd30345e598cb52fd0ad32e7a"
+        }
+      ],
+      "verified_attempts": [
+        {
+          "witness": {
+            "counts": [
+              226,
+              85,
+              39,
+              0
+            ]
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "nonnegative": true,
+            "length_first_fourth": [
+              350,
+              513,
+              4745
+            ]
+          },
+          "proposal_pass": 1
+        }
+      ],
+      "independent_witness_receipts": [
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "b5e6abd5d73441604bb7047cefce9505cfc431c8895809a6785a109d23660c9c",
+          "work": 21,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "6b2cd50c9e617a96ebbef7665d5029716c185f37387bd4a3aa09f40ffa972833",
+              "objective_id": "minimum-s2",
+              "scope_sha256": "9b8f6fd7e707188e6fe8f72585de343c1bdc97b09b66a8a3c5d82049c0b3dc40",
+              "constraints_sha256": "d3dd3df7dddc98d77971cd14f51d06a8a17260dd16c597767338845fd03b278b",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "four_count_domain",
+              "length",
+              "first_moment",
+              "fourth_moment"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "67d9af9865b91cab6ac409372092d1d6ab12d7ef3d14b5980921ac391f3bec82",
+            "review_sha256": "d43097f750949f90deec5157c20718e586d8bfeae8c0b0d2760022b4e142a79c"
+          },
+          "witness_sha256": "fbdc6d32721c83cd22aa578fb64cef7f411ccc93668f634c430ac1d1f18d8e86",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "histogram_terms",
+              16
+            ],
+            [
+              "constraint:four_count_domain",
+              1
+            ],
+            [
+              "constraint:length",
+              1
+            ],
+            [
+              "constraint:first_moment",
+              1
+            ],
+            [
+              "constraint:fourth_moment",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "four_count_domain",
+              true
+            ],
+            [
+              "length",
+              true
+            ],
+            [
+              "first_moment",
+              true
+            ],
+            [
+              "fourth_moment",
+              true
+            ]
+          ],
+          "objective": "917",
+          "bound_direction": "UPPER",
+          "cpu_ns": 0,
+          "receipt_sha256": "34f806d9a4107c8f4cbfda4642afda7b24aaab28a201eb51fa4e56955b99abd7"
+        }
+      ],
+      "chosen_attempt_index": 0,
+      "best_bound": "917",
+      "bound_direction": "UPPER",
+      "adversarial_control": {
+        "witness": {
+          "counts": [
+            225,
+            86,
+            39,
+            0
+          ]
+        },
+        "required_rejected_constraint": "first_moment",
+        "receipt": {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "b5e6abd5d73441604bb7047cefce9505cfc431c8895809a6785a109d23660c9c",
+          "work": 20,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "6b2cd50c9e617a96ebbef7665d5029716c185f37387bd4a3aa09f40ffa972833",
+              "objective_id": "minimum-s2",
+              "scope_sha256": "9b8f6fd7e707188e6fe8f72585de343c1bdc97b09b66a8a3c5d82049c0b3dc40",
+              "constraints_sha256": "d3dd3df7dddc98d77971cd14f51d06a8a17260dd16c597767338845fd03b278b",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "four_count_domain",
+              "length",
+              "first_moment",
+              "fourth_moment"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "67d9af9865b91cab6ac409372092d1d6ab12d7ef3d14b5980921ac391f3bec82",
+            "review_sha256": "d43097f750949f90deec5157c20718e586d8bfeae8c0b0d2760022b4e142a79c"
+          },
+          "witness_sha256": "6f5dfdddec9c3ef223f6a2a3acd26196f47142887dea1b5af79e16b691308b54",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "histogram_terms",
+              16
+            ],
+            [
+              "constraint:four_count_domain",
+              1
+            ],
+            [
+              "constraint:length",
+              1
+            ],
+            [
+              "constraint:first_moment",
+              1
+            ],
+            [
+              "constraint:fourth_moment",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "four_count_domain",
+              true
+            ],
+            [
+              "length",
+              true
+            ],
+            [
+              "first_moment",
+              false
+            ],
+            [
+              "fourth_moment",
+              false
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "0e1894d29de8a3897d5d9275f91b5cda48424c20a4619a5a6c7de107a9d514ee"
+        }
+      }
+    },
+    {
+      "case_id": "2009-II-4",
+      "contract": {
+        "binding": {
+          "question_sha256": "3554de19e8fa7b193932b63171ffaa25e5a61832a0cf3dbe8736fb1de1570285",
+          "objective_id": "minimum-winner-grapes",
+          "scope_sha256": "7ce8e78a8fb1efca6c264d8498490b597555ef25457708f4a374f6bf60dca017",
+          "constraints_sha256": "303ddb0031a574fd873e2b5ddc92bca8a6665e612fc7c7290e93826e57d55a35",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "winner_positive",
+          "plural_children",
+          "last_nonnegative",
+          "total_grapes"
+        ],
+        "checker_id": "d45.arithmetic.checker",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "proof_sha256": "ebcadc05bc8a3a4040fa5aaad665e64a6c0f44dbe77afc6dd446053e6a0d5c49",
+        "review_sha256": "97ee148e705426c9837f5d8aa72c8cf00c3010b6336865e259b7f06e7699ecb3"
+      },
+      "contract_sha256": "168111cfcc10c2cdd149d9256653f934daab601d4f3647297dadaf7907c92871",
+      "scope": {
+        "direction": "MIN",
+        "objective_id": "minimum-winner-grapes",
+        "description": "Minimum count of grapes eaten by the winner over the feasible contest sizes.",
+        "role_patterns": [
+          "\\bgrapes?\\b|\\bwinner\\b|\\bn\\s*(?:=|is)\\b"
+        ]
+      },
+      "question_only_review": {
+        "case_id": "2009-II-4",
+        "question_sha256": "3554de19e8fa7b193932b63171ffaa25e5a61832a0cf3dbe8736fb1de1570285",
+        "review": "Independent of witness authors",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "minimum-winner-grapes",
+          "description": "Minimum count of grapes eaten by the winner over the feasible contest sizes.",
+          "role_patterns": [
+            "\\bgrapes?\\b|\\bwinner\\b|\\bn\\s*(?:=|is)\\b"
+          ]
+        },
+        "checker": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "original_constraints": "With m children and winner n, the given step-two progression is nonnegative iff its last count is nonnegative. Its sum is m(n+1-m)."
+      },
+      "weak_necessary": "The quadratic in the number of children is at most (n+1)^2/4, which must cover the given total.",
+      "author_reported": [
+        {
+          "proposal_pass": 1,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 1,
+          "construction_and_audit_subwork": {
+            "progression_terms_checked": 7
+          },
+          "executable_wall_ns": 6300,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "a7a44df938ccf8bba9285c2e9f4cb1ec34118c39e513b696d8c573a8876354a9"
+        },
+        {
+          "proposal_pass": 2,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 1,
+          "construction_and_audit_subwork": {
+            "integer_square_roots": 1,
+            "factor_product_checks": 1,
+            "structural_divisor_screens": [
+              {
+                "children": 49,
+                "within_max_possible_children": false
+              },
+              {
+                "children": 41,
+                "within_max_possible_children": true
+              }
+            ],
+            "progression_terms_checked": 41
+          },
+          "executable_wall_ns": 11800,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "76767d5b8dd2a15fbb0f54572519d9d0ee30defcb5be9f9ebaf3f5f3bb4a959e"
+        }
+      ],
+      "verified_attempts": [
+        {
+          "witness": {
+            "winner": 293,
+            "children": 7
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "last_term": 281,
+            "total": 2009
+          },
+          "proposal_pass": 1
+        },
+        {
+          "witness": {
+            "winner": 89,
+            "children": 41
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "last_term": 9,
+            "total": 2009
+          },
+          "proposal_pass": 2
+        }
+      ],
+      "independent_witness_receipts": [
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "168111cfcc10c2cdd149d9256653f934daab601d4f3647297dadaf7907c92871",
+          "work": 7,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "3554de19e8fa7b193932b63171ffaa25e5a61832a0cf3dbe8736fb1de1570285",
+              "objective_id": "minimum-winner-grapes",
+              "scope_sha256": "7ce8e78a8fb1efca6c264d8498490b597555ef25457708f4a374f6bf60dca017",
+              "constraints_sha256": "303ddb0031a574fd873e2b5ddc92bca8a6665e612fc7c7290e93826e57d55a35",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "winner_positive",
+              "plural_children",
+              "last_nonnegative",
+              "total_grapes"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "ebcadc05bc8a3a4040fa5aaad665e64a6c0f44dbe77afc6dd446053e6a0d5c49",
+            "review_sha256": "97ee148e705426c9837f5d8aa72c8cf00c3010b6336865e259b7f06e7699ecb3"
+          },
+          "witness_sha256": "4ae25b3317d0fe678e81a38d4cfb86b5638f6d4432918e5365723b088bb15862",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "closed_form_grape_terms",
+              2
+            ],
+            [
+              "constraint:winner_positive",
+              1
+            ],
+            [
+              "constraint:plural_children",
+              1
+            ],
+            [
+              "constraint:last_nonnegative",
+              1
+            ],
+            [
+              "constraint:total_grapes",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "winner_positive",
+              true
+            ],
+            [
+              "plural_children",
+              true
+            ],
+            [
+              "last_nonnegative",
+              true
+            ],
+            [
+              "total_grapes",
+              true
+            ]
+          ],
+          "objective": "293",
+          "bound_direction": "UPPER",
+          "cpu_ns": 0,
+          "receipt_sha256": "1a15b02a88532f2cf8c16bfe2aa855095fad5a9b74c79cc0afebd6df68a85fdd"
+        },
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "168111cfcc10c2cdd149d9256653f934daab601d4f3647297dadaf7907c92871",
+          "work": 7,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "3554de19e8fa7b193932b63171ffaa25e5a61832a0cf3dbe8736fb1de1570285",
+              "objective_id": "minimum-winner-grapes",
+              "scope_sha256": "7ce8e78a8fb1efca6c264d8498490b597555ef25457708f4a374f6bf60dca017",
+              "constraints_sha256": "303ddb0031a574fd873e2b5ddc92bca8a6665e612fc7c7290e93826e57d55a35",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "winner_positive",
+              "plural_children",
+              "last_nonnegative",
+              "total_grapes"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "ebcadc05bc8a3a4040fa5aaad665e64a6c0f44dbe77afc6dd446053e6a0d5c49",
+            "review_sha256": "97ee148e705426c9837f5d8aa72c8cf00c3010b6336865e259b7f06e7699ecb3"
+          },
+          "witness_sha256": "de799cc7005bb5a549a0002e6a50b3c8ed56c28284b2c098a05fcc742d8c17ba",
+          "request_number": 2,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "closed_form_grape_terms",
+              2
+            ],
+            [
+              "constraint:winner_positive",
+              1
+            ],
+            [
+              "constraint:plural_children",
+              1
+            ],
+            [
+              "constraint:last_nonnegative",
+              1
+            ],
+            [
+              "constraint:total_grapes",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "winner_positive",
+              true
+            ],
+            [
+              "plural_children",
+              true
+            ],
+            [
+              "last_nonnegative",
+              true
+            ],
+            [
+              "total_grapes",
+              true
+            ]
+          ],
+          "objective": "89",
+          "bound_direction": "UPPER",
+          "cpu_ns": 0,
+          "receipt_sha256": "c620e89c2b6b6db5c326d1c3178bac01ce914629f708513f6449ee1096520362"
+        }
+      ],
+      "chosen_attempt_index": 1,
+      "best_bound": "89",
+      "bound_direction": "UPPER",
+      "adversarial_control": {
+        "witness": {
+          "winner": 90,
+          "children": 41
+        },
+        "required_rejected_constraint": "total_grapes",
+        "receipt": {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "168111cfcc10c2cdd149d9256653f934daab601d4f3647297dadaf7907c92871",
+          "work": 6,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "3554de19e8fa7b193932b63171ffaa25e5a61832a0cf3dbe8736fb1de1570285",
+              "objective_id": "minimum-winner-grapes",
+              "scope_sha256": "7ce8e78a8fb1efca6c264d8498490b597555ef25457708f4a374f6bf60dca017",
+              "constraints_sha256": "303ddb0031a574fd873e2b5ddc92bca8a6665e612fc7c7290e93826e57d55a35",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "winner_positive",
+              "plural_children",
+              "last_nonnegative",
+              "total_grapes"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "ebcadc05bc8a3a4040fa5aaad665e64a6c0f44dbe77afc6dd446053e6a0d5c49",
+            "review_sha256": "97ee148e705426c9837f5d8aa72c8cf00c3010b6336865e259b7f06e7699ecb3"
+          },
+          "witness_sha256": "c02cdfdcb65a632a9eef942c3fdbc449fa10b4d5fd0417e5d62c03b2ecead050",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "closed_form_grape_terms",
+              2
+            ],
+            [
+              "constraint:winner_positive",
+              1
+            ],
+            [
+              "constraint:plural_children",
+              1
+            ],
+            [
+              "constraint:last_nonnegative",
+              1
+            ],
+            [
+              "constraint:total_grapes",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "winner_positive",
+              true
+            ],
+            [
+              "plural_children",
+              true
+            ],
+            [
+              "last_nonnegative",
+              true
+            ],
+            [
+              "total_grapes",
+              false
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "a21b2812450eb707a2252b4a7c46e929c1335d172d04d796d4053e8e66bb8f26"
+        }
+      }
+    },
+    {
+      "case_id": "2010-I-14",
+      "contract": {
+        "binding": {
+          "question_sha256": "6e8a142a1a6291b42579b03b840b1888350a8fa27bb52c187db2aa9134f42cb4",
+          "objective_id": "maximum-floor-log-index",
+          "scope_sha256": "496254faf0c2f28076f3be2fd95a6a94abd5a901d7e24c5f8a32aa03ad4ecede",
+          "constraints_sha256": "ba304b877bd4a2717d15e803d3b187a550638a8d5121d0e5f53f3a565e0e8d79",
+          "direction": "MAX"
+        },
+        "required_constraints": [
+          "positive_n",
+          "complete_floor_log_sum"
+        ],
+        "checker_id": "d45.arithmetic.checker",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "proof_sha256": "58d58533fb1706c1604bf2c3891e3d1bdbc2b14e89ea0e300d94154fa91c3a41",
+        "review_sha256": "2e3b7476995c4fc6084058d06da26b2fb007a7ccde5de31cc770490dbc154e3a"
+      },
+      "contract_sha256": "170f7bd79490de42143ea7505a258caffd3ee48668b7fc7081ee45ab18cc449a",
+      "scope": {
+        "direction": "MAX",
+        "objective_id": "maximum-floor-log-index",
+        "description": "Largest positive integer input n to the prescribed floor-log sum.",
+        "role_patterns": [
+          "\\bn\\b|f\\s*\\(\\s*n\\s*\\)|\\bvalue of the input\\b"
+        ]
+      },
+      "question_only_review": {
+        "case_id": "2010-I-14",
+        "question_sha256": "6e8a142a1a6291b42579b03b840b1888350a8fa27bb52c187db2aa9134f42cb4",
+        "review": "Independent of witness authors",
+        "scope": {
+          "direction": "MAX",
+          "objective_id": "maximum-floor-log-index",
+          "description": "Largest positive integer input n to the prescribed floor-log sum.",
+          "role_patterns": [
+            "\\bn\\b|f\\s*\\(\\s*n\\s*\\)|\\bvalue of the input\\b"
+          ]
+        },
+        "checker": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "original_constraints": "Exact decimal digit divisions compute floor(log10(k*n)) for every one of the 100 required positive terms."
+      },
+      "weak_necessary": "At n=1000, each term is at least 3 and k=10 already exceeds 3. Monotonicity excludes every larger input.",
+      "author_reported": [
+        {
+          "proposal_pass": 1,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 2,
+          "construction_and_audit_subwork": {
+            "floor_log_terms_checked": 200
+          },
+          "executable_wall_ns": 27300,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "74ed73cc7b7caefa016fe69fadba3d5df32dcff662ac28c47282aa36824c2d69"
+        },
+        {
+          "proposal_pass": 2,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 1,
+          "construction_and_audit_subwork": {
+            "decade_band_threshold_count_calculations": 3,
+            "candidate_construction_divisions": 1,
+            "floor_log_terms_checked": 100
+          },
+          "executable_wall_ns": 13500,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "46e38a1124e417ac43a8a1c095727f4576938b6dda37322afb7af5e7b6ab3589"
+        }
+      ],
+      "verified_attempts": [
+        {
+          "witness": {
+            "n": 1000
+          },
+          "status": "INFEASIBLE",
+          "checks": {
+            "floor_log_sum": 392
+          },
+          "proposal_pass": 1
+        },
+        {
+          "witness": {
+            "n": 100
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "floor_log_sum": 292
+          },
+          "proposal_pass": 1
+        },
+        {
+          "witness": {
+            "n": 109
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "floor_log_sum": 300,
+            "terms": 100
+          },
+          "proposal_pass": 2
+        }
+      ],
+      "independent_witness_receipts": [
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "170f7bd79490de42143ea7505a258caffd3ee48668b7fc7081ee45ab18cc449a",
+          "work": 494,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "6e8a142a1a6291b42579b03b840b1888350a8fa27bb52c187db2aa9134f42cb4",
+              "objective_id": "maximum-floor-log-index",
+              "scope_sha256": "496254faf0c2f28076f3be2fd95a6a94abd5a901d7e24c5f8a32aa03ad4ecede",
+              "constraints_sha256": "ba304b877bd4a2717d15e803d3b187a550638a8d5121d0e5f53f3a565e0e8d79",
+              "direction": "MAX"
+            },
+            "required_constraints": [
+              "positive_n",
+              "complete_floor_log_sum"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "58d58533fb1706c1604bf2c3891e3d1bdbc2b14e89ea0e300d94154fa91c3a41",
+            "review_sha256": "2e3b7476995c4fc6084058d06da26b2fb007a7ccde5de31cc770490dbc154e3a"
+          },
+          "witness_sha256": "fe1c788f83a7b21b9bb68ea3d588468319662e1ba670dceb5a83fc7d05a183a8",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "floor_log_terms",
+              100
+            ],
+            [
+              "decimal_floor_log_steps",
+              392
+            ],
+            [
+              "constraint:positive_n",
+              1
+            ],
+            [
+              "constraint:complete_floor_log_sum",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_n",
+              true
+            ],
+            [
+              "complete_floor_log_sum",
+              false
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "a1b4651c895bf6acb85f808189ba747deaef1b80998d438577386757ad94dd46"
+        },
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "170f7bd79490de42143ea7505a258caffd3ee48668b7fc7081ee45ab18cc449a",
+          "work": 395,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "6e8a142a1a6291b42579b03b840b1888350a8fa27bb52c187db2aa9134f42cb4",
+              "objective_id": "maximum-floor-log-index",
+              "scope_sha256": "496254faf0c2f28076f3be2fd95a6a94abd5a901d7e24c5f8a32aa03ad4ecede",
+              "constraints_sha256": "ba304b877bd4a2717d15e803d3b187a550638a8d5121d0e5f53f3a565e0e8d79",
+              "direction": "MAX"
+            },
+            "required_constraints": [
+              "positive_n",
+              "complete_floor_log_sum"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "58d58533fb1706c1604bf2c3891e3d1bdbc2b14e89ea0e300d94154fa91c3a41",
+            "review_sha256": "2e3b7476995c4fc6084058d06da26b2fb007a7ccde5de31cc770490dbc154e3a"
+          },
+          "witness_sha256": "b39022c4ed96525c42cd0e7ce55308533962a655f1c19d5dac2f03e9dd995b2c",
+          "request_number": 2,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "floor_log_terms",
+              100
+            ],
+            [
+              "decimal_floor_log_steps",
+              292
+            ],
+            [
+              "constraint:positive_n",
+              1
+            ],
+            [
+              "constraint:complete_floor_log_sum",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_n",
+              true
+            ],
+            [
+              "complete_floor_log_sum",
+              true
+            ]
+          ],
+          "objective": "100",
+          "bound_direction": "LOWER",
+          "cpu_ns": 0,
+          "receipt_sha256": "a8c65373fcc58a3c1b408596bd53016f5fcba081e484af0136ec9fc7ea37e151"
+        },
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "170f7bd79490de42143ea7505a258caffd3ee48668b7fc7081ee45ab18cc449a",
+          "work": 403,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "6e8a142a1a6291b42579b03b840b1888350a8fa27bb52c187db2aa9134f42cb4",
+              "objective_id": "maximum-floor-log-index",
+              "scope_sha256": "496254faf0c2f28076f3be2fd95a6a94abd5a901d7e24c5f8a32aa03ad4ecede",
+              "constraints_sha256": "ba304b877bd4a2717d15e803d3b187a550638a8d5121d0e5f53f3a565e0e8d79",
+              "direction": "MAX"
+            },
+            "required_constraints": [
+              "positive_n",
+              "complete_floor_log_sum"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "58d58533fb1706c1604bf2c3891e3d1bdbc2b14e89ea0e300d94154fa91c3a41",
+            "review_sha256": "2e3b7476995c4fc6084058d06da26b2fb007a7ccde5de31cc770490dbc154e3a"
+          },
+          "witness_sha256": "131539ed77c062e3f2c666a552a88bc1bb12ef9c90b1fe8d0c8c9a97dde06eeb",
+          "request_number": 3,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "floor_log_terms",
+              100
+            ],
+            [
+              "decimal_floor_log_steps",
+              300
+            ],
+            [
+              "constraint:positive_n",
+              1
+            ],
+            [
+              "constraint:complete_floor_log_sum",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_n",
+              true
+            ],
+            [
+              "complete_floor_log_sum",
+              true
+            ]
+          ],
+          "objective": "109",
+          "bound_direction": "LOWER",
+          "cpu_ns": 0,
+          "receipt_sha256": "e776ed420d13532530de93ab7bdd9cf017e5963e3927333a58ac8ee2964bcf58"
+        }
+      ],
+      "chosen_attempt_index": 2,
+      "best_bound": "109",
+      "bound_direction": "LOWER",
+      "adversarial_control": {
+        "witness": {
+          "n": 1000
+        },
+        "required_rejected_constraint": "complete_floor_log_sum",
+        "receipt": {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "170f7bd79490de42143ea7505a258caffd3ee48668b7fc7081ee45ab18cc449a",
+          "work": 494,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "6e8a142a1a6291b42579b03b840b1888350a8fa27bb52c187db2aa9134f42cb4",
+              "objective_id": "maximum-floor-log-index",
+              "scope_sha256": "496254faf0c2f28076f3be2fd95a6a94abd5a901d7e24c5f8a32aa03ad4ecede",
+              "constraints_sha256": "ba304b877bd4a2717d15e803d3b187a550638a8d5121d0e5f53f3a565e0e8d79",
+              "direction": "MAX"
+            },
+            "required_constraints": [
+              "positive_n",
+              "complete_floor_log_sum"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "58d58533fb1706c1604bf2c3891e3d1bdbc2b14e89ea0e300d94154fa91c3a41",
+            "review_sha256": "2e3b7476995c4fc6084058d06da26b2fb007a7ccde5de31cc770490dbc154e3a"
+          },
+          "witness_sha256": "fe1c788f83a7b21b9bb68ea3d588468319662e1ba670dceb5a83fc7d05a183a8",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "floor_log_terms",
+              100
+            ],
+            [
+              "decimal_floor_log_steps",
+              392
+            ],
+            [
+              "constraint:positive_n",
+              1
+            ],
+            [
+              "constraint:complete_floor_log_sum",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_n",
+              true
+            ],
+            [
+              "complete_floor_log_sum",
+              false
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "a1b4651c895bf6acb85f808189ba747deaef1b80998d438577386757ad94dd46"
+        }
+      }
+    },
+    {
+      "case_id": "2010-II-6",
+      "contract": {
+        "binding": {
+          "question_sha256": "cec60ab2efea74bd991d08c89cc6281eee628e2eb03c4c9f57e2be9e99568c03",
+          "objective_id": "minimum-polynomial-n",
+          "scope_sha256": "d2b929371212ae59c9acf65478e8869531e1393902e9011f1645c3bd5e88d208",
+          "constraints_sha256": "4e19428d53a7308690c2fc3462b957de181dd620eea97b79f478d9db69a75de2",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_n",
+          "integer_nonconstant_factors",
+          "exact_factor_product"
+        ],
+        "checker_id": "d45.arithmetic.checker",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "proof_sha256": "c6c10ddc0fa20b7a58c7c864fefceaa60cc37b1846e992a798bb740b4c50630b",
+        "review_sha256": "6b67fce959a6c70bdbee9177351d9088a5114350f3b04dc6d64d2690d792816f"
+      },
+      "contract_sha256": "ad42d7e2d675872162cc098e8fcce4e18a1a9c64dad8f24f38aaccb57e16dc47",
+      "scope": {
+        "direction": "MIN",
+        "objective_id": "minimum-polynomial-n",
+        "description": "Smallest positive n in the specified integer-factorizable polynomial.",
+        "role_patterns": [
+          "\\bn\\b|\\bcoefficient magnitude\\b"
+        ]
+      },
+      "question_only_review": {
+        "case_id": "2010-II-6",
+        "question_sha256": "cec60ab2efea74bd991d08c89cc6281eee628e2eb03c4c9f57e2be9e99568c03",
+        "review": "Independent of witness authors",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "minimum-polynomial-n",
+          "description": "Smallest positive n in the specified integer-factorizable polynomial.",
+          "role_patterns": [
+            "\\bn\\b|\\bcoefficient magnitude\\b"
+          ]
+        },
+        "checker": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "original_constraints": "Both factor degrees must be positive. Integer coefficient convolution in ascending powers must equal the prescribed quartic coefficient vector."
+      },
+      "weak_necessary": "Only the original positive-integer domain is used as the weak control here.",
+      "author_reported": [
+        {
+          "proposal_pass": 1,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 1,
+          "construction_and_audit_subwork": {
+            "coefficient_products_checked": 8
+          },
+          "executable_wall_ns": 14900,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "30b293790d14ad080e05e709af3ffa0d9ac86f77610d2ea91b85bc1ce3fae288"
+        }
+      ],
+      "verified_attempts": [
+        {
+          "witness": {
+            "n": 64,
+            "left": [
+              -1,
+              1
+            ],
+            "right": [
+              -63,
+              1,
+              1,
+              1
+            ]
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "product_coefficients_ascending": [
+              63,
+              -64,
+              0,
+              0,
+              1
+            ]
+          },
+          "proposal_pass": 1
+        }
+      ],
+      "independent_witness_receipts": [
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "ad42d7e2d675872162cc098e8fcce4e18a1a9c64dad8f24f38aaccb57e16dc47",
+          "work": 12,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "cec60ab2efea74bd991d08c89cc6281eee628e2eb03c4c9f57e2be9e99568c03",
+              "objective_id": "minimum-polynomial-n",
+              "scope_sha256": "d2b929371212ae59c9acf65478e8869531e1393902e9011f1645c3bd5e88d208",
+              "constraints_sha256": "4e19428d53a7308690c2fc3462b957de181dd620eea97b79f478d9db69a75de2",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_n",
+              "integer_nonconstant_factors",
+              "exact_factor_product"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "c6c10ddc0fa20b7a58c7c864fefceaa60cc37b1846e992a798bb740b4c50630b",
+            "review_sha256": "6b67fce959a6c70bdbee9177351d9088a5114350f3b04dc6d64d2690d792816f"
+          },
+          "witness_sha256": "80c1de21f0d274919e747f9ce24f2ea079b9231b1ee29ec199ed5cca082d5f4d",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "polynomial_product_terms",
+              8
+            ],
+            [
+              "constraint:positive_n",
+              1
+            ],
+            [
+              "constraint:integer_nonconstant_factors",
+              1
+            ],
+            [
+              "constraint:exact_factor_product",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_n",
+              true
+            ],
+            [
+              "integer_nonconstant_factors",
+              true
+            ],
+            [
+              "exact_factor_product",
+              true
+            ]
+          ],
+          "objective": "64",
+          "bound_direction": "UPPER",
+          "cpu_ns": 0,
+          "receipt_sha256": "b719f94da407c2624ed02b190239b1046c1ee99654607991299609d767fb69a8"
+        }
+      ],
+      "chosen_attempt_index": 0,
+      "best_bound": "64",
+      "bound_direction": "UPPER",
+      "adversarial_control": {
+        "witness": {
+          "n": 65,
+          "left": [
+            -1,
+            1
+          ],
+          "right": [
+            -63,
+            1,
+            1,
+            1
+          ]
+        },
+        "required_rejected_constraint": "exact_factor_product",
+        "receipt": {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "ad42d7e2d675872162cc098e8fcce4e18a1a9c64dad8f24f38aaccb57e16dc47",
+          "work": 11,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "cec60ab2efea74bd991d08c89cc6281eee628e2eb03c4c9f57e2be9e99568c03",
+              "objective_id": "minimum-polynomial-n",
+              "scope_sha256": "d2b929371212ae59c9acf65478e8869531e1393902e9011f1645c3bd5e88d208",
+              "constraints_sha256": "4e19428d53a7308690c2fc3462b957de181dd620eea97b79f478d9db69a75de2",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_n",
+              "integer_nonconstant_factors",
+              "exact_factor_product"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "c6c10ddc0fa20b7a58c7c864fefceaa60cc37b1846e992a798bb740b4c50630b",
+            "review_sha256": "6b67fce959a6c70bdbee9177351d9088a5114350f3b04dc6d64d2690d792816f"
+          },
+          "witness_sha256": "ddfe8446a0b181b06826ae6b77514cd4a8b81c9d11abb3bc62238342626a1bef",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "polynomial_product_terms",
+              8
+            ],
+            [
+              "constraint:positive_n",
+              1
+            ],
+            [
+              "constraint:integer_nonconstant_factors",
+              1
+            ],
+            [
+              "constraint:exact_factor_product",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_n",
+              true
+            ],
+            [
+              "integer_nonconstant_factors",
+              true
+            ],
+            [
+              "exact_factor_product",
+              false
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "ba459e02eec0ef37288c7c6b5164e37bd4a05991738a0a09edc1284b909057f5"
+        }
+      }
+    },
+    {
+      "case_id": "2015-I-8",
+      "contract": {
+        "binding": {
+          "question_sha256": "82b9a05aea2a4a50e7d55361c955f0cf47586170d2810ee438846575b971636e",
+          "objective_id": "minimum-dual-digit-sum-n",
+          "scope_sha256": "1a8d2987a904f310791c04877c5eb02209fbeedd5b7ea0da07c3557945ef14f5",
+          "constraints_sha256": "562f2564df601a1df89ce521a9c796ac57027904dd3b30a9b549b1cc099eae77",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_n",
+          "original_digit_sum",
+          "shifted_digit_sum"
+        ],
+        "checker_id": "d45.arithmetic.checker",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "proof_sha256": "9ae2177912b7500ff307f9f1ef2c1ba5f083d2ba366fdf7aebd0ef3c48b34a36",
+        "review_sha256": "74892367191dabcfa668b08d1daad5f025610bb1951d11364af2feb7df199c90"
+      },
+      "contract_sha256": "1421bf2a69e55068e06486e2941a2414acc921b3d3e9e38977abdc8389a05312",
+      "scope": {
+        "direction": "MIN",
+        "objective_id": "minimum-dual-digit-sum-n",
+        "description": "Smallest positive n with both prescribed decimal digit sums.",
+        "role_patterns": [
+          "\\bn\\b|\\bdigit sums?\\b|864"
+        ]
+      },
+      "question_only_review": {
+        "case_id": "2015-I-8",
+        "question_sha256": "82b9a05aea2a4a50e7d55361c955f0cf47586170d2810ee438846575b971636e",
+        "review": "Independent of witness authors",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "minimum-dual-digit-sum-n",
+          "description": "Smallest positive n with both prescribed decimal digit sums.",
+          "role_patterns": [
+            "\\bn\\b|\\bdigit sums?\\b|864"
+          ]
+        },
+        "checker": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "original_constraints": "Decimal quotient/remainder division computes both required digit sums exactly on n and n+864."
+      },
+      "weak_necessary": "Decimal digit sum has the same residue as the original integer modulo 9.",
+      "author_reported": [
+        {
+          "proposal_pass": 1,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 1,
+          "construction_and_audit_subwork": {
+            "decimal_digits_read": 7
+          },
+          "executable_wall_ns": 7400,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "a061baa50a071e3c99f4f947eee732c42592aa4d737b455fd19f94707291fd50"
+        }
+      ],
+      "verified_attempts": [
+        {
+          "witness": {
+            "n": 983
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "decimal_digit_sums": [
+              20,
+              20
+            ]
+          },
+          "proposal_pass": 1
+        }
+      ],
+      "independent_witness_receipts": [
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "1421bf2a69e55068e06486e2941a2414acc921b3d3e9e38977abdc8389a05312",
+          "work": 11,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "82b9a05aea2a4a50e7d55361c955f0cf47586170d2810ee438846575b971636e",
+              "objective_id": "minimum-dual-digit-sum-n",
+              "scope_sha256": "1a8d2987a904f310791c04877c5eb02209fbeedd5b7ea0da07c3557945ef14f5",
+              "constraints_sha256": "562f2564df601a1df89ce521a9c796ac57027904dd3b30a9b549b1cc099eae77",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_n",
+              "original_digit_sum",
+              "shifted_digit_sum"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "9ae2177912b7500ff307f9f1ef2c1ba5f083d2ba366fdf7aebd0ef3c48b34a36",
+            "review_sha256": "74892367191dabcfa668b08d1daad5f025610bb1951d11364af2feb7df199c90"
+          },
+          "witness_sha256": "eb4d0636a123e0f92a96e87aade9d9776dd533350b27f4087217fe24472357ec",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "decimal_digit_steps",
+              7
+            ],
+            [
+              "constraint:positive_n",
+              1
+            ],
+            [
+              "constraint:original_digit_sum",
+              1
+            ],
+            [
+              "constraint:shifted_digit_sum",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_n",
+              true
+            ],
+            [
+              "original_digit_sum",
+              true
+            ],
+            [
+              "shifted_digit_sum",
+              true
+            ]
+          ],
+          "objective": "983",
+          "bound_direction": "UPPER",
+          "cpu_ns": 0,
+          "receipt_sha256": "cbaef47b2d0570109d6c0ff2d17730a4ad10234c4b9df3f8001d895ae2239827"
+        }
+      ],
+      "chosen_attempt_index": 0,
+      "best_bound": "983",
+      "bound_direction": "UPPER",
+      "adversarial_control": {
+        "witness": {
+          "n": 984
+        },
+        "required_rejected_constraint": "original_digit_sum",
+        "receipt": {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "1421bf2a69e55068e06486e2941a2414acc921b3d3e9e38977abdc8389a05312",
+          "work": 10,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "82b9a05aea2a4a50e7d55361c955f0cf47586170d2810ee438846575b971636e",
+              "objective_id": "minimum-dual-digit-sum-n",
+              "scope_sha256": "1a8d2987a904f310791c04877c5eb02209fbeedd5b7ea0da07c3557945ef14f5",
+              "constraints_sha256": "562f2564df601a1df89ce521a9c796ac57027904dd3b30a9b549b1cc099eae77",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_n",
+              "original_digit_sum",
+              "shifted_digit_sum"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "9ae2177912b7500ff307f9f1ef2c1ba5f083d2ba366fdf7aebd0ef3c48b34a36",
+            "review_sha256": "74892367191dabcfa668b08d1daad5f025610bb1951d11364af2feb7df199c90"
+          },
+          "witness_sha256": "496ccb06e34afe5c8399f668306cb0077488a136597a6d03c32ac12634f1c10c",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "decimal_digit_steps",
+              7
+            ],
+            [
+              "constraint:positive_n",
+              1
+            ],
+            [
+              "constraint:original_digit_sum",
+              1
+            ],
+            [
+              "constraint:shifted_digit_sum",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_n",
+              true
+            ],
+            [
+              "original_digit_sum",
+              false
+            ],
+            [
+              "shifted_digit_sum",
+              false
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "066dfd7358592ebed022a7eef7983ce7ddf773261eccb4945bfbd8db99c5f671"
+        }
+      }
+    },
+    {
+      "case_id": "2016-I-12",
+      "contract": {
+        "binding": {
+          "question_sha256": "f204412836702b9f70fb902fccc3dafbaac0c3a7c65a4ac5e9f6ddf1dd9e4bb7",
+          "objective_id": "minimum-four-prime-index",
+          "scope_sha256": "03101a5c931bf6482b970cebf110c3c0bbe9eddef73cba36da14794ad42fb6f5",
+          "constraints_sha256": "5baf0c949bdca92dd7d048f23a4d3384fbc05a8f122f130207896917cb4800cb",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_m",
+          "at_least_four_factors",
+          "prime_factors",
+          "exact_factor_product"
+        ],
+        "checker_id": "d45.arithmetic.checker",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "proof_sha256": "7610a63a0e73dd5819ca46d923a9fd64b3ddfe1ac9396de2b4e1c0174aa954b7",
+        "review_sha256": "d172d96b8bffb8cb155aad7bac5c79e8e95a323884ea48730000327e8bd725b7"
+      },
+      "contract_sha256": "655b5ce16578f7c171a03df94afb670f7290486f80f6d0683fe27138db7a4fd3",
+      "scope": {
+        "direction": "MIN",
+        "objective_id": "minimum-four-prime-index",
+        "description": "Least positive m such that the prescribed polynomial has at least four prime factors counting multiplicity.",
+        "role_patterns": [
+          "\\bm\\b|\\bindex\\b"
+        ]
+      },
+      "question_only_review": {
+        "case_id": "2016-I-12",
+        "question_sha256": "f204412836702b9f70fb902fccc3dafbaac0c3a7c65a4ac5e9f6ddf1dd9e4bb7",
+        "review": "Independent of witness authors",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "minimum-four-prime-index",
+          "description": "Least positive m such that the prescribed polynomial has at least four prime factors counting multiplicity.",
+          "role_patterns": [
+            "\\bm\\b|\\bindex\\b"
+          ]
+        },
+        "checker": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "original_constraints": "Validate positive m, four or more factors, primality of each listed factor, multiplicity and equality of their product."
+      },
+      "weak_necessary": "The polynomial is odd; four prime factors have product at least 3^4, so m must be at least 9.",
+      "author_reported": [
+        {
+          "proposal_pass": 1,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 2,
+          "construction_and_audit_subwork": {
+            "hensel_lifts_checked": [
+              {
+                "m": 111,
+                "modulus": 121,
+                "residue": 0
+              },
+              {
+                "m": 1200,
+                "modulus": 1331,
+                "residue": 0
+              },
+              {
+                "m": 11848,
+                "modulus": 14641,
+                "residue": 0
+              }
+            ],
+            "trial_divisor_outer_iterations": 96,
+            "primality_trial_divisions_for_distinct_factors": 98
+          },
+          "executable_wall_ns": 37083200,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "68144d6faa450b2b98eded5320d8e28b6dc3c57cea92a9b90eef07bdc50940a9"
+        },
+        {
+          "proposal_pass": 2,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 2,
+          "construction_and_audit_subwork": {
+            "arithmetic_progression_constructions": 2,
+            "factor_products_checked": 2,
+            "primality_checks": [
+              {
+                "m": 11,
+                "prime": 11,
+                "trial_divisions": 2,
+                "prime_pass": true
+              },
+              {
+                "m": 132,
+                "prime": 11,
+                "trial_divisions": 2,
+                "prime_pass": true
+              },
+              {
+                "m": 132,
+                "prime": 13,
+                "trial_divisions": 2,
+                "prime_pass": true
+              }
+            ],
+            "primality_trial_divisions": 6
+          },
+          "executable_wall_ns": 26300,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "7c081c9ed2ac9136dac550293147238b4997f0160264be49243cc729e3489a33"
+        }
+      ],
+      "verified_attempts": [
+        {
+          "witness": {
+            "m": 1,
+            "primes": [
+              11
+            ]
+          },
+          "status": "INFEASIBLE",
+          "checks": {
+            "factor_count": 1,
+            "polynomial_value": 11
+          },
+          "proposal_pass": 1
+        },
+        {
+          "witness": {
+            "m": 11848,
+            "primes": [
+              11,
+              11,
+              11,
+              11,
+              9587
+            ]
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "polynomial_value": 140363267,
+            "factor_product": 140363267,
+            "all_factors_prime": true
+          },
+          "proposal_pass": 1
+        },
+        {
+          "witness": {
+            "m": 11,
+            "primes": [
+              11,
+              11
+            ]
+          },
+          "status": "INFEASIBLE",
+          "checks": {
+            "polynomial_value": 121,
+            "full_factor_product": 121,
+            "factor_count": 2,
+            "exact_product": true,
+            "distinct_prime_results": {
+              "11": true
+            }
+          },
+          "proposal_pass": 2
+        },
+        {
+          "witness": {
+            "m": 132,
+            "primes": [
+              11,
+              11,
+              11,
+              13
+            ]
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "polynomial_value": 17303,
+            "full_factor_product": 17303,
+            "factor_count": 4,
+            "exact_product": true,
+            "distinct_prime_results": {
+              "11": true,
+              "13": true
+            }
+          },
+          "proposal_pass": 2
+        }
+      ],
+      "independent_witness_receipts": [
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "655b5ce16578f7c171a03df94afb670f7290486f80f6d0683fe27138db7a4fd3",
+          "work": 7,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "f204412836702b9f70fb902fccc3dafbaac0c3a7c65a4ac5e9f6ddf1dd9e4bb7",
+              "objective_id": "minimum-four-prime-index",
+              "scope_sha256": "03101a5c931bf6482b970cebf110c3c0bbe9eddef73cba36da14794ad42fb6f5",
+              "constraints_sha256": "5baf0c949bdca92dd7d048f23a4d3384fbc05a8f122f130207896917cb4800cb",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_m",
+              "at_least_four_factors",
+              "prime_factors",
+              "exact_factor_product"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "7610a63a0e73dd5819ca46d923a9fd64b3ddfe1ac9396de2b4e1c0174aa954b7",
+            "review_sha256": "d172d96b8bffb8cb155aad7bac5c79e8e95a323884ea48730000327e8bd725b7"
+          },
+          "witness_sha256": "d11b5823e9ddaa1de754108b201339f114fa6f31ea7bcb107e7447d7274d6788",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "trial_division_steps",
+              2
+            ],
+            [
+              "factor_product_terms",
+              1
+            ],
+            [
+              "constraint:positive_m",
+              1
+            ],
+            [
+              "constraint:at_least_four_factors",
+              1
+            ],
+            [
+              "constraint:prime_factors",
+              1
+            ],
+            [
+              "constraint:exact_factor_product",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_m",
+              true
+            ],
+            [
+              "at_least_four_factors",
+              false
+            ],
+            [
+              "prime_factors",
+              true
+            ],
+            [
+              "exact_factor_product",
+              true
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "e59643f728b81df48e147b936b7d32876f88c8876e2505d6e6e8840ebebef06a"
+        },
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "655b5ce16578f7c171a03df94afb670f7290486f80f6d0683fe27138db7a4fd3",
+          "work": 67,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "f204412836702b9f70fb902fccc3dafbaac0c3a7c65a4ac5e9f6ddf1dd9e4bb7",
+              "objective_id": "minimum-four-prime-index",
+              "scope_sha256": "03101a5c931bf6482b970cebf110c3c0bbe9eddef73cba36da14794ad42fb6f5",
+              "constraints_sha256": "5baf0c949bdca92dd7d048f23a4d3384fbc05a8f122f130207896917cb4800cb",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_m",
+              "at_least_four_factors",
+              "prime_factors",
+              "exact_factor_product"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "7610a63a0e73dd5819ca46d923a9fd64b3ddfe1ac9396de2b4e1c0174aa954b7",
+            "review_sha256": "d172d96b8bffb8cb155aad7bac5c79e8e95a323884ea48730000327e8bd725b7"
+          },
+          "witness_sha256": "28e58da9b902195c9659110a4aec26d005f125ace9ba549aaee237b834f576ab",
+          "request_number": 2,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "trial_division_steps",
+              57
+            ],
+            [
+              "factor_product_terms",
+              5
+            ],
+            [
+              "constraint:positive_m",
+              1
+            ],
+            [
+              "constraint:at_least_four_factors",
+              1
+            ],
+            [
+              "constraint:prime_factors",
+              1
+            ],
+            [
+              "constraint:exact_factor_product",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_m",
+              true
+            ],
+            [
+              "at_least_four_factors",
+              true
+            ],
+            [
+              "prime_factors",
+              true
+            ],
+            [
+              "exact_factor_product",
+              true
+            ]
+          ],
+          "objective": "11848",
+          "bound_direction": "UPPER",
+          "cpu_ns": 0,
+          "receipt_sha256": "461bbfd9eaa5661609fa97b8b0e6a80635fcebb968ceadda04bf114c0742b3b1"
+        },
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "655b5ce16578f7c171a03df94afb670f7290486f80f6d0683fe27138db7a4fd3",
+          "work": 10,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "f204412836702b9f70fb902fccc3dafbaac0c3a7c65a4ac5e9f6ddf1dd9e4bb7",
+              "objective_id": "minimum-four-prime-index",
+              "scope_sha256": "03101a5c931bf6482b970cebf110c3c0bbe9eddef73cba36da14794ad42fb6f5",
+              "constraints_sha256": "5baf0c949bdca92dd7d048f23a4d3384fbc05a8f122f130207896917cb4800cb",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_m",
+              "at_least_four_factors",
+              "prime_factors",
+              "exact_factor_product"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "7610a63a0e73dd5819ca46d923a9fd64b3ddfe1ac9396de2b4e1c0174aa954b7",
+            "review_sha256": "d172d96b8bffb8cb155aad7bac5c79e8e95a323884ea48730000327e8bd725b7"
+          },
+          "witness_sha256": "6e2f6e24754012bb6798f27b7366275d00140bc79e9ae91a6b0ab5119cb30788",
+          "request_number": 3,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "trial_division_steps",
+              4
+            ],
+            [
+              "factor_product_terms",
+              2
+            ],
+            [
+              "constraint:positive_m",
+              1
+            ],
+            [
+              "constraint:at_least_four_factors",
+              1
+            ],
+            [
+              "constraint:prime_factors",
+              1
+            ],
+            [
+              "constraint:exact_factor_product",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_m",
+              true
+            ],
+            [
+              "at_least_four_factors",
+              false
+            ],
+            [
+              "prime_factors",
+              true
+            ],
+            [
+              "exact_factor_product",
+              true
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "2fc18015d8a4920e8774a00885d87525901c7c27f13edcb0507749f036a306d6"
+        },
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "655b5ce16578f7c171a03df94afb670f7290486f80f6d0683fe27138db7a4fd3",
+          "work": 17,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "f204412836702b9f70fb902fccc3dafbaac0c3a7c65a4ac5e9f6ddf1dd9e4bb7",
+              "objective_id": "minimum-four-prime-index",
+              "scope_sha256": "03101a5c931bf6482b970cebf110c3c0bbe9eddef73cba36da14794ad42fb6f5",
+              "constraints_sha256": "5baf0c949bdca92dd7d048f23a4d3384fbc05a8f122f130207896917cb4800cb",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_m",
+              "at_least_four_factors",
+              "prime_factors",
+              "exact_factor_product"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "7610a63a0e73dd5819ca46d923a9fd64b3ddfe1ac9396de2b4e1c0174aa954b7",
+            "review_sha256": "d172d96b8bffb8cb155aad7bac5c79e8e95a323884ea48730000327e8bd725b7"
+          },
+          "witness_sha256": "f98fedd77e929b9ca5a4ff58b7c97aff5d150945d0fccaebaa50582a5f68840c",
+          "request_number": 4,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "trial_division_steps",
+              8
+            ],
+            [
+              "factor_product_terms",
+              4
+            ],
+            [
+              "constraint:positive_m",
+              1
+            ],
+            [
+              "constraint:at_least_four_factors",
+              1
+            ],
+            [
+              "constraint:prime_factors",
+              1
+            ],
+            [
+              "constraint:exact_factor_product",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_m",
+              true
+            ],
+            [
+              "at_least_four_factors",
+              true
+            ],
+            [
+              "prime_factors",
+              true
+            ],
+            [
+              "exact_factor_product",
+              true
+            ]
+          ],
+          "objective": "132",
+          "bound_direction": "UPPER",
+          "cpu_ns": 0,
+          "receipt_sha256": "c3e619353e37ce13a37c2882690b4f7aa7ca5c3c58c4a36b6d7c76989f12c063"
+        }
+      ],
+      "chosen_attempt_index": 3,
+      "best_bound": "132",
+      "bound_direction": "UPPER",
+      "adversarial_control": {
+        "witness": {
+          "m": 132,
+          "primes": [
+            9,
+            11,
+            11,
+            13
+          ]
+        },
+        "required_rejected_constraint": "prime_factors",
+        "receipt": {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "655b5ce16578f7c171a03df94afb670f7290486f80f6d0683fe27138db7a4fd3",
+          "work": 10,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "f204412836702b9f70fb902fccc3dafbaac0c3a7c65a4ac5e9f6ddf1dd9e4bb7",
+              "objective_id": "minimum-four-prime-index",
+              "scope_sha256": "03101a5c931bf6482b970cebf110c3c0bbe9eddef73cba36da14794ad42fb6f5",
+              "constraints_sha256": "5baf0c949bdca92dd7d048f23a4d3384fbc05a8f122f130207896917cb4800cb",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_m",
+              "at_least_four_factors",
+              "prime_factors",
+              "exact_factor_product"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "7610a63a0e73dd5819ca46d923a9fd64b3ddfe1ac9396de2b4e1c0174aa954b7",
+            "review_sha256": "d172d96b8bffb8cb155aad7bac5c79e8e95a323884ea48730000327e8bd725b7"
+          },
+          "witness_sha256": "4585767deab94eedb9ea15c1e6b9ae1bf4f5ba83b32f019596c636f7073071a0",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "trial_division_steps",
+              2
+            ],
+            [
+              "factor_product_terms",
+              4
+            ],
+            [
+              "constraint:positive_m",
+              1
+            ],
+            [
+              "constraint:at_least_four_factors",
+              1
+            ],
+            [
+              "constraint:prime_factors",
+              1
+            ],
+            [
+              "constraint:exact_factor_product",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_m",
+              true
+            ],
+            [
+              "at_least_four_factors",
+              true
+            ],
+            [
+              "prime_factors",
+              false
+            ],
+            [
+              "exact_factor_product",
+              false
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "a6cbc8a2a3df80023f9a88b2bcacb880ccbb33aad8d131b0e366fd6ca876afb6"
+        }
+      }
+    },
+    {
+      "case_id": "2020-I-10",
+      "contract": {
+        "binding": {
+          "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+          "objective_id": "minimum-power-divisibility-sum",
+          "scope_sha256": "9df84c97531766a4e3899ced296813ad55a2184bd2d57bce7928a77d3c5badd8",
+          "constraints_sha256": "148186dd041661a9f12f4ea28c82d294d81a7b1529e4996019f158ccb7c32299",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_pair",
+          "sum_coprime_210",
+          "power_divisibility",
+          "ordinary_nondivisibility"
+        ],
+        "checker_id": "d45.arithmetic.checker",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "proof_sha256": "ffd2fe43bc7c1d8454a429f08ca5fd6ed3eded5ccb2f526a6e6d2c8b3fb26513",
+        "review_sha256": "28488f006a84a2a497603e07eb484ecfbdb9623f4bd202c6bbfbe95e4e5482b7"
+      },
+      "contract_sha256": "c56a1ba4200aef83aa912d4639ef2febf94867972050082286fcd0e72b10defd",
+      "scope": {
+        "direction": "MIN",
+        "objective_id": "minimum-power-divisibility-sum",
+        "description": "Least possible m+n over the original positive integer pair and all three divisibility constraints.",
+        "role_patterns": [
+          "\\bm[\\s$\\\\]*\\+[\\s$\\\\]*n\\b|\\bsum\\b"
+        ]
+      },
+      "question_only_review": {
+        "case_id": "2020-I-10",
+        "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+        "review": "Independent of witness authors",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "minimum-power-divisibility-sum",
+          "description": "Least possible m+n over the original positive integer pair and all three divisibility constraints.",
+          "role_patterns": [
+            "\\bm[\\s$\\\\]*\\+[\\s$\\\\]*n\\b|\\bsum\\b"
+          ]
+        },
+        "checker": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "original_constraints": "For positive integers, prime valuations characterize the power divisibility. Also verify the coprime sum and the ordinary nondivisibility."
+      },
+      "weak_necessary": "The positive sum is at least 2 and coprime to 210 by the original constraints.",
+      "author_reported": [
+        {
+          "proposal_pass": 1,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 1,
+          "construction_and_audit_subwork": {
+            "valuation_checks": 2,
+            "gcd_checks": 1,
+            "ordinary_divisibility_checks": 1
+          },
+          "executable_wall_ns": 6300,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "c8d08c5d91d2f950cb40611e393a453acd9127cd42fc6b48944ad9de3263377d"
+        }
+      ],
+      "verified_attempts": [
+        {
+          "witness": {
+            "m": 286,
+            "n": 121
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "gcd_sum_210": 1,
+            "remainder_m_mod_n": 44,
+            "eleven_valuations_of_powers": [
+              286,
+              242
+            ],
+            "n_has_only_prime_11": true
+          },
+          "proposal_pass": 1
+        }
+      ],
+      "independent_witness_receipts": [
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "c56a1ba4200aef83aa912d4639ef2febf94867972050082286fcd0e72b10defd",
+          "work": 24,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+              "objective_id": "minimum-power-divisibility-sum",
+              "scope_sha256": "9df84c97531766a4e3899ced296813ad55a2184bd2d57bce7928a77d3c5badd8",
+              "constraints_sha256": "148186dd041661a9f12f4ea28c82d294d81a7b1529e4996019f158ccb7c32299",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_pair",
+              "sum_coprime_210",
+              "power_divisibility",
+              "ordinary_nondivisibility"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "ffd2fe43bc7c1d8454a429f08ca5fd6ed3eded5ccb2f526a6e6d2c8b3fb26513",
+            "review_sha256": "28488f006a84a2a497603e07eb484ecfbdb9623f4bd202c6bbfbe95e4e5482b7"
+          },
+          "witness_sha256": "f3d398934336f45d2eea2645c835befa3305c1d2dbbcab9530b4497129e14ac9",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "trial_division_steps",
+              13
+            ],
+            [
+              "prime_valuation_comparisons",
+              1
+            ],
+            [
+              "gcd_division_steps",
+              5
+            ],
+            [
+              "constraint:positive_pair",
+              1
+            ],
+            [
+              "constraint:sum_coprime_210",
+              1
+            ],
+            [
+              "constraint:power_divisibility",
+              1
+            ],
+            [
+              "constraint:ordinary_nondivisibility",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_pair",
+              true
+            ],
+            [
+              "sum_coprime_210",
+              true
+            ],
+            [
+              "power_divisibility",
+              true
+            ],
+            [
+              "ordinary_nondivisibility",
+              true
+            ]
+          ],
+          "objective": "407",
+          "bound_direction": "UPPER",
+          "cpu_ns": 0,
+          "receipt_sha256": "e93a1f63a3ddf6cfd8ddeb83665d267ad6ae0743d717cfd80b56e596279b16ab"
+        }
+      ],
+      "chosen_attempt_index": 0,
+      "best_bound": "407",
+      "bound_direction": "UPPER",
+      "adversarial_control": {
+        "witness": {
+          "m": 3,
+          "n": 8
+        },
+        "required_rejected_constraint": "power_divisibility",
+        "receipt": {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "c56a1ba4200aef83aa912d4639ef2febf94867972050082286fcd0e72b10defd",
+          "work": 10,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+              "objective_id": "minimum-power-divisibility-sum",
+              "scope_sha256": "9df84c97531766a4e3899ced296813ad55a2184bd2d57bce7928a77d3c5badd8",
+              "constraints_sha256": "148186dd041661a9f12f4ea28c82d294d81a7b1529e4996019f158ccb7c32299",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_pair",
+              "sum_coprime_210",
+              "power_divisibility",
+              "ordinary_nondivisibility"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "ffd2fe43bc7c1d8454a429f08ca5fd6ed3eded5ccb2f526a6e6d2c8b3fb26513",
+            "review_sha256": "28488f006a84a2a497603e07eb484ecfbdb9623f4bd202c6bbfbe95e4e5482b7"
+          },
+          "witness_sha256": "09bbe7254a2070c5980585c898f98fca3464dd5e0b67dfb26652dbf9298ff8d9",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "trial_division_steps",
+              2
+            ],
+            [
+              "prime_valuation_comparisons",
+              1
+            ],
+            [
+              "gcd_division_steps",
+              3
+            ],
+            [
+              "constraint:positive_pair",
+              1
+            ],
+            [
+              "constraint:sum_coprime_210",
+              1
+            ],
+            [
+              "constraint:power_divisibility",
+              1
+            ],
+            [
+              "constraint:ordinary_nondivisibility",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_pair",
+              true
+            ],
+            [
+              "sum_coprime_210",
+              true
+            ],
+            [
+              "power_divisibility",
+              false
+            ],
+            [
+              "ordinary_nondivisibility",
+              true
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "849aedb7ae8afffb065777c452816131e73c960ca1492c290fc9f4468b7859e1"
+        }
+      }
+    },
+    {
+      "case_id": "2020-I-3",
+      "contract": {
+        "binding": {
+          "question_sha256": "3bcffbebc176fc3fd593040d892e4648e8c5ff62a173d8a17f0a547bb1a5c0cc",
+          "objective_id": "minimum-mixed-radix-n",
+          "scope_sha256": "91c822edd378f90ae462a3eecad4bd0d460413c7f04bf829d119b4acbd0fe1a9",
+          "constraints_sha256": "fd437c4f6ba0686dcda7cdf7cbaa7296861b96a6f5907978dfc775aafc79ba39",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "base_eight_digit_domain",
+          "nonzero_base_eleven_leading",
+          "same_represented_integer"
+        ],
+        "checker_id": "d45.arithmetic.checker",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "proof_sha256": "898c52accafcef3e32147fb401dee581d3e74417a20d0015e7e25f80a1e925a7",
+        "review_sha256": "4f8735b578faf978661b1db7e2938bacbd2968ca56f95e0f41faf991e060a71b"
+      },
+      "contract_sha256": "9abae2168563142a0d62163eddbe0a40becd33ab962e89eba9c87009394c0bc8",
+      "scope": {
+        "direction": "MIN",
+        "objective_id": "minimum-mixed-radix-n",
+        "description": "Least positive value N, expressed in decimal, with the two original digit patterns.",
+        "role_patterns": [
+          "\\bN\\b|\\bbase[- ](?:ten|10)\\b|\\bdecimal value\\b"
+        ]
+      },
+      "question_only_review": {
+        "case_id": "2020-I-3",
+        "question_sha256": "3bcffbebc176fc3fd593040d892e4648e8c5ff62a173d8a17f0a547bb1a5c0cc",
+        "review": "Independent of witness authors",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "minimum-mixed-radix-n",
+          "description": "Least positive value N, expressed in decimal, with the two original digit patterns.",
+          "role_patterns": [
+            "\\bN\\b|\\bbase[- ](?:ten|10)\\b|\\bdecimal value\\b"
+          ]
+        },
+        "checker": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "original_constraints": "The shared digits must belong to base eight. The leading digit in base eleven must be nonzero. Horner evaluation checks equality, with the fixed leading 1 in base eight."
+      },
+      "weak_necessary": "The base-eight value is at least 512. The three shared digits are at most 7, giving base-eleven value at most 931.",
+      "author_reported": [
+        {
+          "proposal_pass": 1,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 1,
+          "construction_and_audit_subwork": {
+            "digit_congruence_constructions": 1,
+            "radix_evaluations": 2
+          },
+          "executable_wall_ns": 8200,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "f0d84b5f7f53ca5bd0aee6688c3eba1654471ef346629005895fff6c0bf3377d"
+        }
+      ],
+      "verified_attempts": [
+        {
+          "witness": {
+            "a": 6,
+            "b": 3,
+            "c": 7
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "base_eleven_evaluation": 766,
+            "base_eight_evaluation": 766
+          },
+          "proposal_pass": 1
+        }
+      ],
+      "independent_witness_receipts": [
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "9abae2168563142a0d62163eddbe0a40becd33ab962e89eba9c87009394c0bc8",
+          "work": 9,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "3bcffbebc176fc3fd593040d892e4648e8c5ff62a173d8a17f0a547bb1a5c0cc",
+              "objective_id": "minimum-mixed-radix-n",
+              "scope_sha256": "91c822edd378f90ae462a3eecad4bd0d460413c7f04bf829d119b4acbd0fe1a9",
+              "constraints_sha256": "fd437c4f6ba0686dcda7cdf7cbaa7296861b96a6f5907978dfc775aafc79ba39",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "base_eight_digit_domain",
+              "nonzero_base_eleven_leading",
+              "same_represented_integer"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "898c52accafcef3e32147fb401dee581d3e74417a20d0015e7e25f80a1e925a7",
+            "review_sha256": "4f8735b578faf978661b1db7e2938bacbd2968ca56f95e0f41faf991e060a71b"
+          },
+          "witness_sha256": "950b52e0dc23878c07f7b404641829a12c02c2e156db45660ef01494d4ad86a8",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "radix_horner_steps",
+              5
+            ],
+            [
+              "constraint:base_eight_digit_domain",
+              1
+            ],
+            [
+              "constraint:nonzero_base_eleven_leading",
+              1
+            ],
+            [
+              "constraint:same_represented_integer",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "base_eight_digit_domain",
+              true
+            ],
+            [
+              "nonzero_base_eleven_leading",
+              true
+            ],
+            [
+              "same_represented_integer",
+              true
+            ]
+          ],
+          "objective": "766",
+          "bound_direction": "UPPER",
+          "cpu_ns": 0,
+          "receipt_sha256": "a8c38187fee3ca3d7c40a45c34ca03e1ccee29cedd850b67658b7e9d78777e7a"
+        }
+      ],
+      "chosen_attempt_index": 0,
+      "best_bound": "766",
+      "bound_direction": "UPPER",
+      "adversarial_control": {
+        "witness": {
+          "a": 6,
+          "b": 8,
+          "c": 7
+        },
+        "required_rejected_constraint": "base_eight_digit_domain",
+        "receipt": {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "9abae2168563142a0d62163eddbe0a40becd33ab962e89eba9c87009394c0bc8",
+          "work": 8,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "3bcffbebc176fc3fd593040d892e4648e8c5ff62a173d8a17f0a547bb1a5c0cc",
+              "objective_id": "minimum-mixed-radix-n",
+              "scope_sha256": "91c822edd378f90ae462a3eecad4bd0d460413c7f04bf829d119b4acbd0fe1a9",
+              "constraints_sha256": "fd437c4f6ba0686dcda7cdf7cbaa7296861b96a6f5907978dfc775aafc79ba39",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "base_eight_digit_domain",
+              "nonzero_base_eleven_leading",
+              "same_represented_integer"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "898c52accafcef3e32147fb401dee581d3e74417a20d0015e7e25f80a1e925a7",
+            "review_sha256": "4f8735b578faf978661b1db7e2938bacbd2968ca56f95e0f41faf991e060a71b"
+          },
+          "witness_sha256": "fe6954762189276650bb82a337b3fab1c14be8846a29f5d9a840c6cb278b21e1",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "radix_horner_steps",
+              5
+            ],
+            [
+              "constraint:base_eight_digit_domain",
+              1
+            ],
+            [
+              "constraint:nonzero_base_eleven_leading",
+              1
+            ],
+            [
+              "constraint:same_represented_integer",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "base_eight_digit_domain",
+              false
+            ],
+            [
+              "nonzero_base_eleven_leading",
+              true
+            ],
+            [
+              "same_represented_integer",
+              false
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "e49bcdbd8a49ac67a16029daf7345f12f36d3583a8618fe408890a557920741d"
+        }
+      }
+    },
+    {
+      "case_id": "2021-II-13",
+      "contract": {
+        "binding": {
+          "question_sha256": "4b12b8de4e0ab89bea80eb624cb59454ccec075df16bc6310eeb927d385ad4f9",
+          "objective_id": "minimum-modular-sequence-index",
+          "scope_sha256": "5bdf3cd761b104e3b14e64bf41f3f43359c8107eca092cec670e0bfe77c2df3e",
+          "constraints_sha256": "635bb37a29440e59246d8b7a88d2f57e61ca94436947bdf5de10b54ac07c9fc4",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_n",
+          "residue_zero"
+        ],
+        "checker_id": "d45.arithmetic.checker",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "proof_sha256": "485acaf553b3b0c7841d9940cac7cc6cb97eca230ad59901674d1f2c5e75269c",
+        "review_sha256": "0ff331798a04ba0e1d4ff5e20a432da80babe5046de4ad5ce096a88597770d32"
+      },
+      "contract_sha256": "92c985eb69018447ed10065173b54e9c85be74f2242f6d123dc6b75a360c312e",
+      "scope": {
+        "direction": "MIN",
+        "objective_id": "minimum-modular-sequence-index",
+        "description": "Least positive index n where the exact expression is divisible by 1000.",
+        "role_patterns": [
+          "\\bn\\b|\\bindex\\b"
+        ]
+      },
+      "question_only_review": {
+        "case_id": "2021-II-13",
+        "question_sha256": "4b12b8de4e0ab89bea80eb624cb59454ccec075df16bc6310eeb927d385ad4f9",
+        "review": "Independent of witness authors",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "minimum-modular-sequence-index",
+          "description": "Least positive index n where the exact expression is divisible by 1000.",
+          "role_patterns": [
+            "\\bn\\b|\\bindex\\b"
+          ]
+        },
+        "checker": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "original_constraints": "Exact modular products test the required expression modulo 1000 at a positive integer index."
+      },
+      "weak_necessary": "For positive n the divisibility expression modulo 2 forces n odd.",
+      "author_reported": [
+        {
+          "proposal_pass": 1,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 1,
+          "construction_and_audit_subwork": {
+            "crt_residue_trials": [
+              {
+                "r": 1,
+                "target_mod_125": 2,
+                "crt_compatible": false
+              },
+              {
+                "r": 97,
+                "target_mod_125": 47,
+                "crt_compatible": true
+              }
+            ],
+            "direct_modular_powers_for_final_check": 2
+          },
+          "executable_wall_ns": 7700,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "002969123f8b1aa4ff9ee8ef65dcfe43bbca738f0cda5c972ece91f18aa6ff06"
+        }
+      ],
+      "verified_attempts": [
+        {
+          "witness": {
+            "n": 797
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "expression_mod_1000": 0
+          },
+          "proposal_pass": 1
+        }
+      ],
+      "independent_witness_receipts": [
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "92c985eb69018447ed10065173b54e9c85be74f2242f6d123dc6b75a360c312e",
+          "work": 33,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "4b12b8de4e0ab89bea80eb624cb59454ccec075df16bc6310eeb927d385ad4f9",
+              "objective_id": "minimum-modular-sequence-index",
+              "scope_sha256": "5bdf3cd761b104e3b14e64bf41f3f43359c8107eca092cec670e0bfe77c2df3e",
+              "constraints_sha256": "635bb37a29440e59246d8b7a88d2f57e61ca94436947bdf5de10b54ac07c9fc4",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_n",
+              "residue_zero"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "485acaf553b3b0c7841d9940cac7cc6cb97eca230ad59901674d1f2c5e75269c",
+            "review_sha256": "0ff331798a04ba0e1d4ff5e20a432da80babe5046de4ad5ce096a88597770d32"
+          },
+          "witness_sha256": "a97597c9ea0778cfc6fcf2169b92045a56e24a35073c777400a5c836ecb6d0b8",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "modular_products",
+              30
+            ],
+            [
+              "constraint:positive_n",
+              1
+            ],
+            [
+              "constraint:residue_zero",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_n",
+              true
+            ],
+            [
+              "residue_zero",
+              true
+            ]
+          ],
+          "objective": "797",
+          "bound_direction": "UPPER",
+          "cpu_ns": 0,
+          "receipt_sha256": "2033794d89807bab341ed375c84ef7310f4b93c18b00178d7c5bb354255cd3ea"
+        }
+      ],
+      "chosen_attempt_index": 0,
+      "best_bound": "797",
+      "bound_direction": "UPPER",
+      "adversarial_control": {
+        "witness": {
+          "n": 798
+        },
+        "required_rejected_constraint": "residue_zero",
+        "receipt": {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "92c985eb69018447ed10065173b54e9c85be74f2242f6d123dc6b75a360c312e",
+          "work": 32,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "4b12b8de4e0ab89bea80eb624cb59454ccec075df16bc6310eeb927d385ad4f9",
+              "objective_id": "minimum-modular-sequence-index",
+              "scope_sha256": "5bdf3cd761b104e3b14e64bf41f3f43359c8107eca092cec670e0bfe77c2df3e",
+              "constraints_sha256": "635bb37a29440e59246d8b7a88d2f57e61ca94436947bdf5de10b54ac07c9fc4",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_n",
+              "residue_zero"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "485acaf553b3b0c7841d9940cac7cc6cb97eca230ad59901674d1f2c5e75269c",
+            "review_sha256": "0ff331798a04ba0e1d4ff5e20a432da80babe5046de4ad5ce096a88597770d32"
+          },
+          "witness_sha256": "8ea7fed27c4ac0689275d80f470fb973fa7e81741e17dec5e8adf78ad7db77f5",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "modular_products",
+              30
+            ],
+            [
+              "constraint:positive_n",
+              1
+            ],
+            [
+              "constraint:residue_zero",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_n",
+              true
+            ],
+            [
+              "residue_zero",
+              false
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "e212f94f48a7b11a43ed6ca777ee10b7a002e566e5d3f97aae6a7b0370721b3b"
+        }
+      }
+    },
+    {
+      "case_id": "2022-II-1",
+      "contract": {
+        "binding": {
+          "question_sha256": "7b9d893478d94bb05960b8c2221c8d9c33c2effaa9eab96ba2146c5e00657a4a",
+          "objective_id": "minimum-final-adult-count",
+          "scope_sha256": "0c87006773ca508355ab537796fbf3267fa22fdf70778303fb2f165dc3cc204a",
+          "constraints_sha256": "51bbb56e2caedb29d87b18a281f2aa879cae4ca4721615925cc82f717400d179",
+          "direction": "MIN"
+        },
+        "required_constraints": [
+          "positive_initial_crowd",
+          "integral_initial_adults",
+          "bus_occupancy",
+          "exact_final_adult_ratio"
+        ],
+        "checker_id": "d45.arithmetic.checker",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "proof_sha256": "f7f9f384863308a03431dff4c72d1b1b2c40f37a615921106b403f36e9f2f772",
+        "review_sha256": "1d9342a8396de3cdc54644a8f56ca957a6bca67e0e5015cc63c962823cefb48b"
+      },
+      "contract_sha256": "20fdb7c3bcd898e46a1eef7389092ad189ed5a646ac4215f6601e4c50106f837",
+      "scope": {
+        "direction": "MIN",
+        "objective_id": "minimum-final-adult-count",
+        "description": "Minimum number of adults after the bus arrives, with the original crowd and bus constraints.",
+        "role_patterns": [
+          "\\b(?:adult|adults)\\b",
+          "\\b(?:final|after|total|following)\\b"
+        ]
+      },
+      "question_only_review": {
+        "case_id": "2022-II-1",
+        "question_sha256": "7b9d893478d94bb05960b8c2221c8d9c33c2effaa9eab96ba2146c5e00657a4a",
+        "review": "Independent of witness authors",
+        "scope": {
+          "direction": "MIN",
+          "objective_id": "minimum-final-adult-count",
+          "description": "Minimum number of adults after the bus arrives, with the original crowd and bus constraints.",
+          "role_patterns": [
+            "\\b(?:adult|adults)\\b",
+            "\\b(?:final|after|total|following)\\b"
+          ]
+        },
+        "checker": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "original_constraints": "Integral original adult count, bus occupancy and exact final proportion bind the final number of adults."
+      },
+      "weak_necessary": "Integrality of the final adult count forces it to be a positive multiple of 11.",
+      "author_reported": [
+        {
+          "proposal_pass": 1,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 1,
+          "construction_and_audit_subwork": {
+            "ratio_cross_checks": 2,
+            "occupancy_checks": 1
+          },
+          "executable_wall_ns": 3900,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "bc331cda188b06d2dc161eb5eb0fcf1f79aa816b0fd0a43d2f91d1fdec070213"
+        }
+      ],
+      "verified_attempts": [
+        {
+          "witness": {
+            "initial_crowd": 900,
+            "bus_adults": 43
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "initial_adults": 375,
+            "final_cross_products": [
+              10450,
+              10450
+            ]
+          },
+          "proposal_pass": 1
+        }
+      ],
+      "independent_witness_receipts": [
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "20fdb7c3bcd898e46a1eef7389092ad189ed5a646ac4215f6601e4c50106f837",
+          "work": 8,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "7b9d893478d94bb05960b8c2221c8d9c33c2effaa9eab96ba2146c5e00657a4a",
+              "objective_id": "minimum-final-adult-count",
+              "scope_sha256": "0c87006773ca508355ab537796fbf3267fa22fdf70778303fb2f165dc3cc204a",
+              "constraints_sha256": "51bbb56e2caedb29d87b18a281f2aa879cae4ca4721615925cc82f717400d179",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_initial_crowd",
+              "integral_initial_adults",
+              "bus_occupancy",
+              "exact_final_adult_ratio"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "f7f9f384863308a03431dff4c72d1b1b2c40f37a615921106b403f36e9f2f772",
+            "review_sha256": "1d9342a8396de3cdc54644a8f56ca957a6bca67e0e5015cc63c962823cefb48b"
+          },
+          "witness_sha256": "5760d5ce01c0b99d43a4894f2b00d488f771376b1430e80fdebcb3fe753d01a3",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "exact_population_relations",
+              3
+            ],
+            [
+              "constraint:positive_initial_crowd",
+              1
+            ],
+            [
+              "constraint:integral_initial_adults",
+              1
+            ],
+            [
+              "constraint:bus_occupancy",
+              1
+            ],
+            [
+              "constraint:exact_final_adult_ratio",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_initial_crowd",
+              true
+            ],
+            [
+              "integral_initial_adults",
+              true
+            ],
+            [
+              "bus_occupancy",
+              true
+            ],
+            [
+              "exact_final_adult_ratio",
+              true
+            ]
+          ],
+          "objective": "418",
+          "bound_direction": "UPPER",
+          "cpu_ns": 0,
+          "receipt_sha256": "665ccb5f2466ed2faea0d0bbc0985572a408b2cb9580a6d45958508f684e8983"
+        }
+      ],
+      "chosen_attempt_index": 0,
+      "best_bound": "418",
+      "bound_direction": "UPPER",
+      "adversarial_control": {
+        "witness": {
+          "initial_crowd": 900,
+          "bus_adults": 44
+        },
+        "required_rejected_constraint": "exact_final_adult_ratio",
+        "receipt": {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "20fdb7c3bcd898e46a1eef7389092ad189ed5a646ac4215f6601e4c50106f837",
+          "work": 7,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "7b9d893478d94bb05960b8c2221c8d9c33c2effaa9eab96ba2146c5e00657a4a",
+              "objective_id": "minimum-final-adult-count",
+              "scope_sha256": "0c87006773ca508355ab537796fbf3267fa22fdf70778303fb2f165dc3cc204a",
+              "constraints_sha256": "51bbb56e2caedb29d87b18a281f2aa879cae4ca4721615925cc82f717400d179",
+              "direction": "MIN"
+            },
+            "required_constraints": [
+              "positive_initial_crowd",
+              "integral_initial_adults",
+              "bus_occupancy",
+              "exact_final_adult_ratio"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "f7f9f384863308a03431dff4c72d1b1b2c40f37a615921106b403f36e9f2f772",
+            "review_sha256": "1d9342a8396de3cdc54644a8f56ca957a6bca67e0e5015cc63c962823cefb48b"
+          },
+          "witness_sha256": "bc5166242c4c6b33fa40a15714430e751c52c377f4571b9245313d0a1bedb6b6",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "exact_population_relations",
+              3
+            ],
+            [
+              "constraint:positive_initial_crowd",
+              1
+            ],
+            [
+              "constraint:integral_initial_adults",
+              1
+            ],
+            [
+              "constraint:bus_occupancy",
+              1
+            ],
+            [
+              "constraint:exact_final_adult_ratio",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "positive_initial_crowd",
+              true
+            ],
+            [
+              "integral_initial_adults",
+              true
+            ],
+            [
+              "bus_occupancy",
+              true
+            ],
+            [
+              "exact_final_adult_ratio",
+              false
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "cd0e04e33742c36c188e65e4dc89c0690bc94fc2dbebd3eb8abc56cc867eec09"
+        }
+      }
+    },
+    {
+      "case_id": "2023-I-15",
+      "contract": {
+        "binding": {
+          "question_sha256": "9e20aa8028dc7a27811edf0627a8f983e7c371640b2707ec453839be9efd5aa2",
+          "objective_id": "maximum-complex-triangle-prime",
+          "scope_sha256": "92a3941e2a1c7d4b683a9339e829eee22b86d444ce4484a9ffb3008521f3a61c",
+          "constraints_sha256": "20047c88bb07f6e4e547dbb903ffd50b97afe5d22616d66ccd9a841d782be889",
+          "direction": "MAX"
+        },
+        "required_constraints": [
+          "prime_below_1000",
+          "complex_norm",
+          "positive_cubic_components",
+          "triangle_inequalities"
+        ],
+        "checker_id": "d45.arithmetic.checker",
+        "checker_version": 1,
+        "checker_entrypoint": "check",
+        "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "proof_sha256": "04585e4783b8f869c912b18cc757e64248e8e1a4351fd3058c45b77300757809",
+        "review_sha256": "9def85ae6024c356322bb7d02d3db444b2bf885cfea04ef65ca96b945e3ebc02"
+      },
+      "contract_sha256": "dabc53f1126517909bc82d3f66bce5a4aa0b37096ddb22484410fe214240e5b6",
+      "scope": {
+        "direction": "MAX",
+        "objective_id": "maximum-complex-triangle-prime",
+        "description": "Largest prime p below 1000 admitting the original integer complex number and a nondegenerate triangle.",
+        "role_patterns": [
+          "\\b(?:prime|p)\\b"
+        ]
+      },
+      "question_only_review": {
+        "case_id": "2023-I-15",
+        "question_sha256": "9e20aa8028dc7a27811edf0627a8f983e7c371640b2707ec453839be9efd5aa2",
+        "review": "Independent of witness authors",
+        "scope": {
+          "direction": "MAX",
+          "objective_id": "maximum-complex-triangle-prime",
+          "description": "Largest prime p below 1000 admitting the original integer complex number and a nondegenerate triangle.",
+          "role_patterns": [
+            "\\b(?:prime|p)\\b"
+          ]
+        },
+        "checker": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+        "original_constraints": "Verify p prime below the bound, integer norm a^2+b^2, positive real/imaginary cubic components and all strict triangle inequalities."
+      },
+      "weak_necessary": "An odd prime representable as a sum of two squares is 1 modulo 4 by the residues of squares.",
+      "author_reported": [
+        {
+          "proposal_pass": 1,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 1,
+          "construction_and_audit_subwork": {
+            "triangle_inequalities_checked": 3,
+            "primality_trial_divisions_per_check": 3,
+            "primality_check_invocations": 2
+          },
+          "executable_wall_ns": 8600,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "f76b1ea7112332a83d837f5060fe0c3719301e186a7b1a4993e3b05137a333ed"
+        },
+        {
+          "proposal_pass": 2,
+          "status": "AUTHORED_FEASIBLE_PENDING_INDEPENDENT_CHECK",
+          "paid_attempts": 1,
+          "construction_and_audit_subwork": {
+            "angular_lattice_prime_screens": [
+              {
+                "a": 30,
+                "b": 8,
+                "p": 964,
+                "prime": false,
+                "trial_divisions": 1
+              },
+              {
+                "a": 29,
+                "b": 8,
+                "p": 905,
+                "prime": false,
+                "trial_divisions": 4
+              },
+              {
+                "a": 27,
+                "b": 7,
+                "p": 778,
+                "prime": false,
+                "trial_divisions": 1
+              },
+              {
+                "a": 26,
+                "b": 7,
+                "p": 725,
+                "prime": false,
+                "trial_divisions": 4
+              },
+              {
+                "a": 23,
+                "b": 6,
+                "p": 565,
+                "prime": false,
+                "trial_divisions": 4
+              },
+              {
+                "a": 22,
+                "b": 6,
+                "p": 520,
+                "prime": false,
+                "trial_divisions": 1
+              },
+              {
+                "a": 19,
+                "b": 5,
+                "p": 386,
+                "prime": false,
+                "trial_divisions": 1
+              },
+              {
+                "a": 18,
+                "b": 5,
+                "p": 349,
+                "prime": true,
+                "trial_divisions": 17
+              }
+            ],
+            "integer_norms_screened": 8,
+            "trial_divisions": 33,
+            "complete_cubic_triangle_checks": 1
+          },
+          "executable_wall_ns": 13900,
+          "executable_cpu_ns": 0,
+          "derivation_sha256": "a09123c80c1a48306ebf9d213d956d972da4018ee232041489abb53a1b7c4931"
+        }
+      ],
+      "verified_attempts": [
+        {
+          "witness": {
+            "p": 17,
+            "a": 4,
+            "b": 1
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "complex_norm_squared": 17,
+            "cubic_components": [
+              52,
+              47
+            ],
+            "prime_p": true
+          },
+          "proposal_pass": 1
+        },
+        {
+          "witness": {
+            "p": 349,
+            "a": 18,
+            "b": 5
+          },
+          "status": "FEASIBLE",
+          "checks": {
+            "norm_squared": 349,
+            "cubic_components": [
+              4482,
+              4735
+            ],
+            "strict_triangle_tests": [
+              true,
+              true,
+              true
+            ],
+            "prime_from_exact_screen": true
+          },
+          "proposal_pass": 2
+        }
+      ],
+      "independent_witness_receipts": [
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "dabc53f1126517909bc82d3f66bce5a4aa0b37096ddb22484410fe214240e5b6",
+          "work": 9,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "9e20aa8028dc7a27811edf0627a8f983e7c371640b2707ec453839be9efd5aa2",
+              "objective_id": "maximum-complex-triangle-prime",
+              "scope_sha256": "92a3941e2a1c7d4b683a9339e829eee22b86d444ce4484a9ffb3008521f3a61c",
+              "constraints_sha256": "20047c88bb07f6e4e547dbb903ffd50b97afe5d22616d66ccd9a841d782be889",
+              "direction": "MAX"
+            },
+            "required_constraints": [
+              "prime_below_1000",
+              "complex_norm",
+              "positive_cubic_components",
+              "triangle_inequalities"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "04585e4783b8f869c912b18cc757e64248e8e1a4351fd3058c45b77300757809",
+            "review_sha256": "9def85ae6024c356322bb7d02d3db444b2bf885cfea04ef65ca96b945e3ebc02"
+          },
+          "witness_sha256": "fbe6d4c5fc87da09555e4d63555dd43b5188a783373edd835ce85e4dfd3c51e1",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "complex_cubic_components",
+              2
+            ],
+            [
+              "trial_division_steps",
+              2
+            ],
+            [
+              "constraint:prime_below_1000",
+              1
+            ],
+            [
+              "constraint:complex_norm",
+              1
+            ],
+            [
+              "constraint:positive_cubic_components",
+              1
+            ],
+            [
+              "constraint:triangle_inequalities",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "prime_below_1000",
+              true
+            ],
+            [
+              "complex_norm",
+              true
+            ],
+            [
+              "positive_cubic_components",
+              true
+            ],
+            [
+              "triangle_inequalities",
+              true
+            ]
+          ],
+          "objective": "17",
+          "bound_direction": "LOWER",
+          "cpu_ns": 0,
+          "receipt_sha256": "e57fe56d34331bed59a646e99b36bae6a3391b08acb77204439636ab64ffc829"
+        },
+        {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "dabc53f1126517909bc82d3f66bce5a4aa0b37096ddb22484410fe214240e5b6",
+          "work": 16,
+          "status": "CERTIFIED_FEASIBLE_BOUND",
+          "reason": "ALL_ORIGINAL_CONSTRAINTS_VERIFIED",
+          "contract": {
+            "binding": {
+              "question_sha256": "9e20aa8028dc7a27811edf0627a8f983e7c371640b2707ec453839be9efd5aa2",
+              "objective_id": "maximum-complex-triangle-prime",
+              "scope_sha256": "92a3941e2a1c7d4b683a9339e829eee22b86d444ce4484a9ffb3008521f3a61c",
+              "constraints_sha256": "20047c88bb07f6e4e547dbb903ffd50b97afe5d22616d66ccd9a841d782be889",
+              "direction": "MAX"
+            },
+            "required_constraints": [
+              "prime_below_1000",
+              "complex_norm",
+              "positive_cubic_components",
+              "triangle_inequalities"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "04585e4783b8f869c912b18cc757e64248e8e1a4351fd3058c45b77300757809",
+            "review_sha256": "9def85ae6024c356322bb7d02d3db444b2bf885cfea04ef65ca96b945e3ebc02"
+          },
+          "witness_sha256": "6ba0346ef40b1aec9e139b6187b48d0ed74fedd1c5ab00af00d2964962cd86b4",
+          "request_number": 2,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "complex_cubic_components",
+              2
+            ],
+            [
+              "trial_division_steps",
+              9
+            ],
+            [
+              "constraint:prime_below_1000",
+              1
+            ],
+            [
+              "constraint:complex_norm",
+              1
+            ],
+            [
+              "constraint:positive_cubic_components",
+              1
+            ],
+            [
+              "constraint:triangle_inequalities",
+              1
+            ],
+            [
+              "objective",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "prime_below_1000",
+              true
+            ],
+            [
+              "complex_norm",
+              true
+            ],
+            [
+              "positive_cubic_components",
+              true
+            ],
+            [
+              "triangle_inequalities",
+              true
+            ]
+          ],
+          "objective": "349",
+          "bound_direction": "LOWER",
+          "cpu_ns": 0,
+          "receipt_sha256": "751b832e964beaed2365e85236c55d1153e0108580a73151fe234049260e47e8"
+        }
+      ],
+      "chosen_attempt_index": 1,
+      "best_bound": "349",
+      "bound_direction": "LOWER",
+      "adversarial_control": {
+        "witness": {
+          "p": 349,
+          "a": -18,
+          "b": -5
+        },
+        "required_rejected_constraint": "positive_cubic_components",
+        "receipt": {
+          "verifier_id": "d45.reviewed-feasible-witness",
+          "verifier_version": 1,
+          "contract_sha256": "dabc53f1126517909bc82d3f66bce5a4aa0b37096ddb22484410fe214240e5b6",
+          "work": 15,
+          "status": "WITNESS_INFEASIBLE",
+          "reason": "CONSTRAINT_VIOLATION",
+          "contract": {
+            "binding": {
+              "question_sha256": "9e20aa8028dc7a27811edf0627a8f983e7c371640b2707ec453839be9efd5aa2",
+              "objective_id": "maximum-complex-triangle-prime",
+              "scope_sha256": "92a3941e2a1c7d4b683a9339e829eee22b86d444ce4484a9ffb3008521f3a61c",
+              "constraints_sha256": "20047c88bb07f6e4e547dbb903ffd50b97afe5d22616d66ccd9a841d782be889",
+              "direction": "MAX"
+            },
+            "required_constraints": [
+              "prime_below_1000",
+              "complex_norm",
+              "positive_cubic_components",
+              "triangle_inequalities"
+            ],
+            "checker_id": "d45.arithmetic.checker",
+            "checker_version": 1,
+            "checker_entrypoint": "check",
+            "checker_source_sha256": "3e260becce37bb7d401c4440a6c1fa152160f8112f8aeaf21262b917b93beafa",
+            "proof_sha256": "04585e4783b8f869c912b18cc757e64248e8e1a4351fd3058c45b77300757809",
+            "review_sha256": "9def85ae6024c356322bb7d02d3db444b2bf885cfea04ef65ca96b945e3ebc02"
+          },
+          "witness_sha256": "2aa4e05916997663666542fc4bb3f747b109fb1d22d45125d4a1c9a642437409",
+          "request_number": 1,
+          "checker_calls": 1,
+          "operation_charges": [
+            [
+              "complex_cubic_components",
+              2
+            ],
+            [
+              "trial_division_steps",
+              9
+            ],
+            [
+              "constraint:prime_below_1000",
+              1
+            ],
+            [
+              "constraint:complex_norm",
+              1
+            ],
+            [
+              "constraint:positive_cubic_components",
+              1
+            ],
+            [
+              "constraint:triangle_inequalities",
+              1
+            ]
+          ],
+          "denied_operation": null,
+          "constraints": [
+            [
+              "prime_below_1000",
+              true
+            ],
+            [
+              "complex_norm",
+              true
+            ],
+            [
+              "positive_cubic_components",
+              false
+            ],
+            [
+              "triangle_inequalities",
+              false
+            ]
+          ],
+          "objective": null,
+          "bound_direction": null,
+          "cpu_ns": 0,
+          "receipt_sha256": "ccc875966605c21d201426df4b8321d0381258b99e2b7d085d903c930f06949e"
+        }
+      }
+    }
+  ],
+  "source_cost_scope": "Executable proposal audits are timed separately; author reading and manual derivation are not instrumented.",
+  "wall_ns": 18590800,
+  "cpu_ns": 15625000
+}

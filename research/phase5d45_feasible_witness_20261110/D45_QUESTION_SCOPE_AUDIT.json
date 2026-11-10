@@ -1,0 +1,1446 @@
+{
+  "status": "QUESTION_ONLY_SCOPE_AUDIT_PENDING_FINAL_COHORT_FREEZE",
+  "source": {
+    "dataset": "suryadv/qwen3-8b-aime-2009-2024-16x",
+    "revision": "c34143c92856d9b90fdb9c808c7e66070dcab9a1",
+    "shard": "data/draw-00.parquet",
+    "shard_sha256": "5da6ef58914d22c60659e7e21266f4530021993014d8af6cebe1a640d137c787",
+    "only_projected_columns": [
+      "problem_id",
+      "year",
+      "part",
+      "problem_number",
+      "problem",
+      "has_asy"
+    ],
+    "source_exclusion_sha256": {
+      "prior": "c2511f1fa78525d26a02204a35400274eca6964d66449d2305ef4109ee596566",
+      "d43": "1eb07b5bcc988124ed0b79af779b6a08a20e3621b736a590f928df1790d8a01d",
+      "d44": "b4d100ec10b1f337dcea35d96174ecf9d2a9ef239c1549cb550e9d1a4dfa707f"
+    }
+  },
+  "intake": {
+    "year_rule": "Inclusive 2009–2023.",
+    "prior_rule": "Exclude exact matching problem IDs or normalized SHA-256 from any of the three pinned sources. No remaining normalized duplicates.",
+    "normalization": "hashlib.sha256(re.sub(r'\\s+', ' ', unicodedata.normalize('NFKC', question)).strip().casefold().encode()).hexdigest()",
+    "pure_text_rule": "has_asy=false and no case-folded <img or [asy] marker.",
+    "lexical_candidate_scan": {
+      "regex": "\\b(?:maximum|minimum|largest|least|smallest|greatest|fewest|maximal|minimal|highest|lowest)\\b",
+      "case_insensitive": true,
+      "last_unicode_codepoints": 440,
+      "role": "Sensitive shortlist for human review. It admits false positives and does not prove scope or completeness."
+    },
+    "semantic_nomination_rule": "Direct single integer minimum or maximum. Exact local integer certificate, bounded search via stated constraints or a constructive feasible example, and an explicit ordinary CPU solver. No transformed optimum, continuous geometric attainment, global infeasibility certificate, or data-source ambiguity. Eleven nominations are a question-only design covering two maximization and several distinct discrete witness types. Valid alternates are recorded separately for the final freeze."
+  },
+  "counts": {
+    "source_rows": 480,
+    "within_years": 450,
+    "matched_history_by_source": {
+      "prior": 1,
+      "d43": 32,
+      "d44": 8
+    },
+    "matched_history_union": 41,
+    "after_history": 409,
+    "pure_text_after_history": 381,
+    "lexical_hits": 88,
+    "nominated_direct": 11
+  },
+  "lexical_hits": [
+    {
+      "case_id": "2009-I-1",
+      "exact_question_sha256": "000300df7db9946bbdfbffded4bf3c6330d75318b8729fe524eab2b86a2adde2",
+      "normalized_question_sha256": "9344f092ce51182e3dede1f52d4998fb8a09a5760126178a24472b199ab8e3c9",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2009-I-13",
+      "exact_question_sha256": "bdc39b513c8881b0b754c7fd4a58b653e4b0d55feadd8e75b27097d25325d335",
+      "normalized_question_sha256": "aa74d898d848d9f5a96330700c7904b009a8ed1fe0457eddd07d2caa3df26c17",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2009-I-14",
+      "exact_question_sha256": "6b2cd50c9e617a96ebbef7665d5029716c185f37387bd4a3aa09f40ffa972833",
+      "normalized_question_sha256": "32f204a26bc2ecc0576a9ed4ccdb0b897a9566376ea9b7e5ec6e75d48c23b081",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2009-I-15",
+      "exact_question_sha256": "001915b25093d4925827c8108b8d2fc0730e0ee876154941315b853576272a8f",
+      "normalized_question_sha256": "a4f0eb06d1e902413506f540ec4a605abfb12ebf52cbbbfb8d524f6559f02e8e",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2009-I-7",
+      "exact_question_sha256": "18b0b279b55fb6921f600163bc91e4e44428435883c9dacdf1f639246d40b438",
+      "normalized_question_sha256": "9266645dc6be81ff9a8ff49a81f841b7d814453cae198461d057750988165b6c",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2009-II-14",
+      "exact_question_sha256": "c816fc4bfea5a5bebbf745e2f1bf1e014d477fef244d8599f36f2542d3bd48d7",
+      "normalized_question_sha256": "5bd2374298ee51e74c97d9b091460953a07d5df33f846b65873082ec122c16ad",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2009-II-15",
+      "exact_question_sha256": "a47e4e41bed8166e2330d3570fbef9d68e94911b6c8f6d89c27857a6e416a4d1",
+      "normalized_question_sha256": "fdfeed54aff885d80f24de7fc7bf78e9e6c610592f9a96eff816a812461d8f77",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2009-II-3",
+      "exact_question_sha256": "e119ba30a0ebf40865bc1e002445a5662abab3f93b6d71600a28084d94b9fba6",
+      "normalized_question_sha256": "c916bcdb737a2dc6dc9892351d73c5f8ca573b754677007e039372846c09070b",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2009-II-4",
+      "exact_question_sha256": "3554de19e8fa7b193932b63171ffaa25e5a61832a0cf3dbe8736fb1de1570285",
+      "normalized_question_sha256": "63f61f702653d004d05f46f010fd52bde387e69eef82f6035b3ed6b13123baba",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2009-II-6",
+      "exact_question_sha256": "c3e5efad565a639b86ef3aafbc0c790495d948c55ee7108c35757d81384007b4",
+      "normalized_question_sha256": "cd6e8e94cba8a76c2b8cbbe6841b357ca1a08092b02f14f336f3c834263c3865",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2009-II-7",
+      "exact_question_sha256": "4729ffe28e390f133f060b04a01a95ad90adec5211511a65da0ea46f80e8e985",
+      "normalized_question_sha256": "d61530b009d570be5e6a7d7125d420321e20be0621bfb62ccf00e69b5ca205e4",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2010-I-12",
+      "exact_question_sha256": "52fd506c3f8fe376bb1c9df32d4fe106711f89902a8f336218dc5b5ab065c5d3",
+      "normalized_question_sha256": "1cec04de747b1187d05618284865dd7ff455730bdaa74a970ed347de6789e7fc",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2010-I-14",
+      "exact_question_sha256": "6e8a142a1a6291b42579b03b840b1888350a8fa27bb52c187db2aa9134f42cb4",
+      "normalized_question_sha256": "01cdfdf0f7eb8e86ed9f8cc85eee4c2ae4433c655da3091de2e9da70b1d41328",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2010-I-8",
+      "exact_question_sha256": "26cec27d393e644cd143e578d8143038e27e267ca7592e549b63d6c787631717",
+      "normalized_question_sha256": "83d04902c1eba426d6fe76a4a6be9f7f345ce36f6a05ee2443f4a937358e299d",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2010-I-9",
+      "exact_question_sha256": "efcd03adf8f91f2cbafcf89c92c421036c038f0afaf54097d31ec9eecd2da837",
+      "normalized_question_sha256": "bba4fdfe475ce89ce5251fa32480817148f9dc2bf4b3608bbab521768ed3f1e3",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2010-II-1",
+      "exact_question_sha256": "71c9a110cd9c66d565e61acadb7c346eecf253e9c538bb9acc86c838a0e22b4b",
+      "normalized_question_sha256": "11daa8cccd678f0a09af0a189c752e0bd8d3fc5960184b3f173a4a68d9d3c256",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2010-II-12",
+      "exact_question_sha256": "a482615c291f5a71252cf1dc00e254a24a60dfb41955b044160853472093eedf",
+      "normalized_question_sha256": "529fdef2da88642eed80cff6e93d218fd8e699c2787926e2230cd7dca7b60cd9",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2010-II-13",
+      "exact_question_sha256": "f59c7bdb8305636863ea07d0760b5f5c341a50d774098df06ddaf6dbe6a017c5",
+      "normalized_question_sha256": "fd4b12178e81800c10a9c98c7ffd5e7da73cf23304009bb70ed1d7bc02ccef0e",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2010-II-3",
+      "exact_question_sha256": "f65fb4b9eea6975066a556f2c9081450be9d48f15d001bbfc8764d0208e24c8d",
+      "normalized_question_sha256": "8a8339b67f644c51b667d6782def41b992c109ae390f12729802bbac24c0c16a",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2010-II-6",
+      "exact_question_sha256": "cec60ab2efea74bd991d08c89cc6281eee628e2eb03c4c9f57e2be9e99568c03",
+      "normalized_question_sha256": "b6d867f9d03c928d91429fec2825b0bdf4d3854a0881dbcde3efcd3875f263c0",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2011-I-12",
+      "exact_question_sha256": "94c70bb62fd53d698a7ff36ae0737e55cd5d6ceb4ab12748a89dbcd187621865",
+      "normalized_question_sha256": "f618bd9d5e02731d8b728858e16d7b6f90aad63e51cee81f445a72af0341fbb2",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2011-I-6",
+      "exact_question_sha256": "91bdd5bb0cee9546b958e779100802f70accc12cece4bdc8735001dd55d52152",
+      "normalized_question_sha256": "7d461c9a77d83e883622fb69833dbb807f87345e79dbe23b456e6722daf779dc",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2011-II-12",
+      "exact_question_sha256": "015543e8c91eb8b1dd6344daeec1c361c7467541288587ed3985bd1c464d218f",
+      "normalized_question_sha256": "4770e7cf87af0a4f0dfe0457c623628b335ec546894390cb3521fe5473f4a97e",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2011-II-3",
+      "exact_question_sha256": "76de1d2b812cf5124a17a36376734f94adbcba5a0f5ff6d59b131b3714e99d5e",
+      "normalized_question_sha256": "318a5d60598bbbeb99faf0b4287ee79861aa5f46f3285658a10587fa9fb18324",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2011-II-7",
+      "exact_question_sha256": "948106459bd8f6c97d98a806c9b356ee436065f4820cc4027847914d102ed70e",
+      "normalized_question_sha256": "a6aab0fc66e6d5bec6a6d593542f9f9785bd317d1d0eab2c96380ace0279f8cd",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2011-II-9",
+      "exact_question_sha256": "ecd227cf4052229bcda3729ab296125e54d5b27eb70e3029a986cd3e1d79930b",
+      "normalized_question_sha256": "d34fc59dd288f8ae0fcdaf5cd4645e9513b212a174f5fb8da1497337ffc619df",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2012-II-14",
+      "exact_question_sha256": "857f9a53d18013ed8f8d7033fd5293f06470fa0f9c517a9df36959e8b48449ac",
+      "normalized_question_sha256": "001f4cb66949a06b359b087acc6e24f65a8d9b23345c61d7fd3f56f1f51ec689",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2013-I-11",
+      "exact_question_sha256": "9848bddf60e9844eb4f32cf4d0c418daa80fb1bc4c42de063b811c5565a60a77",
+      "normalized_question_sha256": "93a79565ae388be2e15d66caeb05506e5bcaff4aa58f8fda10afa7bca848d4e9",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2013-I-8",
+      "exact_question_sha256": "b5f3b5cb487daaf9b56b3c0c84cef98b73a0f9855d6f640f5b839f599bb33e4e",
+      "normalized_question_sha256": "2e0a0fcde9a3d9106757528aa33464d0453a301aefdbe1edfa244ba69603e5f7",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2013-II-10",
+      "exact_question_sha256": "810731488d5c5669d621c624f682f3bd3eb1d381f25374f30067d7a8d2f514a0",
+      "normalized_question_sha256": "b1d440e708200543ed959c62dd1bd8366c5a4a16d2eb7f8ff3d05b05b2f94dc3",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2013-II-6",
+      "exact_question_sha256": "40a21503b40e4906fc8d0f05bf932a5e1088a55c6d19dbe2cbe5606bd891b1c8",
+      "normalized_question_sha256": "fd0daeccab6baeb05cb92ececca8a9777e204dc696e06b1d525ff7dc14a3f27e",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2013-II-9",
+      "exact_question_sha256": "519c64637374e6660d0c11ec1de3e6c99691a513dbac3d3ebacabb41d42a9e8d",
+      "normalized_question_sha256": "29b8057b3afac473aedc48820fa8f69f73b23b3d5a99a4774d40f5b8c841aae6",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2014-I-14",
+      "exact_question_sha256": "5df902c541c778c7db03a4370c443309f1fc9ae3a9c5c92feb431d2e50014ec8",
+      "normalized_question_sha256": "b096077e5ddd41a6e7e13faf79a35ee345926ebb3d74caede708a4967378afd8",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2014-I-3",
+      "exact_question_sha256": "76934a3f5cddbd86fa38f8c262f045996ffe5af46ca24937e1b9acf4239be71a",
+      "normalized_question_sha256": "b42df658c8f7aa577524dfe016bc39c5d82aa6eff398fc9f13ef240ef587694e",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2014-II-12",
+      "exact_question_sha256": "9e081ea0073c01e7aa302d46dbe9e20fbe6a5b28dbfb6896df424ea7eae69bcb",
+      "normalized_question_sha256": "56f7d1843daccc3445c1fd9ec0337a26a9ca557b08ad5e6080847dcd8d5c4df5",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2014-II-15",
+      "exact_question_sha256": "1679a517d5c904c253b88f2e0ac5eb5bee1acb86c65be50d11ee1e4d17504584",
+      "normalized_question_sha256": "2bca1db0465237cb6f538319ef365026ae50f9cd845e83e4b6c64b1b252b144f",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2014-II-9",
+      "exact_question_sha256": "0769fc3e476735c3f3cb84d58b622e61e664abb64e2d9bffb0a0ac19223f68de",
+      "normalized_question_sha256": "09f53607d7ba87814d6261b226028ead854b7b28cacde1e483de26f83ea1fa07",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2015-I-11",
+      "exact_question_sha256": "53b7557cd08d9661c66ff3cdf94e0490842596f1f8328285d194729b1141f343",
+      "normalized_question_sha256": "a3a319e3ca6ede498bd43a37a5c470fdea430763234d4a44ab0bb12addb7d8f5",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2015-I-12",
+      "exact_question_sha256": "525b9719fc504834e60fa4372ced84d2ab29de4fb8518c1338ddf47c5f53117d",
+      "normalized_question_sha256": "6762e0ff6a18bf725413212c4de1f6fdf953ee4a4c81395f252301091708e257",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2015-I-14",
+      "exact_question_sha256": "4afa7d13e273b541af34a450722010ea33a051db798f5ba974a62e4cfe1a4191",
+      "normalized_question_sha256": "f430348b54ffdff4ddc335869d744994c67bee0d12eb23f0232b41c556f79d48",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2015-I-8",
+      "exact_question_sha256": "82b9a05aea2a4a50e7d55361c955f0cf47586170d2810ee438846575b971636e",
+      "normalized_question_sha256": "8f532e6c7bc0e4fc132e3746b148f9a8a8ec7ad6b4d288213fd353b61bbf3a0e",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2015-II-1",
+      "exact_question_sha256": "814d144c1b7b2bf04d33781326a10bb284b8ee81ff002dccc838249ff1f73525",
+      "normalized_question_sha256": "b97c15791b975d61972e14edc09d5718f182c2e9b985adc829d5ad27db46b664",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2015-II-3",
+      "exact_question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+      "normalized_question_sha256": "4a6afc81dc72ab23d3b71f6d9fd5024281e56ae8feb23645381009e440b27235",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2015-II-5",
+      "exact_question_sha256": "7bd72b857ca67f29ab6dd79e5fc6f4dca4ed50d15fc86066f997a27c551fae55",
+      "normalized_question_sha256": "f0d86288ba964387da92a7c6b8078bca9d2bcc89b2beb5bb83cc3e7e77f0ae85",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2015-II-8",
+      "exact_question_sha256": "8154ffb7cc89ccbb683d587193e68276cd2724a2f8a392ea57a83ace6f1f3fc7",
+      "normalized_question_sha256": "fc9fe932c1ed3962bbbf7e99aa76140a25f9a9036083e2d6762a6213317f686b",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2016-I-12",
+      "exact_question_sha256": "f204412836702b9f70fb902fccc3dafbaac0c3a7c65a4ac5e9f6ddf1dd9e4bb7",
+      "normalized_question_sha256": "2aa2ff1dab74fcd5ea9c77d67df48d71b2aec8b9eb0df6302c7ba86a941d2ede",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2016-I-8",
+      "exact_question_sha256": "f8f43679754aa59ee6d1e4fa336dbf6c3c4b12d6586404af914cdf3e2fe7eb00",
+      "normalized_question_sha256": "9d0c3011a144adecae6cc71376353570e2d44ee948390c09aa091b6e6a7eb5d6",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2016-II-1",
+      "exact_question_sha256": "1b43b1cb9d93b1b77a992f19903c665e60c1d12f5c2c96b4db7d47aafcd5c998",
+      "normalized_question_sha256": "7b884cd2310a9a57ebb7b20199bb611b3602f9c5eb3f711813e4eab776e899b9",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2016-II-15",
+      "exact_question_sha256": "0e8539e8e64e303c89ac2dfcc22dda5fbebc20468b56b24b4f9707c74cf32811",
+      "normalized_question_sha256": "b6e206fd6f8a55739cdd8b537686dafde8874e81c2eb8935524dc5f9d9fbf044",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2016-II-2",
+      "exact_question_sha256": "7e3cbe708f74840827105168f29e579633071717ca155cf07110a15172860e3d",
+      "normalized_question_sha256": "18db3c4b35dbac398314dcc68af960048c3d394d45315f05d638630b8e82aa10",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2016-II-4",
+      "exact_question_sha256": "a18713f43e7fe88c2da802903c5691e379a60859071f2da6f182d901efb79f12",
+      "normalized_question_sha256": "90c2bde068fcb28c191c8fab2c795e0d7beb2be16521c922faccc10ae6f4ced7",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2016-II-7",
+      "exact_question_sha256": "69cab70c2a6b0473b4fc663bffff012d9f587464b97fec15bc80f92252234d60",
+      "normalized_question_sha256": "7aa81c301a54a0c9f944b69937dd5379debdb1bd9bdf71b4ab318f545aa25c13",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2017-I-13",
+      "exact_question_sha256": "bc525c2a1b66242b5a744b0319f66919ac6dae7ec866d52759bd366a84eaf5f5",
+      "normalized_question_sha256": "ea87ddb6b6c28c5f761c776ef0bf4d8ee13ec3c931e539b4537f5957114638a4",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2017-II-15",
+      "exact_question_sha256": "2b8218fdf3bda4e5635d23dfae686c77c582340972a600fbc86789f8567e582f",
+      "normalized_question_sha256": "28a48808325b20c465a5f9be47de893f103e8a98311117a3874ca34ad57a2bad",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2017-II-5",
+      "exact_question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+      "normalized_question_sha256": "f387dbd157123c50b58bd3cb74e85493319dce61df2d036eaf92edd730e1fd05",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2017-II-9",
+      "exact_question_sha256": "d832d88d71be850045104ad20500d9a559a1c07c2e389ce0dc2d0f053991edcc",
+      "normalized_question_sha256": "d44fbbe9841c9e57c9bdce328e29ef568fe293b652bc744673686f56f1f4a2ff",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2018-I-13",
+      "exact_question_sha256": "5b4f3bd719e8170054913117674da2641ca33a13de01320a245a1964981eaa4e",
+      "normalized_question_sha256": "81d9a20858c3b77c2beda49df25d0ae328e8c9166ed3234cf8296890f49b3267",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2018-I-8",
+      "exact_question_sha256": "9a876098be1959156919cf8e943bea1f47821681307b21eb727cba0734247a5a",
+      "normalized_question_sha256": "010327d0f30e898ea5d2affccdb6950c156bf849f978eeaed0d94c0a7eac69fe",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2018-II-11",
+      "exact_question_sha256": "06ebec8aff36b7186df40b57ef302fb2368a871ad02784537e26c00b999c06ed",
+      "normalized_question_sha256": "554bfa5680383b51cedb472924da1ac6d0ab6a82fbfad6b7a3f211352e9eca1b",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2019-I-11",
+      "exact_question_sha256": "fac62d2e4df186e0168666236322c6987df722d55aeee071a99a34dad354638c",
+      "normalized_question_sha256": "aebc71c5cae9cfaa7f1c51a041e5a302a6d371751f00daa5865fe36961b57aa3",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2019-I-14",
+      "exact_question_sha256": "56add4ac727ce828b6b0f32297322933f068870b5e1b313415c6f5bc511ec40c",
+      "normalized_question_sha256": "5142bd4225993959f4a4f4fb59a5ba0017cde8e89b119220265aff23c6aebf69",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2019-I-2",
+      "exact_question_sha256": "e0ee70803ed6d88ce68356ee27fe24ba1c6f72861a48a482d57e06e07ab6de24",
+      "normalized_question_sha256": "a1126576966f533607e4e3a33b2938f9ce3a5e6f33deaba0c079ae150d8e09d5",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2019-I-9",
+      "exact_question_sha256": "74170d1655e58eeda1280c7d88e77cfebf4f42117d3d7abfcb28c2f5d1b33fbf",
+      "normalized_question_sha256": "189f44b95360c01124403e1ff338e4cb323538b16f84988c066150d72126d4f1",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2019-II-14",
+      "exact_question_sha256": "838b572708e7e992a4c419c4af90639feacc3b8c7c3fff28ae3a31fd8796efe8",
+      "normalized_question_sha256": "450ff2805814344194df35303642733f1da53a3ed7d22d4d8e96b213f3b51655",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2020-I-10",
+      "exact_question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+      "normalized_question_sha256": "727d23bb73233213df002af187c5e14051f7f00aa04bb07c8f4fde9a98da9146",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2020-I-12",
+      "exact_question_sha256": "35015f99a023c4cfb948ae024c6088e7cf0c73e179e6c2ca800efd14795b13f8",
+      "normalized_question_sha256": "3d89105db652953694b4174d5fd9f96ce5b76c16d608362ec57ee47592690e8a",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2020-I-3",
+      "exact_question_sha256": "3bcffbebc176fc3fd593040d892e4648e8c5ff62a173d8a17f0a547bb1a5c0cc",
+      "normalized_question_sha256": "9836e956afdf12795b6d05c90003306d4e06e3ae197e15d96b4cd04bcf8e21e9",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2020-II-14",
+      "exact_question_sha256": "f47cef8b0487f9fc89d297d27f1f27aea0a40793dbf126377ac931269441b364",
+      "normalized_question_sha256": "43a29ba07c6159ac8160f0b18e21d995d2aedae96b32240abcbe820532658f5e",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2020-II-5",
+      "exact_question_sha256": "b9cc24435ba110922fb8cc1e88490247cc21ff69095ae9ac5e820a46bb82c739",
+      "normalized_question_sha256": "00bffe1337d3740ff5fe80e1c1f82a6ae1efc8bd3634377b312b68e34d5ed8bf",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2020-II-7",
+      "exact_question_sha256": "cfa6688d0bd1a39553a3d0298179b676b0ff6fcd4b6d8e046921259403b6f589",
+      "normalized_question_sha256": "6d2069f80c72c3df06063ee1eabb0cacd0010b621846f2690b65d45d5ef366aa",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2020-II-8",
+      "exact_question_sha256": "3ec5c5f709b7dbd0327d59ffeb9303de1563038ce716a30eaf69b6f9ab21c334",
+      "normalized_question_sha256": "e09014cb3db137f398ff28c6fd7cc683bc8f1b01d6085d88fa02233a712e5021",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2021-I-14",
+      "exact_question_sha256": "a0e158c2a213f868392fb476a69807631ca19fab5de300ce3d2e8260003ee18d",
+      "normalized_question_sha256": "377fb5bebc3b2feec7e572fdd475bf342d195b767dd8b90af1a2d7e489b657fb",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2021-I-15",
+      "exact_question_sha256": "3b32f446475d659a609c22d2a571f3fa860a0ddd5002210a9d5670f179d4a634",
+      "normalized_question_sha256": "69d4520337e91e21d06bd8ee61e81fd5edb6f2b467ba65d9f5379fea57a10dad",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2021-II-11",
+      "exact_question_sha256": "a8c76c0b31154429c7f082b469e8f291b9a54095add07056e21ac33c4cea08a8",
+      "normalized_question_sha256": "67448075c75cd15fe3c88cc11a1975a4f00e8e0474d1678ddc8f8094594ad949",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2021-II-13",
+      "exact_question_sha256": "4b12b8de4e0ab89bea80eb624cb59454ccec075df16bc6310eeb927d385ad4f9",
+      "normalized_question_sha256": "16f47cfa52edf03b1bce6cef5a571c327c0482e3ba1ddf6321ba9db3d36034ee",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2021-II-15",
+      "exact_question_sha256": "4c78b3b6b2d0a1ff42e590474eb24cf0e615885993446df24149299facf1af93",
+      "normalized_question_sha256": "247d137482985fec9e7b8a6a25742be7ba418712b69cdaa2ed0c0ade67f6446e",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2021-II-9",
+      "exact_question_sha256": "aa7ae4769e140fb2e53daf55e82d33fe827f5105531415539a02cf2b01b3084f",
+      "normalized_question_sha256": "ff7939c274a230b5e3d0a87020403ac7dcbc34d480988949f5a2fb1657800fac",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2022-I-13",
+      "exact_question_sha256": "2d4f06cf8ed005e4bfd4128a91abd5fb8b7d30edc26edb4a041f9c9a0f41372d",
+      "normalized_question_sha256": "5dd3e8a4fed0dd2b1e8f374e6129e892e149ecd519fbb894c1b33414c0e6f6e4",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2022-I-7",
+      "exact_question_sha256": "9a5cfb9409f1a822af703cac471d68653e5ca284dda8bd0f1e0bb79a16afcedf",
+      "normalized_question_sha256": "325363a7e70189e3cd89ea361cf8b2807b24074aba928e1c0ec6d6206eb8105d",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2022-II-1",
+      "exact_question_sha256": "7b9d893478d94bb05960b8c2221c8d9c33c2effaa9eab96ba2146c5e00657a4a",
+      "normalized_question_sha256": "b6aacc3dde9769e896629c638a5af812f7c5f6b2903b8ca29ef68d5e4350299f",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2022-II-12",
+      "exact_question_sha256": "19ee0c76df9a7b0c90e370cc303d0a01c4211b904db97693bcbdfad349c525bc",
+      "normalized_question_sha256": "ad3629e1ec7e86a31def098ef703e86e115aa1307a9de20985218ce00e6c754e",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2022-II-14",
+      "exact_question_sha256": "c7eb20584b867c0026a403f514b61adb4e1b441917e06bdd6659368380f2179b",
+      "normalized_question_sha256": "f40d56b72e57d23b8f854ea95cd6335e3f85f95cf4f6859f8a46c69f63979d73",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2022-II-8",
+      "exact_question_sha256": "ee7deaf70992d982ed0f498ef66679826ea2d515f33da5bf010c659ff198be3b",
+      "normalized_question_sha256": "24c204a2bc4f132e9a5a39c36ed9b13607b3a664b50ae4985ef8530b1a7e389f",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2023-I-10",
+      "exact_question_sha256": "7b8552a6447ed22407b999e9dca510c4c4e8432db33939bd4a9e0732ad4b618d",
+      "normalized_question_sha256": "d6f2f7487ad357d2dd463a4f900de232ccfcbaae6038766393f02cd02a48529b",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2023-I-15",
+      "exact_question_sha256": "9e20aa8028dc7a27811edf0627a8f983e7c371640b2707ec453839be9efd5aa2",
+      "normalized_question_sha256": "db03c3c3b8d538e620d573d1c8404654debbaec592872dfeb354ed3185c256dd",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2023-II-1",
+      "exact_question_sha256": "6537c2de2d1e733fd6b15ccedb0ca53bcec174abadbf605e60065f9d5476d362",
+      "normalized_question_sha256": "dd731bbf43f016d37d316a1fdbab03233a7f30ff52c8f528d37ccc4cf8c56412",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2023-II-15",
+      "exact_question_sha256": "e4818be9a2e5cf5473512a7ee3e0be1ffa260c525b16dcb8f61381b445cfd33c",
+      "normalized_question_sha256": "22b5bc705cde4186b25c540b16bfc563b2de2a631d9c33cc56d96f029f537a46",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    },
+    {
+      "case_id": "2023-II-5",
+      "exact_question_sha256": "0ad93fe26435b76d88ad58a85b362d95dd75d96aace3338e0572268d3451a357",
+      "normalized_question_sha256": "87517a6ddd72f4f10aac27dbcea329c80d7f1b880a28535667b526a8c49130f3",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true
+    }
+  ],
+  "nominated": [
+    {
+      "case_id": "2009-I-14",
+      "exact_question_sha256": "6b2cd50c9e617a96ebbef7665d5029716c185f37387bd4a3aa09f40ffa972833",
+      "normalized_question_sha256": "32f204a26bc2ecc0576a9ed4ccdb0b897a9566376ea9b7e5ec6e75d48c23b081",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true,
+      "sense": "MIN",
+      "witness_family": "4-value histogram",
+      "finite_domain_and_verification": "Four integer multiplicities in [0,350], summing to 350; exact first/fourth-moment checks and second moment objective.",
+      "ordinary_exact_solver": "Three linear equalities reduce enumeration to one free count."
+    },
+    {
+      "case_id": "2009-II-4",
+      "exact_question_sha256": "3554de19e8fa7b193932b63171ffaa25e5a61832a0cf3dbe8736fb1de1570285",
+      "normalized_question_sha256": "63f61f702653d004d05f46f010fd52bde387e69eef82f6035b3ed6b13123baba",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true,
+      "sense": "MIN",
+      "witness_family": "decreasing arithmetic progression",
+      "finite_domain_and_verification": "Winner count n in [1,2009] and group size m in [2,45]; verify total and final nonnegative term. A zero last term cannot attain the odd total.",
+      "ordinary_exact_solver": "Enumerate divisors of the stated total and check endpoints."
+    },
+    {
+      "case_id": "2010-I-14",
+      "exact_question_sha256": "6e8a142a1a6291b42579b03b840b1888350a8fa27bb52c187db2aa9134f42cb4",
+      "normalized_question_sha256": "01cdfdf0f7eb8e86ed9f8cc85eee4c2ae4433c655da3091de2e9da70b1d41328",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true,
+      "sense": "MAX",
+      "witness_family": "floor-log sum threshold",
+      "finite_domain_and_verification": "Integer n in [1,9999]. All n>=10000 have floor-log sum at least 400. Integer decimal digit length gives exact point evaluation.",
+      "ordinary_exact_solver": "Monotone binary search over n."
+    },
+    {
+      "case_id": "2010-II-6",
+      "exact_question_sha256": "cec60ab2efea74bd991d08c89cc6281eee628e2eb03c4c9f57e2be9e99568c03",
+      "normalized_question_sha256": "b6d867f9d03c928d91429fec2825b0bdf4d3854a0881dbcde3efcd3875f263c0",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true,
+      "sense": "MIN",
+      "witness_family": "integer polynomial factorization",
+      "finite_domain_and_verification": "Use a finite minimum search bound 1<=n<=64, witnessed by a linear factor at x=1 for n=64. Check monic factor coefficients by exact polynomial multiplication.",
+      "ordinary_exact_solver": "Enumerate integer roots and factor constant-term divisor pairs."
+    },
+    {
+      "case_id": "2015-I-8",
+      "exact_question_sha256": "82b9a05aea2a4a50e7d55361c955f0cf47586170d2810ee438846575b971636e",
+      "normalized_question_sha256": "8f532e6c7bc0e4fc132e3746b148f9a8a8ec7ad6b4d288213fd353b61bbf3a0e",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true,
+      "sense": "MIN",
+      "witness_family": "paired decimal digit sums",
+      "finite_domain_and_verification": "Integer n in [1,999]; an independent three-digit construction gives a finite feasible upper bound. Direct decimal digit sums.",
+      "ordinary_exact_solver": "Check carries by digit DP or enumerate bounded integers."
+    },
+    {
+      "case_id": "2016-I-12",
+      "exact_question_sha256": "f204412836702b9f70fb902fccc3dafbaac0c3a7c65a4ac5e9f6ddf1dd9e4bb7",
+      "normalized_question_sha256": "2aa2ff1dab74fcd5ea9c77d67df48d71b2aec8b9eb0df6302c7ba86a941d2ede",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true,
+      "sense": "MIN",
+      "witness_family": "factor multiplicity certificate",
+      "finite_domain_and_verification": "Integer n in [1,14640]. Modulo 11, n=1 is a simple root and can be lifted to a nonzero residue modulo 11^4. Check four prime factors with multiplicities dividing the stated integer.",
+      "ordinary_exact_solver": "Integer factorization or a smallest-prime-factor sieve on the induced range."
+    },
+    {
+      "case_id": "2020-I-3",
+      "exact_question_sha256": "3bcffbebc176fc3fd593040d892e4648e8c5ff62a173d8a17f0a547bb1a5c0cc",
+      "normalized_question_sha256": "9836e956afdf12795b6d05c90003306d4e06e3ae197e15d96b4cd04bcf8e21e9",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true,
+      "sense": "MIN",
+      "witness_family": "mixed-radix digit witness",
+      "finite_domain_and_verification": "Three digit variables, a in [1,7] and b,c in [0,7], constrained by equality of base-11 and base-8 evaluations.",
+      "ordinary_exact_solver": "Enumerate at most 448 digit triples or solve the linear digit equation."
+    },
+    {
+      "case_id": "2020-I-10",
+      "exact_question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc",
+      "normalized_question_sha256": "727d23bb73233213df002af187c5e14051f7f00aa04bb07c8f4fde9a98da9146",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true,
+      "sense": "MIN",
+      "witness_family": "integer-pair power divisibility",
+      "finite_domain_and_verification": "Positive integer pair with m+n<=500; an explicit common-prime construction provides a feasible bound without using the benchmark output range. Check gcd, nondivisibility, and prime valuations.",
+      "ordinary_exact_solver": "Enumerate bounded pairs with gcd and valuations pruning."
+    },
+    {
+      "case_id": "2021-II-13",
+      "exact_question_sha256": "4b12b8de4e0ab89bea80eb624cb59454ccec075df16bc6310eeb927d385ad4f9",
+      "normalized_question_sha256": "16f47cfa52edf03b1bce6cef5a571c327c0482e3ba1ddf6321ba9db3d36034ee",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true,
+      "sense": "MIN",
+      "witness_family": "modular integer sequence",
+      "finite_domain_and_verification": "Check n in [1,1002]. For n>=3 the predicate is periodic with period 1000 via mod 8 and mod 125, so one full tail period suffices.",
+      "ordinary_exact_solver": "Modular-power recurrence or direct finite enumeration."
+    },
+    {
+      "case_id": "2022-II-1",
+      "exact_question_sha256": "7b9d893478d94bb05960b8c2221c8d9c33c2effaa9eab96ba2146c5e00657a4a",
+      "normalized_question_sha256": "b6aacc3dde9769e896629c638a5af812f7c5f6b2903b8ca29ef68d5e4350299f",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true,
+      "sense": "MIN",
+      "witness_family": "integer population ratios",
+      "finite_domain_and_verification": "One integer scale k in [1,100] for original crowd size 12k; arrival counts lie in [0,50]. Check both ratios by cross-multiplication.",
+      "ordinary_exact_solver": "Solve a small linear congruence and verify arrival bounds."
+    },
+    {
+      "case_id": "2023-I-15",
+      "exact_question_sha256": "9e20aa8028dc7a27811edf0627a8f983e7c371640b2707ec453839be9efd5aa2",
+      "normalized_question_sha256": "db03c3c3b8d538e620d573d1c8404654debbaec592872dfeb354ed3185c256dd",
+      "lexical_extremum_hit": true,
+      "passes_pure_text_filter": true,
+      "sense": "MAX",
+      "witness_family": "integer complex/triangle witness",
+      "finite_domain_and_verification": "Prime p in [2,999], with integer a,b in [-31,31]. Check a^2+b^2=p and positivity and triangle inequalities of cubic real/imaginary expressions.",
+      "ordinary_exact_solver": "Enumerate integer coordinate pairs and verify primes exactly."
+    }
+  ],
+  "explicit_other_dispositions": {
+    "valid_direct_alternates": [
+      {
+        "case_id": "2010-II-3",
+        "exact_question_sha256": "f65fb4b9eea6975066a556f2c9081450be9d48f15d001bbfc8764d0208e24c8d",
+        "normalized_question_sha256": "8a8339b67f644c51b667d6782def41b992c109ae390f12729802bbac24c0c16a",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "The exact 2-adic valuation immediately supplies the greatest exponent, so point checking shares the closed-form direct computation."
+      },
+      {
+        "case_id": "2010-II-12",
+        "exact_question_sha256": "a482615c291f5a71252cf1dc00e254a24a60dfb41955b044160853472093eedf",
+        "normalized_question_sha256": "529fdef2da88642eed80cff6e93d218fd8e699c2787926e2230cd7dca7b60cd9",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Integer-sided geometry is valid under squared-area arithmetic and has a simple analytical direct control. Held outside this non-geometric nomination set."
+      },
+      {
+        "case_id": "2013-II-6",
+        "exact_question_sha256": "40a21503b40e4906fc8d0f05bf932a5e1088a55c6d19dbe2cbe5606bd891b1c8",
+        "normalized_question_sha256": "fd0daeccab6baeb05cb92ececca8a9777e204dc696e06b1d525ff7dc14a3f27e",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Valid scalar MIN. An isqrt endpoint check and an independent square-gap construction give a finite search; keep as a direct alternate."
+      },
+      {
+        "case_id": "2015-II-3",
+        "exact_question_sha256": "3c140b58acc95777b22f317b05106678509e93fd5bcccc7f3092d96519e3896d",
+        "normalized_question_sha256": "4a6afc81dc72ab23d3b71f6d9fd5024281e56ae8feb23645381009e440b27235",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Valid scalar digit-sum MIN and short direct modular enumeration; hold as an alternate to the selected digit-sum item."
+      },
+      {
+        "case_id": "2015-II-5",
+        "exact_question_sha256": "7bd72b857ca67f29ab6dd79e5fc6f4dca4ed50d15fc86066f997a27c551fae55",
+        "normalized_question_sha256": "f0d86288ba964387da92a7c6b8078bca9d2bcc89b2beb5bb83cc3e7e77f0ae85",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Valid scalar MIN after a separate exact probability count. It belongs to a probability-counting representation family."
+      },
+      {
+        "case_id": "2016-II-4",
+        "exact_question_sha256": "a18713f43e7fe88c2da802903c5691e379a60859071f2da6f182d901efb79f12",
+        "normalized_question_sha256": "90c2bde068fcb28c191c8fab2c795e0d7beb2be16521c922faccc10ae6f4ced7",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Valid integer volume MIN with a full grid witness. Aggregate color counts and a small uniform construction make a strong direct solver; the full matrix/grid witness is larger than the core schemas."
+      },
+      {
+        "case_id": "2019-I-14",
+        "exact_question_sha256": "56add4ac727ce828b6b0f32297322933f068870b5e1b313415c6f5bc511ec40c",
+        "normalized_question_sha256": "5142bd4225993959f4a4f4fb59a5ba0017cde8e89b119220265aff23c6aebf69",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Valid least odd prime factor with a compact divisor check. Its unassisted size bound is much larger than the core small finite domains."
+      },
+      {
+        "case_id": "2021-II-15",
+        "exact_question_sha256": "4c78b3b6b2d0a1ff42e590474eb24cf0e615885993446df24149299facf1af93",
+        "normalized_question_sha256": "247d137482985fec9e7b8a6a25742be7ba418712b69cdaa2ed0c0ade67f6446e",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Valid scalar MIN; an exact nearest-square/parity evaluator and constructed bound are available. Keep as a distinct alternate."
+      }
+    ],
+    "nearby_exact_rational_or_geometry": [
+      {
+        "case_id": "2017-II-5",
+        "exact_question_sha256": "76d2f8e1e706c4490f46e745944058c77bd9dc67dfd4f339460c9360260ed3a9",
+        "normalized_question_sha256": "f387dbd157123c50b58bd3cb74e85493319dce61df2d036eaf92edd730e1fd05",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Direct extremum over real set elements. A finite rational assignment reduction is plausible, but requires a separate witness type and rank argument."
+      },
+      {
+        "case_id": "2015-I-11",
+        "exact_question_sha256": "53b7557cd08d9661c66ff3cdf94e0490842596f1f8328285d194729b1141f343",
+        "normalized_question_sha256": "a3a319e3ca6ede498bd43a37a5c470fdea430763234d4a44ab0bb12addb7d8f5",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Integer-sided geometry with an incenter condition. Candidate coordinates or squared-distance equivalence need a separate geometric contract."
+      },
+      {
+        "case_id": "2019-I-11",
+        "exact_question_sha256": "fac62d2e4df186e0168666236322c6987df722d55aeee071a99a34dad354638c",
+        "normalized_question_sha256": "aebc71c5cae9cfaa7f1c51a041e5a302a6d371751f00daa5865fe36961b57aa3",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Integer-sided geometry with incircle/excircle tangency. Requires a separate exact geometry contract and branch/sign checks."
+      },
+      {
+        "case_id": "2009-I-15",
+        "exact_question_sha256": "001915b25093d4925827c8108b8d2fc0730e0ee876154941315b853576272a8f",
+        "normalized_question_sha256": "a4f0eb06d1e902413506f540ec4a605abfb12ebf52cbbbfb8d524f6559f02e8e",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Continuous geometry and output is a sum of radical coefficients."
+      },
+      {
+        "case_id": "2009-II-15",
+        "exact_question_sha256": "a47e4e41bed8166e2330d3570fbef9d68e94911b6c8f6d89c27857a6e416a4d1",
+        "normalized_question_sha256": "fdfeed54aff885d80f24de7fc7bf78e9e6c610592f9a96eff816a812461d8f77",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Continuous chord geometry and output is a sum of radical coefficients."
+      },
+      {
+        "case_id": "2010-I-8",
+        "exact_question_sha256": "26cec27d393e644cd143e578d8143038e27e267ca7592e549b63d6c787631717",
+        "normalized_question_sha256": "83d04902c1eba426d6fe76a4a6be9f7f345ce36f6a05ee2443f4a937358e299d",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Continuous enclosing disk geometry and transformed radical output."
+      },
+      {
+        "case_id": "2011-I-8",
+        "exact_question_sha256": "9e829f68fecc01cb4e0a6ae0d109eb36c390bf2cea1c64472e536d2659ed187c",
+        "normalized_question_sha256": "043299148b206bc131f1ad6813b735db90920f6fb6801cec9cc1e1d9ca5e8e05",
+        "lexical_extremum_hit": false,
+        "passes_pure_text_filter": false,
+        "reason": "Fold geometry with a diagram and transformed radical output."
+      },
+      {
+        "case_id": "2013-II-10",
+        "exact_question_sha256": "810731488d5c5669d621c624f682f3bd3eb1d381f25374f30067d7a8d2f514a0",
+        "normalized_question_sha256": "b1d440e708200543ed959c62dd1bd8366c5a4a16d2eb7f8ff3d05b05b2f94dc3",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Continuous circle/chord area maximization and transformed coefficient sum."
+      },
+      {
+        "case_id": "2014-II-12",
+        "exact_question_sha256": "9e081ea0073c01e7aa302d46dbe9e20fbe6a5b28dbfb6896df424ea7eae69bcb",
+        "normalized_question_sha256": "56f7d1843daccc3445c1fd9ec0337a26a9ca557b08ad5e6080847dcd8d5c4df5",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Continuous trigonometric geometry with squared-length rendering."
+      },
+      {
+        "case_id": "2016-II-7",
+        "exact_question_sha256": "69cab70c2a6b0473b4fc663bffff012d9f587464b97fec15bc80f92252234d60",
+        "normalized_question_sha256": "7aa81c301a54a0c9f944b69937dd5379debdb1bd9bdf71b4ab318f545aa25c13",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Geometry and difference of two separate extrema."
+      },
+      {
+        "case_id": "2017-II-15",
+        "exact_question_sha256": "2b8218fdf3bda4e5635d23dfae686c77c582340972a600fbc86789f8567e582f",
+        "normalized_question_sha256": "28a48808325b20c465a5f9be47de893f103e8a98311117a3874ca34ad57a2bad",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Continuous tetrahedral geometry and transformed radical output."
+      },
+      {
+        "case_id": "2018-I-13",
+        "exact_question_sha256": "5b4f3bd719e8170054913117674da2641ca33a13de01320a245a1964981eaa4e",
+        "normalized_question_sha256": "81d9a20858c3b77c2beda49df25d0ae328e8c9166ed3234cf8296890f49b3267",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Continuous incenter geometry with a different exact witness contract."
+      },
+      {
+        "case_id": "2018-I-8",
+        "exact_question_sha256": "9a876098be1959156919cf8e943bea1f47821681307b21eb727cba0734247a5a",
+        "normalized_question_sha256": "010327d0f30e898ea5d2affccdb6950c156bf849f978eeaed0d94c0a7eac69fe",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Continuous inscribed-circle geometry and squared-diameter rendering."
+      },
+      {
+        "case_id": "2020-II-7",
+        "exact_question_sha256": "cfa6688d0bd1a39553a3d0298179b676b0ff6fcd4b6d8e046921259403b6f589",
+        "normalized_question_sha256": "6d2069f80c72c3df06063ee1eabb0cacd0010b621846f2690b65d45d5ef366aa",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Continuous cone/sphere geometry with transformed rational output."
+      },
+      {
+        "case_id": "2022-II-12",
+        "exact_question_sha256": "19ee0c76df9a7b0c90e370cc303d0a01c4211b904db97693bcbdfad349c525bc",
+        "normalized_question_sha256": "ad3629e1ec7e86a31def098ef703e86e115aa1307a9de20985218ce00e6c754e",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Continuous real-variable minimization under ellipse equations."
+      }
+    ],
+    "transformed_or_nested_optimization": [
+      {
+        "case_id": "2009-I-1",
+        "exact_question_sha256": "000300df7db9946bbdfbffded4bf3c6330d75318b8729fe524eab2b86a2adde2",
+        "normalized_question_sha256": "9344f092ce51182e3dede1f52d4998fb8a09a5760126178a24472b199ab8e3c9",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Difference between two extrema."
+      },
+      {
+        "case_id": "2010-I-9",
+        "exact_question_sha256": "efcd03adf8f91f2cbafcf89c92c421036c038f0afaf54097d31ec9eecd2da837",
+        "normalized_question_sha256": "bba4fdfe475ce89ce5251fa32480817148f9dc2bf4b3608bbab521768ed3f1e3",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Rational numerator-plus-denominator transformation of a real extremum."
+      },
+      {
+        "case_id": "2010-II-1",
+        "exact_question_sha256": "71c9a110cd9c66d565e61acadb7c346eecf253e9c538bb9acc86c838a0e22b4b",
+        "normalized_question_sha256": "11daa8cccd678f0a09af0a189c752e0bd8d3fc5960184b3f173a4a68d9d3c256",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports a residue of an extremal integer."
+      },
+      {
+        "case_id": "2010-II-13",
+        "exact_question_sha256": "f59c7bdb8305636863ea07d0760b5f5c341a50d774098df06ddaf6dbe6a017c5",
+        "normalized_question_sha256": "fd4b12178e81800c10a9c98c7ffd5e7da73cf23304009bb70ed1d7bc02ccef0e",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports numerator plus denominator of a constrained probability extremum."
+      },
+      {
+        "case_id": "2011-I-6",
+        "exact_question_sha256": "91bdd5bb0cee9546b958e779100802f70accc12cece4bdc8735001dd55d52152",
+        "normalized_question_sha256": "7d461c9a77d83e883622fb69833dbb807f87345e79dbe23b456e6722daf779dc",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports numerator plus denominator of a real extremum."
+      },
+      {
+        "case_id": "2011-II-7",
+        "exact_question_sha256": "948106459bd8f6c97d98a806c9b356ee436065f4820cc4027847914d102ed70e",
+        "normalized_question_sha256": "a6aab0fc66e6d5bec6a6d593542f9f9785bd317d1d0eab2c96380ace0279f8cd",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Optimization determines an auxiliary size, followed by counting and a remainder."
+      },
+      {
+        "case_id": "2011-II-9",
+        "exact_question_sha256": "ecd227cf4052229bcda3729ab296125e54d5b27eb70e3029a986cd3e1d79930b",
+        "normalized_question_sha256": "d34fc59dd288f8ae0fcdaf5cd4645e9513b212a174f5fb8da1497337ffc619df",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports numerator plus denominator of a real polynomial maximum."
+      },
+      {
+        "case_id": "2013-I-11",
+        "exact_question_sha256": "9848bddf60e9844eb4f32cf4d0c418daa80fb1bc4c42de063b811c5565a60a77",
+        "normalized_question_sha256": "93a79565ae388be2e15d66caeb05506e5bcaff4aa58f8fda10afa7bca848d4e9",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports the sum of prime divisors of the minimum feasible N."
+      },
+      {
+        "case_id": "2013-I-8",
+        "exact_question_sha256": "b5f3b5cb487daaf9b56b3c0c84cef98b73a0f9855d6f640f5b839f599bb33e4e",
+        "normalized_question_sha256": "2e0a0fcde9a3d9106757528aa33464d0453a301aefdbe1edfa244ba69603e5f7",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports a remainder of a minimized sum."
+      },
+      {
+        "case_id": "2014-I-14",
+        "exact_question_sha256": "5df902c541c778c7db03a4370c443309f1fc9ae3a9c5c92feb431d2e50014ec8",
+        "normalized_question_sha256": "b096077e5ddd41a6e7e13faf79a35ee345926ebb3d74caede708a4967378afd8",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports the coefficient sum of the largest real solution."
+      },
+      {
+        "case_id": "2015-II-1",
+        "exact_question_sha256": "814d144c1b7b2bf04d33781326a10bb284b8ee81ff002dccc838249ff1f73525",
+        "normalized_question_sha256": "b97c15791b975d61972e14edc09d5718f182c2e9b985adc829d5ad27db46b664",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports the remainder of a minimum feasible N."
+      },
+      {
+        "case_id": "2015-II-8",
+        "exact_question_sha256": "8154ffb7cc89ccbb683d587193e68276cd2724a2f8a392ea57a83ace6f1f3fc7",
+        "normalized_question_sha256": "fc9fe932c1ed3962bbbf7e99aa76140a25f9a9036083e2d6762a6213317f686b",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports numerator plus denominator of a rational maximum."
+      },
+      {
+        "case_id": "2016-I-8",
+        "exact_question_sha256": "f8f43679754aa59ee6d1e4fa336dbf6c3c4b12d6586404af914cdf3e2fe7eb00",
+        "normalized_question_sha256": "9d0c3011a144adecae6cc71376353570e2d44ee948390c09aa091b6e6a7eb5d6",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Optimization followed by multiplicity counting and a difference."
+      },
+      {
+        "case_id": "2016-II-15",
+        "exact_question_sha256": "0e8539e8e64e303c89ac2dfcc22dda5fbebc20468b56b24b4f9707c74cf32811",
+        "normalized_question_sha256": "b6e206fd6f8a55739cdd8b537686dafde8874e81c2eb8935524dc5f9d9fbf044",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports numerator plus denominator of a continuous maximum."
+      },
+      {
+        "case_id": "2017-I-13",
+        "exact_question_sha256": "bc525c2a1b66242b5a744b0319f66919ac6dae7ec866d52759bd366a84eaf5f5",
+        "normalized_question_sha256": "ea87ddb6b6c28c5f761c776ef0bf4d8ee13ec3c931e539b4537f5957114638a4",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Aggregates many minimum thresholds, then reduces modulo 1000."
+      },
+      {
+        "case_id": "2019-I-9",
+        "exact_question_sha256": "74170d1655e58eeda1280c7d88e77cfebf4f42117d3d7abfcb28c2f5d1b33fbf",
+        "normalized_question_sha256": "189f44b95360c01124403e1ff338e4cb323538b16f84988c066150d72126d4f1",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Sum of six least solutions."
+      },
+      {
+        "case_id": "2019-II-14",
+        "exact_question_sha256": "838b572708e7e992a4c419c4af90639feacc3b8c7c3fff28ae3a31fd8796efe8",
+        "normalized_question_sha256": "450ff2805814344194df35303642733f1da53a3ed7d22d4d8e96b213f3b51655",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Targets a sum over denominations involving a nested largest nonrepresentable value."
+      },
+      {
+        "case_id": "2020-I-12",
+        "exact_question_sha256": "35015f99a023c4cfb948ae024c6088e7cf0c73e179e6c2ca800efd14795b13f8",
+        "normalized_question_sha256": "3d89105db652953694b4174d5fd9f96ce5b76c16d608362ec57ee47592690e8a",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports divisor count of the minimum exponent."
+      },
+      {
+        "case_id": "2020-II-5",
+        "exact_question_sha256": "b9cc24435ba110922fb8cc1e88490247cc21ff69095ae9ac5e820a46bb82c739",
+        "normalized_question_sha256": "00bffe1337d3740ff5fe80e1c1f82a6ae1efc8bd3634377b312b68e34d5ed8bf",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports remainder of first event."
+      },
+      {
+        "case_id": "2021-I-14",
+        "exact_question_sha256": "a0e158c2a213f868392fb476a69807631ca19fab5de300ce3d2e8260003ee18d",
+        "normalized_question_sha256": "377fb5bebc3b2feec7e572fdd475bf342d195b767dd8b90af1a2d7e489b657fb",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports a factor sum of a universally quantified least exponent."
+      },
+      {
+        "case_id": "2021-I-15",
+        "exact_question_sha256": "3b32f446475d659a609c22d2a571f3fa860a0ddd5002210a9d5670f179d4a634",
+        "normalized_question_sha256": "69d4520337e91e21d06bd8ee61e81fd5edb6f2b467ba65d9f5379fea57a10dad",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Reports sum of both endpoints of a set defined by algebraic geometry."
+      },
+      {
+        "case_id": "2021-II-11",
+        "exact_question_sha256": "a8c76c0b31154429c7f082b469e8f291b9a54095add07056e21ac33c4cea08a8",
+        "normalized_question_sha256": "67448075c75cd15fe3c88cc11a1975a4f00e8e0474d1678ddc8f8094594ad949",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Epistemic constraints followed by a sum of possible extremal elements."
+      },
+      {
+        "case_id": "2022-I-7",
+        "exact_question_sha256": "9a5cfb9409f1a822af703cac471d68653e5ca284dda8bd0f1e0bb79a16afcedf",
+        "normalized_question_sha256": "325363a7e70189e3cd89ea361cf8b2807b24074aba928e1c0ec6d6206eb8105d",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Rational extremum rendered as numerator-plus-denominator."
+      },
+      {
+        "case_id": "2022-II-14",
+        "exact_question_sha256": "c7eb20584b867c0026a403f514b61adb4e1b441917e06bdd6659368380f2179b",
+        "normalized_question_sha256": "f40d56b72e57d23b8f854ea95cd6335e3f85f95cf4f6859f8a46c69f63979d73",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Nested minimum stamps and sum of three least denominations."
+      },
+      {
+        "case_id": "2023-II-15",
+        "exact_question_sha256": "e4818be9a2e5cf5473512a7ee3e0be1ffa260c525b16dcb8f61381b445cfd33c",
+        "normalized_question_sha256": "22b5bc705cde4186b25c540b16bfc563b2de2a631d9c33cc56d96f029f537a46",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Counts equality events between consecutive termwise minima."
+      }
+    ],
+    "requires_different_global_certificate": [
+      {
+        "case_id": "2009-I-13",
+        "exact_question_sha256": "bdc39b513c8881b0b754c7fd4a58b653e4b0d55feadd8e75b27097d25325d335",
+        "normalized_question_sha256": "aa74d898d848d9f5a96330700c7904b009a8ed1fe0457eddd07d2caa3df26c17",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Feasibility requires an infinite sequence of positive integers under a nonlinear recurrence."
+      },
+      {
+        "case_id": "2009-I-7",
+        "exact_question_sha256": "18b0b279b55fb6921f600163bc91e4e44428435883c9dacdf1f639246d40b438",
+        "normalized_question_sha256": "9266645dc6be81ff9a8ff49a81f841b7d814453cae198461d057750988165b6c",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "First integrality of a cumulative logarithmic sequence needs a separate product/valuation representation."
+      },
+      {
+        "case_id": "2010-I-12",
+        "exact_question_sha256": "52fd506c3f8fe376bb1c9df32d4fe106711f89902a8f336218dc5b5ab065c5d3",
+        "normalized_question_sha256": "1cec04de747b1187d05618284865dd7ff455730bdaa74a970ed347de6789e7fc",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Feasibility is a universal partition property; ordinary witness checks need a proof or exact unsatisfiability certificate."
+      },
+      {
+        "case_id": "2011-I-12",
+        "exact_question_sha256": "94c70bb62fd53d698a7ff36ae0737e55cd5d6ceb4ab12748a89dbcd187621865",
+        "normalized_question_sha256": "f618bd9d5e02731d8b728858e16d7b6f90aad63e51cee81f445a72af0341fbb2",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Exact conditional probability and counting contract beyond local integer witness checks."
+      },
+      {
+        "case_id": "2014-II-15",
+        "exact_question_sha256": "1679a517d5c904c253b88f2e0ac5eb5bee1acb86c65be50d11ee1e4d17504584",
+        "normalized_question_sha256": "2bca1db0465237cb6f538319ef365026ae50f9cd845e83e4b6c64b1b252b144f",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "First hitting time in a recursively defined state machine; direct path certificate grows with the input."
+      },
+      {
+        "case_id": "2020-II-8",
+        "exact_question_sha256": "3ec5c5f709b7dbd0327d59ffeb9303de1563038ce716a30eaf69b6f9ab21c334",
+        "normalized_question_sha256": "e09014cb3db137f398ff28c6fd7cc683bc8f1b01d6085d88fa02233a712e5021",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Requires exact distinct root-set closure under an iterated piecewise transformation."
+      }
+    ],
+    "pinned_identity_or_objective_disambiguation": [
+      {
+        "case_id": "2023-II-10",
+        "exact_question_sha256": "5f706b60d6f0859fd04b671fdd6aed7923dfdf71660f1aff36cba69b669e911a",
+        "normalized_question_sha256": "564d6c6613866c7577c34dd8cba9fc6e615ef14403e442bc531c75dfdc1f468b",
+        "lexical_extremum_hit": false,
+        "passes_pure_text_filter": true,
+        "reason": "Pinned item is a grid arrangement count followed by divisor count. It is not a direct minimum."
+      },
+      {
+        "case_id": "2012-II-12",
+        "exact_question_sha256": "25298e1333ddb946c0162c62a2d3bd1630d69f7ce27107428bc9e05a588ada0e",
+        "normalized_question_sha256": "89a9e3a1cd78489c10e528c27e30d4a6974654efcdfd52a910bc598c72de4704",
+        "lexical_extremum_hit": false,
+        "passes_pure_text_filter": true,
+        "reason": "Pinned item counts simultaneous modular safety below a fixed ceiling. It is not an extremum or transformed optimum."
+      },
+      {
+        "case_id": "2023-I-10",
+        "exact_question_sha256": "7b8552a6447ed22407b999e9dca510c4c4e8432db33939bd4a9e0732ad4b618d",
+        "normalized_question_sha256": "d6f2f7487ad357d2dd463a4f900de232ccfcbaae6038766393f02cd02a48529b",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Unique parameter plus a derived sum; no direct max/min."
+      },
+      {
+        "case_id": "2023-II-1",
+        "exact_question_sha256": "6537c2de2d1e733fd6b15ccedb0ca53bcec174abadbf605e60065f9d5476d362",
+        "normalized_question_sha256": "dd731bbf43f016d37d316a1fdbab03233a7f30ff52c8f528d37ccc4cf8c56412",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "The largest term is read from an already determined arithmetic progression. No competing feasible optimization values."
+      },
+      {
+        "case_id": "2011-II-3",
+        "exact_question_sha256": "76de1d2b812cf5124a17a36376734f94adbcba5a0f5ff6d59b131b3714e99d5e",
+        "normalized_question_sha256": "318a5d60598bbbeb99faf0b4287ee79861aa5f46f3285658a10587fa9fb18324",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "The least angle is a member of an arithmetic progression with tightly fixed integral parameters, rather than a separate optimum over varying constructions."
+      }
+    ],
+    "lexical_false_positives": [
+      {
+        "case_id": "2009-II-14",
+        "exact_question_sha256": "c816fc4bfea5a5bebbf745e2f1bf1e014d477fef244d8599f36f2542d3bd48d7",
+        "normalized_question_sha256": "5bd2374298ee51e74c97d9b091460953a07d5df33f846b65873082ec122c16ad",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Floor of a specified recurrence term."
+      },
+      {
+        "case_id": "2009-II-3",
+        "exact_question_sha256": "e119ba30a0ebf40865bc1e002445a5662abab3f93b6d71600a28084d94b9fba6",
+        "normalized_question_sha256": "c916bcdb737a2dc6dc9892351d73c5f8ca573b754677007e039372846c09070b",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Floor-style transformation of a determined side length."
+      },
+      {
+        "case_id": "2009-II-6",
+        "exact_question_sha256": "c3e5efad565a639b86ef3aafbc0c790495d948c55ee7108c35757d81384007b4",
+        "normalized_question_sha256": "cd6e8e94cba8a76c2b8cbbe6841b357ca1a08092b02f14f336f3c834263c3865",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Counting subsets; extremum word only quantifies an inclusion condition."
+      },
+      {
+        "case_id": "2009-II-7",
+        "exact_question_sha256": "4729ffe28e390f133f060b04a01a95ad90adec5211511a65da0ea46f80e8e985",
+        "normalized_question_sha256": "d61530b009d570be5e6a7d7125d420321e20be0621bfb62ccf00e69b5ca205e4",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Fraction normalization wording; output is a derived denominator statistic."
+      },
+      {
+        "case_id": "2011-II-12",
+        "exact_question_sha256": "015543e8c91eb8b1dd6344daeec1c361c7467541288587ed3985bd1c464d218f",
+        "normalized_question_sha256": "4770e7cf87af0a4f0dfe0457c623628b335ec546894390cb3521fe5473f4a97e",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Fixed probability with an at-least-one adjacency condition."
+      },
+      {
+        "case_id": "2012-II-14",
+        "exact_question_sha256": "857f9a53d18013ed8f8d7033fd5293f06470fa0f9c517a9df36959e8b48449ac",
+        "normalized_question_sha256": "001f4cb66949a06b359b087acc6e24f65a8d9b23345c61d7fd3f56f1f51ec689",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Counting graphs with fixed degrees; no extremum objective."
+      },
+      {
+        "case_id": "2013-II-9",
+        "exact_question_sha256": "519c64637374e6660d0c11ec1de3e6c99691a513dbac3d3ebacabb41d42a9e8d",
+        "normalized_question_sha256": "29b8057b3afac473aedc48820fa8f69f73b23b3d5a99a4774d40f5b8c841aae6",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Counting tilings with color-use constraints."
+      },
+      {
+        "case_id": "2014-I-3",
+        "exact_question_sha256": "76934a3f5cddbd86fa38f8c262f045996ffe5af46ca24937e1b9acf4239be71a",
+        "normalized_question_sha256": "b42df658c8f7aa577524dfe016bc39c5d82aa6eff398fc9f13ef240ef587694e",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Counting reduced fractions with a fixed sum."
+      },
+      {
+        "case_id": "2014-II-9",
+        "exact_question_sha256": "0769fc3e476735c3f3cb84d58b622e61e664abb64e2d9bffb0a0ac19223f68de",
+        "normalized_question_sha256": "09f53607d7ba87814d6261b226028ead854b7b28cacde1e483de26f83ea1fa07",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Counting subsets with an adjacency threshold."
+      },
+      {
+        "case_id": "2015-I-12",
+        "exact_question_sha256": "525b9719fc504834e60fa4372ced84d2ab29de4fb8518c1338ddf47c5f53117d",
+        "normalized_question_sha256": "6762e0ff6a18bf725413212c4de1f6fdf953ee4a4c81395f252301091708e257",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Mean over minima of individual subsets, rather than optimization."
+      },
+      {
+        "case_id": "2015-I-14",
+        "exact_question_sha256": "4afa7d13e273b541af34a450722010ea33a051db798f5ba974a62e4cfe1a4191",
+        "normalized_question_sha256": "f430348b54ffdff4ddc335869d744994c67bee0d12eb23f0232b41c556f79d48",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Counting parameters for which an area is integral; greatest-integer notation is definitional."
+      },
+      {
+        "case_id": "2016-II-1",
+        "exact_question_sha256": "1b43b1cb9d93b1b77a992f19903c665e60c1d12f5c2c96b4db7d47aafcd5c998",
+        "normalized_question_sha256": "7b884cd2310a9a57ebb7b20199bb611b3602f9c5eb3f711813e4eab776e899b9",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Comparative terms describe the given peanut counts; one initial count is requested."
+      },
+      {
+        "case_id": "2016-II-2",
+        "exact_question_sha256": "7e3cbe708f74840827105168f29e579633071717ca155cf07110a15172860e3d",
+        "normalized_question_sha256": "18db3c4b35dbac398314dcc68af960048c3d394d45315f05d638630b8e82aa10",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Fixed probability; at-least-one is part of the event."
+      },
+      {
+        "case_id": "2017-II-9",
+        "exact_question_sha256": "d832d88d71be850045104ad20500d9a559a1c07c2e389ce0dc2d0f053991edcc",
+        "normalized_question_sha256": "d44fbbe9841c9e57c9bdce328e29ef568fe293b652bc744673686f56f1f4a2ff",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Conditional probability for a fixed combinatorial event."
+      },
+      {
+        "case_id": "2018-II-11",
+        "exact_question_sha256": "06ebec8aff36b7186df40b57ef302fb2368a871ad02784537e26c00b999c06ed",
+        "normalized_question_sha256": "554bfa5680383b51cedb472924da1ac6d0ab6a82fbfad6b7a3f211352e9eca1b",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Counting permutations with a universal threshold condition."
+      },
+      {
+        "case_id": "2019-I-2",
+        "exact_question_sha256": "e0ee70803ed6d88ce68356ee27fe24ba1c6f72861a48a482d57e06e07ab6de24",
+        "normalized_question_sha256": "a1126576966f533607e4e3a33b2938f9ce3a5e6f33deaba0c079ae150d8e09d5",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Fixed probability with an at-least-two difference event."
+      },
+      {
+        "case_id": "2020-II-14",
+        "exact_question_sha256": "f47cef8b0487f9fc89d297d27f1f27aea0a40793dbf126377ac931269441b364",
+        "normalized_question_sha256": "43a29ba07c6159ac8160f0b18e21d995d2aedae96b32240abcbe820532658f5e",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Counting roots of a fixed function; greatest-integer notation is definitional."
+      },
+      {
+        "case_id": "2021-II-9",
+        "exact_question_sha256": "aa7ae4769e140fb2e53daf55e82d33fe827f5105531415539a02cf2b01b3084f",
+        "normalized_question_sha256": "ff7939c274a230b5e3d0a87020403ac7dcbc34d480988949f5a2fb1657800fac",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Counting pairs; greatest common divisor is a primitive, not the objective."
+      },
+      {
+        "case_id": "2022-I-13",
+        "exact_question_sha256": "2d4f06cf8ed005e4bfd4128a91abd5fb8b7d30edc26edb4a041f9c9a0f41372d",
+        "normalized_question_sha256": "5dd3e8a4fed0dd2b1e8f374e6129e892e149ecd519fbb894c1b33414c0e6f6e4",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Counting reduced numerators; at-least and lowest-terms wording are incidental."
+      },
+      {
+        "case_id": "2022-II-8",
+        "exact_question_sha256": "ee7deaf70992d982ed0f498ef66679826ea2d515f33da5bf010c659ff198be3b",
+        "normalized_question_sha256": "24c204a2bc4f132e9a5a39c36ed9b13607b3a664b50ae4985ef8530b1a7e389f",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Counting uniquely identified integers; greatest-integer notation is definitional."
+      },
+      {
+        "case_id": "2023-II-5",
+        "exact_question_sha256": "0ad93fe26435b76d88ad58a85b362d95dd75d96aace3338e0572268d3451a357",
+        "normalized_question_sha256": "87517a6ddd72f4f10aac27dbcea329c80d7f1b880a28535667b526a8c49130f3",
+        "lexical_extremum_hit": true,
+        "passes_pure_text_filter": true,
+        "reason": "Sum over a rational set; lowest-terms wording is incidental."
+      }
+    ]
+  },
+  "remaining_lexical_hits_unadjudicated": [],
+  "scope": "Only the pinned question projection and earlier exclusion/identity metadata were accessed. This receipt contains no source question text or accepted integers. This is not a label, trajectory or finalized cohort freeze."
+}

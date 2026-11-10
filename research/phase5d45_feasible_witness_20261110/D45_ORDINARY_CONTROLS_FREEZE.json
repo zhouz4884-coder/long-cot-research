@@ -1,0 +1,195 @@
+{
+  "cases": 11,
+  "cohort_freeze_sha256": "f6e2c37da342ac2dfe3893fedb0551034ce1ed9d2b5a3f3dd1c0a3833c06918b",
+  "complete_oracles_sha256": "0164bd04429b6676f60f33a04c19de969e147e6b8d507b29c58c523b5d66337f",
+  "control_source_sha256": "2131534b380122bf2543ba5096866f7fe29df97b51606147af563315199c1d16",
+  "cost_boundary": "Per control call includes construction/search and arithmetic checks. Named counters record selected concrete operations or loop visits with different unit costs. Source I/O, hashing and artifact encoding are outside these measurements.",
+  "oracle_boundary": "Numeric exact oracles, complete-search counters, and agreement with ordinary bounds are isolated from claim observation and blind scoring.",
+  "oracle_total_cpu_ns": 31250000,
+  "ordinary_bounds_sha256": "1abfc0e4427ee51253e1e000119eb7158be371e6d0eb0c38bcdbeed204d02700",
+  "ordinary_total_cpu_ns": 15625000,
+  "problem_specs_sha256": "178de559f57c522fd76fc0fc8da7278bb88e0b7973ed6ddf49ce5945a5852be8",
+  "question_only_sha256": "e35e99befae8d1c82a81ae6650a9bc7c8a9a85ccfcfc5d815479516bbcf31f0c",
+  "rows": [
+    {
+      "case_id": "2009-I-14",
+      "direction": "MIN",
+      "exact_completeness_proof": "Every histogram has two counts in the enumerated length simplex; the first moment fixes the remaining two. Test the original constraints and compare all feasible second moments.",
+      "objective_id": "minimum-s2",
+      "oracle_cpu_ns": 31250000,
+      "oracle_wall_ns": 32424200,
+      "ordinary_cpu_ns": 0,
+      "ordinary_proof": "Eliminate the count of twos from the two given moment residuals. The count of fours is a multiple of five and the second moment decreases with it. Verify the largest feasible such count.",
+      "ordinary_wall_ns": 14800,
+      "ordinary_work": {
+        "affine_eliminations": 1,
+        "candidate_histograms": 1,
+        "histogram_terms": 16
+      },
+      "question_sha256": "6b2cd50c9e617a96ebbef7665d5029716c185f37387bd4a3aa09f40ffa972833"
+    },
+    {
+      "case_id": "2009-II-4",
+      "direction": "MIN",
+      "exact_completeness_proof": "Positive total implies the child count divides it and cannot exceed it. Visit every possible child count and verify the last child is nonnegative.",
+      "objective_id": "minimum-winner-grapes",
+      "oracle_cpu_ns": 0,
+      "oracle_wall_ns": 459400,
+      "ordinary_cpu_ns": 0,
+      "ordinary_proof": "Factor the total as children times winner-plus-one-minus-children. The valid divisor closest to the square root minimizes the factor sum.",
+      "ordinary_wall_ns": 19700,
+      "ordinary_work": {
+        "children_candidates": 4
+      },
+      "question_sha256": "3554de19e8fa7b193932b63171ffaa25e5a61832a0cf3dbe8736fb1de1570285"
+    },
+    {
+      "case_id": "2010-I-14",
+      "direction": "MAX",
+      "exact_completeness_proof": "Each term is nondecreasing; at the proved upper sentinel every term already exceeds the allowed mean. Binary search the last feasible integer using exact decimal lengths.",
+      "objective_id": "maximum-floor-log-index",
+      "oracle_cpu_ns": 0,
+      "oracle_wall_ns": 156200,
+      "ordinary_cpu_ns": 0,
+      "ordinary_proof": "Use the two active powers of ten in a narrow bracket to derive a candidate and verify its immediate successor violates the prescribed sum.",
+      "ordinary_wall_ns": 28100,
+      "ordinary_work": {
+        "floor_log_terms": 200
+      },
+      "question_sha256": "6e8a142a1a6291b42579b03b840b1888350a8fa27bb52c187db2aa9134f42cb4"
+    },
+    {
+      "case_id": "2010-II-6",
+      "direction": "MIN",
+      "exact_completeness_proof": "Normalize integer factors to be monic. Degree one plus three is determined by a positive divisor root; degree two plus two by a positive constant divisor pair, a square sum, and a sign of the linear term.",
+      "objective_id": "minimum-polynomial-n",
+      "oracle_cpu_ns": 0,
+      "oracle_wall_ns": 38800,
+      "ordinary_cpu_ns": 0,
+      "ordinary_proof": "Choose the closest distinct odd constant pair with square sum. In degree two plus two the linear magnitude is at least the minimal odd-pair gap times the lower square-root bound; in degree one plus three a positive integer root gives a larger coefficient.",
+      "ordinary_wall_ns": 10200,
+      "ordinary_work": {
+        "coefficient_products": 9,
+        "coefficient_square_tests": 1,
+        "constant_divisor_checks": 1
+      },
+      "question_sha256": "cec60ab2efea74bd991d08c89cc6281eee628e2eb03c4c9f57e2be9e99568c03"
+    },
+    {
+      "case_id": "2015-I-8",
+      "direction": "MIN",
+      "exact_completeness_proof": "The constructive witness bounds the minimum. Scan every smaller positive integer using the original two decimal digit sums.",
+      "objective_id": "minimum-dual-digit-sum-n",
+      "oracle_cpu_ns": 0,
+      "oracle_wall_ns": 531800,
+      "ordinary_cpu_ns": 0,
+      "ordinary_proof": "Equal digit sums require exactly two carries when adding the shift. Every three-digit candidate already carries at the hundreds place; choose the smallest prefix from the two possibilities for the other carry.",
+      "ordinary_wall_ns": 7400,
+      "ordinary_work": {
+        "decimal_digits_read": 7
+      },
+      "question_sha256": "82b9a05aea2a4a50e7d55361c955f0cf47586170d2810ee438846575b971636e"
+    },
+    {
+      "case_id": "2016-I-12",
+      "direction": "MIN",
+      "exact_completeness_proof": "The verified construction gives an upper index. Trial-divide the positive polynomial at every smaller positive index, retaining prime multiplicity.",
+      "objective_id": "minimum-four-prime-index",
+      "oracle_cpu_ns": 0,
+      "oracle_wall_ns": 462300,
+      "ordinary_cpu_ns": 0,
+      "ordinary_proof": "Lift a root of the quadratic modulo eleven to its cube, then factor the remaining quotient and check the complete product.",
+      "ordinary_wall_ns": 21200,
+      "ordinary_work": {
+        "modular_lifts_checked": 2,
+        "trial_remainders": 10
+      },
+      "question_sha256": "f204412836702b9f70fb902fccc3dafbaac0c3a7c65a4ac5e9f6ddf1dd9e4bb7"
+    },
+    {
+      "case_id": "2020-I-10",
+      "direction": "MIN",
+      "exact_completeness_proof": "A feasible sum bounds the minimum. Enumerate every smaller positive ordered pair by sum, applying gcd and exact modular exponentiation to the original divisibilities.",
+      "objective_id": "minimum-power-divisibility-sum",
+      "oracle_cpu_ns": 0,
+      "oracle_wall_ns": 6554100,
+      "ordinary_cpu_ns": 0,
+      "ordinary_proof": "Use a squared prime for one argument and one copy of that prime in the other. A small cofactor meets the original sum coprimality and exponent-valuation conditions.",
+      "ordinary_wall_ns": 14600,
+      "ordinary_work": {
+        "construction_candidates": 5,
+        "full_modular_power_calls": 1,
+        "gcd_calls": 15
+      },
+      "question_sha256": "59810563c4b406721c8440a6a5fe5f7ac96c397876af23645530841f1dc141bc"
+    },
+    {
+      "case_id": "2020-I-3",
+      "direction": "MIN",
+      "exact_completeness_proof": "All three symbols occur in base eight, the leading base-eleven digit is positive, and the finite product of those digit domains is complete.",
+      "objective_id": "minimum-mixed-radix-n",
+      "oracle_cpu_ns": 0,
+      "oracle_wall_ns": 116900,
+      "ordinary_cpu_ns": 0,
+      "ordinary_proof": "Eliminate the common represented integer. The smallest possible leading digit is feasible, and its equation fixes the remaining digits uniquely within the base-eight ranges.",
+      "ordinary_wall_ns": 6600,
+      "ordinary_work": {
+        "affine_digit_divisions": 2,
+        "radix_equalities": 1
+      },
+      "question_sha256": "3bcffbebc176fc3fd593040d892e4648e8c5ff62a173d8a17f0a547bb1a5c0cc"
+    },
+    {
+      "case_id": "2021-II-13",
+      "direction": "MIN",
+      "exact_completeness_proof": "For n>=3, the two powers modulo eight and 125 have periods dividing 1000, as does the subtracted index. Check the two preperiod indices and a full tail period by exact recurrence.",
+      "objective_id": "minimum-modular-sequence-index",
+      "oracle_cpu_ns": 0,
+      "oracle_wall_ns": 319700,
+      "ordinary_cpu_ns": 0,
+      "ordinary_proof": "Check the two preperiod indices. Beyond them, reduction modulo eight restricts the index to one progression; test the remaining congruence modulo 125 in order.",
+      "ordinary_wall_ns": 33300,
+      "ordinary_work": {
+        "modular_power_calls": 104
+      },
+      "question_sha256": "4b12b8de4e0ab89bea80eb624cb59454ccec075df16bc6310eeb927d385ad4f9"
+    },
+    {
+      "case_id": "2022-II-1",
+      "direction": "MIN",
+      "exact_completeness_proof": "The constructive final adult count bounds the initial crowd by the strictly increasing original final ratio. Check both exact ratios and bus occupancy at every eligible initial size.",
+      "objective_id": "minimum-final-adult-count",
+      "oracle_cpu_ns": 0,
+      "oracle_wall_ns": 296000,
+      "ordinary_cpu_ns": 0,
+      "ordinary_proof": "Integrality of both stated ratios forces the initial size to be a positive multiple of the two denominators' least common multiple; the first such crowd gives feasible bus occupancy.",
+      "ordinary_wall_ns": 35400,
+      "ordinary_work": {
+        "exact_ratio_evaluations": 2,
+        "lcm_calls": 1
+      },
+      "question_sha256": "7b9d893478d94bb05960b8c2221c8d9c33c2effaa9eab96ba2146c5e00657a4a"
+    },
+    {
+      "case_id": "2023-I-15",
+      "direction": "MAX",
+      "exact_completeness_proof": "The strict norm cap bounds each signed integer coordinate absolutely. Enumerate the entire resulting square, test primality and exact positive cubic triangle sides, and retain the maximum.",
+      "objective_id": "maximum-complex-triangle-prime",
+      "oracle_cpu_ns": 0,
+      "oracle_wall_ns": 5913000,
+      "ordinary_cpu_ns": 15625000,
+      "ordinary_proof": "Try prime norms in descending order, using parity to rule out impossible norms, square complements to represent them, and quarter turns to orient the cubic coordinates positively.",
+      "ordinary_wall_ns": 671100,
+      "ordinary_work": {
+        "candidate_norms": 651,
+        "cubic_and_triangle_checks": 189,
+        "exact_factor_divisions": 177,
+        "square_complements": 1192,
+        "trial_remainders": 1421
+      },
+      "question_sha256": "9e20aa8028dc7a27811edf0627a8f983e7c371640b2707ec453839be9efd5aa2"
+    }
+  ],
+  "scope_audit_sha256": "5cb57387d910e70589b47bf8aa3cdcfdb0766e444099bf79033dbc41ea5f1f85",
+  "status": "INDEPENDENT_ORDINARY_AND_EXACT_CONTROLS_FROZEN_BEFORE_LABELS"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_BEFORE_HELDOUT_TRACE_OR_GOLD_ACCESS",
+  "cohort_size": 11,
+  "source_observation_grid": "8 draws and 2 observation positions per independent question",
+  "witness_verification": {
+    "checker_calls_max_per_arm_per_question": 6,
+    "named_work_units_max_per_arm_per_question": 20000,
+    "comparison_operations_max_per_arm_per_question": 16,
+    "scalar_policy": "Only direct integer optima are actionable in this cohort. Exact fractional claims are retained but categorized separately.",
+    "binding_policy": "Original question hash, exact objective/scope and full reviewed constraint set, checker source bytes and review digest must match. Feasible witness author cannot see heldout observations or gold."
+  },
+  "proposal_policy": {
+    "first_pass": "One question-only constructive proposal per case. Pay and retain every attempted or rejected construction.",
+    "strengthening": "At most two additional full witness attempts for each of 2009-II-4, 2010-I-14, 2016-I-12, 2023-I-15. These were selected solely because the first construction was weak on the problem's objective scale, before access to heldout observations or gold. Keep the original first pass and charge both.",
+    "chosen_bound": "Use the best independently certified feasible value across recorded attempts. On equality choose the first certified witness. Preserve every receipt.",
+    "authority": "For MAX refute only a strictly lower claimed optimum than the feasible witness. For MIN refute only a strictly higher claimed optimum. Feasible never means globally optimal."
+  },
+  "ordinary_control": "Use independently authored simple arithmetic or a legal constructive witness under the same exact original constraints. Record when the natural construction already reaches the exact optimum. A separate full oracle does not count as an online witness control and may validate benchmark labels.",
+  "incremental_gate": "Count an independent question only when the best feasible witness refutes a same-target exact optimum claim before a later eligible native EOS delivering that same wrong candidate, a complete independent exact oracle matches the frozen label, and neither the weak nor the ordinary feasible control refutes it. Identify same-permission coverage and full-solver coverage separately. No GPU for fewer than two distinct valid incremental questions or for any mathematically false authorization.",
+  "label_policy": "Do not consult accepted labels or the complete-oracle file until blind claims and all comparison outcomes are frozen. Retain label conflicts and incomplete oracles as separate strata. Do not relabel the official score or count conflict cases as algorithm wins."
+}

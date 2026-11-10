@@ -1,0 +1,26 @@
+{
+  "status": "FROZEN_BEFORE_HELDOUT_TRACE_OR_GOLD_ACCESS",
+  "historical_model": "Qwen3-8B, pinned D4.3/D4.4 source",
+  "draws": [0, 1, 2, 3, 4, 5, 6, 7],
+  "draws_to_leave_unread": [8, 9, 10, 11, 12, 13, 14, 15],
+  "early_observation": {
+    "coordinate": "Unicode code points of the open thinking text, excluding an optional opening delimiter",
+    "prefix_length": 12000,
+    "if_close_precedes_boundary": "UNREACHED_EARLY_BOUNDARY",
+    "if_cap_precedes_boundary": "UNREACHED_EARLY_BOUNDARY_CAP",
+    "lookback_characters": 3000,
+    "allow_only_complete_prior_claims": true
+  },
+  "late_observation": {
+    "coordinate": "Immediately before the first and only explicit closing thinking delimiter",
+    "if_unclosed_or_ambiguous": "UNOBSERVABLE_THINKING_CLOSE",
+    "lookback_characters": 3000,
+    "allow_only_complete_prior_claims": true
+  },
+  "claim_contract": "A complete integer or rational asserted as the original requested optimum, with reviewed question-specific scope. A construction value, trial, intermediate variable, reformulation value, ambiguous box, or explicitly retracted claim is not an optimum claim.",
+  "same_value_box_continuation": "A generic boxed value may inherit a fully scoped prior optimum declaration only when the exact numeric value agrees and the gap is at most 240 Unicode code points consisting solely of whitespace, Markdown or math delimiters and an optional Final Answer header. A different value or intervening substantive prose invalidates inheritance.",
+  "freeze_contract": "Retain explicit claims, unknown, format, scope, reached/unreached, source prefix and span hashes, native final readout and complete source token counts before opening gold. Archive boundaries describe text observations, not exact online token or wall-clock states.",
+  "primary_opportunity": "An actually observed scoped optimum is strictly refuted by a valid bound, a later native EOS delivery is eligible and wrong, the same candidate remains in that delivery, and an independently valid label is available. Count at most one opportunity per question. Count earlier refutations on trajectories later correct as possible policy exposures, not mathematical false positives.",
+  "same_permission_controls": "Evaluate frozen D4.4-style weak necessity and a simple independent ordinary construction or arithmetic bound with the same source information and paid work receipts. Evaluate a complete solver separately as a stronger scope/label diagnostic. A witness bound alone does not prove optimality.",
+  "retention_gate": "At least two independent valid questions with a pre-delivery opportunity beyond the strongest same-permission control, and no erroneous mathematical authorization. Missing/invalid labels and invalid or unreviewable constraints are isolated. Do not use more GPU if this gate fails."
+}

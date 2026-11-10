@@ -1,0 +1,587 @@
+{
+  "status": "PASS_D45_OLD_DEVELOPMENT_CALIBRATION",
+  "sources": {
+    "baseline_commit": "a80ed124068fe2ac19b8899d7f51fc5dd5af9826",
+    "baseline_freeze_sha256": "1f8ce1ab561cbacc7da1bd44b1fc4ee675fb805ede214741bc83299609ce7f78",
+    "heldout_cohort_identity_only_sha256": "f6e2c37da342ac2dfe3893fedb0551034ce1ed9d2b5a3f3dd1c0a3833c06918b",
+    "heldout_cases_disjoint": true,
+    "development_case_ids": [
+      "2009-II-12",
+      "2012-I-4",
+      "2016-I-9"
+    ],
+    "published_sources_sha256": {
+      "research/phase5d44_candidate_generation_20261110/D44_COMPLETION_AUDIT.json": "33ded4696fec99f19c0ff1ccc9bbf718d453313284f00ff78eff449feb257ff1",
+      "research/phase5d44_candidate_generation_20261110/D44_LIVE_TRIGGER_AUDIT.json": "12efbfd40203b4c54eb824d5d5ffeba09a9ae2c89e61dcb88c899ab898589989",
+      "research/phase5d44_candidate_generation_20261110/D44_LIVE_LABEL_CONFLICT_AUDIT.json": "2e4f860e632816406b4c9cfc8326d9d04e75e81c3a4d107c1d92c57c5c1e24bb",
+      "research/phase5d44_candidate_generation_20261110/D44_LIVE_COHORT_FREEZE.json": "b4d100ec10b1f337dcea35d96174ecf9d2a9ef239c1549cb550e9d1a4dfa707f",
+      "research/phase5d44_candidate_generation_20261110/D44_MECHANISM_AUDIT_ZH.md": "478963c8cae67e3fa0dcd5fde862d460ad4020afd6dc24e4617b26ea1644d7b7",
+      "research/phase5d44_candidate_generation_20261110/D44_LABEL_CONFLICT_ZH.md": "cbbae2941d88ae36fe04a3cd1946fa06981f6250173be732a82d57341b068e46",
+      "research/phase5d43_answer_refutation_20261110/D43_DISPUTE_AUDIT_ZH.md": "f5c13edfb8feb42728e2a5dc53842a8f9ca871661b72b9d3dbfd4c2b88007009"
+    }
+  },
+  "cases": {
+    "2009-II-12": [
+      {
+        "control": "cyclic_701_refutes_669",
+        "expected_status": "REFUTE_AS_MAXIMUM",
+        "status": "REFUTE_AS_MAXIMUM",
+        "candidate": 669,
+        "universe_upper": 2009,
+        "request_direction": "MAX",
+        "request_objective": "maximum_pair_count",
+        "original_constraints": {
+          "ordered_in_range": true,
+          "all_endpoints_distinct": true,
+          "all_sums_distinct": true,
+          "all_sums_bounded": true
+        },
+        "pair_count": 701,
+        "distinct_endpoint_count": 1402,
+        "distinct_sum_count": 701,
+        "minimum_sum": 1053,
+        "maximum_sum": 1753,
+        "witness_encoding": "compact_cyclic_size_expanded_and_verified",
+        "charged_operations": {
+          "binding_comparison": 2,
+          "diagnostic_sum_range_comparison": 1400,
+          "integer_addition": 2804,
+          "integer_comparison": 3505,
+          "integer_increment": 1,
+          "integer_parity_and_division": 2,
+          "integer_remainder": 701,
+          "set_insert": 2103,
+          "set_membership": 2103,
+          "strict_objective_comparison": 1
+        },
+        "charged_operation_total": 12622,
+        "thread_cpu_ns": 0,
+        "wall_ns": 1446100,
+        "batch_cpu_profile": {
+          "repetitions": 32,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 33860000,
+          "includes_repeat_equality_checks": true
+        }
+      },
+      {
+        "control": "ordinary_bound_803_and_feasible_attainment",
+        "expected_status": "PROVED_EXACT_ORDINARY_OPTIMUM",
+        "status": "PROVED_EXACT_ORDINARY_OPTIMUM",
+        "upper": 803,
+        "attaining_witness": {
+          "pair_count": 803,
+          "distinct_endpoint_count": 1606,
+          "distinct_sum_count": 803,
+          "minimum_sum": 1206,
+          "maximum_sum": 2008
+        },
+        "original_constraints": {
+          "ordered_in_range": true,
+          "all_endpoints_distinct": true,
+          "all_sums_distinct": true,
+          "all_sums_bounded": true
+        },
+        "proof": "For k>0, the 2k distinct endpoints sum to at least k(2k+1). The k distinct sums each at most n total at most nk-k(k-1)/2. Divide by positive k and combine to get 5k≤2n-1. The exact cyclic construction attains the integer upper bound. k=0 already satisfies the bound.",
+        "charged_operations": {
+          "diagnostic_sum_range_comparison": 1604,
+          "integer_addition": 3213,
+          "integer_comparison": 4017,
+          "integer_division": 1,
+          "integer_increment": 1,
+          "integer_multiply": 3,
+          "integer_parity_and_division": 2,
+          "integer_remainder": 803,
+          "integer_subtraction": 1,
+          "set_insert": 2409,
+          "set_membership": 2409,
+          "strict_objective_comparison": 1
+        },
+        "charged_operation_total": 14464,
+        "thread_cpu_ns": 15625000,
+        "wall_ns": 1151200,
+        "batch_cpu_profile": {
+          "repetitions": 32,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 38303800,
+          "includes_repeat_equality_checks": true
+        }
+      },
+      {
+        "control": "small_finite_positive",
+        "expected_status": "REFUTE_AS_MAXIMUM",
+        "status": "REFUTE_AS_MAXIMUM",
+        "candidate": 2,
+        "universe_upper": 8,
+        "request_direction": "MAX",
+        "request_objective": "maximum_pair_count",
+        "original_constraints": {
+          "ordered_in_range": true,
+          "all_endpoints_distinct": true,
+          "all_sums_distinct": true,
+          "all_sums_bounded": true
+        },
+        "pair_count": 3,
+        "distinct_endpoint_count": 6,
+        "distinct_sum_count": 3,
+        "minimum_sum": 6,
+        "maximum_sum": 8,
+        "witness_encoding": "explicit_pairs",
+        "charged_operations": {
+          "binding_comparison": 2,
+          "diagnostic_sum_range_comparison": 4,
+          "integer_addition": 3,
+          "integer_comparison": 15,
+          "set_insert": 9,
+          "set_membership": 9,
+          "strict_objective_comparison": 1
+        },
+        "charged_operation_total": 43,
+        "thread_cpu_ns": 0,
+        "wall_ns": 13000,
+        "batch_cpu_profile": {
+          "repetitions": 4064,
+          "thread_cpu_ns": 46875000,
+          "wall_ns": 40163800,
+          "includes_repeat_equality_checks": true
+        }
+      },
+      {
+        "control": "duplicate_endpoints",
+        "expected_status": "REJECT_INFEASIBLE_WITNESS",
+        "status": "REJECT_INFEASIBLE_WITNESS",
+        "candidate": 2,
+        "universe_upper": 8,
+        "request_direction": "MAX",
+        "request_objective": "maximum_pair_count",
+        "original_constraints": {
+          "ordered_in_range": true,
+          "all_endpoints_distinct": false,
+          "all_sums_distinct": true,
+          "all_sums_bounded": true
+        },
+        "pair_count": 3,
+        "distinct_endpoint_count": 4,
+        "distinct_sum_count": 3,
+        "minimum_sum": 5,
+        "maximum_sum": 7,
+        "witness_encoding": "explicit_pairs",
+        "charged_operations": {
+          "binding_comparison": 2,
+          "diagnostic_sum_range_comparison": 4,
+          "integer_addition": 3,
+          "integer_comparison": 15,
+          "set_insert": 9,
+          "set_membership": 9
+        },
+        "charged_operation_total": 42,
+        "thread_cpu_ns": 0,
+        "wall_ns": 9300,
+        "batch_cpu_profile": {
+          "repetitions": 4064,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 38754600,
+          "includes_repeat_equality_checks": true
+        }
+      },
+      {
+        "control": "duplicate_sums",
+        "expected_status": "REJECT_INFEASIBLE_WITNESS",
+        "status": "REJECT_INFEASIBLE_WITNESS",
+        "candidate": 2,
+        "universe_upper": 8,
+        "request_direction": "MAX",
+        "request_objective": "maximum_pair_count",
+        "original_constraints": {
+          "ordered_in_range": true,
+          "all_endpoints_distinct": true,
+          "all_sums_distinct": false,
+          "all_sums_bounded": true
+        },
+        "pair_count": 3,
+        "distinct_endpoint_count": 6,
+        "distinct_sum_count": 1,
+        "minimum_sum": 7,
+        "maximum_sum": 7,
+        "witness_encoding": "explicit_pairs",
+        "charged_operations": {
+          "binding_comparison": 2,
+          "diagnostic_sum_range_comparison": 0,
+          "integer_addition": 3,
+          "integer_comparison": 15,
+          "set_insert": 9,
+          "set_membership": 9
+        },
+        "charged_operation_total": 38,
+        "thread_cpu_ns": 0,
+        "wall_ns": 8800,
+        "batch_cpu_profile": {
+          "repetitions": 4064,
+          "thread_cpu_ns": 46875000,
+          "wall_ns": 38536400,
+          "includes_repeat_equality_checks": true
+        }
+      },
+      {
+        "control": "sum_exceeds_cap",
+        "expected_status": "REJECT_INFEASIBLE_WITNESS",
+        "status": "REJECT_INFEASIBLE_WITNESS",
+        "candidate": 2,
+        "universe_upper": 8,
+        "request_direction": "MAX",
+        "request_objective": "maximum_pair_count",
+        "original_constraints": {
+          "ordered_in_range": true,
+          "all_endpoints_distinct": true,
+          "all_sums_distinct": true,
+          "all_sums_bounded": false
+        },
+        "pair_count": 3,
+        "distinct_endpoint_count": 6,
+        "distinct_sum_count": 3,
+        "minimum_sum": 6,
+        "maximum_sum": 11,
+        "witness_encoding": "explicit_pairs",
+        "charged_operations": {
+          "binding_comparison": 2,
+          "diagnostic_sum_range_comparison": 4,
+          "integer_addition": 3,
+          "integer_comparison": 15,
+          "set_insert": 9,
+          "set_membership": 9
+        },
+        "charged_operation_total": 42,
+        "thread_cpu_ns": 0,
+        "wall_ns": 8500,
+        "batch_cpu_profile": {
+          "repetitions": 4064,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 37120200,
+          "includes_repeat_equality_checks": true
+        }
+      },
+      {
+        "control": "equality_is_not_refutation",
+        "expected_status": "ABSTAIN_NO_STRICT_IMPROVEMENT",
+        "status": "ABSTAIN_NO_STRICT_IMPROVEMENT",
+        "candidate": 3,
+        "universe_upper": 8,
+        "request_direction": "MAX",
+        "request_objective": "maximum_pair_count",
+        "original_constraints": {
+          "ordered_in_range": true,
+          "all_endpoints_distinct": true,
+          "all_sums_distinct": true,
+          "all_sums_bounded": true
+        },
+        "pair_count": 3,
+        "distinct_endpoint_count": 6,
+        "distinct_sum_count": 3,
+        "minimum_sum": 6,
+        "maximum_sum": 8,
+        "witness_encoding": "explicit_pairs",
+        "charged_operations": {
+          "binding_comparison": 2,
+          "diagnostic_sum_range_comparison": 4,
+          "integer_addition": 3,
+          "integer_comparison": 15,
+          "set_insert": 9,
+          "set_membership": 9,
+          "strict_objective_comparison": 1
+        },
+        "charged_operation_total": 43,
+        "thread_cpu_ns": 0,
+        "wall_ns": 9300,
+        "batch_cpu_profile": {
+          "repetitions": 4064,
+          "thread_cpu_ns": 46875000,
+          "wall_ns": 41708600,
+          "includes_repeat_equality_checks": true
+        }
+      },
+      {
+        "control": "wrong_direction",
+        "expected_status": "ABSTAIN_WRONG_OBJECTIVE_OR_DIRECTION",
+        "status": "ABSTAIN_WRONG_OBJECTIVE_OR_DIRECTION",
+        "candidate": 2,
+        "universe_upper": 8,
+        "request_direction": "MIN",
+        "request_objective": "maximum_pair_count",
+        "original_constraints": null,
+        "charged_operations": {
+          "binding_comparison": 2
+        },
+        "charged_operation_total": 2,
+        "thread_cpu_ns": 0,
+        "wall_ns": 2400,
+        "batch_cpu_profile": {
+          "repetitions": 16352,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 33307700,
+          "includes_repeat_equality_checks": true
+        }
+      },
+      {
+        "control": "wrong_target",
+        "expected_status": "ABSTAIN_WRONG_OBJECTIVE_OR_DIRECTION",
+        "status": "ABSTAIN_WRONG_OBJECTIVE_OR_DIRECTION",
+        "candidate": 2,
+        "universe_upper": 8,
+        "request_direction": "MAX",
+        "request_objective": "maximum_single_pair_sum",
+        "original_constraints": null,
+        "charged_operations": {
+          "binding_comparison": 2
+        },
+        "charged_operation_total": 2,
+        "thread_cpu_ns": 0,
+        "wall_ns": 2300,
+        "batch_cpu_profile": {
+          "repetitions": 16352,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 33728200,
+          "includes_repeat_equality_checks": true
+        }
+      }
+    ],
+    "2016-I-9": [
+      {
+        "control": "feasible_rectangle_above_640",
+        "expected_status": "REFUTE_AS_MAXIMUM",
+        "status": "REFUTE_AS_MAXIMUM",
+        "tangent": "1/2",
+        "candidate_area": 640,
+        "uniform_scale_squared": "4/5",
+        "unscaled_b": [
+          [
+            "40",
+            "0"
+          ],
+          [
+            "20",
+            "0"
+          ]
+        ],
+        "unscaled_c": [
+          [
+            "-31/10",
+            "62/5"
+          ],
+          [
+            "31/5",
+            "31/5"
+          ]
+        ],
+        "area_coefficients_for_a_plus_b_sqrt6": [
+          "992/5",
+          "992/5"
+        ],
+        "original_constraints": {
+          "rectangle_width_and_height_positive": true,
+          "length_ab_squared": true,
+          "length_ac_squared": true,
+          "positive_cross_for_sine_one_fifth": true,
+          "b_on_segment_qr": true,
+          "c_on_segment_rs": true
+        },
+        "geometry_only_strict_objective_comparison": true,
+        "invalid_support_line_only_checker_would_refute": false,
+        "charged_operations": {
+          "opposed_terms_exact_square_comparison": 4,
+          "quadratic_field_addition": 2,
+          "quadratic_field_equality": 3,
+          "quadratic_field_multiplication": 13,
+          "quadratic_field_sign": 7,
+          "quadratic_field_subtraction": 4,
+          "rational_parameter_operations": 6
+        },
+        "charged_operation_total": 39,
+        "thread_cpu_ns": 0,
+        "wall_ns": 234700,
+        "batch_cpu_profile": {
+          "repetitions": 224,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 33184000,
+          "includes_repeat_equality_checks": true
+        }
+      },
+      {
+        "control": "support_lines_pass_but_beyond_segment",
+        "expected_status": "REJECT_INFEASIBLE_WITNESS",
+        "status": "REJECT_INFEASIBLE_WITNESS",
+        "tangent": "1",
+        "candidate_area": 640,
+        "uniform_scale_squared": "1/2",
+        "unscaled_b": [
+          [
+            "40",
+            "0"
+          ],
+          [
+            "40",
+            "0"
+          ]
+        ],
+        "unscaled_c": [
+          [
+            "-31/5",
+            "62/5"
+          ],
+          [
+            "31/5",
+            "62/5"
+          ]
+        ],
+        "area_coefficients_for_a_plus_b_sqrt6": [
+          "124",
+          "248"
+        ],
+        "original_constraints": {
+          "rectangle_width_and_height_positive": true,
+          "length_ab_squared": true,
+          "length_ac_squared": true,
+          "positive_cross_for_sine_one_fifth": true,
+          "b_on_segment_qr": false,
+          "c_on_segment_rs": true
+        },
+        "geometry_only_strict_objective_comparison": true,
+        "invalid_support_line_only_checker_would_refute": true,
+        "charged_operations": {
+          "opposed_terms_exact_square_comparison": 4,
+          "quadratic_field_addition": 2,
+          "quadratic_field_equality": 3,
+          "quadratic_field_multiplication": 13,
+          "quadratic_field_sign": 7,
+          "quadratic_field_subtraction": 4,
+          "rational_parameter_operations": 6
+        },
+        "charged_operation_total": 39,
+        "thread_cpu_ns": 0,
+        "wall_ns": 137200,
+        "batch_cpu_profile": {
+          "repetitions": 224,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 31467000,
+          "includes_repeat_equality_checks": true
+        }
+      }
+    ],
+    "2012-I-4": [
+      {
+        "control": "same_post_unequal_times",
+        "expected_status": "REFUTE_PROPOSED_SIMULTANEITY",
+        "status": "REFUTE_PROPOSED_SIMULTANEITY",
+        "same_milestone": 2,
+        "ordered_pair_hours": [
+          "5/12",
+          "17/30"
+        ],
+        "right_minus_left_hours": "3/20",
+        "authorized_object": "simultaneity at this proposed milestone under the supplied arrival times",
+        "earliest_feasible_event_or_n_plus_t_certified": false,
+        "charged_operations": {
+          "event_identity_comparison": 1,
+          "rational_equality": 1,
+          "rational_subtraction": 1
+        },
+        "charged_operation_total": 3,
+        "thread_cpu_ns": 0,
+        "wall_ns": 13700,
+        "batch_cpu_profile": {
+          "repetitions": 4064,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 28516000,
+          "includes_repeat_equality_checks": true
+        }
+      },
+      {
+        "control": "equal_times_no_conflict",
+        "expected_status": "ABSTAIN_NO_TIME_CONFLICT",
+        "status": "ABSTAIN_NO_TIME_CONFLICT",
+        "same_milestone": 2,
+        "ordered_pair_hours": [
+          "5/12",
+          "5/12"
+        ],
+        "right_minus_left_hours": "0",
+        "authorized_object": "simultaneity at this proposed milestone under the supplied arrival times",
+        "earliest_feasible_event_or_n_plus_t_certified": false,
+        "charged_operations": {
+          "event_identity_comparison": 1,
+          "rational_equality": 1,
+          "rational_subtraction": 1
+        },
+        "charged_operation_total": 3,
+        "thread_cpu_ns": 0,
+        "wall_ns": 8100,
+        "batch_cpu_profile": {
+          "repetitions": 4064,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 27493700,
+          "includes_repeat_equality_checks": true
+        }
+      },
+      {
+        "control": "different_milestones_no_authority",
+        "expected_status": "ABSTAIN_EVENT_SCOPE_MISMATCH",
+        "status": "ABSTAIN_EVENT_SCOPE_MISMATCH",
+        "milestones": [
+          2,
+          3
+        ],
+        "charged_operations": {
+          "event_identity_comparison": 1
+        },
+        "charged_operation_total": 1,
+        "thread_cpu_ns": 0,
+        "wall_ns": 2300,
+        "batch_cpu_profile": {
+          "repetitions": 32736,
+          "thread_cpu_ns": 46875000,
+          "wall_ns": 52521100,
+          "includes_repeat_equality_checks": true
+        }
+      },
+      {
+        "control": "bare_distance_plus_time_no_order_authority",
+        "expected_status": "ABSTAIN_NO_AUTHORIZED_ORDER_PROJECTION",
+        "status": "ABSTAIN_NO_AUTHORIZED_ORDER_PROJECTION",
+        "bare_candidate": "n+t",
+        "illustrative_untyped_pairs_n_t": [
+          [
+            8,
+            10
+          ],
+          [
+            1,
+            12
+          ]
+        ],
+        "pairs_are_claimed_feasible_motion": false,
+        "reason": "An algebraic counterexample defeats a bare projection rule. Complete legal forward trajectories may admit a monotonicity proof, which this local simultaneity receipt does not provide.",
+        "charged_operations": {
+          "claim_projection_binding_comparison": 1,
+          "integer_addition": 2,
+          "integer_comparison": 2
+        },
+        "charged_operation_total": 5,
+        "thread_cpu_ns": 0,
+        "wall_ns": 4600,
+        "batch_cpu_profile": {
+          "repetitions": 16352,
+          "thread_cpu_ns": 31250000,
+          "wall_ns": 39140700,
+          "includes_repeat_equality_checks": true
+        }
+      }
+    ]
+  },
+  "scope": "Older exact CPU proof controls only. No fresh question text, trajectory, label, or GPU execution. The geometry case remains outside the rational live checker.",
+  "cost_scope": "Per-control primitive algorithm operations plus measured thread CPU and wall time. Set and quadratic-field counts are separate primitive units. Timing includes witness construction when selected and all executed checks. These are correctness controls, not matched performance measurements.",
+  "controls_passed": 15,
+  "total_thread_cpu_ns": 15625000,
+  "total_control_wall_ns": 3051500,
+  "total_repeated_profile_thread_cpu_ns": 531250000,
+  "cpu_profile_scope": "Repeated equal outcomes and equal operation ledgers expose quantized CPU cost. Per-control profile cost includes repeat comparisons and is separate from the single mathematical call.",
+  "calibration_code_sha256": "4f36e088252995c6f178dac0e9ba6bb3afef4640c6b6c32fd8bf87dbf3703742"
+}

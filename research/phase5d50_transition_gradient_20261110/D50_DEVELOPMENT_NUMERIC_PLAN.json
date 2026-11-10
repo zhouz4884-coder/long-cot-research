@@ -1,0 +1,20 @@
+{
+  "status": "D50_NUMERIC_DEV_SETTINGS_FROZEN_BEFORE_REAL_MODEL_RESULT",
+  "checkpoint": "Qwen3-4B",
+  "precision": "float32",
+  "adapter": {
+    "targets": ["q_proj", "v_proj"],
+    "rank": 4,
+    "scale": 1,
+    "dropout": 0,
+    "seed": 20261110
+  },
+  "uniform_prior_kl_nats": 0.04,
+  "plain_sgd_eta": 0.01,
+  "central_probe_unit_steps": [0.005, 0.02],
+  "minimum_cross_scale_probe_cosine": 0.98,
+  "maximum_cross_scale_relative_l2": 0.15,
+  "input": "D50_CONTROLLED_PACKET_FREEZE.json DEV only",
+  "initial_primary_metric": "actual heldout correct-vs-alternative margin at both raw SGD and matched L2 norm",
+  "scope": "This development arm may validate precision, epsilon, zero/repeat controls, and device capacity. It cannot tune against the separately sealed CONTROL H or provide natural generalization evidence."
+}

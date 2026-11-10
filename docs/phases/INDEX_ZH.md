@@ -29,6 +29,7 @@
 | [Phase 5-D4.7 可行解退步与证书保全](../../research/phase5d47_delivery_preservation_20261110/D47_CLOSEOUT_ZH.md) | 8 道新题、64 条原生轨迹、两处观察与终稿分开核验 | 49 对可行比较全部同值，0 退步，证书策略与朴素保留同输出 | 已完成，GPU 准入为 0。六条错值都在思维末段已形成 |
 | [Phase 5-D4.8 中途局部反证与完整求解](../../research/phase5d48_local_proof_headroom_20261110/D48_CLOSEOUT_ZH.md) | 9 道独立 HMMT 题，归档前缀、精确反例和普通完整对照 | 4 条精确早期错误均自修，普通完整解 9/9 | 已完成，独立修复残余 0，未启动 GPU |
 | [Phase 5-D4.9 格点构造的冲突核验与普通求解](../../research/phase5d49_constructive_conflict_20261110/D49_CLOSEOUT_ZH.md) | 10 道独立 ComBench 构造题，普通完整求解、部分状态和作者参考 | 10/10 普通完整覆盖及参考核验，九个极值证明 | 已完成，独立修复残余 0，未启动 GPU |
+| [Phase 5-D5.0 三态修订的一步梯度诊断](../../research/phase5d50_transition_gradient_20261110/D50_CLOSEOUT_ZH.md) | Qwen3-4B 单步实机和 BrUMO 自然前缀诊断 | 12 道可控留出，E 共同胜题 0，W04 两种口径均下降 | 已完成，未进入训练扩大与自然 EOS 对照 |
 
 ## 状态与阅读规则
 

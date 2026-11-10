@@ -1,0 +1,498 @@
+{
+  "status": "D50_BRUMO_B_BPRIME_H_FROZEN_BEFORE_ALL_MESSAGES",
+  "archive_and_question_sources": {
+    "question": {
+      "dataset": "MathArena/brumo_2025",
+      "revision": "6de9bc0987f5710c6376ee980e1483dbeb55cfda",
+      "file_sha256": "ef510deea34c5b6d165c06d020acede1c1031eb91d90336cb4d615d9e55ba391",
+      "bytes": 9586,
+      "license": "CC-BY-NC-SA-4.0",
+      "data_card_url": "https://huggingface.co/datasets/MathArena/brumo_2025/blob/6de9bc0987f5710c6376ee980e1483dbeb55cfda/README.md",
+      "asset_url": "https://huggingface.co/datasets/MathArena/brumo_2025/resolve/6de9bc0987f5710c6376ee980e1483dbeb55cfda/data/train-00000-of-00001.parquet"
+    },
+    "archive": {
+      "dataset": "MathArena/brumo_2025_outputs",
+      "revision": "3b234efea64d03f80ec57a85e29879fc41b04864",
+      "file_sha256": "a89e9e9fcc64fb22116290f94eb84e7173edb7253321487a948af99790d8c573",
+      "bytes": 85941185,
+      "license": "CC-BY-NC-SA-4.0",
+      "data_card_url": "https://huggingface.co/datasets/MathArena/brumo_2025_outputs/blob/3b234efea64d03f80ec57a85e29879fc41b04864/README.md",
+      "asset_url": "https://huggingface.co/datasets/MathArena/brumo_2025_outputs/resolve/3b234efea64d03f80ec57a85e29879fc41b04864/data/train-00000-of-00001.parquet"
+    }
+  },
+  "selection": {
+    "model_name": "QED-Nano",
+    "model_config": "other/qed-nano",
+    "draw_index": 0,
+    "archived_identity_draws_per_question": 4
+  },
+  "split_rule": "Sort subjects ASCII, then sort within each subject by SHA256('D50-BRUMO-2025-CUSTODY-v1' + NUL + case ID), and cycle B, Bprime, H continuously across the concatenation.",
+  "question_columns": [
+    "problem_idx",
+    "problem",
+    "problem_type"
+  ],
+  "archive_identity_columns": [
+    "problem_idx",
+    "model_name",
+    "model_config",
+    "idx_answer",
+    "problem",
+    "user_message"
+  ],
+  "projector_sha256": "754c0f260644cf11cc456ffb358bbc9a4da6a1d1aa29d451c94446a0db105f4a",
+  "local_question_projection_sha256": "638ae4650cac3adde1a97e509c7e1c2160cd67f1f0768085de55a89a355e2f25",
+  "dedup_scope": "Exact normalized hashes and exact identities against the prior catalog and projected D43–D49 questions. Punctuation-fold similarity screens accessible older text at 0.90. This is local project nonoverlap, not model contamination or semantic independence certification.",
+  "old_sources": [
+    {
+      "path": "outputs/d43_aime_source_20261110/d43_question_only.json",
+      "sha256": "2a445948dc21b0ad89e026bd32ccc1870362e658d37f41ae5b5215b295c184cd",
+      "question_rows": 32
+    },
+    {
+      "path": "outputs/d44_aime_source_20261110/d44_live_visible.json",
+      "sha256": "caaa9652a5c98a4fc0273122ff5cc1567d08eae6885480f0a9d43aee5acb6ea6",
+      "question_rows": 8
+    },
+    {
+      "path": "outputs/d45_aime_source_20261110/d45_question_only.json",
+      "sha256": "e35e99befae8d1c82a81ae6650a9bc7c8a9a85ccfcfc5d815479516bbcf31f0c",
+      "question_rows": 11
+    },
+    {
+      "path": "outputs/d46_aime_source_20261110/d46_question_only.json",
+      "sha256": "900d654ebdbe5fa79e61a9fa7331c8dbf8fa5bcfd5ddc6748d5a7994c58fd007",
+      "question_rows": 11
+    },
+    {
+      "path": "outputs/d47_aime_source_20261110/d47_question_only.json",
+      "sha256": "4534878ace40611437238dab259275b6594e0933a73786c96d3b5d8baba6b9f8",
+      "question_rows": 8
+    },
+    {
+      "path": "outputs/d49_combench_blind_20261110/d49_construction_questions.json",
+      "sha256": "f71dd6d85c8b7b50db88eb5e3b0fa020077906de72083224e024829fd6356b2a",
+      "question_rows": 47
+    },
+    {
+      "path": "outputs/d48_matharena_raw_20261110/hmmt_feb_2025_outputs.parquet",
+      "sha256": "afb629b9ff576f74426acab054b2036244ba539ebaacfd118bb923163619822a",
+      "distinct_ids": 30,
+      "question_rows": 30,
+      "columns": [
+        "problem_idx",
+        "problem"
+      ]
+    },
+    {
+      "path": "outputs/d48_matharena_raw_20261110/hmmt_feb_2026_outputs.parquet",
+      "sha256": "763eeb014e9e6d6370dce512ab99754af7cb575cee9c18e2c9fc61e5a0761ca1",
+      "distinct_ids": 33,
+      "question_rows": 34,
+      "columns": [
+        "problem_idx",
+        "problem"
+      ]
+    },
+    {
+      "path": "research/phase5d43_answer_refutation_20261110/D43_DEVELOPMENT_EXCLUSIONS.json",
+      "sha256": "c2511f1fa78525d26a02204a35400274eca6964d66449d2305ef4109ee596566",
+      "question_rows": 4962
+    }
+  ],
+  "old_unique_normalized_hashes": 5142,
+  "old_direct_text_rows": 181,
+  "holdback": "No archive response, stop, answer or score columns were projected at freeze. QED teacher identity is publisher metadata, not row-bound model checkpoint bytes. Qwen student remains separate.",
+  "rows": [
+    {
+      "case_id": "BRUMO-2025-P01",
+      "problem_idx": 1,
+      "split": "Bprime",
+      "subject": "Geometry",
+      "source_problem_sha256": "c7e6d42bafcfec5601c188ac96705d28bbb1a1848c0946d539ffc8b5ac7c1a94",
+      "archive_problem_sha256": "c7e6d42bafcfec5601c188ac96705d28bbb1a1848c0946d539ffc8b5ac7c1a94",
+      "normalized_question_sha256": "68f2cb671d96496b7d6fed5952100aee46c6f829b6cf10528c8f68a7162fb7d7",
+      "user_message_sha256": "6fffe53e371a8537d4e09164c4c98cb9f447269748b13316911279ded1e4723c",
+      "sample_uid": "f8e79c6b6ab6d5dd5be709450f0fb5ddc6d200825532047f0e2601fdeab8ff79",
+      "nearest_old_question": "2012-I-13",
+      "nearest_old_similarity": 0.408353
+    },
+    {
+      "case_id": "BRUMO-2025-P02",
+      "problem_idx": 2,
+      "split": "Bprime",
+      "subject": "Algebra",
+      "source_problem_sha256": "c4d426434adfe3e47a346712f77f932e4a5a5ce0cf7f31aa2e258cfb65b6d468",
+      "archive_problem_sha256": "c4d426434adfe3e47a346712f77f932e4a5a5ce0cf7f31aa2e258cfb65b6d468",
+      "normalized_question_sha256": "77f7e6c0d3fc824e04be5cf6514015d8fd3236aa11fef99e1b540eca08e1f3cd",
+      "user_message_sha256": "8b42517c4e58d03440df36dcc38ed6e3e31be2613d3a72de7a91cc4d7daf234d",
+      "sample_uid": "570ab3cdd704baf0a7a391e144b508b0875acc4c75cdf8cf5ccc31047392105e",
+      "nearest_old_question": "HMMT-FEB-2025-25",
+      "nearest_old_similarity": 0.341085
+    },
+    {
+      "case_id": "BRUMO-2025-P03",
+      "problem_idx": 3,
+      "split": "H",
+      "subject": "Geometry",
+      "source_problem_sha256": "ff8aef699427264c0c40bc6e36f40a018733e88b640d4423f484330d5ba2398d",
+      "archive_problem_sha256": "ff8aef699427264c0c40bc6e36f40a018733e88b640d4423f484330d5ba2398d",
+      "normalized_question_sha256": "a4b6ba09684e0ed5f69585cb46788ce98307ace74de9d4705bfe41766fc98a49",
+      "user_message_sha256": "4ac9829bb0d2d6d911eec73f3abe2803b9d2f6060c37021e54a618db345ac3cb",
+      "sample_uid": "56c481ddd67b58146ce69965710373f29e24a543927250a4956a7dee254af1cd",
+      "nearest_old_question": "HMMT-FEB-2026-18",
+      "nearest_old_similarity": 0.390244
+    },
+    {
+      "case_id": "BRUMO-2025-P04",
+      "problem_idx": 4,
+      "split": "H",
+      "subject": "Algebra",
+      "source_problem_sha256": "11e30dc3dd4148e1ae6bc1ff872743527badf18c53da71d90432c379b0d0e74f",
+      "archive_problem_sha256": "11e30dc3dd4148e1ae6bc1ff872743527badf18c53da71d90432c379b0d0e74f",
+      "normalized_question_sha256": "1e9706cf294ac66e6597220732d43f25b701b7d35d382655acaed60902e71fab",
+      "user_message_sha256": "bae8d3310b0901f7e8283326f8699d0b6b39c349bc7baf5deda67ed4a7b84ee5",
+      "sample_uid": "2e652df1b027b9cbb00829a06c6bb989814f1f0570a4df2de4a5d80eb7fb6fcb",
+      "nearest_old_question": "2009-I-7",
+      "nearest_old_similarity": 0.285714
+    },
+    {
+      "case_id": "BRUMO-2025-P05",
+      "problem_idx": 5,
+      "split": "Bprime",
+      "subject": "Combinatorics",
+      "source_problem_sha256": "d4ac69212a129d03669ebe25141a018de4092642a899e1aa339b200160e66192",
+      "archive_problem_sha256": "d4ac69212a129d03669ebe25141a018de4092642a899e1aa339b200160e66192",
+      "normalized_question_sha256": "67ecfa24901e397c0ea529879c30301ce46bf93932f784f3fc09e0113cbb3859",
+      "user_message_sha256": "d66648136d94d29103a245d410cd3a871da08a224805640c1a3fcd18a392bfe6",
+      "sample_uid": "b3b6e988fdcb371bb5ccc87839fe9b83fd68ac5fdd670b420ba0d246769a916c",
+      "nearest_old_question": "2011-II-14",
+      "nearest_old_similarity": 0.483051
+    },
+    {
+      "case_id": "BRUMO-2025-P06",
+      "problem_idx": 6,
+      "split": "H",
+      "subject": "Combinatorics",
+      "source_problem_sha256": "f8449b0a2be60f55f6e81b9cad21399879c348e77252b7e3d1f02057fa0e354d",
+      "archive_problem_sha256": "f8449b0a2be60f55f6e81b9cad21399879c348e77252b7e3d1f02057fa0e354d",
+      "normalized_question_sha256": "4f3faa8aa95c9184647faef9ef0a08622ccdacd235dd455e1b0fa68ff90ca5cc",
+      "user_message_sha256": "b8d89de73ed8d005100d5455ecce04be69e84928c8a1dbbdb7474307de4ab2dd",
+      "sample_uid": "5a054cb833d1e7f3abda8d0b0f984a84563a1cc77b5e0870181ea910d1e49726",
+      "nearest_old_question": "CMO-2012-P2",
+      "nearest_old_similarity": 0.315956
+    },
+    {
+      "case_id": "BRUMO-2025-P07",
+      "problem_idx": 7,
+      "split": "B",
+      "subject": "Combinatorics",
+      "source_problem_sha256": "01356db932829c9b510933408d650efd5e7f19324290d82af3e028865f3b38ff",
+      "archive_problem_sha256": "01356db932829c9b510933408d650efd5e7f19324290d82af3e028865f3b38ff",
+      "normalized_question_sha256": "e05fa7df49517acf8c82d39ceef5a2dd0c6dc643dc64aa367793854c9e75fc59",
+      "user_message_sha256": "bbc75b9ea510eeb2e2ac1dbf01ba000722da26af38b83802415f4c70c99a6a12",
+      "sample_uid": "ad1230bdc7fa492968cc92b7c94ba9363471140df15fef21919f42bd9d9ab4d7",
+      "nearest_old_question": "HMMT-FEB-2026-12",
+      "nearest_old_similarity": 0.337079
+    },
+    {
+      "case_id": "BRUMO-2025-P08",
+      "problem_idx": 8,
+      "split": "H",
+      "subject": "Number Theory",
+      "source_problem_sha256": "c5d7f20626d22095d6b0e6dd78601494cd0d274559fa511d11f515b4506fe85f",
+      "archive_problem_sha256": "c5d7f20626d22095d6b0e6dd78601494cd0d274559fa511d11f515b4506fe85f",
+      "normalized_question_sha256": "33dad393ded50bf5dabb697371760b430967bda092350153e6bb5631d3d5acef",
+      "user_message_sha256": "407cd88020784b091fb8a2b7785fee1943d2945fe1d2f93c19b4c4a41b65562a",
+      "sample_uid": "c8b42e20501f957f4989cd0816b95fa22472760050de36595e5cfce33ea50944",
+      "nearest_old_question": "HMMT-FEB-2025-6",
+      "nearest_old_similarity": 0.372881
+    },
+    {
+      "case_id": "BRUMO-2025-P09",
+      "problem_idx": 9,
+      "split": "Bprime",
+      "subject": "Number Theory",
+      "source_problem_sha256": "02ecbaeb96d6d2cd6a724bf753a19455207ba1981332bff96c4a0f04e828cc58",
+      "archive_problem_sha256": "02ecbaeb96d6d2cd6a724bf753a19455207ba1981332bff96c4a0f04e828cc58",
+      "normalized_question_sha256": "d34281ea0fb5f727ad164add169785b2ade348647e260fb48dad1ec1c758f370",
+      "user_message_sha256": "1e891c7decf3a3a57da270f7814b6d8d74d2e9de2c25bea5baa50d522c6bc955",
+      "sample_uid": "8610488af67f85dc762f57e7f80e4db94aaa2997a04f1a62f646f14d58266ffc",
+      "nearest_old_question": "2015-II-3",
+      "nearest_old_similarity": 0.495575
+    },
+    {
+      "case_id": "BRUMO-2025-P10",
+      "problem_idx": 10,
+      "split": "Bprime",
+      "subject": "Combinatorics",
+      "source_problem_sha256": "f8c02cb3d09d4760eae6382dee6ed1e1df42fad5f83df54aca34f69447eeceb1",
+      "archive_problem_sha256": "f8c02cb3d09d4760eae6382dee6ed1e1df42fad5f83df54aca34f69447eeceb1",
+      "normalized_question_sha256": "a4c463b5e003dbedef41f94277a08318a08c3e82c3dd852c3cbd7ce5747df3a4",
+      "user_message_sha256": "b7b9e0fed18f4147be3e8074ee95e73c8601e5d42b3bbc44addd8e246f817a90",
+      "sample_uid": "14e6979dd3eb739e4933ebdc4e02087660f7b9193cca2f2c89f6528d02e1af93",
+      "nearest_old_question": "USAMO-2024-P4",
+      "nearest_old_similarity": 0.318841
+    },
+    {
+      "case_id": "BRUMO-2025-P11",
+      "problem_idx": 11,
+      "split": "B",
+      "subject": "Geometry",
+      "source_problem_sha256": "c97042572268b0f8bf698476d1b4b94c8b717cb5f75181349a7299341e12ad24",
+      "archive_problem_sha256": "c97042572268b0f8bf698476d1b4b94c8b717cb5f75181349a7299341e12ad24",
+      "normalized_question_sha256": "920348ca740fce786d4dc3d85047e8a7cd5aa6cdddc5d39420c9261324884057",
+      "user_message_sha256": "96f2c45885fd1f33a02efb54e6b071d516e320074457936d02f4a0f1bf1e65a3",
+      "sample_uid": "f5eb1843f73ecf1a9421bbf571e88768223687ebdd74abc347362bc3c40ad581",
+      "nearest_old_question": "HMMT-FEB-2026-30",
+      "nearest_old_similarity": 0.566434
+    },
+    {
+      "case_id": "BRUMO-2025-P12",
+      "problem_idx": 12,
+      "split": "B",
+      "subject": "Combinatorics",
+      "source_problem_sha256": "78fbb6aa59379c2751e5fb19a3a27500bd3f92711b6eb41f04179d10dfc7def6",
+      "archive_problem_sha256": "78fbb6aa59379c2751e5fb19a3a27500bd3f92711b6eb41f04179d10dfc7def6",
+      "normalized_question_sha256": "5ff77741e27a2fea691fb8c292ef8701cb531e5fe9bd18dab9fa973698d4997e",
+      "user_message_sha256": "4666617541b50919bb26bf5fadf420ffc26e4f231692c0ada55dc3e2c07ebb0d",
+      "sample_uid": "60655a300b3526c4c0d35ee356238973fbc79cc8a4f9e7c0123881552835437b",
+      "nearest_old_question": "HMMT-FEB-2026-17",
+      "nearest_old_similarity": 0.30445
+    },
+    {
+      "case_id": "BRUMO-2025-P13",
+      "problem_idx": 13,
+      "split": "Bprime",
+      "subject": "Geometry",
+      "source_problem_sha256": "e0aef49ba2cbb5d382831466fc09f4a692d1513f1fa233337b3b309f38202233",
+      "archive_problem_sha256": "e0aef49ba2cbb5d382831466fc09f4a692d1513f1fa233337b3b309f38202233",
+      "normalized_question_sha256": "1e1a7cc8ddf00f97a6d98abc34f70f52ed003e00c569b0578c6538aa9fcda3ec",
+      "user_message_sha256": "c42fca3391df6130a09d08550c3f158b9ae5adab5be40be284cc6a3c75193579",
+      "sample_uid": "ff79f4f9ded8bce88655f8f48ff22be61427767485723ffe5912e6dc42a46599",
+      "nearest_old_question": "2023-I-12",
+      "nearest_old_similarity": 0.406685
+    },
+    {
+      "case_id": "BRUMO-2025-P14",
+      "problem_idx": 14,
+      "split": "Bprime",
+      "subject": "Algebra",
+      "source_problem_sha256": "49bd2edf1841c26813764128e7f89b9dc59b4e574d26e7830827c6d1c676b945",
+      "archive_problem_sha256": "49bd2edf1841c26813764128e7f89b9dc59b4e574d26e7830827c6d1c676b945",
+      "normalized_question_sha256": "51692f0da303dad3225adafb9f908b6eb9198c58bb8ef6d965fd3c479af766fe",
+      "user_message_sha256": "9b32524d7b5572b8275f45b25bf96078f02a6f4e624f80c321e1cf6e3b45246e",
+      "sample_uid": "fa1d3267613dd7bc1abcbe7ae56dacdc1551e944bdf0cc4d1119f41b43dd742f",
+      "nearest_old_question": "2009-I-13",
+      "nearest_old_similarity": 0.545455
+    },
+    {
+      "case_id": "BRUMO-2025-P15",
+      "problem_idx": 15,
+      "split": "B",
+      "subject": "Algebra",
+      "source_problem_sha256": "5b5b060ad9c2d8cd40c2f575510bdc1197d893bb05eb539161c9a99f7448f9ba",
+      "archive_problem_sha256": "5b5b060ad9c2d8cd40c2f575510bdc1197d893bb05eb539161c9a99f7448f9ba",
+      "normalized_question_sha256": "0a2510257434a0e84f5d49b53b2500d91ca85b8b0dd73719d9d3cbd7070f8e91",
+      "user_message_sha256": "3a44749280f86e54715bd016014462e9031a36fa622fe3762f78e0ab25a79e68",
+      "sample_uid": "6f6affb156dc796565346c8f7a9ba18da546b295ddd816df07452d680dc79098",
+      "nearest_old_question": "HMMT-FEB-2025-8",
+      "nearest_old_similarity": 0.329897
+    },
+    {
+      "case_id": "BRUMO-2025-P16",
+      "problem_idx": 16,
+      "split": "H",
+      "subject": "Number Theory",
+      "source_problem_sha256": "d1d996e34b093f64a14466883c95907d7b7bdde89289a33d637c824b99961830",
+      "archive_problem_sha256": "d1d996e34b093f64a14466883c95907d7b7bdde89289a33d637c824b99961830",
+      "normalized_question_sha256": "3c13b9768dee9f6a829bed2543770ef1a9dd0e5c7381211ad9c00789d264bbae",
+      "user_message_sha256": "9290dca5a7f78406085ccaae3a9eabf0840166cfa8e5b1b994ccfc90ef46b413",
+      "sample_uid": "26584d1de38da3fad511dcc5f549a82fe4fb004671658f4b3ad2317f92e4968e",
+      "nearest_old_question": "HMMT-FEB-2026-2",
+      "nearest_old_similarity": 0.566524
+    },
+    {
+      "case_id": "BRUMO-2025-P17",
+      "problem_idx": 17,
+      "split": "H",
+      "subject": "Geometry",
+      "source_problem_sha256": "007c6517ecce974fcfc8ef858ffc8c2ca8ffe29dc739d065da2d2461a0a14004",
+      "archive_problem_sha256": "007c6517ecce974fcfc8ef858ffc8c2ca8ffe29dc739d065da2d2461a0a14004",
+      "normalized_question_sha256": "6b9d8f720a79d562c8ef140c116e015743a6945d6eef20063d052ab4dc66d18d",
+      "user_message_sha256": "29676f0be8c41ff6bfbce4f255e9f7b3e3fbf52f7ec842066cd8de6fe3895e2a",
+      "sample_uid": "b7e7b95c416a5794f88ed08cc810054c141930851cfcb661dc7d027f1de17324",
+      "nearest_old_question": "2015-I-11",
+      "nearest_old_similarity": 0.390244
+    },
+    {
+      "case_id": "BRUMO-2025-P18",
+      "problem_idx": 18,
+      "split": "H",
+      "subject": "Combinatorics",
+      "source_problem_sha256": "ebff7d5b5781993e5ed00b6350f5b6e83e345da64c0d8a83658ae4396d05b2e4",
+      "archive_problem_sha256": "ebff7d5b5781993e5ed00b6350f5b6e83e345da64c0d8a83658ae4396d05b2e4",
+      "normalized_question_sha256": "05c55ae79d668bde55d9ed860ebf7aaefd92225a63f5c343462982360b85f6ac",
+      "user_message_sha256": "0859b8e85ebd1dfe6e2df6641146155f94db7310e2a5927ef52bb1f17665e00b",
+      "sample_uid": "c5701f3106d9a2ae6119e279261b43e292a99173a1e03eb5a936c210faa5f0bc",
+      "nearest_old_question": "CSMO-2018-P14-789",
+      "nearest_old_similarity": 0.312782
+    },
+    {
+      "case_id": "BRUMO-2025-P19",
+      "problem_idx": 19,
+      "split": "B",
+      "subject": "Algebra",
+      "source_problem_sha256": "1c6920d5f908f475f408529239028a3ad5f4229ede47bbd4121e0096162046ca",
+      "archive_problem_sha256": "1c6920d5f908f475f408529239028a3ad5f4229ede47bbd4121e0096162046ca",
+      "normalized_question_sha256": "636f8102d4e46b25142d38fe2a2b67846f49249e86ecf4be44f807e258155396",
+      "user_message_sha256": "916f009efcc138849cc2cde1ac1ee4ada774f51fec6a7f4aa6284cce76a68ebe",
+      "sample_uid": "84fad8ddfe6fb7409c4ba52e3c9587206dba31bf9dca606df48caef2a03b070c",
+      "nearest_old_question": "HMMT-FEB-2026-5",
+      "nearest_old_similarity": 0.565789
+    },
+    {
+      "case_id": "BRUMO-2025-P20",
+      "problem_idx": 20,
+      "split": "Bprime",
+      "subject": "Combinatorics",
+      "source_problem_sha256": "72a929ebcb531595c74f09d680ae78c45ea96a842cc554fe4e8e8deac0fc074c",
+      "archive_problem_sha256": "72a929ebcb531595c74f09d680ae78c45ea96a842cc554fe4e8e8deac0fc074c",
+      "normalized_question_sha256": "ed765301a9f01e0ebbdfe7a0be25f2cadd8eecff3f0af6d163d9b529ef67f02d",
+      "user_message_sha256": "f585660d457ec7c6a9418936354a083d0c12a46f8bd6515c4c8f94610e7c8704",
+      "sample_uid": "b300a5365c5e7f4cde5bad44f0303ee11532da44e28c0e9e8ef03823516dc935",
+      "nearest_old_question": "HMMT-FEB-2025-12",
+      "nearest_old_similarity": 0.323478
+    },
+    {
+      "case_id": "BRUMO-2025-P21",
+      "problem_idx": 21,
+      "split": "H",
+      "subject": "Combinatorics",
+      "source_problem_sha256": "28b20bf184a6f3890ae2cab88c7469947cebf669121ed38200eab8ab483489ea",
+      "archive_problem_sha256": "28b20bf184a6f3890ae2cab88c7469947cebf669121ed38200eab8ab483489ea",
+      "normalized_question_sha256": "1e3aa20d4ec7eaa9835b22b4447f011f099d7694c354548f9cad78bf598387eb",
+      "user_message_sha256": "2ec3c0f5d8acd9d2312f1e11f5631690f7478446f594706d4b1a75d46db873e7",
+      "sample_uid": "f7974bbef1ae9b438ebe4f358ecca8925fdd3950e8347c52d2050d8fe6abdf4b",
+      "nearest_old_question": "CSMO-2018-P14-789",
+      "nearest_old_similarity": 0.275294
+    },
+    {
+      "case_id": "BRUMO-2025-P22",
+      "problem_idx": 22,
+      "split": "Bprime",
+      "subject": "Combinatorics",
+      "source_problem_sha256": "43a6e77e319d51f373aeb341f7753267d0461903dae6d20d40cbe12ce98ee13d",
+      "archive_problem_sha256": "43a6e77e319d51f373aeb341f7753267d0461903dae6d20d40cbe12ce98ee13d",
+      "normalized_question_sha256": "4865a5497840661dd31929747c9cd46f710cffeeb9bc2fc1a010c299ae76af7e",
+      "user_message_sha256": "049e24c5e69fada4c5ec65d61d6238abe8e670085e8375102dfea555bada73fc",
+      "sample_uid": "db85ac263fc21b09f5a80eb4e7febc3590c665c7a4257e616cc09d443c3cad77",
+      "nearest_old_question": "HMMT-FEB-2026-24",
+      "nearest_old_similarity": 0.346269
+    },
+    {
+      "case_id": "BRUMO-2025-P23",
+      "problem_idx": 23,
+      "split": "B",
+      "subject": "Algebra",
+      "source_problem_sha256": "9aa1328822fed4da3bc1904a82b70f39582ec645b7f7f426d0ad0c61ee18cd1d",
+      "archive_problem_sha256": "9aa1328822fed4da3bc1904a82b70f39582ec645b7f7f426d0ad0c61ee18cd1d",
+      "normalized_question_sha256": "e428b75d9955957ee6879088d591367d32b321a42115eaf5dae6991437ffa52a",
+      "user_message_sha256": "563c6df8794852e2c7d928b9c1019a21d1acfb417be1a48ef1996f65cb23616e",
+      "sample_uid": "955f7cd379b2976e8d919719a3b51a5f52bb2ddd15cf7ce8f607ca52a2477dfd",
+      "nearest_old_question": "HMMT-FEB-2026-4",
+      "nearest_old_similarity": 0.361582
+    },
+    {
+      "case_id": "BRUMO-2025-P24",
+      "problem_idx": 24,
+      "split": "B",
+      "subject": "Number Theory",
+      "source_problem_sha256": "f85cdf30994b70bcba4a9fc6ae45697fb526ab6ca1f57fec9610aed08f57253d",
+      "archive_problem_sha256": "f85cdf30994b70bcba4a9fc6ae45697fb526ab6ca1f57fec9610aed08f57253d",
+      "normalized_question_sha256": "bbf9ec11f0553e2b1adcf03aa962bcba47764cf58b5ecc57e6f69ee49d654017",
+      "user_message_sha256": "73181fd8eba20b7ade2d3d1ec96fcd2bea8d4cb0dc10cf79933961c93b71e942",
+      "sample_uid": "83641e4f6006e8581881a9f477ff1d6a92c3fc293795f331f2c842c5223560e1",
+      "nearest_old_question": "2015-I-8",
+      "nearest_old_similarity": 0.430108
+    },
+    {
+      "case_id": "BRUMO-2025-P25",
+      "problem_idx": 25,
+      "split": "H",
+      "subject": "Geometry",
+      "source_problem_sha256": "507315f129cc6bd024fc352643d993fefd303dc404219098d1f8bb1caaf87d21",
+      "archive_problem_sha256": "507315f129cc6bd024fc352643d993fefd303dc404219098d1f8bb1caaf87d21",
+      "normalized_question_sha256": "204f192c58115835f7d6dd3d96c262bded874cd674d9b57f95de0cbd54520bd3",
+      "user_message_sha256": "24d70e054aa1a9cf85e6b392c37287b95113b92a64ece5b8d7b8141e21056853",
+      "sample_uid": "5df728a90e8e35ba8b4ce9cb619e93e0f3ec8f77bb8bec81c43826193b2d813a",
+      "nearest_old_question": "HMMT-FEB-2026-22",
+      "nearest_old_similarity": 0.437768
+    },
+    {
+      "case_id": "BRUMO-2025-P26",
+      "problem_idx": 26,
+      "split": "Bprime",
+      "subject": "Number Theory",
+      "source_problem_sha256": "248d30a35d0e509e9cd2d7f7fd950193944f42f9697ff5138aa3684e29c790cf",
+      "archive_problem_sha256": "248d30a35d0e509e9cd2d7f7fd950193944f42f9697ff5138aa3684e29c790cf",
+      "normalized_question_sha256": "e0fc2add9c5515aceb4f2eced969bc9e04879fbbadf883c991fd3ddb07a0e300",
+      "user_message_sha256": "83d75b14453b829a634cab7686417e915eefcaa16f024aa9b5ffa28ffdea713e",
+      "sample_uid": "8f87f2b581ca79f9c908ce00c90c5409bdf440f2decf3f2bfe9629ab4f31a3ce",
+      "nearest_old_question": "HMMT-FEB-2026-13",
+      "nearest_old_similarity": 0.361055
+    },
+    {
+      "case_id": "BRUMO-2025-P27",
+      "problem_idx": 27,
+      "split": "B",
+      "subject": "Combinatorics",
+      "source_problem_sha256": "055dcf22b844dcde7aceebcdfc0b2bd7731b7930a1642b4fc4ebdfae82a95556",
+      "archive_problem_sha256": "055dcf22b844dcde7aceebcdfc0b2bd7731b7930a1642b4fc4ebdfae82a95556",
+      "normalized_question_sha256": "892617811563fb485c238d2dde19c0b4a89fa4ba0edd25e1d80649621e3a8cc7",
+      "user_message_sha256": "d19a8779ad7f84232bec8877390c63761ee0a5dbf77fea50c8392071449b519f",
+      "sample_uid": "195ceef9fc3ed5bb688754b1df4b60eb43c31ad9e8c9b14675c99834ed1a9677",
+      "nearest_old_question": "2019-II-4",
+      "nearest_old_similarity": 0.315789
+    },
+    {
+      "case_id": "BRUMO-2025-P28",
+      "problem_idx": 28,
+      "split": "B",
+      "subject": "Geometry",
+      "source_problem_sha256": "391bc4712c7e26ad34e94bbd155b72fea954a96571b7666e73e064dc458cda38",
+      "archive_problem_sha256": "391bc4712c7e26ad34e94bbd155b72fea954a96571b7666e73e064dc458cda38",
+      "normalized_question_sha256": "07e0e6ba1b007cfaf372a94955a75ed8a1ab43037a0bd19db29b09b49658ffcd",
+      "user_message_sha256": "e1d7203a2aff2ef2aad19ba5a8927912490c3afac47e76fdb734a2cd841d2b44",
+      "sample_uid": "98c8d3fcf383e56d78a4bf674a96dcf2a9c415d2fc95a6d2378d84314ae8f963",
+      "nearest_old_question": "HMMT-FEB-2026-25",
+      "nearest_old_similarity": 0.345382
+    },
+    {
+      "case_id": "BRUMO-2025-P29",
+      "problem_idx": 29,
+      "split": "H",
+      "subject": "Algebra",
+      "source_problem_sha256": "4ed4abd55c84ed2aec95089ff342187283beaabb05189e2a735f7e8c67695c64",
+      "archive_problem_sha256": "4ed4abd55c84ed2aec95089ff342187283beaabb05189e2a735f7e8c67695c64",
+      "normalized_question_sha256": "c20a426f31e7f2a06f1c39fb262277eaa2976c9323f102d50115bc25100ee03c",
+      "user_message_sha256": "8ad6be0b4c9529ea8ff1d74b79786644a60693921b605f6108ade97622a98291",
+      "sample_uid": "bbcf7454227bf3131e2820399f746ddb16483e1a03783839b50ecf68d7b99392",
+      "nearest_old_question": "HMMT-FEB-2025-6",
+      "nearest_old_similarity": 0.309524
+    },
+    {
+      "case_id": "BRUMO-2025-P30",
+      "problem_idx": 30,
+      "split": "B",
+      "subject": "Geometry",
+      "source_problem_sha256": "7f6d0f162c94f2032480a7bb6a7a0d1d72c9181fbb8e2de98835c114a50e089e",
+      "archive_problem_sha256": "7f6d0f162c94f2032480a7bb6a7a0d1d72c9181fbb8e2de98835c114a50e089e",
+      "normalized_question_sha256": "ac8a621f3f040d521c25ef5b83363611a577617c88b0c9b513d46e5915d30e59",
+      "user_message_sha256": "0941d4badecf725223dddde1590c373508384d3150a319c9ccd1d093a8a29a0b",
+      "sample_uid": "f033f15a0ea700c2b17e5c61e113134d027707e8638954c834b1b83966f61552",
+      "nearest_old_question": "HMMT-FEB-2025-25",
+      "nearest_old_similarity": 0.449912
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "status": "D50_QWEN3_4B_DEV_GPU_NUMERICS_COMPLETE",
+  "result_sha256": "fb83c59680aa83c6c3c205245c448584c28b8f61d0d68f7740c52117e056832f",
+  "runner_source_sha256": "c2637dddd3809f0f90e5eee266c61c0a161a8c3d253ee13138091726fe3f552c",
+  "input_sha256": "1f2c353342486fec80dbd7addee866e5113132c759b3e49f8cbf4e0d98484fdd",
+  "anchors": {
+    "U": {
+      "status": "READY",
+      "probe_relative_l2": 0.0015155016503918756,
+      "probe_cosine": 0.9999988586503744
+    },
+    "A": {
+      "status": "READY",
+      "probe_relative_l2": 0.006296829316553208,
+      "probe_cosine": 0.9999802351385481
+    },
+    "T": {
+      "status": "READY",
+      "probe_relative_l2": 0.011775701609350682,
+      "probe_cosine": 0.9999311278530845
+    }
+  },
+  "same_settings_admitted_for_control": {
+    "epsilons": [
+      0.005,
+      0.02
+    ],
+    "eta": 0.01,
+    "kl": 0.04,
+    "match_norm": null,
+    "max_probe_relative_l2": 0.15,
+    "min_probe_cosine": 0.98,
+    "zero_norm": 1e-12
+  },
+  "restore_count": 20,
+  "exact_restore": true,
+  "cost": {
+    "elapsed_wall_ns": 21716357628,
+    "peak_allocated_bytes": 18409449984,
+    "peak_reserved_bytes": 18954059776
+  },
+  "model_and_adapter_load_wall_ns": 20337721049,
+  "paid_work": {
+    "forward_calls": 126,
+    "backward_calls": 30,
+    "forward_input_tokens": 20504,
+    "forward_teacher_targets": 5990,
+    "forward_causal_position_pairs": 1764308,
+    "wall_ns": 21255339275
+  },
+  "scope": "Three independent development cases only. No result from the CONTROL H was used to admit settings."
+}

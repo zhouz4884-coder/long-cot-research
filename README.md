@@ -9,6 +9,7 @@
 - [Phase 1–5 总索引](docs/phases/INDEX_ZH.md)
 - [当前研究目标](docs/next_phase/CURRENT_RESEARCH_GOAL_20261105_ZH.md)
 - [最新建议审查与下一轮公平对照](research/repository_phase_plan_20261106/ADVISOR_REVIEW_20261106_ZH.md)
+- [Phase 5-D5.0 三态修订的一步梯度诊断](research/phase5d50_transition_gradient_20261110/D50_CLOSEOUT_ZH.md)
 - [Phase 5-D4.9 格点构造的冲突核验与普通求解](research/phase5d49_constructive_conflict_20261110/D49_CLOSEOUT_ZH.md)
 - [Phase 5-D4.8 中途局部反证与完整求解](research/phase5d48_local_proof_headroom_20261110/D48_CLOSEOUT_ZH.md)
 - [Phase 5-D4.7 可行解退步与证书保全](research/phase5d47_delivery_preservation_20261110/D47_CLOSEOUT_ZH.md)
@@ -62,6 +63,7 @@
 | [Phase 5-D4.7](research/phase5d47_delivery_preservation_20261110/D47_CLOSEOUT_ZH.md) | 8 道新题、64 条归档轨迹、同目标可行证书与朴素保留 | 49 对两值均可行且相等，0 条退步。证书保全与朴素保留全体同输出。零 GPU |
 | [Phase 5-D4.8](research/phase5d48_local_proof_headroom_20261110/D48_CLOSEOUT_ZH.md) | 9 道新 HMMT 题，固定归档与局部反例，独立完整对照 | 4 条精确早期反例，全部自修。普通完整解 9/9，修复准入为 0，零 GPU |
 | [Phase 5-D4.9](research/phase5d49_constructive_conflict_20261110/D49_CLOSEOUT_ZH.md) | 10 道 ComBench 格点构造，部分核验、通用求解及结构对照 | 普通完整控制及作者构造均通过 10/10。九题证明固定最优，一题为可行性。零 GPU |
+| [Phase 5-D5.0](research/phase5d50_transition_gradient_20261110/D50_CLOSEOUT_ZH.md) | Qwen3-4B 三态修订的一步实测，独立 BrUMO 归档诊断 | 12 道可控留出，E 组共同胜题 0，W 组一题两种口径均退化。约 2.24 单卡分钟 |
 
 每个Phase统一记录：问题、输入与协议、实际动作、数据结论、失败与猜想、下一门槛、证据路径。后续工作继续新增Phase或阶段内子报告，不改写已冻结的结果。
 
@@ -93,6 +95,7 @@
 | Phase5-D4.7 | 64 条中 45 条正确、6 条错误、12 条触顶、1 条末框格式失败 | 六条错值都在思维末段已形成。另有两条终稿不可行，未复现可行值交付退步 |
 | Phase5-D4.8 | 两年末答分别为 4/5、2/4。四条精确早期错误均可见自修，另验证两条晚期结构性反例 | 归档 EOS 未知，普通完整解覆盖九题，未测续写干预效果 |
 | Phase5-D4.9 | 10 个独立固定构造均有普通完整解，独立验证作者参考 10/10 | 只比较 CPU 和候选核验，模型修复残余 0，未测模型正确率 |
+| Phase5-D5.0 | 570 次前向、126 次反向。12 题可控留出四臂均无候选符号翻转，三态权重未过扩测门槛 | 真实一步参数更新，未测自然生成准确率。BrUMO 的自然方向批缺少成对 E/W |
 
 P0与P0.5使用不同读出协议，不连成跨轮提升曲线。CPU随机模型、形式/代数控制、人工短状态、自然轨迹观察和正式benchmark各自标明，不互相替代。
 

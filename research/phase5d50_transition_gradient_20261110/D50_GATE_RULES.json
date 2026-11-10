@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_BEFORE_REAL_MODEL_CONTROLLED_H_READOUT",
+  "scope": "Single-checkpoint, paired, teacher-forced mechanism gate on the synthetic CONTROL packet only. Calibration uses the separate DEV packet. Neither statistical significance, natural-trajectory coverage, nor final answer accuracy is tested by this gate.",
+  "controlled_packet_freeze_sha256": "d3c10130d7df62778b60393bbf2efa0fc975cde81903e4a2915151274a53d098",
+  "packet": "CONTROL",
+  "expected_independent_problems_by_role": {"E": 4, "W": 4, "C": 4},
+  "primary_candidate_length": "Equal positive correct and adverse continuation token lengths fixed by the packet. Keep any unequal-length sensitivity rows separate. Never substitute rows or treat both candidates as independent observations.",
+  "arms": {"proposed": "T", "controls": ["uniform", "U", "A"]},
+  "modes": ["raw_sgd", "matched_norm"],
+  "matched_norm_relative_tolerance": 0.001,
+  "matched_norm_absolute_tolerance": 1e-12,
+  "units": {
+    "sequence_margin": "m = log p(correct target | shared prefix) - log p(adverse target | shared prefix), in sequence nats",
+    "primary": "x = m / n for the exact matched target token count n per branch, in nats per target token",
+    "paired_change": "d[i,arm,mode] = x_after[i,arm,mode] - x_base[i]",
+    "paired_advantage": "d[i,T,mode] - d[i,control,mode], computed within identical question and mode"
+  },
+  "noise": {
+    "floor_nats_per_target_token": 0.001,
+    "multiplier": 10,
+    "readouts": ["heldout_baseline_by_role", "heldout_zero_step_by_role", "heldout_repeat_initial_by_role"],
+    "definition": "For each independent question i, compute r_i = max(x_base, x_zero, x_repeat) - min(x_base, x_zero, x_repeat) at the bitwise identical initial adapter. Require real paid zero and repeat forward passes. The threshold tau_i = max(0.001, 10*r_i) is an operational floor against observed variation, without a probabilistic noise guarantee. Do not fit it from holdout effects."
+  },
+  "advancement": {
+    "min_same_independent_e_problems_in_both_modes": 2,
+    "e_win": "For the same E question in a mode, d[T] >= tau_i and d[T]-d[control] >= tau_i separately for uniform, U, and A. Intersect winner problem IDs across raw_sgd and matched_norm.",
+    "harm_veto": "Any individual W or C question with d[T] <= -tau_i versus its own initial state in either mode vetoes, even if another question improves. Report W and C separately and keep all paired control differences. A control gaining more than T without T degrading is comparative underperformance and is recorded separately.",
+    "required_validity": "All frozen H questions and every branch must be present, uniquely matched and finite, with probe status READY for U/A/T. Equal restored parameter digests, separately evaluated unchanged-state readings, raw same eta and positive realized matched norms within max(1e-12, 0.001*target_norm) are required. A measured zero raw step is recorded as a zero effect; a missing or zero matched step leaves the gate unevaluable.",
+    "decision": "PASS_CONTROLLED_GATE requires valid evidence, the same at least two E wins in both modes, and no W/C veto. Material W/C loss or too few joint E wins with valid inputs gives NO_GO_CONTROLLED_GATE. Missing controls, invalid numerical evidence, or a missing or mismatched paired row give INCOMPLETE_CONTROLLED_GATE, not a favorable result."
+  },
+  "reporting": "Publish the denominator and count by role, exact question-level raw and matched sequence and normalized margins/changes, observed noise, thresholds, signed differences to each control, absolute W/C loss and comparative underperformance separately, plus runner linear/residual, restoration and paid work as diagnostics. A pass permits an independent natural final-EOS accuracy pilot, without itself claiming an accuracy effect.",
+  "rationale_zh": "以同一题共享前缀的两条等长续写构成一个配对单位。两种参数步长下同两道 E 题都须相对起点有实质增益，并胜过全部同预算赋权对照，避免用不同题目拼出支持。W/C 的单题负向变化不由 E 或其他题的收益抵消。阈值是冻结的操作门槛，单次小样本报告逐题现象，不作显著性推断。"
+}

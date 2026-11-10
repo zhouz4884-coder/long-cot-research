@@ -36,4 +36,4 @@ GUARD 用不确定性选择可能出错的转折。这里使用原题可证明�
 
 Qwen3-4B 的两次实机验证均通过。受控开放 thinking 边界上，原状态、快照恢复和独立重放的完整 logits、RNG 与 12 个后续 token 一致。第二次还验证了相同前缀上两条等长度提示的实际注入。7 道可触发题的正式提示都在固定 tokenizer 上配平，两个提示臂均无空格填充。实机冒烟使用短受控输入，单列成本，不能用于判断正式正确率。[GPU 回放与提示探针](D44_NATIVE_SMOKE_SAFE_SUMMARY.json) · [正式提示长度校验](D44_CPU_BRIDGE_PREFLIGHT_V2.json)
 
-两张实验室 3090 已各启动一个独立四题 worker。启动前核对 9 项输入文件、冻结种子、模型与运行时摘要。主实验允许正常 EOS，安全上下文容量为 40,960，无人为紧输出上限。当前记录覆盖启动与当时在线状态，正式评分需等待两个 worker 完整结束。[双任务包冻结](D44_LIVE_STAGE_FREEZE.json) · [启动回执](D44_GPU_MAIN_LAUNCH.json) · [提案准备成本](D44_PREPARATION_COST.json)
+两张实验室 3090 各启动一个独立四题 worker。启动前核对 9 项输入文件、冻结种子、模型与运行时摘要。主实验允许正常 EOS，安全上下文容量为 40,960，无人为紧输出上限。两个 worker 已完整结束，结果与分数解释见收尾。[双任务包冻结](D44_LIVE_STAGE_FREEZE.json) · [启动回执](D44_GPU_MAIN_LAUNCH.json) · [提案准备成本](D44_PREPARATION_COST.json) · [阶段收尾](D44_CLOSEOUT_ZH.md)

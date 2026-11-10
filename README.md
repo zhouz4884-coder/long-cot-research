@@ -9,7 +9,7 @@
 - [Phase 1–5 总索引](docs/phases/INDEX_ZH.md)
 - [当前研究目标](docs/next_phase/CURRENT_RESEARCH_GOAL_20261105_ZH.md)
 - [最新建议审查与下一轮公平对照](research/repository_phase_plan_20261106/ADVISOR_REVIEW_20261106_ZH.md)
-- [Phase 5-D4.4 补抽与实时生成修复](research/phase5d44_candidate_generation_20261110/D44_REPLICATION_AND_DESIGN_ZH.md)
+- [Phase 5-D4.4 补抽与实时生成修复](research/phase5d44_candidate_generation_20261110/D44_CLOSEOUT_ZH.md)
 - [Phase 5-D4.3 自然长链反证与终局选答](research/phase5d43_answer_refutation_20261110/D43_CLOSEOUT_ZH.md)
 - [Phase 5-D4.2 同源最小修正与级联诊断](research/phase5d42_lean_diagnostics_20261110/D42_CLOSEOUT_ZH.md)
 - [Phase 5-D4.1 引理可达性与预筛准入](research/phase5d41_lean_scope_20261110/D41_CLOSEOUT_ZH.md)
@@ -51,7 +51,7 @@
 | [Phase 5-D4.1](research/phase5d41_lean_scope_20261110/D41_CLOSEOUT_ZH.md) | 引理可达性、实际历史缺名与查询加完整核验成本 | 31 个目标的诊断对齐，两种等待设置下配对完整成本无稳定下降。预筛未达模型准入 |
 | [Phase 5-D4.2](research/phase5d42_lean_diagnostics_20261110/D42_CLOSEOUT_ZH.md) | 115 份冻结候选、三个同源历史失败、等量编辑和完整 CPU 对照 | 区分同处诊断消失、下游残留和新露出的错误。级联策略未达模型准入 |
 | [Phase 5-D4.3](research/phase5d43_answer_refutation_20261110/D43_CLOSEOUT_ZH.md) | 32 道独立 AIME、128 条原生轨迹、同池选答与原题反证 | 首抽 26/32，四抽多数票、普通复核和作用域反证均 29/32。当前选答未达独立扩测门槛 |
-| [Phase 5-D4.4](research/phase5d44_candidate_generation_20261110/D44_REPLICATION_AND_DESIGN_ZH.md) | 同合同补四抽、盲态错误前缀审计、8 道独立新题四臂协议 | 补四抽与合并八抽覆盖均为 29/32。实时小试按冻结协议推进 |
+| [Phase 5-D4.4](research/phase5d44_candidate_generation_20261110/D44_CLOSEOUT_ZH.md) | 同合同补四抽、8 道独立新题、精确触发与官方键复核 | 补四抽与八抽覆盖均为 29/32。新题 0 次触发，冻结官方键 7/8、7/8、7/8、8/8。隔离争议题后四臂均 7/7 |
 
 每个Phase统一记录：问题、输入与协议、实际动作、数据结论、失败与猜想、下一门槛、证据路径。后续工作继续新增Phase或阶段内子报告，不改写已冻结的结果。
 
@@ -77,6 +77,7 @@
 | Phase5-D4.1 | 对齐 1,128 份 Lean 调用、4,283 条诊断。19 项受审控制中，导入级硬拒绝会误挡七个有效证明 | 查询与完整核验配对通过集合相同。局部性能差随顺序变化，未启动模型试验 |
 | Phase5-D4.2 | 未解组 68/304 份多错误检查的首报行晚于另一报错。三个受审原稿分别做逐字节与等量编辑对照 | 报错顺序不足以推出根因。实际修正与强 CPU 基线分开归档 |
 | Phase5-D4.3 | 正确候选覆盖 29/32，三题的必要条件可区分候选，排除六个错误值 | 多数票已达固定池上限。无正确值被排除，同权限准确率增量为零 |
+| Phase5-D4.4 | 16 条实跑轨迹全为自然 EOS，七个启用题的真实观察中无数值条件被违反 | 两提示臂均按协议复用原生输出，未测得干预注入效应。官方分差唯一一题的题面与解答冲突，单列敏感性分析 |
 
 P0与P0.5使用不同读出协议，不连成跨轮提升曲线。CPU随机模型、形式/代数控制、人工短状态、自然轨迹观察和正式benchmark各自标明，不互相替代。
 
